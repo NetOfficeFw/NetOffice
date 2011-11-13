@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface _IPageWrapCtrl SupportByLibrary Outlook, 10
+	/// Interface _IPageWrapCtrl SupportByLibraryAttribute Outlook, 10
 	///</summary>
-	[SupportByLibrary("Outlook", 10)]
+	[SupportByLibraryAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _IPageWrapCtrl : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 10)]
+		[SupportByLibraryAttribute("Outlook", 10)]
 		public Int32 BackColor
 		{
 			get

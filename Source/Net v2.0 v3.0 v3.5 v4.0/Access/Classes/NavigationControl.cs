@@ -31,9 +31,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass NavigationControl SupportByLibrary Access, 14
+	/// CoClass NavigationControl SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl, IEventBinding 
 	{

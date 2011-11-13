@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLEmbedElement SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLEmbedElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLEmbedElement : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string hidden
 		{
 			get
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string palette
 		{
 			get
@@ -111,7 +111,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string pluginspage
 		{
 			get
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string src
 		{
 			get
@@ -146,7 +146,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string units
 		{
 			get
@@ -166,7 +166,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string name
 		{
 			get
@@ -186,7 +186,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object width
 		{
 			get
@@ -214,7 +214,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object height
 		{
 			get

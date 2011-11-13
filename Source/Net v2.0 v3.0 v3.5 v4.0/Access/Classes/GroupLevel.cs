@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass GroupLevel SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass GroupLevel SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class GroupLevel : _GroupLevel, IEventBinding 
 	{

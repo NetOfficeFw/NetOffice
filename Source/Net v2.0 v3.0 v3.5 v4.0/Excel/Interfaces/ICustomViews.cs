@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface ICustomViews SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface ICustomViews SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ICustomViews : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.CustomView get__Default(object viewName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ViewName">object ViewName</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.CustomView this[object viewName]
 		{
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ViewName">string ViewName</param>
 		/// <param name="PrintSettings">optional object PrintSettings</param>
 		/// <param name="RowColSettings">optional object RowColSettings</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName, printSettings, rowColSettings);
@@ -188,10 +188,26 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ViewName">string ViewName</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.CustomView Add(string viewName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.CustomView newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CustomView.LateBindingApiWrapperType) as NetOffice.ExcelApi.CustomView;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ViewName">string ViewName</param>
+		/// <param name="PrintSettings">optional object PrintSettings</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(viewName, printSettings);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.ExcelApi.CustomView newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CustomView.LateBindingApiWrapperType) as NetOffice.ExcelApi.CustomView;
 			return newObject;
@@ -201,7 +217,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

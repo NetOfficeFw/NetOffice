@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass XDomainRequestFactory SupportByLibrary MSHTML, 4
+	/// CoClass XDomainRequestFactory SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class XDomainRequestFactory : IHTMLXDomainRequestFactory, IEventBinding 
 	{

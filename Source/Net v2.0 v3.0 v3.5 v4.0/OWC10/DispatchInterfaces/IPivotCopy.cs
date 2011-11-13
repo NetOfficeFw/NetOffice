@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface IPivotCopy SupportByLibrary OWC10, 1
+	/// DispatchInterface IPivotCopy SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IPivotCopy : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Format">Int32 Format</param>
 		/// <param name="Output">string Output</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Render(Int32 format, string output)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, output);

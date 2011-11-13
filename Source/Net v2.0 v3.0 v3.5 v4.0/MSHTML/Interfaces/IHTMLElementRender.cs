@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLElementRender SupportByLibrary MSHTML, 4
+	/// Interface IHTMLElementRender SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLElementRender : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="hdc">_RemotableHandle hdc</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 DrawToDC(_RemotableHandle hdc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hdc);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrPrinterName">string bstrPrinterName</param>
 		/// <param name="hdc">_RemotableHandle hdc</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetDocumentPrinter(string bstrPrinterName, _RemotableHandle hdc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPrinterName, hdc);

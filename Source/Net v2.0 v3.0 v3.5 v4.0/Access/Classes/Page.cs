@@ -19,9 +19,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Page SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass Page SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Page : _Page, IEventBinding 
 	{

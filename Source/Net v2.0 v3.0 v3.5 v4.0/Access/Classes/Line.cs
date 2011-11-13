@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Line SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass Line SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Line : _Line, IEventBinding 
 	{

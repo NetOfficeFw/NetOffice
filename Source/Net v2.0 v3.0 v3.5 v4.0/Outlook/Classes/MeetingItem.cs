@@ -39,9 +39,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass MeetingItem SupportByLibrary Outlook, 9,10,11,12,14
+	/// CoClass MeetingItem SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MeetingItem : _MeetingItem, IEventBinding 
 	{

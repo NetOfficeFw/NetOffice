@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTCMethodBehavior SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTCMethodBehavior SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTCMethodBehavior : COMObject
 	{

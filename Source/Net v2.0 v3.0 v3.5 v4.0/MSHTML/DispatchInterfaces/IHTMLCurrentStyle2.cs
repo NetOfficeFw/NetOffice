@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLCurrentStyle2 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLCurrentStyle2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLCurrentStyle2 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string layoutFlow
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string wordWrap
 		{
 			get
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string textUnderlinePosition
 		{
 			get
@@ -121,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasLayout
 		{
 			get
@@ -136,7 +136,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarBaseColor
 		{
 			get
@@ -159,7 +159,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarFaceColor
 		{
 			get
@@ -182,7 +182,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbar3dLightColor
 		{
 			get
@@ -205,7 +205,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarShadowColor
 		{
 			get
@@ -228,7 +228,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarHighlightColor
 		{
 			get
@@ -251,7 +251,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarDarkShadowColor
 		{
 			get
@@ -274,7 +274,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarArrowColor
 		{
 			get
@@ -297,7 +297,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object scrollbarTrackColor
 		{
 			get
@@ -320,7 +320,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string writingMode
 		{
 			get
@@ -335,7 +335,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object zoom
 		{
 			get
@@ -358,7 +358,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string filter
 		{
 			get
@@ -373,7 +373,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string textAlignLast
 		{
 			get
@@ -388,7 +388,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object textKashidaSpace
 		{
 			get
@@ -411,7 +411,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isBlock
 		{
 			get

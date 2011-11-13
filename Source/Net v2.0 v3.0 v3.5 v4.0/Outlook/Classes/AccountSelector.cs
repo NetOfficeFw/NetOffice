@@ -15,9 +15,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass AccountSelector SupportByLibrary Outlook, 14
+	/// CoClass AccountSelector SupportByLibraryAttribute Outlook, 14
 	///</summary>
-	[SupportByLibrary("Outlook", 14)]
+	[SupportByLibraryAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AccountSelector : _AccountSelector, IEventBinding 
 	{

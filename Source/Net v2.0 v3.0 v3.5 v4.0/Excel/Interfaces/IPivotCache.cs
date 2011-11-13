@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IPivotCache SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IPivotCache SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPivotCache : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool BackgroundQuery
 		{
 			get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Connection
 		{
 			get
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool EnableRefresh
 		{
 			get
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 MemoryUsed
 		{
 			get
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool OptimizeCache
 		{
 			get
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 RecordCount
 		{
 			get
@@ -255,7 +255,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public DateTime RefreshDate
 		{
 			get
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string RefreshName
 		{
 			get
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool RefreshOnFileOpen
 		{
 			get
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Sql
 		{
 			get
@@ -333,7 +333,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool SavePassword
 		{
 			get
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object SourceData
 		{
 			get
@@ -381,7 +381,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CommandText
 		{
 			get
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.xlQueryType QueryType
 		{
 			get
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool MaintainConnection
 		{
 			get
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 RefreshPeriod
 		{
 			get
@@ -484,7 +484,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Recordset
 		{
 			get
@@ -505,7 +505,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object LocalConnection
 		{
 			get
@@ -533,7 +533,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool UseLocalConnection
 		{
 			get
@@ -553,7 +553,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public COMObject ADOConnection
 		{
 			get
@@ -569,7 +569,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool IsConnected
 		{
 			get
@@ -584,7 +584,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool OLAP
 		{
 			get
@@ -599,7 +599,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
 		{
 			get
@@ -614,7 +614,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlPivotTableMissingItems MissingItemsLimit
 		{
 			get
@@ -634,7 +634,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string SourceConnectionFile
 		{
 			get
@@ -654,7 +654,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string SourceDataFile
 		{
 			get
@@ -669,7 +669,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
 		{
 			get
@@ -689,7 +689,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
@@ -705,7 +705,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlPivotTableVersionList Version
 		{
 			get
@@ -720,7 +720,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public bool UpgradeOnRefresh
 		{
 			get
@@ -743,7 +743,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Refresh()
 		{
 			object[] paramsArray = null;
@@ -754,7 +754,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 ResetTimer()
 		{
 			object[] paramsArray = null;
@@ -763,12 +763,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TableDestination">object TableDestination</param>
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="ReadData">optional object ReadData</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData);
@@ -784,7 +784,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TableName">optional object TableName</param>
 		/// <param name="ReadData">optional object ReadData</param>
 		/// <param name="DefaultVersion">optional object DefaultVersion</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName, readData, defaultVersion);
@@ -797,7 +797,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TableDestination">object TableDestination</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination);
@@ -807,9 +808,24 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="TableDestination">object TableDestination</param>
+		/// <param name="TableName">optional object TableName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(tableDestination, tableName);
+			object returnItem = Invoker.MethodReturn(this, "CreatePivotTable", paramsArray);
+			NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotTable;
+			return newObject;
+		}
+
+		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 MakeConnection()
 		{
 			object[] paramsArray = null;
@@ -823,7 +839,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ODCFileName">string ODCFileName</param>
 		/// <param name="Description">optional object Description</param>
 		/// <param name="Keywords">optional object Keywords</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description, keywords);
@@ -835,10 +851,25 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ODCFileName">string ODCFileName</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 SaveAsODC(string oDCFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName);
+			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ODCFileName">string ODCFileName</param>
+		/// <param name="Description">optional object Description</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 SaveAsODC(string oDCFileName, object description)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);
 			return (Int32)returnItem;
 		}

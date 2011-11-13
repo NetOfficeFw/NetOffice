@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface TabStop2 SupportByLibrary Office, 12,14
+	/// DispatchInterface TabStop2 SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TabStop2 : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Single Position
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTabStopType Type
 		{
 			get
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void Clear()
 		{
 			object[] paramsArray = null;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface PickerResult SupportByLibrary Office, 14
+	/// DispatchInterface PickerResult SupportByLibraryAttribute Office, 14
 	///</summary>
-	[SupportByLibrary("Office", 14)]
+	[SupportByLibraryAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerResult : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public string Id
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public string DisplayName
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public string Type
 		{
 			get
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public string SIPId
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public object ItemData
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public object SubItems
 		{
 			get
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public object DuplicateResults
 		{
 			get
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public NetOffice.OfficeApi.PickerFields Fields
 		{
 			get

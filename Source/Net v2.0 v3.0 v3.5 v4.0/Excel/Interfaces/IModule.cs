@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IModule SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IModule SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IModule : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string CodeName
 		{
 			get
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string _CodeName
 		{
 			get
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Next
 		{
 			get
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string OnDoubleClick
 		{
 			get
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string OnSheetActivate
 		{
 			get
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string OnSheetDeactivate
 		{
 			get
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PageSetup PageSetup
 		{
 			get
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Previous
 		{
 			get
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool ProtectContents
 		{
 			get
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool ProtectionMode
 		{
 			get
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSheetVisibility Visible
 		{
 			get
@@ -350,7 +350,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shapes Shapes
 		{
 			get
@@ -369,7 +369,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Activate()
 		{
 			object[] paramsArray = null;
@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -393,7 +393,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Copy()
 		{
 			object[] paramsArray = null;
@@ -404,7 +405,20 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Copy(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
+			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
@@ -417,7 +431,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -428,10 +442,24 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Move()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Move(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
 			return (Int32)returnItem;
 		}
@@ -446,7 +474,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ActivePrinter">optional object ActivePrinter</param>
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -457,7 +485,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 _PrintOut()
 		{
 			object[] paramsArray = null;
@@ -468,7 +497,100 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void _Dummy18()
 		{
 			object[] paramsArray = null;
@@ -483,7 +605,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Contents">optional object Contents</param>
 		/// <param name="Scenarios">optional object Scenarios</param>
 		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
@@ -494,7 +616,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Protect()
 		{
 			object[] paramsArray = null;
@@ -505,7 +628,65 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Protect(object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password);
+			object returnItem = Invoker.MethodReturn(this, "Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Protect(object password, object drawingObjects)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects);
+			object returnItem = Invoker.MethodReturn(this, "Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Protect(object password, object drawingObjects, object contents)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents);
+			object returnItem = Invoker.MethodReturn(this, "Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 Protect(object password, object drawingObjects, object contents, object scenarios)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios);
+			object returnItem = Invoker.MethodReturn(this, "Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void _Dummy21()
 		{
 			object[] paramsArray = null;
@@ -515,7 +696,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void _Dummy23()
 		{
 			object[] paramsArray = null;
@@ -534,7 +715,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AddToMru">optional object AddToMru</param>
 		/// <param name="TextCodepage">optional object TextCodepage</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage, textVisualLayout);
@@ -546,7 +727,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SaveAs(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -557,8 +739,127 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		/// <param name="TextCodepage">optional object TextCodepage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage);
+			object returnItem = Invoker.MethodReturn(this, "SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
@@ -569,7 +870,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Select()
 		{
 			object[] paramsArray = null;
@@ -581,7 +883,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
@@ -592,7 +894,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Unprotect()
 		{
 			object[] paramsArray = null;
@@ -605,7 +908,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Filename">object Filename</param>
 		/// <param name="Merge">optional object Merge</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object InsertFile(object filename, object merge)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, merge);
@@ -625,7 +928,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">object Filename</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object InsertFile(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -649,7 +953,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Contents">optional object Contents</param>
 		/// <param name="Scenarios">optional object Scenarios</param>
 		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 _Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
@@ -660,10 +964,69 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 _Protect()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _Protect(object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password);
+			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _Protect(object password, object drawingObjects)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects);
+			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _Protect(object password, object drawingObjects, object contents)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents);
+			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _Protect(object password, object drawingObjects, object contents, object scenarios)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios);
 			object returnItem = Invoker.MethodReturn(this, "_Protect", paramsArray);
 			return (Int32)returnItem;
 		}
@@ -680,7 +1043,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AddToMru">optional object AddToMru</param>
 		/// <param name="TextCodepage">optional object TextCodepage</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage, textVisualLayout);
@@ -692,10 +1055,130 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 _SaveAs(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru);
+			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileFormat">optional object FileFormat</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="ReadOnlyRecommended">optional object ReadOnlyRecommended</param>
+		/// <param name="CreateBackup">optional object CreateBackup</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		/// <param name="TextCodepage">optional object TextCodepage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 _SaveAs(string filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object addToMru, object textCodepage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, addToMru, textCodepage);
 			object returnItem = Invoker.MethodReturn(this, "_SaveAs", paramsArray);
 			return (Int32)returnItem;
 		}
@@ -710,7 +1193,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ActivePrinter">optional object ActivePrinter</param>
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -721,10 +1204,104 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 __PrintOut()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
 			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
 			return (Int32)returnItem;
 		}
@@ -739,7 +1316,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ActivePrinter">optional object ActivePrinter</param>
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -750,10 +1327,104 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 PrintOut()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
 			return (Int32)returnItem;
 		}

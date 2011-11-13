@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPBitmapButton SupportByLibrary PowerPoint, 9
+	/// DispatchInterface PPBitmapButton SupportByLibraryAttribute PowerPoint, 9
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPBitmapButton : PPControl
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public string OnPressed
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsDefault
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsEscape
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public void Click()
 		{
 			object[] paramsArray = null;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface ViewSingle SupportByLibrary MSProject, 12,14
+	/// DispatchInterface ViewSingle SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewSingle : View
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Table Table
 		{
 			get
@@ -97,7 +97,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Filter Filter
 		{
 			get
@@ -118,7 +118,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Group Group
 		{
 			get
@@ -139,7 +139,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool HighlightFilter
 		{
 			get

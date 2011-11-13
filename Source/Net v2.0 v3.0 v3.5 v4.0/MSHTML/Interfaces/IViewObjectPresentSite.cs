@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IViewObjectPresentSite SupportByLibrary MSHTML, 4
+	/// Interface IViewObjectPresentSite SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IViewObjectPresentSite : COMObject
 	{
@@ -84,7 +84,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="backBufferCount">UIntPtr backBufferCount</param>
 		/// <param name="format">LateBindingApi.MSHTMLApi.Enums.DXGI_FORMAT format</param>
 		/// <param name="mode">LateBindingApi.MSHTMLApi.Enums._VIEW_OBJECT_ALPHA_MODE mode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISurfacePresenter CreateSurfacePresenter(object pDevice, UIntPtr width, UIntPtr height, UIntPtr backBufferCount, LateBindingApi.MSHTMLApi.Enums.DXGI_FORMAT format, LateBindingApi.MSHTMLApi.Enums._VIEW_OBJECT_ALPHA_MODE mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDevice, width, height, backBufferCount, format, mode);
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsHardwareComposition()
 		{
 			object[] paramsArray = null;
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="mode">LateBindingApi.MSHTMLApi.Enums._VIEW_OBJECT_COMPOSITION_MODE mode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionMode(LateBindingApi.MSHTMLApi.Enums._VIEW_OBJECT_COMPOSITION_MODE mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mode);

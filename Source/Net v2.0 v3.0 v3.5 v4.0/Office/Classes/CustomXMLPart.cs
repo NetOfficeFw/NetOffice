@@ -17,9 +17,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomXMLPart SupportByLibrary Office, 12,14
+	/// CoClass CustomXMLPart SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLPart : _CustomXMLPart, IEventBinding 
 	{

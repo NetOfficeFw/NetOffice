@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface Pages SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface Pages SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pages : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.Page this[object index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -114,7 +114,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Page Add(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -126,7 +126,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Page Add()
 		{
 			object[] paramsArray = null;
@@ -139,7 +140,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Item">optional object Item</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Remove(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -149,7 +150,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Remove()
 		{
 			object[] paramsArray = null;
@@ -160,7 +162,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -172,7 +174,10 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Access", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Access, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

@@ -64,11 +64,11 @@ namespace LateBindingApi.Core
 
                 return null;
             }
-            catch
+            catch(Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 return null;
             }
-
         }
 
         /// <summary>
@@ -99,18 +99,23 @@ namespace LateBindingApi.Core
                         if (true == sinkIds[i - 1].Equals(id, StringComparison.InvariantCultureIgnoreCase))
                         {
                             Marshal.ReleaseComObject(enumPoints);
+                            enumPoints = null;
                             point = points[0];
                             return id;
                         }
                     }
                 }
-
-                Marshal.ReleaseComObject(enumPoints);
                 return null;
             }
-            catch
+            catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 return null;
+            }
+            finally
+            { 
+                if(null != enumPoints)
+                    Marshal.ReleaseComObject(enumPoints);
             }
         }
 
@@ -129,11 +134,14 @@ namespace LateBindingApi.Core
 
             IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
 
-            string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
+            string id = id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
             if(null == id)
-                    id = EnumConnectionPoint(connectionPointContainer,ref point, sinkIds);
+                id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
 
-            return id;
+            if (null != id)
+                return id;
+            else
+                throw new COMException("Specified instance doesnt implement the target event interface.");
         }
 
         /// <summary>
@@ -156,12 +164,20 @@ namespace LateBindingApi.Core
         /// <param name="connectPoint"></param>
         public void SetupEventBinding(IConnectionPoint connectPoint)
         {
-            if (true == Settings.EnableEvents)
+            try
             {
-                connectPoint.GetConnectionInterface(out _interfaceId);
-                _connectionPoint = connectPoint;
-                _connectionPoint.Advise(this, out _connectionCookie);
-                _pointList.Add(this);
+                if (true == Settings.EnableEvents)
+                {
+                    connectPoint.GetConnectionInterface(out _interfaceId);
+                    _connectionPoint = connectPoint;
+                    _connectionPoint.Advise(this, out _connectionCookie);
+                    _pointList.Add(this);
+                }
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw (throwedException);
             }
         }
 
@@ -185,12 +201,14 @@ namespace LateBindingApi.Core
                     _connectionPoint.Unadvise(_connectionCookie);
                     Marshal.ReleaseComObject(_connectionPoint);
                 }
-                catch (System.Runtime.InteropServices.COMException)
+                catch (System.Runtime.InteropServices.COMException throwedException)
                 {
+                    DebugConsole.WriteException(throwedException);
                     ; // RPC server is disconnected or dead
                 }
                 catch (Exception throwedException)
                 {
+                    DebugConsole.WriteException(throwedException);
                     throw (throwedException);
                 }
 

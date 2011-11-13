@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SmartDocument SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SmartDocument SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartDocument : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string SolutionID
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string SolutionURL
 		{
 			get
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="ConsiderAllSchemas">bool ConsiderAllSchemas</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void PickSolution(bool considerAllSchemas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(considerAllSchemas);
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void RefreshPane()
 		{
 			object[] paramsArray = null;

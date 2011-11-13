@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLCurrentStyle3 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLCurrentStyle3 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLCurrentStyle3 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string textOverflow
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object minHeight
 		{
 			get
@@ -114,7 +114,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object wordSpacing
 		{
 			get
@@ -137,7 +137,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string whiteSpace
 		{
 			get

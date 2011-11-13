@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICommandBarComboBoxEvents SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface ICommandBarComboBoxEvents SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICommandBarComboBoxEvents : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Ctrl">NetOffice.OfficeApi.CommandBarComboBox Ctrl</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void Change(NetOffice.OfficeApi.CommandBarComboBox ctrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ctrl);

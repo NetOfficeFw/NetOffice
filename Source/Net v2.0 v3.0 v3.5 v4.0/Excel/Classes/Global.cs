@@ -14,9 +14,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass Global SupportByLibrary Excel, 9,10,11,12,14
+	/// CoClass Global SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Global : _Global, IEventBinding 
 	{

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _DDocSiteControl SupportByLibrary Outlook, 9,10,11,12,14
+	/// DispatchInterface _DDocSiteControl SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DDocSiteControl : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool ReadOnly
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public Int16 SuppressAttachments
 		{
 			get

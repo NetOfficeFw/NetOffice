@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ProtectedViewWindows SupportByLibrary PowerPoint, 14
+	/// DispatchInterface ProtectedViewWindows SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindows : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.ProtectedViewWindow this[Int32 index]
 		{
@@ -131,7 +131,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="ReadPassword">string ReadPassword</param>
 		/// <param name="OpenAndRepair">NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, string readPassword, NetOffice.OfficeApi.Enums.MsoTriState openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword, openAndRepair);

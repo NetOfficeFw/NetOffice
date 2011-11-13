@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLAttributeCollection3 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLAttributeCollection3 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLAttributeCollection3 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 length
 		{
 			get
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute getNamedItem(string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pNodeIn">LateBindingApi.MSHTMLApi.IHTMLDOMAttribute pNodeIn</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute setNamedItem(LateBindingApi.MSHTMLApi.IHTMLDOMAttribute pNodeIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNodeIn);
@@ -121,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute removeNamedItem(string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
@@ -134,7 +134,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

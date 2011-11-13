@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGTests SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGTests SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGTests : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGStringList requiredFeatures
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGStringList requiredExtensions
 		{
 			get
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGStringList systemLanguage
 		{
 			get
@@ -128,7 +128,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="extension">string extension</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasExtension(string extension)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extension);

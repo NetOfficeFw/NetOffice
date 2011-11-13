@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface CalendarDrivers SupportByLibrary MSProject, 12,14
+	/// DispatchInterface CalendarDrivers SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CalendarDrivers : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Resource this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 TotalDetectedCount
 		{
 			get
@@ -125,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task Parent
 		{
 			get
@@ -141,7 +141,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -161,7 +161,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

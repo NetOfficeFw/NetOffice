@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface System SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface System SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class System : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string OperatingSystem
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string ProcessorType
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string Version
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 FreeDiskSpace
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdCountry Country
 		{
 			get
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string LanguageDesignation
 		{
 			get
@@ -213,7 +213,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 HorizontalResolution
 		{
 			get
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 VerticalResolution
 		{
 			get
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Section">string Section</param>
 		/// <param name="Key">string Key</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string get_ProfileString(string section, string key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(section, key);
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Section">string Section</param>
 		/// <param name="Key">string Key</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void set_ProfileString(string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(section, key);
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">string Section</param>
 		/// <param name="Key">string Key</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string get_PrivateProfileString(string fileName, string section, string key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, key);
@@ -288,7 +288,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Section">string Section</param>
 		/// <param name="Key">string Key</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void set_PrivateProfileString(string fileName, string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, key);
@@ -299,7 +299,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MathCoprocessorInstalled
 		{
 			get
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string ComputerType
 		{
 			get
@@ -329,7 +329,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string MacintoshName
 		{
 			get
@@ -344,7 +344,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool QuickDrawInstalled
 		{
 			get
@@ -359,7 +359,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdCursorType Cursor
 		{
 			get
@@ -379,7 +379,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Enums.WdCountry CountryRegion
 		{
 			get
@@ -397,7 +397,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void MSInfo()
 		{
 			object[] paramsArray = null;
@@ -410,7 +410,7 @@ namespace NetOffice.WordApi
 		/// <param name="Path">string Path</param>
 		/// <param name="Drive">optional object Drive</param>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Connect(string path, object drive, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, drive, password);
@@ -421,10 +421,24 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Connect(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
+			Invoker.Method(this, "Connect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Path">string Path</param>
+		/// <param name="Drive">optional object Drive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Connect(string path, object drive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(path, drive);
 			Invoker.Method(this, "Connect", paramsArray);
 		}
 

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface GroupingDefs SupportByLibrary OWC10, 1
+	/// DispatchInterface GroupingDefs SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupingDefs : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.GroupingDef this[object index]
 		{
@@ -117,7 +117,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, index);
@@ -132,7 +132,8 @@ namespace NetOffice.OWC10Api
 		/// <param name="GroupingDefName">string GroupingDefName</param>
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupingDef Add(string groupingDefName, string groupingFieldName, string pageFieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName);
@@ -149,7 +150,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="PageFieldName">string PageFieldName</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType, index);
@@ -165,7 +166,8 @@ namespace NetOffice.OWC10Api
 		/// <param name="GroupingFieldName">string GroupingFieldName</param>
 		/// <param name="PageFieldName">string PageFieldName</param>
 		/// <param name="TotalType">NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupingDef AddTotal(string groupingDefName, string groupingFieldName, string pageFieldName, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupingDefName, groupingFieldName, pageFieldName, totalType);
@@ -178,7 +180,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -189,7 +191,10 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OWC10", 1)]
+		/// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

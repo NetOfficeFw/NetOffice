@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface FileDialogFileList SupportByLibrary PowerPoint, 9
+	/// DispatchInterface FileDialogFileList SupportByLibraryAttribute PowerPoint, 9
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileDialogFileList : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public string this[Int32 index]
 		{
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public string DisplayName(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

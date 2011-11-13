@@ -77,9 +77,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLCommentElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLCommentElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLCommentElement : DispHTMLCommentElement, IEventBinding 
 	{

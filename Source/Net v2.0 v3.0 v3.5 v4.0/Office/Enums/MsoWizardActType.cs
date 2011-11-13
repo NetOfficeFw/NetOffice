@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoWizardActType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoWizardActInactive = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoWizardActActive = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoWizardActSuspend = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoWizardActResume = 3
 	}
 }

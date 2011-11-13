@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceFolders SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceFolders SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFolders : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool ItemCountExceeded
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="FolderName">string FolderName</param>
 		/// <param name="ParentFolder">optional object ParentFolder</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderName, parentFolder);
@@ -159,7 +159,8 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="FolderName">string FolderName</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderName);
@@ -172,7 +173,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

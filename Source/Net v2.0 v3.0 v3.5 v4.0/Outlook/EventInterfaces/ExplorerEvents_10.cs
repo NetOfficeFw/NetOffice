@@ -10,71 +10,71 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[ComImport, Guid("0006300F-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ExplorerEvents_10
 	{
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void Activate();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void FolderSwitch();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeFolderSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newFolder, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void ViewSwitch();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
 		void Deactivate();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61447)]
 		void SelectionChange();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61448)]
 		void Close();
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64017)]
 		void BeforeMaximize([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64018)]
 		void BeforeMinimize([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64019)]
 		void BeforeMove([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64020)]
 		void BeforeSize([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64014)]
 		void BeforeItemCopy([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64015)]
 		void BeforeItemCut([In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64016)]
 		void BeforeItemPaste([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64633)]
 		void AttachmentSelectionChange();
 	}

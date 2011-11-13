@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface _Application SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// DispatchInterface _Application SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Application : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Presentations Presentations
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.DocumentWindows Windows
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.PPDialogs Dialogs
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.DocumentWindow ActiveWindow
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Presentation ActivePresentation
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.SlideShowWindows SlideShowWindows
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Path
 		{
 			get
@@ -203,7 +203,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -218,7 +218,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Caption
 		{
 			get
@@ -238,7 +238,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -254,7 +254,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.FileSearch FileSearch
 		{
 			get
@@ -270,7 +270,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.IFind FileFind
 		{
 			get
@@ -286,7 +286,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Build
 		{
 			get
@@ -301,7 +301,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Version
 		{
 			get
@@ -316,7 +316,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string OperatingSystem
 		{
 			get
@@ -331,7 +331,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string ActivePrinter
 		{
 			get
@@ -346,7 +346,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -361,7 +361,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.AddIns AddIns
 		{
 			get
@@ -377,7 +377,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -393,7 +393,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Left
 		{
 			get
@@ -413,7 +413,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Top
 		{
 			get
@@ -433,7 +433,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Width
 		{
 			get
@@ -453,7 +453,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Height
 		{
 			get
@@ -473,7 +473,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
 		{
 			get
@@ -493,7 +493,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -513,7 +513,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 HWND
 		{
 			get
@@ -528,7 +528,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Active
 		{
 			get
@@ -543,7 +543,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -559,7 +559,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
 		{
 			get
@@ -575,7 +575,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string ProductCode
 		{
 			get
@@ -590,7 +590,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.DefaultWebOptions DefaultWebOptions
 		{
 			get
@@ -606,7 +606,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
@@ -622,7 +622,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.MsoDebugOptions MsoDebugOptions
 		{
 			get
@@ -638,7 +638,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ShowWindowsInTaskbar
 		{
 			get
@@ -658,7 +658,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Marker Marker
 		{
 			get
@@ -674,7 +674,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
 		{
 			get
@@ -695,7 +695,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// </summary>
 		/// <param name="Type">NetOffice.OfficeApi.Enums.MsoFileDialogType Type</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -708,7 +708,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayGridLines
 		{
 			get
@@ -728,7 +728,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
 		{
 			get
@@ -748,7 +748,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.NewFile NewPresentation
 		{
 			get
@@ -764,7 +764,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpAlertLevel DisplayAlerts
 		{
 			get
@@ -784,7 +784,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ShowStartupDialog
 		{
 			get
@@ -804,7 +804,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.AutoCorrect AutoCorrect
 		{
 			get
@@ -820,7 +820,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Options Options
 		{
 			get
@@ -836,7 +836,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public bool DisplayDocumentInformationPanel
 		{
 			get
@@ -856,7 +856,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public NetOffice.OfficeApi.IAssistance Assistance
 		{
 			get
@@ -872,7 +872,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public Int32 ActiveEncryptionSession
 		{
 			get
@@ -887,7 +887,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.FileConverters FileConverters
 		{
 			get
@@ -903,7 +903,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.OfficeApi.SmartArtLayouts SmartArtLayouts
 		{
 			get
@@ -919,7 +919,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.OfficeApi.SmartArtQuickStyles SmartArtQuickStyles
 		{
 			get
@@ -935,7 +935,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.OfficeApi.SmartArtColors SmartArtColors
 		{
 			get
@@ -951,7 +951,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ProtectedViewWindows ProtectedViewWindows
 		{
 			get
@@ -967,7 +967,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow ActiveProtectedViewWindow
 		{
 			get
@@ -983,7 +983,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool IsSandboxed
 		{
 			get
@@ -998,7 +998,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ResampleMediaTasks ResampleMediaTasks
 		{
 			get
@@ -1014,7 +1014,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.OfficeApi.Enums.MsoFileValidationMode FileValidation
 		{
 			get
@@ -1039,7 +1039,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="HelpFile">string HelpFile</param>
 		/// <param name="ContextID">Int32 ContextID</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Help(string helpFile, Int32 contextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, contextID);
@@ -1049,7 +1049,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Quit()
 		{
 			object[] paramsArray = null;
@@ -1061,7 +1061,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="MacroName">string MacroName</param>
 		/// <param name="safeArrayOfParams">optional object[] safeArrayOfParams</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public object Run(string macroName, object[] safeArrayOfParams)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName, (object)safeArrayOfParams);
@@ -1081,7 +1081,8 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="MacroName">string MacroName</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public object Run(string macroName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macroName);
@@ -1101,7 +1102,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.PpFileDialogType Type</param>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.FileDialog FileDialog(NetOffice.PowerPointApi.Enums.PpFileDialogType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1114,7 +1115,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pWindow">NetOffice.PowerPointApi.DocumentWindow pWindow</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void LaunchSpelling(NetOffice.PowerPointApi.DocumentWindow pWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pWindow);
@@ -1124,7 +1125,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -1136,7 +1137,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Option">Int32 Option</param>
 		/// <param name="Persist">bool Persist</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public bool GetOptionFlag(Int32 option, bool persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, persist);
@@ -1150,7 +1151,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Option">Int32 Option</param>
 		/// <param name="State">bool State</param>
 		/// <param name="Persist">bool Persist</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void SetOptionFlag(Int32 option, bool state, bool persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, state, persist);
@@ -1161,7 +1162,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.PpFileDialogType Type</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public COMObject PPFileDialog(NetOffice.PowerPointApi.Enums.PpFileDialogType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1174,7 +1175,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Marker">Int32 Marker</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public void SetPerfMarker(Int32 marker)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(marker);
@@ -1185,7 +1186,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		/// <param name="SlideLibraryUrl">string SlideLibraryUrl</param>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public void LaunchPublishSlidesDialog(string slideLibraryUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl);
@@ -1196,7 +1197,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		/// <param name="SlideUrls">object SlideUrls</param>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public void LaunchSendToPPTDialog(object slideUrls)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideUrls);
@@ -1206,7 +1207,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public void StartNewUndoEntry()
 		{
 			object[] paramsArray = null;

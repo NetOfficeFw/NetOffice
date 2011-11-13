@@ -10,15 +10,15 @@ namespace NetOffice.VBIDEApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[ComImport, Guid("CDDE3804-2064-11CF-867F-00AA005FF34A"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _dispReferences_Events
 	{
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}

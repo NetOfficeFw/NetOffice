@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _Hyperlink SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _Hyperlink SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Hyperlink : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string SubAddress
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Address
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string EmailSubject
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ScreenTip
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string TextToDisplay
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void AddToFavorites()
 		{
 			object[] paramsArray = null;
@@ -194,7 +194,7 @@ namespace NetOffice.AccessApi
 		/// <param name="ExtraInfo">object ExtraInfo</param>
 		/// <param name="Method">NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method</param>
 		/// <param name="HeaderInfo">string HeaderInfo</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
@@ -207,7 +207,7 @@ namespace NetOffice.AccessApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="EditNow">bool EditNow</param>
 		/// <param name="Overwrite">bool Overwrite</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void CreateNewDocument(string fileName, bool editNow, bool overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, editNow, overwrite);
@@ -218,7 +218,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

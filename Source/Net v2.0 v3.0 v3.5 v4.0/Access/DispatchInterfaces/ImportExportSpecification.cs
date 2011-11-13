@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface ImportExportSpecification SupportByLibrary Access, 12,14
+	/// DispatchInterface ImportExportSpecification SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ImportExportSpecification : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Name
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string XML
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Description
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="Prompt">optional object Prompt</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public void Execute(object prompt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(prompt);
@@ -182,7 +182,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public void Execute()
 		{
 			object[] paramsArray = null;
@@ -192,7 +193,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -203,7 +204,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

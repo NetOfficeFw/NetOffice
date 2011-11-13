@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IDOMMessageEvent SupportByLibrary MSHTML, 4
+	/// DispatchInterface IDOMMessageEvent SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDOMMessageEvent : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string data
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string origin
 		{
 			get
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLWindow2 source
 		{
 			get
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="origin">string origin</param>
 		/// <param name="lastEventId">string lastEventId</param>
 		/// <param name="source">LateBindingApi.MSHTMLApi.IHTMLWindow2 source</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void initMessageEvent(string eventType, bool canBubble, bool cancelable, string data, string origin, string lastEventId, LateBindingApi.MSHTMLApi.IHTMLWindow2 source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventType, canBubble, cancelable, data, origin, lastEventId, source);

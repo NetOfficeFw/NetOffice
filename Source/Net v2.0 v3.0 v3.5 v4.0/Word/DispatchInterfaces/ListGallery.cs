@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface ListGallery SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface ListGallery SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListGallery : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListTemplates ListTemplates
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool get_Modified(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Reset(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

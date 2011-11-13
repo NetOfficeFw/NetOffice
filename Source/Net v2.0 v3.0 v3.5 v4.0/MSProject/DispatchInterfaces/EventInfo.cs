@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface EventInfo SupportByLibrary MSProject, 12,14
+	/// DispatchInterface EventInfo SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EventInfo : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool Cancel
 		{
 			get

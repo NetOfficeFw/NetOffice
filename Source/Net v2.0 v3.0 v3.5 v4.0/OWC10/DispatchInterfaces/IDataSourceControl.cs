@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface IDataSourceControl SupportByLibrary OWC10, 1
+	/// DispatchInterface IDataSourceControl SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDataSourceControl : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string ConnectionString
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string CurrentDirectory
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool UseRemoteProvider
 		{
 			get
@@ -131,7 +131,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
@@ -147,7 +147,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DataEntry
 		{
 			get
@@ -167,7 +167,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 MaxRecords
 		{
 			get
@@ -187,7 +187,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset DefaultRecordset
 		{
 			get
@@ -203,7 +203,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsources SchemaRowsources
 		{
 			get
@@ -219,7 +219,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRelationships SchemaRelationships
 		{
 			get
@@ -235,7 +235,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PageRowsources PageRowsources
 		{
 			get
@@ -251,7 +251,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDefs RecordsetDefs
 		{
 			get
@@ -267,7 +267,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDefs RootRecordsetDefs
 		{
 			get
@@ -283,7 +283,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject PivotDefs
 		{
 			get
@@ -299,7 +299,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string DefaultRecordsetName
 		{
 			get
@@ -319,7 +319,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string XMLData
 		{
 			get
@@ -339,7 +339,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupLevels GroupLevels
 		{
 			get
@@ -355,7 +355,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject Constants
 		{
 			get
@@ -371,7 +371,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ElementExtensions ElementExtensions
 		{
 			get
@@ -387,7 +387,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsNew
 		{
 			get
@@ -407,7 +407,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum RecordsetType
 		{
 			get
@@ -427,7 +427,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.AllPageFields AllPageFields
 		{
 			get
@@ -443,7 +443,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Section CurrentSection
 		{
 			get
@@ -460,7 +460,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="DataMember">optional object DataMember</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ProviderType get_ProviderType(object dataMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataMember);
@@ -472,7 +472,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ProviderType ProviderType
 		{
 			get
@@ -487,7 +487,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.AllGroupingDefs AllGroupingDefs
 		{
 			get
@@ -503,7 +503,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayAlerts
 		{
 			get
@@ -523,7 +523,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.DataPages DataPages
 		{
 			get
@@ -539,7 +539,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GridX
 		{
 			get
@@ -559,7 +559,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GridY
 		{
 			get
@@ -579,7 +579,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 LoadError
 		{
 			get
@@ -594,7 +594,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DefaultControlTypeEnum DefaultControlType
 		{
 			get
@@ -614,7 +614,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsDirty
 		{
 			get
@@ -634,7 +634,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool Busy
 		{
 			get
@@ -649,7 +649,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string Version
 		{
 			get
@@ -664,7 +664,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 MajorVersion
 		{
 			get
@@ -679,7 +679,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string MinorVersion
 		{
 			get
@@ -694,7 +694,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string BuildNumber
 		{
 			get
@@ -709,7 +709,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string RevisionNumber
 		{
 			get
@@ -724,7 +724,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsDataModelDirty
 		{
 			get
@@ -744,7 +744,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscOfflineTypeEnum OfflineType
 		{
 			get
@@ -764,7 +764,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string OfflinePublication
 		{
 			get
@@ -784,7 +784,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool Offline
 		{
 			get
@@ -799,7 +799,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string OfflineSource
 		{
 			get
@@ -819,7 +819,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscXMLLocationEnum XMLLocation
 		{
 			get
@@ -839,7 +839,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool UseXMLData
 		{
 			get
@@ -859,7 +859,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string XMLDataTarget
 		{
 			get
@@ -879,7 +879,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string ConnectionFile
 		{
 			get
@@ -899,7 +899,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string DefaultRecordsetDefName
 		{
 			get
@@ -914,7 +914,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string ConnectionStringFullPath
 		{
 			get
@@ -929,7 +929,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaDiagrams SchemaDiagrams
 		{
 			get
@@ -945,7 +945,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string DBNSOwnerName
 		{
 			get
@@ -966,7 +966,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RecordsetName">string RecordsetName</param>
 		/// <param name="ExecuteOption">NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption</param>
 		/// <param name="FetchType">NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption, NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
@@ -979,7 +979,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="DataAssistant">object DataAssistant</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetDataAssistant(object dataAssistant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataAssistant);
@@ -991,7 +991,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Advise">object Advise</param>
 		/// <param name="SinkName">string SinkName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DesignAdvise(object advise, string sinkName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(advise, sinkName);
@@ -1002,7 +1002,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="SinkName">string SinkName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DesignUnAdvise(string sinkName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sinkName);
@@ -1018,7 +1018,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
 		/// <param name="PageRowsource">string PageRowsource</param>
 		/// <param name="SchemaRelationship">string SchemaRelationship</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ProcessDrop(object pUnknownDropGoo, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
@@ -1036,7 +1036,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
 		/// <param name="PageRowsource">string PageRowsource</param>
 		/// <param name="SchemaRelationship">string SchemaRelationship</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ScriptDrop(object rowsources, object relationships, object fields, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
@@ -1047,7 +1047,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Element">object Element</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Section GetContainingSection(object element)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
@@ -1068,7 +1068,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="DropRowsource">string DropRowsource</param>
 		/// <param name="RowsourcesOut">object RowsourcesOut</param>
 		/// <param name="RelationshipsOut">object RelationshipsOut</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string dropRowsource, object rowsourcesOut, object relationshipsOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, recordsetDef, dl, dt, dropRowsource, rowsourcesOut, relationshipsOut);
@@ -1086,7 +1086,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RowsourcesOut">object RowsourcesOut</param>
 		/// <param name="RelationshipsOut">object RelationshipsOut</param>
 		/// <param name="NumberOfDrops">Int32 NumberOfDrops</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, string dropRowsource, object rowsourcesOut, object relationshipsOut, Int32 numberOfDrops)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unknownDropGoo, recordSetDefName, location, type, dropRowsource, rowsourcesOut, relationshipsOut, numberOfDrops);
@@ -1098,7 +1098,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Hyperlink">object Hyperlink</param>
 		/// <param name="Part">NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum Part</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string HyperlinkPart(object hyperlink, NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
@@ -1109,7 +1109,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SchemaRefresh()
 		{
 			object[] paramsArray = null;
@@ -1121,7 +1121,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="OldID">string OldID</param>
 		/// <param name="NewID">string NewID</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void UpdateElementID(string oldID, string newID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldID, newID);
@@ -1131,7 +1131,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Reset()
 		{
 			object[] paramsArray = null;
@@ -1142,7 +1142,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string getDataMemberName(Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
@@ -1153,7 +1153,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 getDataMemberCount()
 		{
 			object[] paramsArray = null;
@@ -1168,7 +1168,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="RecordSource">string RecordSource</param>
 		/// <param name="SectionType">NetOffice.OWC10Api.Enums.SectTypeEnum SectionType</param>
 		/// <param name="GroupLevel">NetOffice.OWC10Api.GroupLevel GroupLevel</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void GetSectionInfo(object sectionElement, string recordSource, NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, NetOffice.OWC10Api.GroupLevel groupLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionElement, recordSource, sectionType, groupLevel);
@@ -1179,7 +1179,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="RecordSource">string RecordSource</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DeleteRecordSourceIfUnused(string recordSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource);
@@ -1191,7 +1191,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="RecordSource">string RecordSource</param>
 		/// <param name="PageField">string PageField</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DeletePageFieldIfUnused(string recordSource, string pageField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource, pageField);
@@ -1202,7 +1202,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="bstrRecordset">string bstrRecordset</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ResetRecordset(string bstrRecordset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrRecordset);
@@ -1214,7 +1214,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="ExportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
 		/// <param name="ConnectString">string ConnectString</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, string connectString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(exportType, connectString);
@@ -1225,7 +1225,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="eEncoding">NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ExportXML(NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eEncoding);
@@ -1237,7 +1237,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="RecordsetName">string RecordsetName</param>
 		/// <param name="Recordset">NetOffice.ADODBApi.Recordset Recordset</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetRootRecordset(string recordsetName, NetOffice.ADODBApi.Recordset recordset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, recordset);
@@ -1251,7 +1251,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="OnlineDatabase">string OnlineDatabase</param>
 		/// <param name="OfflineServer">string OfflineServer</param>
 		/// <param name="OfflineDatabase">string OfflineDatabase</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void GetOfflineDisplayInfo(string onlineServer, string onlineDatabase, string offlineServer, string offlineDatabase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(onlineServer, onlineDatabase, offlineServer, offlineDatabase);
@@ -1262,7 +1262,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="RefreshType">NetOffice.OWC10Api.Enums.RefreshType RefreshType</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Refresh(NetOffice.OWC10Api.Enums.RefreshType refreshType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refreshType);
@@ -1275,7 +1275,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="fChild">Int32 fChild</param>
 		/// <param name="ppGrouplevel">NetOffice.OWC10Api.GroupLevel ppGrouplevel</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, NetOffice.OWC10Api.GroupLevel ppGrouplevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, fChild, ppGrouplevel);
@@ -1286,7 +1286,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Notification">NetOffice.OWC10Api.Enums.NotificationType Notification</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DllNotification(NetOffice.OWC10Api.Enums.NotificationType notification)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(notification);
@@ -1297,7 +1297,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Suspend">bool Suspend</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SuspendUndo(bool suspend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(suspend);
@@ -1307,7 +1307,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void UpdateFocus()
 		{
 			object[] paramsArray = null;
@@ -1318,7 +1318,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ConnectionString">string ConnectionString</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsValidDAPProvider(string connectionString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString);
@@ -1334,7 +1334,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="TargetCurrency">string TargetCurrency</param>
 		/// <param name="FullPrecision">optional object FullPrecision</param>
 		/// <param name="TriangulationPrecision">optional object TriangulationPrecision</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
@@ -1348,7 +1348,8 @@ namespace NetOffice.OWC10Api
 		/// <param name="Number">Double Number</param>
 		/// <param name="SourceCurrency">string SourceCurrency</param>
 		/// <param name="TargetCurrency">string TargetCurrency</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency);
@@ -1359,7 +1360,23 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		/// <param name="Number">Double Number</param>
+		/// <param name="SourceCurrency">string SourceCurrency</param>
+		/// <param name="TargetCurrency">string TargetCurrency</param>
+		/// <param name="FullPrecision">optional object FullPrecision</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision);
+			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
+			return (Double)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public String[] GetDAPProviders()
 		{
 			object[] paramsArray = null;
@@ -1371,7 +1388,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Synchronizing">bool Synchronizing</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetSynchronizing(bool synchronizing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(synchronizing);
@@ -1382,7 +1399,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="DisplayError">bool DisplayError</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetDisplayError(bool displayError)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayError);
@@ -1393,7 +1410,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Suspend">bool Suspend</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SuspendXMLReExecute(bool suspend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(suspend);
@@ -1404,7 +1421,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="FirePropChange">bool FirePropChange</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetFirePropChange(bool firePropChange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(firePropChange);
@@ -1416,7 +1433,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		/// <param name="ValueIfNull">optional object ValueIfNull</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object Nz(object value, object valueIfNull)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, valueIfNull);
@@ -1436,7 +1453,8 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object Nz(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -1455,7 +1473,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void RefreshJetCache()
 		{
 			object[] paramsArray = null;
@@ -1465,7 +1483,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void AutoRefreshOfflineSource()
 		{
 			object[] paramsArray = null;

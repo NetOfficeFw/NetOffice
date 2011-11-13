@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface TitleBar SupportByLibrary OWC10, 1
+	/// DispatchInterface TitleBar SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TitleBar : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string Caption
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Font Font
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Interior Interior
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Parent
 		{
 			get
@@ -160,7 +160,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool Visible
 		{
 			get

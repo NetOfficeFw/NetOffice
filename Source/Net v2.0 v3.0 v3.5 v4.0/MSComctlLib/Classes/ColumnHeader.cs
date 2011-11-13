@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ColumnHeader SupportByLibrary MSComctlLib, 6
+	/// CoClass ColumnHeader SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ColumnHeader : IColumnHeader, IEventBinding 
 	{

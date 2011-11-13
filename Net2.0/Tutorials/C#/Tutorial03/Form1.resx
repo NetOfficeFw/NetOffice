@@ -122,7 +122,7 @@
 In case you have an object with exported events, a CommandBarButton for example,
 and you want dispose them without stoppping fire events you have to use Dispose() with a parameter.
 
-See chapter1, chapter5 and chapter8 in technical documentation for further info.
+See chapter1 and chapter4 in technical documentation for further info.
 </value>
   </data>
 </root>

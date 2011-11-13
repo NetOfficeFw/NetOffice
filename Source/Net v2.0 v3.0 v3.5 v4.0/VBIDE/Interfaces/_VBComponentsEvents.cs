@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// Interface _VBComponentsEvents SupportByLibrary VBIDE, 5.3,12
+	/// Interface _VBComponentsEvents SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _VBComponentsEvents : COMObject
 	{

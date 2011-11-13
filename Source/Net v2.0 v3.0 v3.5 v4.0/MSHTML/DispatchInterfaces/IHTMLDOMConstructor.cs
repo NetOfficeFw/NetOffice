@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLDOMConstructor SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLDOMConstructor SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLDOMConstructor : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject constructor
 		{
 			get
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="propname">string propname</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object LookupGetter(string propname)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname);
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="propname">string propname</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object LookupSetter(string propname)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname);
@@ -137,7 +137,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="pdispHandler">object pdispHandler</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void DefineGetter(string propname, object pdispHandler)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, pdispHandler);
@@ -149,7 +149,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="pdispHandler">object pdispHandler</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void DefineSetter(string propname, object pdispHandler)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, pdispHandler);

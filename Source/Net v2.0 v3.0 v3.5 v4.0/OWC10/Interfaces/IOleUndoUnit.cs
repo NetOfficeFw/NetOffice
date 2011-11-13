@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOleUndoUnit SupportByLibrary OWC10, 1
+	/// Interface IOleUndoUnit SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOleUndoUnit : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Do(NetOffice.OWC10Api.IOleUndoManager pUndoManager)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUndoManager);
@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetDescription(string pbstr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="pClsid">Guid pClsid</param>
 		/// <param name="plID">Int32 plID</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetUnitType(Guid pClsid, Int32 plID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pClsid, plID);
@@ -115,7 +115,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 OnNextAdd()
 		{
 			object[] paramsArray = null;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLWindow3 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLWindow3 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLWindow3 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 screenLeft
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 screenTop
 		{
 			get
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object onbeforeprint
 		{
 			get
@@ -134,7 +134,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object onafterprint
 		{
 			get
@@ -162,7 +162,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDataTransfer clipboardData
 		{
 			get
@@ -183,7 +183,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool attachEvent(string _event, object pdisp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
@@ -196,7 +196,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void detachEvent(string _event, object pdisp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
@@ -209,7 +209,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 setTimeout(object expression, Int32 msec, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
@@ -222,7 +222,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 setTimeout(object expression, Int32 msec)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
@@ -236,7 +237,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 setInterval(object expression, Int32 msec, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
@@ -249,7 +250,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 setInterval(object expression, Int32 msec)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
@@ -260,7 +262,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void print()
 		{
 			object[] paramsArray = null;
@@ -273,7 +275,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="url">string url</param>
 		/// <param name="varArgIn">optional object varArgIn</param>
 		/// <param name="options">optional object options</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn, options);
@@ -286,10 +288,26 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="url">string url</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
+			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
+			LateBindingApi.MSHTMLApi.IHTMLWindow2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLWindow2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="url">string url</param>
+		/// <param name="varArgIn">optional object varArgIn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public LateBindingApi.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
 			LateBindingApi.MSHTMLApi.IHTMLWindow2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLWindow2;
 			return newObject;

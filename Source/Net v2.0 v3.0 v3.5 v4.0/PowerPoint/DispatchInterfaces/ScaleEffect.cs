@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ScaleEffect SupportByLibrary PowerPoint, 10,11,12,14
+	/// DispatchInterface ScaleEffect SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScaleEffect : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single ByX
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single ByY
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single FromX
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single FromY
 		{
 			get
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single ToX
 		{
 			get
@@ -208,7 +208,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single ToY
 		{
 			get

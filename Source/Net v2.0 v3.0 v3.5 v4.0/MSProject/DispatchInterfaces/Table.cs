@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Table SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Table SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Table : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Name
 		{
 			get
@@ -112,7 +112,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Index
 		{
 			get
@@ -127,7 +127,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Project Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjItemType TableType
 		{
 			get
@@ -158,7 +158,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ShowInMenu
 		{
 			get
@@ -178,7 +178,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjDateFormat DateFormat
 		{
 			get
@@ -198,7 +198,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 RowHeight
 		{
 			get
@@ -218,7 +218,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool LockFirstColumn
 		{
 			get
@@ -238,7 +238,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AdjustHeaderRowHeight
 		{
 			get
@@ -258,7 +258,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.TableFields TableFields
 		{
 			get
@@ -277,7 +277,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -287,7 +287,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void Apply()
 		{
 			object[] paramsArray = null;

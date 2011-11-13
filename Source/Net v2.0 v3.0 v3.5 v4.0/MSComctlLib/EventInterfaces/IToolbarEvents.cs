@@ -10,67 +10,67 @@ namespace NetOffice.MSComctlLibApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[ComImport, Guid("66833FE5-8583-11D1-B16A-00C0F0283628"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface IToolbarEvents
 	{
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ButtonClick([In, MarshalAs(UnmanagedType.IDispatch)] object button);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void Change();
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick();
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void ButtonMenuClick([In, MarshalAs(UnmanagedType.IDispatch)] object buttonMenu);
 
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void ButtonDropDown([In, MarshalAs(UnmanagedType.IDispatch)] object button);
 	}

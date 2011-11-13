@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface CalculatedFields SupportByLibrary Excel, 9,10,11,12,14
+	/// DispatchInterface CalculatedFields SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CalculatedFields : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Field">object Field</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField get__Default(object field)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">string Formula</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField Add(string name, string formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">string Formula</param>
 		/// <param name="UseStandardFormula">optional object UseStandardFormula</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField Add(string name, string formula, object useStandardFormula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, useStandardFormula);
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.PivotField this[object index]
 		{
@@ -204,7 +204,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Formula">string Formula</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField _Add(string name, string formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
@@ -217,7 +217,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

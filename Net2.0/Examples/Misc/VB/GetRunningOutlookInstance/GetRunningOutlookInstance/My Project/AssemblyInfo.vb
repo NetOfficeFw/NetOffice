@@ -10,8 +10,8 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("GetRunningOutlookInstance")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("NetOffice")> 
-<Assembly: AssemblyProduct("GetRunningOutlookInstance")> 
+<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
+<Assembly: AssemblyProduct("NetOffice")> 
 <Assembly: AssemblyCopyright("Copyright © 2011")> 
 <Assembly: AssemblyTrademark("")> 
 

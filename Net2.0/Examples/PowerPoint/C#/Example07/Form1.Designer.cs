@@ -100,7 +100,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Example09 - Customize GUI";
+            this.Text = "Example07 - Customize GUI";
             this.ResumeLayout(false);
             this.PerformLayout();
 

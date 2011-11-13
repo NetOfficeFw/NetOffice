@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _References SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _References SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _References : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="var">object var</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.Reference this[object var]
 		{
@@ -131,7 +131,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Guid">string Guid</param>
 		/// <param name="Major">Int32 Major</param>
 		/// <param name="Minor">Int32 Minor</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Reference AddFromGuid(string guid, Int32 major, Int32 minor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid, major, minor);
@@ -144,7 +144,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Reference AddFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -157,7 +157,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Reference">NetOffice.AccessApi.Reference Reference</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Remove(NetOffice.AccessApi.Reference reference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reference);
@@ -168,7 +168,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -180,7 +180,10 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Access", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Access, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGTransformList SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGTransformList SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGTransformList : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 numberOfItems
 		{
 			get
@@ -99,7 +99,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clear()
 		{
 			object[] paramsArray = null;
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGTransform newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform initialize(LateBindingApi.MSHTMLApi.ISVGTransform newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);
@@ -123,7 +123,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform getItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -137,7 +137,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGTransform newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform insertItemBefore(LateBindingApi.MSHTMLApi.ISVGTransform newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -151,7 +151,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGTransform newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform replaceItem(LateBindingApi.MSHTMLApi.ISVGTransform newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -164,7 +164,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform removeItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -177,7 +177,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGTransform newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform appendItem(LateBindingApi.MSHTMLApi.ISVGTransform newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);
@@ -190,7 +190,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGMatrix newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform createSVGTransformFromMatrix(LateBindingApi.MSHTMLApi.ISVGMatrix newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);
@@ -202,7 +202,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform consolidate()
 		{
 			object[] paramsArray = null;

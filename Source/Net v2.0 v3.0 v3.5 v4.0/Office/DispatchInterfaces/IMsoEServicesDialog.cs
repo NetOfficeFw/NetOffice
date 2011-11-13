@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IMsoEServicesDialog SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface IMsoEServicesDialog SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoEServicesDialog : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string ApplicationName
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject Application
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject WebComponent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject ClipArt
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ApplyWebComponentChanges">bool ApplyWebComponentChanges</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Close(bool applyWebComponentChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(applyWebComponentChanges);
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Domain">string Domain</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AddTrustedDomain(string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(domain);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPPushButton SupportByLibrary PowerPoint, 9
+	/// DispatchInterface PPPushButton SupportByLibraryAttribute PowerPoint, 9
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPPushButton : PPControl
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsDefault
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsEscape
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public string OnPressed
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public void Click()
 		{
 			object[] paramsArray = null;

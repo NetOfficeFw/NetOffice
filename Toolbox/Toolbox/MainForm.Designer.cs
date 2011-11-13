@@ -33,6 +33,7 @@
             this.imageListTabMain = new System.Windows.Forms.ImageList(this.components);
             this.tabPageApplication = new System.Windows.Forms.TabPage();
             this.labelVersionHint = new System.Windows.Forms.Label();
+            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.panelMainLeft = new System.Windows.Forms.Panel();
             this.labelBeginTitle = new System.Windows.Forms.Label();
             this.labelBeginBottom = new System.Windows.Forms.Label();
@@ -96,7 +97,6 @@
             this.labelStallmanSays = new System.Windows.Forms.Label();
             this.labelNetOfficeIsFree = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.tabPageApplication.SuspendLayout();
             this.panelMainLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -158,6 +158,15 @@
             this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
             this.labelVersionHint.TabIndex = 91;
             this.labelVersionHint.Text = "labelVersionHint";
+            // 
+            // colorLabelTitle
+            // 
+            this.colorLabelTitle.ColorBackShiftFactor = -5;
+            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
+            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
+            this.colorLabelTitle.Name = "colorLabelTitle";
+            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
+            this.colorLabelTitle.TabIndex = 75;
             // 
             // panelMainLeft
             // 
@@ -860,21 +869,13 @@
             this.label11.TabIndex = 82;
             this.label11.Text = "- Richard Stallman";
             // 
-            // colorLabelTitle
-            // 
-            this.colorLabelTitle.ColorBackShiftFactor = -5;
-            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
-            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
-            this.colorLabelTitle.Name = "colorLabelTitle";
-            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
-            this.colorLabelTitle.TabIndex = 75;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 456);
             this.Controls.Add(this.tabControlMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 483);
             this.Name = "MainForm";
             this.Text = "NetOffice.DeveloperToolbox";

@@ -15,9 +15,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass Range SupportByLibrary OWC10, 1
+	/// CoClass Range SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Range : _Range, IEventBinding 
 	{

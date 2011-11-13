@@ -5,3 +5,4 @@ Tutorials\Tutorial04			- Observable COM Proxy Count
 Tutorials\Tutorial05			- Understanding COMObject
 Tutorials\Tutorial06			- Understand Variant Type
 Tutorials\Tutorial07			- Invoker
+Tutorials\Tutorial08			- How to use EntityIsAvailable

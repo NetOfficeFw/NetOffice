@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface GroupCriterion2 SupportByLibrary MSProject, 14
+	/// DispatchInterface GroupCriterion2 SupportByLibraryAttribute MSProject, 14
 	///</summary>
-	[SupportByLibrary("MSProject", 14)]
+	[SupportByLibraryAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupCriterion2 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public string FieldName
 		{
 			get
@@ -112,7 +112,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 Index
 		{
 			get
@@ -127,7 +127,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Group2 Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool Ascending
 		{
 			get
@@ -163,7 +163,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public string FontName
 		{
 			get
@@ -183,7 +183,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 FontSize
 		{
 			get
@@ -203,7 +203,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool FontBold
 		{
 			get
@@ -223,7 +223,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool FontItalic
 		{
 			get
@@ -243,7 +243,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool FontUnderLine
 		{
 			get
@@ -263,7 +263,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Enums.PjColor FontColor
 		{
 			get
@@ -283,7 +283,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Enums.PjColor CellColor
 		{
 			get
@@ -303,7 +303,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Enums.PjBackgroundPattern Pattern
 		{
 			get
@@ -323,7 +323,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Enums.PjGroupOn GroupOn
 		{
 			get
@@ -343,7 +343,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public object StartAt
 		{
 			get
@@ -371,7 +371,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public object GroupInterval
 		{
 			get
@@ -399,7 +399,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool Assignment
 		{
 			get
@@ -419,7 +419,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 FontColorEx
 		{
 			get
@@ -439,7 +439,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 CellColorEx
 		{
 			get
@@ -462,7 +462,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

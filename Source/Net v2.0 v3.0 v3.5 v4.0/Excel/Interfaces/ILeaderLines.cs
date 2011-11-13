@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface ILeaderLines SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface ILeaderLines SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ILeaderLines : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Border Border
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.ChartFormat Format
 		{
 			get
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Select()
 		{
 			object[] paramsArray = null;

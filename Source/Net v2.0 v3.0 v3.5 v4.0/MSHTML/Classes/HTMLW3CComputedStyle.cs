@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLW3CComputedStyle SupportByLibrary MSHTML, 4
+	/// CoClass HTMLW3CComputedStyle SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLW3CComputedStyle : DispHTMLW3CComputedStyle, IEventBinding 
 	{

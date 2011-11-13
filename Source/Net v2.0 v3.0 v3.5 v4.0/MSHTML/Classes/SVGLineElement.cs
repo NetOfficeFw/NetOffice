@@ -77,9 +77,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGLineElement SupportByLibrary MSHTML, 4
+	/// CoClass SVGLineElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGLineElement : DispSVGLineElement, IEventBinding 
 	{

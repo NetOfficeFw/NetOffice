@@ -4,185 +4,185 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdLineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleSingle = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDot = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDashSmallGap = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDashLargeGap = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDashDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDashDotDot = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDouble = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleTriple = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickSmallGap = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThickThinSmallGap = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickThinSmallGap = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickMedGap = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThickThinMedGap = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickThinMedGap = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickLargeGap = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThickThinLargeGap = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleThinThickThinLargeGap = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleSingleWavy = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDoubleWavy = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleDashDotStroked = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleEmboss3D = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleEngrave3D = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleOutset = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdLineStyleInset = 24
 	}
 }

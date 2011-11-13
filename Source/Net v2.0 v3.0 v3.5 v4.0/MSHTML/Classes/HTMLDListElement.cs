@@ -77,9 +77,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLDListElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLDListElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLDListElement : DispHTMLDListElement, IEventBinding 
 	{

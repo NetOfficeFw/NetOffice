@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface COMAddIn SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface COMAddIn SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class COMAddIn : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string Description
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string ProgId
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string Guid
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool Connect
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Object
 		{
 			get
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get

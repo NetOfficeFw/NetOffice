@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface RulerLevel SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// DispatchInterface RulerLevel SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RulerLevel : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single FirstMargin
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single LeftMargin
 		{
 			get

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface ListTemplates SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface ListTemplates SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListTemplates : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.ListTemplate this[object index]
 		{
@@ -161,7 +161,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="OutlineNumbered">optional object OutlineNumbered</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered, name);
@@ -173,10 +173,25 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListTemplate Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="OutlineNumbered">optional object OutlineNumbered</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
 			return newObject;
@@ -186,7 +201,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Hyperlinks SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Hyperlinks SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Hyperlinks : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Hyperlink this[object index]
 		{
@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
 		/// <param name="Anchor">object Anchor</param>
 		/// <param name="Address">optional object Address</param>
 		/// <param name="SubAddress">optional object SubAddress</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlink _Add(object anchor, object address, object subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress);
@@ -175,10 +175,26 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlink _Add(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Anchor">object Anchor</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Hyperlink _Add(object anchor, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
 			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
 			return newObject;
@@ -193,7 +209,7 @@ namespace NetOffice.WordApi
 		/// <param name="ScreenTip">optional object ScreenTip</param>
 		/// <param name="TextToDisplay">optional object TextToDisplay</param>
 		/// <param name="Target">optional object Target</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress, object screenTip, object textToDisplay, object target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay, target);
@@ -206,10 +222,77 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Anchor">object Anchor</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlink Add(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Anchor">object Anchor</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Anchor">object Anchor</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="SubAddress">optional object SubAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Anchor">object Anchor</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="SubAddress">optional object SubAddress</param>
+		/// <param name="ScreenTip">optional object ScreenTip</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress, object screenTip)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Anchor">object Anchor</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="SubAddress">optional object SubAddress</param>
+		/// <param name="ScreenTip">optional object ScreenTip</param>
+		/// <param name="TextToDisplay">optional object TextToDisplay</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Hyperlink Add(object anchor, object address, object subAddress, object screenTip, object textToDisplay)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(anchor, address, subAddress, screenTip, textToDisplay);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
 			return newObject;
@@ -219,7 +302,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

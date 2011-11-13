@@ -40,8 +40,7 @@ Public Class Form1
         _wordApplication.CustomizationContext = normalDotTemplate
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _wordApplication.CommandBars("Menu Bar").Controls.Add( _
-                                                                                MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
+        Dim commandBarPopup As Office.CommandBarPopup = _wordApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' you can see we use an own icon via .PasteFace()
@@ -51,7 +50,7 @@ Public Class Form1
         ' For example, a COMAddin running as InProcServer and can access the Picture Property
 
         ' add a button to the popup
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         Clipboard.SetDataObject(Me.Icon.ToBitmap())
@@ -64,7 +63,7 @@ Public Class Form1
         commandBar.Visible = True
 
         ' add a button to the toolbar
-        commandBarBtn = commandBar.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarBtn = commandBar.Controls.Add(MsoControlType.msoControlButton)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         commandBarBtn.FaceId = 3
@@ -72,11 +71,11 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' add a dropdown box to the toolbar
-        commandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup, we use an own icon for the button
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         Clipboard.SetDataObject(Me.Icon.ToBitmap())
@@ -85,11 +84,11 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu
-        commandBarPopup = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
+        commandBarPopup = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         commandBarBtn.FaceId = 9

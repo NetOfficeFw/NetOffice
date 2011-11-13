@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IActiveIMMApp SupportByLibrary MSHTML, 4
+	/// Interface IActiveIMMApp SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IActiveIMMApp : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIME">Int32 hIME</param>
 		/// <param name="phPrev">Int32 phPrev</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 AssociateContext(_RemotableHandle hWnd, Int32 hIME, Int32 phPrev)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIME, phPrev);
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="dwMode">Int32 dwMode</param>
 		/// <param name="pData">__MIDL___MIDL_itf_mshtml_0001_0042_0001 pData</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ConfigureIMEA(object hKL, _RemotableHandle hWnd, Int32 dwMode, __MIDL___MIDL_itf_mshtml_0001_0042_0001 pData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hWnd, dwMode, pData);
@@ -111,7 +111,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="dwMode">Int32 dwMode</param>
 		/// <param name="pData">__MIDL___MIDL_itf_mshtml_0001_0042_0002 pData</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ConfigureIMEW(object hKL, _RemotableHandle hWnd, Int32 dwMode, __MIDL___MIDL_itf_mshtml_0001_0042_0002 pData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hWnd, dwMode, pData);
@@ -123,7 +123,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="phIMC">Int32 phIMC</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CreateContext(Int32 phIMC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(phIMC);
@@ -135,7 +135,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="hIME">Int32 hIME</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 DestroyContext(Int32 hIME)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIME);
@@ -152,7 +152,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szRegister">string szRegister</param>
 		/// <param name="pData">object pData</param>
 		/// <param name="pEnum">LateBindingApi.MSHTMLApi.IEnumRegisterWordA pEnum</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EnumRegisterWordA(object hKL, string szReading, Int32 dwStyle, string szRegister, object pData, LateBindingApi.MSHTMLApi.IEnumRegisterWordA pEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister, pData, pEnum);
@@ -169,7 +169,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szRegister">string szRegister</param>
 		/// <param name="pData">object pData</param>
 		/// <param name="pEnum">LateBindingApi.MSHTMLApi.IEnumRegisterWordW pEnum</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EnumRegisterWordW(object hKL, string szReading, Int32 dwStyle, string szRegister, object pData, LateBindingApi.MSHTMLApi.IEnumRegisterWordW pEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister, pData, pEnum);
@@ -185,7 +185,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uEscape">UIntPtr uEscape</param>
 		/// <param name="pData">object pData</param>
 		/// <param name="plResult">Int32 plResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EscapeA(object hKL, Int32 hIMC, UIntPtr uEscape, object pData, Int32 plResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, uEscape, pData, plResult);
@@ -201,7 +201,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uEscape">UIntPtr uEscape</param>
 		/// <param name="pData">object pData</param>
 		/// <param name="plResult">Int32 plResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EscapeW(object hKL, Int32 hIMC, UIntPtr uEscape, object pData, Int32 plResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, uEscape, pData, plResult);
@@ -217,7 +217,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="pCandList">__MIDL___MIDL_itf_mshtml_0001_0042_0007 pCandList</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCandidateListA(Int32 hIMC, Int32 dwIndex, UIntPtr uBufLen, __MIDL___MIDL_itf_mshtml_0001_0042_0007 pCandList, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, uBufLen, pCandList, puCopied);
@@ -233,7 +233,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="pCandList">__MIDL___MIDL_itf_mshtml_0001_0042_0007 pCandList</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCandidateListW(Int32 hIMC, Int32 dwIndex, UIntPtr uBufLen, __MIDL___MIDL_itf_mshtml_0001_0042_0007 pCandList, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, uBufLen, pCandList, puCopied);
@@ -247,7 +247,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pdwListSize">Int32 pdwListSize</param>
 		/// <param name="pdwBufLen">Int32 pdwBufLen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCandidateListCountA(Int32 hIMC, Int32 pdwListSize, Int32 pdwBufLen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pdwListSize, pdwBufLen);
@@ -261,7 +261,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pdwListSize">Int32 pdwListSize</param>
 		/// <param name="pdwBufLen">Int32 pdwBufLen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCandidateListCountW(Int32 hIMC, Int32 pdwListSize, Int32 pdwBufLen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pdwListSize, pdwBufLen);
@@ -275,7 +275,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
 		/// <param name="pCandidate">__MIDL___MIDL_itf_mshtml_0001_0042_0005 pCandidate</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCandidateWindow(Int32 hIMC, Int32 dwIndex, __MIDL___MIDL_itf_mshtml_0001_0042_0005 pCandidate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pCandidate);
@@ -288,7 +288,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0003 plf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCompositionFontA(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0003 plf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
@@ -301,7 +301,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0004 plf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCompositionFontW(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0004 plf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
@@ -317,7 +317,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwBufLen">Int32 dwBufLen</param>
 		/// <param name="plCopied">Int32 plCopied</param>
 		/// <param name="pBuf">object pBuf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCompositionStringA(Int32 hIMC, Int32 dwIndex, Int32 dwBufLen, Int32 plCopied, object pBuf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, dwBufLen, plCopied, pBuf);
@@ -333,7 +333,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwBufLen">Int32 dwBufLen</param>
 		/// <param name="plCopied">Int32 plCopied</param>
 		/// <param name="pBuf">object pBuf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCompositionStringW(Int32 hIMC, Int32 dwIndex, Int32 dwBufLen, Int32 plCopied, object pBuf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, dwBufLen, plCopied, pBuf);
@@ -346,7 +346,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCompForm">__MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCompositionWindow(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCompForm);
@@ -359,7 +359,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="phIMC">Int32 phIMC</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetContext(_RemotableHandle hWnd, Int32 phIMC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, phIMC);
@@ -377,7 +377,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uFlag">UIntPtr uFlag</param>
 		/// <param name="pDst">__MIDL___MIDL_itf_mshtml_0001_0042_0007 pDst</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetConversionListA(object hKL, Int32 hIMC, string pSrc, UIntPtr uBufLen, UIntPtr uFlag, __MIDL___MIDL_itf_mshtml_0001_0042_0007 pDst, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, pSrc, uBufLen, uFlag, pDst, puCopied);
@@ -395,7 +395,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uFlag">UIntPtr uFlag</param>
 		/// <param name="pDst">__MIDL___MIDL_itf_mshtml_0001_0042_0007 pDst</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetConversionListW(object hKL, Int32 hIMC, string pSrc, UIntPtr uBufLen, UIntPtr uFlag, __MIDL___MIDL_itf_mshtml_0001_0042_0007 pDst, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, pSrc, uBufLen, uFlag, pDst, puCopied);
@@ -409,7 +409,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pfdwConversion">Int32 pfdwConversion</param>
 		/// <param name="pfdwSentence">Int32 pfdwSentence</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetConversionStatus(Int32 hIMC, Int32 pfdwConversion, Int32 pfdwSentence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pfdwConversion, pfdwSentence);
@@ -422,7 +422,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="phDefWnd">_RemotableHandle phDefWnd</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetDefaultIMEWnd(_RemotableHandle hWnd, _RemotableHandle phDefWnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, phDefWnd);
@@ -437,7 +437,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="szDescription">string szDescription</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetDescriptionA(object hKL, UIntPtr uBufLen, string szDescription, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uBufLen, szDescription, puCopied);
@@ -452,7 +452,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="szDescription">string szDescription</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetDescriptionW(object hKL, UIntPtr uBufLen, string szDescription, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uBufLen, szDescription, puCopied);
@@ -468,7 +468,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwBufLen">Int32 dwBufLen</param>
 		/// <param name="pBuf">string pBuf</param>
 		/// <param name="pdwResult">Int32 pdwResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetGuideLineA(Int32 hIMC, Int32 dwIndex, Int32 dwBufLen, string pBuf, Int32 pdwResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, dwBufLen, pBuf, pdwResult);
@@ -484,7 +484,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwBufLen">Int32 dwBufLen</param>
 		/// <param name="pBuf">string pBuf</param>
 		/// <param name="pdwResult">Int32 pdwResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetGuideLineW(Int32 hIMC, Int32 dwIndex, Int32 dwBufLen, string pBuf, Int32 pdwResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, dwBufLen, pBuf, pdwResult);
@@ -499,7 +499,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="szFileName">string szFileName</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetIMEFileNameA(object hKL, UIntPtr uBufLen, string szFileName, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uBufLen, szFileName, puCopied);
@@ -514,7 +514,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
 		/// <param name="szFileName">string szFileName</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetIMEFileNameW(object hKL, UIntPtr uBufLen, string szFileName, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uBufLen, szFileName, puCopied);
@@ -526,7 +526,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetOpenStatus(Int32 hIMC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC);
@@ -540,7 +540,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hKL">object hKL</param>
 		/// <param name="fdwIndex">Int32 fdwIndex</param>
 		/// <param name="pdwProperty">Int32 pdwProperty</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetProperty(object hKL, Int32 fdwIndex, Int32 pdwProperty)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, fdwIndex, pdwProperty);
@@ -555,7 +555,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="nItem">UIntPtr nItem</param>
 		/// <param name="pStyleBuf">__MIDL___MIDL_itf_mshtml_0001_0042_0008 pStyleBuf</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetRegisterWordStyleA(object hKL, UIntPtr nItem, __MIDL___MIDL_itf_mshtml_0001_0042_0008 pStyleBuf, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, nItem, pStyleBuf, puCopied);
@@ -570,7 +570,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="nItem">UIntPtr nItem</param>
 		/// <param name="pStyleBuf">__MIDL___MIDL_itf_mshtml_0001_0042_0009 pStyleBuf</param>
 		/// <param name="puCopied">UIntPtr puCopied</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetRegisterWordStyleW(object hKL, UIntPtr nItem, __MIDL___MIDL_itf_mshtml_0001_0042_0009 pStyleBuf, UIntPtr puCopied)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, nItem, pStyleBuf, puCopied);
@@ -583,7 +583,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pptPos">tagPOINT pptPos</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetStatusWindowPos(Int32 hIMC, tagPOINT pptPos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pptPos);
@@ -596,7 +596,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="puVirtualKey">UIntPtr puVirtualKey</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetVirtualKey(_RemotableHandle hWnd, UIntPtr puVirtualKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, puVirtualKey);
@@ -610,7 +610,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szIMEFileName">string szIMEFileName</param>
 		/// <param name="szLayoutText">string szLayoutText</param>
 		/// <param name="phKL">object phKL</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InstallIMEA(string szIMEFileName, string szLayoutText, object phKL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(szIMEFileName, szLayoutText, phKL);
@@ -624,7 +624,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szIMEFileName">string szIMEFileName</param>
 		/// <param name="szLayoutText">string szLayoutText</param>
 		/// <param name="phKL">object phKL</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InstallIMEW(string szIMEFileName, string szLayoutText, object phKL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(szIMEFileName, szLayoutText, phKL);
@@ -636,7 +636,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsIME(object hKL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL);
@@ -651,7 +651,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="msg">UIntPtr msg</param>
 		/// <param name="wParam">Int32 wParam</param>
 		/// <param name="lParam">Int32 lParam</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsUIMessageA(_RemotableHandle hWndIME, UIntPtr msg, Int32 wParam, Int32 lParam)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWndIME, msg, wParam, lParam);
@@ -666,7 +666,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="msg">UIntPtr msg</param>
 		/// <param name="wParam">Int32 wParam</param>
 		/// <param name="lParam">Int32 lParam</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsUIMessageW(_RemotableHandle hWndIME, UIntPtr msg, Int32 wParam, Int32 lParam)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWndIME, msg, wParam, lParam);
@@ -681,7 +681,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwAction">Int32 dwAction</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
 		/// <param name="dwValue">Int32 dwValue</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 NotifyIME(Int32 hIMC, Int32 dwAction, Int32 dwIndex, Int32 dwValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwAction, dwIndex, dwValue);
@@ -696,7 +696,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szReading">string szReading</param>
 		/// <param name="dwStyle">Int32 dwStyle</param>
 		/// <param name="szRegister">string szRegister</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterWordA(object hKL, string szReading, Int32 dwStyle, string szRegister)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister);
@@ -711,7 +711,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szReading">string szReading</param>
 		/// <param name="dwStyle">Int32 dwStyle</param>
 		/// <param name="szRegister">string szRegister</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterWordW(object hKL, string szReading, Int32 dwStyle, string szRegister)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister);
@@ -724,7 +724,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIMC">Int32 hIMC</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ReleaseContext(_RemotableHandle hWnd, Int32 hIMC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIMC);
@@ -737,7 +737,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCandidate">__MIDL___MIDL_itf_mshtml_0001_0042_0005 pCandidate</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCandidateWindow(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0005 pCandidate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCandidate);
@@ -750,7 +750,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0003 plf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionFontA(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0003 plf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
@@ -763,7 +763,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0004 plf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionFontW(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0004 plf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
@@ -780,7 +780,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwCompLen">Int32 dwCompLen</param>
 		/// <param name="pRead">object pRead</param>
 		/// <param name="dwReadLen">Int32 dwReadLen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionStringA(Int32 hIMC, Int32 dwIndex, object pComp, Int32 dwCompLen, object pRead, Int32 dwReadLen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pComp, dwCompLen, pRead, dwReadLen);
@@ -797,7 +797,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwCompLen">Int32 dwCompLen</param>
 		/// <param name="pRead">object pRead</param>
 		/// <param name="dwReadLen">Int32 dwReadLen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionStringW(Int32 hIMC, Int32 dwIndex, object pComp, Int32 dwCompLen, object pRead, Int32 dwReadLen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pComp, dwCompLen, pRead, dwReadLen);
@@ -810,7 +810,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCompForm">__MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCompositionWindow(Int32 hIMC, __MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCompForm);
@@ -824,7 +824,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="fdwConversion">Int32 fdwConversion</param>
 		/// <param name="fdwSentence">Int32 fdwSentence</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetConversionStatus(Int32 hIMC, Int32 fdwConversion, Int32 fdwSentence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, fdwConversion, fdwSentence);
@@ -837,7 +837,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="fOpen">Int32 fOpen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetOpenStatus(Int32 hIMC, Int32 fOpen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, fOpen);
@@ -850,7 +850,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pptPos">tagPOINT pptPos</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetStatusWindowPos(Int32 hIMC, tagPOINT pptPos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pptPos);
@@ -863,7 +863,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="dwHotKeyID">Int32 dwHotKeyID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SimulateHotKey(_RemotableHandle hWnd, Int32 dwHotKeyID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, dwHotKeyID);
@@ -878,7 +878,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szReading">string szReading</param>
 		/// <param name="dwStyle">Int32 dwStyle</param>
 		/// <param name="szUnregister">string szUnregister</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 UnregisterWordA(object hKL, string szReading, Int32 dwStyle, string szUnregister)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szUnregister);
@@ -893,7 +893,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="szReading">string szReading</param>
 		/// <param name="dwStyle">Int32 dwStyle</param>
 		/// <param name="szUnregister">string szUnregister</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 UnregisterWordW(object hKL, string szReading, Int32 dwStyle, string szUnregister)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szUnregister);
@@ -905,7 +905,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fRestoreLayout">Int32 fRestoreLayout</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Activate(Int32 fRestoreLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fRestoreLayout);
@@ -916,7 +916,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Deactivate()
 		{
 			object[] paramsArray = null;
@@ -932,7 +932,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="wParam">Int32 wParam</param>
 		/// <param name="lParam">Int32 lParam</param>
 		/// <param name="plResult">Int32 plResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 OnDefWindowProc(_RemotableHandle hWnd, UIntPtr msg, Int32 wParam, Int32 lParam, Int32 plResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, msg, wParam, lParam, plResult);
@@ -945,7 +945,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="aaClassList">Int16 aaClassList</param>
 		/// <param name="uSize">UIntPtr uSize</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 FilterClientWindows(Int16 aaClassList, UIntPtr uSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(aaClassList, uSize);
@@ -958,7 +958,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uCodePage">UIntPtr uCodePage</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCodePageA(object hKL, UIntPtr uCodePage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uCodePage);
@@ -971,7 +971,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="plid">Int16 plid</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetLangId(object hKL, Int16 plid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, plid);
@@ -985,7 +985,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 AssociateContextEx(_RemotableHandle hWnd, Int32 hIMC, Int32 dwFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIMC, dwFlags);
@@ -997,7 +997,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="idThread">Int32 idThread</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 DisableIME(Int32 idThread)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idThread);
@@ -1015,7 +1015,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pImeMenu">__MIDL___MIDL_itf_mshtml_0001_0042_0010 pImeMenu</param>
 		/// <param name="dwSize">Int32 dwSize</param>
 		/// <param name="pdwResult">Int32 pdwResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetImeMenuItemsA(Int32 hIMC, Int32 dwFlags, Int32 dwType, __MIDL___MIDL_itf_mshtml_0001_0042_0010 pImeParentMenu, __MIDL___MIDL_itf_mshtml_0001_0042_0010 pImeMenu, Int32 dwSize, Int32 pdwResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwFlags, dwType, pImeParentMenu, pImeMenu, dwSize, pdwResult);
@@ -1033,7 +1033,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pImeMenu">__MIDL___MIDL_itf_mshtml_0001_0042_0011 pImeMenu</param>
 		/// <param name="dwSize">Int32 dwSize</param>
 		/// <param name="pdwResult">Int32 pdwResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetImeMenuItemsW(Int32 hIMC, Int32 dwFlags, Int32 dwType, __MIDL___MIDL_itf_mshtml_0001_0042_0011 pImeParentMenu, __MIDL___MIDL_itf_mshtml_0001_0042_0011 pImeMenu, Int32 dwSize, Int32 pdwResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwFlags, dwType, pImeParentMenu, pImeMenu, dwSize, pdwResult);
@@ -1046,7 +1046,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="idThread">Int32 idThread</param>
 		/// <param name="ppEnum">LateBindingApi.MSHTMLApi.IEnumInputContext ppEnum</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EnumInputContext(Int32 idThread, LateBindingApi.MSHTMLApi.IEnumInputContext ppEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idThread, ppEnum);

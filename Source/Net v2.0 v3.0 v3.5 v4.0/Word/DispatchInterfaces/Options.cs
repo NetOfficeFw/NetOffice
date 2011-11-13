@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Options SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Options SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Options : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowAccentedUppercase
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool WPHelp
 		{
 			get
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool WPDocNavKeys
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool Pagination
 		{
 			get
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool BlueScreen
 		{
 			get
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool EnableSound
 		{
 			get
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ConfirmConversions
 		{
 			get
@@ -263,7 +263,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UpdateLinksAtOpen
 		{
 			get
@@ -283,7 +283,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SendMailAttach
 		{
 			get
@@ -303,7 +303,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMeasurementUnits MeasurementUnit
 		{
 			get
@@ -323,7 +323,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 ButtonFieldClicks
 		{
 			get
@@ -343,7 +343,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ShortMenuNames
 		{
 			get
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool RTFInClipboard
 		{
 			get
@@ -383,7 +383,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UpdateFieldsAtPrint
 		{
 			get
@@ -403,7 +403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintProperties
 		{
 			get
@@ -423,7 +423,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintFieldCodes
 		{
 			get
@@ -443,7 +443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintComments
 		{
 			get
@@ -463,7 +463,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintHiddenText
 		{
 			get
@@ -483,7 +483,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool EnvelopeFeederInstalled
 		{
 			get
@@ -498,7 +498,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UpdateLinksAtPrint
 		{
 			get
@@ -518,7 +518,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintBackground
 		{
 			get
@@ -538,7 +538,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintDrawingObjects
 		{
 			get
@@ -558,7 +558,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string DefaultTray
 		{
 			get
@@ -578,7 +578,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 DefaultTrayID
 		{
 			get
@@ -598,7 +598,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CreateBackup
 		{
 			get
@@ -618,7 +618,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowFastSave
 		{
 			get
@@ -638,7 +638,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SavePropertiesPrompt
 		{
 			get
@@ -658,7 +658,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SaveNormalPrompt
 		{
 			get
@@ -678,7 +678,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 SaveInterval
 		{
 			get
@@ -698,7 +698,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool BackgroundSave
 		{
 			get
@@ -718,7 +718,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdInsertedTextMark InsertedTextMark
 		{
 			get
@@ -738,7 +738,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdDeletedTextMark DeletedTextMark
 		{
 			get
@@ -758,7 +758,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRevisedLinesMark RevisedLinesMark
 		{
 			get
@@ -778,7 +778,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex InsertedTextColor
 		{
 			get
@@ -798,7 +798,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex DeletedTextColor
 		{
 			get
@@ -818,7 +818,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex RevisedLinesColor
 		{
 			get
@@ -839,7 +839,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Path">NetOffice.WordApi.Enums.WdDefaultFilePath Path</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string get_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -852,7 +852,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Path">NetOffice.WordApi.Enums.WdDefaultFilePath Path</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void set_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -863,7 +863,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool Overtype
 		{
 			get
@@ -883,7 +883,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ReplaceSelection
 		{
 			get
@@ -903,7 +903,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowDragAndDrop
 		{
 			get
@@ -923,7 +923,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoWordSelection
 		{
 			get
@@ -943,7 +943,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool INSKeyForPaste
 		{
 			get
@@ -963,7 +963,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SmartCutPaste
 		{
 			get
@@ -983,7 +983,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool TabIndentKey
 		{
 			get
@@ -1003,7 +1003,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string PictureEditor
 		{
 			get
@@ -1023,7 +1023,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AnimateScreenMovements
 		{
 			get
@@ -1043,7 +1043,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool VirusProtection
 		{
 			get
@@ -1063,7 +1063,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRevisedPropertiesMark RevisedPropertiesMark
 		{
 			get
@@ -1083,7 +1083,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex RevisedPropertiesColor
 		{
 			get
@@ -1103,7 +1103,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SnapToGrid
 		{
 			get
@@ -1123,7 +1123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SnapToShapes
 		{
 			get
@@ -1143,7 +1143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single GridDistanceHorizontal
 		{
 			get
@@ -1163,7 +1163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single GridDistanceVertical
 		{
 			get
@@ -1183,7 +1183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single GridOriginHorizontal
 		{
 			get
@@ -1203,7 +1203,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single GridOriginVertical
 		{
 			get
@@ -1223,7 +1223,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool InlineConversion
 		{
 			get
@@ -1243,7 +1243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IMEAutomaticControl
 		{
 			get
@@ -1263,7 +1263,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatApplyHeadings
 		{
 			get
@@ -1283,7 +1283,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatApplyLists
 		{
 			get
@@ -1303,7 +1303,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatApplyBulletedLists
 		{
 			get
@@ -1323,7 +1323,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatApplyOtherParas
 		{
 			get
@@ -1343,7 +1343,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceQuotes
 		{
 			get
@@ -1363,7 +1363,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceSymbols
 		{
 			get
@@ -1383,7 +1383,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceOrdinals
 		{
 			get
@@ -1403,7 +1403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceFractions
 		{
 			get
@@ -1423,7 +1423,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplacePlainTextEmphasis
 		{
 			get
@@ -1443,7 +1443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatPreserveStyles
 		{
 			get
@@ -1463,7 +1463,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyHeadings
 		{
 			get
@@ -1483,7 +1483,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyBorders
 		{
 			get
@@ -1503,7 +1503,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyBulletedLists
 		{
 			get
@@ -1523,7 +1523,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyNumberedLists
 		{
 			get
@@ -1543,7 +1543,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceQuotes
 		{
 			get
@@ -1563,7 +1563,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceSymbols
 		{
 			get
@@ -1583,7 +1583,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceOrdinals
 		{
 			get
@@ -1603,7 +1603,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceFractions
 		{
 			get
@@ -1623,7 +1623,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplacePlainTextEmphasis
 		{
 			get
@@ -1643,7 +1643,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeFormatListItemBeginning
 		{
 			get
@@ -1663,7 +1663,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeDefineStyles
 		{
 			get
@@ -1683,7 +1683,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatPlainTextWordMail
 		{
 			get
@@ -1703,7 +1703,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceHyperlinks
 		{
 			get
@@ -1723,7 +1723,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceHyperlinks
 		{
 			get
@@ -1743,7 +1743,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex DefaultHighlightColorIndex
 		{
 			get
@@ -1763,7 +1763,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLineStyle DefaultBorderLineStyle
 		{
 			get
@@ -1783,7 +1783,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CheckSpellingAsYouType
 		{
 			get
@@ -1803,7 +1803,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CheckGrammarAsYouType
 		{
 			get
@@ -1823,7 +1823,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IgnoreInternetAndFileAddresses
 		{
 			get
@@ -1843,7 +1843,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ShowReadabilityStatistics
 		{
 			get
@@ -1863,7 +1863,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IgnoreUppercase
 		{
 			get
@@ -1883,7 +1883,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IgnoreMixedDigits
 		{
 			get
@@ -1903,7 +1903,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SuggestFromMainDictionaryOnly
 		{
 			get
@@ -1923,7 +1923,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SuggestSpellingCorrections
 		{
 			get
@@ -1943,7 +1943,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLineWidth DefaultBorderLineWidth
 		{
 			get
@@ -1963,7 +1963,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CheckGrammarWithSpelling
 		{
 			get
@@ -1983,7 +1983,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdOpenFormat DefaultOpenFormat
 		{
 			get
@@ -2003,7 +2003,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintDraft
 		{
 			get
@@ -2023,7 +2023,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintReverse
 		{
 			get
@@ -2043,7 +2043,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MapPaperSize
 		{
 			get
@@ -2063,7 +2063,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyTables
 		{
 			get
@@ -2083,7 +2083,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatApplyFirstIndents
 		{
 			get
@@ -2103,7 +2103,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatMatchParentheses
 		{
 			get
@@ -2123,7 +2123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatReplaceFarEastDashes
 		{
 			get
@@ -2143,7 +2143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatDeleteAutoSpaces
 		{
 			get
@@ -2163,7 +2163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyFirstIndents
 		{
 			get
@@ -2183,7 +2183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyDates
 		{
 			get
@@ -2203,7 +2203,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeApplyClosings
 		{
 			get
@@ -2223,7 +2223,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeMatchParentheses
 		{
 			get
@@ -2243,7 +2243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeReplaceFarEastDashes
 		{
 			get
@@ -2263,7 +2263,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeDeleteAutoSpaces
 		{
 			get
@@ -2283,7 +2283,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeInsertClosings
 		{
 			get
@@ -2303,7 +2303,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeAutoLetterWizard
 		{
 			get
@@ -2323,7 +2323,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoFormatAsYouTypeInsertOvers
 		{
 			get
@@ -2343,7 +2343,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayGridLines
 		{
 			get
@@ -2363,7 +2363,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyCase
 		{
 			get
@@ -2383,7 +2383,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyByte
 		{
 			get
@@ -2403,7 +2403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyHiragana
 		{
 			get
@@ -2423,7 +2423,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzySmallKana
 		{
 			get
@@ -2443,7 +2443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyDash
 		{
 			get
@@ -2463,7 +2463,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyIterationMark
 		{
 			get
@@ -2483,7 +2483,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyKanji
 		{
 			get
@@ -2503,7 +2503,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyOldKana
 		{
 			get
@@ -2523,7 +2523,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyProlongedSoundMark
 		{
 			get
@@ -2543,7 +2543,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyDZ
 		{
 			get
@@ -2563,7 +2563,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyBV
 		{
 			get
@@ -2583,7 +2583,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyTC
 		{
 			get
@@ -2603,7 +2603,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyHF
 		{
 			get
@@ -2623,7 +2623,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyZJ
 		{
 			get
@@ -2643,7 +2643,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyAY
 		{
 			get
@@ -2663,7 +2663,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyKiKu
 		{
 			get
@@ -2683,7 +2683,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzyPunctuation
 		{
 			get
@@ -2703,7 +2703,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzySpace
 		{
 			get
@@ -2723,7 +2723,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ApplyFarEastFontsToAscii
 		{
 			get
@@ -2743,7 +2743,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ConvertHighAnsiToFarEast
 		{
 			get
@@ -2763,7 +2763,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintOddPagesInAscendingOrder
 		{
 			get
@@ -2783,7 +2783,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool PrintEvenPagesInAscendingOrder
 		{
 			get
@@ -2803,7 +2803,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex DefaultBorderColorIndex
 		{
 			get
@@ -2823,7 +2823,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool EnableMisusedWordsDictionary
 		{
 			get
@@ -2843,7 +2843,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowCombinedAuxiliaryForms
 		{
 			get
@@ -2863,7 +2863,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool HangulHanjaFastConversion
 		{
 			get
@@ -2883,7 +2883,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CheckHangulEndings
 		{
 			get
@@ -2903,7 +2903,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool EnableHangulHanjaRecentOrdering
 		{
 			get
@@ -2923,7 +2923,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMultipleWordConversionsMode MultipleWordConversionsMode
 		{
 			get
@@ -2943,7 +2943,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColor DefaultBorderColor
 		{
 			get
@@ -2963,7 +2963,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowPixelUnits
 		{
 			get
@@ -2983,7 +2983,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UseCharacterUnit
 		{
 			get
@@ -3003,7 +3003,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowCompoundNounProcessing
 		{
 			get
@@ -3023,7 +3023,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AutoKeyboardSwitching
 		{
 			get
@@ -3043,7 +3043,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdDocumentViewDirection DocumentViewDirection
 		{
 			get
@@ -3063,7 +3063,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdArabicNumeral ArabicNumeral
 		{
 			get
@@ -3083,7 +3083,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMonthNames MonthNames
 		{
 			get
@@ -3103,7 +3103,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdCursorMovement CursorMovement
 		{
 			get
@@ -3123,7 +3123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdVisualSelection VisualSelection
 		{
 			get
@@ -3143,7 +3143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ShowDiacritics
 		{
 			get
@@ -3163,7 +3163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool ShowControlCharacters
 		{
 			get
@@ -3183,7 +3183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AddControlCharacters
 		{
 			get
@@ -3203,7 +3203,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AddBiDirectionalMarksWhenSavingTextFile
 		{
 			get
@@ -3223,7 +3223,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool StrictInitialAlefHamza
 		{
 			get
@@ -3243,7 +3243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool StrictFinalYaa
 		{
 			get
@@ -3263,7 +3263,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdHebSpellStart HebrewMode
 		{
 			get
@@ -3283,7 +3283,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdAraSpeller ArabicMode
 		{
 			get
@@ -3303,7 +3303,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AllowClickAndTypeMouse
 		{
 			get
@@ -3323,7 +3323,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UseGermanSpellingReform
 		{
 			get
@@ -3343,7 +3343,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdHighAnsiText InterpretHighAnsi
 		{
 			get
@@ -3363,7 +3363,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool AddHebDoubleQuote
 		{
 			get
@@ -3383,7 +3383,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool UseDiffDiacColor
 		{
 			get
@@ -3403,7 +3403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColor DiacriticColorVal
 		{
 			get
@@ -3423,7 +3423,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool OptimizeForWord97byDefault
 		{
 			get
@@ -3443,7 +3443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool LocalNetworkFile
 		{
 			get
@@ -3463,7 +3463,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool TypeNReplace
 		{
 			get
@@ -3483,7 +3483,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool SequenceCheck
 		{
 			get
@@ -3503,7 +3503,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool BackgroundOpen
 		{
 			get
@@ -3523,7 +3523,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool DisableFeaturesbyDefault
 		{
 			get
@@ -3543,7 +3543,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteAdjustWordSpacing
 		{
 			get
@@ -3563,7 +3563,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteAdjustParagraphSpacing
 		{
 			get
@@ -3583,7 +3583,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteAdjustTableFormatting
 		{
 			get
@@ -3603,7 +3603,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteSmartStyleBehavior
 		{
 			get
@@ -3623,7 +3623,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteMergeFromPPT
 		{
 			get
@@ -3643,7 +3643,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteMergeFromXL
 		{
 			get
@@ -3663,7 +3663,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool CtrlClickHyperlinkToOpen
 		{
 			get
@@ -3683,7 +3683,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdWrapTypeMerged PictureWrapType
 		{
 			get
@@ -3703,7 +3703,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdDisableFeaturesIntroducedAfter DisableFeaturesIntroducedAfterbyDefault
 		{
 			get
@@ -3723,7 +3723,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteSmartCutPaste
 		{
 			get
@@ -3743,7 +3743,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool DisplayPasteOptions
 		{
 			get
@@ -3763,7 +3763,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PromptUpdateStyle
 		{
 			get
@@ -3783,7 +3783,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public string DefaultEPostageApp
 		{
 			get
@@ -3803,7 +3803,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoEncoding DefaultTextEncoding
 		{
 			get
@@ -3823,7 +3823,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool LabelSmartTags
 		{
 			get
@@ -3843,7 +3843,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool DisplaySmartTagButtons
 		{
 			get
@@ -3863,7 +3863,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool WarnBeforeSavingPrintingSendingMarkup
 		{
 			get
@@ -3883,7 +3883,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool StoreRSIDOnSave
 		{
 			get
@@ -3903,7 +3903,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool ShowFormatError
 		{
 			get
@@ -3923,7 +3923,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool FormatScanning
 		{
 			get
@@ -3943,7 +3943,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool PasteMergeLists
 		{
 			get
@@ -3963,7 +3963,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool AutoCreateNewDrawings
 		{
 			get
@@ -3983,7 +3983,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool SmartParaSelection
 		{
 			get
@@ -4003,7 +4003,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdRevisionsBalloonPrintOrientation RevisionsBalloonPrintOrientation
 		{
 			get
@@ -4023,7 +4023,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex CommentsColor
 		{
 			get
@@ -4043,7 +4043,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool PrintXMLTag
 		{
 			get
@@ -4063,7 +4063,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool PrintBackgrounds
 		{
 			get
@@ -4083,7 +4083,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool AllowReadingMode
 		{
 			get
@@ -4103,7 +4103,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool ShowMarkupOpenSave
 		{
 			get
@@ -4123,7 +4123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool SmartCursoring
 		{
 			get
@@ -4143,7 +4143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdMoveToTextMark MoveToTextMark
 		{
 			get
@@ -4163,7 +4163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdMoveFromTextMark MoveFromTextMark
 		{
 			get
@@ -4183,7 +4183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public string BibliographyStyle
 		{
 			get
@@ -4203,7 +4203,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public string BibliographySort
 		{
 			get
@@ -4223,7 +4223,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdCellColor InsertedCellColor
 		{
 			get
@@ -4243,7 +4243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdCellColor DeletedCellColor
 		{
 			get
@@ -4263,7 +4263,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdCellColor MergedCellColor
 		{
 			get
@@ -4283,7 +4283,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdCellColor SplitCellColor
 		{
 			get
@@ -4303,7 +4303,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool ShowSelectionFloaties
 		{
 			get
@@ -4323,7 +4323,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool ShowMenuFloaties
 		{
 			get
@@ -4343,7 +4343,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool ShowDevTools
 		{
 			get
@@ -4363,7 +4363,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool EnableLivePreview
 		{
 			get
@@ -4383,7 +4383,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool OMathAutoBuildUp
 		{
 			get
@@ -4403,7 +4403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool AlwaysUseClearType
 		{
 			get
@@ -4423,7 +4423,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatWithinDocument
 		{
 			get
@@ -4443,7 +4443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatBetweenDocuments
 		{
 			get
@@ -4463,7 +4463,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatBetweenStyledDocuments
 		{
 			get
@@ -4483,7 +4483,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdPasteOptions PasteFormatFromExternalSource
 		{
 			get
@@ -4503,7 +4503,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool PasteOptionKeepBulletsAndNumbers
 		{
 			get
@@ -4523,7 +4523,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool INSKeyForOvertype
 		{
 			get
@@ -4543,7 +4543,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool RepeatWord
 		{
 			get
@@ -4563,7 +4563,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdFrenchSpeller FrenchReform
 		{
 			get
@@ -4583,7 +4583,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool ContextualSpeller
 		{
 			get
@@ -4603,7 +4603,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex MoveToTextColor
 		{
 			get
@@ -4623,7 +4623,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex MoveFromTextColor
 		{
 			get
@@ -4643,7 +4643,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool OMathCopyLF
 		{
 			get
@@ -4663,7 +4663,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool UseNormalStyleForList
 		{
 			get
@@ -4683,7 +4683,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool AllowOpenInDraftView
 		{
 			get
@@ -4703,7 +4703,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool EnableLegacyIMEMode
 		{
 			get
@@ -4723,7 +4723,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool DoNotPromptForConvert
 		{
 			get
@@ -4743,7 +4743,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool PrecisePositioning
 		{
 			get
@@ -4763,7 +4763,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdUpdateStyleListBehavior UpdateStyleListBehavior
 		{
 			get
@@ -4783,7 +4783,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool StrictTaaMarboota
 		{
 			get
@@ -4803,7 +4803,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool StrictRussianE
 		{
 			get
@@ -4823,7 +4823,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdSpanishSpeller SpanishMode
 		{
 			get
@@ -4843,7 +4843,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdPortugueseReform PortugalReform
 		{
 			get
@@ -4863,7 +4863,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdPortugueseReform BrazilReform
 		{
 			get
@@ -4883,7 +4883,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool UpdateFieldsWithTrackedChangesAtPrint
 		{
 			get
@@ -4912,7 +4912,7 @@ namespace NetOffice.WordApi
 		/// <param name="DemoGuidance">optional object DemoGuidance</param>
 		/// <param name="DemoSpeed">optional object DemoSpeed</param>
 		/// <param name="HelpType">optional object HelpType</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation, object demoGuidance, object demoSpeed, object helpType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation, demoGuidance, demoSpeed, helpType);
@@ -4922,10 +4922,81 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SetWPHelpOptions()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SetWPHelpOptions(object commandKeyHelp)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp);
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		/// <param name="DocNavigationKeys">optional object DocNavigationKeys</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys);
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		/// <param name="DocNavigationKeys">optional object DocNavigationKeys</param>
+		/// <param name="MouseSimulation">optional object MouseSimulation</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation);
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		/// <param name="DocNavigationKeys">optional object DocNavigationKeys</param>
+		/// <param name="MouseSimulation">optional object MouseSimulation</param>
+		/// <param name="DemoGuidance">optional object DemoGuidance</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation, object demoGuidance)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation, demoGuidance);
+			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CommandKeyHelp">optional object CommandKeyHelp</param>
+		/// <param name="DocNavigationKeys">optional object DocNavigationKeys</param>
+		/// <param name="MouseSimulation">optional object MouseSimulation</param>
+		/// <param name="DemoGuidance">optional object DemoGuidance</param>
+		/// <param name="DemoSpeed">optional object DemoSpeed</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SetWPHelpOptions(object commandKeyHelp, object docNavigationKeys, object mouseSimulation, object demoGuidance, object demoSpeed)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(commandKeyHelp, docNavigationKeys, mouseSimulation, demoGuidance, demoSpeed);
 			Invoker.Method(this, "SetWPHelpOptions", paramsArray);
 		}
 

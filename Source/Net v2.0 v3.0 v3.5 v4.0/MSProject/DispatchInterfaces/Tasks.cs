@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Tasks SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Tasks SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Tasks : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Project Parent
 		{
 			get
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -125,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task get_UniqueID(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -139,7 +139,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Task this[object index]
 		{
@@ -161,7 +161,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Before">optional object Before</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task Add(object name, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, before);
@@ -173,10 +173,25 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Task newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Task.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Task;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Task Add(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			LateBindingApi.MSProjectApi.Task newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Task.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Task;
 			return newObject;
@@ -186,7 +201,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomXMLPartEvents SupportByLibrary Office, 12,14
+	/// DispatchInterface ICustomXMLPartEvents SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICustomXMLPartEvents : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NodeAfterInsert(NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newNode, inUndoRedo);
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="OldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
 		/// <param name="OldNextSibling">NetOffice.OfficeApi.CustomXMLNode OldNextSibling</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NodeAfterDelete(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="OldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="NewNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="InUndoRedo">bool InUndoRedo</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NodeAfterReplace(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, newNode, inUndoRedo);

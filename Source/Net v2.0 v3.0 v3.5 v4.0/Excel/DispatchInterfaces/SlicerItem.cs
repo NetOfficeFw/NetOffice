@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface SlicerItem SupportByLibrary Excel, 14
+	/// DispatchInterface SlicerItem SupportByLibraryAttribute Excel, 14
 	///</summary>
-	[SupportByLibrary("Excel", 14)]
+	[SupportByLibraryAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlicerItem : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SlicerCache Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public string Caption
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public string Name
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public object SourceName
 		{
 			get
@@ -176,7 +176,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public string SourceNameStandard
 		{
 			get
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public string Value
 		{
 			get
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public bool Selected
 		{
 			get
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public bool HasData
 		{
 			get

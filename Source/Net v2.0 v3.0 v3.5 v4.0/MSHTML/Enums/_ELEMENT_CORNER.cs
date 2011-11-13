@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4, 
+	 /// SupportByLibrary MSHTML 4
 	 /// </summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _ELEMENT_CORNER
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_NONE = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_TOP = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_LEFT = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_BOTTOM = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_RIGHT = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_TOPLEFT = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_TOPRIGHT = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_BOTTOMLEFT = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_BOTTOMRIGHT = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 ELEMENT_CORNER_Max = 2147483647
 	}
 }

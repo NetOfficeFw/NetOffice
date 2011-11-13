@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehaviorRender SupportByLibrary MSHTML, 4
+	/// Interface IElementBehaviorRender SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorRender : COMObject
 	{
@@ -82,7 +82,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="lLayer">Int32 lLayer</param>
 		/// <param name="pRect">tagRECT pRect</param>
 		/// <param name="pReserved">object pReserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Draw(_RemotableHandle hdc, Int32 lLayer, tagRECT pRect, object pReserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hdc, lLayer, pRect, pReserved);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetRenderInfo()
 		{
 			object[] paramsArray = null;
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="pReserved">object pReserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 HitTestPoint(tagPOINT pPoint, object pReserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPoint, pReserved);

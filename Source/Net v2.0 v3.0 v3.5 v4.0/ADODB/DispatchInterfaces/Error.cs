@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Error SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface Error SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Error : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 Number
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public string Source
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public string Description
 		{
 			get
@@ -121,7 +121,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public string HelpFile
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 HelpContext
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public string SQLState
 		{
 			get
@@ -166,7 +166,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 NativeError
 		{
 			get

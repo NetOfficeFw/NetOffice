@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Pane SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Pane SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pane : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Index
 		{
 			get
@@ -134,7 +134,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -144,7 +144,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -154,7 +154,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.View View()
 		{
 			object[] paramsArray = null;

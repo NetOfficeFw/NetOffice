@@ -4,255 +4,255 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 12, 14, 
+	 /// SupportByLibrary Word 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 12,14)]
+	[SupportByLibraryAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdBuildingBlockTypes
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeQuickParts = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCoverPage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeEquations = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeFooters = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeHeaders = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypePageNumber = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeTables = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeWatermarks = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeAutoText = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeTextBox = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypePageNumberTop = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypePageNumberBottom = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypePageNumberPage = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeTableOfContents = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomQuickParts = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomCoverPage = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomEquations = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomFooters = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomHeaders = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomPageNumber = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomTables = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomWatermarks = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomAutoText = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomTextBox = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomPageNumberTop = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomPageNumberBottom = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>27</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomPageNumberPage = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>28</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomTableOfContents = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>29</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustom1 = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustom2 = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustom3 = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustom4 = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustom5 = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeBibliography = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTypeCustomBibliography = 35
 	}
 }

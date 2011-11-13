@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdInternationalIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdListSeparator = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdDecimalSeparator = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdThousandsSeparator = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdCurrencyCode = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wd24HourClock = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdInternationalAM = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdInternationalPM = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTimeSeparator = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdDateSeparator = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdProductLanguageID = 26
 	}
 }

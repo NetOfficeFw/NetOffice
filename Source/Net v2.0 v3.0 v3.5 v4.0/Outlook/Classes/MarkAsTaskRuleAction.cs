@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass MarkAsTaskRuleAction SupportByLibrary Outlook, 12,14
+	/// CoClass MarkAsTaskRuleAction SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MarkAsTaskRuleAction : _MarkAsTaskRuleAction, IEventBinding 
 	{

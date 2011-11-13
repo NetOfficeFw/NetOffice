@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 9, 
+	 /// SupportByLibrary PowerPoint 9
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpDialogStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9, 
+		 /// SupportByLibrary PowerPoint 9
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("PowerPoint", 9)]
+		 [SupportByLibraryAttribute("PowerPoint", 9)]
 		 ppDialogStyleMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9, 
+		 /// SupportByLibrary PowerPoint 9
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("PowerPoint", 9)]
+		 [SupportByLibraryAttribute("PowerPoint", 9)]
 		 ppDialogStandard = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9, 
+		 /// SupportByLibrary PowerPoint 9
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("PowerPoint", 9)]
+		 [SupportByLibraryAttribute("PowerPoint", 9)]
 		 ppDialogTabbed = 2
 	}
 }

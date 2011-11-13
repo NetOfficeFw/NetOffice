@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _AccessProperty SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _AccessProperty SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AccessProperty : NetOffice.DAOApi.Property
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.DAOApi.Properties Properties
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Category
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

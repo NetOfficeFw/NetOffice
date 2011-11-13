@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Page SupportByLibrary Excel, 12,14
+	/// DispatchInterface Page SupportByLibraryAttribute Excel, 12,14
 	///</summary>
-	[SupportByLibrary("Excel", 12,14)]
+	[SupportByLibraryAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Page : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter LeftHeader
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter CenterHeader
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter RightHeader
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter LeftFooter
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter CenterFooter
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.HeaderFooter RightFooter
 		{
 			get

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface XSLTransform SupportByLibrary Word, 11,12,14
+	/// DispatchInterface XSLTransform SupportByLibraryAttribute Word, 11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 11,12,14)]
+	[SupportByLibraryAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XSLTransform : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="AllUsers">bool AllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public string get_Alias(bool allUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="AllUsers">bool AllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -149,7 +149,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="AllUsers">bool AllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public string get_Location(bool allUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="AllUsers">bool AllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public string ID
 		{
 			get
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface ChChartDraw SupportByLibrary OWC10, 1
+	/// DispatchInterface ChChartDraw SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChChartDraw : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChInterior Interior
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChBorder Border
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChFont Font
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartDrawModesEnum DrawType
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 hDC
 		{
 			get
@@ -174,7 +174,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="id">Int32 id</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void BeginObject(Int32 id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
@@ -184,7 +184,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void EndObject()
 		{
 			object[] paramsArray = null;
@@ -198,7 +198,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="y0">Int32 y0</param>
 		/// <param name="x1">Int32 x1</param>
 		/// <param name="y1">Int32 y1</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawLine(Int32 x0, Int32 y0, Int32 x1, Int32 y1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x0, y0, x1, y1);
@@ -212,7 +212,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Right">Int32 Right</param>
 		/// <param name="Bottom">Int32 Bottom</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, right, bottom);
@@ -226,7 +226,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Right">Int32 Right</param>
 		/// <param name="Bottom">Int32 Bottom</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawEllipse(Int32 left, Int32 top, Int32 right, Int32 bottom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, right, bottom);
@@ -239,7 +239,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="Left">Int32 Left</param>
 		/// <param name="Top">Int32 Top</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawText(string bstrText, Int32 left, Int32 top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, left, top);
@@ -251,7 +251,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="xValues">object xValues</param>
 		/// <param name="yValues">object yValues</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawPolyLine(object xValues, object yValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xValues, yValues);
@@ -263,7 +263,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="xValues">object xValues</param>
 		/// <param name="yValues">object yValues</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DrawPolygon(object xValues, object yValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xValues, yValues);
@@ -274,7 +274,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object TextWidth(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -294,7 +294,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object TextHeight(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);

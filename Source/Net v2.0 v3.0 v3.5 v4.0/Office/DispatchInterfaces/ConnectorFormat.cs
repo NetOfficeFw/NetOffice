@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ConnectorFormat SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface ConnectorFormat SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ConnectorFormat : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Shape BeginConnectedShape
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 BeginConnectionSite
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState EndConnected
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Shape EndConnectedShape
 		{
 			get
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 EndConnectionSite
 		{
 			get
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoConnectorType Type
 		{
 			get
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ConnectedShape">NetOffice.OfficeApi.Shape ConnectedShape</param>
 		/// <param name="ConnectionSite">Int32 ConnectionSite</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void BeginConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void BeginDisconnect()
 		{
 			object[] paramsArray = null;
@@ -231,7 +231,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ConnectedShape">NetOffice.OfficeApi.Shape ConnectedShape</param>
 		/// <param name="ConnectionSite">Int32 ConnectionSite</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void EndConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void EndDisconnect()
 		{
 			object[] paramsArray = null;

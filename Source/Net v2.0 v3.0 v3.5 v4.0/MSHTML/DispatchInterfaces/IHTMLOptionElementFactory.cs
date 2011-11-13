@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLOptionElementFactory SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLOptionElementFactory SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLOptionElementFactory : COMObject
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="value">optional object value</param>
 		/// <param name="defaultSelected">optional object defaultSelected</param>
 		/// <param name="selected">optional object selected</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected, object selected)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected, selected);
@@ -95,10 +95,56 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLOptionElement create()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
+			LateBindingApi.MSHTMLApi.IHTMLOptionElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLOptionElement;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="text">optional object text</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public LateBindingApi.MSHTMLApi.IHTMLOptionElement create(object text)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text);
+			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
+			LateBindingApi.MSHTMLApi.IHTMLOptionElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLOptionElement;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="text">optional object text</param>
+		/// <param name="value">optional object value</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public LateBindingApi.MSHTMLApi.IHTMLOptionElement create(object text, object value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, value);
+			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
+			LateBindingApi.MSHTMLApi.IHTMLOptionElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLOptionElement;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="text">optional object text</param>
+		/// <param name="value">optional object value</param>
+		/// <param name="defaultSelected">optional object defaultSelected</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public LateBindingApi.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
 			LateBindingApi.MSHTMLApi.IHTMLOptionElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLOptionElement;
 			return newObject;

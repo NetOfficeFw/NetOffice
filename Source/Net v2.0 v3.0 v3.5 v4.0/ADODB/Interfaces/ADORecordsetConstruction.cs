@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ADORecordsetConstruction SupportByLibrary ADODB, 2.1,2.5
+	/// Interface ADORecordsetConstruction SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ADORecordsetConstruction : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public COMObject Rowset
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 Chapter
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public COMObject RowPosition
 		{
 			get

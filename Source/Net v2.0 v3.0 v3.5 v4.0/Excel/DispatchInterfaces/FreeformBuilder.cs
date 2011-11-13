@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface FreeformBuilder SupportByLibrary Excel, 9,10,11,12,14
+	/// DispatchInterface FreeformBuilder SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FreeformBuilder : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -134,7 +134,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Y2">optional object Y2</param>
 		/// <param name="X3">optional object X3</param>
 		/// <param name="Y3">optional object Y3</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2, y2, x3, y3);
@@ -148,7 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
 		/// <param name="Y1">Single Y1</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1);
@@ -158,7 +159,58 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="X1">Single X1</param>
+		/// <param name="Y1">Single Y1</param>
+		/// <param name="X2">optional object X2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2);
+			Invoker.Method(this, "AddNodes", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="X1">Single X1</param>
+		/// <param name="Y1">Single Y1</param>
+		/// <param name="X2">optional object X2</param>
+		/// <param name="Y2">optional object Y2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2, y2);
+			Invoker.Method(this, "AddNodes", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
+		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
+		/// <param name="X1">Single X1</param>
+		/// <param name="Y1">Single Y1</param>
+		/// <param name="X2">optional object X2</param>
+		/// <param name="Y2">optional object Y2</param>
+		/// <param name="X3">optional object X3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(segmentType, editingType, x1, y1, x2, y2, x3);
+			Invoker.Method(this, "AddNodes", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape ConvertToShape()
 		{
 			object[] paramsArray = null;

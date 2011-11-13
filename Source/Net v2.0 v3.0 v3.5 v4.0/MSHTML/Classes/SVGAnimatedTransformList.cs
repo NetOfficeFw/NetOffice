@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGAnimatedTransformList SupportByLibrary MSHTML, 4
+	/// CoClass SVGAnimatedTransformList SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGAnimatedTransformList : ISVGAnimatedTransformList, IEventBinding 
 	{

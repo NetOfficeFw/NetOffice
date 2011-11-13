@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathDelim SupportByLibrary Word, 12,14
+	/// DispatchInterface OMathDelim SupportByLibraryAttribute Word, 12,14
 	///</summary>
-	[SupportByLibrary("Word", 12,14)]
+	[SupportByLibraryAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathDelim : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMathArgs E
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int16 BegChar
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int16 SepChar
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int16 EndChar
 		{
 			get
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool Grow
 		{
 			get
@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdOMathShapeType Shape
 		{
 			get
@@ -239,7 +239,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool NoLeftChar
 		{
 			get
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool NoRightChar
 		{
 			get

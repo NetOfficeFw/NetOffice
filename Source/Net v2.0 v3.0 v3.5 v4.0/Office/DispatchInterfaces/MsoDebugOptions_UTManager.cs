@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface MsoDebugOptions_UTManager SupportByLibrary Office, 12,14
+	/// DispatchInterface MsoDebugOptions_UTManager SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MsoDebugOptions_UTManager : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.MsoDebugOptions_UTs UnitTests
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public bool ReportErrors
 		{
 			get
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NotifyStartOfTestSuiteRun()
 		{
 			object[] paramsArray = null;
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NotifyEndOfTestSuiteRun()
 		{
 			object[] paramsArray = null;

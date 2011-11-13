@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface MailingLabel SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface MailingLabel SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MailingLabel : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DefaultPrintBarCode
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
 			get
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string DefaultLabelName
 		{
 			get
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool Vertical
 		{
 			get
@@ -220,14 +220,14 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Address">optional object Address</param>
 		/// <param name="AutoText">optional object AutoText</param>
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="LaserTray">optional object LaserTray</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
@@ -246,7 +246,7 @@ namespace NetOffice.WordApi
 		/// <param name="LaserTray">optional object LaserTray</param>
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
@@ -258,7 +258,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument()
 		{
 			object[] paramsArray = null;
@@ -268,7 +269,88 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Address">optional object Address</param>
@@ -277,7 +359,7 @@ namespace NetOffice.WordApi
 		/// <param name="SingleLabel">optional object SingleLabel</param>
 		/// <param name="Row">optional object Row</param>
 		/// <param name="Column">optional object Column</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
@@ -296,7 +378,7 @@ namespace NetOffice.WordApi
 		/// <param name="Column">optional object Column</param>
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
@@ -306,10 +388,117 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name, object address, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name, object address, object extractAddress, object laserTray)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		/// <param name="Column">optional object Column</param>
+		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);
 			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
@@ -321,7 +510,7 @@ namespace NetOffice.WordApi
 		/// <param name="AutoText">optional object AutoText</param>
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="LaserTray">optional object LaserTray</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
@@ -333,10 +522,73 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document CreateNewDocument2000()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument2000(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -352,7 +604,7 @@ namespace NetOffice.WordApi
 		/// <param name="SingleLabel">optional object SingleLabel</param>
 		/// <param name="Row">optional object Row</param>
 		/// <param name="Column">optional object Column</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
@@ -362,7 +614,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -372,7 +625,94 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name, object address, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name, object address, object extractAddress, object laserTray)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void LabelOptions()
 		{
 			object[] paramsArray = null;
@@ -389,7 +729,7 @@ namespace NetOffice.WordApi
 		/// <param name="LaserTray">optional object LaserTray</param>
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
@@ -401,10 +741,110 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray);
+			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel);
 			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -422,7 +862,7 @@ namespace NetOffice.WordApi
 		/// <param name="Column">optional object Column</param>
 		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="Vertical">optional object Vertical</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
@@ -432,10 +872,135 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void PrintOutByID()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		/// <param name="Column">optional object Column</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column);
+			Invoker.Method(this, "PrintOutByID", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="LabelID">optional object LabelID</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="LaserTray">optional object LaserTray</param>
+		/// <param name="SingleLabel">optional object SingleLabel</param>
+		/// <param name="Row">optional object Row</param>
+		/// <param name="Column">optional object Column</param>
+		/// <param name="PrintEPostageLabel">optional object PrintEPostageLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);
 			Invoker.Method(this, "PrintOutByID", paramsArray);
 		}
 

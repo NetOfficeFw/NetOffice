@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface DocumentProperty SupportByLibrary Office, 9,10,11,12,14
+	/// Interface DocumentProperty SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperty : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public object Value
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoDocProperties Type
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool LinkToContent
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string LinkSource
 		{
 			get
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Application
 		{
 			get
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;

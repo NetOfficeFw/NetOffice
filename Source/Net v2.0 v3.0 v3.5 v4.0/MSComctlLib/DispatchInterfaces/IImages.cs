@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IImages SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IImages SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IImages : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
@@ -98,7 +98,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage get_ControlDefault(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -112,7 +112,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IImage value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -124,7 +124,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IImage this[object index]
 		{
@@ -147,7 +147,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Index">optional object Index</param>
 		/// <param name="Key">optional object Key</param>
 		/// <param name="Picture">optional object Picture</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index, object key, object picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, picture);
@@ -159,7 +159,8 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add()
 		{
 			object[] paramsArray = null;
@@ -171,7 +172,36 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		/// <param name="Index">optional object Index</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IImage Add(object index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IImage Add(object index, object key)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IImage newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -182,7 +212,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -193,7 +223,10 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSComctlLib", 6)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSComctlLib, 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

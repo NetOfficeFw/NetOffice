@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _ProjectTemplate SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _ProjectTemplate SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ProjectTemplate : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Parent
 		{
 			get

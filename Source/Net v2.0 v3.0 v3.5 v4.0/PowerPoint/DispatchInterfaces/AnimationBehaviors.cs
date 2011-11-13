@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface AnimationBehaviors SupportByLibrary PowerPoint, 10,11,12,14
+	/// DispatchInterface AnimationBehaviors SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AnimationBehaviors : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.AnimationBehavior this[Int32 index]
 		{
@@ -130,7 +130,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.MsoAnimType Type</param>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, index);

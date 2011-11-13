@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface GlowFormat SupportByLibrary Office, 12,14
+	/// DispatchInterface GlowFormat SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GlowFormat : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Single Radius
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.ColorFormat Color
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Single Transparency
 		{
 			get

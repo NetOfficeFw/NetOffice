@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface LanguageSettings SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface LanguageSettings SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LanguageSettings : _IMsoDispObj
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lid);
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get

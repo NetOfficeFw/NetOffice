@@ -14,9 +14,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass Components SupportByLibrary VBIDE, 5.3,12
+	/// CoClass Components SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Components : _Components, IEventBinding 
 	{

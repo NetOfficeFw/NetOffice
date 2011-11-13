@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IDataPageDesigner SupportByLibrary OWC10, 1
+	/// Interface IDataPageDesigner SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDataPageDesigner : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pDataSourceControl">NetOffice.OWC10Api.IDataSourceControl pDataSourceControl</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ConnectDataComponents(NetOffice.OWC10Api.IDataSourceControl pDataSourceControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDataSourceControl);
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 CreateSection(NetOffice.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectType, wzRecordsetName);
@@ -106,7 +106,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="SectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
 		/// <param name="fInGroupingDefDelete">Int32 fInGroupingDefDelete</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 DeleteSection(NetOffice.OWC10Api.Enums.SectTypeEnum sectType, string wzRecordsetName, Int32 fInGroupingDefDelete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectType, wzRecordsetName, fInGroupingDefDelete);
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 OnGroupLevelAdded(NetOffice.OWC10Api.GroupLevel pGroupLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel);
@@ -129,7 +129,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 OnGroupLevelDeleted()
 		{
 			object[] paramsArray = null;
@@ -143,7 +143,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="wzRecordsetNameOld">string wzRecordsetNameOld</param>
 		/// <param name="wzRecordsetNameNew">string wzRecordsetNameNew</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 RebindGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, string wzRecordsetNameOld, string wzRecordsetNameNew)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, wzRecordsetNameOld, wzRecordsetNameNew);
@@ -156,7 +156,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedConnection">object ppUnknownSharedConnection</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetSharedConnectionObject(string wzConnectionString, object ppUnknownSharedConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, ppUnknownSharedConnection);
@@ -168,7 +168,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="lMarker">Int32 lMarker</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 TWPerformanceMarker(Int32 lMarker)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lMarker);
@@ -181,7 +181,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="pfSecure">Int32 pfSecure</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 IsDatabaseSecure(string wzConnectionString, Int32 pfSecure)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, pfSecure);
@@ -193,7 +193,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="dispidChanged">Int32 dispidChanged</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 OnPropChanged(Int32 dispidChanged)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispidChanged);
@@ -206,7 +206,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedDBNS">object ppUnknownSharedDBNS</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetSharedDBNS(string wzConnectionString, object ppUnknownSharedDBNS)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wzConnectionString, ppUnknownSharedDBNS);
@@ -218,7 +218,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppbstrFileName">string ppbstrFileName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetDatapagePath(string ppbstrFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppbstrFileName);
@@ -230,7 +230,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pfDesignMode">Int32 pfDesignMode</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 IsDesignMode(Int32 pfDesignMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfDesignMode);
@@ -244,7 +244,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="pRequestingDSC">NetOffice.OWC10Api.IDataSourceControl pRequestingDSC</param>
 		/// <param name="vfForceRefresh">bool vfForceRefresh</param>
 		/// <param name="rt">NetOffice.OWC10Api.Enums.RefreshType rt</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 RefreshDataTools(NetOffice.OWC10Api.IDataSourceControl pRequestingDSC, bool vfForceRefresh, NetOffice.OWC10Api.Enums.RefreshType rt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRequestingDSC, vfForceRefresh, rt);
@@ -256,7 +256,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppbstrInstId">string ppbstrInstId</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetFieldListInstanceId(string ppbstrInstId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppbstrInstId);
@@ -268,7 +268,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pioum">NetOffice.OWC10Api.IOleUndoManager pioum</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetUndoManager(NetOffice.OWC10Api.IOleUndoManager pioum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pioum);
@@ -286,7 +286,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="varRelationships">object varRelationships</param>
 		/// <param name="ppprs">NetOffice.OWC10Api.PageRowsource ppprs</param>
 		/// <param name="ppsr">NetOffice.OWC10Api.SchemaRelationship ppsr</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 DoRelWiz(NetOffice.OWC10Api.IDataSourceControl pDSC, string bstrRecordSetDef, string bstrDropRowsource, object varRowsources, object varRelationships, NetOffice.OWC10Api.PageRowsource ppprs, NetOffice.OWC10Api.SchemaRelationship ppsr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSC, bstrRecordSetDef, bstrDropRowsource, varRowsources, varRelationships, ppprs, ppsr);

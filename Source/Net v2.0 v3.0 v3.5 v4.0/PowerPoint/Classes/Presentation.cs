@@ -14,9 +14,9 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass Presentation SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// CoClass Presentation SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Presentation : _Presentation, IEventBinding 
 	{

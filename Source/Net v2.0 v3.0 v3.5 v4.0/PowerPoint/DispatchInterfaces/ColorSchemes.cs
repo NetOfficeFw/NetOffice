@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ColorSchemes SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// DispatchInterface ColorSchemes SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorSchemes : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.ColorScheme this[Int32 index]
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Scheme">NetOffice.PowerPointApi.ColorScheme Scheme</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.ColorScheme Add(NetOffice.PowerPointApi.ColorScheme scheme)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scheme);

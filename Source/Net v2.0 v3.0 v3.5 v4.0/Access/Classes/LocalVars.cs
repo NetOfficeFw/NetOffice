@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass LocalVars SupportByLibrary Access, 14
+	/// CoClass LocalVars SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class LocalVars : _LocalVars, IEventBinding 
 	{

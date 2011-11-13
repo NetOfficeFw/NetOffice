@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass DOMDragEvent SupportByLibrary MSHTML, 4
+	/// CoClass DOMDragEvent SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DOMDragEvent : DispDOMDragEvent, IEventBinding 
 	{

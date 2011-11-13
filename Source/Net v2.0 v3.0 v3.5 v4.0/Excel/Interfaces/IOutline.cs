@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IOutline SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IOutline SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOutline : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool AutomaticStyles
 		{
 			get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSummaryColumn SummaryColumn
 		{
 			get
@@ -162,7 +162,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSummaryRow SummaryRow
 		{
 			get
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowLevels">optional object RowLevels</param>
 		/// <param name="ColumnLevels">optional object ColumnLevels</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowLevels(object rowLevels, object columnLevels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowLevels, columnLevels);
@@ -206,10 +206,32 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowLevels()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "ShowLevels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="RowLevels">optional object RowLevels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object ShowLevels(object rowLevels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowLevels);
 			object returnItem = Invoker.MethodReturn(this, "ShowLevels", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface SmartTag SupportByLibrary Excel, 10,11,12,14
+	/// DispatchInterface SmartTag SupportByLibraryAttribute Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTag : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string DownloadURL
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string Name
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string _Default
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public string XML
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -199,7 +199,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.SmartTagActions SmartTagActions
 		{
 			get
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.CustomProperties Properties
 		{
 			get
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

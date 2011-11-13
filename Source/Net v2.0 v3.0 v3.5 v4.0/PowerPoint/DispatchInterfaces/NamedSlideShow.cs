@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface NamedSlideShow SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// DispatchInterface NamedSlideShow SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NamedSlideShow : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public object SlideIDs
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -164,7 +164,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

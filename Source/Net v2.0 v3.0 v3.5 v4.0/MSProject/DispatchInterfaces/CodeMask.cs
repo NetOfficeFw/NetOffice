@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface CodeMask SupportByLibrary MSProject, 12,14
+	/// DispatchInterface CodeMask SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CodeMask : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.CodeMaskLevel this[object index]
 		{
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.OutlineCode Parent
 		{
 			get
@@ -148,7 +148,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Sequence">LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence</param>
 		/// <param name="Length">optional object Length</param>
 		/// <param name="Separator">optional object Separator</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.CodeMaskLevel Add(LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sequence, length, separator);
@@ -161,10 +161,26 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="Sequence">LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.CodeMaskLevel Add(LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sequence);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.CodeMaskLevel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.CodeMaskLevel.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.CodeMaskLevel;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Sequence">LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence</param>
+		/// <param name="Length">optional object Length</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.CodeMaskLevel Add(LateBindingApi.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(sequence, length);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			LateBindingApi.MSProjectApi.CodeMaskLevel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.CodeMaskLevel.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.CodeMaskLevel;
 			return newObject;
@@ -174,7 +190,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

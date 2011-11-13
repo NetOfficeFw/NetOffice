@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface FileDialogFilters SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface FileDialogFilters SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileDialogFilters : _IMsoDispObj ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.FileDialogFilter this[Int32 index]
 		{
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="filter">optional object filter</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Delete(object filter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filter);
@@ -139,7 +139,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -149,7 +150,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -162,7 +163,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Description">string Description</param>
 		/// <param name="Extensions">string Extensions</param>
 		/// <param name="Position">optional object Position</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions, position);
@@ -176,7 +177,8 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Description">string Description</param>
 		/// <param name="Extensions">string Extensions</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions);
@@ -189,7 +191,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

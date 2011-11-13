@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface XMLNamespaces SupportByLibrary Word, 11,12,14
+	/// DispatchInterface XMLNamespaces SupportByLibraryAttribute Word, 11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 11,12,14)]
+	[SupportByLibraryAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLNamespaces : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.XMLNamespace this[object index]
 		{
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// <param name="NamespaceURI">object NamespaceURI</param>
 		/// <param name="Alias">object Alias</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, namespaceURI, alias, installForAllUsers);
@@ -177,7 +177,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Path">string Path</param>
 		/// <param name="InstallForAllUsers">bool InstallForAllUsers</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InstallManifest(string path, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, installForAllUsers);
@@ -188,7 +188,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Window SupportByLibrary OWC10, 1
+	/// DispatchInterface Window SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Window : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Workbook Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range ActiveCell
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Pane ActivePane
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Worksheet ActiveSheet
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Headings ColumnHeadings
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayColumnHeadings
 		{
 			get
@@ -192,7 +192,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayCustomHeadings
 		{
 			get
@@ -212,7 +212,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayGridlines
 		{
 			get
@@ -232,7 +232,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayHeadings
 		{
 			get
@@ -252,7 +252,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayHorizontalScrollBar
 		{
 			get
@@ -272,7 +272,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayRowHeadings
 		{
 			get
@@ -292,7 +292,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayVerticalScrollBar
 		{
 			get
@@ -312,7 +312,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayWorkbookTabs
 		{
 			get
@@ -332,7 +332,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool DisplayZeros
 		{
 			get
@@ -352,7 +352,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool EnableResize
 		{
 			get
@@ -372,7 +372,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool FreezePanes
 		{
 			get
@@ -392,7 +392,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GridlineColor
 		{
 			get
@@ -412,7 +412,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.XlColorIndex GridlineColorIndex
 		{
 			get
@@ -432,7 +432,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double Height
 		{
 			get
@@ -447,7 +447,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Index
 		{
 			get
@@ -462,7 +462,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double Left
 		{
 			get
@@ -477,7 +477,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Panes Panes
 		{
 			get
@@ -493,7 +493,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range RangeSelection
 		{
 			get
@@ -509,7 +509,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Headings RowHeadings
 		{
 			get
@@ -525,7 +525,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ScrollColumn
 		{
 			get
@@ -545,7 +545,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ScrollRow
 		{
 			get
@@ -565,7 +565,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Sheets SelectedSheets
 		{
 			get
@@ -581,7 +581,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Selection
 		{
 			get
@@ -597,7 +597,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double TabRatio
 		{
 			get
@@ -617,7 +617,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double Top
 		{
 			get
@@ -632,7 +632,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.XlWindowType Type
 		{
 			get
@@ -647,7 +647,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double UsableHeight
 		{
 			get
@@ -662,7 +662,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double UsableWidth
 		{
 			get
@@ -677,7 +677,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string ViewableRange
 		{
 			get
@@ -697,7 +697,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool Visible
 		{
 			get
@@ -712,7 +712,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range VisibleRange
 		{
 			get
@@ -728,7 +728,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double Width
 		{
 			get
@@ -743,7 +743,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 WindowNumber
 		{
 			get
@@ -765,7 +765,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -775,7 +775,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void LargeScroll()
 		{
 			object[] paramsArray = null;
@@ -785,8 +786,47 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void LargeScroll(object down)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void LargeScroll(object down, object up)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void LargeScroll(object down, object up, object toRight)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
 		/// <param name="Points">Int32 Points</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 PointsToScreenPixelsX(Int32 points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -798,7 +838,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Points">Int32 Points</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 PointsToScreenPixelsY(Int32 points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -811,7 +851,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range RangeFromPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -823,7 +863,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ResetHeadings()
 		{
 			object[] paramsArray = null;
@@ -838,7 +878,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
 		/// <param name="Start">optional object Start</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
@@ -852,7 +892,8 @@ namespace NetOffice.OWC10Api
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -866,7 +907,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -876,10 +917,50 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SmallScroll()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void SmallScroll(object down)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down);
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void SmallScroll(object down, object up)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void SmallScroll(object down, object up, object toRight)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
 			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface Entity SupportByLibrary Access, 14
+	/// DispatchInterface Entity SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Entity : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string Name
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.Operations Operations
 		{
 			get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

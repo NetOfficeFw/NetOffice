@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Pages SupportByLibrary Excel, 12,14
+	/// DispatchInterface Pages SupportByLibraryAttribute Excel, 12,14
 	///</summary>
-	[SupportByLibrary("Excel", 12,14)]
+	[SupportByLibraryAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pages : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Page this[object index]
 		{
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Page get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -109,7 +109,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -128,7 +128,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

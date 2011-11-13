@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4, 
+	 /// SupportByLibrary MSHTML 4
 	 /// </summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _styleLayoutGridType
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeNotSet = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeLoose = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeStrict = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeFixed = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleLayoutGridType_Max = 2147483647
 	}
 }

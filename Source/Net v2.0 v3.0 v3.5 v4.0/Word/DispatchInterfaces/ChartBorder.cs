@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface ChartBorder SupportByLibrary Word, 14
+	/// DispatchInterface ChartBorder SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartBorder : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Color
 		{
 			get
@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object ColorIndex
 		{
 			get
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object LineStyle
 		{
 			get
@@ -160,7 +160,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Weight
 		{
 			get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -204,7 +204,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get

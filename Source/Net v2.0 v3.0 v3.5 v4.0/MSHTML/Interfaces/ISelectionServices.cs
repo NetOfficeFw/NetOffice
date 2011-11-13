@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISelectionServices SupportByLibrary MSHTML, 4
+	/// Interface ISelectionServices SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISelectionServices : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="eType">LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE eType</param>
 		/// <param name="pIListener">LateBindingApi.MSHTMLApi.ISelectionServicesListener pIListener</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetSelectionType(LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE eType, LateBindingApi.MSHTMLApi.ISelectionServicesListener pIListener)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eType, pIListener);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppIContainer">LateBindingApi.MSHTMLApi.IMarkupContainer ppIContainer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetMarkupContainer(LateBindingApi.MSHTMLApi.IMarkupContainer ppIContainer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIContainer);
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pIStart">LateBindingApi.MSHTMLApi.IMarkupPointer pIStart</param>
 		/// <param name="pIEnd">LateBindingApi.MSHTMLApi.IMarkupPointer pIEnd</param>
 		/// <param name="ppISegmentAdded">LateBindingApi.MSHTMLApi.ISegment ppISegmentAdded</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 AddSegment(LateBindingApi.MSHTMLApi.IMarkupPointer pIStart, LateBindingApi.MSHTMLApi.IMarkupPointer pIEnd, LateBindingApi.MSHTMLApi.ISegment ppISegmentAdded)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStart, pIEnd, ppISegmentAdded);
@@ -119,7 +119,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="ppISegmentAdded">LateBindingApi.MSHTMLApi.IElementSegment ppISegmentAdded</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 AddElementSegment(LateBindingApi.MSHTMLApi.IHTMLElement pIElement, LateBindingApi.MSHTMLApi.IElementSegment ppISegmentAdded)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, ppISegmentAdded);
@@ -131,7 +131,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pISegment">LateBindingApi.MSHTMLApi.ISegment pISegment</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RemoveSegment(LateBindingApi.MSHTMLApi.ISegment pISegment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment);
@@ -143,7 +143,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppISelectionServicesListener">LateBindingApi.MSHTMLApi.ISelectionServicesListener ppISelectionServicesListener</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetSelectionServicesListener(LateBindingApi.MSHTMLApi.ISelectionServicesListener ppISelectionServicesListener)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppISelectionServicesListener);

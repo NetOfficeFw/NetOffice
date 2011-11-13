@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface SoundEffect SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// DispatchInterface SoundEffect SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SoundEffect : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpSoundEffectType Type
 		{
 			get
@@ -152,7 +152,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void ImportFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -162,7 +162,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Play()
 		{
 			object[] paramsArray = null;

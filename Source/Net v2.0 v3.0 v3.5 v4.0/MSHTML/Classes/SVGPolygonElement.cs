@@ -77,9 +77,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGPolygonElement SupportByLibrary MSHTML, 4
+	/// CoClass SVGPolygonElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGPolygonElement : DispSVGPolygonElement, IEventBinding 
 	{

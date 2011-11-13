@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLImageElementFactory SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLImageElementFactory SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLImageElementFactory : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="width">optional object width</param>
 		/// <param name="height">optional object height</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLImgElement create(object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, height);
@@ -93,10 +93,25 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLImgElement create()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
+			LateBindingApi.MSHTMLApi.IHTMLImgElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLImgElement;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="width">optional object width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public LateBindingApi.MSHTMLApi.IHTMLImgElement create(object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(width);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
 			LateBindingApi.MSHTMLApi.IHTMLImgElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as LateBindingApi.MSHTMLApi.IHTMLImgElement;
 			return newObject;

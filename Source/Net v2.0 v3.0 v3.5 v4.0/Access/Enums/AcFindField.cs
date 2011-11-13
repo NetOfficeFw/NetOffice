@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcFindField
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-1</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acCurrent = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acAll = 0
 	}
 }

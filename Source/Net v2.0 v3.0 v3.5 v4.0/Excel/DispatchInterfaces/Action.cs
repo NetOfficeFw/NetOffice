@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Action SupportByLibrary Excel, 12,14
+	/// DispatchInterface Action SupportByLibraryAttribute Excel, 12,14
 	///</summary>
-	[SupportByLibrary("Excel", 12,14)]
+	[SupportByLibraryAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Action : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public string Name
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public string Caption
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlActionType Type
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public string Coordinate
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public string Content
 		{
 			get
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public void Execute()
 		{
 			object[] paramsArray = null;

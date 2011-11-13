@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface PPTabControl SupportByLibrary PowerPoint, 9
+	/// DispatchInterface PPTabControl SupportByLibraryAttribute PowerPoint, 9
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPTabControl : PPControl
 	{

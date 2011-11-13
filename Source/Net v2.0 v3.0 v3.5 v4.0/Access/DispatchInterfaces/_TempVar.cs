@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _TempVar SupportByLibrary Access, 12,14
+	/// DispatchInterface _TempVar SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _TempVar : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public object _Value
 		{
 			get
@@ -104,7 +104,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Name
 		{
 			get
@@ -119,7 +119,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public object Value
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

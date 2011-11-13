@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IDOMUIEvent SupportByLibrary MSHTML, 4
+	/// DispatchInterface IDOMUIEvent SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDOMUIEvent : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLWindow2 view
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 detail
 		{
 			get
@@ -115,7 +115,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="cancelable">bool cancelable</param>
 		/// <param name="view">LateBindingApi.MSHTMLApi.IHTMLWindow2 view</param>
 		/// <param name="detail">Int32 detail</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void initUIEvent(string eventType, bool canBubble, bool cancelable, LateBindingApi.MSHTMLApi.IHTMLWindow2 view, Int32 detail)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventType, canBubble, cancelable, view, detail);

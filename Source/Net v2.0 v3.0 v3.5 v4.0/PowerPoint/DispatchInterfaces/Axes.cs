@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Axes SupportByLibrary PowerPoint, 14
+	/// DispatchInterface Axes SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Count
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Axis this[NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup]
 		{
@@ -162,7 +162,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlAxisType Type</param>
 		/// <param name="AxisGroup">NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Axis _Default(NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
@@ -175,7 +175,10 @@ namespace NetOffice.PowerPointApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("PowerPoint", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute PowerPoint, 14
+		/// </summary>
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

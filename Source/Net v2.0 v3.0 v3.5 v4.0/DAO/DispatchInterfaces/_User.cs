@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _User SupportByLibrary DAO, 6,12
+	/// DispatchInterface _User SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _User : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string PID
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Password
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Groups Groups
 		{
 			get
@@ -157,7 +157,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="bstrOld">string bstrOld</param>
 		/// <param name="bstrNew">string bstrNew</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void NewPassword(string bstrOld, string bstrNew)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrOld, bstrNew);
@@ -169,7 +169,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
@@ -181,10 +181,25 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Group CreateGroup()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
+			NetOffice.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Group CreateGroup(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
 			NetOffice.DAOApi.Group newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
 			return newObject;

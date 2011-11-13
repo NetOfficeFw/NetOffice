@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _Relation SupportByLibrary DAO, 6,12
+	/// DispatchInterface _Relation SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Relation : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Table
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string ForeignTable
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 Attributes
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool PartialReplica
 		{
 			get
@@ -198,7 +198,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Size">optional object Size</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
@@ -210,10 +210,40 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Field CreateField()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Field CreateField(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
+			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Field CreateField(object name, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
 			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;

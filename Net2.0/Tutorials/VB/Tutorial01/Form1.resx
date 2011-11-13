@@ -127,7 +127,7 @@ In NetOffice any object has the Method Dispose() to do that.
 An implemented Proxy Table in NetOffice makes it possible that you do not have to call Dispose() for any (implicitly) created object.
 This examples shows you how to use the Dispose() method to release an object and its created child objects.
 
-See chapter1 and chapter5  in technical documentation for further info.
+See chapter1 and chapter2  in technical documentation for further info.
 </value>
   </data>
 </root>

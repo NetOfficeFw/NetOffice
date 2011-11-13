@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface SmartTagOptions SupportByLibrary Excel, 10,11,12,14
+	/// DispatchInterface SmartTagOptions SupportByLibraryAttribute Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTagOptions : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSmartTagDisplayMode DisplaySmartTags
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool EmbedSmartTags
 		{
 			get

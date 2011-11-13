@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLEditServices2 SupportByLibrary MSHTML, 4
+	/// Interface IHTMLEditServices2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditServices2 : IHTMLEditServices
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pIStartAnchor">LateBindingApi.MSHTMLApi.IDisplayPointer pIStartAnchor</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionAnchorEx(LateBindingApi.MSHTMLApi.IDisplayPointer pIStartAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStartAnchor);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pIEndAnchor">LateBindingApi.MSHTMLApi.IDisplayPointer pIEndAnchor</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionEndEx(LateBindingApi.MSHTMLApi.IDisplayPointer pIEndAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIEndAnchor);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fReCompute">Int32 fReCompute</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 FreezeVirtualCaretPos(Int32 fReCompute)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fReCompute);
@@ -115,7 +115,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fReset">Int32 fReset</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 UnFreezeVirtualCaretPos(Int32 fReset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fReset);

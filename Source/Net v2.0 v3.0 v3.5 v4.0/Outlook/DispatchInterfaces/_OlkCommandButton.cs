@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _OlkCommandButton SupportByLibrary Outlook, 12,14
+	/// DispatchInterface _OlkCommandButton SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OlkCommandButton : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public string Accelerator
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool AutoSize
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public string Caption
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool Enabled
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public stdole.Font Font
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public stdole.Picture MouseIcon
 		{
 			get
@@ -193,7 +193,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
 		{
 			get
@@ -213,7 +213,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool WordWrap
 		{
 			get
@@ -233,7 +233,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlTextAlign TextAlign
 		{
 			get
@@ -253,7 +253,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public stdole.Picture Picture
 		{
 			get
@@ -274,7 +274,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlPictureAlignment PictureAlignment
 		{
 			get
@@ -294,7 +294,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool DisplayDropArrow
 		{
 			get

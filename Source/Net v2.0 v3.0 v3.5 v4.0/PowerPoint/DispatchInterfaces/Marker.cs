@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Marker SupportByLibrary PowerPoint, 9
+	/// DispatchInterface Marker SupportByLibraryAttribute PowerPoint, 9
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9)]
+	[SupportByLibraryAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Marker : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Enums.PpMarkerType MarkerType
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 9)]
+		[SupportByLibraryAttribute("PowerPoint", 9)]
 		public Int32 Time
 		{
 			get

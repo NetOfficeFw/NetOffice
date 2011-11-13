@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehaviorSiteCategory SupportByLibrary MSHTML, 4
+	/// Interface IElementBehaviorSiteCategory SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorSiteCategory : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lDirection">Int32 lDirection</param>
 		/// <param name="pchCategory">string pchCategory</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IEnumUnknown GetRelatedBehaviors(Int32 lDirection, string pchCategory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lDirection, pchCategory);

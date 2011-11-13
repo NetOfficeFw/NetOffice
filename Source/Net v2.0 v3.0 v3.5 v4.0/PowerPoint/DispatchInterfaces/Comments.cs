@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Comments SupportByLibrary PowerPoint, 10,11,12,14
+	/// DispatchInterface Comments SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Comments : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Comment this[Int32 index]
 		{
@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Author">string Author</param>
 		/// <param name="AuthorInitials">string AuthorInitials</param>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Comment Add(Single left, Single top, string author, string authorInitials, string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, author, authorInitials, text);

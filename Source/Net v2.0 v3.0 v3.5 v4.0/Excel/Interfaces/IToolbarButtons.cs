@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IToolbarButtons SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IToolbarButtons SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IToolbarButtons : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.ToolbarButton this[Int32 index]
 		{
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.ToolbarButton get__Default(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="StatusBar">optional object StatusBar</param>
 		/// <param name="HelpFile">optional object HelpFile</param>
 		/// <param name="HelpContextID">optional object HelpContextID</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile, object helpContextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed, enabled, statusBar, helpFile, helpContextID);
@@ -193,10 +193,130 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.ToolbarButton Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		/// <param name="OnAction">optional object OnAction</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		/// <param name="OnAction">optional object OnAction</param>
+		/// <param name="Pushed">optional object Pushed</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		/// <param name="OnAction">optional object OnAction</param>
+		/// <param name="Pushed">optional object Pushed</param>
+		/// <param name="Enabled">optional object Enabled</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed, enabled);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		/// <param name="OnAction">optional object OnAction</param>
+		/// <param name="Pushed">optional object Pushed</param>
+		/// <param name="Enabled">optional object Enabled</param>
+		/// <param name="StatusBar">optional object StatusBar</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed, enabled, statusBar);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Button">optional object Button</param>
+		/// <param name="Before">optional object Before</param>
+		/// <param name="OnAction">optional object OnAction</param>
+		/// <param name="Pushed">optional object Pushed</param>
+		/// <param name="Enabled">optional object Enabled</param>
+		/// <param name="StatusBar">optional object StatusBar</param>
+		/// <param name="HelpFile">optional object HelpFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.ToolbarButton Add(object button, object before, object onAction, object pushed, object enabled, object statusBar, object helpFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(button, before, onAction, pushed, enabled, statusBar, helpFile);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.ExcelApi.ToolbarButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ToolbarButton.LateBindingApiWrapperType) as NetOffice.ExcelApi.ToolbarButton;
 			return newObject;
@@ -206,7 +326,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

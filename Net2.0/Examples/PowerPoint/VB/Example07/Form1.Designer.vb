@@ -92,7 +92,7 @@ Partial Class Form1
         Me.Controls.Add(Me.textBox1)
         Me.Controls.Add(Me.button1)
         Me.Name = "Form1"
-        Me.Text = "Example09 - Customize GUI"
+        Me.Text = "Example07 - Customize GUI"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

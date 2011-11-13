@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface HTMLObjectElementEvents2 SupportByLibrary MSHTML, 4
+	/// DispatchInterface HTMLObjectElementEvents2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HTMLObjectElementEvents2 : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool onbeforeupdate(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void onafterupdate(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool onerrorupdate(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -115,7 +115,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool onrowexit(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -127,7 +127,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void onrowenter(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -138,7 +138,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ondatasetchanged(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -149,7 +149,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ondataavailable(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ondatasetcomplete(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -171,7 +171,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool onerror(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -183,7 +183,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void onrowsdelete(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -194,7 +194,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void onrowsinserted(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -205,7 +205,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void oncellchange(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -216,7 +216,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void onreadystatechange(LateBindingApi.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);

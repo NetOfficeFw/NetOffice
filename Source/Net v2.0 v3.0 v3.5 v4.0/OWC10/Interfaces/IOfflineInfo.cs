@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IOfflineInfo SupportByLibrary OWC10, 1
+	/// Interface IOfflineInfo SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOfflineInfo : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 PutServerFilter(string pwzUrl, string pwzServerFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetServerFilter(string pwzUrl, string pwzServerFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
@@ -106,7 +106,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pfSubscribed">Int32 pfSubscribed</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetIsPageSubscribed(string pwzUrl, Int32 pfSubscribed)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pfSubscribed);
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pbstrPath">string pbstrPath</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetOfflineXMLFileLocation(string pbstrPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrPath);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGPathSegList SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGPathSegList SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGPathSegList : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 numberOfItems
 		{
 			get
@@ -99,7 +99,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clear()
 		{
 			object[] paramsArray = null;
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGPathSeg newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg initialize(LateBindingApi.MSHTMLApi.ISVGPathSeg newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);
@@ -123,7 +123,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg getItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -137,7 +137,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGPathSeg newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg insertItemBefore(LateBindingApi.MSHTMLApi.ISVGPathSeg newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -151,7 +151,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGPathSeg newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg replaceItem(LateBindingApi.MSHTMLApi.ISVGPathSeg newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -164,7 +164,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg removeItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -177,7 +177,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGPathSeg newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPathSeg appendItem(LateBindingApi.MSHTMLApi.ISVGPathSeg newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);

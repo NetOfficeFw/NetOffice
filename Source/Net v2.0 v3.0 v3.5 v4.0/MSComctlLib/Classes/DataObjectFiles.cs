@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass DataObjectFiles SupportByLibrary MSComctlLib, 6
+	/// CoClass DataObjectFiles SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataObjectFiles : IVBDataObjectFiles, IEventBinding 
 	{

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathNary SupportByLibrary Word, 12,14
+	/// DispatchInterface OMathNary SupportByLibraryAttribute Word, 12,14
 	///</summary>
-	[SupportByLibrary("Word", 12,14)]
+	[SupportByLibraryAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathNary : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sub
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMath Sup
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMath E
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int16 Char
 		{
 			get
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool Grow
 		{
 			get
@@ -211,7 +211,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool SubSupLim
 		{
 			get
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool HideSub
 		{
 			get
@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public bool HideSup
 		{
 			get

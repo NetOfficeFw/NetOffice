@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface IApplicationEvents2 SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface IApplicationEvents2 SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IApplicationEvents2 : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Startup()
 		{
 			object[] paramsArray = null;
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Quit()
 		{
 			object[] paramsArray = null;
@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DocumentChange()
 		{
 			object[] paramsArray = null;
@@ -110,7 +110,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DocumentOpen(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -122,7 +122,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DocumentBeforeClose(NetOffice.WordApi.Document doc, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DocumentBeforePrint(NetOffice.WordApi.Document doc, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DocumentBeforeSave(NetOffice.WordApi.Document doc, bool saveAsUI, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, saveAsUI, cancel);
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void NewDocument(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WindowActivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WindowDeactivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
@@ -193,7 +193,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WindowSelectionChange(NetOffice.WordApi.Selection sel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel);
@@ -205,7 +205,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WindowBeforeRightClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WindowBeforeDoubleClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);

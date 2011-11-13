@@ -52,9 +52,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass OldHTMLDocument SupportByLibrary MSHTML, 4
+	/// CoClass OldHTMLDocument SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OldHTMLDocument : DispHTMLDocument, IEventBinding 
 	{

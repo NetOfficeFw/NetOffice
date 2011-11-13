@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface ISpeech SupportByLibrary Excel, 10,11,12,14
+	/// Interface ISpeech SupportByLibraryAttribute Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISpeech : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool SpeakCellOnEnter
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SpeakAsync">optional object SpeakAsync</param>
 		/// <param name="SpeakXML">optional object SpeakXML</param>
 		/// <param name="Purge">optional object Purge</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 Speak(string text, object speakAsync, object speakXML, object purge)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML, purge);
@@ -134,10 +134,40 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 Speak(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
+			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Text">string Text</param>
+		/// <param name="SpeakAsync">optional object SpeakAsync</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 Speak(string text, object speakAsync)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync);
+			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Text">string Text</param>
+		/// <param name="SpeakAsync">optional object SpeakAsync</param>
+		/// <param name="SpeakXML">optional object SpeakXML</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public Int32 Speak(string text, object speakAsync, object speakXML)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
 			return (Int32)returnItem;
 		}

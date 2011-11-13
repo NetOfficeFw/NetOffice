@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface ItemProperties SupportByLibrary Outlook, 10,11,12,14
+	/// DispatchInterface ItemProperties SupportByLibraryAttribute Outlook, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ItemProperties : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi.ItemProperty this[object index]
 		{
@@ -179,7 +179,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="AddToFolderFields">optional object AddToFolderFields</param>
 		/// <param name="DisplayFormat">optional object DisplayFormat</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields, displayFormat);
@@ -193,7 +193,8 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -205,8 +206,24 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
+		/// <param name="AddToFolderFields">optional object AddToFolderFields</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OutlookApi.ItemProperty newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.ItemProperty.LateBindingApiWrapperType) as NetOffice.OutlookApi.ItemProperty;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Outlook 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public void Remove(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -217,7 +234,10 @@ namespace NetOffice.OutlookApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Outlook", 10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Outlook, 10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

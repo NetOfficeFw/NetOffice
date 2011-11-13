@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _NavigationFolders SupportByLibrary Outlook, 12,14
+	/// DispatchInterface _NavigationFolders SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _NavigationFolders : COMObject
+	public class _NavigationFolders : COMObject ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +93,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +108,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +124,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -158,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi._NavigationFolder this[object index]
 		{
@@ -175,7 +176,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Folder">NetOffice.OutlookApi.MAPIFolder Folder</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.NavigationFolder Add(NetOffice.OutlookApi.MAPIFolder folder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folder);
@@ -188,7 +189,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="RemovableFolder">NetOffice.OutlookApi.NavigationFolder RemovableFolder</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public void Remove(NetOffice.OutlookApi.NavigationFolder removableFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(removableFolder);
@@ -196,6 +197,28 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute Outlook, 12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			COMObject[] enumeratorObjects = new COMObject[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (COMObject item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

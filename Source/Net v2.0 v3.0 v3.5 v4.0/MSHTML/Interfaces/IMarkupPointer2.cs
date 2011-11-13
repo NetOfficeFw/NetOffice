@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupPointer2 SupportByLibrary MSHTML, 4
+	/// Interface IMarkupPointer2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupPointer2 : IMarkupPointer
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfAtBreak">Int32 pfAtBreak</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsAtWordBreak(Int32 pfAtBreak)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfAtBreak);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="plMP">Int32 plMP</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetMarkupPosition(Int32 plMP)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plMP);
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pContainer">LateBindingApi.MSHTMLApi.IMarkupContainer pContainer</param>
 		/// <param name="lMP">Int32 lMP</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToMarkupPosition(LateBindingApi.MSHTMLApi.IMarkupContainer pContainer, Int32 lMP)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pContainer, lMP);
@@ -117,7 +117,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="muAction">LateBindingApi.MSHTMLApi.Enums._MOVEUNIT_ACTION muAction</param>
 		/// <param name="pIBoundary">LateBindingApi.MSHTMLApi.IMarkupPointer pIBoundary</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveUnitBounded(LateBindingApi.MSHTMLApi.Enums._MOVEUNIT_ACTION muAction, LateBindingApi.MSHTMLApi.IMarkupPointer pIBoundary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(muAction, pIBoundary);
@@ -130,7 +130,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pRight">LateBindingApi.MSHTMLApi.IMarkupPointer pRight</param>
 		/// <param name="pfResult">Int32 pfResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsInsideURL(LateBindingApi.MSHTMLApi.IMarkupPointer pRight, Int32 pfResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRight, pfResult);
@@ -143,7 +143,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="fAtStart">Int32 fAtStart</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToContent(LateBindingApi.MSHTMLApi.IHTMLElement pIElement, Int32 fAtStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, fAtStart);

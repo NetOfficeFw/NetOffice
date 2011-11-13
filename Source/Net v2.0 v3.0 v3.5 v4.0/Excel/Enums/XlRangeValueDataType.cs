@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 10, 11, 12, 14, 
+	 /// SupportByLibrary Excel 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Excel", 10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlRangeValueDataType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Excel", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		 xlRangeValueDefault = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Excel", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		 xlRangeValueXMLSpreadsheet = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Excel", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		 xlRangeValueMSPersistXML = 12
 	}
 }

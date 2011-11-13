@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Profiles SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Profiles SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Profiles : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Profile this[object index]
 		{
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Profile DefaultProfile
 		{
 			get
@@ -131,7 +131,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Profile ActiveProfile
 		{
 			get
@@ -154,7 +154,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Server">string Server</param>
 		/// <param name="LoginType">LateBindingApi.MSProjectApi.Enums.PjLoginType LoginType</param>
 		/// <param name="UserName">string UserName</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Profile Add(string name, string server, LateBindingApi.MSProjectApi.Enums.PjLoginType loginType, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType, userName);
@@ -167,7 +167,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

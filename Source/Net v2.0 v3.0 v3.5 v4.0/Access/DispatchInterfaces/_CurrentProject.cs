@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _CurrentProject SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _CurrentProject SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CurrentProject : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllForms AllForms
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllReports AllReports
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllMacros AllMacros
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllModules AllModules
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AllDataAccessPages AllDataAccessPages
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcProjectType ProjectType
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string BaseConnectionString
 		{
 			get
@@ -186,7 +186,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool IsConnected
 		{
 			get
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -216,7 +216,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Path
 		{
 			get
@@ -231,7 +231,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string FullName
 		{
 			get
@@ -246,7 +246,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
@@ -262,7 +262,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.AccessObjectProperties Properties
 		{
 			get
@@ -278,7 +278,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -294,7 +294,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -310,7 +310,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public bool RemovePersonalInformation
 		{
 			get
@@ -330,7 +330,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcFileFormat FileFormat
 		{
 			get
@@ -345,7 +345,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public NetOffice.ADODBApi.Connection AccessConnection
 		{
 			get
@@ -361,7 +361,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.ImportExportSpecifications ImportExportSpecifications
 		{
 			get
@@ -377,7 +377,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool IsTrusted
 		{
 			get
@@ -392,7 +392,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string WebSite
 		{
 			get
@@ -407,7 +407,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public bool IsWeb
 		{
 			get
@@ -422,7 +422,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.SharedResources Resources
 		{
 			get
@@ -444,7 +444,7 @@ namespace NetOffice.AccessApi
 		/// <param name="BaseConnectionString">optional object BaseConnectionString</param>
 		/// <param name="UserID">optional object UserID</param>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void OpenConnection(object baseConnectionString, object userID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseConnectionString, userID, password);
@@ -454,7 +454,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void OpenConnection()
 		{
 			object[] paramsArray = null;
@@ -464,7 +465,32 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		/// <param name="BaseConnectionString">optional object BaseConnectionString</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		public void OpenConnection(object baseConnectionString)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(baseConnectionString);
+			Invoker.Method(this, "OpenConnection", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="BaseConnectionString">optional object BaseConnectionString</param>
+		/// <param name="UserID">optional object UserID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		public void OpenConnection(object baseConnectionString, object userID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(baseConnectionString, userID);
+			Invoker.Method(this, "OpenConnection", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void CloseConnection()
 		{
 			object[] paramsArray = null;
@@ -474,7 +500,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public void UpdateDependencyInfo()
 		{
 			object[] paramsArray = null;
@@ -485,7 +511,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -498,7 +524,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="SharedImageName">string SharedImageName</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public void AddSharedImage(string sharedImageName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sharedImageName, fileName);

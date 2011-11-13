@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Headings SupportByLibrary OWC10, 1
+	/// DispatchInterface Headings SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Headings : COMObject
+	public class Headings : COMObject ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -92,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Window Parent
 		{
 			get
@@ -108,7 +109,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -124,7 +125,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.Heading this[object index]
 		{
@@ -142,6 +143,28 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			COMObject[] enumeratorObjects = new COMObject[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (COMObject item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

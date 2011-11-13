@@ -14,9 +14,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Record SupportByLibrary ADODB, 2.5
+	/// CoClass Record SupportByLibraryAttribute ADODB, 2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Record : _Record, IEventBinding 
 	{

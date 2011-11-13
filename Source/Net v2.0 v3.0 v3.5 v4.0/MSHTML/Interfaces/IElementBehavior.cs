@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehavior SupportByLibrary MSHTML, 4
+	/// Interface IElementBehavior SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehavior : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pBehaviorSite">LateBindingApi.MSHTMLApi.IElementBehaviorSite pBehaviorSite</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Init(LateBindingApi.MSHTMLApi.IElementBehaviorSite pBehaviorSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pBehaviorSite);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lEvent">Int32 lEvent</param>
 		/// <param name="pVar">object pVar</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Notify(Int32 lEvent, object pVar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lEvent, pVar);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Detach()
 		{
 			object[] paramsArray = null;

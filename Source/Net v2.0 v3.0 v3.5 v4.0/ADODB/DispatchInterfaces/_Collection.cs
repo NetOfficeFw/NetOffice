@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Collection SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface _Collection SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Collection : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 Count
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -106,7 +106,10 @@ namespace NetOffice.ADODBApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("ADODB", 2.1,2.5)]
+		/// <summary>
+		/// SupportByLibraryAttribute ADODB, 2.1,2.5
+		/// </summary>
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

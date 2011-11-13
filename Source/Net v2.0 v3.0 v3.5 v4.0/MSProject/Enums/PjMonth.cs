@@ -4,94 +4,94 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjMonth
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjJanuary = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjFebruary = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjMarch = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjApril = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjMay = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjJune = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjJuly = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjAugust = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjSeptember = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjOctober = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjNovember = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDecember = 12
 	}
 }

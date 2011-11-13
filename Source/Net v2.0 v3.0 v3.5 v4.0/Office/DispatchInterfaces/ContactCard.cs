@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ContactCard SupportByLibrary Office, 14
+	/// DispatchInterface ContactCard SupportByLibraryAttribute Office, 14
 	///</summary>
-	[SupportByLibrary("Office", 14)]
+	[SupportByLibraryAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ContactCard : _IMsoDispObj
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 14
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="RectangleBottom">Int32 RectangleBottom</param>
 		/// <param name="HorizontalPosition">Int32 HorizontalPosition</param>
 		/// <param name="ShowWithDelay">bool ShowWithDelay</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, bool showWithDelay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay);

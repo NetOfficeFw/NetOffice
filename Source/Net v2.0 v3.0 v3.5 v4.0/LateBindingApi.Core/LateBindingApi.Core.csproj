@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomEnumeratorAttribute.cs" />
+    <Compile Include="CustomMethodAttribute.cs" />
+    <Compile Include="DebugConsole.cs" />
     <Compile Include="EntityTypeAttribute.cs" />
     <Compile Include="LateBindingApiException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="SinkHelper.cs" />
     <Compile Include="SupportByLibraryAttribute.cs" />
     <Compile Include="Interfaces\IEventBinding.cs" />
+    <Compile Include="SupportEntityType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

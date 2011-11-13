@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _Group SupportByLibrary DAO, 6,12
+	/// DispatchInterface _Group SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Group : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string PID
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Users Users
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">optional object Name</param>
 		/// <param name="PID">optional object PID</param>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID, password);
@@ -150,10 +150,40 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.User CreateUser()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateUser", paramsArray);
+			NetOffice.DAOApi.User newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.User.LateBindingApiWrapperType) as NetOffice.DAOApi.User;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.User CreateUser(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateUser", paramsArray);
+			NetOffice.DAOApi.User newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.User.LateBindingApiWrapperType) as NetOffice.DAOApi.User;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PID">optional object PID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.User CreateUser(object name, object pID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
 			object returnItem = Invoker.MethodReturn(this, "CreateUser", paramsArray);
 			NetOffice.DAOApi.User newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.User.LateBindingApiWrapperType) as NetOffice.DAOApi.User;
 			return newObject;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _OutlookBarPane SupportByLibrary Outlook, 9,10,11,12,14
+	/// DispatchInterface _OutlookBarPane SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OutlookBarPane : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.OutlookBarStorage Contents
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.OutlookBarGroup CurrentGroup
 		{
 			get
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -191,7 +191,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get

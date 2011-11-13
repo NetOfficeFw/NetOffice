@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14, 
+	 /// SupportByLibrary Outlook 12, 14
 	 /// </summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlScrollBars
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olScrollBarsNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olScrollBarsHorizontal = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olScrollBarsVertical = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olScrollBarsBoth = 3
 	}
 }

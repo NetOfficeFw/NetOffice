@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface INames SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface INames SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class INames : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CategoryLocal">optional object CategoryLocal</param>
 		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
 		/// <param name="RefersToR1C1Local">optional object RefersToR1C1Local</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local);
@@ -164,7 +164,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Name Add()
 		{
 			object[] paramsArray = null;
@@ -176,10 +177,195 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		/// <param name="CategoryLocal">optional object CategoryLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		/// <param name="CategoryLocal">optional object CategoryLocal</param>
+		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Index">optional object Index</param>
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
 		{
@@ -198,7 +384,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Index">optional object Index</param>
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Name _Default(object index, object indexLocal, object refersTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
@@ -210,10 +396,40 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Name _Default()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name _Default(object index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
+			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="IndexLocal">optional object IndexLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Name _Default(object index, object indexLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal);
 			object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.Name newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
 			return newObject;
@@ -223,7 +439,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface EffectParameters SupportByLibrary PowerPoint, 10,11,12,14
+	/// DispatchInterface EffectParameters SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EffectParameters : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimDirection Direction
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single Amount
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public Single Size
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.PowerPointApi.ColorFormat Color2
 		{
 			get
@@ -184,7 +184,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Relative
 		{
 			get
@@ -204,7 +204,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public string FontName
 		{
 			get

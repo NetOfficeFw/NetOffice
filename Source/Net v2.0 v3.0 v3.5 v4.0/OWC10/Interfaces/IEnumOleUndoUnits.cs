@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface IEnumOleUndoUnits SupportByLibrary OWC10, 1
+	/// Interface IEnumOleUndoUnits SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumOleUndoUnits : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgElt">NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
 		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 RemoteNext(Int32 cElt, NetOffice.OWC10Api.IOleUndoUnit rgElt, Int32 pcEltFetched)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgElt, pcEltFetched);
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Skip(Int32 cElt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt);
@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Reset()
 		{
 			object[] paramsArray = null;
@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Clone(NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);

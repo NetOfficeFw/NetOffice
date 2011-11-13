@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4, 
+	 /// SupportByLibrary MSHTML 4
 	 /// </summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _styleNone
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleNoneNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 styleNone_Max = 2147483647
 	}
 }

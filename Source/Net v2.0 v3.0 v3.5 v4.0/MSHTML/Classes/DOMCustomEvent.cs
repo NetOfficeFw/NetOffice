@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass DOMCustomEvent SupportByLibrary MSHTML, 4
+	/// CoClass DOMCustomEvent SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DOMCustomEvent : DispDOMCustomEvent, IEventBinding 
 	{

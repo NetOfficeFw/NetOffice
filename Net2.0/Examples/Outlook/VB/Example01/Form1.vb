@@ -20,7 +20,9 @@ Public Class Form1
         listView1.Items.Clear()
         labelItemsCount.Text = String.Format("You have {0} e-mails.", inboxFolder.Items.Count)
 
-        ' we fetch the inbox folder items
+        ' we fetch the inbox folder items. ATTENTION: items is null if you have no items in inbox folder
+        ' office products initialize ALL collections on demand. this is just an example, we dont check for null here
+        ' NOTE: for some uninitialized collections you get an exception while accessing
         Dim items As Outlook._Items = inboxFolder.Items
         Dim item As COMObject = Nothing
         Dim i As Integer = 1

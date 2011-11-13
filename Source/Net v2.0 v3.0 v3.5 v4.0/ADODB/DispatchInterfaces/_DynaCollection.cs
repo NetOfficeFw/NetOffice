@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _DynaCollection SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface _DynaCollection SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DynaCollection : _Collection
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Object">object Object</param>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public void Append(object _object)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object);
@@ -91,7 +91,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

@@ -11,9 +11,8 @@ Public Class Form1
         ' Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        ' start powerpoint and turn off msg boxes
+        ' start powerpoint
         Dim powerApplication As PowerPoint.Application = New PowerPoint.Application()
-        powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone
 
         ' add a new presentation with one new slide
         Dim presentation As PowerPoint.Presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue)
@@ -21,7 +20,7 @@ Public Class Form1
 
         ' save the document 
         Dim fileExtension As String = GetDefaultExtension(powerApplication)
-        Dim documentFile As String = String.Format("{0}\\Example01{1}", Environment.CurrentDirectory, fileExtension)
+        Dim documentFile As String = String.Format("{0}\\Example01{1}", Application.StartupPath, fileExtension)
         presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue)
 
         ' close power point and dispose reference

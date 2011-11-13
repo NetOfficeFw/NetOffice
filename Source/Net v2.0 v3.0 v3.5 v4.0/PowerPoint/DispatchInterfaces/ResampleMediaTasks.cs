@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface ResampleMediaTasks SupportByLibrary PowerPoint, 14
+	/// DispatchInterface ResampleMediaTasks SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ResampleMediaTasks : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 PercentComplete
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.ResampleMediaTask this[Int32 index]
 		{
@@ -111,7 +111,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public void Pause()
 		{
 			object[] paramsArray = null;
@@ -121,7 +121,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public void Cancel()
 		{
 			object[] paramsArray = null;
@@ -131,7 +131,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public void Resume()
 		{
 			object[] paramsArray = null;

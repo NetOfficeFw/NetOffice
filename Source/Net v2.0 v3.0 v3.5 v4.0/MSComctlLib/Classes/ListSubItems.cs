@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ListSubItems SupportByLibrary MSComctlLib, 6
+	/// CoClass ListSubItems SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ListSubItems : IListSubItems, IEventBinding 
 	{

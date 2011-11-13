@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface AnswerWizardFiles SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface AnswerWizardFiles SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class AnswerWizardFiles : _IMsoDispObj
+	public class AnswerWizardFiles : _IMsoDispObj ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +94,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public string this[Int32 index]
 		{
@@ -109,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -128,7 +129,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -139,7 +140,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void Delete(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -147,6 +148,28 @@ namespace NetOffice.OfficeApi
 		}
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute Office, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			string[] enumeratorObjects = new string[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (string item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISecureUrlHost SupportByLibrary MSHTML, 4
+	/// Interface ISecureUrlHost SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISecureUrlHost : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pfAllow">Int32 pfAllow</param>
 		/// <param name="pchUrlInQuestion">Int16 pchUrlInQuestion</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ValidateSecureUrl(Int32 pfAllow, Int16 pchUrlInQuestion, Int32 dwFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfAllow, pchUrlInQuestion, dwFlags);

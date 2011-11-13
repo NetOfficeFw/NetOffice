@@ -80,9 +80,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass htmlInputImage SupportByLibrary MSHTML, 4
+	/// CoClass htmlInputImage SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class htmlInputImage : DispIHTMLInputImage, IEventBinding 
 	{

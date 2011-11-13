@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Worksheet SupportByLibrary OWC10, 1
+	/// DispatchInterface Worksheet SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Worksheet : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.AutoFilter AutoFilter
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool AutoFilterMode
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Cells
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Columns
 		{
 			get
@@ -160,7 +160,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string CommandText
 		{
 			get
@@ -180,7 +180,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string ConnectionString
 		{
 			get
@@ -200,7 +200,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string DataMember
 		{
 			get
@@ -220,7 +220,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool EnableAutoFilter
 		{
 			get
@@ -240,7 +240,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool FilterMode
 		{
 			get
@@ -255,7 +255,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Index
 		{
 			get
@@ -270,7 +270,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsDataBound
 		{
 			get
@@ -290,7 +290,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string Name
 		{
 			get
@@ -310,7 +310,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Names Names
 		{
 			get
@@ -326,7 +326,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Worksheet Next
 		{
 			get
@@ -342,7 +342,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Workbook Parent
 		{
 			get
@@ -358,7 +358,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Worksheet Previous
 		{
 			get
@@ -374,7 +374,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool ProtectContents
 		{
 			get
@@ -389,7 +389,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Protection Protection
 		{
 			get
@@ -405,7 +405,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool ProtectionMode
 		{
 			get
@@ -422,7 +422,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Cell1">object Cell1</param>
 		/// <param name="Cell2">optional object Cell2</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range get_Range(object cell1, object cell2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1, cell2);
@@ -436,7 +436,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Cell1">object Cell1</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range get_Range(object cell1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1);
@@ -449,7 +449,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Rows
 		{
 			get
@@ -465,7 +465,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double StandardHeight
 		{
 			get
@@ -480,7 +480,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Double StandardWidth
 		{
 			get
@@ -500,7 +500,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.XlSheetType Type
 		{
 			get
@@ -515,7 +515,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api._Range UsedRange
 		{
 			get
@@ -531,7 +531,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.XlSheetVisibility Visible
 		{
 			get
@@ -554,7 +554,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -564,7 +564,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Calculate()
 		{
 			object[] paramsArray = null;
@@ -576,7 +576,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -586,7 +586,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -596,7 +597,19 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Copy(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
+			Invoker.Method(this, "Copy", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -606,7 +619,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DumpStringTable()
 		{
 			object[] paramsArray = null;
@@ -617,7 +630,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Expression">object Expression</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object _Evaluate(object expression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression);
@@ -637,7 +650,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Expression">object Expression</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object Evaluate(object expression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression);
@@ -658,7 +671,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -668,7 +681,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Move()
 		{
 			object[] paramsArray = null;
@@ -678,9 +692,21 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Move(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
+			Invoker.Method(this, "Move", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
 		/// <param name="Link">optional object Link</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Paste(object destination, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, link);
@@ -690,10 +716,23 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Paste()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Paste", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Destination">optional object Destination</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Paste(object destination)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination);
 			Invoker.Method(this, "Paste", paramsArray);
 		}
 
@@ -716,7 +755,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="AllowSorting">optional object AllowSorting</param>
 		/// <param name="AllowFiltering">optional object AllowFiltering</param>
 		/// <param name="AllowUsingPivotTableReports">optional object AllowUsingPivotTableReports</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows, object allowSorting, object allowFiltering, object allowUsingPivotTableReports)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows, allowSorting, allowFiltering, allowUsingPivotTableReports);
@@ -726,7 +765,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Protect()
 		{
 			object[] paramsArray = null;
@@ -736,7 +776,292 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		/// <param name="AllowDeletingColumns">optional object AllowDeletingColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		/// <param name="AllowDeletingColumns">optional object AllowDeletingColumns</param>
+		/// <param name="AllowDeletingRows">optional object AllowDeletingRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		/// <param name="AllowDeletingColumns">optional object AllowDeletingColumns</param>
+		/// <param name="AllowDeletingRows">optional object AllowDeletingRows</param>
+		/// <param name="AllowSorting">optional object AllowSorting</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows, object allowSorting)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows, allowSorting);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="DrawingObjects">optional object DrawingObjects</param>
+		/// <param name="Contents">optional object Contents</param>
+		/// <param name="Scenarios">optional object Scenarios</param>
+		/// <param name="UserInterfaceOnly">optional object UserInterfaceOnly</param>
+		/// <param name="AllowFormattingCells">optional object AllowFormattingCells</param>
+		/// <param name="AllowFormattingColumns">optional object AllowFormattingColumns</param>
+		/// <param name="AllowFormattingRows">optional object AllowFormattingRows</param>
+		/// <param name="AllowInsertingColumns">optional object AllowInsertingColumns</param>
+		/// <param name="AllowInsertingRows">optional object AllowInsertingRows</param>
+		/// <param name="AllowInsertingHyperlinks">optional object AllowInsertingHyperlinks</param>
+		/// <param name="AllowDeletingColumns">optional object AllowDeletingColumns</param>
+		/// <param name="AllowDeletingRows">optional object AllowDeletingRows</param>
+		/// <param name="AllowSorting">optional object AllowSorting</param>
+		/// <param name="AllowFiltering">optional object AllowFiltering</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly, object allowFormattingCells, object allowFormattingColumns, object allowFormattingRows, object allowInsertingColumns, object allowInsertingRows, object allowInsertingHyperlinks, object allowDeletingColumns, object allowDeletingRows, object allowSorting, object allowFiltering)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly, allowFormattingCells, allowFormattingColumns, allowFormattingRows, allowInsertingColumns, allowInsertingRows, allowInsertingHyperlinks, allowDeletingColumns, allowDeletingRows, allowSorting, allowFiltering);
+			Invoker.Method(this, "Protect", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -747,7 +1072,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
@@ -757,7 +1082,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -767,7 +1093,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ShowAllData()
 		{
 			object[] paramsArray = null;
@@ -778,7 +1104,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Password">optional object Password</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
@@ -788,7 +1114,8 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Unprotect()
 		{
 			object[] paramsArray = null;

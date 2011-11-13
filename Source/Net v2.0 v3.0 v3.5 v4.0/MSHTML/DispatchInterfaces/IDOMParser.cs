@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IDOMParser SupportByLibrary MSHTML, 4
+	/// DispatchInterface IDOMParser SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDOMParser : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="xmlSource">string xmlSource</param>
 		/// <param name="mimeType">string mimeType</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDocument2 parseFromString(string xmlSource, string mimeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xmlSource, mimeType);

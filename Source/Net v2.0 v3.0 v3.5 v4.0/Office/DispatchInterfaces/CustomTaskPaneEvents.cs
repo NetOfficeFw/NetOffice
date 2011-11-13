@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CustomTaskPaneEvents SupportByLibrary Office, 12,14
+	/// DispatchInterface CustomTaskPaneEvents SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomTaskPaneEvents : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CustomTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);

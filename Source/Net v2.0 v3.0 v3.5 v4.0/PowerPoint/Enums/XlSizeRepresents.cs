@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14, 
+	 /// SupportByLibrary PowerPoint 14
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlSizeRepresents
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlSizeIsWidth = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlSizeIsArea = 1
 	}
 }

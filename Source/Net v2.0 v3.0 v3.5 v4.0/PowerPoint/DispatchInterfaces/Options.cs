@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Options SupportByLibrary PowerPoint, 10,11,12,14
+	/// DispatchInterface Options SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Options : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayPasteOptions
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DoNotPromptForConvert
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool ShowCoauthoringMergeChanges
 		{
 			get

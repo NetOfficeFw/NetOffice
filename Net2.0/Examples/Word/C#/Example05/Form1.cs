@@ -29,6 +29,7 @@ namespace Example05
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+            wordApplication.Visible = true;
 
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
@@ -39,24 +40,23 @@ namespace Example05
 
             // set the modulename
             module.Name = "NetOfficeTestModule";
-
+           
             //add the macro
-            string codeLines = string.Format("Sub NetOfficeTestMacro()\r\n   {0}\r\nEnd Sub",
+            string codeLines = string.Format("Public Sub NetOfficeTestMacro()\r\n   {0}\r\nEnd Sub",
                                              "Selection.TypeText (\"This text is written by a automatic created macro with NetOffice...\")");
             module.InsertLines(1, codeLines);
 
-            //start the macro
+            //start the macro NetOfficeTestModule
             wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro");
 
             //save the document
             string fileExtension = GetDefaultExtension(wordApplication);
             object documentFile = string.Format("{0}\\Example05{1}", Application.StartupPath, fileExtension);
-            newDocument.SaveAs(documentFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value,
-                                             Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            newDocument.SaveAs(documentFile);
 
             //close word and dispose reference
             wordApplication.Quit();
-            wordApplication.Dispose();
+            //wordApplication.Dispose();
 
             FinishDialog fDialog = new FinishDialog("Document saved.", documentFile.ToString());
             fDialog.ShowDialog(this);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Connection SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface _Connection SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Connection : Connection15
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public void Cancel()
 		{
 			object[] paramsArray = null;

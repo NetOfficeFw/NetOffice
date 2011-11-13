@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface SelectedComponents SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface SelectedComponents SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SelectedComponents : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBProject Parent
 		{
 			get
@@ -109,7 +109,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 Count
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VBIDEApi.Component this[Int32 index]
 		{
@@ -145,7 +145,10 @@ namespace NetOffice.VBIDEApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("VBIDE", 5.3,12)]
+		/// <summary>
+		/// SupportByLibraryAttribute VBIDE, 5.3,12
+		/// </summary>
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

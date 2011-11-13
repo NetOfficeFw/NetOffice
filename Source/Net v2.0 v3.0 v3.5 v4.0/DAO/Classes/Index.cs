@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass Index SupportByLibrary DAO, 6,12
+	/// CoClass Index SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Index : _Index, IEventBinding 
 	{

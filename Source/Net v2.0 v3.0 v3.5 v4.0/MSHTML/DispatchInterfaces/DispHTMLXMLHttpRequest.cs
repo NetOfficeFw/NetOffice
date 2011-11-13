@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispHTMLXMLHttpRequest SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispHTMLXMLHttpRequest SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLXMLHttpRequest : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 readyState
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object responseBody
 		{
 			get
@@ -114,7 +114,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string responseText
 		{
 			get
@@ -129,7 +129,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject responseXML
 		{
 			get
@@ -145,7 +145,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 status
 		{
 			get
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string statusText
 		{
 			get
@@ -175,7 +175,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object onreadystatechange
 		{
 			get
@@ -203,7 +203,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 timeout
 		{
 			get
@@ -223,7 +223,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object ontimeout
 		{
 			get
@@ -251,7 +251,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject constructor
 		{
 			get
@@ -270,7 +270,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void abort()
 		{
 			object[] paramsArray = null;
@@ -285,7 +285,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="varAsync">object varAsync</param>
 		/// <param name="varUser">optional object varUser</param>
 		/// <param name="varPassword">optional object varPassword</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void open(string bstrMethod, string bstrUrl, object varAsync, object varUser, object varPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrMethod, bstrUrl, varAsync, varUser, varPassword);
@@ -298,7 +298,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="bstrMethod">string bstrMethod</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="varAsync">object varAsync</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void open(string bstrMethod, string bstrUrl, object varAsync)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrMethod, bstrUrl, varAsync);
@@ -308,8 +309,23 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
+		/// <param name="bstrMethod">string bstrMethod</param>
+		/// <param name="bstrUrl">string bstrUrl</param>
+		/// <param name="varAsync">object varAsync</param>
+		/// <param name="varUser">optional object varUser</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void open(string bstrMethod, string bstrUrl, object varAsync, object varUser)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrMethod, bstrUrl, varAsync, varUser);
+			Invoker.Method(this, "open", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
 		/// <param name="varBody">optional object varBody</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void send(object varBody)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varBody);
@@ -319,7 +335,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void send()
 		{
 			object[] paramsArray = null;
@@ -329,7 +346,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string getAllResponseHeaders()
 		{
 			object[] paramsArray = null;
@@ -341,7 +358,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrHeader">string bstrHeader</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string getResponseHeader(string bstrHeader)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrHeader);
@@ -354,7 +371,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrHeader">string bstrHeader</param>
 		/// <param name="bstrValue">string bstrValue</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setRequestHeader(string bstrHeader, string bstrValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrHeader, bstrValue);
@@ -367,7 +384,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void addEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -380,7 +397,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void removeEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -391,7 +408,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="evt">LateBindingApi.MSHTMLApi.IDOMEvent evt</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool dispatchEvent(LateBindingApi.MSHTMLApi.IDOMEvent evt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(evt);

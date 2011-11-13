@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _DBEngine SupportByLibrary DAO, 6,12
+	/// DispatchInterface _DBEngine SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DBEngine : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Version
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string IniPath
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string DefaultUser
 		{
 			get
@@ -131,7 +131,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string DefaultPassword
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 LoginTimeout
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Workspaces Workspaces
 		{
 			get
@@ -187,7 +187,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Errors Errors
 		{
 			get
@@ -203,7 +203,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string SystemDB
 		{
 			get
@@ -223,7 +223,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 DefaultType
 		{
 			get
@@ -247,7 +247,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Action">optional object Action</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Idle(object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
@@ -257,7 +257,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Idle()
 		{
 			object[] paramsArray = null;
@@ -272,7 +273,7 @@ namespace NetOffice.DAOApi
 		/// <param name="DstLocale">optional object DstLocale</param>
 		/// <param name="Options">optional object Options</param>
 		/// <param name="SrcLocale">optional object SrcLocale</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void CompactDatabase(string srcName, string dstName, object dstLocale, object options, object srcLocale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale, options, srcLocale);
@@ -284,7 +285,8 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="SrcName">string SrcName</param>
 		/// <param name="DstName">string DstName</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void CompactDatabase(string srcName, string dstName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName);
@@ -294,8 +296,37 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="SrcName">string SrcName</param>
+		/// <param name="DstName">string DstName</param>
+		/// <param name="DstLocale">optional object DstLocale</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void CompactDatabase(string srcName, string dstName, object dstLocale)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale);
+			Invoker.Method(this, "CompactDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="SrcName">string SrcName</param>
+		/// <param name="DstName">string DstName</param>
+		/// <param name="DstLocale">optional object DstLocale</param>
+		/// <param name="Options">optional object Options</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void CompactDatabase(string srcName, string dstName, object dstLocale, object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale, options);
+			Invoker.Method(this, "CompactDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void RepairDatabase(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -309,7 +340,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Driver">string Driver</param>
 		/// <param name="Silent">bool Silent</param>
 		/// <param name="Attributes">string Attributes</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void RegisterDatabase(string dsn, string driver, bool silent, string attributes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dsn, driver, silent, attributes);
@@ -322,7 +353,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Workspace _30_CreateWorkspace(string name, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
@@ -338,7 +369,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
@@ -351,7 +382,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -364,9 +396,40 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
+		/// <param name="Options">optional object Options</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Database OpenDatabase(string name, object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
+			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Options">optional object Options</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
+			NetOffice.DAOApi.Database newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">string Name</param>
 		/// <param name="Locale">string Locale</param>
 		/// <param name="Option">optional object Option</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale, object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale, option);
@@ -380,7 +443,8 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Locale">string Locale</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Database CreateDatabase(string name, string locale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale);
@@ -392,7 +456,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FreeLocks()
 		{
 			object[] paramsArray = null;
@@ -402,7 +466,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void BeginTrans()
 		{
 			object[] paramsArray = null;
@@ -413,7 +477,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Option">Int32 Option</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void CommitTrans(Int32 option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
@@ -423,7 +487,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Rollback()
 		{
 			object[] paramsArray = null;
@@ -435,7 +499,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Password">string Password</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void SetDefaultWorkspace(string name, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, password);
@@ -447,7 +511,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Option">Int16 Option</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void SetDataAccessOption(Int16 option, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, value);
@@ -459,7 +523,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="StatNum">Int32 StatNum</param>
 		/// <param name="Reset">optional object Reset</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 ISAMStats(Int32 statNum, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(statNum, reset);
@@ -471,7 +535,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="StatNum">Int32 StatNum</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 ISAMStats(Int32 statNum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(statNum);
@@ -486,7 +551,7 @@ namespace NetOffice.DAOApi
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
 		/// <param name="UseType">optional object UseType</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password, useType);
@@ -501,7 +566,8 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
@@ -517,7 +583,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Options">optional object Options</param>
 		/// <param name="ReadOnly">optional object ReadOnly</param>
 		/// <param name="Connect">optional object Connect</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
@@ -530,7 +596,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -542,9 +609,40 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Options">optional object Options</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Connection OpenConnection(string name, object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
+			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);
+			NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Options">optional object Options</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "OpenConnection", paramsArray);
+			NetOffice.DAOApi.Connection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="Option">Int32 Option</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void SetOption(Int32 option, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, value);

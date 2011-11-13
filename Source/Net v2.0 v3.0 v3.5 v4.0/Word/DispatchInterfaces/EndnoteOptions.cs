@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface EndnoteOptions SupportByLibrary Word, 10,11,12,14
+	/// DispatchInterface EndnoteOptions SupportByLibraryAttribute Word, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EndnoteOptions : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdEndnoteLocation Location
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdNoteNumberStyle NumberStyle
 		{
 			get
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Int32 StartingNumber
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdNumberingRule NumberingRule
 		{
 			get

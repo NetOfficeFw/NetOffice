@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHighlightRenderingServices SupportByLibrary MSHTML, 4
+	/// Interface IHighlightRenderingServices SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHighlightRenderingServices : COMObject
 	{
@@ -82,7 +82,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pDispPointerEnd">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerEnd</param>
 		/// <param name="pIRenderStyle">LateBindingApi.MSHTMLApi.IHTMLRenderStyle pIRenderStyle</param>
 		/// <param name="ppISegment">LateBindingApi.MSHTMLApi.IHighlightSegment ppISegment</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 AddSegment(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerStart, LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerEnd, LateBindingApi.MSHTMLApi.IHTMLRenderStyle pIRenderStyle, LateBindingApi.MSHTMLApi.IHighlightSegment ppISegment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointerStart, pDispPointerEnd, pIRenderStyle, ppISegment);
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pISegment">LateBindingApi.MSHTMLApi.IHighlightSegment pISegment</param>
 		/// <param name="pDispPointerStart">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerStart</param>
 		/// <param name="pDispPointerEnd">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerEnd</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveSegmentToPointers(LateBindingApi.MSHTMLApi.IHighlightSegment pISegment, LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerStart, LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointerEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment, pDispPointerStart, pDispPointerEnd);
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pISegment">LateBindingApi.MSHTMLApi.IHighlightSegment pISegment</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RemoveSegment(LateBindingApi.MSHTMLApi.IHighlightSegment pISegment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment);

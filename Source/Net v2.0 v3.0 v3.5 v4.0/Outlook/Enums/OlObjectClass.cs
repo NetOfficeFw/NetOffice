@@ -4,1046 +4,1046 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlObjectClass
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olApplication = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olNamespace = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olFolder = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olRecipient = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAttachment = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAddressList = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAddressEntry = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olFolders = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olItems = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olRecipients = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAttachments = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAddressLists = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAddressEntries = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAppointment = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>53</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMeetingRequest = 53,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>54</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMeetingCancellation = 54,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>55</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMeetingResponseNegative = 55,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>56</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMeetingResponsePositive = 56,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>57</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMeetingResponseTentative = 57,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>28</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olRecurrencePattern = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>29</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olExceptions = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olException = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olAction = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olActions = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olExplorer = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olInspector = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olPages = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>37</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olFormDescription = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olUserProperties = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olUserProperty = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olContact = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olDocument = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olJournal = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olMail = 43,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>44</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olNote = 44,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>45</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olPost = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>46</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olReport = 46,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>47</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olRemote = 47,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>48</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olTask = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>49</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olTaskRequest = 49,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>50</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olTaskRequestUpdate = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>51</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olTaskRequestAccept = 51,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>52</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olTaskRequestDecline = 52,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>60</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olExplorers = 60,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>61</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olInspectors = 61,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>62</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olPanes = 62,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>63</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarPane = 63,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarStorage = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>65</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarGroups = 65,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>66</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarGroup = 66,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>67</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarShortcuts = 67,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>68</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olOutlookBarShortcut = 68,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>69</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olDistributionList = 69,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>70</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olPropertyPageSite = 70,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>71</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olPropertyPages = 71,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>72</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olSyncObject = 72,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>73</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olSyncObjects = 73,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>74</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olSelection = 74,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>75</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olLink = 75,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>76</remarks>
-		 [SupportByLibrary("Outlook", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		 olLinks = 76,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>77</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olSearch = 77,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>78</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olResults = 78,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>79</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olViews = 79,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>80</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olView = 80,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>98</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olItemProperties = 98,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>99</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olItemProperty = 99,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>100</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olReminders = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14, 
+		 /// SupportByLibrary Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>101</remarks>
-		 [SupportByLibrary("Outlook", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		 olReminder = 101,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14, 
+		 /// SupportByLibrary Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>102</remarks>
-		 [SupportByLibrary("Outlook", 11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
 		 olConflict = 102,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14, 
+		 /// SupportByLibrary Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>103</remarks>
-		 [SupportByLibrary("Outlook", 11,12,14)]
+		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
 		 olConflicts = 103,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>104</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olSharing = 104,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>105</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAccount = 105,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>106</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAccounts = 106,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>107</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olStore = 107,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>108</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olStores = 108,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>109</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olSelectNamesDialog = 109,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>110</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olExchangeUser = 110,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>111</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olExchangeDistributionList = 111,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>112</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olPropertyAccessor = 112,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>113</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olStorageItem = 113,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>114</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRules = 114,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>115</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRule = 115,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>116</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRuleActions = 116,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>117</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRuleAction = 117,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>118</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olMoveOrCopyRuleAction = 118,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>119</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olSendRuleAction = 119,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>120</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olTable = 120,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>121</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRow = 121,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>122</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAssignToCategoryRuleAction = 122,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>123</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olPlaySoundRuleAction = 123,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>124</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olMarkAsTaskRuleAction = 124,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>125</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNewItemAlertRuleAction = 125,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>126</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRuleConditions = 126,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>127</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olRuleCondition = 127,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olImportanceRuleCondition = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>129</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olFormRegion = 129,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>130</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olCategoryRuleCondition = 130,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>131</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olFormNameRuleCondition = 131,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>132</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olFromRuleCondition = 132,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>133</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olSenderInAddressListRuleCondition = 133,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>134</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olTextRuleCondition = 134,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>135</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAccountRuleCondition = 135,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>136</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassTableView = 136,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>137</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassIconView = 137,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>138</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassCardView = 138,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>139</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassCalendarView = 139,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>140</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassTimeLineView = 140,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>141</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olViewFields = 141,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>142</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olViewField = 142,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>144</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olOrderField = 144,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>145</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olOrderFields = 145,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>146</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olViewFont = 146,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>147</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAutoFormatRule = 147,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>148</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAutoFormatRules = 148,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>149</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olColumnFormat = 149,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>150</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olColumns = 150,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>151</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olCalendarSharing = 151,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>152</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olCategory = 152,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>153</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olCategories = 153,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>154</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olColumn = 154,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>155</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassNavigationPane = 155,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>156</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationModules = 156,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>157</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationModule = 157,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>158</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olMailModule = 158,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>159</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olCalendarModule = 159,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>160</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olContactsModule = 160,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>161</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olTasksModule = 161,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>162</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olJournalModule = 162,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>163</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNotesModule = 163,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>164</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationGroups = 164,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>165</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationGroup = 165,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>166</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationFolders = 166,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>167</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olNavigationFolder = 167,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>168</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassBusinessCardView = 168,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>169</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAttachmentSelection = 169,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>170</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAddressRuleCondition = 170,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>171</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olUserDefinedProperty = 171,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>172</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olUserDefinedProperties = 172,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>173</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olFromRssFeedRuleCondition = 173,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>174</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassTimeZone = 174,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>175</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olClassTimeZones = 175,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>176</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olMobile = 176,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>177</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olSolutionsModule = 177,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>178</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olConversation = 178,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>179</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olSimpleItems = 179,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>180</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olOutspace = 180,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>181</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olMeetingForwardNotification = 181,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14, 
+		 /// SupportByLibrary Outlook 14
 		 /// </summary>
 		 /// <remarks>182</remarks>
-		 [SupportByLibrary("Outlook", 14)]
+		 [SupportByLibraryAttribute("Outlook", 14)]
 		 olConversationHeader = 182
 	}
 }

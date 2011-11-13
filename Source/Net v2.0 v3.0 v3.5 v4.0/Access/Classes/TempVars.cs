@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass TempVars SupportByLibrary Access, 12,14
+	/// CoClass TempVars SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TempVars : _TempVars, IEventBinding 
 	{

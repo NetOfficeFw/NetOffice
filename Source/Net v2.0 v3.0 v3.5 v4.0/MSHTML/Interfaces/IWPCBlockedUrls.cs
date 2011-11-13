@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IWPCBlockedUrls SupportByLibrary MSHTML, 4
+	/// Interface IWPCBlockedUrls SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IWPCBlockedUrls : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pdwCount">Int32 pdwCount</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCount(Int32 pdwCount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwCount);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="dwIdx">Int32 dwIdx</param>
 		/// <param name="pbstrUrl">string pbstrUrl</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetUrl(Int32 dwIdx, string pbstrUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwIdx, pbstrUrl);

@@ -4,94 +4,94 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14, 
+	 /// SupportByLibrary Word 14
 	 /// </summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlMarkerStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleCircle = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4115</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleDash = -4115,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleDiamond = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4118</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleDot = -4118,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleNone = -4142,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4147</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStylePicture = -4147,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStylePlus = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleSquare = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleStar = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleTriangle = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4168</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlMarkerStyleX = -4168
 	}
 }

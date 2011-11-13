@@ -88,7 +88,6 @@ namespace Example06
             // close excel and dispose reference
             excelApplication.Quit();
             excelApplication.Dispose();
-
         }
         
         #region Helper

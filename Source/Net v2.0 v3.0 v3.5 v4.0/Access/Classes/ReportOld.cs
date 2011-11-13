@@ -21,9 +21,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReportOld SupportByLibrary Access, 10,11,12,14
+	/// CoClass ReportOld SupportByLibraryAttribute Access, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReportOld : _Report, IEventBinding 
 	{

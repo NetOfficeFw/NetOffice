@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Chart SupportByLibrary Word, 14
+	/// DispatchInterface Chart SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Chart : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool HasTitle
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartTitle ChartTitle
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 DepthPercent
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Elevation
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 GapDepth
 		{
 			get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 HeightPercent
 		{
 			get
@@ -208,7 +208,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Perspective
 		{
 			get
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object RightAngleAxes
 		{
 			get
@@ -256,7 +256,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Rotation
 		{
 			get
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject get_ChartGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -318,7 +318,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject ChartGroups
 		{
 			get
@@ -334,7 +334,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 SubType
 		{
 			get
@@ -354,7 +354,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Type
 		{
 			get
@@ -374,7 +374,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Corners Corners
 		{
 			get
@@ -390,7 +390,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
 			get
@@ -410,7 +410,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool HasDataTable
 		{
 			get
@@ -430,7 +430,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.XlRowCol PlotBy
 		{
 			get
@@ -450,7 +450,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool HasLegend
 		{
 			get
@@ -470,7 +470,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Legend Legend
 		{
 			get
@@ -488,7 +488,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index1">optional object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object get_HasAxis(object index1, object index2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -510,7 +510,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Index1">optional object Index1</param>
 		/// <param name="Index2">optional object Index2</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void set_HasAxis(object index1, object index2, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -521,7 +521,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object HasAxis
 		{
 			get
@@ -549,7 +549,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Walls Walls
 		{
 			get
@@ -565,7 +565,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Floor Floor
 		{
 			get
@@ -581,7 +581,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.PlotArea PlotArea
 		{
 			get
@@ -597,7 +597,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool PlotVisibleOnly
 		{
 			get
@@ -617,7 +617,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartArea ChartArea
 		{
 			get
@@ -633,7 +633,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool AutoScaling
 		{
 			get
@@ -653,7 +653,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.DataTable DataTable
 		{
 			get
@@ -669,7 +669,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.XlBarShape BarShape
 		{
 			get
@@ -689,7 +689,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Walls SideWall
 		{
 			get
@@ -705,7 +705,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Walls BackWall
 		{
 			get
@@ -721,7 +721,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object ChartStyle
 		{
 			get
@@ -749,7 +749,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject PivotLayout
 		{
 			get
@@ -765,7 +765,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool HasPivotFields
 		{
 			get
@@ -785,7 +785,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowDataLabelsOverMaximum
 		{
 			get
@@ -805,7 +805,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartData ChartData
 		{
 			get
@@ -821,7 +821,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Shapes
 		{
 			get
@@ -837,7 +837,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -853,7 +853,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -868,7 +868,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup Area3DGroup
 		{
 			get
@@ -884,7 +884,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup Bar3DGroup
 		{
 			get
@@ -900,7 +900,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup Column3DGroup
 		{
 			get
@@ -916,7 +916,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup Line3DGroup
 		{
 			get
@@ -932,7 +932,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup Pie3DGroup
 		{
 			get
@@ -948,7 +948,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartGroup SurfaceGroup
 		{
 			get
@@ -964,7 +964,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowReportFilterFieldButtons
 		{
 			get
@@ -984,7 +984,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowLegendFieldButtons
 		{
 			get
@@ -1004,7 +1004,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowAxisFieldButtons
 		{
 			get
@@ -1024,7 +1024,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowValueFieldButtons
 		{
 			get
@@ -1044,7 +1044,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool ShowAllFieldButtons
 		{
 			get
@@ -1068,7 +1068,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject SeriesCollection(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1080,7 +1080,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject SeriesCollection()
 		{
 			object[] paramsArray = null;
@@ -1102,7 +1103,7 @@ namespace NetOffice.WordApi
 		/// <param name="ShowPercentage">optional object ShowPercentage</param>
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
@@ -1113,7 +1114,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1123,9 +1125,141 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		/// <param name="ShowPercentage">optional object ShowPercentage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Type">NetOffice.WordApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		/// <param name="ShowPercentage">optional object ShowPercentage</param>
+		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
+			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		/// <param name="TypeName">optional object TypeName</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartType, typeName);
@@ -1136,7 +1270,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartType);
@@ -1151,7 +1286,7 @@ namespace NetOffice.WordApi
 		/// <param name="ElementID">Int32 ElementID</param>
 		/// <param name="Arg1">Int32 Arg1</param>
 		/// <param name="Arg2">Int32 Arg2</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void GetChartElement(Int32 x, Int32 y, Int32 elementID, Int32 arg1, Int32 arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, elementID, arg1, arg2);
@@ -1163,7 +1298,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="PlotBy">optional object PlotBy</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SetSourceData(string source, object plotBy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, plotBy);
@@ -1174,7 +1309,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Source">string Source</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SetSourceData(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -1186,7 +1322,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Type">object Type</param>
 		/// <param name="AxisGroup">NetOffice.WordApi.Enums.XlAxisGroup AxisGroup</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Axes(object type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
@@ -1200,7 +1336,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Gallery">Int32 Gallery</param>
 		/// <param name="Format">optional object Format</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void AutoFormat(Int32 gallery, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gallery, format);
@@ -1211,7 +1347,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Gallery">Int32 Gallery</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void AutoFormat(Int32 gallery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gallery);
@@ -1222,7 +1359,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SetBackgroundPicture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1243,7 +1380,7 @@ namespace NetOffice.WordApi
 		/// <param name="CategoryTitle">optional object CategoryTitle</param>
 		/// <param name="ValueTitle">optional object ValueTitle</param>
 		/// <param name="ExtraTitle">optional object ExtraTitle</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle, object extraTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle, extraTitle);
@@ -1253,7 +1390,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ChartWizard()
 		{
 			object[] paramsArray = null;
@@ -1263,10 +1401,175 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="HasLegend">optional object HasLegend</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="HasLegend">optional object HasLegend</param>
+		/// <param name="Title">optional object Title</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="HasLegend">optional object HasLegend</param>
+		/// <param name="Title">optional object Title</param>
+		/// <param name="CategoryTitle">optional object CategoryTitle</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">optional object Source</param>
+		/// <param name="Gallery">optional object Gallery</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="PlotBy">optional object PlotBy</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="HasLegend">optional object HasLegend</param>
+		/// <param name="Title">optional object Title</param>
+		/// <param name="CategoryTitle">optional object CategoryTitle</param>
+		/// <param name="ValueTitle">optional object ValueTitle</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle);
+			Invoker.Method(this, "ChartWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="Appearance">NetOffice.WordApi.Enums.XlPictureAppearance Appearance</param>
 		/// <param name="Format">NetOffice.WordApi.Enums.XlCopyPictureFormat Format</param>
 		/// <param name="Size">NetOffice.WordApi.Enums.XlPictureAppearance Size</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void CopyPicture(NetOffice.WordApi.Enums.XlPictureAppearance appearance, NetOffice.WordApi.Enums.XlCopyPictureFormat format, NetOffice.WordApi.Enums.XlPictureAppearance size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
@@ -1277,7 +1580,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Paste(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1287,7 +1590,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Paste()
 		{
 			object[] paramsArray = null;
@@ -1300,7 +1604,7 @@ namespace NetOffice.WordApi
 		/// <param name="FileName">string FileName</param>
 		/// <param name="FilterName">optional object FilterName</param>
 		/// <param name="Interactive">optional object Interactive</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool Export(string fileName, object filterName, object interactive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName, interactive);
@@ -1312,7 +1616,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public bool Export(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1323,8 +1628,22 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="FilterName">optional object FilterName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public bool Export(string fileName, object filterName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName);
+			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
+			return (bool)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="Name">object Name</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SetDefaultChart(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -1335,7 +1654,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyChartTemplate(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1346,7 +1665,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SaveChartTemplate(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1356,7 +1675,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ClearToMatchStyle()
 		{
 			object[] paramsArray = null;
@@ -1368,7 +1687,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Layout">Int32 Layout</param>
 		/// <param name="ChartType">optional object ChartType</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyLayout(Int32 layout, object chartType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, chartType);
@@ -1379,7 +1698,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Layout">Int32 Layout</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void ApplyLayout(Int32 layout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout);
@@ -1389,7 +1709,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -1400,7 +1720,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Element">NetOffice.OfficeApi.Enums.MsoChartElementType Element</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void SetElement(NetOffice.OfficeApi.Enums.MsoChartElementType element)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
@@ -1411,7 +1731,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject AreaGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1423,7 +1743,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject AreaGroups()
 		{
 			object[] paramsArray = null;
@@ -1436,7 +1757,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject BarGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1448,7 +1769,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject BarGroups()
 		{
 			object[] paramsArray = null;
@@ -1461,7 +1783,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject ColumnGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1473,7 +1795,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject ColumnGroups()
 		{
 			object[] paramsArray = null;
@@ -1486,7 +1809,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject LineGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1498,7 +1821,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject LineGroups()
 		{
 			object[] paramsArray = null;
@@ -1511,7 +1835,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject PieGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1523,7 +1847,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject PieGroups()
 		{
 			object[] paramsArray = null;
@@ -1536,7 +1861,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject DoughnutGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1548,7 +1873,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject DoughnutGroups()
 		{
 			object[] paramsArray = null;
@@ -1561,7 +1887,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject RadarGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1573,7 +1899,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject RadarGroups()
 		{
 			object[] paramsArray = null;
@@ -1586,7 +1913,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject XYGroups(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1598,7 +1925,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject XYGroups()
 		{
 			object[] paramsArray = null;
@@ -1610,7 +1938,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -1631,7 +1959,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -1641,7 +1969,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -1651,8 +1980,20 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void Copy(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
+			Invoker.Method(this, "Copy", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
@@ -1671,7 +2012,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;

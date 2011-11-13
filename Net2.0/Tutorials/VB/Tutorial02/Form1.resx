@@ -121,7 +121,7 @@
     <value>In Tutorial01 you have seen how to use Dispose() to release an object and its created children.
 This Tutorial shows you how to use the method DisposeChildInstances() to release all children with one call.
 
-See chapter1 and chapter5  in technical documentation for further info.
+See chapter1 and chapter2  in technical documentation for further info.
 </value>
   </data>
 </root>

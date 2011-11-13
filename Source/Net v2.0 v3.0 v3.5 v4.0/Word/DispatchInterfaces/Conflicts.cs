@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Conflicts SupportByLibrary Word, 14
+	/// DispatchInterface Conflicts SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Conflicts : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Count
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Conflict this[Int32 index]
 		{
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void AcceptAll()
 		{
 			object[] paramsArray = null;
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void RejectAll()
 		{
 			object[] paramsArray = null;
@@ -180,7 +180,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

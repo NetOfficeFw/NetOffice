@@ -16,9 +16,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Views SupportByLibrary Outlook, 10,11,12,14
+	/// CoClass Views SupportByLibraryAttribute Outlook, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Views : _Views, IEventBinding 
 	{

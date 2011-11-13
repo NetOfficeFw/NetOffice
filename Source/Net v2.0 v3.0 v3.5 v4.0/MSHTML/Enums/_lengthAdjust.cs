@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4, 
+	 /// SupportByLibrary MSHTML 4
 	 /// </summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _lengthAdjust
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 LENGTHADJUST_UNKNOWN = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 LENGTHADJUST_SPACING = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 LENGTHADJUST_SPACINGANDGLYPHS = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 lengthAdjust_Max = 2147483647
 	}
 }

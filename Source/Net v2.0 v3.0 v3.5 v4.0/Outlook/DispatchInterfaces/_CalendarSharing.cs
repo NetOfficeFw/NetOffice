@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _CalendarSharing SupportByLibrary Outlook, 12,14
+	/// DispatchInterface _CalendarSharing SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CalendarSharing : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlCalendarDetail CalendarDetail
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public DateTime EndDate
 		{
 			get
@@ -179,7 +179,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MAPIFolder Folder
 		{
 			get
@@ -195,7 +195,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool IncludeAttachments
 		{
 			get
@@ -215,7 +215,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool IncludePrivateDetails
 		{
 			get
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool RestrictToWorkingHours
 		{
 			get
@@ -255,7 +255,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public DateTime StartDate
 		{
 			get
@@ -275,7 +275,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool IncludeWholeCalendar
 		{
 			get
@@ -299,7 +299,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public void SaveAsICal(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -310,7 +310,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="MailFormat">NetOffice.OutlookApi.Enums.OlCalendarMailFormat MailFormat</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.MailItem ForwardAsICal(NetOffice.OutlookApi.Enums.OlCalendarMailFormat mailFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mailFormat);

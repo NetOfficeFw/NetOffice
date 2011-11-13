@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14, 
+	 /// SupportByLibrary Outlook 12, 14
 	 /// </summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlAlign
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAlignLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAlignCenter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14, 
+		 /// SupportByLibrary Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Outlook", 12,14)]
+		 [SupportByLibraryAttribute("Outlook", 12,14)]
 		 olAlignRight = 2
 	}
 }

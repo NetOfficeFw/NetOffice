@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass QueryTable SupportByLibrary Excel, 9,10,11,12,14
+	/// CoClass QueryTable SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryTable : _QueryTable, IEventBinding 
 	{

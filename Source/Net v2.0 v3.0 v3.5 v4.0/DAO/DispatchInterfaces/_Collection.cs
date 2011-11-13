@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface _Collection SupportByLibrary DAO, 6,12
+	/// DispatchInterface _Collection SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Collection : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 Count
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -106,7 +106,10 @@ namespace NetOffice.DAOApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("DAO", 6,12)]
+		/// <summary>
+		/// SupportByLibraryAttribute DAO, 6,12
+		/// </summary>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

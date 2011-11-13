@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGNumberList SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGNumberList SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGNumberList : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 numberOfItems
 		{
 			get
@@ -99,7 +99,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clear()
 		{
 			object[] paramsArray = null;
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGNumber newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber initialize(LateBindingApi.MSHTMLApi.ISVGNumber newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);
@@ -123,7 +123,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber getItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -137,7 +137,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGNumber newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber insertItemBefore(LateBindingApi.MSHTMLApi.ISVGNumber newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -151,7 +151,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGNumber newItem</param>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber replaceItem(LateBindingApi.MSHTMLApi.ISVGNumber newItem, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem, index);
@@ -164,7 +164,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber removeItem(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -177,7 +177,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newItem">LateBindingApi.MSHTMLApi.ISVGNumber newItem</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber appendItem(LateBindingApi.MSHTMLApi.ISVGNumber newItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newItem);

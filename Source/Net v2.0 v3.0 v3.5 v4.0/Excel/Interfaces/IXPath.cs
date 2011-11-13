@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IXPath SupportByLibrary Excel, 11,12,14
+	/// Interface IXPath SupportByLibraryAttribute Excel, 11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 11,12,14)]
+	[SupportByLibraryAttribute("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXPath : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public string _Default
 		{
 			get
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public string Value
 		{
 			get
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlMap Map
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public bool Repeating
 		{
 			get
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="XPath">string XPath</param>
 		/// <param name="SelectionNamespace">optional object SelectionNamespace</param>
 		/// <param name="Repeating">optional object Repeating</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace, repeating);
@@ -203,7 +203,8 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="XPath">string XPath</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath);
@@ -214,7 +215,22 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
+		/// <param name="XPath">string XPath</param>
+		/// <param name="SelectionNamespace">optional object SelectionNamespace</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace);
+			object returnItem = Invoker.MethodReturn(this, "SetValue", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 Clear()
 		{
 			object[] paramsArray = null;

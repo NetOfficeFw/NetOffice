@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface ChSegments SupportByLibrary OWC10, 1
+	/// DispatchInterface ChSegments SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ChSegments : COMObject
+	public class ChSegments : COMObject ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -91,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChFormatMap Parent
 		{
 			get
@@ -108,7 +109,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.ChSegment this[Int32 index]
 		{
@@ -128,7 +129,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChSegment Add()
 		{
 			object[] paramsArray = null;
@@ -141,7 +142,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Delete(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -149,6 +150,28 @@ namespace NetOffice.OWC10Api
 		}
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			COMObject[] enumeratorObjects = new COMObject[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (COMObject item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

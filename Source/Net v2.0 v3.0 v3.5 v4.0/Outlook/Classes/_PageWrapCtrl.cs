@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass _PageWrapCtrl SupportByLibrary Outlook, 10
+	/// CoClass _PageWrapCtrl SupportByLibraryAttribute Outlook, 10
 	///</summary>
-	[SupportByLibrary("Outlook", 10)]
+	[SupportByLibraryAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _PageWrapCtrl : _DPageWrapCtrl, IEventBinding 
 	{

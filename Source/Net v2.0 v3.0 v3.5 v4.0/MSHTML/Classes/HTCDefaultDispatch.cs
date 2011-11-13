@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTCDefaultDispatch SupportByLibrary MSHTML, 4
+	/// CoClass HTCDefaultDispatch SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTCDefaultDispatch : DispHTCDefaultDispatch, IEventBinding 
 	{

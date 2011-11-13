@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ILicAgent SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface ILicAgent SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ILicAgent : COMObject
 	{
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="dwBPC">Int32 dwBPC</param>
 		/// <param name="dwMode">Int32 dwMode</param>
 		/// <param name="bstrLicSource">string bstrLicSource</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 Initialize(Int32 dwBPC, Int32 dwMode, string bstrLicSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwBPC, dwMode, bstrLicSource);
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetFirstName()
 		{
 			object[] paramsArray = null;
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetFirstName(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetLastName()
 		{
 			object[] paramsArray = null;
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetLastName(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetOrgName()
 		{
 			object[] paramsArray = null;
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetOrgName(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetEmail()
 		{
 			object[] paramsArray = null;
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetEmail(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetPhone()
 		{
 			object[] paramsArray = null;
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetPhone(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetAddress1()
 		{
 			object[] paramsArray = null;
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetAddress1(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCity()
 		{
 			object[] paramsArray = null;
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCity(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetState()
 		{
 			object[] paramsArray = null;
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetState(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCountryCode()
 		{
 			object[] paramsArray = null;
@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCountryCode(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCountryDesc()
 		{
 			object[] paramsArray = null;
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCountryDesc(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -313,7 +313,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetZip()
 		{
 			object[] paramsArray = null;
@@ -325,7 +325,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetZip(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -335,7 +335,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetIsoLanguage()
 		{
 			object[] paramsArray = null;
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwNewVal">Int32 dwNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetIsoLanguage(Int32 dwNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwNewVal);
@@ -357,7 +357,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetMSUpdate()
 		{
 			object[] paramsArray = null;
@@ -369,7 +369,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetMSUpdate(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -379,7 +379,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetMSOffer()
 		{
 			object[] paramsArray = null;
@@ -391,7 +391,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetMSOffer(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -401,7 +401,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetOtherOffer()
 		{
 			object[] paramsArray = null;
@@ -413,7 +413,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetOtherOffer(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetAddress2()
 		{
 			object[] paramsArray = null;
@@ -435,7 +435,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetAddress2(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -445,7 +445,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 CheckSystemClock()
 		{
 			object[] paramsArray = null;
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public DateTime GetExistingExpiryDate()
 		{
 			object[] paramsArray = null;
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public DateTime GetNewExpiryDate()
 		{
 			object[] paramsArray = null;
@@ -478,7 +478,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingFirstName()
 		{
 			object[] paramsArray = null;
@@ -490,7 +490,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingFirstName(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -500,7 +500,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingLastName()
 		{
 			object[] paramsArray = null;
@@ -512,7 +512,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingLastName(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -522,7 +522,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingPhone()
 		{
 			object[] paramsArray = null;
@@ -534,7 +534,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingPhone(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -544,7 +544,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingAddress1()
 		{
 			object[] paramsArray = null;
@@ -556,7 +556,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingAddress1(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -566,7 +566,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingAddress2()
 		{
 			object[] paramsArray = null;
@@ -578,7 +578,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingAddress2(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -588,7 +588,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingCity()
 		{
 			object[] paramsArray = null;
@@ -600,7 +600,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingCity(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -610,7 +610,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingState()
 		{
 			object[] paramsArray = null;
@@ -622,7 +622,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingState(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -632,7 +632,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingCountryCode()
 		{
 			object[] paramsArray = null;
@@ -644,7 +644,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingCountryCode(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -654,7 +654,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBillingZip()
 		{
 			object[] paramsArray = null;
@@ -666,7 +666,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetBillingZip(string bstrNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
@@ -677,7 +677,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bSave">Int32 bSave</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 SaveBillingInfo(Int32 bSave)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bSave);
@@ -689,7 +689,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 IsCCRenewalCountry(string bstrCountryCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCountryCode);
@@ -701,7 +701,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetVATLabel(string bstrCountryCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCountryCode);
@@ -712,7 +712,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public DateTime GetCCRenewalExpiryDate()
 		{
 			object[] paramsArray = null;
@@ -724,7 +724,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrVATNumber">string bstrVATNumber</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetVATNumber(string bstrVATNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrVATNumber);
@@ -735,7 +735,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrCCCode">string bstrCCCode</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCreditCardType(string bstrCCCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCCCode);
@@ -746,7 +746,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrCCNumber">string bstrCCNumber</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCreditCardNumber(string bstrCCNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCCNumber);
@@ -757,7 +757,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwCCYear">Int32 dwCCYear</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCreditCardExpiryYear(Int32 dwCCYear)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCCYear);
@@ -768,7 +768,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwCCMonth">Int32 dwCCMonth</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCreditCardExpiryMonth(Int32 dwCCMonth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCCMonth);
@@ -778,7 +778,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetCreditCardCount()
 		{
 			object[] paramsArray = null;
@@ -790,7 +790,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCreditCardCode(Int32 dwIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
@@ -802,7 +802,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCreditCardName(Int32 dwIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
@@ -813,7 +813,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetVATNumber()
 		{
 			object[] paramsArray = null;
@@ -824,7 +824,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCreditCardType()
 		{
 			object[] paramsArray = null;
@@ -835,7 +835,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCreditCardNumber()
 		{
 			object[] paramsArray = null;
@@ -846,7 +846,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetCreditCardExpiryYear()
 		{
 			object[] paramsArray = null;
@@ -857,7 +857,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetCreditCardExpiryMonth()
 		{
 			object[] paramsArray = null;
@@ -868,7 +868,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetDisconnectOption()
 		{
 			object[] paramsArray = null;
@@ -880,7 +880,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bNewVal">Int32 bNewVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetDisconnectOption(Int32 bNewVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bNewVal);
@@ -891,7 +891,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bReviseCustInfo">Int32 bReviseCustInfo</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessHandshakeRequest(Int32 bReviseCustInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bReviseCustInfo);
@@ -901,7 +901,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessNewLicenseRequest()
 		{
 			object[] paramsArray = null;
@@ -911,7 +911,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessReissueLicenseRequest()
 		{
 			object[] paramsArray = null;
@@ -921,7 +921,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessRetailRenewalLicenseRequest()
 		{
 			object[] paramsArray = null;
@@ -931,7 +931,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessReviseCustInfoRequest()
 		{
 			object[] paramsArray = null;
@@ -941,7 +941,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessCCRenewalPriceRequest()
 		{
 			object[] paramsArray = null;
@@ -951,7 +951,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessCCRenewalLicenseRequest()
 		{
 			object[] paramsArray = null;
@@ -961,7 +961,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetAsyncProcessReturnCode()
 		{
 			object[] paramsArray = null;
@@ -972,7 +972,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 IsUpgradeAvailable()
 		{
 			object[] paramsArray = null;
@@ -984,7 +984,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bWantUpgrade">Int32 bWantUpgrade</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void WantUpgrade(Int32 bWantUpgrade)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bWantUpgrade);
@@ -994,7 +994,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AsyncProcessDroppedLicenseRequest()
 		{
 			object[] paramsArray = null;
@@ -1004,7 +1004,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GenerateInstallationId()
 		{
 			object[] paramsArray = null;
@@ -1016,7 +1016,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrVal">string bstrVal</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 DepositConfirmationId(string bstrVal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrVal);
@@ -1028,7 +1028,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrCIDIID">string bstrCIDIID</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 VerifyCheckDigits(string bstrCIDIID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrCIDIID);
@@ -1039,7 +1039,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public DateTime GetCurrentExpiryDate()
 		{
 			object[] paramsArray = null;
@@ -1051,7 +1051,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bIsLicenseRequest">Int32 bIsLicenseRequest</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void CancelAsyncProcessRequest(Int32 bIsLicenseRequest)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bIsLicenseRequest);
@@ -1062,7 +1062,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetCurrencyDescription(Int32 dwCurrencyIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyIndex);
@@ -1073,7 +1073,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetPriceItemCount()
 		{
 			object[] paramsArray = null;
@@ -1085,7 +1085,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetPriceItemLabel(Int32 dwIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
@@ -1098,7 +1098,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetPriceItemValue(Int32 dwCurrencyIndex, Int32 dwIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyIndex, dwIndex);
@@ -1109,7 +1109,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetInvoiceText()
 		{
 			object[] paramsArray = null;
@@ -1120,7 +1120,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetBackendErrorMsg()
 		{
 			object[] paramsArray = null;
@@ -1131,7 +1131,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetCurrencyOption()
 		{
 			object[] paramsArray = null;
@@ -1143,7 +1143,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="dwCurrencyOption">Int32 dwCurrencyOption</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetCurrencyOption(Int32 dwCurrencyOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyOption);
@@ -1153,7 +1153,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string GetEndOfLifeHtmlText()
 		{
 			object[] paramsArray = null;
@@ -1164,7 +1164,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 DisplaySSLCert()
 		{
 			object[] paramsArray = null;

@@ -26,9 +26,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkCommandButton SupportByLibrary Outlook, 12,14
+	/// CoClass OlkCommandButton SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkCommandButton : _OlkCommandButton, IEventBinding 
 	{

@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdBaselineAlignment
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdBaselineAlignTop = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdBaselineAlignCenter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdBaselineAlignBaseline = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdBaselineAlignFarEast50 = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdBaselineAlignAuto = 4
 	}
 }

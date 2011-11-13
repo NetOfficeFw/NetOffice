@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface ViewsSingle SupportByLibrary MSProject, 12,14
+	/// DispatchInterface ViewsSingle SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewsSingle : Views
 	{
@@ -86,7 +86,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Filter">object Filter</param>
 		/// <param name="Group">object Group</param>
 		/// <param name="HighlightFilt">bool HighlightFilt</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ViewSingle Add(string name, LateBindingApi.MSProjectApi.Enums.PjViewScreen screen, bool showInMenu, object table, object filter, object group, bool highlightFilt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group, highlightFilt);

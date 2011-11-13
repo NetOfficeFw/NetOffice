@@ -10,15 +10,15 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[ComImport, Guid("000630A5-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _ViewsEvents
 	{
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
 		void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64071)]
 		void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 	}

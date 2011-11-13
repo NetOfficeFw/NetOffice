@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcPrintDuplex
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acPRDPSimplex = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acPRDPHorizontal = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acPRDPVertical = 3
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ScopeFolder SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface ScopeFolder SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScopeFolder : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string Name
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string Path
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public NetOffice.OfficeApi.ScopeFolders ScopeFolders
 		{
 			get
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void AddToSearchFolders()
 		{
 			object[] paramsArray = null;

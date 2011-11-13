@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface SeriesCollection SupportByLibrary Office, 12,14
+	/// Interface SeriesCollection SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public COMObject Application
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 Creator
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public NetOffice.OfficeApi.IMsoSeries get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="SeriesLabels">optional object SeriesLabels</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
@@ -174,7 +174,8 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
-		[SupportByLibrary("Office", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -187,9 +188,42 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.IMsoSeries newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoSeries.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoSeries;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.IMsoSeries newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoSeries.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoSeries;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
+		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">optional object Rowcol</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -209,7 +243,8 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		[SupportByLibrary("Office", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -228,8 +263,30 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">optional object Rowcol</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public object Extend(object source, object rowcol)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
+			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.IMsoSeries this[object index]
 		{
@@ -250,7 +307,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
 		/// <param name="NewSeries">optional object NewSeries</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace, newSeries);
@@ -270,7 +327,8 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
-		[SupportByLibrary("Office", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol);
@@ -289,7 +347,76 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
+		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels);
+			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
+		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels);
+			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
+		/// <param name="Rowcol">NetOffice.OfficeApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		/// <param name="Replace">optional object Replace</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace);
+			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.IMsoSeries NewSeries()
 		{
 			object[] paramsArray = null;
@@ -302,7 +429,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

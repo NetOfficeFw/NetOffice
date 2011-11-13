@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14, 
+	 /// SupportByLibrary Word 14
 	 /// </summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4115</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlDash = -4115,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlDashDot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlDashDotDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4118</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlDot = -4118,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4119</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlDouble = -4119,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlSlantDashDot = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlLineStyleNone = -4142
 	}
 }

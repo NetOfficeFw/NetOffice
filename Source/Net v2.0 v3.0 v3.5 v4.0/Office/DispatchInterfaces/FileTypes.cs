@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface FileTypes SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface FileTypes SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileTypes : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.Enums.MsoFileType this[Int32 index]
 		{
@@ -94,7 +94,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileType">NetOffice.OfficeApi.Enums.MsoFileType FileType</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Add(NetOffice.OfficeApi.Enums.MsoFileType fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileType);
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Remove(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -135,7 +135,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -30,9 +30,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Explorer SupportByLibrary Outlook, 9,10,11,12,14
+	/// CoClass Explorer SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Explorer : _Explorer, IEventBinding 
 	{

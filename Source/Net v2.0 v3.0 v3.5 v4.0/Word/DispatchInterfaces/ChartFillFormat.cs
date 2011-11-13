@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface ChartFillFormat SupportByLibrary Word, 14
+	/// DispatchInterface ChartFillFormat SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartFillFormat : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartColorFormat BackColor
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartColorFormat ForeColor
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Single GradientDegree
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
 		{
 			get
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 GradientVariant
 		{
 			get
@@ -168,7 +168,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
 		{
 			get
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
 		{
 			get
@@ -213,7 +213,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public string TextureName
 		{
 			get
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
 		{
 			get
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoFillType Type
 		{
 			get
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -294,7 +294,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -309,7 +309,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -331,7 +331,7 @@ namespace NetOffice.WordApi
 		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		/// <param name="Degree">Single Degree</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, degree);
@@ -343,7 +343,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant);
@@ -354,7 +354,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PresetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTexture);
@@ -364,7 +364,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Solid()
 		{
 			object[] paramsArray = null;
@@ -375,7 +375,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Pattern">NetOffice.OfficeApi.Enums.MsoPatternType Pattern</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pattern);
@@ -389,7 +389,7 @@ namespace NetOffice.WordApi
 		/// <param name="PictureFormat">optional object PictureFormat</param>
 		/// <param name="PictureStackUnit">optional object PictureStackUnit</param>
 		/// <param name="PicturePlacement">optional object PicturePlacement</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
@@ -399,7 +399,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void UserPicture()
 		{
 			object[] paramsArray = null;
@@ -409,8 +410,47 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="PictureFile">optional object PictureFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void UserPicture(object pictureFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile);
+			Invoker.Method(this, "UserPicture", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="PictureFile">optional object PictureFile</param>
+		/// <param name="PictureFormat">optional object PictureFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void UserPicture(object pictureFile, object pictureFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile, pictureFormat);
+			Invoker.Method(this, "UserPicture", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="PictureFile">optional object PictureFile</param>
+		/// <param name="PictureFormat">optional object PictureFormat</param>
+		/// <param name="PictureStackUnit">optional object PictureStackUnit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pictureFile, pictureFormat, pictureStackUnit);
+			Invoker.Method(this, "UserPicture", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="TextureFile">string TextureFile</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void UserTextured(string textureFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textureFile);
@@ -423,7 +463,7 @@ namespace NetOffice.WordApi
 		/// <param name="Style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="Variant">Int32 Variant</param>
 		/// <param name="PresetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, variant, presetGradientType);

@@ -12,9 +12,15 @@ Public Class Form1
         ' start outlook
         Dim outlookApplication = New Outlook.Application()
 
-        ' one simple call
-        outlookApplication.Session.SendAndReceive(False)
-
+        ' SendAndReceive is supported from Outlooks 2007 or higher
+        ' we check at runtime the feature is available
+        If outlookApplication.Session.EntityIsAvailable("SendAndReceive") Then
+            ' one simple call
+            outlookApplication.Session.SendAndReceive(False)
+        Else
+            MessageBox.Show(Me, "This version of MS-Outlook doesnt support SendAndReceive.", "Example04", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+       
         'close outlook and dispose
         outlookApplication.Quit()
         outlookApplication.Dispose()

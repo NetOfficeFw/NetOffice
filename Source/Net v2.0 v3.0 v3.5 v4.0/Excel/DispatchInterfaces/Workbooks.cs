@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Workbooks SupportByLibrary Excel, 9,10,11,12,14
+	/// DispatchInterface Workbooks SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Workbooks : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Workbook this[object index]
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Template">optional object Template</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook Add(object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template);
@@ -187,7 +187,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook Add()
 		{
 			object[] paramsArray = null;
@@ -199,7 +200,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -207,7 +208,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="UpdateLinks">optional object UpdateLinks</param>
@@ -222,7 +223,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Notify">optional object Notify</param>
 		/// <param name="Converter">optional object Converter</param>
 		/// <param name="AddToMru">optional object AddToMru</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
@@ -249,7 +250,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AddToMru">optional object AddToMru</param>
 		/// <param name="Local">optional object Local</param>
 		/// <param name="CorruptLoad">optional object CorruptLoad</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local, corruptLoad);
@@ -262,7 +263,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook Open(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -272,7 +274,254 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		/// <param name="Notify">optional object Notify</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		/// <param name="Notify">optional object Notify</param>
+		/// <param name="Converter">optional object Converter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		/// <param name="Notify">optional object Notify</param>
+		/// <param name="Converter">optional object Converter</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		/// <param name="Local">optional object Local</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru, local);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Origin">object Origin</param>
@@ -288,7 +537,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="OtherChar">optional object OtherChar</param>
 		/// <param name="FieldInfo">optional object FieldInfo</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
@@ -314,7 +563,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
@@ -329,7 +578,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
 		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
@@ -337,7 +587,197 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
+		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator);
+			Invoker.Method(this, "_OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Origin">object Origin</param>
@@ -355,7 +795,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
@@ -383,7 +823,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="TrailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		/// <param name="Local">optional object Local</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers, local);
@@ -398,10 +838,254 @@ namespace NetOffice.ExcelApi
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
 		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
+		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator);
+			Invoker.Method(this, "OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
+		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
+		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
+		/// <param name="TrailingMinusNumbers">optional object TrailingMinusNumbers</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
 			Invoker.Method(this, "OpenText", paramsArray);
 		}
 
@@ -421,7 +1105,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Notify">optional object Notify</param>
 		/// <param name="Converter">optional object Converter</param>
 		/// <param name="AddToMru">optional object AddToMru</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter, addToMru);
@@ -434,10 +1118,231 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook _Open(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		/// <param name="Notify">optional object Notify</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify);
+			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="UpdateLinks">optional object UpdateLinks</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="WriteResPassword">optional object WriteResPassword</param>
+		/// <param name="IgnoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
+		/// <param name="Origin">optional object Origin</param>
+		/// <param name="Delimiter">optional object Delimiter</param>
+		/// <param name="Editable">optional object Editable</param>
+		/// <param name="Notify">optional object Notify</param>
+		/// <param name="Converter">optional object Converter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook _Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, updateLinks, readOnly, format, password, writeResPassword, ignoreReadOnlyRecommended, origin, delimiter, editable, notify, converter);
 			object returnItem = Invoker.MethodReturn(this, "_Open", paramsArray);
 			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 			return newObject;
@@ -460,7 +1365,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="OtherChar">optional object OtherChar</param>
 		/// <param name="FieldInfo">optional object FieldInfo</param>
 		/// <param name="TextVisualLayout">optional object TextVisualLayout</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
@@ -475,10 +1380,175 @@ namespace NetOffice.ExcelApi
 		/// <param name="StartRow">object StartRow</param>
 		/// <param name="DataType">object DataType</param>
 		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
+			Invoker.Method(this, "__OpenText", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Origin">object Origin</param>
+		/// <param name="StartRow">object StartRow</param>
+		/// <param name="DataType">object DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
 			Invoker.Method(this, "__OpenText", paramsArray);
 		}
 
@@ -490,7 +1560,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CommandType">optional object CommandType</param>
 		/// <param name="BackgroundQuery">optional object BackgroundQuery</param>
 		/// <param name="ImportDataAs">optional object ImportDataAs</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText, commandType, backgroundQuery, importDataAs);
@@ -503,7 +1573,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -516,7 +1587,55 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		/// <param name="CommandText">optional object CommandText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText);
+			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="CommandText">optional object CommandText</param>
+		/// <param name="CommandType">optional object CommandType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText, commandType);
+			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="CommandText">optional object CommandText</param>
+		/// <param name="CommandType">optional object CommandType</param>
+		/// <param name="BackgroundQuery">optional object BackgroundQuery</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, commandText, commandType, backgroundQuery);
+			object returnItem = Invoker.MethodReturn(this, "OpenDatabase", paramsArray);
+			NetOffice.ExcelApi.Workbook newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void CheckOut(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -527,7 +1646,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool CanCheckOut(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -536,11 +1655,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10
+		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Stylesheets">optional object Stylesheets</param>
-		[SupportByLibrary("Excel", 10)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
@@ -555,7 +1674,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Stylesheets">optional object Stylesheets</param>
 		/// <param name="LoadOption">optional object LoadOption</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets, loadOption);
@@ -568,7 +1687,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -582,7 +1702,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
 		/// <param name="Stylesheets">optional object Stylesheets</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Workbook _OpenXML(string filename, object stylesheets)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, stylesheets);
@@ -595,7 +1715,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Workbook _OpenXML(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -608,7 +1729,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

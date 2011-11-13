@@ -28,9 +28,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkDateControl SupportByLibrary Outlook, 12,14
+	/// CoClass OlkDateControl SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkDateControl : _OlkDateControl, IEventBinding 
 	{

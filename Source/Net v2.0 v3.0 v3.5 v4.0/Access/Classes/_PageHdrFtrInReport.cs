@@ -22,9 +22,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass _PageHdrFtrInReport SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass _PageHdrFtrInReport SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _PageHdrFtrInReport : _Section, IEventBinding 
 	{

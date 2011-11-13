@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Window SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Window SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Window : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Pane ActivePane
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Document
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Panes Panes
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Selection Selection
 		{
 			get
@@ -187,7 +187,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Left
 		{
 			get
@@ -207,7 +207,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Top
 		{
 			get
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Width
 		{
 			get
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Height
 		{
 			get
@@ -267,7 +267,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool Split
 		{
 			get
@@ -287,7 +287,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 SplitVertical
 		{
 			get
@@ -307,7 +307,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string Caption
 		{
 			get
@@ -327,7 +327,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdWindowState WindowState
 		{
 			get
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayRulers
 		{
 			get
@@ -367,7 +367,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayVerticalRuler
 		{
 			get
@@ -387,7 +387,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.View View
 		{
 			get
@@ -403,7 +403,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdWindowType Type
 		{
 			get
@@ -418,7 +418,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Window Next
 		{
 			get
@@ -434,7 +434,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Window Previous
 		{
 			get
@@ -450,7 +450,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 WindowNumber
 		{
 			get
@@ -465,7 +465,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayVerticalScrollBar
 		{
 			get
@@ -485,7 +485,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayHorizontalScrollBar
 		{
 			get
@@ -505,7 +505,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single StyleAreaWidth
 		{
 			get
@@ -525,7 +525,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayScreenTips
 		{
 			get
@@ -545,7 +545,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 HorizontalPercentScrolled
 		{
 			get
@@ -565,7 +565,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 VerticalPercentScrolled
 		{
 			get
@@ -585,7 +585,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DocumentMap
 		{
 			get
@@ -605,7 +605,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool Active
 		{
 			get
@@ -620,7 +620,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 DocumentMapPercentWidth
 		{
 			get
@@ -640,7 +640,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -655,7 +655,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdIMEMode IMEMode
 		{
 			get
@@ -675,7 +675,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 UsableWidth
 		{
 			get
@@ -690,7 +690,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 UsableHeight
 		{
 			get
@@ -705,7 +705,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool EnvelopeVisible
 		{
 			get
@@ -725,7 +725,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayRightRuler
 		{
 			get
@@ -745,7 +745,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisplayLeftScrollBar
 		{
 			get
@@ -765,7 +765,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -785,7 +785,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public bool Thumbnails
 		{
 			get
@@ -805,7 +805,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Enums.WdShowSourceDocuments ShowSourceDocuments
 		{
 			get
@@ -828,7 +828,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -840,7 +840,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="SaveChanges">optional object SaveChanges</param>
 		/// <param name="RouteDocument">optional object RouteDocument</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Close(object saveChanges, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, routeDocument);
@@ -850,10 +850,23 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Close", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Close(object saveChanges)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
 			Invoker.Method(this, "Close", paramsArray);
 		}
 
@@ -864,7 +877,7 @@ namespace NetOffice.WordApi
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -874,7 +887,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void LargeScroll()
 		{
 			object[] paramsArray = null;
@@ -885,10 +899,49 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Down">optional object Down</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void LargeScroll(object down)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void LargeScroll(object down, object up)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void LargeScroll(object down, object up, object toRight)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
+			Invoker.Method(this, "LargeScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
 		/// <param name="Up">optional object Up</param>
 		/// <param name="ToRight">optional object ToRight</param>
 		/// <param name="ToLeft">optional object ToLeft</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -898,7 +951,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SmallScroll()
 		{
 			object[] paramsArray = null;
@@ -908,7 +962,46 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Down">optional object Down</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SmallScroll(object down)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down);
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SmallScroll(object down, object up)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Down">optional object Down</param>
+		/// <param name="Up">optional object Up</param>
+		/// <param name="ToRight">optional object ToRight</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SmallScroll(object down, object up, object toRight)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
+			Invoker.Method(this, "SmallScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Window NewWindow()
 		{
 			object[] paramsArray = null;
@@ -934,7 +1027,7 @@ namespace NetOffice.WordApi
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
 		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
@@ -944,7 +1037,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOutOld()
 		{
 			object[] paramsArray = null;
@@ -954,9 +1048,243 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
+			Invoker.Method(this, "PrintOutOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Down">optional object Down</param>
 		/// <param name="Up">optional object Up</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PageScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
@@ -966,7 +1294,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PageScroll()
 		{
 			object[] paramsArray = null;
@@ -976,7 +1305,19 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Down">optional object Down</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PageScroll(object down)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(down);
+			Invoker.Method(this, "PageScroll", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SetFocus()
 		{
 			object[] paramsArray = null;
@@ -988,7 +1329,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject RangeFromPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -1002,7 +1343,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="obj">object obj</param>
 		/// <param name="Start">optional object Start</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ScrollIntoView(object obj, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj, start);
@@ -1013,7 +1354,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="obj">object obj</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ScrollIntoView(object obj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj);
@@ -1028,7 +1370,7 @@ namespace NetOffice.WordApi
 		/// <param name="ScreenPixelsWidth">Int32 ScreenPixelsWidth</param>
 		/// <param name="ScreenPixelsHeight">Int32 ScreenPixelsHeight</param>
 		/// <param name="obj">object obj</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void GetPoint(Int32 screenPixelsLeft, Int32 screenPixelsTop, Int32 screenPixelsWidth, Int32 screenPixelsHeight, object obj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(screenPixelsLeft, screenPixelsTop, screenPixelsWidth, screenPixelsHeight, obj);
@@ -1056,7 +1398,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
@@ -1066,10 +1408,351 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth);
 			Invoker.Method(this, "PrintOut", paramsArray);
 		}
 
@@ -1094,7 +1777,7 @@ namespace NetOffice.WordApi
 		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
 		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="PrintZoomPaperHeight">optional object PrintZoomPaperHeight</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
@@ -1104,7 +1787,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -1112,9 +1796,349 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Background">optional object Background</param>
+		/// <param name="Append">optional object Append</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="OutputFileName">optional object OutputFileName</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Item">optional object Item</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Pages">optional object Pages</param>
+		/// <param name="PageType">optional object PageType</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		/// <param name="ActivePrinterMacGX">optional object ActivePrinterMacGX</param>
+		/// <param name="ManualDuplexPrint">optional object ManualDuplexPrint</param>
+		/// <param name="PrintZoomColumn">optional object PrintZoomColumn</param>
+		/// <param name="PrintZoomRow">optional object PrintZoomRow</param>
+		/// <param name="PrintZoomPaperWidth">optional object PrintZoomPaperWidth</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void ToggleShowAllReviewers()
 		{
 			object[] paramsArray = null;
@@ -1124,7 +2148,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void ToggleRibbon()
 		{
 			object[] paramsArray = null;

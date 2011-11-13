@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Windows SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Windows SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Windows : COMObject
+	public class Windows : COMObject ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -92,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -108,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Window ActiveWindow
 		{
 			get
@@ -124,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -140,7 +141,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Window this[object index]
 		{
@@ -158,6 +159,28 @@ namespace LateBindingApi.MSProjectApi
 		#region Methods
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			COMObject[] enumeratorObjects = new COMObject[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (COMObject item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

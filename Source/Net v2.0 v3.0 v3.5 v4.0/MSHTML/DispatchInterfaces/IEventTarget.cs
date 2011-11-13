@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IEventTarget SupportByLibrary MSHTML, 4
+	/// DispatchInterface IEventTarget SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IEventTarget : COMObject
 	{
@@ -82,7 +82,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void addEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void removeEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="evt">LateBindingApi.MSHTMLApi.IDOMEvent evt</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool dispatchEvent(LateBindingApi.MSHTMLApi.IDOMEvent evt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(evt);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispCanvasRenderingContext2D SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispCanvasRenderingContext2D SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispCanvasRenderingContext2D : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLCanvasElement canvas
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single globalAlpha
 		{
 			get
@@ -112,7 +112,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string globalCompositeOperation
 		{
 			get
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object fillStyle
 		{
 			get
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object strokeStyle
 		{
 			get
@@ -188,7 +188,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string lineCap
 		{
 			get
@@ -208,7 +208,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string lineJoin
 		{
 			get
@@ -228,7 +228,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single lineWidth
 		{
 			get
@@ -248,7 +248,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single miterLimit
 		{
 			get
@@ -268,7 +268,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single shadowBlur
 		{
 			get
@@ -288,7 +288,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string shadowColor
 		{
 			get
@@ -308,7 +308,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single shadowOffsetX
 		{
 			get
@@ -328,7 +328,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single shadowOffsetY
 		{
 			get
@@ -348,7 +348,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string font
 		{
 			get
@@ -368,7 +368,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string textAlign
 		{
 			get
@@ -388,7 +388,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string textBaseline
 		{
 			get
@@ -411,7 +411,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void restore()
 		{
 			object[] paramsArray = null;
@@ -421,7 +421,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void save()
 		{
 			object[] paramsArray = null;
@@ -432,7 +432,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="angle">Single angle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void rotate(Single angle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle);
@@ -444,7 +444,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void scale(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -460,7 +460,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="m22">Single m22</param>
 		/// <param name="dx">Single dx</param>
 		/// <param name="dy">Single dy</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setTransform(Single m11, Single m12, Single m21, Single m22, Single dx, Single dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(m11, m12, m21, m22, dx, dy);
@@ -476,7 +476,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="m22">Single m22</param>
 		/// <param name="dx">Single dx</param>
 		/// <param name="dy">Single dy</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void transform(Single m11, Single m12, Single m21, Single m22, Single dx, Single dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(m11, m12, m21, m22, dx, dy);
@@ -488,7 +488,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void translate(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -502,7 +502,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="y0">Single y0</param>
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasGradient createLinearGradient(Single x0, Single y0, Single x1, Single y1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x0, y0, x1, y1);
@@ -520,7 +520,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="x1">Single x1</param>
 		/// <param name="y1">Single y1</param>
 		/// <param name="r1">Single r1</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasGradient createRadialGradient(Single x0, Single y0, Single r0, Single x1, Single y1, Single r1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x0, y0, r0, x1, y1, r1);
@@ -534,7 +534,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="Image">object Image</param>
 		/// <param name="repetition">object repetition</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasPattern createPattern(object image, object repetition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(image, repetition);
@@ -550,7 +550,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="y">Single y</param>
 		/// <param name="w">Single w</param>
 		/// <param name="h">Single h</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clearRect(Single x, Single y, Single w, Single h)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, w, h);
@@ -564,7 +564,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="y">Single y</param>
 		/// <param name="w">Single w</param>
 		/// <param name="h">Single h</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void fillRect(Single x, Single y, Single w, Single h)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, w, h);
@@ -578,7 +578,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="y">Single y</param>
 		/// <param name="w">Single w</param>
 		/// <param name="h">Single h</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void strokeRect(Single x, Single y, Single w, Single h)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, w, h);
@@ -594,7 +594,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="startAngle">Single startAngle</param>
 		/// <param name="endAngle">Single endAngle</param>
 		/// <param name="anticlockwise">Int32 anticlockwise</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void arc(Single x, Single y, Single radius, Single startAngle, Single endAngle, Int32 anticlockwise)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, radius, startAngle, endAngle, anticlockwise);
@@ -609,7 +609,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="x2">Single x2</param>
 		/// <param name="y2">Single y2</param>
 		/// <param name="radius">Single radius</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void arcTo(Single x1, Single y1, Single x2, Single y2, Single radius)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x1, y1, x2, y2, radius);
@@ -619,7 +619,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void beginPath()
 		{
 			object[] paramsArray = null;
@@ -635,7 +635,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="cp2y">Single cp2y</param>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void bezierCurveTo(Single cp1x, Single cp1y, Single cp2x, Single cp2y, Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cp1x, cp1y, cp2x, cp2y, x, y);
@@ -645,7 +645,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clip()
 		{
 			object[] paramsArray = null;
@@ -655,7 +655,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void closePath()
 		{
 			object[] paramsArray = null;
@@ -665,7 +665,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void fill()
 		{
 			object[] paramsArray = null;
@@ -677,7 +677,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void lineTo(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -689,7 +689,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void moveTo(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -703,7 +703,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="cpy">Single cpy</param>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void quadraticCurveTo(Single cpx, Single cpy, Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cpx, cpy, x, y);
@@ -717,7 +717,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="y">Single y</param>
 		/// <param name="w">Single w</param>
 		/// <param name="h">Single h</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void rect(Single x, Single y, Single w, Single h)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, w, h);
@@ -727,7 +727,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void stroke()
 		{
 			object[] paramsArray = null;
@@ -739,7 +739,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isPointInPath(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -754,7 +754,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
 		/// <param name="maxWidth">object maxWidth</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void fillText(string text, Single x, Single y, object maxWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, x, y, maxWidth);
@@ -765,7 +765,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="text">string text</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasTextMetrics measureText(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -781,7 +781,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
 		/// <param name="maxWidth">object maxWidth</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void strokeText(string text, Single x, Single y, object maxWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, x, y, maxWidth);
@@ -800,7 +800,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="a6">object a6</param>
 		/// <param name="a7">object a7</param>
 		/// <param name="a8">object a8</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void drawImage(object pSrc, object a1, object a2, object a3, object a4, object a5, object a6, object a7, object a8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pSrc, a1, a2, a3, a4, a5, a6, a7, a8);
@@ -812,7 +812,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="a1">object a1</param>
 		/// <param name="a2">object a2</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasImageData createImageData(object a1, object a2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(a1, a2);
@@ -828,7 +828,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="sy">Single sy</param>
 		/// <param name="sw">Single sw</param>
 		/// <param name="sh">Single sh</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ICanvasImageData getImageData(Single sx, Single sy, Single sw, Single sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sx, sy, sw, sh);
@@ -847,7 +847,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dirtyY">object dirtyY</param>
 		/// <param name="dirtyWidth">object dirtyWidth</param>
 		/// <param name="dirtyHeight">object dirtyHeight</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void putImageData(LateBindingApi.MSHTMLApi.ICanvasImageData imagedata, Single dx, Single dy, object dirtyX, object dirtyY, object dirtyWidth, object dirtyHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);

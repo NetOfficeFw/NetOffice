@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _FormatCondition SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _FormatCondition SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _FormatCondition : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 ForeColor
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 BackColor
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool FontBold
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool FontItalic
 		{
 			get
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool FontUnderline
 		{
 			get
@@ -176,7 +176,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool Enabled
 		{
 			get
@@ -196,7 +196,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcFormatConditionType Type
 		{
 			get
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator
 		{
 			get
@@ -226,7 +226,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Expression1
 		{
 			get
@@ -241,7 +241,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Expression2
 		{
 			get
@@ -256,7 +256,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcFormatBarLimits ShortestBarLimit
 		{
 			get
@@ -276,7 +276,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string ShortestBarValue
 		{
 			get
@@ -296,7 +296,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.Enums.AcFormatBarLimits LongestBarLimit
 		{
 			get
@@ -316,7 +316,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string LongestBarValue
 		{
 			get
@@ -336,7 +336,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public bool ShowBarOnly
 		{
 			get
@@ -363,7 +363,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
 		/// <param name="Expression1">optional object Expression1</param>
 		/// <param name="Expression2">optional object Expression2</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
@@ -375,7 +375,8 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
 		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
@@ -385,7 +386,21 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		/// <param name="Type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <param name="Operator">NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator</param>
+		/// <param name="Expression1">optional object Expression1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		public void Modify(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1);
+			Invoker.Method(this, "Modify", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -396,7 +411,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

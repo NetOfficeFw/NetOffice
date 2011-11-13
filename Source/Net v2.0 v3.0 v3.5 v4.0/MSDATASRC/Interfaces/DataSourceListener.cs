@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
-	/// Interface DataSourceListener SupportByLibrary MSDATASRC, 1
+	/// Interface DataSourceListener SupportByLibraryAttribute MSDATASRC, 1
 	///</summary>
-	[SupportByLibrary("MSDATASRC", 1)]
+	[SupportByLibraryAttribute("MSDATASRC", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSourceListener : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.MSDATASRCApi
 		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
-		[SupportByLibrary("MSDATASRC", 1)]
+		[SupportByLibraryAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberChanged(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
@@ -91,7 +91,7 @@ namespace NetOffice.MSDATASRCApi
 		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
-		[SupportByLibrary("MSDATASRC", 1)]
+		[SupportByLibraryAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberAdded(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
@@ -103,7 +103,7 @@ namespace NetOffice.MSDATASRCApi
 		/// SupportByLibrary MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
-		[SupportByLibrary("MSDATASRC", 1)]
+		[SupportByLibraryAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberRemoved(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);

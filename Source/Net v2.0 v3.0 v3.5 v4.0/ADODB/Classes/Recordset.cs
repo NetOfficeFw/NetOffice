@@ -25,9 +25,9 @@ namespace NetOffice.ADODBApi
 	#endregion
 
 	///<summary>
-	/// CoClass Recordset SupportByLibrary ADODB, 2.1,2.5
+	/// CoClass Recordset SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Recordset : _Recordset, IEventBinding 
 	{

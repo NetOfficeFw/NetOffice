@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// Interface ADOStreamConstruction SupportByLibrary ADODB, 2.5
+	/// Interface ADOStreamConstruction SupportByLibraryAttribute ADODB, 2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ADOStreamConstruction : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public COMObject Stream
 		{
 			get

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLTableSection2 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLTableSection2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLTableSection2 : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="indexFrom">Int32 indexFrom</param>
 		/// <param name="indexTo">Int32 indexTo</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject moveRow(Int32 indexFrom, Int32 indexTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(indexFrom, indexTo);

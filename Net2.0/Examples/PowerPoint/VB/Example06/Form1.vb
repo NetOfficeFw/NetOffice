@@ -24,7 +24,12 @@ Public Class Form1
 
         ' start powerpoint and turn off msg boxes
         Dim powerApplication As New PowerPoint.Application()
-        powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone
+        powerApplication.Visible = MsoTriState.msoTrue
+
+        ' PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set
+        If (powerApplication.EntityIsAvailable("DisplayAlerts")) Then
+            powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone
+        End If
 
         ' we register some events. note: the event trigger was called from power point, means an other Thread
         ' remove the Quit() call below and check out more events if you want

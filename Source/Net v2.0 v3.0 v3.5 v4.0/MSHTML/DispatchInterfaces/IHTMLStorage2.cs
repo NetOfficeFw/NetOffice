@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLStorage2 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLStorage2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLStorage2 : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		/// <param name="bstrValue">string bstrValue</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setItem(string bstrKey, string bstrValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrKey, bstrValue);

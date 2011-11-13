@@ -35,9 +35,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass WebBrowserControl SupportByLibrary Access, 14
+	/// CoClass WebBrowserControl SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class WebBrowserControl : _WebBrowserControl, IEventBinding 
 	{

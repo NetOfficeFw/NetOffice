@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEObject SupportByLibrary Excel, 9,10,11,12,14
+	/// CoClass OLEObject SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEObject : _OLEObject, IEventBinding 
 	{

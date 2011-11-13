@@ -72,9 +72,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass FormOldV10 SupportByLibrary Access, 12,14
+	/// CoClass FormOldV10 SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FormOldV10 : _Form2, IEventBinding 
 	{

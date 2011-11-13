@@ -96,7 +96,7 @@ Public Class Form1
         ' save the document
         Dim fileExtension As String = GetDefaultExtension(wordApplication)
         Dim documentFile As String = String.Format("{0}\Example03{1}", Application.StartupPath, fileExtension)
-        newDocument.SaveAs(documentFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()

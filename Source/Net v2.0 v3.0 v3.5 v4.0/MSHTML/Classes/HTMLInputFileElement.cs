@@ -82,9 +82,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLInputFileElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLInputFileElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLInputFileElement : DispIHTMLInputFileElement, IEventBinding 
 	{

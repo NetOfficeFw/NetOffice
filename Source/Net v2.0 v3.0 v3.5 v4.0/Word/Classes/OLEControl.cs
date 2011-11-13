@@ -16,9 +16,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass OLEControl SupportByLibrary Word, 9,10,11,12,14
+	/// CoClass OLEControl SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : _OLEControl, IEventBinding 
 	{

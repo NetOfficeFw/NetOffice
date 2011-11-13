@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IDocumentInspector SupportByLibrary Office, 12,14
+	/// Interface IDocumentInspector SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDocumentInspector : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Desc">string Desc</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 GetInfo(string name, string desc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, desc);
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Result">string Result</param>
 		/// <param name="Action">string Action</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 Inspect(object doc, NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, string result, string action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, status, result, action);
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Hwnd">Int32 Hwnd</param>
 		/// <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="Result">string Result</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 Fix(object doc, Int32 hwnd, NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, string result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, hwnd, status, result);

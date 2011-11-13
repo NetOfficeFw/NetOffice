@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass AllFunctions SupportByLibrary Access, 10,11,12,14
+	/// CoClass AllFunctions SupportByLibraryAttribute Access, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AllFunctions : AllObjects, IEventBinding 
 	{

@@ -27,9 +27,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass StatusBar SupportByLibrary MSComctlLib, 6
+	/// CoClass StatusBar SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StatusBar : IStatusBar, IEventBinding 
 	{

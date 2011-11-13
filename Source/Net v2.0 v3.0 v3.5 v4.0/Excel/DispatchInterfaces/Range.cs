@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Range SupportByLibrary Excel, 9,10,11,12,14
+	/// DispatchInterface Range SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Range : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AddIndent
 		{
 			get
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ReferenceStyle">NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="External">optional object External</param>
 		/// <param name="RelativeTo">optional object RelativeTo</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowAbsolute">object RowAbsolute</param>
 		/// <param name="ColumnAbsolute">object ColumnAbsolute</param>
 		/// <param name="ReferenceStyle">NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ReferenceStyle">NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="External">optional object External</param>
 		/// <param name="RelativeTo">optional object RelativeTo</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -204,7 +204,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="RowAbsolute">object RowAbsolute</param>
 		/// <param name="ColumnAbsolute">object ColumnAbsolute</param>
 		/// <param name="ReferenceStyle">NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Areas Areas
 		{
 			get
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Borders Borders
 		{
 			get
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Cells
 		{
 			get
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Characters Characters
 		{
 			get
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Column
 		{
 			get
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Columns
 		{
 			get
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ColumnWidth
 		{
 			get
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -369,7 +369,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range CurrentArray
 		{
 			get
@@ -385,7 +385,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range CurrentRegion
 		{
 			get
@@ -403,7 +403,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowIndex">optional object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get__Default(object rowIndex, object columnIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
@@ -418,7 +418,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowIndex">optional object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void set__Default(object rowIndex, object columnIndex, NetOffice.ExcelApi.Range value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowIndex, columnIndex);
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range _Default
 		{
 			get
@@ -450,7 +450,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Dependents
 		{
 			get
@@ -466,7 +466,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range DirectDependents
 		{
 			get
@@ -482,7 +482,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range DirectPrecedents
 		{
 			get
@@ -499,7 +499,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Direction">NetOffice.ExcelApi.Enums.XlDirection Direction</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get_End(NetOffice.ExcelApi.Enums.XlDirection direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction);
@@ -512,7 +512,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range EntireColumn
 		{
 			get
@@ -528,7 +528,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range EntireRow
 		{
 			get
@@ -544,7 +544,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Font Font
 		{
 			get
@@ -560,7 +560,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Formula
 		{
 			get
@@ -588,7 +588,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FormulaArray
 		{
 			get
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlFormulaLabel FormulaLabel
 		{
 			get
@@ -636,7 +636,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FormulaHidden
 		{
 			get
@@ -664,7 +664,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FormulaLocal
 		{
 			get
@@ -692,7 +692,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FormulaR1C1
 		{
 			get
@@ -720,7 +720,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FormulaR1C1Local
 		{
 			get
@@ -748,7 +748,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object HasArray
 		{
 			get
@@ -771,7 +771,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object HasFormula
 		{
 			get
@@ -794,7 +794,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Height
 		{
 			get
@@ -817,7 +817,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Hidden
 		{
 			get
@@ -845,7 +845,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object HorizontalAlignment
 		{
 			get
@@ -873,7 +873,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object IndentLevel
 		{
 			get
@@ -901,7 +901,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Interior Interior
 		{
 			get
@@ -919,7 +919,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowIndex">object RowIndex</param>
 		/// <param name="ColumnIndex">optional object ColumnIndex</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Range this[object rowIndex, object columnIndex]
 		{
@@ -936,7 +936,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Left
 		{
 			get
@@ -959,7 +959,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 ListHeaderRows
 		{
 			get
@@ -974,7 +974,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlLocationInTable LocationInTable
 		{
 			get
@@ -989,7 +989,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Locked
 		{
 			get
@@ -1017,7 +1017,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range MergeArea
 		{
 			get
@@ -1033,7 +1033,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object MergeCells
 		{
 			get
@@ -1061,7 +1061,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Name
 		{
 			get
@@ -1089,7 +1089,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Next
 		{
 			get
@@ -1105,7 +1105,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object NumberFormat
 		{
 			get
@@ -1133,7 +1133,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object NumberFormatLocal
 		{
 			get
@@ -1163,7 +1163,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowOffset">optional object RowOffset</param>
 		/// <param name="ColumnOffset">optional object ColumnOffset</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get_Offset(object rowOffset, object columnOffset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset, columnOffset);
@@ -1176,7 +1176,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Offset
 		{
 			get
@@ -1192,7 +1192,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Orientation
 		{
 			get
@@ -1220,7 +1220,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object OutlineLevel
 		{
 			get
@@ -1248,7 +1248,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 PageBreak
 		{
 			get
@@ -1268,7 +1268,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotField PivotField
 		{
 			get
@@ -1284,7 +1284,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotItem PivotItem
 		{
 			get
@@ -1300,7 +1300,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable PivotTable
 		{
 			get
@@ -1316,7 +1316,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Precedents
 		{
 			get
@@ -1332,7 +1332,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PrefixCharacter
 		{
 			get
@@ -1355,7 +1355,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Previous
 		{
 			get
@@ -1371,7 +1371,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.QueryTable QueryTable
 		{
 			get
@@ -1389,7 +1389,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Cell1">object Cell1</param>
 		/// <param name="Cell2">optional object Cell2</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1, cell2);
@@ -1403,7 +1403,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Cell1">object Cell1</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get_Range(object cell1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1);
@@ -1418,7 +1418,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowSize">optional object RowSize</param>
 		/// <param name="ColumnSize">optional object ColumnSize</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range get_Resize(object rowSize, object columnSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowSize, columnSize);
@@ -1431,7 +1431,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Resize
 		{
 			get
@@ -1447,7 +1447,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Row
 		{
 			get
@@ -1462,7 +1462,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object RowHeight
 		{
 			get
@@ -1490,7 +1490,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Rows
 		{
 			get
@@ -1506,7 +1506,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowDetail
 		{
 			get
@@ -1534,7 +1534,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShrinkToFit
 		{
 			get
@@ -1562,7 +1562,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.SoundNote SoundNote
 		{
 			get
@@ -1578,7 +1578,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Style
 		{
 			get
@@ -1606,7 +1606,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Summary
 		{
 			get
@@ -1629,7 +1629,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Text
 		{
 			get
@@ -1652,7 +1652,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Top
 		{
 			get
@@ -1675,7 +1675,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object UseStandardHeight
 		{
 			get
@@ -1703,7 +1703,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object UseStandardWidth
 		{
 			get
@@ -1731,7 +1731,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Validation Validation
 		{
 			get
@@ -1747,7 +1747,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Value
 		{
 			get
@@ -1776,7 +1776,7 @@ namespace NetOffice.ExcelApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="RangeValueDataType">optional object RangeValueDataType</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object get_Value(object rangeValueDataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
@@ -1797,7 +1797,7 @@ namespace NetOffice.ExcelApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="RangeValueDataType">optional object RangeValueDataType</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void set_Value(object rangeValueDataType, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
@@ -1808,7 +1808,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Value2
 		{
 			get
@@ -1836,7 +1836,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object VerticalAlignment
 		{
 			get
@@ -1864,7 +1864,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Width
 		{
 			get
@@ -1887,7 +1887,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Worksheet Worksheet
 		{
 			get
@@ -1903,7 +1903,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object WrapText
 		{
 			get
@@ -1931,7 +1931,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Comment Comment
 		{
 			get
@@ -1947,7 +1947,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Phonetic Phonetic
 		{
 			get
@@ -1963,7 +1963,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.FormatConditions FormatConditions
 		{
 			get
@@ -1979,7 +1979,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 ReadingOrder
 		{
 			get
@@ -1999,7 +1999,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Hyperlinks Hyperlinks
 		{
 			get
@@ -2015,7 +2015,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Phonetics Phonetics
 		{
 			get
@@ -2031,7 +2031,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string ID
 		{
 			get
@@ -2051,7 +2051,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotCell PivotCell
 		{
 			get
@@ -2067,7 +2067,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Errors Errors
 		{
 			get
@@ -2083,7 +2083,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.SmartTags SmartTags
 		{
 			get
@@ -2099,7 +2099,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool AllowEdit
 		{
 			get
@@ -2114,7 +2114,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.ListObject ListObject
 		{
 			get
@@ -2130,7 +2130,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XPath XPath
 		{
 			get
@@ -2146,7 +2146,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Actions ServerActions
 		{
 			get
@@ -2162,7 +2162,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public string MDX
 		{
 			get
@@ -2177,7 +2177,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public object CountLarge
 		{
 			get
@@ -2200,7 +2200,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SparklineGroups SparklineGroups
 		{
 			get
@@ -2216,7 +2216,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.DisplayFormat DisplayFormat
 		{
 			get
@@ -2235,7 +2235,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Activate()
 		{
 			object[] paramsArray = null;
@@ -2258,7 +2258,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="CriteriaRange">optional object CriteriaRange</param>
 		/// <param name="CopyToRange">optional object CopyToRange</param>
 		/// <param name="Unique">optional object Unique</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange, object unique)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, criteriaRange, copyToRange, unique);
@@ -2278,10 +2278,56 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Action">NetOffice.ExcelApi.Enums.XlFilterAction Action</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
+			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Action">NetOffice.ExcelApi.Enums.XlFilterAction Action</param>
+		/// <param name="CriteriaRange">optional object CriteriaRange</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(action, criteriaRange);
+			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Action">NetOffice.ExcelApi.Enums.XlFilterAction Action</param>
+		/// <param name="CriteriaRange">optional object CriteriaRange</param>
+		/// <param name="CopyToRange">optional object CopyToRange</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AdvancedFilter(NetOffice.ExcelApi.Enums.XlFilterAction action, object criteriaRange, object copyToRange)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(action, criteriaRange, copyToRange);
 			object returnItem = Invoker.MethodReturn(this, "AdvancedFilter", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
@@ -2304,7 +2350,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="OmitRow">object OmitRow</param>
 		/// <param name="Order">NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order</param>
 		/// <param name="AppendLast">optional object AppendLast</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order, object appendLast)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order, appendLast);
@@ -2329,7 +2375,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="OmitColumn">object OmitColumn</param>
 		/// <param name="OmitRow">object OmitRow</param>
 		/// <param name="Order">NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order);
@@ -2348,7 +2395,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ApplyOutlineStyles()
 		{
 			object[] paramsArray = null;
@@ -2368,7 +2415,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="String">string String</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string AutoComplete(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -2381,7 +2428,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Destination">NetOffice.ExcelApi.Range Destination</param>
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlAutoFillType Type</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFill(NetOffice.ExcelApi.Range destination, NetOffice.ExcelApi.Enums.XlAutoFillType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, type);
@@ -2405,7 +2452,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Operator">NetOffice.ExcelApi.Enums.XlAutoFilterOperator Operator</param>
 		/// <param name="Criteria2">optional object Criteria2</param>
 		/// <param name="VisibleDropDown">optional object VisibleDropDown</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2, object visibleDropDown)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
@@ -2427,7 +2474,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="Field">object Field</param>
 		/// <param name="Criteria1">object Criteria1</param>
 		/// <param name="Operator">NetOffice.ExcelApi.Enums.XlAutoFilterOperator Operator</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator);
@@ -2446,7 +2494,31 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Field">object Field</param>
+		/// <param name="Criteria1">object Criteria1</param>
+		/// <param name="Operator">NetOffice.ExcelApi.Enums.XlAutoFilterOperator Operator</param>
+		/// <param name="Criteria2">optional object Criteria2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2);
+			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFit()
 		{
 			object[] paramsArray = null;
@@ -2472,7 +2544,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Border">optional object Border</param>
 		/// <param name="Pattern">optional object Pattern</param>
 		/// <param name="Width">optional object Width</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border, object pattern, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern, width);
@@ -2492,7 +2564,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);
@@ -2511,7 +2584,127 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
+		/// <param name="Number">optional object Number</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, number);
+			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
+		/// <param name="Number">optional object Number</param>
+		/// <param name="Font">optional object Font</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font);
+			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
+		/// <param name="Number">optional object Number</param>
+		/// <param name="Font">optional object Font</param>
+		/// <param name="Alignment">optional object Alignment</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment);
+			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
+		/// <param name="Number">optional object Number</param>
+		/// <param name="Font">optional object Font</param>
+		/// <param name="Alignment">optional object Alignment</param>
+		/// <param name="Border">optional object Border</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border);
+			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format</param>
+		/// <param name="Number">optional object Number</param>
+		/// <param name="Font">optional object Font</param>
+		/// <param name="Alignment">optional object Alignment</param>
+		/// <param name="Border">optional object Border</param>
+		/// <param name="Pattern">optional object Pattern</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border, object pattern)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern);
+			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object AutoOutline()
 		{
 			object[] paramsArray = null;
@@ -2528,13 +2721,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="LineStyle">object LineStyle</param>
 		/// <param name="Weight">NetOffice.ExcelApi.Enums.XlBorderWeight Weight</param>
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
-		[SupportByLibrary("Excel", 9,10,11,12)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
@@ -2558,7 +2751,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
 		/// <param name="ThemeColor">optional object ThemeColor</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color, object themeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color, themeColor);
@@ -2580,7 +2773,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="LineStyle">object LineStyle</param>
 		/// <param name="Weight">NetOffice.ExcelApi.Enums.XlBorderWeight Weight</param>
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
@@ -2599,7 +2793,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Calculate()
 		{
 			object[] paramsArray = null;
@@ -2622,7 +2816,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
 		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
 		/// <param name="SpellLang">optional object SpellLang</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object spellLang)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, spellLang);
@@ -2641,7 +2835,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CheckSpelling()
 		{
 			object[] paramsArray = null;
@@ -2660,7 +2855,73 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CheckSpelling(object customDictionary)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary);
+			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CheckSpelling(object customDictionary, object ignoreUppercase)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase);
+			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest);
+			object returnItem = Invoker.MethodReturn(this, "CheckSpelling", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Clear()
 		{
 			object[] paramsArray = null;
@@ -2679,7 +2940,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ClearContents()
 		{
 			object[] paramsArray = null;
@@ -2698,7 +2959,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ClearFormats()
 		{
 			object[] paramsArray = null;
@@ -2717,7 +2978,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ClearNotes()
 		{
 			object[] paramsArray = null;
@@ -2736,7 +2997,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ClearOutline()
 		{
 			object[] paramsArray = null;
@@ -2756,7 +3017,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Comparison">object Comparison</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range ColumnDifferences(object comparison)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comparison);
@@ -2773,7 +3034,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TopRow">optional object TopRow</param>
 		/// <param name="LeftColumn">optional object LeftColumn</param>
 		/// <param name="CreateLinks">optional object CreateLinks</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Consolidate(object sources, object function, object topRow, object leftColumn, object createLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sources, function, topRow, leftColumn, createLinks);
@@ -2792,7 +3053,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Consolidate()
 		{
 			object[] paramsArray = null;
@@ -2811,8 +3073,98 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Sources">optional object Sources</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Consolidate(object sources)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(sources);
+			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Sources">optional object Sources</param>
+		/// <param name="Function">optional object Function</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Consolidate(object sources, object function)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(sources, function);
+			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Sources">optional object Sources</param>
+		/// <param name="Function">optional object Function</param>
+		/// <param name="TopRow">optional object TopRow</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Consolidate(object sources, object function, object topRow)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(sources, function, topRow);
+			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Sources">optional object Sources</param>
+		/// <param name="Function">optional object Function</param>
+		/// <param name="TopRow">optional object TopRow</param>
+		/// <param name="LeftColumn">optional object LeftColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Consolidate(object sources, object function, object topRow, object leftColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(sources, function, topRow, leftColumn);
+			object returnItem = Invoker.MethodReturn(this, "Consolidate", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Copy(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
@@ -2831,7 +3183,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Copy()
 		{
 			object[] paramsArray = null;
@@ -2853,7 +3206,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Data">object Data</param>
 		/// <param name="MaxRows">optional object MaxRows</param>
 		/// <param name="MaxColumns">optional object MaxColumns</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 CopyFromRecordset(object data, object maxRows, object maxColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data, maxRows, maxColumns);
@@ -2865,7 +3218,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Data">object Data</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 CopyFromRecordset(object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data);
@@ -2876,9 +3230,23 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Data">object Data</param>
+		/// <param name="MaxRows">optional object MaxRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public Int32 CopyFromRecordset(object data, object maxRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(data, maxRows);
+			object returnItem = Invoker.MethodReturn(this, "CopyFromRecordset", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
 		/// <param name="Format">NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlCopyPictureFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
@@ -2901,7 +3269,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Left">optional object Left</param>
 		/// <param name="Bottom">optional object Bottom</param>
 		/// <param name="Right">optional object Right</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CreateNames(object top, object left, object bottom, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(top, left, bottom, right);
@@ -2920,10 +3288,77 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CreateNames()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreateNames(object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(top);
+			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Left">optional object Left</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreateNames(object top, object left)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(top, left);
+			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Bottom">optional object Bottom</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreateNames(object top, object left, object bottom)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(top, left, bottom);
 			object returnItem = Invoker.MethodReturn(this, "CreateNames", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
@@ -2945,7 +3380,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ContainsBIFF">optional object ContainsBIFF</param>
 		/// <param name="ContainsRTF">optional object ContainsRTF</param>
 		/// <param name="ContainsVALU">optional object ContainsVALU</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF, containsVALU);
@@ -2966,7 +3401,8 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Edition">object Edition</param>
 		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance);
@@ -2985,8 +3421,80 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Edition">object Edition</param>
+		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
+		/// <param name="ContainsPICT">optional object ContainsPICT</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT);
+			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Edition">object Edition</param>
+		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
+		/// <param name="ContainsPICT">optional object ContainsPICT</param>
+		/// <param name="ContainsBIFF">optional object ContainsBIFF</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF);
+			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Edition">object Edition</param>
+		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
+		/// <param name="ContainsPICT">optional object ContainsPICT</param>
+		/// <param name="ContainsBIFF">optional object ContainsBIFF</param>
+		/// <param name="ContainsRTF">optional object ContainsRTF</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF, object containsRTF)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF);
+			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Destination">optional object Destination</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Cut(object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination);
@@ -3005,7 +3513,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Cut()
 		{
 			object[] paramsArray = null;
@@ -3030,7 +3539,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Step">optional object Step</param>
 		/// <param name="Stop">optional object Stop</param>
 		/// <param name="Trend">optional object Trend</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step, object stop, object trend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop, trend);
@@ -3052,7 +3561,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="Rowcol">object Rowcol</param>
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlDataSeriesType Type</param>
 		/// <param name="Date">NetOffice.ExcelApi.Enums.XlDataSeriesDate Date</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date);
@@ -3071,8 +3581,57 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Rowcol">object Rowcol</param>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlDataSeriesType Type</param>
+		/// <param name="Date">NetOffice.ExcelApi.Enums.XlDataSeriesDate Date</param>
+		/// <param name="Step">optional object Step</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step);
+			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Rowcol">object Rowcol</param>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlDataSeriesType Type</param>
+		/// <param name="Date">NetOffice.ExcelApi.Enums.XlDataSeriesDate Date</param>
+		/// <param name="Step">optional object Step</param>
+		/// <param name="Stop">optional object Stop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step, object stop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop);
+			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Delete(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
@@ -3091,7 +3650,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -3110,7 +3670,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object DialogBox()
 		{
 			object[] paramsArray = null;
@@ -3136,7 +3696,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
 		/// <param name="ChartSize">NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize</param>
 		/// <param name="Format">optional object Format</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize, format);
@@ -3161,7 +3721,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="Reference">object Reference</param>
 		/// <param name="Appearance">NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance</param>
 		/// <param name="ChartSize">NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize);
@@ -3180,7 +3741,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FillDown()
 		{
 			object[] paramsArray = null;
@@ -3199,7 +3760,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FillLeft()
 		{
 			object[] paramsArray = null;
@@ -3218,7 +3779,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FillRight()
 		{
 			object[] paramsArray = null;
@@ -3237,7 +3798,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FillUp()
 		{
 			object[] paramsArray = null;
@@ -3254,7 +3815,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="What">object What</param>
 		/// <param name="After">object After</param>
@@ -3264,7 +3825,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SearchDirection">NetOffice.ExcelApi.Enums.XlSearchDirection SearchDirection</param>
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
@@ -3285,7 +3846,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
 		/// <param name="SearchFormat">optional object SearchFormat</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte, object searchFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte, searchFormat);
@@ -3303,7 +3864,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="LookAt">object LookAt</param>
 		/// <param name="SearchOrder">object SearchOrder</param>
 		/// <param name="SearchDirection">NetOffice.ExcelApi.Enums.XlSearchDirection SearchDirection</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection);
@@ -3315,8 +3877,28 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="What">object What</param>
+		/// <param name="After">object After</param>
+		/// <param name="LookIn">object LookIn</param>
+		/// <param name="LookAt">object LookAt</param>
+		/// <param name="SearchOrder">object SearchOrder</param>
+		/// <param name="SearchDirection">NetOffice.ExcelApi.Enums.XlSearchDirection SearchDirection</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase);
+			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
+			NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range FindNext(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
@@ -3328,7 +3910,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range FindNext()
 		{
 			object[] paramsArray = null;
@@ -3341,7 +3924,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="After">optional object After</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range FindPrevious(object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(after);
@@ -3353,7 +3936,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range FindPrevious()
 		{
 			object[] paramsArray = null;
@@ -3365,7 +3949,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object FunctionWizard()
 		{
 			object[] paramsArray = null;
@@ -3386,7 +3970,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Goal">object Goal</param>
 		/// <param name="ChangingCell">NetOffice.ExcelApi.Range ChangingCell</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool GoalSeek(object goal, NetOffice.ExcelApi.Range changingCell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(goal, changingCell);
@@ -3401,7 +3985,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="End">optional object End</param>
 		/// <param name="By">optional object By</param>
 		/// <param name="Periods">optional object Periods</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Group(object start, object end, object by, object periods)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, end, by, periods);
@@ -3420,7 +4004,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Group()
 		{
 			object[] paramsArray = null;
@@ -3439,8 +4024,74 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Start">optional object Start</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Group(object start)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(start);
+			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Start">optional object Start</param>
+		/// <param name="End">optional object End</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Group(object start, object end)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(start, end);
+			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Start">optional object Start</param>
+		/// <param name="End">optional object End</param>
+		/// <param name="By">optional object By</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Group(object start, object end, object by)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(start, end, by);
+			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="InsertAmount">Int32 InsertAmount</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void InsertIndent(Int32 insertAmount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(insertAmount);
@@ -3448,10 +4099,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Insert(object shift)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift);
@@ -3472,7 +4123,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Shift">optional object Shift</param>
 		/// <param name="CopyOrigin">optional object CopyOrigin</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object Insert(object shift, object copyOrigin)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shift, copyOrigin);
@@ -3491,7 +4142,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Insert()
 		{
 			object[] paramsArray = null;
@@ -3510,7 +4162,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Justify()
 		{
 			object[] paramsArray = null;
@@ -3529,7 +4181,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ListNames()
 		{
 			object[] paramsArray = null;
@@ -3549,7 +4201,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Across">optional object Across</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void Merge(object across)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(across);
@@ -3559,7 +4211,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void Merge()
 		{
 			object[] paramsArray = null;
@@ -3569,7 +4222,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void UnMerge()
 		{
 			object[] paramsArray = null;
@@ -3582,7 +4235,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TowardPrecedent">optional object TowardPrecedent</param>
 		/// <param name="ArrowNumber">optional object ArrowNumber</param>
 		/// <param name="LinkNumber">optional object LinkNumber</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object NavigateArrow(object towardPrecedent, object arrowNumber, object linkNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(towardPrecedent, arrowNumber, linkNumber);
@@ -3601,7 +4254,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object NavigateArrow()
 		{
 			object[] paramsArray = null;
@@ -3620,10 +4274,53 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="TowardPrecedent">optional object TowardPrecedent</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object NavigateArrow(object towardPrecedent)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(towardPrecedent);
+			object returnItem = Invoker.MethodReturn(this, "NavigateArrow", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="TowardPrecedent">optional object TowardPrecedent</param>
+		/// <param name="ArrowNumber">optional object ArrowNumber</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object NavigateArrow(object towardPrecedent, object arrowNumber)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(towardPrecedent, arrowNumber);
+			object returnItem = Invoker.MethodReturn(this, "NavigateArrow", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Text">optional object Text</param>
 		/// <param name="Start">optional object Start</param>
 		/// <param name="Length">optional object Length</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string NoteText(object text, object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, start, length);
@@ -3634,7 +4331,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public string NoteText()
 		{
 			object[] paramsArray = null;
@@ -3645,9 +4343,36 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Text">optional object Text</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public string NoteText(object text)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text);
+			object returnItem = Invoker.MethodReturn(this, "NoteText", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="Start">optional object Start</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public string NoteText(object text, object start)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, start);
+			object returnItem = Invoker.MethodReturn(this, "NoteText", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="ParseLine">optional object ParseLine</param>
 		/// <param name="Destination">optional object Destination</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Parse(object parseLine, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parseLine, destination);
@@ -3666,10 +4391,32 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Parse()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Parse", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ParseLine">optional object ParseLine</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Parse(object parseLine)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(parseLine);
 			object returnItem = Invoker.MethodReturn(this, "Parse", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
@@ -3689,7 +4436,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
 		/// <param name="SkipBlanks">optional object SkipBlanks</param>
 		/// <param name="Transpose">optional object Transpose</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
@@ -3710,7 +4457,8 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Paste">NetOffice.ExcelApi.Enums.XlPasteType Paste</param>
 		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
@@ -3727,7 +4475,30 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Paste">NetOffice.ExcelApi.Enums.XlPasteType Paste</param>
+		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
+		/// <param name="SkipBlanks">optional object SkipBlanks</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks);
+			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="From">optional object From</param>
 		/// <param name="To">optional object To</param>
@@ -3736,7 +4507,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ActivePrinter">optional object ActivePrinter</param>
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
-		[SupportByLibrary("Excel", 9,10,11)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -3763,7 +4534,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
@@ -3782,7 +4553,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object _PrintOut()
 		{
 			object[] paramsArray = null;
@@ -3801,8 +4573,149 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
+			object returnItem = Invoker.MethodReturn(this, "_PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="EnableChanges">optional object EnableChanges</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PrintPreview(object enableChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
@@ -3821,7 +4734,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PrintPreview()
 		{
 			object[] paramsArray = null;
@@ -3840,7 +4754,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object RemoveSubtotal()
 		{
 			object[] paramsArray = null;
@@ -3857,7 +4771,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="What">object What</param>
 		/// <param name="Replacement">object Replacement</param>
@@ -3865,7 +4779,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SearchOrder">optional object SearchOrder</param>
 		/// <param name="MatchCase">optional object MatchCase</param>
 		/// <param name="MatchByte">optional object MatchByte</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase, matchByte);
@@ -3884,7 +4798,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchByte">optional object MatchByte</param>
 		/// <param name="SearchFormat">optional object SearchFormat</param>
 		/// <param name="ReplaceFormat">optional object ReplaceFormat</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat, object replaceFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase, matchByte, searchFormat, replaceFormat);
@@ -3897,7 +4811,8 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="What">object What</param>
 		/// <param name="Replacement">object Replacement</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public bool Replace(object what, object replacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement);
@@ -3908,8 +4823,75 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="What">object What</param>
+		/// <param name="Replacement">object Replacement</param>
+		/// <param name="LookAt">optional object LookAt</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public bool Replace(object what, object replacement, object lookAt)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt);
+			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
+			return (bool)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="What">object What</param>
+		/// <param name="Replacement">object Replacement</param>
+		/// <param name="LookAt">optional object LookAt</param>
+		/// <param name="SearchOrder">optional object SearchOrder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public bool Replace(object what, object replacement, object lookAt, object searchOrder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder);
+			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
+			return (bool)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="What">object What</param>
+		/// <param name="Replacement">object Replacement</param>
+		/// <param name="LookAt">optional object LookAt</param>
+		/// <param name="SearchOrder">optional object SearchOrder</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase);
+			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
+			return (bool)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="What">object What</param>
+		/// <param name="Replacement">object Replacement</param>
+		/// <param name="LookAt">optional object LookAt</param>
+		/// <param name="SearchOrder">optional object SearchOrder</param>
+		/// <param name="MatchCase">optional object MatchCase</param>
+		/// <param name="MatchByte">optional object MatchByte</param>
+		/// <param name="SearchFormat">optional object SearchFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public bool Replace(object what, object replacement, object lookAt, object searchOrder, object matchCase, object matchByte, object searchFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, replacement, lookAt, searchOrder, matchCase, matchByte, searchFormat);
+			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
+			return (bool)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Comparison">object Comparison</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range RowDifferences(object comparison)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comparison);
@@ -3951,7 +4933,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg28">optional object Arg28</param>
 		/// <param name="Arg29">optional object Arg29</param>
 		/// <param name="Arg30">optional object Arg30</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -3970,7 +4952,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Run()
 		{
 			object[] paramsArray = null;
@@ -3989,7 +4972,1022 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Arg1">optional object Arg1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		/// <param name="Arg25">optional object Arg25</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		/// <param name="Arg25">optional object Arg25</param>
+		/// <param name="Arg26">optional object Arg26</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		/// <param name="Arg25">optional object Arg25</param>
+		/// <param name="Arg26">optional object Arg26</param>
+		/// <param name="Arg27">optional object Arg27</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		/// <param name="Arg25">optional object Arg25</param>
+		/// <param name="Arg26">optional object Arg26</param>
+		/// <param name="Arg27">optional object Arg27</param>
+		/// <param name="Arg28">optional object Arg28</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Arg1">optional object Arg1</param>
+		/// <param name="Arg2">optional object Arg2</param>
+		/// <param name="Arg3">optional object Arg3</param>
+		/// <param name="Arg4">optional object Arg4</param>
+		/// <param name="Arg5">optional object Arg5</param>
+		/// <param name="Arg6">optional object Arg6</param>
+		/// <param name="Arg7">optional object Arg7</param>
+		/// <param name="Arg8">optional object Arg8</param>
+		/// <param name="Arg9">optional object Arg9</param>
+		/// <param name="Arg10">optional object Arg10</param>
+		/// <param name="Arg11">optional object Arg11</param>
+		/// <param name="Arg12">optional object Arg12</param>
+		/// <param name="Arg13">optional object Arg13</param>
+		/// <param name="Arg14">optional object Arg14</param>
+		/// <param name="Arg15">optional object Arg15</param>
+		/// <param name="Arg16">optional object Arg16</param>
+		/// <param name="Arg17">optional object Arg17</param>
+		/// <param name="Arg18">optional object Arg18</param>
+		/// <param name="Arg19">optional object Arg19</param>
+		/// <param name="Arg20">optional object Arg20</param>
+		/// <param name="Arg21">optional object Arg21</param>
+		/// <param name="Arg22">optional object Arg22</param>
+		/// <param name="Arg23">optional object Arg23</param>
+		/// <param name="Arg24">optional object Arg24</param>
+		/// <param name="Arg25">optional object Arg25</param>
+		/// <param name="Arg26">optional object Arg26</param>
+		/// <param name="Arg27">optional object Arg27</param>
+		/// <param name="Arg28">optional object Arg28</param>
+		/// <param name="Arg29">optional object Arg29</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Run(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
+			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -4008,7 +6006,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Show()
 		{
 			object[] paramsArray = null;
@@ -4028,7 +6026,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Remove">optional object Remove</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowDependents(object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
@@ -4047,7 +6045,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowDependents()
 		{
 			object[] paramsArray = null;
@@ -4066,7 +6065,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowErrors()
 		{
 			object[] paramsArray = null;
@@ -4086,7 +6085,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Remove">optional object Remove</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowPrecedents(object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(remove);
@@ -4105,7 +6104,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object ShowPrecedents()
 		{
 			object[] paramsArray = null;
@@ -4136,7 +6136,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="MatchCase">object MatchCase</param>
 		/// <param name="Orientation">NetOffice.ExcelApi.Enums.XlSortOrientation Orientation</param>
 		/// <param name="SortMethod">NetOffice.ExcelApi.Enums.XlSortMethod SortMethod</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9)]
 		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod);
@@ -4170,7 +6170,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DataOption1">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1</param>
 		/// <param name="DataOption2">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2</param>
 		/// <param name="DataOption3">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2, dataOption3);
@@ -4201,7 +6201,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="OrderCustom">object OrderCustom</param>
 		/// <param name="MatchCase">object MatchCase</param>
 		/// <param name="Orientation">NetOffice.ExcelApi.Enums.XlSortOrientation Orientation</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9)]
 		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation);
@@ -4235,7 +6235,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DataOption1">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1</param>
 		/// <param name="DataOption2">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2</param>
 		/// <param name="DataOption3">NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2, dataOption3);
@@ -4256,7 +6256,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlCellType Type</param>
 		/// <param name="Value">optional object Value</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, value);
@@ -4269,7 +6269,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlCellType Type</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Range SpecialCells(NetOffice.ExcelApi.Enums.XlCellType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -4283,7 +6284,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Edition">string Edition</param>
 		/// <param name="Format">NetOffice.ExcelApi.Enums.XlSubscribeToFormat Format</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object SubscribeTo(string edition, NetOffice.ExcelApi.Enums.XlSubscribeToFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
@@ -4308,7 +6309,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Replace">object Replace</param>
 		/// <param name="PageBreaks">object PageBreaks</param>
 		/// <param name="SummaryBelowData">NetOffice.ExcelApi.Enums.XlSummaryRow SummaryBelowData</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks, NetOffice.ExcelApi.Enums.XlSummaryRow summaryBelowData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupBy, function, totalList, replace, pageBreaks, summaryBelowData);
@@ -4329,7 +6330,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="RowInput">optional object RowInput</param>
 		/// <param name="ColumnInput">optional object ColumnInput</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Table(object rowInput, object columnInput)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowInput, columnInput);
@@ -4348,7 +6349,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Table()
 		{
 			object[] paramsArray = null;
@@ -4365,7 +6367,28 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="RowInput">optional object RowInput</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object Table(object rowInput)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rowInput);
+			object returnItem = Invoker.MethodReturn(this, "Table", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Destination">object Destination</param>
 		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
@@ -4380,7 +6403,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="FieldInfo">optional object FieldInfo</param>
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
-		[SupportByLibrary("Excel", 9)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator);
@@ -4413,7 +6436,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="ThousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="TrailingMinusNumbers">optional object TrailingMinusNumbers</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
@@ -4435,7 +6458,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="Destination">object Destination</param>
 		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
 		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier);
@@ -4454,7 +6478,259 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Destination">object Destination</param>
+		/// <param name="DataType">NetOffice.ExcelApi.Enums.XlTextParsingType DataType</param>
+		/// <param name="TextQualifier">NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier</param>
+		/// <param name="ConsecutiveDelimiter">optional object ConsecutiveDelimiter</param>
+		/// <param name="Tab">optional object Tab</param>
+		/// <param name="Semicolon">optional object Semicolon</param>
+		/// <param name="Comma">optional object Comma</param>
+		/// <param name="Space">optional object Space</param>
+		/// <param name="Other">optional object Other</param>
+		/// <param name="OtherChar">optional object OtherChar</param>
+		/// <param name="FieldInfo">optional object FieldInfo</param>
+		/// <param name="DecimalSeparator">optional object DecimalSeparator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator);
+			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object Ungroup()
 		{
 			object[] paramsArray = null;
@@ -4474,7 +6750,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">optional object Text</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Comment AddComment(object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -4486,7 +6762,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Comment AddComment()
 		{
 			object[] paramsArray = null;
@@ -4498,7 +6775,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void ClearComments()
 		{
 			object[] paramsArray = null;
@@ -4508,7 +6785,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public void SetPhonetic()
 		{
 			object[] paramsArray = null;
@@ -4526,7 +6803,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
 		/// <param name="PrToFileName">optional object PrToFileName</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
@@ -4545,10 +6822,179 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public object PrintOut()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
+			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		/// <param name="Collate">optional object Collate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public object PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
 			object returnItem = Invoker.MethodReturn(this, "PrintOut", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
@@ -4568,7 +7014,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
 		/// <param name="SkipBlanks">optional object SkipBlanks</param>
 		/// <param name="Transpose">optional object Transpose</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
@@ -4589,7 +7035,8 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Paste">NetOffice.ExcelApi.Enums.XlPasteType Paste</param>
 		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
@@ -4608,7 +7055,30 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		/// <param name="Paste">NetOffice.ExcelApi.Enums.XlPasteType Paste</param>
+		/// <param name="Operation">NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation</param>
+		/// <param name="SkipBlanks">optional object SkipBlanks</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks);
+			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Dirty()
 		{
 			object[] paramsArray = null;
@@ -4620,7 +7090,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="SpeakDirection">optional object SpeakDirection</param>
 		/// <param name="SpeakFormulas">optional object SpeakFormulas</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Speak(object speakDirection, object speakFormulas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(speakDirection, speakFormulas);
@@ -4630,10 +7100,23 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Speak()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Speak", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="SpeakDirection">optional object SpeakDirection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void Speak(object speakDirection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(speakDirection);
 			Invoker.Method(this, "Speak", paramsArray);
 		}
 
@@ -4647,7 +7130,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ActivePrinter">optional object ActivePrinter</param>
 		/// <param name="PrintToFile">optional object PrintToFile</param>
 		/// <param name="Collate">optional object Collate</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -4666,7 +7149,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public object __PrintOut()
 		{
 			object[] paramsArray = null;
@@ -4685,9 +7169,150 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from, object to, object copies)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from, object to, object copies, object preview)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from, object to, object copies, object preview, object activePrinter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="Copies">optional object Copies</param>
+		/// <param name="Preview">optional object Preview</param>
+		/// <param name="ActivePrinter">optional object ActivePrinter</param>
+		/// <param name="PrintToFile">optional object PrintToFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public object __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
+			object returnItem = Invoker.MethodReturn(this, "__PrintOut", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
 		/// <param name="Columns">object Columns</param>
 		/// <param name="Header">NetOffice.ExcelApi.Enums.XlYesNoGuess Header</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public void RemoveDuplicates(object columns, NetOffice.ExcelApi.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columns, header);
@@ -4706,7 +7331,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="To">optional object To</param>
 		/// <param name="OpenAfterPublish">optional object OpenAfterPublish</param>
 		/// <param name="FixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas, from, to, openAfterPublish, fixedFormatExtClassPtr);
@@ -4717,7 +7342,8 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -4727,7 +7353,119 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		/// <param name="IncludeDocProperties">optional object IncludeDocProperties</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		/// <param name="IncludeDocProperties">optional object IncludeDocProperties</param>
+		/// <param name="IgnorePrintAreas">optional object IgnorePrintAreas</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		/// <param name="IncludeDocProperties">optional object IncludeDocProperties</param>
+		/// <param name="IgnorePrintAreas">optional object IgnorePrintAreas</param>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas, from);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		/// <param name="IncludeDocProperties">optional object IncludeDocProperties</param>
+		/// <param name="IgnorePrintAreas">optional object IgnorePrintAreas</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas, from, to);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="Type">NetOffice.ExcelApi.Enums.XlFixedFormatType Type</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Quality">optional object Quality</param>
+		/// <param name="IncludeDocProperties">optional object IncludeDocProperties</param>
+		/// <param name="IgnorePrintAreas">optional object IgnorePrintAreas</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		/// <param name="OpenAfterPublish">optional object OpenAfterPublish</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public void ExportAsFixedFormat(NetOffice.ExcelApi.Enums.XlFixedFormatType type, object filename, object quality, object includeDocProperties, object ignorePrintAreas, object from, object to, object openAfterPublish)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, filename, quality, includeDocProperties, ignorePrintAreas, from, to, openAfterPublish);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public object CalculateRowMajorOrder()
 		{
 			object[] paramsArray = null;
@@ -4750,7 +7488,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Weight">NetOffice.ExcelApi.Enums.XlBorderWeight Weight</param>
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
 		/// <param name="Color">optional object Color</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
@@ -4772,7 +7510,8 @@ namespace NetOffice.ExcelApi
 		/// <param name="LineStyle">object LineStyle</param>
 		/// <param name="Weight">NetOffice.ExcelApi.Enums.XlBorderWeight Weight</param>
 		/// <param name="ColorIndex">NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex</param>
-		[SupportByLibrary("Excel", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
@@ -4791,7 +7530,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public void ClearHyperlinks()
 		{
 			object[] paramsArray = null;
@@ -4801,7 +7540,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public void AllocateChanges()
 		{
 			object[] paramsArray = null;
@@ -4811,7 +7550,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 14
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public void DiscardChanges()
 		{
 			object[] paramsArray = null;
@@ -4822,7 +7561,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

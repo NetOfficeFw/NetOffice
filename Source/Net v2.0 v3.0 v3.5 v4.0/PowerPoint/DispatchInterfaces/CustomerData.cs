@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface CustomerData SupportByLibrary PowerPoint, 12,14
+	/// DispatchInterface CustomerData SupportByLibraryAttribute PowerPoint, 12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomerData : Collection
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		/// <param name="Id">string Id</param>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CustomXMLPart this[string id]
 		{
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public NetOffice.OfficeApi.CustomXMLPart Add()
 		{
 			object[] paramsArray = null;
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 12, 14
 		/// </summary>
 		/// <param name="Id">string Id</param>
-		[SupportByLibrary("PowerPoint", 12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 12,14)]
 		public void Delete(string id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);

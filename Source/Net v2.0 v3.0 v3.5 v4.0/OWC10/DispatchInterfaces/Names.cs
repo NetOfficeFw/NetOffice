@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface Names SupportByLibrary OWC10, 1
+	/// DispatchInterface Names SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Names : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject Parent
 		{
 			get
@@ -130,7 +130,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Index">optional object Index</param>
 		/// <param name="IndexLocal">optional object IndexLocal</param>
 		/// <param name="RefersTo">optional object RefersTo</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.Name this[object index, object indexLocal, object refersTo]
 		{
@@ -157,7 +157,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="CategoryLocal">optional object CategoryLocal</param>
 		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
 		/// <param name="RefersToR1C1Local">optional object RefersToR1C1Local</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local);
@@ -167,10 +167,176 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Add()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		/// <param name="CategoryLocal">optional object CategoryLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="RefersTo">optional object RefersTo</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="MacroType">optional object MacroType</param>
+		/// <param name="ShortcutKey">optional object ShortcutKey</param>
+		/// <param name="Category">optional object Category</param>
+		/// <param name="NameLocal">optional object NameLocal</param>
+		/// <param name="RefersToLocal">optional object RefersToLocal</param>
+		/// <param name="CategoryLocal">optional object CategoryLocal</param>
+		/// <param name="RefersToR1C1">optional object RefersToR1C1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1);
 			Invoker.Method(this, "Add", paramsArray);
 		}
 
@@ -188,7 +354,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="varCategoryLocal">optional object varCategoryLocal</param>
 		/// <param name="varRefersToR1C1">optional object varRefersToR1C1</param>
 		/// <param name="varRefersToR1C1Local">optional object varRefersToR1C1Local</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal, object varRefersToR1C1, object varRefersToR1C1Local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1, varRefersToR1C1Local);
@@ -198,10 +364,176 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void AddUI()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		/// <param name="varCategory">optional object varCategory</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		/// <param name="varCategory">optional object varCategory</param>
+		/// <param name="varNameLocal">optional object varNameLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		/// <param name="varCategory">optional object varCategory</param>
+		/// <param name="varNameLocal">optional object varNameLocal</param>
+		/// <param name="varRefersToLocal">optional object varRefersToLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		/// <param name="varCategory">optional object varCategory</param>
+		/// <param name="varNameLocal">optional object varNameLocal</param>
+		/// <param name="varRefersToLocal">optional object varRefersToLocal</param>
+		/// <param name="varCategoryLocal">optional object varCategoryLocal</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal);
+			Invoker.Method(this, "AddUI", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
+		/// <param name="varName">optional object varName</param>
+		/// <param name="varRefersTo">optional object varRefersTo</param>
+		/// <param name="varVisible">optional object varVisible</param>
+		/// <param name="varMacroType">optional object varMacroType</param>
+		/// <param name="varShortcutKey">optional object varShortcutKey</param>
+		/// <param name="varCategory">optional object varCategory</param>
+		/// <param name="varNameLocal">optional object varNameLocal</param>
+		/// <param name="varRefersToLocal">optional object varRefersToLocal</param>
+		/// <param name="varCategoryLocal">optional object varCategoryLocal</param>
+		/// <param name="varRefersToR1C1">optional object varRefersToR1C1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal, object varRefersToR1C1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1);
 			Invoker.Method(this, "AddUI", paramsArray);
 		}
 
@@ -209,7 +541,10 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OWC10", 1)]
+		/// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

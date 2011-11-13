@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface EncryptionProvider SupportByLibrary Office, 12,14
+	/// DispatchInterface EncryptionProvider SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EncryptionProvider : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(encprovdet);
@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 NewSession(object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow);
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
 		/// <param name="PermissionsMask">UIntPtr PermissionsMask</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 Authenticate(object parentWindow, object encryptionData, UIntPtr permissionsMask)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, encryptionData, permissionsMask);
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 CloneSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void EndSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="SessionHandle">Int32 SessionHandle</param>
 		/// <param name="EncryptionData">object EncryptionData</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public Int32 Save(Int32 sessionHandle, object encryptionData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, encryptionData);
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="StreamName">string StreamName</param>
 		/// <param name="UnencryptedStream">object UnencryptedStream</param>
 		/// <param name="EncryptedStream">object EncryptedStream</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, unencryptedStream, encryptedStream);
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="StreamName">string StreamName</param>
 		/// <param name="EncryptedStream">object EncryptedStream</param>
 		/// <param name="UnencryptedStream">object UnencryptedStream</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, encryptedStream, unencryptedStream);
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="ReadOnly">bool ReadOnly</param>
 		/// <param name="Remove">bool Remove</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, bool remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, parentWindow, readOnly, remove);

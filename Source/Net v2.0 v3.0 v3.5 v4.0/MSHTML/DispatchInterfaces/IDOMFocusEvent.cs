@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IDOMFocusEvent SupportByLibrary MSHTML, 4
+	/// DispatchInterface IDOMFocusEvent SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDOMFocusEvent : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IEventTarget relatedTarget
 		{
 			get
@@ -101,7 +101,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="view">LateBindingApi.MSHTMLApi.IHTMLWindow2 view</param>
 		/// <param name="detail">Int32 detail</param>
 		/// <param name="relatedTargetArg">LateBindingApi.MSHTMLApi.IEventTarget relatedTargetArg</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void initFocusEvent(string eventType, bool canBubble, bool cancelable, LateBindingApi.MSHTMLApi.IHTMLWindow2 view, Int32 detail, LateBindingApi.MSHTMLApi.IEventTarget relatedTargetArg)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventType, canBubble, cancelable, view, detail, relatedTargetArg);

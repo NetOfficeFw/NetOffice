@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _Reminders SupportByLibrary Outlook, 10,11,12,14
+	/// DispatchInterface _Reminders SupportByLibraryAttribute Outlook, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Reminders : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi._Reminder this[object index]
 		{
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -187,7 +187,10 @@ namespace NetOffice.OutlookApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Outlook", 10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Outlook, 10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

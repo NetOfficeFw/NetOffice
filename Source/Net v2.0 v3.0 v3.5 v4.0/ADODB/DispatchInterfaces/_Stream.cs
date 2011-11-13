@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface _Stream SupportByLibrary ADODB, 2.5
+	/// DispatchInterface _Stream SupportByLibraryAttribute ADODB, 2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Stream : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public Int32 Size
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public bool EOS
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public Int32 Position
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.StreamTypeEnum Type
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.LineSeparatorEnum LineSeparator
 		{
 			get
@@ -166,7 +166,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ObjectStateEnum State
 		{
 			get
@@ -181,7 +181,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
 		{
 			get
@@ -201,7 +201,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public string Charset
 		{
 			get
@@ -225,7 +225,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="NumBytes">Int32 NumBytes</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public object Read(Int32 numBytes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numBytes);
@@ -249,7 +249,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Options">NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options</param>
 		/// <param name="UserName">string UserName</param>
 		/// <param name="Password">string Password</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Open(object source, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum options, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, mode, options, userName, password);
@@ -259,7 +259,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -269,7 +269,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void SkipLine()
 		{
 			object[] paramsArray = null;
@@ -280,7 +280,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Buffer">object Buffer</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Write(object buffer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(buffer);
@@ -290,7 +290,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void SetEOS()
 		{
 			object[] paramsArray = null;
@@ -302,7 +302,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="DestStream">NetOffice.ADODBApi._Stream DestStream</param>
 		/// <param name="CharNumber">Int32 CharNumber</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void CopyTo(NetOffice.ADODBApi._Stream destStream, Int32 charNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destStream, charNumber);
@@ -312,7 +312,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Flush()
 		{
 			object[] paramsArray = null;
@@ -324,7 +324,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Options">NetOffice.ADODBApi.Enums.SaveOptionsEnum Options</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void SaveToFile(string fileName, NetOffice.ADODBApi.Enums.SaveOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, options);
@@ -335,7 +335,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void LoadFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -346,7 +346,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="NumChars">Int32 NumChars</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public string ReadText(Int32 numChars)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numChars);
@@ -359,7 +359,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="Data">string Data</param>
 		/// <param name="Options">NetOffice.ADODBApi.Enums.StreamWriteEnum Options</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void WriteText(string data, NetOffice.ADODBApi.Enums.StreamWriteEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data, options);
@@ -369,7 +369,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Cancel()
 		{
 			object[] paramsArray = null;

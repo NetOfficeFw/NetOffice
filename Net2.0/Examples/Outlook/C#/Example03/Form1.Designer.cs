@@ -111,7 +111,7 @@
             this.textBoxBody.Name = "textBoxBody";
             this.textBoxBody.Size = new System.Drawing.Size(316, 121);
             this.textBoxBody.TabIndex = 11;
-            this.textBoxBody.Text = "Works fine! thx.";
+            this.textBoxBody.Text = "This is a test mail.";
             this.textBoxBody.WordWrap = false;
             // 
             // Form1

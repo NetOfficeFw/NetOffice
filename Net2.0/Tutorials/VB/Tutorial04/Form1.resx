@@ -120,8 +120,11 @@
   <data name="richTextBoxInfo.Text" xml:space="preserve">
     <value>Sometimes it is very useful to know the count of open COM Proxies in your application.
 NetOffice offers you a static property and notification event for this.
-This example shows you how to use them.
 
-See chapter5  in technical documentation for further info.</value>
+LateBindingApi.Core.Factory.ProxyCountChanged   // event
+LateBindingApi.Core.Factory.ProxyCount	      // property
+
+This example shows you how to use them.
+See chapter4 in technical documentation for further info.</value>
   </data>
 </root>

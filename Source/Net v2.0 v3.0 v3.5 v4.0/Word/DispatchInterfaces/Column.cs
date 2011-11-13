@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Column SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Column SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Column : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single Width
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IsFirst
 		{
 			get
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IsLast
 		{
 			get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Cells Cells
 		{
 			get
@@ -204,7 +204,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Borders Borders
 		{
 			get
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shading Shading
 		{
 			get
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Column Next
 		{
 			get
@@ -257,7 +257,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Column Previous
 		{
 			get
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 NestingLevel
 		{
 			get
@@ -288,7 +288,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single PreferredWidth
 		{
 			get
@@ -308,7 +308,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType
 		{
 			get
@@ -331,7 +331,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -341,7 +341,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -353,7 +353,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="ColumnWidth">Single ColumnWidth</param>
 		/// <param name="RulerStyle">NetOffice.WordApi.Enums.WdRulerStyle RulerStyle</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnWidth, rulerStyle);
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void AutoFit()
 		{
 			object[] paramsArray = null;
@@ -378,7 +378,7 @@ namespace NetOffice.WordApi
 		/// <param name="SortOrder">optional object SortOrder</param>
 		/// <param name="CaseSensitive">optional object CaseSensitive</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, languageID);
@@ -388,10 +388,65 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortOld()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object sortFieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive);
 			Invoker.Method(this, "SortOld", paramsArray);
 		}
 
@@ -408,7 +463,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
@@ -418,10 +473,155 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Sort()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		/// <param name="IgnoreHe">optional object IgnoreHe</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe);
 			Invoker.Method(this, "Sort", paramsArray);
 		}
 

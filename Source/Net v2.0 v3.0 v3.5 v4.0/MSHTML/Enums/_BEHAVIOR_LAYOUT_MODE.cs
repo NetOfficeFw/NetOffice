@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4, 
+	 /// SupportByLibrary MSHTML 4
 	 /// </summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _BEHAVIOR_LAYOUT_MODE
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIORLAYOUTMODE_NATURAL = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIORLAYOUTMODE_MINWIDTH = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIORLAYOUTMODE_MAXWIDTH = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>16384</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIORLAYOUTMODE_MEDIA_RESOLUTION = 16384,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>32768</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIORLAYOUTMODE_FINAL_PERCENT = 32768,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4, 
+		 /// SupportByLibrary MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibrary("MSHTML", 4)]
+		 [SupportByLibraryAttribute("MSHTML", 4)]
 		 BEHAVIOR_LAYOUT_MODE_Max = 2147483647
 	}
 }

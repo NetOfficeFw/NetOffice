@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface OMathFunctions SupportByLibrary Word, 12,14
+	/// DispatchInterface OMathFunctions SupportByLibraryAttribute Word, 12,14
 	///</summary>
-	[SupportByLibrary("Word", 12,14)]
+	[SupportByLibraryAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathFunctions : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.OMathFunction this[Int32 index]
 		{
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// <param name="Type">NetOffice.WordApi.Enums.WdOMathFunctionType Type</param>
 		/// <param name="NumArgs">optional object NumArgs</param>
 		/// <param name="NumCols">optional object NumCols</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, object numArgs, object numCols)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type, numArgs, numCols);
@@ -177,10 +177,27 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
 		/// <param name="Type">NetOffice.WordApi.Enums.WdOMathFunctionType Type</param>
-		[SupportByLibrary("Word", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.OMathFunction newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.OMathFunction.LateBindingApiWrapperType) as NetOffice.WordApi.OMathFunction;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Type">NetOffice.WordApi.Enums.WdOMathFunctionType Type</param>
+		/// <param name="NumArgs">optional object NumArgs</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.OMathFunction Add(NetOffice.WordApi.Range range, NetOffice.WordApi.Enums.WdOMathFunctionType type, object numArgs)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, type, numArgs);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.OMathFunction newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.OMathFunction.LateBindingApiWrapperType) as NetOffice.WordApi.OMathFunction;
 			return newObject;
@@ -190,7 +207,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

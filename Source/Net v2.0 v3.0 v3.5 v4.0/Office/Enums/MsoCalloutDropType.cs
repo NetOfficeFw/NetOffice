@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoCalloutDropType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoCalloutDropMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoCalloutDropCustom = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoCalloutDropTop = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoCalloutDropCenter = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoCalloutDropBottom = 4
 	}
 }

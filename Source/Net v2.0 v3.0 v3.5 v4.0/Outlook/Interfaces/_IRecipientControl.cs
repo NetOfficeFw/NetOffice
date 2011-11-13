@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface _IRecipientControl SupportByLibrary Outlook, 9,10,11,12,14
+	/// Interface _IRecipientControl SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _IRecipientControl : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool Enabled
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 BackColor
 		{
 			get
@@ -115,7 +115,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 ForeColor
 		{
 			get
@@ -135,7 +135,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool ReadOnly
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Font
 		{
 			get
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 SpecialEffect
 		{
 			get

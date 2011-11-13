@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IControls SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IControls SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IControls : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public COMObject this[Int32 index]
 		{
@@ -114,7 +114,10 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSComctlLib", 6)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSComctlLib, 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

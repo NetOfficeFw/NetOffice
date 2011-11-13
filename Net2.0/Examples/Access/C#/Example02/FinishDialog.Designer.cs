@@ -85,7 +85,7 @@
             this.MinimizeBox = false;
             this.Name = "FinishDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Example1";
+            this.Text = "Example02";
             this.ResumeLayout(false);
             this.PerformLayout();
 

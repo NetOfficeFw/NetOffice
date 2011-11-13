@@ -15,9 +15,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CommandBarComboBox SupportByLibrary Office, 9,10,11,12,14
+	/// CoClass CommandBarComboBox SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarComboBox : _CommandBarComboBox, IEventBinding 
 	{

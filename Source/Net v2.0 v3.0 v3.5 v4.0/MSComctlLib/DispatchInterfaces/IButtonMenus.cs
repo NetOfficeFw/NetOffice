@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IButtonMenus SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IButtonMenus SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IButtonMenus : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
@@ -98,7 +98,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu get_ControlDefault(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -112,7 +112,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IButtonMenu value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -124,7 +124,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IButtonMenu this[object index]
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -155,7 +155,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -168,7 +168,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Index">optional object Index</param>
 		/// <param name="Key">optional object Key</param>
 		/// <param name="Text">optional object Text</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
@@ -180,10 +180,40 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index, object key)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.MSComctlLibApi.IButtonMenu newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButtonMenu;
 			return newObject;
@@ -193,7 +223,10 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSComctlLib", 6)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSComctlLib, 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

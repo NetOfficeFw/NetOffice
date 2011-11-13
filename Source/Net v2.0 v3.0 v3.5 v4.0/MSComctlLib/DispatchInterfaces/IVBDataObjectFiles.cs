@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IVBDataObjectFiles SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IVBDataObjectFiles SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBDataObjectFiles : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public string this[Int32 lIndex]
 		{
@@ -94,7 +94,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -114,7 +114,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		/// <param name="vIndex">optional object vIndex</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Add(string bstrFilename, object vIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename, vIndex);
@@ -125,7 +125,8 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Add(string bstrFilename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename);
@@ -135,7 +136,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -146,7 +147,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="vIndex">object vIndex</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Remove(object vIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vIndex);
@@ -157,7 +158,10 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSComctlLib", 6)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSComctlLib, 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

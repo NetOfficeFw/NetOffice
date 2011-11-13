@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IEnumPrivacyRecords SupportByLibrary MSHTML, 4
+	/// Interface IEnumPrivacyRecords SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumPrivacyRecords : COMObject
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 reset()
 		{
 			object[] paramsArray = null;
@@ -90,7 +90,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pSize">Int32 pSize</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetSize(Int32 pSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pSize);
@@ -102,7 +102,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pState">Int32 pState</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetPrivacyImpacted(Int32 pState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pState);
@@ -117,7 +117,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pbstrPolicyRef">string pbstrPolicyRef</param>
 		/// <param name="pdwReserved">Int32 pdwReserved</param>
 		/// <param name="pdwPrivacyFlags">Int32 pdwPrivacyFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Next(string pbstrUrl, string pbstrPolicyRef, Int32 pdwReserved, Int32 pdwPrivacyFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrUrl, pbstrPolicyRef, pdwReserved, pdwPrivacyFlags);

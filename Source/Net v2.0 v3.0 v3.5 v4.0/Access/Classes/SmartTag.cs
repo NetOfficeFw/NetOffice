@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass SmartTag SupportByLibrary Access, 11,12,14
+	/// CoClass SmartTag SupportByLibraryAttribute Access, 11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 11,12,14)]
+	[SupportByLibraryAttribute("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SmartTag : _SmartTag, IEventBinding 
 	{

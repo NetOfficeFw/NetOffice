@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface CommandBarControls SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface CommandBarControls SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CommandBarControls : _IMsoDispObj ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CommandBarControl this[object index]
 		{
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBar Parent
 		{
 			get
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Parameter">optional object Parameter</param>
 		/// <param name="Before">optional object Before</param>
 		/// <param name="Temporary">optional object Temporary</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter, before, temporary);
@@ -146,10 +146,73 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBarControl Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.CommandBarControl Add(object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Id">optional object Id</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Id">optional object Id</param>
+		/// <param name="Parameter">optional object Parameter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Id">optional object Id</param>
+		/// <param name="Parameter">optional object Parameter</param>
+		/// <param name="Before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter, before);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
@@ -159,7 +222,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

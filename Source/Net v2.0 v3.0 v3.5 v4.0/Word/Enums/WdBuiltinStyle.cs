@@ -4,948 +4,948 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdBuiltinStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-1</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleNormal = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-37</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleEnvelopeAddress = -37,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-38</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleEnvelopeReturn = -38,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-67</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyText = -67,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading1 = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-3</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading2 = -3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading3 = -4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-5</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading4 = -5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-6</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading5 = -6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-7</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading6 = -7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-8</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading7 = -8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-9</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading8 = -9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-10</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeading9 = -10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-11</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex1 = -11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-12</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex2 = -12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-13</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex3 = -13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-14</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex4 = -14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-15</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex5 = -15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-16</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex6 = -16,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-17</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex7 = -17,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-18</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex8 = -18,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-19</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndex9 = -19,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-20</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC1 = -20,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-21</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC2 = -21,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-22</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC3 = -22,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-23</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC4 = -23,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-24</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC5 = -24,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-25</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC6 = -25,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-26</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC7 = -26,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-27</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC8 = -27,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-28</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOC9 = -28,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-29</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleNormalIndent = -29,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-30</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleFootnoteText = -30,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-31</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleCommentText = -31,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-32</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHeader = -32,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-33</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleFooter = -33,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-34</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleIndexHeading = -34,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-35</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleCaption = -35,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-36</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTableOfFigures = -36,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-39</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleFootnoteReference = -39,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-40</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleCommentReference = -40,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-41</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleLineNumber = -41,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-42</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStylePageNumber = -42,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-43</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleEndnoteReference = -43,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-44</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleEndnoteText = -44,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-45</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTableOfAuthorities = -45,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-46</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleMacroText = -46,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-47</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTOAHeading = -47,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-48</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleList = -48,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-49</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListBullet = -49,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-50</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListNumber = -50,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-51</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleList2 = -51,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-52</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleList3 = -52,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-53</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleList4 = -53,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-54</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleList5 = -54,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-55</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListBullet2 = -55,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-56</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListBullet3 = -56,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-57</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListBullet4 = -57,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-58</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListBullet5 = -58,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-59</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListNumber2 = -59,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-60</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListNumber3 = -60,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-61</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListNumber4 = -61,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-62</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListNumber5 = -62,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-63</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleTitle = -63,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-64</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleClosing = -64,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-65</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleSignature = -65,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-66</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleDefaultParagraphFont = -66,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-68</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyTextIndent = -68,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-69</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListContinue = -69,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-70</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListContinue2 = -70,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-71</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListContinue3 = -71,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-72</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListContinue4 = -72,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-73</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleListContinue5 = -73,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-74</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleMessageHeader = -74,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-75</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleSubtitle = -75,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-76</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleSalutation = -76,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-77</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleDate = -77,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-78</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyTextFirstIndent = -78,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-79</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyTextFirstIndent2 = -79,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-80</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleNoteHeading = -80,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-81</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyText2 = -81,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-82</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyText3 = -82,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-83</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyTextIndent2 = -83,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-84</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBodyTextIndent3 = -84,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-85</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleBlockQuotation = -85,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-86</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHyperlink = -86,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-87</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHyperlinkFollowed = -87,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-88</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleStrong = -88,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-89</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleEmphasis = -89,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-90</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleNavPane = -90,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-91</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStylePlainText = -91,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-95</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlNormal = -95,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-96</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlAcronym = -96,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-97</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlAddress = -97,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-98</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlCite = -98,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-99</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlCode = -99,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-100</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlDfn = -100,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-101</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlKbd = -101,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-102</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlPre = -102,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-103</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlSamp = -103,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-104</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlTt = -104,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-105</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdStyleHtmlVar = -105,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-106</remarks>
-		 [SupportByLibrary("Word", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
 		 wdStyleNormalTable = -106,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-158</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleNormalObject = -158,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-159</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightShading = -159,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-160</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightList = -160,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-161</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightGrid = -161,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-162</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumShading1 = -162,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-163</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumShading2 = -163,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-164</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumList1 = -164,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-165</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumList2 = -165,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-166</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumGrid1 = -166,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-167</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumGrid2 = -167,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-168</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumGrid3 = -168,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-169</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableDarkList = -169,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-170</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableColorfulShading = -170,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-171</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableColorfulList = -171,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-172</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableColorfulGrid = -172,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-173</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightShadingAccent1 = -173,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-174</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightListAccent1 = -174,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-175</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableLightGridAccent1 = -175,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-176</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumShading1Accent1 = -176,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-177</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumShading2Accent1 = -177,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-178</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTableMediumList1Accent1 = -178,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-180</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleListParagraph = -180,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-181</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleQuote = -181,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-182</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleIntenseQuote = -182,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-261</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleSubtleEmphasis = -261,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-262</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleIntenseEmphasis = -262,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-263</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleSubtleReference = -263,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-264</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleIntenseReference = -264,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-265</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleBookTitle = -265,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-266</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleBibliography = -266,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>-267</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdStyleTocHeading = -267
 	}
 }

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface UserPermission SupportByLibrary Office, 11,12,14
+	/// DispatchInterface UserPermission SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UserPermission : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string UserId
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Permission
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public object ExpirationDate
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void Remove()
 		{
 			object[] paramsArray = null;

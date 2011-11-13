@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjEditionUpdate
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjAutomaticUpdate = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjManualUpdate = 5
 	}
 }

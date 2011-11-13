@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14, 
+	 /// SupportByLibrary Office 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoTextCharWrap
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoCharWrapMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoNoCharWrap = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoStandardCharWrap = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoStrictCharWrap = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoCustomCharWrap = 3
 	}
 }

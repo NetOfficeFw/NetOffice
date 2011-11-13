@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IShapes SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IShapes SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IShapes : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.ShapeRange get_Range(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Shape this[object index]
 		{
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="BeginY">Single BeginY</param>
 		/// <param name="EndX">Single EndX</param>
 		/// <param name="EndY">Single EndY</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, beginX, beginY, endX, endY);
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddCurve(object safeArrayOfPoints)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="BeginY">Single BeginY</param>
 		/// <param name="EndX">Single EndX</param>
 		/// <param name="EndY">Single EndY</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beginX, beginY, endX, endY);
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top, width, height);
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SafeArrayOfPoints">object SafeArrayOfPoints</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="FontItalic">NetOffice.OfficeApi.Enums.MsoTriState FontItalic</param>
 		/// <param name="Left">Single Left</param>
 		/// <param name="Top">Single Top</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top);
@@ -339,7 +339,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
@@ -354,7 +354,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="EditingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="X1">Single X1</param>
 		/// <param name="Y1">Single Y1</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(editingType, x1, y1);
@@ -366,7 +366,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SelectAll()
 		{
 			object[] paramsArray = null;
@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Int32 Top</param>
 		/// <param name="Width">Int32 Width</param>
 		/// <param name="Height">Int32 Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddFormControl(NetOffice.ExcelApi.Enums.XlFormControl type, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width, height);
@@ -417,10 +417,196 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddOLEObject()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
+		/// <param name="Left">optional object Left</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top);
+			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ClassType">optional object ClassType</param>
+		/// <param name="Filename">optional object Filename</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="IconLabel">optional object IconLabel</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		public NetOffice.ExcelApi.Shape AddOLEObject(object classType, object filename, object link, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object left, object top, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(classType, filename, link, displayAsIcon, iconFileName, iconIndex, iconLabel, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
 			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
 			return newObject;
@@ -434,7 +620,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
@@ -450,7 +636,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">Single Top</param>
 		/// <param name="Width">Single Width</param>
 		/// <param name="Height">Single Height</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -467,7 +653,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType, left, top, width, height);
@@ -479,10 +665,73 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Shape AddChart()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="XlChartType">optional object XlChartType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public NetOffice.ExcelApi.Shape AddChart(object xlChartType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType);
+			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="XlChartType">optional object XlChartType</param>
+		/// <param name="Left">optional object Left</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType, left);
+			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="XlChartType">optional object XlChartType</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType, left, top);
+			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 12, 14
+		/// </summary>
+		/// <param name="XlChartType">optional object XlChartType</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 12,14)]
+		public NetOffice.ExcelApi.Shape AddChart(object xlChartType, object left, object top, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(xlChartType, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
 			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
 			return newObject;
@@ -496,7 +745,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width, height);
@@ -509,10 +758,59 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
-		[SupportByLibrary("Excel", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout);
+			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="Left">optional object Left</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(layout, left);
+			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top);
+			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
+			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
 			NetOffice.ExcelApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
 			return newObject;
@@ -522,7 +820,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

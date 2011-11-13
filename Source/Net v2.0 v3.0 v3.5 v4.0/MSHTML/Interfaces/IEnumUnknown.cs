@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IEnumUnknown SupportByLibrary MSHTML, 4
+	/// Interface IEnumUnknown SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumUnknown : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="celt">Int32 celt</param>
 		/// <param name="rgelt">object rgelt</param>
 		/// <param name="pceltFetched">Int32 pceltFetched</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RemoteNext(Int32 celt, object rgelt, Int32 pceltFetched)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(celt, rgelt, pceltFetched);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Skip(Int32 celt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(celt);
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 reset()
 		{
 			object[] paramsArray = null;
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppEnum">LateBindingApi.MSHTMLApi.IEnumUnknown ppEnum</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Clone(LateBindingApi.MSHTMLApi.IEnumUnknown ppEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);

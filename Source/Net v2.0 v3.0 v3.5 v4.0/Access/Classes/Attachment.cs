@@ -31,9 +31,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass Attachment SupportByLibrary Access, 12,14
+	/// CoClass Attachment SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Attachment : _Attachment, IEventBinding 
 	{

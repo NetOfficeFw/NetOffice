@@ -15,9 +15,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLNamespace SupportByLibrary MSHTML, 4
+	/// CoClass HTMLNamespace SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLNamespace : DispHTMLNamespace, IEventBinding 
 	{

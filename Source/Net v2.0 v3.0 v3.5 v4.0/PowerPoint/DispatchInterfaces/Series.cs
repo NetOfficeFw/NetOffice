@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Series SupportByLibrary PowerPoint, 14
+	/// DispatchInterface Series SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Series : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartBorder Border
 		{
 			get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ErrorBars ErrorBars
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Explosion
 		{
 			get
@@ -164,7 +164,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public string Formula
 		{
 			get
@@ -184,7 +184,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public string FormulaLocal
 		{
 			get
@@ -204,7 +204,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public string FormulaR1C1
 		{
 			get
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public string FormulaR1C1Local
 		{
 			get
@@ -244,7 +244,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool HasDataLabels
 		{
 			get
@@ -264,7 +264,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool HasErrorBars
 		{
 			get
@@ -284,7 +284,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Interior Interior
 		{
 			get
@@ -300,7 +300,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFillFormat Fill
 		{
 			get
@@ -316,7 +316,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool InvertIfNegative
 		{
 			get
@@ -336,7 +336,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 MarkerBackgroundColor
 		{
 			get
@@ -356,7 +356,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerBackgroundColorIndex
 		{
 			get
@@ -376,7 +376,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 MarkerForegroundColor
 		{
 			get
@@ -396,7 +396,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerForegroundColorIndex
 		{
 			get
@@ -416,7 +416,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 MarkerSize
 		{
 			get
@@ -436,7 +436,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlMarkerStyle MarkerStyle
 		{
 			get
@@ -456,7 +456,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public string Name
 		{
 			get
@@ -476,7 +476,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlChartPictureType PictureType
 		{
 			get
@@ -496,7 +496,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 PlotOrder
 		{
 			get
@@ -516,7 +516,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool Smooth
 		{
 			get
@@ -536,7 +536,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Type
 		{
 			get
@@ -556,7 +556,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
 			get
@@ -576,7 +576,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Values
 		{
 			get
@@ -604,7 +604,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object XValues
 		{
 			get
@@ -632,7 +632,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object BubbleSizes
 		{
 			get
@@ -660,7 +660,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlBarShape BarShape
 		{
 			get
@@ -680,7 +680,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool ApplyPictToSides
 		{
 			get
@@ -700,7 +700,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool ApplyPictToFront
 		{
 			get
@@ -720,7 +720,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool ApplyPictToEnd
 		{
 			get
@@ -740,7 +740,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool Has3DEffect
 		{
 			get
@@ -760,7 +760,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool Shadow
 		{
 			get
@@ -780,7 +780,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public bool HasLeaderLines
 		{
 			get
@@ -800,7 +800,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.LeaderLines LeaderLines
 		{
 			get
@@ -816,7 +816,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
@@ -832,7 +832,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -847,7 +847,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Double PictureUnit2
 		{
 			get
@@ -867,7 +867,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -883,7 +883,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 PictureUnit
 		{
 			get
@@ -903,7 +903,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 PlotColorIndex
 		{
 			get
@@ -918,7 +918,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 InvertColor
 		{
 			get
@@ -938,7 +938,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex InvertColorIndex
 		{
 			get
@@ -961,7 +961,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object ClearFormats()
 		{
 			object[] paramsArray = null;
@@ -980,7 +980,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Copy()
 		{
 			object[] paramsArray = null;
@@ -1000,7 +1000,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject DataLabels(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1012,7 +1012,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject DataLabels()
 		{
 			object[] paramsArray = null;
@@ -1024,7 +1025,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -1048,7 +1049,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
 		/// <param name="Amount">optional object Amount</param>
 		/// <param name="MinusValues">optional object MinusValues</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type, object amount, object minusValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction, include, type, amount, minusValues);
@@ -1070,7 +1071,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Direction">NetOffice.PowerPointApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="Include">NetOffice.PowerPointApi.Enums.XlErrorBarInclude Include</param>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction, include, type);
@@ -1089,7 +1091,31 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		/// <param name="Direction">NetOffice.PowerPointApi.Enums.XlErrorBarDirection Direction</param>
+		/// <param name="Include">NetOffice.PowerPointApi.Enums.XlErrorBarInclude Include</param>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
+		/// <param name="Amount">optional object Amount</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type, object amount)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(direction, include, type, amount);
+			object returnItem = Invoker.MethodReturn(this, "ErrorBar", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Paste()
 		{
 			object[] paramsArray = null;
@@ -1109,7 +1135,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Points(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1121,7 +1147,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Points()
 		{
 			object[] paramsArray = null;
@@ -1133,7 +1160,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -1153,7 +1180,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Trendlines(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -1165,7 +1192,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Trendlines()
 		{
 			object[] paramsArray = null;
@@ -1178,7 +1206,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartType);
@@ -1192,7 +1220,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="LegendKey">optional object LegendKey</param>
 		/// <param name="AutoText">optional object AutoText</param>
 		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
@@ -1212,10 +1240,56 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
+			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
+			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
@@ -1241,7 +1315,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="ShowPercentage">optional object ShowPercentage</param>
 		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="Separator">optional object Separator</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
@@ -1261,10 +1335,215 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		/// <param name="ShowPercentage">optional object ShowPercentage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
+			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlDataLabelsType Type</param>
+		/// <param name="LegendKey">optional object LegendKey</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="HasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="ShowSeriesName">optional object ShowSeriesName</param>
+		/// <param name="ShowCategoryName">optional object ShowCategoryName</param>
+		/// <param name="ShowValue">optional object ShowValue</param>
+		/// <param name="ShowPercentage">optional object ShowPercentage</param>
+		/// <param name="ShowBubbleSize">optional object ShowBubbleSize</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{

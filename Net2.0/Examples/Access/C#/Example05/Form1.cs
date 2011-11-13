@@ -16,7 +16,6 @@ using NetOffice.AccessApi.Constants;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
-
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
@@ -48,7 +47,7 @@ namespace Example05
 
             // create database name 
             string fileExtension = GetDefaultExtension(_accessApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", Environment.CurrentDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example05{1}", Application.StartupPath, fileExtension);
 
 
             // delete old database if exists
@@ -60,8 +59,7 @@ namespace Example05
         
 
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(
-                                                                                MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup);
             commandBarPopup.Caption = "commandBarPopup";
 
 
@@ -79,7 +77,7 @@ namespace Example05
             #region CommandBarButton
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             Clipboard.SetDataObject(this.Icon.ToBitmap());
@@ -117,15 +115,20 @@ namespace Example05
         #region Helper
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".mdbx"
+        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
         /// </summary>
         /// <param name="application">the instance</param>
         /// <returns>the extension</returns>
         private static string GetDefaultExtension(Access.Application application)
-        {
+        { 
+            // Access 2000 doesnt have the Version property(unfortunately)
+            // we check for support with the SupportEntity method, implemented by NetOffice
+            if (!application.EntityIsAvailable("Version"))
+                return ".accdb";
+
             double Version = Convert.ToDouble(application.Version);
             if (Version >= 120.00)
-                return ".mdbx";
+                return ".accdb";
             else
                 return ".mdb";
         }

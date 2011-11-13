@@ -4,318 +4,318 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoShadowType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadowMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow1 = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow2 = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow3 = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow4 = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow5 = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow6 = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow7 = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow8 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow9 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow10 = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow11 = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow12 = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow13 = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow14 = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow15 = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow16 = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow17 = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow18 = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow19 = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoShadow20 = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow21 = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow22 = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow23 = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow24 = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow25 = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow26 = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>27</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow27 = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>28</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow28 = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>29</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow29 = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow30 = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow31 = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow32 = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow33 = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow34 = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow35 = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow36 = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>37</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow37 = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow38 = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow39 = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow40 = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow41 = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow42 = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14, 
+		 /// SupportByLibrary Office 14
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByLibrary("Office", 14)]
+		 [SupportByLibraryAttribute("Office", 14)]
 		 msoShadow43 = 43
 	}
 }

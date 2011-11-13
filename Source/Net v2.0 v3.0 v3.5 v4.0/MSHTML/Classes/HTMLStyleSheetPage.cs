@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLStyleSheetPage SupportByLibrary MSHTML, 4
+	/// CoClass HTMLStyleSheetPage SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLStyleSheetPage : DispHTMLStyleSheetPage, IEventBinding 
 	{

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotClassFactory SupportByLibrary OWC10, 1
+	/// DispatchInterface PivotClassFactory SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotClassFactory : COMObject
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject get_NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(detailCell);
@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject get_NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(aggregate);
@@ -105,7 +105,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject get_NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowMember);
@@ -119,7 +119,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject get_NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnMember);
@@ -133,7 +133,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public COMObject get_NewCell(NetOffice.OWC10Api.PivotCell cell)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cell);

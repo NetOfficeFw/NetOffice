@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISegment SupportByLibrary MSHTML, 4
+	/// Interface ISegment SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISegment : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pIStart">LateBindingApi.MSHTMLApi.IMarkupPointer pIStart</param>
 		/// <param name="pIEnd">LateBindingApi.MSHTMLApi.IMarkupPointer pIEnd</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetPointers(LateBindingApi.MSHTMLApi.IMarkupPointer pIStart, LateBindingApi.MSHTMLApi.IMarkupPointer pIEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStart, pIEnd);

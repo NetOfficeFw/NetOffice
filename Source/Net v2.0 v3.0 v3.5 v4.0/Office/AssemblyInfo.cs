@@ -26,8 +26,8 @@ using LateBindingApi.Core;
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyFileVersion("1.3.0.0")]
 [assembly: ComVisibleAttribute(false)]
 [assembly: LateBindingAttribute("1.0")]
 
@@ -35,7 +35,7 @@ using LateBindingApi.Core;
 /*
 Alias Table
  
-[SupportByLibrary("Office", 9,10,11,12,14)]
+[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 MsoRGBType as Int32
 
 */

@@ -35,7 +35,8 @@ Partial Class Form1
         Me.textBox1.Size = New System.Drawing.Size(381, 127)
         Me.textBox1.TabIndex = 15
         Me.textBox1.Text = "This example contains code to add a new document. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "In this document we add and s" & _
-            "tart a macro which writes some text into the document."
+            "tart a macro which writes some text into the document. the option ""Trust access " & _
+            "to Visual Basic Project"" must be set."
         '
         'button1
         '

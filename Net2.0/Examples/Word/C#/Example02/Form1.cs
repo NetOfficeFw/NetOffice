@@ -58,8 +58,7 @@ namespace Example02
             // save the document
             string fileExtension = GetDefaultExtension(wordApplication);
             object documentFile = string.Format("{0}\\Example02{1}", Application.StartupPath, fileExtension);
-            newDocument.SaveAs(documentFile, Missing.Value, Missing.Value, Missing.Value,  Missing.Value, Missing.Value,
-                                            Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();

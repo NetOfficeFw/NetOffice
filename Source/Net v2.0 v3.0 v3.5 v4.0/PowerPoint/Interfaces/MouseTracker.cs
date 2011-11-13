@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// Interface MouseTracker SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// Interface MouseTracker SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class MouseTracker : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="X">Single X</param>
 		/// <param name="Y">Single Y</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 OnTrack(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="X">Single X</param>
 		/// <param name="Y">Single Y</param>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 EndTrack(Single x, Single y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);

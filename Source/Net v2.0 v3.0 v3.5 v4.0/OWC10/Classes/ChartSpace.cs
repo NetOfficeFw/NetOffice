@@ -40,9 +40,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass ChartSpace SupportByLibrary OWC10, 1
+	/// CoClass ChartSpace SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ChartSpace : ChChartSpace, IEventBinding 
 	{

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface ISimpleDataConverter SupportByLibrary OWC10, 1
+	/// Interface ISimpleDataConverter SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISimpleDataConverter : COMObject
 	{
@@ -82,7 +82,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="vtDest">Int32 vtDest</param>
 		/// <param name="pUnknownElement">object pUnknownElement</param>
 		/// <param name="pvarDest">object pvarDest</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ConvertData(object varSrc, Int32 vtDest, object pUnknownElement, object pvarDest)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSrc, vtDest, pUnknownElement, pvarDest);
@@ -95,7 +95,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="vt1">Int32 vt1</param>
 		/// <param name="vt2">Int32 vt2</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 CanConvertData(Int32 vt1, Int32 vt2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vt1, vt2);

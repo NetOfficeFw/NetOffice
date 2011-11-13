@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTCEventBehavior SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTCEventBehavior SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTCEventBehavior : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pVar">LateBindingApi.MSHTMLApi.IHTMLEventObj pVar</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void fire(LateBindingApi.MSHTMLApi.IHTMLEventObj pVar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pVar);

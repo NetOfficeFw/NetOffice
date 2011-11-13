@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Conversation SupportByLibrary Outlook, 14
+	/// CoClass Conversation SupportByLibraryAttribute Outlook, 14
 	///</summary>
-	[SupportByLibrary("Outlook", 14)]
+	[SupportByLibraryAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Conversation : _Conversation, IEventBinding 
 	{

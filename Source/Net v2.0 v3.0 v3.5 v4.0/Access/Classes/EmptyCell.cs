@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass EmptyCell SupportByLibrary Access, 14
+	/// CoClass EmptyCell SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class EmptyCell : _EmptyCell, IEventBinding 
 	{

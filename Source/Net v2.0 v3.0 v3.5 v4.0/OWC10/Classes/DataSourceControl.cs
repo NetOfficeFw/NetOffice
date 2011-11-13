@@ -36,9 +36,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass DataSourceControl SupportByLibrary OWC10, 1
+	/// CoClass DataSourceControl SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataSourceControl : IDataSourceControl, IEventBinding 
 	{

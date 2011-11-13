@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _PropertyAccessor SupportByLibrary Outlook, 12,14
+	/// DispatchInterface _PropertyAccessor SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _PropertyAccessor : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="SchemaName">string SchemaName</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public object GetProperty(string schemaName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaName);
@@ -164,7 +164,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="SchemaName">string SchemaName</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public void SetProperty(string schemaName, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaName, value);
@@ -175,7 +175,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="SchemaNames">object SchemaNames</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public object GetProperties(object schemaNames)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames);
@@ -196,7 +196,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="SchemaNames">object SchemaNames</param>
 		/// <param name="Values">object Values</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public object SetProperties(object schemaNames, object values)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames, values);
@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Value">DateTime Value</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public DateTime UTCToLocalTime(DateTime value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -228,7 +228,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Value">DateTime Value</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public DateTime LocalTimeToUTC(DateTime value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -240,7 +240,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Value">string Value</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public object StringToBinary(string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -260,7 +260,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public string BinaryToString(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -272,7 +272,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="SchemaName">string SchemaName</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public void DeleteProperty(string schemaName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaName);
@@ -283,7 +283,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="SchemaNames">object SchemaNames</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public object DeleteProperties(object schemaNames)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames);

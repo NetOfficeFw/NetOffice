@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispXMLSerializer SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispXMLSerializer SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispXMLSerializer : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pNode">LateBindingApi.MSHTMLApi.IHTMLDOMNode pNode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string serializeToString(LateBindingApi.MSHTMLApi.IHTMLDOMNode pNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNode);

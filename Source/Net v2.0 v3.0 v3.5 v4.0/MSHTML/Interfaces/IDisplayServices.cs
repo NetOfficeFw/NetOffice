@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IDisplayServices SupportByLibrary MSHTML, 4
+	/// Interface IDisplayServices SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDisplayServices : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer ppDispPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CreateDisplayPointer(LateBindingApi.MSHTMLApi.IDisplayPointer ppDispPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppDispPointer);
@@ -94,7 +94,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="eSource">LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
 		/// <param name="eDestination">LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eDestination</param>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 TransformRect(tagRECT pRect, LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eSource, LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eDestination, LateBindingApi.MSHTMLApi.IHTMLElement pIElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRect, eSource, eDestination, pIElement);
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="eSource">LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
 		/// <param name="eDestination">LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eDestination</param>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 TransformPoint(tagPOINT pPoint, LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eSource, LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eDestination, LateBindingApi.MSHTMLApi.IHTMLElement pIElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPoint, eSource, eDestination, pIElement);
@@ -121,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppCaret">LateBindingApi.MSHTMLApi.IHTMLCaret ppCaret</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCaret(LateBindingApi.MSHTMLApi.IHTMLCaret ppCaret)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppCaret);
@@ -134,7 +134,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointer">LateBindingApi.MSHTMLApi.IMarkupPointer pPointer</param>
 		/// <param name="ppComputedStyle">LateBindingApi.MSHTMLApi.IHTMLComputedStyle ppComputedStyle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetComputedStyle(LateBindingApi.MSHTMLApi.IMarkupPointer pPointer, LateBindingApi.MSHTMLApi.IHTMLComputedStyle ppComputedStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointer, ppComputedStyle);
@@ -147,7 +147,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="rect">tagRECT rect</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ScrollRectIntoView(LateBindingApi.MSHTMLApi.IHTMLElement pIElement, tagRECT rect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, rect);
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="pfHasFlowLayout">Int32 pfHasFlowLayout</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 HasFlowLayout(LateBindingApi.MSHTMLApi.IHTMLElement pIElement, Int32 pfHasFlowLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, pfHasFlowLayout);

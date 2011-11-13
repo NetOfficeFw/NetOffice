@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface PickerResults SupportByLibrary Office, 14
+	/// DispatchInterface PickerResults SupportByLibraryAttribute Office, 14
 	///</summary>
-	[SupportByLibrary("Office", 14)]
+	[SupportByLibraryAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerResults : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.PickerResult this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 Count
 		{
 			get
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="SIPId">string SIPId</param>
 		/// <param name="ItemData">optional object ItemData</param>
 		/// <param name="SubItems">optional object SubItems</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData, object subItems)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData, subItems);
@@ -135,10 +135,29 @@ namespace NetOffice.OfficeApi
 		/// <param name="DisplayName">string DisplayName</param>
 		/// <param name="Type">string Type</param>
 		/// <param name="SIPId">string SIPId</param>
-		[SupportByLibrary("Office", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 14)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerResult;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 14
+		/// </summary>
+		/// <param name="Id">string Id</param>
+		/// <param name="DisplayName">string DisplayName</param>
+		/// <param name="Type">string Type</param>
+		/// <param name="SIPId">string SIPId</param>
+		/// <param name="ItemData">optional object ItemData</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 14)]
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.OfficeApi.PickerResult newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerResult;
 			return newObject;
@@ -148,7 +167,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

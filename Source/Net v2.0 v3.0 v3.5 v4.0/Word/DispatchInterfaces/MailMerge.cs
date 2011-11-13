@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface MailMerge SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface MailMerge SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MailMerge : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeMainDocType MainDocumentType
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeState State
 		{
 			get
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeDestination Destination
 		{
 			get
@@ -178,7 +178,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.MailMergeDataSource DataSource
 		{
 			get
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.MailMergeFields Fields
 		{
 			get
@@ -210,7 +210,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 ViewMailMergeFieldCodes
 		{
 			get
@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SuppressBlankLines
 		{
 			get
@@ -250,7 +250,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool MailAsAttachment
 		{
 			get
@@ -270,7 +270,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string MailAddressFieldName
 		{
 			get
@@ -290,7 +290,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string MailSubject
 		{
 			get
@@ -310,7 +310,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool HighlightMergeFields
 		{
 			get
@@ -330,7 +330,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdMailMergeMailFormat MailFormat
 		{
 			get
@@ -350,7 +350,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public string ShowSendToCustom
 		{
 			get
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Int32 WizardState
 		{
 			get
@@ -402,7 +402,7 @@ namespace NetOffice.WordApi
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
 		/// <param name="Connection">optional object Connection</param>
 		/// <param name="LinkToSource">optional object LinkToSource</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection, object linkToSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource);
@@ -412,10 +412,135 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreateDataSource()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="HeaderRecord">optional object HeaderRecord</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="HeaderRecord">optional object HeaderRecord</param>
+		/// <param name="MSQuery">optional object MSQuery</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="HeaderRecord">optional object HeaderRecord</param>
+		/// <param name="MSQuery">optional object MSQuery</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="HeaderRecord">optional object HeaderRecord</param>
+		/// <param name="MSQuery">optional object MSQuery</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1);
+			Invoker.Method(this, "CreateDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="HeaderRecord">optional object HeaderRecord</param>
+		/// <param name="MSQuery">optional object MSQuery</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="Connection">optional object Connection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection);
 			Invoker.Method(this, "CreateDataSource", paramsArray);
 		}
 
@@ -426,7 +551,7 @@ namespace NetOffice.WordApi
 		/// <param name="PasswordDocument">optional object PasswordDocument</param>
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="HeaderRecord">optional object HeaderRecord</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument, object headerRecord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord);
@@ -437,7 +562,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreateHeaderSource(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -445,7 +571,34 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateHeaderSource(string name, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument);
+			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument);
+			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Format">optional object Format</param>
@@ -461,7 +614,7 @@ namespace NetOffice.WordApi
 		/// <param name="Connection">optional object Connection</param>
 		/// <param name="SQLStatement">optional object SQLStatement</param>
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
@@ -487,7 +640,7 @@ namespace NetOffice.WordApi
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
 		/// <param name="OpenExclusive">optional object OpenExclusive</param>
 		/// <param name="SubType">optional object SubType</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive, object subType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType);
@@ -498,7 +651,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void OpenDataSource(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -506,7 +660,255 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Connection">optional object Connection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="OpenExclusive">optional object OpenExclusive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive);
+			Invoker.Method(this, "OpenDataSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Format">optional object Format</param>
@@ -518,7 +920,7 @@ namespace NetOffice.WordApi
 		/// <param name="Revert">optional object Revert</param>
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -539,7 +941,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="OpenExclusive">optional object OpenExclusive</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object openExclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive);
@@ -550,7 +952,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void OpenHeaderSource(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -560,8 +963,140 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Pause">optional object Pause</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Execute(object pause)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pause);
@@ -571,7 +1106,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Execute()
 		{
 			object[] paramsArray = null;
@@ -581,7 +1117,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Check()
 		{
 			object[] paramsArray = null;
@@ -591,7 +1127,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void EditDataSource()
 		{
 			object[] paramsArray = null;
@@ -601,7 +1137,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void EditHeaderSource()
 		{
 			object[] paramsArray = null;
@@ -611,7 +1147,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void EditMainDocument()
 		{
 			object[] paramsArray = null;
@@ -622,7 +1158,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">string Type</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void UseAddressBook(string type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -646,7 +1182,7 @@ namespace NetOffice.WordApi
 		/// <param name="Connection">optional object Connection</param>
 		/// <param name="SQLStatement">optional object SQLStatement</param>
 		/// <param name="SQLStatement1">optional object SQLStatement1</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
@@ -657,10 +1193,233 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenDataSource2000(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Connection">optional object Connection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection);
+			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement);
 			Invoker.Method(this, "OpenDataSource2000", paramsArray);
 		}
 
@@ -677,7 +1436,7 @@ namespace NetOffice.WordApi
 		/// <param name="Revert">optional object Revert</param>
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -688,10 +1447,143 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void OpenHeaderSource2000(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
 			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
 		}
 
@@ -705,7 +1597,7 @@ namespace NetOffice.WordApi
 		/// <param name="ShowWriteStep">optional object ShowWriteStep</param>
 		/// <param name="ShowPreviewStep">optional object ShowPreviewStep</param>
 		/// <param name="ShowMergeStep">optional object ShowMergeStep</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep);
@@ -716,10 +1608,86 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="InitialState">object InitialState</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void ShowWizard(object initialState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialState);
+			Invoker.Method(this, "ShowWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="InitialState">object InitialState</param>
+		/// <param name="ShowDocumentStep">optional object ShowDocumentStep</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void ShowWizard(object initialState, object showDocumentStep)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep);
+			Invoker.Method(this, "ShowWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="InitialState">object InitialState</param>
+		/// <param name="ShowDocumentStep">optional object ShowDocumentStep</param>
+		/// <param name="ShowTemplateStep">optional object ShowTemplateStep</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep);
+			Invoker.Method(this, "ShowWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="InitialState">object InitialState</param>
+		/// <param name="ShowDocumentStep">optional object ShowDocumentStep</param>
+		/// <param name="ShowTemplateStep">optional object ShowTemplateStep</param>
+		/// <param name="ShowDataStep">optional object ShowDataStep</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep);
+			Invoker.Method(this, "ShowWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="InitialState">object InitialState</param>
+		/// <param name="ShowDocumentStep">optional object ShowDocumentStep</param>
+		/// <param name="ShowTemplateStep">optional object ShowTemplateStep</param>
+		/// <param name="ShowDataStep">optional object ShowDataStep</param>
+		/// <param name="ShowWriteStep">optional object ShowWriteStep</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
+			Invoker.Method(this, "ShowWizard", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="InitialState">object InitialState</param>
+		/// <param name="ShowDocumentStep">optional object ShowDocumentStep</param>
+		/// <param name="ShowTemplateStep">optional object ShowTemplateStep</param>
+		/// <param name="ShowDataStep">optional object ShowDataStep</param>
+		/// <param name="ShowWriteStep">optional object ShowWriteStep</param>
+		/// <param name="ShowPreviewStep">optional object ShowPreviewStep</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep);
 			Invoker.Method(this, "ShowWizard", paramsArray);
 		}
 

@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGAnimatedInteger SupportByLibrary MSHTML, 4
+	/// CoClass SVGAnimatedInteger SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGAnimatedInteger : ISVGAnimatedInteger, IEventBinding 
 	{

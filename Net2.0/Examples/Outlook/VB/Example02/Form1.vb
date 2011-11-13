@@ -16,8 +16,8 @@ Public Class Form1
         Dim newTask As Outlook.TaskItem = outlookApplication.CreateItem(OlItemType.olTaskItem)
 
         '  Configure the task at hand and save it.
-        newTask.Subject = "Don't forget to check for NetOffice.DeveloperUtils updates"
-        newTask.Body = "check updates here: http://netoffice.codeplex.com"
+        newTask.Subject = "Don't forget to check for NetOffice.Toolbox updates"
+        newTask.Body = "check updates here: http://netoffice.codeplex.com/releases"
         newTask.DueDate = DateTime.Now
         newTask.Importance = OlImportance.olImportanceHigh
 

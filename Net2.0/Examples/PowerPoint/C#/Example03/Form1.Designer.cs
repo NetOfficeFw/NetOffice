@@ -42,7 +42,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 118);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "create a button and macro there will be executed on click.";
+            this.textBox1.Text = "create a button and macro there will be executed on click.  the option \"Trust acc" +
+                "ess to Visual Basic Project\" must be set";
             // 
             // button1
             // 

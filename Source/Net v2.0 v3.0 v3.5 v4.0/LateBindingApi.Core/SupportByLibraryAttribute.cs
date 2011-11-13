@@ -5,7 +5,7 @@ namespace LateBindingApi.Core
     /// Indicates which COM Type Library Version supports the entity
     /// </summary>
     [AttributeUsage(AttributeTargets.All)]
-    public sealed class SupportByLibrary : System.Attribute
+    public sealed class SupportByLibraryAttribute : System.Attribute
     {
         /// <summary>
         /// returns library name
@@ -22,7 +22,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <param name="name"></param>
         /// <param name="versions"></param>
-        public SupportByLibrary(string name, params double[] versions)
+        public SupportByLibraryAttribute(string name, params double[] versions)
         {
             this.Name = name;
             this.Versions = versions;

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _DInspectorCtrl SupportByLibrary Outlook, 10
+	/// DispatchInterface _DInspectorCtrl SupportByLibraryAttribute Outlook, 10
 	///</summary>
-	[SupportByLibrary("Outlook", 10)]
+	[SupportByLibraryAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DInspectorCtrl : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 10)]
+		[SupportByLibraryAttribute("Outlook", 10)]
 		public string URL
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10)]
+		[SupportByLibraryAttribute("Outlook", 10)]
 		public COMObject Item
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
-		[SupportByLibrary("Outlook", 10)]
+		[SupportByLibraryAttribute("Outlook", 10)]
 		public void OnItemChange(object pdispItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdispItem);

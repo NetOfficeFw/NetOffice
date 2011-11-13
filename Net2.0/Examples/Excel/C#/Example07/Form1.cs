@@ -57,7 +57,7 @@ namespace Example07
                 workbookFile = string.Format("{0}\\Example07{1}", Application.StartupPath, fileExtension);
                 workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode.xlExclusive);
             }
-            catch (System.Reflection.TargetInvocationException throwedException)
+            catch (System.Runtime.InteropServices.COMException throwedException)
             {
                 string message = string.Format("An error is occured.{0}ExceptionTrace:{0}", Environment.NewLine);
                

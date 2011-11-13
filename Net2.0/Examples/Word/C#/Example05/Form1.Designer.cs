@@ -41,7 +41,8 @@
             this.textBox1.Size = new System.Drawing.Size(381, 127);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "This example contains code to add a new document. \r\nIn this document we add and s" +
-                "tart a macro which writes some text into the document.";
+                "tart a macro which writes some text into the document. the option \"Trust access " +
+                "to Visual Basic Project\" must be set";
             // 
             // button1
             // 

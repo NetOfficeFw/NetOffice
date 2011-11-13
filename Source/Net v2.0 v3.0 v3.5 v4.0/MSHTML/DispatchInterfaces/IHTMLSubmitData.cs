@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLSubmitData SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLSubmitData SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLSubmitData : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void appendNameValuePair(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="filename">string filename</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void appendNameFilePair(string name, string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, filename);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void appendItemSeparator()
 		{
 			object[] paramsArray = null;

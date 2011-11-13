@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Range SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Range SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Range : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string Text
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range FormattedText
 		{
 			get
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Start
 		{
 			get
@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 End
 		{
 			get
@@ -157,7 +157,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Font Font
 		{
 			get
@@ -178,7 +178,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Duplicate
 		{
 			get
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdStoryType StoryType
 		{
 			get
@@ -209,7 +209,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Tables Tables
 		{
 			get
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Words Words
 		{
 			get
@@ -241,7 +241,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Sentences Sentences
 		{
 			get
@@ -257,7 +257,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Characters Characters
 		{
 			get
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Footnotes Footnotes
 		{
 			get
@@ -289,7 +289,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Endnotes Endnotes
 		{
 			get
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Comments Comments
 		{
 			get
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Cells Cells
 		{
 			get
@@ -337,7 +337,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Sections Sections
 		{
 			get
@@ -353,7 +353,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Paragraphs Paragraphs
 		{
 			get
@@ -369,7 +369,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Borders Borders
 		{
 			get
@@ -390,7 +390,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Shading Shading
 		{
 			get
@@ -406,7 +406,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.TextRetrievalMode TextRetrievalMode
 		{
 			get
@@ -427,7 +427,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Fields Fields
 		{
 			get
@@ -443,7 +443,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.FormFields FormFields
 		{
 			get
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frames Frames
 		{
 			get
@@ -475,7 +475,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ParagraphFormat ParagraphFormat
 		{
 			get
@@ -496,7 +496,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListFormat ListFormat
 		{
 			get
@@ -512,7 +512,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Bookmarks Bookmarks
 		{
 			get
@@ -528,7 +528,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -544,7 +544,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -559,7 +559,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -575,7 +575,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Bold
 		{
 			get
@@ -595,7 +595,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Italic
 		{
 			get
@@ -615,7 +615,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdUnderline Underline
 		{
 			get
@@ -635,7 +635,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdEmphasisMark EmphasisMark
 		{
 			get
@@ -655,7 +655,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DisableCharacterSpaceGrid
 		{
 			get
@@ -675,7 +675,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Revisions Revisions
 		{
 			get
@@ -691,7 +691,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public object Style
 		{
 			get
@@ -719,7 +719,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 StoryLength
 		{
 			get
@@ -734,7 +734,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
 		{
 			get
@@ -754,7 +754,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.SynonymInfo SynonymInfo
 		{
 			get
@@ -770,7 +770,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Hyperlinks Hyperlinks
 		{
 			get
@@ -786,7 +786,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ListParagraphs ListParagraphs
 		{
 			get
@@ -802,7 +802,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Subdocuments Subdocuments
 		{
 			get
@@ -818,7 +818,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool GrammarChecked
 		{
 			get
@@ -838,7 +838,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool SpellingChecked
 		{
 			get
@@ -858,7 +858,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColorIndex HighlightColorIndex
 		{
 			get
@@ -878,7 +878,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Columns Columns
 		{
 			get
@@ -894,7 +894,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Rows Rows
 		{
 			get
@@ -910,7 +910,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 CanEdit
 		{
 			get
@@ -925,7 +925,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 CanPaste
 		{
 			get
@@ -940,7 +940,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IsEndOfRowMark
 		{
 			get
@@ -955,7 +955,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 BookmarkID
 		{
 			get
@@ -970,7 +970,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 PreviousBookmarkID
 		{
 			get
@@ -985,7 +985,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Find Find
 		{
 			get
@@ -1001,7 +1001,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.PageSetup PageSetup
 		{
 			get
@@ -1022,7 +1022,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ShapeRange ShapeRange
 		{
 			get
@@ -1038,7 +1038,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdCharacterCase Case
 		{
 			get
@@ -1059,7 +1059,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.WdInformation Type</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public object get_Information(NetOffice.WordApi.Enums.WdInformation type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1079,7 +1079,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ReadabilityStatistics ReadabilityStatistics
 		{
 			get
@@ -1095,7 +1095,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ProofreadingErrors GrammaticalErrors
 		{
 			get
@@ -1111,7 +1111,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ProofreadingErrors SpellingErrors
 		{
 			get
@@ -1127,7 +1127,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdTextOrientation Orientation
 		{
 			get
@@ -1147,7 +1147,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.InlineShapes InlineShapes
 		{
 			get
@@ -1163,7 +1163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range NextStoryRange
 		{
 			get
@@ -1179,7 +1179,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
 		{
 			get
@@ -1199,7 +1199,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDOther
 		{
 			get
@@ -1219,7 +1219,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool LanguageDetected
 		{
 			get
@@ -1239,7 +1239,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single FitTextWidth
 		{
 			get
@@ -1259,7 +1259,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdHorizontalInVerticalType HorizontalInVertical
 		{
 			get
@@ -1279,7 +1279,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdTwoLinesInOneType TwoLinesInOne
 		{
 			get
@@ -1299,7 +1299,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool CombineCharacters
 		{
 			get
@@ -1319,7 +1319,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 NoProofing
 		{
 			get
@@ -1339,7 +1339,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Tables TopLevelTables
 		{
 			get
@@ -1355,7 +1355,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Scripts Scripts
 		{
 			get
@@ -1371,7 +1371,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdCharacterWidth CharacterWidth
 		{
 			get
@@ -1391,7 +1391,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdKana Kana
 		{
 			get
@@ -1411,7 +1411,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 BoldBi
 		{
 			get
@@ -1431,7 +1431,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 ItalicBi
 		{
 			get
@@ -1451,7 +1451,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string ID
 		{
 			get
@@ -1471,7 +1471,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.HTMLDivisions HTMLDivisions
 		{
 			get
@@ -1487,7 +1487,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.SmartTags SmartTags
 		{
 			get
@@ -1503,7 +1503,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool ShowAll
 		{
 			get
@@ -1523,7 +1523,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Document
 		{
 			get
@@ -1539,7 +1539,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.FootnoteOptions FootnoteOptions
 		{
 			get
@@ -1555,7 +1555,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.EndnoteOptions EndnoteOptions
 		{
 			get
@@ -1571,7 +1571,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNodes XMLNodes
 		{
 			get
@@ -1587,7 +1587,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.XMLNode XMLParentNode
 		{
 			get
@@ -1603,7 +1603,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Editors Editors
 		{
 			get
@@ -1620,7 +1620,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// </summary>
 		/// <param name="DataOnly">bool DataOnly</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public string get_XML(bool dataOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);
@@ -1632,7 +1632,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public object EnhMetaFileBits
 		{
 			get
@@ -1655,7 +1655,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMaths OMaths
 		{
 			get
@@ -1671,7 +1671,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public object CharacterStyle
 		{
 			get
@@ -1694,7 +1694,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public object ParagraphStyle
 		{
 			get
@@ -1717,7 +1717,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public object ListStyle
 		{
 			get
@@ -1740,7 +1740,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public object TableStyle
 		{
 			get
@@ -1763,7 +1763,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.ContentControls ContentControls
 		{
 			get
@@ -1779,7 +1779,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public string WordOpenXML
 		{
 			get
@@ -1794,7 +1794,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.ContentControl ParentContentControl
 		{
 			get
@@ -1810,7 +1810,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.CoAuthLocks Locks
 		{
 			get
@@ -1826,7 +1826,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.CoAuthUpdates Updates
 		{
 			get
@@ -1842,7 +1842,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Conflicts Conflicts
 		{
 			get
@@ -1861,7 +1861,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -1873,7 +1873,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Start">Int32 Start</param>
 		/// <param name="End">Int32 End</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SetRange(Int32 start, Int32 end)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, end);
@@ -1884,7 +1884,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Direction">optional object Direction</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Collapse(object direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction);
@@ -1894,7 +1894,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Collapse()
 		{
 			object[] paramsArray = null;
@@ -1905,7 +1906,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertBefore(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -1916,7 +1917,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertAfter(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -1928,7 +1929,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Next(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -1940,7 +1941,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Next()
 		{
 			object[] paramsArray = null;
@@ -1953,8 +1955,22 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Range Next(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Previous(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -1966,7 +1982,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Previous()
 		{
 			object[] paramsArray = null;
@@ -1979,8 +1996,22 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Range Previous(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 StartOf(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
@@ -1991,7 +2022,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 StartOf()
 		{
 			object[] paramsArray = null;
@@ -2003,8 +2035,21 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 StartOf(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "StartOf", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Extend">optional object Extend</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 EndOf(object unit, object extend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
@@ -2015,7 +2060,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 EndOf()
 		{
 			object[] paramsArray = null;
@@ -2027,8 +2073,21 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 EndOf(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "EndOf", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Move(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -2039,7 +2098,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Move()
 		{
 			object[] paramsArray = null;
@@ -2051,8 +2111,21 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 Move(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStart(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -2063,7 +2136,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStart()
 		{
 			object[] paramsArray = null;
@@ -2075,8 +2149,21 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 MoveStart(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEnd(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -2087,7 +2174,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEnd()
 		{
 			object[] paramsArray = null;
@@ -2098,9 +2186,22 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 MoveEnd(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2112,7 +2213,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveWhile(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2125,7 +2227,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStartWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2137,7 +2239,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStartWhile(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2150,7 +2253,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEndWhile(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2162,7 +2265,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEndWhile(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2175,7 +2279,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2187,7 +2291,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveUntil(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2200,7 +2305,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStartUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2212,7 +2317,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveStartUntil(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2225,7 +2331,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEndUntil(object cset, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
@@ -2237,7 +2343,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cset">object Cset</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 MoveEndUntil(object cset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cset);
@@ -2248,7 +2355,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Cut()
 		{
 			object[] paramsArray = null;
@@ -2258,7 +2365,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -2268,7 +2375,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Paste()
 		{
 			object[] paramsArray = null;
@@ -2279,7 +2386,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertBreak(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -2289,7 +2396,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertBreak()
 		{
 			object[] paramsArray = null;
@@ -2304,7 +2412,7 @@ namespace NetOffice.WordApi
 		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
 		/// <param name="Link">optional object Link</param>
 		/// <param name="Attachment">optional object Attachment</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertFile(string fileName, object range, object confirmConversions, object link, object attachment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions, link, attachment);
@@ -2315,7 +2423,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -2325,8 +2434,50 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="Range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertFile(string fileName, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
+			Invoker.Method(this, "InsertFile", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertFile(string fileName, object range, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions);
+			Invoker.Method(this, "InsertFile", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="Range">optional object Range</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="Link">optional object Link</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertFile(string fileName, object range, object confirmConversions, object link)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions, link);
+			Invoker.Method(this, "InsertFile", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool InStory(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -2338,7 +2489,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool InRange(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -2351,7 +2502,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
 		/// <param name="Count">optional object Count</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Delete(object unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -2362,7 +2513,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
@@ -2373,7 +2525,20 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Unit">optional object Unit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public Int32 Delete(object unit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(unit);
+			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void WholeStory()
 		{
 			object[] paramsArray = null;
@@ -2384,7 +2549,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Unit">optional object Unit</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Expand(object unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
@@ -2395,7 +2560,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Expand()
 		{
 			object[] paramsArray = null;
@@ -2406,7 +2572,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertParagraph()
 		{
 			object[] paramsArray = null;
@@ -2416,7 +2582,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertParagraphAfter()
 		{
 			object[] paramsArray = null;
@@ -2440,7 +2606,7 @@ namespace NetOffice.WordApi
 		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
 		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
 		/// <param name="AutoFit">optional object AutoFit</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
@@ -2452,7 +2618,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Table ConvertToTableOld()
 		{
 			object[] paramsArray = null;
@@ -2464,10 +2631,270 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
 		/// <param name="InsertAsField">optional object InsertAsField</param>
 		/// <param name="InsertAsFullWidth">optional object InsertAsFullWidth</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDateTimeOld(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth);
@@ -2477,10 +2904,36 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDateTimeOld()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTimeOld(object dateTimeFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat);
+			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		/// <param name="InsertAsField">optional object InsertAsField</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTimeOld(object dateTimeFormat, object insertAsField)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
 			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
 		}
 
@@ -2491,7 +2944,7 @@ namespace NetOffice.WordApi
 		/// <param name="Font">optional object Font</param>
 		/// <param name="Unicode">optional object Unicode</param>
 		/// <param name="Bias">optional object Bias</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertSymbol(Int32 characterNumber, object font, object unicode, object bias)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font, unicode, bias);
@@ -2502,7 +2955,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="CharacterNumber">Int32 CharacterNumber</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertSymbol(Int32 characterNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber);
@@ -2510,14 +2964,41 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CharacterNumber">Int32 CharacterNumber</param>
+		/// <param name="Font">optional object Font</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertSymbol(Int32 characterNumber, object font)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font);
+			Invoker.Method(this, "InsertSymbol", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CharacterNumber">Int32 CharacterNumber</param>
+		/// <param name="Font">optional object Font</param>
+		/// <param name="Unicode">optional object Unicode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertSymbol(Int32 characterNumber, object font, object unicode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font, unicode);
+			Invoker.Method(this, "InsertSymbol", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ReferenceType">object ReferenceType</param>
 		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
 		/// <param name="ReferenceItem">object ReferenceItem</param>
 		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
 		/// <param name="IncludePosition">optional object IncludePosition</param>
-		[SupportByLibrary("Word", 9,10)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
@@ -2534,7 +3015,7 @@ namespace NetOffice.WordApi
 		/// <param name="IncludePosition">optional object IncludePosition</param>
 		/// <param name="SeparateNumbers">optional object SeparateNumbers</param>
 		/// <param name="SeparatorString">optional object SeparatorString</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers, object separatorString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString);
@@ -2547,7 +3028,8 @@ namespace NetOffice.WordApi
 		/// <param name="ReferenceType">object ReferenceType</param>
 		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
 		/// <param name="ReferenceItem">object ReferenceItem</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem);
@@ -2555,13 +3037,45 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ReferenceType">object ReferenceType</param>
+		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
+		/// <param name="ReferenceItem">object ReferenceItem</param>
+		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink);
+			Invoker.Method(this, "InsertCrossReference", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="ReferenceType">object ReferenceType</param>
+		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
+		/// <param name="ReferenceItem">object ReferenceItem</param>
+		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
+		/// <param name="IncludePosition">optional object IncludePosition</param>
+		/// <param name="SeparateNumbers">optional object SeparateNumbers</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers);
+			Invoker.Method(this, "InsertCrossReference", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Label">object Label</param>
 		/// <param name="Title">optional object Title</param>
 		/// <param name="TitleAutoText">optional object TitleAutoText</param>
 		/// <param name="Position">optional object Position</param>
-		[SupportByLibrary("Word", 9,10)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertCaption(object label, object title, object titleAutoText, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
@@ -2576,7 +3090,7 @@ namespace NetOffice.WordApi
 		/// <param name="TitleAutoText">optional object TitleAutoText</param>
 		/// <param name="Position">optional object Position</param>
 		/// <param name="ExcludeLabel">optional object ExcludeLabel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCaption(object label, object title, object titleAutoText, object position, object excludeLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position, excludeLabel);
@@ -2587,7 +3101,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Label">object Label</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertCaption(object label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label);
@@ -2597,7 +3112,34 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Label">object Label</param>
+		/// <param name="Title">optional object Title</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertCaption(object label, object title)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(label, title);
+			Invoker.Method(this, "InsertCaption", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Label">object Label</param>
+		/// <param name="Title">optional object Title</param>
+		/// <param name="TitleAutoText">optional object TitleAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertCaption(object label, object title, object titleAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText);
+			Invoker.Method(this, "InsertCaption", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CopyAsPicture()
 		{
 			object[] paramsArray = null;
@@ -2621,7 +3163,7 @@ namespace NetOffice.WordApi
 		/// <param name="Separator">optional object Separator</param>
 		/// <param name="CaseSensitive">optional object CaseSensitive</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID);
@@ -2631,7 +3173,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortOld()
 		{
 			object[] paramsArray = null;
@@ -2641,7 +3184,241 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive);
+			Invoker.Method(this, "SortOld", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortAscending()
 		{
 			object[] paramsArray = null;
@@ -2651,7 +3428,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SortDescending()
 		{
 			object[] paramsArray = null;
@@ -2662,7 +3439,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool IsEqual(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -2673,7 +3450,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single Calculate()
 		{
 			object[] paramsArray = null;
@@ -2688,7 +3465,7 @@ namespace NetOffice.WordApi
 		/// <param name="Which">optional object Which</param>
 		/// <param name="Count">optional object Count</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range GoTo(object what, object which, object count, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count, name);
@@ -2700,7 +3477,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range GoTo()
 		{
 			object[] paramsArray = null;
@@ -2712,8 +3490,53 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="What">optional object What</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Range GoTo(object what)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what);
+			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="What">optional object What</param>
+		/// <param name="Which">optional object Which</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Range GoTo(object what, object which)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, which);
+			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="What">optional object What</param>
+		/// <param name="Which">optional object Which</param>
+		/// <param name="Count">optional object Count</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Range GoTo(object what, object which, object count)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count);
+			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
+			NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="What">NetOffice.WordApi.Enums.WdGoToItem What</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range GoToNext(NetOffice.WordApi.Enums.WdGoToItem what)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what);
@@ -2726,7 +3549,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="What">NetOffice.WordApi.Enums.WdGoToItem What</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range GoToPrevious(NetOffice.WordApi.Enums.WdGoToItem what)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what);
@@ -2745,7 +3568,7 @@ namespace NetOffice.WordApi
 		/// <param name="DataType">optional object DataType</param>
 		/// <param name="IconFileName">optional object IconFileName</param>
 		/// <param name="IconLabel">optional object IconLabel</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel);
@@ -2755,7 +3578,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PasteSpecial()
 		{
 			object[] paramsArray = null;
@@ -2765,7 +3589,94 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="IconIndex">optional object IconIndex</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="Link">optional object Link</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex, object link)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="Placement">optional object Placement</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex, object link, object placement)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="Placement">optional object Placement</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="Placement">optional object Placement</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="DataType">optional object DataType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="IconIndex">optional object IconIndex</param>
+		/// <param name="Link">optional object Link</param>
+		/// <param name="Placement">optional object Placement</param>
+		/// <param name="DisplayAsIcon">optional object DisplayAsIcon</param>
+		/// <param name="DataType">optional object DataType</param>
+		/// <param name="IconFileName">optional object IconFileName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType, iconFileName);
+			Invoker.Method(this, "PasteSpecial", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void LookupNameProperties()
 		{
 			object[] paramsArray = null;
@@ -2776,7 +3687,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Statistic">NetOffice.WordApi.Enums.WdStatistic Statistic</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 ComputeStatistics(NetOffice.WordApi.Enums.WdStatistic statistic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(statistic);
@@ -2788,7 +3699,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Direction">Int32 Direction</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Relocate(Int32 direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(direction);
@@ -2798,7 +3709,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CheckSynonyms()
 		{
 			object[] paramsArray = null;
@@ -2810,7 +3721,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Edition">string Edition</param>
 		/// <param name="Format">optional object Format</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SubscribeTo(string edition, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
@@ -2821,7 +3732,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Edition">string Edition</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void SubscribeTo(string edition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition);
@@ -2835,7 +3747,7 @@ namespace NetOffice.WordApi
 		/// <param name="ContainsPICT">optional object ContainsPICT</param>
 		/// <param name="ContainsRTF">optional object ContainsRTF</param>
 		/// <param name="ContainsText">optional object ContainsText</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreatePublisher(object edition, object containsPICT, object containsRTF, object containsText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT, containsRTF, containsText);
@@ -2845,7 +3757,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CreatePublisher()
 		{
 			object[] paramsArray = null;
@@ -2855,7 +3768,46 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Edition">optional object Edition</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreatePublisher(object edition)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition);
+			Invoker.Method(this, "CreatePublisher", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Edition">optional object Edition</param>
+		/// <param name="ContainsPICT">optional object ContainsPICT</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreatePublisher(object edition, object containsPICT)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT);
+			Invoker.Method(this, "CreatePublisher", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Edition">optional object Edition</param>
+		/// <param name="ContainsPICT">optional object ContainsPICT</param>
+		/// <param name="ContainsRTF">optional object ContainsRTF</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CreatePublisher(object edition, object containsPICT, object containsRTF)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT, containsRTF);
+			Invoker.Method(this, "CreatePublisher", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertAutoText()
 		{
 			object[] paramsArray = null;
@@ -2879,7 +3831,7 @@ namespace NetOffice.WordApi
 		/// <param name="From">optional object From</param>
 		/// <param name="To">optional object To</param>
 		/// <param name="IncludeFields">optional object IncludeFields</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to, object includeFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to, includeFields);
@@ -2889,7 +3841,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDatabase()
 		{
 			object[] paramsArray = null;
@@ -2899,7 +3852,241 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="DataSource">optional object DataSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="DataSource">optional object DataSource</param>
+		/// <param name="From">optional object From</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Style">optional object Style</param>
+		/// <param name="LinkToSource">optional object LinkToSource</param>
+		/// <param name="Connection">optional object Connection</param>
+		/// <param name="SQLStatement">optional object SQLStatement</param>
+		/// <param name="SQLStatement1">optional object SQLStatement1</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="DataSource">optional object DataSource</param>
+		/// <param name="From">optional object From</param>
+		/// <param name="To">optional object To</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to);
+			Invoker.Method(this, "InsertDatabase", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void AutoFormat()
 		{
 			object[] paramsArray = null;
@@ -2909,7 +4096,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CheckGrammar()
 		{
 			object[] paramsArray = null;
@@ -2931,7 +4118,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
@@ -2941,10 +4128,198 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void CheckSpelling()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
+			Invoker.Method(this, "CheckSpelling", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="AlwaysSuggest">optional object AlwaysSuggest</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
 			Invoker.Method(this, "CheckSpelling", paramsArray);
 		}
 
@@ -2964,7 +4339,7 @@ namespace NetOffice.WordApi
 		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
 		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
 		/// <param name="CustomDictionary10">optional object CustomDictionary10</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
@@ -2976,7 +4351,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions()
 		{
 			object[] paramsArray = null;
@@ -2988,7 +4364,241 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="CustomDictionary">optional object CustomDictionary</param>
+		/// <param name="IgnoreUppercase">optional object IgnoreUppercase</param>
+		/// <param name="MainDictionary">optional object MainDictionary</param>
+		/// <param name="SuggestionMode">optional object SuggestionMode</param>
+		/// <param name="CustomDictionary2">optional object CustomDictionary2</param>
+		/// <param name="CustomDictionary3">optional object CustomDictionary3</param>
+		/// <param name="CustomDictionary4">optional object CustomDictionary4</param>
+		/// <param name="CustomDictionary5">optional object CustomDictionary5</param>
+		/// <param name="CustomDictionary6">optional object CustomDictionary6</param>
+		/// <param name="CustomDictionary7">optional object CustomDictionary7</param>
+		/// <param name="CustomDictionary8">optional object CustomDictionary8</param>
+		/// <param name="CustomDictionary9">optional object CustomDictionary9</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
+			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
+			NetOffice.WordApi.SpellingSuggestions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertParagraphBefore()
 		{
 			object[] paramsArray = null;
@@ -2998,7 +4608,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void NextSubdocument()
 		{
 			object[] paramsArray = null;
@@ -3008,7 +4618,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PreviousSubdocument()
 		{
 			object[] paramsArray = null;
@@ -3023,7 +4633,7 @@ namespace NetOffice.WordApi
 		/// <param name="CheckHangulEnding">optional object CheckHangulEnding</param>
 		/// <param name="EnableRecentOrdering">optional object EnableRecentOrdering</param>
 		/// <param name="CustomDictionary">optional object CustomDictionary</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering, object customDictionary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering, customDictionary);
@@ -3033,7 +4643,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ConvertHangulAndHanja()
 		{
 			object[] paramsArray = null;
@@ -3043,7 +4654,61 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="ConversionsMode">optional object ConversionsMode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void ConvertHangulAndHanja(object conversionsMode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode);
+			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ConversionsMode">optional object ConversionsMode</param>
+		/// <param name="FastConversion">optional object FastConversion</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion);
+			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ConversionsMode">optional object ConversionsMode</param>
+		/// <param name="FastConversion">optional object FastConversion</param>
+		/// <param name="CheckHangulEnding">optional object CheckHangulEnding</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding);
+			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ConversionsMode">optional object ConversionsMode</param>
+		/// <param name="FastConversion">optional object FastConversion</param>
+		/// <param name="CheckHangulEnding">optional object CheckHangulEnding</param>
+		/// <param name="EnableRecentOrdering">optional object EnableRecentOrdering</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering);
+			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PasteAsNestedTable()
 		{
 			object[] paramsArray = null;
@@ -3056,7 +4721,7 @@ namespace NetOffice.WordApi
 		/// <param name="Style">object Style</param>
 		/// <param name="Symbol">optional object Symbol</param>
 		/// <param name="EnclosedText">optional object EnclosedText</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ModifyEnclosure(object style, object symbol, object enclosedText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, symbol, enclosedText);
@@ -3067,10 +4732,24 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Style">object Style</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void ModifyEnclosure(object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
+			Invoker.Method(this, "ModifyEnclosure", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Style">object Style</param>
+		/// <param name="Symbol">optional object Symbol</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void ModifyEnclosure(object style, object symbol)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(style, symbol);
 			Invoker.Method(this, "ModifyEnclosure", paramsArray);
 		}
 
@@ -3082,7 +4761,7 @@ namespace NetOffice.WordApi
 		/// <param name="Raise">Int32 Raise</param>
 		/// <param name="FontSize">Int32 FontSize</param>
 		/// <param name="FontName">string FontName</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PhoneticGuide(string text, NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType alignment, Int32 raise, Int32 fontSize, string fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise, fontSize, fontName);
@@ -3097,7 +4776,7 @@ namespace NetOffice.WordApi
 		/// <param name="InsertAsFullWidth">optional object InsertAsFullWidth</param>
 		/// <param name="DateLanguage">optional object DateLanguage</param>
 		/// <param name="CalendarType">optional object CalendarType</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage, object calendarType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType);
@@ -3107,10 +4786,65 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void InsertDateTime()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "InsertDateTime", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTime(object dateTimeFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat);
+			Invoker.Method(this, "InsertDateTime", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		/// <param name="InsertAsField">optional object InsertAsField</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTime(object dateTimeFormat, object insertAsField)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
+			Invoker.Method(this, "InsertDateTime", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		/// <param name="InsertAsField">optional object InsertAsField</param>
+		/// <param name="InsertAsFullWidth">optional object InsertAsFullWidth</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth);
+			Invoker.Method(this, "InsertDateTime", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="DateTimeFormat">optional object DateTimeFormat</param>
+		/// <param name="InsertAsField">optional object InsertAsField</param>
+		/// <param name="InsertAsFullWidth">optional object InsertAsFullWidth</param>
+		/// <param name="DateLanguage">optional object DateLanguage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage);
 			Invoker.Method(this, "InsertDateTime", paramsArray);
 		}
 
@@ -3136,7 +4870,7 @@ namespace NetOffice.WordApi
 		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
 		/// <param name="IgnoreHe">optional object IgnoreHe</param>
 		/// <param name="LanguageID">optional object LanguageID</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
@@ -3146,7 +4880,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Sort()
 		{
 			object[] paramsArray = null;
@@ -3156,7 +4891,376 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExcludeHeader">optional object ExcludeHeader</param>
+		/// <param name="FieldNumber">optional object FieldNumber</param>
+		/// <param name="SortFieldType">optional object SortFieldType</param>
+		/// <param name="SortOrder">optional object SortOrder</param>
+		/// <param name="FieldNumber2">optional object FieldNumber2</param>
+		/// <param name="SortFieldType2">optional object SortFieldType2</param>
+		/// <param name="SortOrder2">optional object SortOrder2</param>
+		/// <param name="FieldNumber3">optional object FieldNumber3</param>
+		/// <param name="SortFieldType3">optional object SortFieldType3</param>
+		/// <param name="SortOrder3">optional object SortOrder3</param>
+		/// <param name="SortColumn">optional object SortColumn</param>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="CaseSensitive">optional object CaseSensitive</param>
+		/// <param name="BidiSort">optional object BidiSort</param>
+		/// <param name="IgnoreThe">optional object IgnoreThe</param>
+		/// <param name="IgnoreKashida">optional object IgnoreKashida</param>
+		/// <param name="IgnoreDiacritics">optional object IgnoreDiacritics</param>
+		/// <param name="IgnoreHe">optional object IgnoreHe</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe);
+			Invoker.Method(this, "Sort", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void DetectLanguage()
 		{
 			object[] paramsArray = null;
@@ -3182,7 +5286,7 @@ namespace NetOffice.WordApi
 		/// <param name="AutoFit">optional object AutoFit</param>
 		/// <param name="AutoFitBehavior">optional object AutoFitBehavior</param>
 		/// <param name="DefaultTableBehavior">optional object DefaultTableBehavior</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior, object defaultTableBehavior)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior);
@@ -3194,7 +5298,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Table ConvertToTable()
 		{
 			object[] paramsArray = null;
@@ -3206,10 +5311,325 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
+		/// <param name="AutoFit">optional object AutoFit</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Separator">optional object Separator</param>
+		/// <param name="NumRows">optional object NumRows</param>
+		/// <param name="NumColumns">optional object NumColumns</param>
+		/// <param name="InitialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="ApplyBorders">optional object ApplyBorders</param>
+		/// <param name="ApplyShading">optional object ApplyShading</param>
+		/// <param name="ApplyFont">optional object ApplyFont</param>
+		/// <param name="ApplyColor">optional object ApplyColor</param>
+		/// <param name="ApplyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="ApplyLastRow">optional object ApplyLastRow</param>
+		/// <param name="ApplyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="ApplyLastColumn">optional object ApplyLastColumn</param>
+		/// <param name="AutoFit">optional object AutoFit</param>
+		/// <param name="AutoFitBehavior">optional object AutoFitBehavior</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior);
+			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
+			NetOffice.WordApi.Table newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="WdTCSCConverterDirection">NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection</param>
 		/// <param name="CommonTerms">bool CommonTerms</param>
 		/// <param name="UseVariants">bool UseVariants</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void TCSCConverter(NetOffice.WordApi.Enums.WdTCSCConverterDirection wdTCSCConverterDirection, bool commonTerms, bool useVariants)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection, commonTerms, useVariants);
@@ -3220,7 +5640,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">NetOffice.WordApi.Enums.WdRecoveryType Type</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PasteAndFormat(NetOffice.WordApi.Enums.WdRecoveryType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -3233,7 +5653,7 @@ namespace NetOffice.WordApi
 		/// <param name="LinkedToExcel">bool LinkedToExcel</param>
 		/// <param name="WordFormatting">bool WordFormatting</param>
 		/// <param name="RTF">bool RTF</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PasteExcelTable(bool linkedToExcel, bool wordFormatting, bool rTF)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(linkedToExcel, wordFormatting, rTF);
@@ -3243,7 +5663,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PasteAppendTable()
 		{
 			object[] paramsArray = null;
@@ -3258,7 +5678,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReferenceItem">object ReferenceItem</param>
 		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
 		/// <param name="IncludePosition">optional object IncludePosition</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
@@ -3271,10 +5691,26 @@ namespace NetOffice.WordApi
 		/// <param name="ReferenceType">object ReferenceType</param>
 		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
 		/// <param name="ReferenceItem">object ReferenceItem</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem);
+			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="ReferenceType">object ReferenceType</param>
+		/// <param name="ReferenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
+		/// <param name="ReferenceItem">object ReferenceItem</param>
+		/// <param name="InsertAsHyperlink">optional object InsertAsHyperlink</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink);
 			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
 		}
 
@@ -3285,7 +5721,7 @@ namespace NetOffice.WordApi
 		/// <param name="Title">optional object Title</param>
 		/// <param name="TitleAutoText">optional object TitleAutoText</param>
 		/// <param name="Position">optional object Position</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCaptionXP(object label, object title, object titleAutoText, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
@@ -3296,7 +5732,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Label">object Label</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertCaptionXP(object label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label);
@@ -3306,8 +5743,35 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
+		/// <param name="Label">object Label</param>
+		/// <param name="Title">optional object Title</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public void InsertCaptionXP(object label, object title)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(label, title);
+			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="Label">object Label</param>
+		/// <param name="Title">optional object Title</param>
+		/// <param name="TitleAutoText">optional object TitleAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public void InsertCaptionXP(object label, object title, object titleAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText);
+			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
 		/// <param name="EditorID">optional object EditorID</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Range GoToEditableRange(object editorID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(editorID);
@@ -3319,7 +5783,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Range GoToEditableRange()
 		{
 			object[] paramsArray = null;
@@ -3333,7 +5798,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="XML">string XML</param>
 		/// <param name="Transform">optional object Transform</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertXML(string xML, object transform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, transform);
@@ -3344,7 +5809,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="XML">string XML</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void InsertXML(string xML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML);
@@ -3356,7 +5822,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="Format">NetOffice.WordApi.Enums.WdSaveFormat Format</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void ExportFragment(string fileName, NetOffice.WordApi.Enums.WdSaveFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, format);
@@ -3367,7 +5833,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="Level">Int16 Level</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void SetListLevel(Int16 level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
@@ -3379,7 +5845,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Alignment">Int32 Alignment</param>
 		/// <param name="RelativeTo">Int32 RelativeTo</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void InsertAlignmentTab(Int32 alignment, Int32 relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alignment, relativeTo);
@@ -3391,7 +5857,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
 		/// <param name="MatchDestination">bool MatchDestination</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void ImportFragment(string fileName, bool matchDestination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, matchDestination);
@@ -3414,7 +5880,7 @@ namespace NetOffice.WordApi
 		/// <param name="BitmapMissingFonts">bool BitmapMissingFonts</param>
 		/// <param name="UseISO19005_1">bool UseISO19005_1</param>
 		/// <param name="FixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr);
@@ -3436,7 +5902,8 @@ namespace NetOffice.WordApi
 		/// <param name="DocStructureTags">bool DocStructureTags</param>
 		/// <param name="BitmapMissingFonts">bool BitmapMissingFonts</param>
 		/// <param name="UseISO19005_1">bool UseISO19005_1</param>
-		[SupportByLibrary("Word", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1);

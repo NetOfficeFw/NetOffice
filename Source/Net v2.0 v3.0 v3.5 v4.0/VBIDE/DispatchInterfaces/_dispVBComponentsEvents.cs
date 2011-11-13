@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _dispVBComponentsEvents SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _dispVBComponentsEvents SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _dispVBComponentsEvents : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemAdded(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
@@ -91,7 +91,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemRemoved(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
@@ -103,7 +103,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
 		/// <param name="OldName">string OldName</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemRenamed(NetOffice.VBIDEApi.VBComponent vBComponent, string oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent, oldName);
@@ -114,7 +114,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemSelected(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
@@ -125,7 +125,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemActivated(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);
@@ -136,7 +136,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="VBComponent">NetOffice.VBIDEApi.VBComponent VBComponent</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ItemReloaded(NetOffice.VBIDEApi.VBComponent vBComponent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBComponent);

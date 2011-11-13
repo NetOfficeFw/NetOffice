@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjServerVersionInfo
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjServerVersionInfo_Unknown = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>-1</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjServerVersionInfo_Error = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjServerVersionInfo_Email = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>900</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjServerVersionInfo_P9 = 900,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1000</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjServerVersionInfo_P10 = 1000,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>1100</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjServerVersionInfo_P11 = 1100,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>1200</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjServerVersionInfo_P12 = 1200,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>1400</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjServerVersionInfo_P14 = 1400
 	}
 }

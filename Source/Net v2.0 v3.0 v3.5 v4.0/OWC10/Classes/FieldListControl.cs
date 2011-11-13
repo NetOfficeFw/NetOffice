@@ -14,9 +14,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass FieldListControl SupportByLibrary OWC10, 1
+	/// CoClass FieldListControl SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FieldListControl : FieldList, IEventBinding 
 	{

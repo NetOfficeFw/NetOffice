@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IDocumentTraversal SupportByLibrary MSHTML, 4
+	/// DispatchInterface IDocumentTraversal SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IDocumentTraversal : COMObject
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ulWhatToShow">Int32 ulWhatToShow</param>
 		/// <param name="pFilter">object pFilter</param>
 		/// <param name="fEntityReferenceExpansion">bool fEntityReferenceExpansion</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IDOMNodeIterator createNodeIterator(object pRootNode, Int32 ulWhatToShow, object pFilter, bool fEntityReferenceExpansion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRootNode, ulWhatToShow, pFilter, fEntityReferenceExpansion);
@@ -99,7 +99,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ulWhatToShow">Int32 ulWhatToShow</param>
 		/// <param name="pFilter">object pFilter</param>
 		/// <param name="fEntityReferenceExpansion">bool fEntityReferenceExpansion</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IDOMTreeWalker createTreeWalker(object pRootNode, Int32 ulWhatToShow, object pFilter, bool fEntityReferenceExpansion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRootNode, ulWhatToShow, pFilter, fEntityReferenceExpansion);

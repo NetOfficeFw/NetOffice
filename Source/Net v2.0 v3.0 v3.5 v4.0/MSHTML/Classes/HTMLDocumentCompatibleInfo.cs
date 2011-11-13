@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLDocumentCompatibleInfo SupportByLibrary MSHTML, 4
+	/// CoClass HTMLDocumentCompatibleInfo SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLDocumentCompatibleInfo : DispHTMLDocumentCompatibleInfo, IEventBinding 
 	{

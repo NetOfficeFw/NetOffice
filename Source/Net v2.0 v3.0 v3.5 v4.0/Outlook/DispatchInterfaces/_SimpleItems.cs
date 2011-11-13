@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
+using System.Collections;
 using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _SimpleItems SupportByLibrary Outlook, 14
+	/// DispatchInterface _SimpleItems SupportByLibraryAttribute Outlook, 14
 	///</summary>
-	[SupportByLibrary("Outlook", 14)]
+	[SupportByLibraryAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _SimpleItems : COMObject
+	public class _SimpleItems : COMObject ,IEnumerable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,7 +77,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +93,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +108,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +124,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +140,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public Int32 Count
 		{
 			get
@@ -158,7 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public COMObject this[object index]
 		{
@@ -172,6 +173,28 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
+   
+        #region IEnumerable Members
+		
+        /// <summary>
+		/// SupportByLibraryAttribute Outlook, 14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByLibraryAttribute("Outlook", 14)]
+		[CustomEnumerator]
+		public IEnumerator GetEnumerator()
+        {
+			int count = Count;
+			COMObject[] enumeratorObjects = new COMObject[count];
+			for (int i = 1; i <= count; i++)
+				enumeratorObjects[i] = this[i];
+
+			foreach (COMObject item in enumeratorObjects)
+				yield return item;
+        }
+
+        #endregion
+        
 		#pragma warning restore
 	}
 }

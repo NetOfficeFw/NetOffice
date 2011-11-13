@@ -16,9 +16,9 @@ namespace NetOffice.VBIDEApi
 	#endregion
 
 	///<summary>
-	/// CoClass ReferencesEvents SupportByLibrary VBIDE, 5.3,12
+	/// CoClass ReferencesEvents SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReferencesEvents : _ReferencesEvents, IEventBinding 
 	{

@@ -23,9 +23,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass _SectionInReport SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass _SectionInReport SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _SectionInReport : _Section, IEventBinding 
 	{

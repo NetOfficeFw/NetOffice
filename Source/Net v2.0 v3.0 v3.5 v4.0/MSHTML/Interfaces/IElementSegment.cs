@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementSegment SupportByLibrary MSHTML, 4
+	/// Interface IElementSegment SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementSegment : ISegment
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppIElement">LateBindingApi.MSHTMLApi.IHTMLElement ppIElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetElement(LateBindingApi.MSHTMLApi.IHTMLElement ppIElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIElement);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fPrimary">Int32 fPrimary</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetPrimary(Int32 fPrimary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fPrimary);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfPrimary">Int32 pfPrimary</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsPrimary(Int32 pfPrimary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfPrimary);

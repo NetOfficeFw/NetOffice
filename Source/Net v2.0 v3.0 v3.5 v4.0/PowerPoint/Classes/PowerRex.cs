@@ -14,9 +14,9 @@ namespace NetOffice.PowerPointApi
 	#endregion
 
 	///<summary>
-	/// CoClass PowerRex SupportByLibrary PowerPoint, 10,11,12,14
+	/// CoClass PowerRex SupportByLibraryAttribute PowerPoint, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PowerRex : _PowerRex, IEventBinding 
 	{

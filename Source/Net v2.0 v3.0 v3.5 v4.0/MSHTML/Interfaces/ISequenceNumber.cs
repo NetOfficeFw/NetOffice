@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISequenceNumber SupportByLibrary MSHTML, 4
+	/// Interface ISequenceNumber SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISequenceNumber : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="nCurrent">Int32 nCurrent</param>
 		/// <param name="pnNew">Int32 pnNew</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetSequenceNumber(Int32 nCurrent, Int32 pnNew)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nCurrent, pnNew);

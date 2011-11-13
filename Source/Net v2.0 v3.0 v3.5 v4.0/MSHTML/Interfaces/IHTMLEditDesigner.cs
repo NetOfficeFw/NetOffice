@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLEditDesigner SupportByLibrary MSHTML, 4
+	/// Interface IHTMLEditDesigner SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditDesigner : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 PreHandleEvent(Int32 inEvtDispId, LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 PostHandleEvent(Int32 inEvtDispId, LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 TranslateAccelerator(Int32 inEvtDispId, LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
@@ -119,7 +119,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 PostEditorEventNotify(Int32 inEvtDispId, LateBindingApi.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);

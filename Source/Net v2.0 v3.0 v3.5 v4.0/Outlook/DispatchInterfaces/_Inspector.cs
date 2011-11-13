@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _Inspector SupportByLibrary Outlook, 9,10,11,12,14
+	/// DispatchInterface _Inspector SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Inspector : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject CurrentItem
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlEditorType EditorType
 		{
 			get
@@ -186,7 +186,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject ModifiedFormPages
 		{
 			get
@@ -202,7 +202,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject HTMLEditor
 		{
 			get
@@ -218,7 +218,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject WordEditor
 		{
 			get
@@ -234,7 +234,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public string Caption
 		{
 			get
@@ -249,7 +249,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Height
 		{
 			get
@@ -269,7 +269,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Left
 		{
 			get
@@ -289,7 +289,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Top
 		{
 			get
@@ -309,7 +309,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Width
 		{
 			get
@@ -329,7 +329,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlWindowState WindowState
 		{
 			get
@@ -349,7 +349,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi._AttachmentSelection AttachmentSelection
 		{
 			get
@@ -369,7 +369,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="SaveMode">NetOffice.OutlookApi.Enums.OlInspectorClose SaveMode</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void Close(NetOffice.OutlookApi.Enums.OlInspectorClose saveMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveMode);
@@ -380,7 +380,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Modal">optional object Modal</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void Display(object modal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(modal);
@@ -390,7 +390,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void Display()
 		{
 			object[] paramsArray = null;
@@ -401,7 +402,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PageName">string PageName</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void HideFormPage(string pageName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageName);
@@ -411,7 +412,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool IsWordMail()
 		{
 			object[] paramsArray = null;
@@ -423,7 +424,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PageName">string PageName</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void SetCurrentFormPage(string pageName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageName);
@@ -434,7 +435,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="PageName">string PageName</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void ShowFormPage(string pageName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageName);
@@ -444,7 +445,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -456,7 +457,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Control">object Control</param>
 		/// <param name="PropertyName">string PropertyName</param>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public void SetControlItemProperty(object control, string propertyName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(control, propertyName);
@@ -466,7 +467,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject NewFormRegion()
 		{
 			object[] paramsArray = null;
@@ -479,7 +480,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// </summary>
 		/// <param name="Path">string Path</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject OpenFormRegion(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -493,7 +494,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Page">object Page</param>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public void SaveFormRegion(object page, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, fileName);
@@ -504,7 +505,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// </summary>
 		/// <param name="Start">DateTime Start</param>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public void SetSchedulingStartTime(DateTime start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ILicWizExternal SupportByLibrary Office, 10,11,12,14
+	/// DispatchInterface ILicWizExternal SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ILicWizExternal : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 Context
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject Validator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public COMObject LicAgent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string CountryInfo
 		{
 			get
@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 WizardVisible
 		{
 			get
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string WizardTitle
 		{
 			get
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 AnimationEnabled
 		{
 			get
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 CurrentHelpId
 		{
 			get
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string OfficeOnTheWebUrl
 		{
 			get
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="punkHtmlDoc">object punkHtmlDoc</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void PrintHtmlDocument(object punkHtmlDoc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(punkHtmlDoc);
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void InvokeDateTimeApplet()
 		{
 			object[] paramsArray = null;
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="date">DateTime date</param>
 		/// <param name="pFormat">string pFormat</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string FormatDate(DateTime date, string pFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, pFormat);
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pvarId">optional object pvarId</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void ShowHelp(object pvarId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarId);
@@ -276,7 +276,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void ShowHelp()
 		{
 			object[] paramsArray = null;
@@ -286,7 +287,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void Terminate()
 		{
 			object[] paramsArray = null;
@@ -297,7 +298,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="BPC">Int32 BPC</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void DisableVORWReminder(Int32 bPC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bPC);
@@ -308,7 +309,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrReceipt">string bstrReceipt</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public string SaveReceipt(string bstrReceipt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrReceipt);
@@ -320,7 +321,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void OpenInDefaultBrowser(string bstrUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl);
@@ -333,7 +334,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrButtons">string bstrButtons</param>
 		/// <param name="bstrIcon">string bstrIcon</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 MsoAlert(string bstrText, string bstrButtons, string bstrIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrButtons, bstrIcon);
@@ -346,7 +347,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		/// <param name="fMORW">Int32 fMORW</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 DepositPidKey(string bstrKey, Int32 fMORW)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrKey, fMORW);
@@ -358,7 +359,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrMessage">string bstrMessage</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void WriteLog(string bstrMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrMessage);
@@ -369,7 +370,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrProductCode">string bstrProductCode</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void ResignDpc(string bstrProductCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrProductCode);
@@ -379,7 +380,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void ResetPID()
 		{
 			object[] paramsArray = null;
@@ -391,7 +392,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="dx">Int32 dx</param>
 		/// <param name="dy">Int32 dy</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SetDialogSize(Int32 dx, Int32 dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dx, dy);
@@ -402,7 +403,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="lMode">Int32 lMode</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 VerifyClock(Int32 lMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lMode);
@@ -414,7 +415,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pdispSelect">object pdispSelect</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void SortSelectOptions(object pdispSelect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdispSelect);
@@ -424,7 +425,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public void InternetDisconnect()
 		{
 			object[] paramsArray = null;
@@ -434,7 +435,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 GetConnectedState()
 		{
 			object[] paramsArray = null;

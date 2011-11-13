@@ -79,9 +79,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLLinkElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLLinkElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLLinkElement : DispHTMLLinkElement, IEventBinding 
 	{

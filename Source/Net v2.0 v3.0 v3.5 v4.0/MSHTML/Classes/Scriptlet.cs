@@ -24,9 +24,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass Scriptlet SupportByLibrary MSHTML, 4
+	/// CoClass Scriptlet SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Scriptlet : IWebBridge, IEventBinding 
 	{

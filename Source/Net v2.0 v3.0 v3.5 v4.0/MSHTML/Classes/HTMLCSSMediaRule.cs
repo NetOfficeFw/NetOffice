@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLCSSMediaRule SupportByLibrary MSHTML, 4
+	/// CoClass HTMLCSSMediaRule SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLCSSMediaRule : DispHTMLCSSMediaRule, IEventBinding 
 	{

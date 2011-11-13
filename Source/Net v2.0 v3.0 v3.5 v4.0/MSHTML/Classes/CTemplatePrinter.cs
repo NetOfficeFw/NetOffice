@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass CTemplatePrinter SupportByLibrary MSHTML, 4
+	/// CoClass CTemplatePrinter SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CTemplatePrinter : ITemplatePrinter3, IEventBinding 
 	{

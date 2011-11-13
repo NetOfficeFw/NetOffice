@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _AdditionalData SupportByLibrary Access, 11,12,14
+	/// DispatchInterface _AdditionalData SupportByLibraryAttribute Access, 11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 11,12,14)]
+	[SupportByLibraryAttribute("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AdditionalData : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public string Name
 		{
 			get
@@ -98,7 +98,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi._AdditionalData this[object index]
 		{
@@ -115,7 +115,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -134,7 +134,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="var">string var</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public NetOffice.AccessApi._AdditionalData Add(string var)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(var);
@@ -147,7 +147,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -159,7 +159,10 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Access", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Access, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

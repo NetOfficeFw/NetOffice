@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass NewItemAlertRuleAction SupportByLibrary Outlook, 12,14
+	/// CoClass NewItemAlertRuleAction SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NewItemAlertRuleAction : _NewItemAlertRuleAction, IEventBinding 
 	{

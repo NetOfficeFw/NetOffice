@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface IXRangeEnum SupportByLibrary OWC10, 1
+	/// DispatchInterface IXRangeEnum SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IXRangeEnum : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public UIntPtr RowCount
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public UIntPtr ColCount
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgvar">object rgvar</param>
 		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Next(Int32 cElt, object rgvar, Int32 pcEltFetched)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgvar, pcEltFetched);
@@ -123,7 +123,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Skip(Int32 cElt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt);
@@ -133,7 +133,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Reset()
 		{
 			object[] paramsArray = null;
@@ -144,7 +144,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Clone(NetOffice.OWC10Api.IXRangeEnum ppEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
@@ -155,7 +155,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="nTraverseCode">UIntPtr nTraverseCode</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetTraversal(UIntPtr nTraverseCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nTraverseCode);
@@ -168,7 +168,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Out">object Out</param>
 		/// <param name="In">object In</param>
 		/// <param name="vt">Int16 vt</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ChangeType(object _out, object _in, Int16 vt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_out, _in, vt);
@@ -185,7 +185,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="vtCoerceTo">Int16 vtCoerceTo</param>
 		/// <param name="vtbCoerceFrom">Int32 vtbCoerceFrom</param>
 		/// <param name="Fill">object Fill</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void GetElements(Int32 cElt, Int32 iStart, object rvarDest, Int32 pcFetched, Int16 vtCoerceTo, Int32 vtbCoerceFrom, object fill)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt, iStart, rvarDest, pcFetched, vtCoerceTo, vtbCoerceFrom, fill);

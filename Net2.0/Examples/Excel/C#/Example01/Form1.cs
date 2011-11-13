@@ -16,7 +16,6 @@ namespace Example01
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
@@ -65,8 +64,7 @@ namespace Example01
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
             string workbookFile = string.Format("{0}\\Example01{1}", Application.StartupPath, fileExtension);
-            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, 
-                                                                                        XlSaveAsAccessMode.xlExclusive);
+            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive);
 
             // close excel and dispose reference
             excelApplication.Quit();

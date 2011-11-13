@@ -22,9 +22,9 @@ namespace LateBindingApi.MSProjectApi
 	#endregion
 
 	///<summary>
-	/// CoClass Project SupportByLibrary MSProject, 12,14
+	/// CoClass Project SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Project : _IProjectDoc, IEventBinding 
 	{

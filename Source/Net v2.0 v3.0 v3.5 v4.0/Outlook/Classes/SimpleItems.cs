@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass SimpleItems SupportByLibrary Outlook, 14
+	/// CoClass SimpleItems SupportByLibraryAttribute Outlook, 14
 	///</summary>
-	[SupportByLibrary("Outlook", 14)]
+	[SupportByLibraryAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SimpleItems : _SimpleItems, IEventBinding 
 	{

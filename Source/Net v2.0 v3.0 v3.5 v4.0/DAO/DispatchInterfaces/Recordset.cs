@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Recordset SupportByLibrary DAO, 6,12
+	/// DispatchInterface Recordset SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Recordset : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool BOF
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public byte[] Bookmark
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Bookmarkable
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object DateCreated
 		{
 			get
@@ -149,7 +149,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool EOF
 		{
 			get
@@ -164,7 +164,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Filter
 		{
 			get
@@ -184,7 +184,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Index
 		{
 			get
@@ -204,7 +204,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public byte[] LastModified
 		{
 			get
@@ -219,7 +219,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object LastUpdated
 		{
 			get
@@ -242,7 +242,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool LockEdits
 		{
 			get
@@ -262,7 +262,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -277,7 +277,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool NoMatch
 		{
 			get
@@ -292,7 +292,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Sort
 		{
 			get
@@ -312,7 +312,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Transactions
 		{
 			get
@@ -327,7 +327,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 Type
 		{
 			get
@@ -342,7 +342,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 RecordCount
 		{
 			get
@@ -357,7 +357,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Updatable
 		{
 			get
@@ -372,7 +372,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Restartable
 		{
 			get
@@ -387,7 +387,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string ValidationText
 		{
 			get
@@ -402,7 +402,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string ValidationRule
 		{
 			get
@@ -417,7 +417,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public byte[] CacheStart
 		{
 			get
@@ -437,7 +437,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 CacheSize
 		{
 			get
@@ -457,7 +457,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Single PercentPosition
 		{
 			get
@@ -477,7 +477,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 AbsolutePosition
 		{
 			get
@@ -497,7 +497,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 EditMode
 		{
 			get
@@ -512,7 +512,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 ODBCFetchCount
 		{
 			get
@@ -527,7 +527,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 ODBCFetchDelay
 		{
 			get
@@ -542,7 +542,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Database Parent
 		{
 			get
@@ -558,7 +558,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
@@ -574,7 +574,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Indexes Indexes
 		{
 			get
@@ -591,7 +591,7 @@ namespace NetOffice.DAOApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Item">object Item</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object get_Collect(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -612,7 +612,7 @@ namespace NetOffice.DAOApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Item">object Item</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void set_Collect(object item, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -623,7 +623,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 hStmt
 		{
 			get
@@ -638,7 +638,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool StillExecuting
 		{
 			get
@@ -653,7 +653,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 BatchSize
 		{
 			get
@@ -673,7 +673,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 BatchCollisionCount
 		{
 			get
@@ -688,7 +688,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object BatchCollisions
 		{
 			get
@@ -711,7 +711,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Connection Connection
 		{
 			get
@@ -732,7 +732,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 RecordStatus
 		{
 			get
@@ -747,7 +747,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 UpdateOptions
 		{
 			get
@@ -770,7 +770,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void _30_CancelUpdate()
 		{
 			object[] paramsArray = null;
@@ -780,7 +780,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void AddNew()
 		{
 			object[] paramsArray = null;
@@ -790,7 +790,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -802,7 +802,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
@@ -814,7 +814,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
 			object[] paramsArray = null;
@@ -826,7 +827,21 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset OpenRecordset(object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type);
+			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -836,7 +851,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Edit()
 		{
 			object[] paramsArray = null;
@@ -847,7 +862,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FindFirst(string criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
@@ -858,7 +873,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FindLast(string criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
@@ -869,7 +884,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FindNext(string criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
@@ -880,7 +895,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Criteria">string Criteria</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FindPrevious(string criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
@@ -890,7 +905,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MoveFirst()
 		{
 			object[] paramsArray = null;
@@ -900,7 +915,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void _30_MoveLast()
 		{
 			object[] paramsArray = null;
@@ -910,7 +925,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MoveNext()
 		{
 			object[] paramsArray = null;
@@ -920,7 +935,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MovePrevious()
 		{
 			object[] paramsArray = null;
@@ -944,7 +959,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Key11">optional object Key11</param>
 		/// <param name="Key12">optional object Key12</param>
 		/// <param name="Key13">optional object Key13</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12, object key13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13);
@@ -956,7 +971,8 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Comparison">string Comparison</param>
 		/// <param name="Key1">object Key1</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Seek(string comparison, object key1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1);
@@ -966,7 +982,216 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		/// <param name="Key8">optional object Key8</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		/// <param name="Key8">optional object Key8</param>
+		/// <param name="Key9">optional object Key9</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		/// <param name="Key8">optional object Key8</param>
+		/// <param name="Key9">optional object Key9</param>
+		/// <param name="Key10">optional object Key10</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		/// <param name="Key8">optional object Key8</param>
+		/// <param name="Key9">optional object Key9</param>
+		/// <param name="Key10">optional object Key10</param>
+		/// <param name="Key11">optional object Key11</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Comparison">string Comparison</param>
+		/// <param name="Key1">object Key1</param>
+		/// <param name="Key2">optional object Key2</param>
+		/// <param name="Key3">optional object Key3</param>
+		/// <param name="Key4">optional object Key4</param>
+		/// <param name="Key5">optional object Key5</param>
+		/// <param name="Key6">optional object Key6</param>
+		/// <param name="Key7">optional object Key7</param>
+		/// <param name="Key8">optional object Key8</param>
+		/// <param name="Key9">optional object Key9</param>
+		/// <param name="Key10">optional object Key10</param>
+		/// <param name="Key11">optional object Key11</param>
+		/// <param name="Key12">optional object Key12</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12);
+			Invoker.Method(this, "Seek", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void _30_Update()
 		{
 			object[] paramsArray = null;
@@ -976,7 +1201,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset Clone()
 		{
 			object[] paramsArray = null;
@@ -989,7 +1214,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="NewQueryDef">optional object NewQueryDef</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Requery(object newQueryDef)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newQueryDef);
@@ -999,7 +1224,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Requery()
 		{
 			object[] paramsArray = null;
@@ -1011,7 +1237,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Rows">Int32 Rows</param>
 		/// <param name="StartBookmark">optional object StartBookmark</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Move(Int32 rows, object startBookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
@@ -1022,7 +1248,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Rows">Int32 Rows</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Move(Int32 rows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows);
@@ -1034,7 +1261,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Rows">optional object Rows</param>
 		/// <param name="StartBookmark">optional object StartBookmark</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FillCache(object rows, object startBookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
@@ -1044,7 +1271,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void FillCache()
 		{
 			object[] paramsArray = null;
@@ -1054,9 +1282,21 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="Rows">optional object Rows</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public void FillCache(object rows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(rows);
+			Invoker.Method(this, "FillCache", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options, inconsistent);
@@ -1068,7 +1308,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateDynaset()
 		{
 			object[] paramsArray = null;
@@ -1081,7 +1322,21 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset CreateDynaset(object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(options);
+			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Options">optional object Options</param>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
@@ -1093,7 +1348,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot()
 		{
 			object[] paramsArray = null;
@@ -1105,7 +1361,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDef CopyQueryDef()
 		{
 			object[] paramsArray = null;
@@ -1117,7 +1373,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset ListFields()
 		{
 			object[] paramsArray = null;
@@ -1129,7 +1385,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset ListIndexes()
 		{
 			object[] paramsArray = null;
@@ -1142,7 +1398,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="NumRows">optional object NumRows</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object GetRows(object numRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
@@ -1161,7 +1417,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public object GetRows()
 		{
 			object[] paramsArray = null;
@@ -1180,7 +1437,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Cancel()
 		{
 			object[] paramsArray = null;
@@ -1190,7 +1447,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool NextRecordset()
 		{
 			object[] paramsArray = null;
@@ -1202,7 +1459,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="UpdateType">Int32 UpdateType</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void CancelUpdate(Int32 updateType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(updateType);
@@ -1214,7 +1471,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="UpdateType">Int32 UpdateType</param>
 		/// <param name="Force">bool Force</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Update(Int32 updateType, bool force)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(updateType, force);
@@ -1225,7 +1482,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Options">Int32 Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MoveLast(Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);

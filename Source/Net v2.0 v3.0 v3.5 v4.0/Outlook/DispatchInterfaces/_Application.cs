@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface _Application SupportByLibrary Outlook, 9,10,11,12,14
+	/// DispatchInterface _Application SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Application : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public string Version
 		{
 			get
@@ -185,7 +185,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
 		{
 			get
@@ -201,7 +201,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Explorers Explorers
 		{
 			get
@@ -217,7 +217,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Inspectors Inspectors
 		{
 			get
@@ -233,7 +233,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
@@ -249,7 +249,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public string ProductCode
 		{
 			get
@@ -264,7 +264,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -280,7 +280,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
 		{
 			get
@@ -300,7 +300,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi._Reminders Reminders
 		{
 			get
@@ -316,7 +316,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public string DefaultProfileName
 		{
 			get
@@ -331,7 +331,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public bool IsTrusted
 		{
 			get
@@ -346,7 +346,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OfficeApi.IAssistance Assistance
 		{
 			get
@@ -362,7 +362,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.TimeZones TimeZones
 		{
 			get
@@ -378,7 +378,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public NetOffice.OfficeApi.PickerDialog PickerDialog
 		{
 			get
@@ -397,7 +397,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Explorer ActiveExplorer()
 		{
 			object[] paramsArray = null;
@@ -409,7 +409,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Inspector ActiveInspector()
 		{
 			object[] paramsArray = null;
@@ -422,7 +422,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ItemType">NetOffice.OutlookApi.Enums.OlItemType ItemType</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject CreateItem(NetOffice.OutlookApi.Enums.OlItemType itemType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemType);
@@ -436,7 +436,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="TemplatePath">string TemplatePath</param>
 		/// <param name="InFolder">optional object InFolder</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject CreateItemFromTemplate(string templatePath, object inFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath, inFolder);
@@ -449,7 +449,8 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="TemplatePath">string TemplatePath</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject CreateItemFromTemplate(string templatePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath);
@@ -462,7 +463,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ObjectName">string ObjectName</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject CreateObject(string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectName);
@@ -475,7 +476,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Type">string Type</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace GetNamespace(string type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -487,7 +488,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public void Quit()
 		{
 			object[] paramsArray = null;
@@ -497,7 +498,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject ActiveWindow()
 		{
 			object[] paramsArray = null;
@@ -511,7 +512,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="FilePath">string FilePath</param>
 		/// <param name="DestFolderPath">string DestFolderPath</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public COMObject CopyFile(string filePath, string destFolderPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filePath, destFolderPath);
@@ -527,7 +528,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="Filter">optional object Filter</param>
 		/// <param name="SearchSubFolders">optional object SearchSubFolders</param>
 		/// <param name="Tag">optional object Tag</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders, object tag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders, tag);
@@ -540,7 +541,8 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Scope">string Scope</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public NetOffice.OutlookApi.Search AdvancedSearch(string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope);
@@ -552,8 +554,39 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Scope">string Scope</param>
+		/// <param name="Filter">optional object Filter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		public NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter);
+			object returnItem = Invoker.MethodReturn(this, "AdvancedSearch", paramsArray);
+			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Outlook 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Scope">string Scope</param>
+		/// <param name="Filter">optional object Filter</param>
+		/// <param name="SearchSubFolders">optional object SearchSubFolders</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		public NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders);
+			object returnItem = Invoker.MethodReturn(this, "AdvancedSearch", paramsArray);
+			NetOffice.OutlookApi.Search newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Outlook 10, 11, 12, 14
+		/// </summary>
 		/// <param name="LookInFolders">string LookInFolders</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public bool IsSearchSynchronous(string lookInFolders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lookInFolders);
@@ -565,7 +598,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pvar">object pvar</param>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 		public void GetNewNickNames(object pvar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvar);
@@ -577,7 +610,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="Item">object Item</param>
 		/// <param name="ReferenceType">NetOffice.OutlookApi.Enums.OlReferenceType ReferenceType</param>
-		[SupportByLibrary("Outlook", 12,14)]
+		[SupportByLibraryAttribute("Outlook", 12,14)]
 		public COMObject GetObjectReference(object item, NetOffice.OutlookApi.Enums.OlReferenceType referenceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, referenceType);
@@ -590,7 +623,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 14
 		/// </summary>
 		/// <param name="RegionName">string RegionName</param>
-		[SupportByLibrary("Outlook", 14)]
+		[SupportByLibraryAttribute("Outlook", 14)]
 		public void RefreshFormRegionDefinition(string regionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(regionName);

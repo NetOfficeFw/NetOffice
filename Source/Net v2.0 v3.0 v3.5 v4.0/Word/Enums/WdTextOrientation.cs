@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdTextOrientation
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTextOrientationHorizontal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTextOrientationUpward = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTextOrientationDownward = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTextOrientationVerticalFarEast = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Word", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		 wdTextOrientationHorizontalRotatedFarEast = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14, 
+		 /// SupportByLibrary Word 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Word", 12,14)]
+		 [SupportByLibraryAttribute("Word", 12,14)]
 		 wdTextOrientationVertical = 5
 	}
 }

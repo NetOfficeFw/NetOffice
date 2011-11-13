@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface Conflict SupportByLibrary Outlook, 11,12,14
+	/// DispatchInterface Conflict SupportByLibraryAttribute Outlook, 11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Conflict : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public COMObject Item
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public string Name
 		{
 			get
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Type
 		{
 			get

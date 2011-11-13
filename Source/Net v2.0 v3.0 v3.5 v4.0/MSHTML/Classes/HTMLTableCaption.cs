@@ -79,9 +79,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLTableCaption SupportByLibrary MSHTML, 4
+	/// CoClass HTMLTableCaption SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLTableCaption : DispHTMLTableCaption, IEventBinding 
 	{

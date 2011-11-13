@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface SeriesCollection SupportByLibrary PowerPoint, 14
+	/// DispatchInterface SeriesCollection SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Count
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">optional object Rowcol</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -165,7 +165,8 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -184,8 +185,30 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">optional object Rowcol</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public object Extend(object source, object rowcol)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
+			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Series this[object index]
 		{
@@ -201,7 +224,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
@@ -218,7 +241,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="SeriesLabels">optional object SeriesLabels</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
@@ -232,7 +255,8 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">NetOffice.PowerPointApi.Enums.XlRowCol Rowcol</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -244,8 +268,41 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.PowerPointApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Series.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Series;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.PowerPointApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Series newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Series.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Series;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Series _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -258,7 +315,10 @@ namespace NetOffice.PowerPointApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("PowerPoint", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute PowerPoint, 14
+		/// </summary>
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICTPFactory SupportByLibrary Office, 12,14
+	/// DispatchInterface ICTPFactory SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICTPFactory : COMObject
 	{
@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="CTPAxID">string CTPAxID</param>
 		/// <param name="CTPTitle">string CTPTitle</param>
 		/// <param name="CTPParentWindow">optional object CTPParentWindow</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
@@ -96,7 +96,8 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="CTPAxID">string CTPAxID</param>
 		/// <param name="CTPTitle">string CTPTitle</param>
-		[SupportByLibrary("Office", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);

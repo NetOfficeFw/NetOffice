@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceMember SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceMember SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceMember : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string DomainName
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string Name
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string Email
 		{
 			get
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string Id
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

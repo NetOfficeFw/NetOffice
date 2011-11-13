@@ -39,9 +39,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass MobileItem SupportByLibrary Outlook, 14
+	/// CoClass MobileItem SupportByLibraryAttribute Outlook, 14
 	///</summary>
-	[SupportByLibrary("Outlook", 14)]
+	[SupportByLibraryAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MobileItem : _MobileItem, IEventBinding 
 	{

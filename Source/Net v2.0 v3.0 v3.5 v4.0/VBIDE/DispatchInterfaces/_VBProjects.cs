@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _VBProjects SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _VBProjects SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _VBProjects : _VBProjects_Old
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="Type">NetOffice.VBIDEApi.Enums.vbext_ProjectType Type</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBProject Add(NetOffice.VBIDEApi.Enums.vbext_ProjectType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -93,7 +93,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="lpc">NetOffice.VBIDEApi.VBProject lpc</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void Remove(NetOffice.VBIDEApi.VBProject lpc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lpc);
@@ -104,7 +104,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBProject Open(string bstrPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispWebGeolocation SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispWebGeolocation SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispWebGeolocation : COMObject
 	{
@@ -82,7 +82,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="successCallback">object successCallback</param>
 		/// <param name="errorCallback">object errorCallback</param>
 		/// <param name="options">object options</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void getCurrentPosition(object successCallback, object errorCallback, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(successCallback, errorCallback, options);
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="successCallback">object successCallback</param>
 		/// <param name="errorCallback">object errorCallback</param>
 		/// <param name="options">object options</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 watchPosition(object successCallback, object errorCallback, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(successCallback, errorCallback, options);
@@ -107,7 +107,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="watchId">Int32 watchId</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clearWatch(Int32 watchId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(watchId);

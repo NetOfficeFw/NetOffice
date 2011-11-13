@@ -34,12 +34,16 @@ Public Class Form1
         Dim closeHandler As Outlook.MailItem_CloseEventHandler = AddressOf Me.mailItem_CloseEvent
         AddHandler mailItem.CloseEvent, closeHandler
 
-        mailItem.BodyFormat = OlBodyFormat.olFormatPlain
+        ' BodyFormat is not available in Outlook 2000
+        ' we check at runtime is property is available
+        If (mailItem.EntityIsAvailable("BodyFormat")) Then
+            mailItem.BodyFormat = OlBodyFormat.olFormatPlain
+        End If
         mailItem.Body = "Body of Example06 " + DateTime.Now.ToLongTimeString()
         mailItem.Subject = "Example06"
         mailItem.Display()
         mailItem.Close(OlInspectorClose.olDiscard)
- 
+
         ' close word and dispose reference
         outlookApplication.Quit()
         outlookApplication.Dispose()

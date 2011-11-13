@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface IRecFields SupportByLibrary ADODB, 2.5
+	/// DispatchInterface IRecFields SupportByLibraryAttribute ADODB, 2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IRecFields : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void ADOCheck()
 		{
 			object[] paramsArray = null;

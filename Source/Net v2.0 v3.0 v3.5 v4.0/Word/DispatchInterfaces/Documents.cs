@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Documents SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Documents SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Documents : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Document this[object index]
 		{
@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
 		/// <param name="SaveChanges">optional object SaveChanges</param>
 		/// <param name="OriginalFormat">optional object OriginalFormat</param>
 		/// <param name="RouteDocument">optional object RouteDocument</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Close(object saveChanges, object originalFormat, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat, routeDocument);
@@ -172,7 +172,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -182,9 +183,34 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Close(object saveChanges)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
+			Invoker.Method(this, "Close", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		/// <param name="OriginalFormat">optional object OriginalFormat</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Close(object saveChanges, object originalFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat);
+			Invoker.Method(this, "Close", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Template">optional object Template</param>
 		/// <param name="NewTemplate">optional object NewTemplate</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld(object template, object newTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate);
@@ -196,10 +222,25 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Template">optional object Template</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document AddOld(object template)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(template);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -218,7 +259,7 @@ namespace NetOffice.WordApi
 		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="Format">optional object Format</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -231,7 +272,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -243,9 +285,157 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="NoPrompt">optional object NoPrompt</param>
 		/// <param name="OriginalFormat">optional object OriginalFormat</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Save(object noPrompt, object originalFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(noPrompt, originalFormat);
@@ -255,10 +445,23 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Save()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Save", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="NoPrompt">optional object NoPrompt</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Save(object noPrompt)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(noPrompt);
 			Invoker.Method(this, "Save", paramsArray);
 		}
 
@@ -269,7 +472,7 @@ namespace NetOffice.WordApi
 		/// <param name="NewTemplate">optional object NewTemplate</param>
 		/// <param name="DocumentType">optional object DocumentType</param>
 		/// <param name="Visible">optional object Visible</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(object template, object newTemplate, object documentType, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate, documentType, visible);
@@ -281,7 +484,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add()
 		{
 			object[] paramsArray = null;
@@ -291,7 +495,52 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Template">optional object Template</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Add(object template)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(template);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Template">optional object Template</param>
+		/// <param name="NewTemplate">optional object NewTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Add(object template, object newTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Template">optional object Template</param>
+		/// <param name="NewTemplate">optional object NewTemplate</param>
+		/// <param name="DocumentType">optional object DocumentType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Add(object template, object newTemplate, object documentType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate, documentType);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
 		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
@@ -305,7 +554,7 @@ namespace NetOffice.WordApi
 		/// <param name="Format">optional object Format</param>
 		/// <param name="Encoding">optional object Encoding</param>
 		/// <param name="Visible">optional object Visible</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -315,7 +564,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
 		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
@@ -332,7 +581,7 @@ namespace NetOffice.WordApi
 		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
-		[SupportByLibrary("Word", 10)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
@@ -360,7 +609,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">optional object XMLTransform</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
@@ -373,10 +622,206 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -397,7 +842,60 @@ namespace NetOffice.WordApi
 		/// <param name="Format">optional object Format</param>
 		/// <param name="Encoding">optional object Encoding</param>
 		/// <param name="Visible">optional object Visible</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		/// <param name="DocumentDirection">optional object DocumentDirection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -410,7 +908,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -422,8 +921,203 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
+			object returnItem = Invoker.MethodReturn(this, "Open2000", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void CheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -434,7 +1128,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool CanCheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -460,7 +1154,7 @@ namespace NetOffice.WordApi
 		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
@@ -473,10 +1167,284 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
+			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		/// <param name="DocumentDirection">optional object DocumentDirection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
+		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
 			object returnItem = Invoker.MethodReturn(this, "Open2002", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -501,7 +1469,7 @@ namespace NetOffice.WordApi
 		/// <param name="DocumentDirection">optional object DocumentDirection</param>
 		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="XMLTransform">optional object XMLTransform</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
@@ -514,10 +1482,312 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 12, 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		/// <param name="DocumentDirection">optional object DocumentDirection</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
+			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
+			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 12, 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="ConfirmConversions">optional object ConfirmConversions</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="PasswordTemplate">optional object PasswordTemplate</param>
+		/// <param name="Revert">optional object Revert</param>
+		/// <param name="WritePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="WritePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="Format">optional object Format</param>
+		/// <param name="Encoding">optional object Encoding</param>
+		/// <param name="Visible">optional object Visible</param>
+		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
+		/// <param name="DocumentDirection">optional object DocumentDirection</param>
+		/// <param name="NoEncodingDialog">optional object NoEncodingDialog</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
 			object returnItem = Invoker.MethodReturn(this, "OpenNoRepairDialog", paramsArray);
 			NetOffice.WordApi.Document newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
 			return newObject;
@@ -530,7 +1800,7 @@ namespace NetOffice.WordApi
 		/// <param name="PostURL">string PostURL</param>
 		/// <param name="BlogName">string BlogName</param>
 		/// <param name="PostID">string PostID</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, string postID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName, postID);
@@ -543,7 +1813,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

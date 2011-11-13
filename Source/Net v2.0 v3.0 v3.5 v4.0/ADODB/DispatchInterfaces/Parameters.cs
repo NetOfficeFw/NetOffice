@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Parameters SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface Parameters SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Parameters : _DynaCollection ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.ADODBApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ADODBApi._Parameter this[object index]
 		{
@@ -113,7 +113,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.1, 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -124,7 +124,10 @@ namespace NetOffice.ADODBApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("ADODB", 2.1,2.5)]
+		/// <summary>
+		/// SupportByLibraryAttribute ADODB, 2.1,2.5
+		/// </summary>
+		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

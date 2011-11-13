@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcImeMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeNoControl = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeOn = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeOff = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeDisable = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeHiragana = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeKatakana = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeKatakanaHalf = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeAlphaFull = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeAlpha = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeHangulFull = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acImeModeHangul = 10
 	}
 }

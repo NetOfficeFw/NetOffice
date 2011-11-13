@@ -29,9 +29,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass BoundObjectFrame SupportByLibrary Access, 9,10,11,12,14
+	/// CoClass BoundObjectFrame SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class BoundObjectFrame : _BoundObjectFrame, IEventBinding 
 	{

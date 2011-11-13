@@ -19,9 +19,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkBusinessCardControl SupportByLibrary Outlook, 12,14
+	/// CoClass OlkBusinessCardControl SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkBusinessCardControl : _OlkBusinessCardControl, IEventBinding 
 	{

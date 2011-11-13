@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IPanels SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IPanels SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IPanels : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
@@ -98,7 +98,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel get_ControlDefault(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -112,7 +112,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IPanel value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -124,7 +124,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IPanel this[object index]
 		{
@@ -149,7 +149,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="Text">optional object Text</param>
 		/// <param name="Style">optional object Style</param>
 		/// <param name="Picture">optional object Picture</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style, object picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style, picture);
@@ -161,7 +161,8 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add()
 		{
 			object[] paramsArray = null;
@@ -173,7 +174,69 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		/// <param name="Index">optional object Index</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IPanel Add(object index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="Index">optional object Index</param>
+		/// <param name="Key">optional object Key</param>
+		/// <param name="Text">optional object Text</param>
+		/// <param name="Style">optional object Style</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.MSComctlLibApi.IPanel newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IPanel;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -184,7 +247,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -195,7 +258,10 @@ namespace NetOffice.MSComctlLibApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSComctlLib", 6)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSComctlLib, 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

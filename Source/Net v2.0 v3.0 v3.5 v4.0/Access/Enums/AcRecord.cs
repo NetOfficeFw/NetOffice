@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcRecord
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acPrevious = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acNext = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acFirst = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acLast = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acGoTo = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acNewRec = 5
 	}
 }

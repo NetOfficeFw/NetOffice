@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface Events SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface Events SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Events : COMObject
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.VBIDEApi
 		/// Get
 		/// </summary>
 		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
@@ -91,7 +91,7 @@ namespace NetOffice.VBIDEApi
 		/// Get
 		/// </summary>
 		/// <param name="CommandBarControl">object CommandBarControl</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);

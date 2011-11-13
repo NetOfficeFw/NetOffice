@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1, 
+	 /// SupportByLibrary OWC10 1
 	 /// </summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlInsertShiftDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>-4121</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 xlShiftDown = -4121,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>-4161</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 xlShiftToRight = -4161
 	}
 }

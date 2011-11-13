@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGSVGElement SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGSVGElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGSVGElement : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGAnimatedLength x
 		{
 			get
@@ -97,7 +97,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGAnimatedLength y
 		{
 			get
@@ -118,7 +118,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGAnimatedLength width
 		{
 			get
@@ -139,7 +139,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGAnimatedLength height
 		{
 			get
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string contentScriptType
 		{
 			get
@@ -180,7 +180,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string contentStyleType
 		{
 			get
@@ -200,7 +200,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGRect viewport
 		{
 			get
@@ -221,7 +221,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single pixelUnitToMillimeterX
 		{
 			get
@@ -241,7 +241,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single pixelUnitToMillimeterY
 		{
 			get
@@ -261,7 +261,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single screenPixelToMillimeterX
 		{
 			get
@@ -281,7 +281,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single screenPixelToMillimeterY
 		{
 			get
@@ -301,7 +301,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool useCurrentView
 		{
 			get
@@ -321,7 +321,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGViewSpec currentView
 		{
 			get
@@ -342,7 +342,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single currentScale
 		{
 			get
@@ -362,7 +362,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPoint currentTranslate
 		{
 			get
@@ -387,7 +387,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="maxWaitMilliseconds">Int32 maxWaitMilliseconds</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 suspendRedraw(Int32 maxWaitMilliseconds)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(maxWaitMilliseconds);
@@ -399,7 +399,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="suspendHandeID">Int32 suspendHandeID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void unsuspendRedraw(Int32 suspendHandeID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(suspendHandeID);
@@ -409,7 +409,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void unsuspendRedrawAll()
 		{
 			object[] paramsArray = null;
@@ -419,7 +419,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void forceRedraw()
 		{
 			object[] paramsArray = null;
@@ -429,7 +429,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void pauseAnimations()
 		{
 			object[] paramsArray = null;
@@ -439,7 +439,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void unpauseAnimations()
 		{
 			object[] paramsArray = null;
@@ -449,7 +449,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool animationsPaused()
 		{
 			object[] paramsArray = null;
@@ -460,7 +460,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single getCurrentTime()
 		{
 			object[] paramsArray = null;
@@ -472,7 +472,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="seconds">Single seconds</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setCurrentTime(Single seconds)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(seconds);
@@ -484,7 +484,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="rect">LateBindingApi.MSHTMLApi.ISVGRect rect</param>
 		/// <param name="referenceElement">LateBindingApi.MSHTMLApi.ISVGElement referenceElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object getIntersectionList(LateBindingApi.MSHTMLApi.ISVGRect rect, LateBindingApi.MSHTMLApi.ISVGElement referenceElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rect, referenceElement);
@@ -505,7 +505,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="rect">LateBindingApi.MSHTMLApi.ISVGRect rect</param>
 		/// <param name="referenceElement">LateBindingApi.MSHTMLApi.ISVGElement referenceElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object getEnclosureList(LateBindingApi.MSHTMLApi.ISVGRect rect, LateBindingApi.MSHTMLApi.ISVGElement referenceElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rect, referenceElement);
@@ -526,7 +526,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="element">LateBindingApi.MSHTMLApi.ISVGElement element</param>
 		/// <param name="rect">LateBindingApi.MSHTMLApi.ISVGRect rect</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool checkIntersection(LateBindingApi.MSHTMLApi.ISVGElement element, LateBindingApi.MSHTMLApi.ISVGRect rect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element, rect);
@@ -539,7 +539,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="element">LateBindingApi.MSHTMLApi.ISVGElement element</param>
 		/// <param name="rect">LateBindingApi.MSHTMLApi.ISVGRect rect</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool checkEnclosure(LateBindingApi.MSHTMLApi.ISVGElement element, LateBindingApi.MSHTMLApi.ISVGRect rect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element, rect);
@@ -550,7 +550,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void deselectAll()
 		{
 			object[] paramsArray = null;
@@ -560,7 +560,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGNumber createSVGNumber()
 		{
 			object[] paramsArray = null;
@@ -572,7 +572,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGLength createSVGLength()
 		{
 			object[] paramsArray = null;
@@ -584,7 +584,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGAngle createSVGAngle()
 		{
 			object[] paramsArray = null;
@@ -596,7 +596,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGPoint createSVGPoint()
 		{
 			object[] paramsArray = null;
@@ -608,7 +608,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGMatrix createSVGMatrix()
 		{
 			object[] paramsArray = null;
@@ -620,7 +620,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGRect createSVGRect()
 		{
 			object[] paramsArray = null;
@@ -632,7 +632,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform createSVGTransform()
 		{
 			object[] paramsArray = null;
@@ -645,7 +645,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="matrix">LateBindingApi.MSHTMLApi.ISVGMatrix matrix</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGTransform createSVGTransformFromMatrix(LateBindingApi.MSHTMLApi.ISVGMatrix matrix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(matrix);
@@ -658,7 +658,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="elementId">string elementId</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLElement getElementById(string elementId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(elementId);

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _Combobox SupportByLibrary Access, 9,10,11,12,14
+	/// DispatchInterface _Combobox SupportByLibraryAttribute Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Combobox : NetOffice.OfficeApi.IAccessible
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
 		/// <param name="Row">optional object Row</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object get_Column(Int32 index, object row)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, row);
@@ -131,7 +131,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object get_Column(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object OldValue
 		{
 			get
@@ -175,7 +175,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object get_ItemData(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -195,7 +195,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Properties Properties
 		{
 			get
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Children Controls
 		{
 			get
@@ -227,7 +227,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi._Hyperlink Hyperlink
 		{
 			get
@@ -243,7 +243,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.FormatConditions FormatConditions
 		{
 			get
@@ -259,7 +259,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object Value
 		{
 			get
@@ -287,7 +287,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string EventProcPrefix
 		{
 			get
@@ -307,7 +307,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string _Name
 		{
 			get
@@ -327,7 +327,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte ControlType
 		{
 			get
@@ -347,7 +347,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ControlSource
 		{
 			get
@@ -367,7 +367,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Format
 		{
 			get
@@ -387,7 +387,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte DecimalPlaces
 		{
 			get
@@ -407,7 +407,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string InputMask
 		{
 			get
@@ -427,7 +427,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string RowSourceType
 		{
 			get
@@ -447,7 +447,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string RowSource
 		{
 			get
@@ -467,7 +467,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 ColumnCount
 		{
 			get
@@ -487,7 +487,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool ColumnHeads
 		{
 			get
@@ -507,7 +507,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ColumnWidths
 		{
 			get
@@ -527,7 +527,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 BoundColumn
 		{
 			get
@@ -547,7 +547,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 ListRows
 		{
 			get
@@ -567,7 +567,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ListWidth
 		{
 			get
@@ -587,7 +587,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string StatusBarText
 		{
 			get
@@ -607,7 +607,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool LimitToList
 		{
 			get
@@ -627,7 +627,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool AutoExpand
 		{
 			get
@@ -647,7 +647,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string DefaultValue
 		{
 			get
@@ -667,7 +667,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool IMEHold
 		{
 			get
@@ -687,7 +687,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ValidationRule
 		{
 			get
@@ -707,7 +707,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ValidationText
 		{
 			get
@@ -727,7 +727,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -747,7 +747,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte DisplayWhen
 		{
 			get
@@ -767,7 +767,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool Enabled
 		{
 			get
@@ -787,7 +787,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool Locked
 		{
 			get
@@ -807,7 +807,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool AllowAutoCorrect
 		{
 			get
@@ -827,7 +827,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool TabStop
 		{
 			get
@@ -847,7 +847,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 TabIndex
 		{
 			get
@@ -867,7 +867,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool HideDuplicates
 		{
 			get
@@ -887,7 +887,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Left
 		{
 			get
@@ -907,7 +907,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Top
 		{
 			get
@@ -927,7 +927,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Width
 		{
 			get
@@ -947,7 +947,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Height
 		{
 			get
@@ -967,7 +967,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte BackStyle
 		{
 			get
@@ -987,7 +987,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 BackColor
 		{
 			get
@@ -1007,7 +1007,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte SpecialEffect
 		{
 			get
@@ -1027,7 +1027,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte BorderStyle
 		{
 			get
@@ -1047,7 +1047,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte OldBorderStyle
 		{
 			get
@@ -1067,7 +1067,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 BorderColor
 		{
 			get
@@ -1087,7 +1087,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte BorderWidth
 		{
 			get
@@ -1107,7 +1107,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte BorderLineStyle
 		{
 			get
@@ -1127,7 +1127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 ForeColor
 		{
 			get
@@ -1147,7 +1147,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string FontName
 		{
 			get
@@ -1167,7 +1167,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 FontSize
 		{
 			get
@@ -1187,7 +1187,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 FontWeight
 		{
 			get
@@ -1207,7 +1207,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool FontItalic
 		{
 			get
@@ -1227,7 +1227,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool FontUnderline
 		{
 			get
@@ -1247,7 +1247,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte TextFontCharSet
 		{
 			get
@@ -1267,7 +1267,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte TextAlign
 		{
 			get
@@ -1287,7 +1287,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 FontBold
 		{
 			get
@@ -1307,7 +1307,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ShortcutMenuBar
 		{
 			get
@@ -1327,7 +1327,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ControlTipText
 		{
 			get
@@ -1347,7 +1347,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 HelpContextId
 		{
 			get
@@ -1367,7 +1367,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 ColumnWidth
 		{
 			get
@@ -1387,7 +1387,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 ColumnOrder
 		{
 			get
@@ -1407,7 +1407,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool ColumnHidden
 		{
 			get
@@ -1427,7 +1427,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool AutoLabel
 		{
 			get
@@ -1447,7 +1447,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool AddColon
 		{
 			get
@@ -1467,7 +1467,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 LabelX
 		{
 			get
@@ -1487,7 +1487,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 LabelY
 		{
 			get
@@ -1507,7 +1507,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte LabelAlign
 		{
 			get
@@ -1527,7 +1527,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 Section
 		{
 			get
@@ -1547,7 +1547,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string ControlName
 		{
 			get
@@ -1567,7 +1567,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Tag
 		{
 			get
@@ -1587,7 +1587,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Text
 		{
 			get
@@ -1607,7 +1607,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string SelText
 		{
 			get
@@ -1627,7 +1627,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 SelStart
 		{
 			get
@@ -1647,7 +1647,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 SelLength
 		{
 			get
@@ -1667,7 +1667,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int16 TextAlignGeneral
 		{
 			get
@@ -1687,7 +1687,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string FormatPictureText
 		{
 			get
@@ -1707,7 +1707,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 Coltyp
 		{
 			get
@@ -1727,7 +1727,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 ListCount
 		{
 			get
@@ -1747,7 +1747,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public Int32 ListIndex
 		{
 			get
@@ -1767,7 +1767,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool IsVisible
 		{
 			get
@@ -1787,7 +1787,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool InSelection
 		{
 			get
@@ -1807,7 +1807,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string BeforeUpdate
 		{
 			get
@@ -1827,7 +1827,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string AfterUpdate
 		{
 			get
@@ -1847,7 +1847,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnChange
 		{
 			get
@@ -1867,7 +1867,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnNotInList
 		{
 			get
@@ -1887,7 +1887,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnEnter
 		{
 			get
@@ -1907,7 +1907,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnExit
 		{
 			get
@@ -1927,7 +1927,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnGotFocus
 		{
 			get
@@ -1947,7 +1947,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnLostFocus
 		{
 			get
@@ -1967,7 +1967,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnClick
 		{
 			get
@@ -1987,7 +1987,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnDblClick
 		{
 			get
@@ -2007,7 +2007,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseDown
 		{
 			get
@@ -2027,7 +2027,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseMove
 		{
 			get
@@ -2047,7 +2047,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseUp
 		{
 			get
@@ -2067,7 +2067,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyDown
 		{
 			get
@@ -2087,7 +2087,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyUp
 		{
 			get
@@ -2107,7 +2107,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyPress
 		{
 			get
@@ -2127,7 +2127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte ReadingOrder
 		{
 			get
@@ -2147,7 +2147,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte KeyboardLanguage
 		{
 			get
@@ -2167,7 +2167,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte AllowedText
 		{
 			get
@@ -2187,7 +2187,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte ScrollBarAlign
 		{
 			get
@@ -2207,7 +2207,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public byte NumeralShapes
 		{
 			get
@@ -2227,7 +2227,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcImeMode IMEMode
 		{
 			get
@@ -2247,7 +2247,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -2267,7 +2267,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Enums.AcImeSentenceMode IMESentenceMode
 		{
 			get
@@ -2287,7 +2287,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public bool IsHyperlink
 		{
 			get
@@ -2307,7 +2307,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public string OnDirty
 		{
 			get
@@ -2327,7 +2327,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public string OnUndo
 		{
 			get
@@ -2347,7 +2347,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public COMObject Recordset
 		{
 			get
@@ -2368,7 +2368,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public NetOffice.AccessApi._SmartTags SmartTags
 		{
 			get
@@ -2384,7 +2384,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
 		{
 			get
@@ -2399,7 +2399,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 LeftPadding
 		{
 			get
@@ -2419,7 +2419,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 TopPadding
 		{
 			get
@@ -2439,7 +2439,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 RightPadding
 		{
 			get
@@ -2459,7 +2459,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 BottomPadding
 		{
 			get
@@ -2479,7 +2479,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineStyleLeft
 		{
 			get
@@ -2499,7 +2499,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineStyleTop
 		{
 			get
@@ -2519,7 +2519,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineStyleRight
 		{
 			get
@@ -2539,7 +2539,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineStyleBottom
 		{
 			get
@@ -2559,7 +2559,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineWidthLeft
 		{
 			get
@@ -2579,7 +2579,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineWidthTop
 		{
 			get
@@ -2599,7 +2599,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineWidthRight
 		{
 			get
@@ -2619,7 +2619,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public byte GridlineWidthBottom
 		{
 			get
@@ -2639,7 +2639,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int32 GridlineColor
 		{
 			get
@@ -2660,7 +2660,7 @@ namespace NetOffice.AccessApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="lRow">Int32 lRow</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int32 get_Selected(Int32 lRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lRow);
@@ -2673,7 +2673,7 @@ namespace NetOffice.AccessApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="lRow">Int32 lRow</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public void set_Selected(Int32 lRow, Int32 value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lRow);
@@ -2684,7 +2684,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi._ItemsSelected ItemsSelected
 		{
 			get
@@ -2700,7 +2700,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool CanGrow
 		{
 			get
@@ -2720,7 +2720,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool CanShrink
 		{
 			get
@@ -2740,7 +2740,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcSeparatorCharacters SeparatorCharacters
 		{
 			get
@@ -2760,7 +2760,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
 		{
 			get
@@ -2780,7 +2780,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
 		{
 			get
@@ -2800,7 +2800,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string BeforeUpdateMacro
 		{
 			get
@@ -2820,7 +2820,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string AfterUpdateMacro
 		{
 			get
@@ -2840,7 +2840,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnChangeMacro
 		{
 			get
@@ -2860,7 +2860,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnNotInListMacro
 		{
 			get
@@ -2880,7 +2880,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnEnterMacro
 		{
 			get
@@ -2900,7 +2900,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnExitMacro
 		{
 			get
@@ -2920,7 +2920,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnGotFocusMacro
 		{
 			get
@@ -2940,7 +2940,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnLostFocusMacro
 		{
 			get
@@ -2960,7 +2960,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnClickMacro
 		{
 			get
@@ -2980,7 +2980,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnDblClickMacro
 		{
 			get
@@ -3000,7 +3000,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnMouseDownMacro
 		{
 			get
@@ -3020,7 +3020,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnMouseMoveMacro
 		{
 			get
@@ -3040,7 +3040,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnMouseUpMacro
 		{
 			get
@@ -3060,7 +3060,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnKeyDownMacro
 		{
 			get
@@ -3080,7 +3080,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnKeyUpMacro
 		{
 			get
@@ -3100,7 +3100,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string OnKeyPressMacro
 		{
 			get
@@ -3120,7 +3120,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool AllowValueListEdits
 		{
 			get
@@ -3140,7 +3140,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string ListItemsEditForm
 		{
 			get
@@ -3160,7 +3160,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool InheritValueList
 		{
 			get
@@ -3180,7 +3180,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 LeftMargin
 		{
 			get
@@ -3200,7 +3200,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 TopMargin
 		{
 			get
@@ -3220,7 +3220,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 RightMargin
 		{
 			get
@@ -3240,7 +3240,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int16 BottomMargin
 		{
 			get
@@ -3260,7 +3260,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int32 LayoutID
 		{
 			get
@@ -3275,7 +3275,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool ShowOnlyRowSourceValues
 		{
 			get
@@ -3295,7 +3295,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcDisplayAsHyperlink DisplayAsHyperlink
 		{
 			get
@@ -3315,7 +3315,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string Target
 		{
 			get
@@ -3335,7 +3335,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 BackThemeColorIndex
 		{
 			get
@@ -3355,7 +3355,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single BackTint
 		{
 			get
@@ -3375,7 +3375,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single BackShade
 		{
 			get
@@ -3395,7 +3395,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 BorderThemeColorIndex
 		{
 			get
@@ -3415,7 +3415,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single BorderTint
 		{
 			get
@@ -3435,7 +3435,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single BorderShade
 		{
 			get
@@ -3455,7 +3455,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 ForeThemeColorIndex
 		{
 			get
@@ -3475,7 +3475,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single ForeTint
 		{
 			get
@@ -3495,7 +3495,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single ForeShade
 		{
 			get
@@ -3515,7 +3515,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 ThemeFontIndex
 		{
 			get
@@ -3535,7 +3535,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 GridlineThemeColorIndex
 		{
 			get
@@ -3555,7 +3555,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single GridlineTint
 		{
 			get
@@ -3575,7 +3575,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Single GridlineShade
 		{
 			get
@@ -3598,7 +3598,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Undo()
 		{
 			object[] paramsArray = null;
@@ -3608,7 +3608,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Dropdown()
 		{
 			object[] paramsArray = null;
@@ -3618,7 +3618,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void SizeToFit()
 		{
 			object[] paramsArray = null;
@@ -3628,7 +3628,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Requery()
 		{
 			object[] paramsArray = null;
@@ -3638,7 +3638,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void Goto()
 		{
 			object[] paramsArray = null;
@@ -3648,7 +3648,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public void SetFocus()
 		{
 			object[] paramsArray = null;
@@ -3660,7 +3660,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
@@ -3680,7 +3680,8 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
@@ -3703,7 +3704,7 @@ namespace NetOffice.AccessApi
 		/// <param name="Top">optional object Top</param>
 		/// <param name="Width">optional object Width</param>
 		/// <param name="Height">optional object Height</param>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public void Move(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -3714,7 +3715,8 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Left">object Left</param>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public void Move(object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left);
@@ -3724,9 +3726,36 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Left">object Left</param>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
+		public void Move(object left, object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
+			Invoker.Method(this, "Move", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Access 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Left">object Left</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
+		public void Move(object left, object top, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
+			Invoker.Method(this, "Move", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Access 10, 11, 12, 14
+		/// </summary>
 		/// <param name="Item">string Item</param>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public void AddItem(string item, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, index);
@@ -3737,7 +3766,8 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Item">string Item</param>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public void AddItem(string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -3748,7 +3778,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Access", 10,11,12,14)]
+		[SupportByLibraryAttribute("Access", 10,11,12,14)]
 		public void RemoveItem(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -3759,7 +3789,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 11,12,14)]
+		[SupportByLibraryAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

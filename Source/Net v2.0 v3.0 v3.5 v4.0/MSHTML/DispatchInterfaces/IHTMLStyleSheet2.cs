@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLStyleSheet2 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLStyleSheet2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLStyleSheet2 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLStyleSheetPagesCollection pages
 		{
 			get
@@ -98,7 +98,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 addPageRule(string bstrSelector, string bstrStyle, Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);

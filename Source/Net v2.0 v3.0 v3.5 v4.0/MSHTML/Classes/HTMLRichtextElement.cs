@@ -82,9 +82,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLRichtextElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLRichtextElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLRichtextElement : DispHTMLRichtextElement, IEventBinding 
 	{

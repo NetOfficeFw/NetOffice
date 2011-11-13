@@ -30,7 +30,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         Dim commandBar As Office.CommandBar = Nothing
@@ -40,8 +40,7 @@ Public Class Form1
         _accessApplication = New Access.Application()
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _accessApplication.CommandBars("Menu Bar").Controls.Add( _
-                                                                                MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
+        Dim commandBarPopup As Office.CommandBarPopup = _accessApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' you can see we use an own icon via .PasteFace()
@@ -51,7 +50,7 @@ Public Class Form1
         ' For example, a COMAddin running as InProcServer and can access the Picture Property
 
         ' add a button to the popup
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         Clipboard.SetDataObject(Me.Icon.ToBitmap())
@@ -86,6 +85,7 @@ Public Class Form1
     Private Sub UpdateTextbox(ByVal message As String)
 
         textBoxEvents.AppendText(message & vbNewLine)
+
     End Sub
 
 End Class

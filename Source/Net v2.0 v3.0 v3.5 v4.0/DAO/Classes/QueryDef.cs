@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass QueryDef SupportByLibrary DAO, 6,12
+	/// CoClass QueryDef SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryDef : _QueryDef, IEventBinding 
 	{

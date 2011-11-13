@@ -3,51 +3,57 @@ using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Text;
+using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace LateBindingApi.Core
 {
     /// <summary>
     /// represents a managed COM proxy 
     /// </summary>
-    public class COMObject : IDisposable 
+    public class COMObject : IDisposable
     {
         #region Fields
 
         /// <summary>
         ///  returns parent proxy object
         /// </summary>
-        protected internal COMObject            _parentObject;
+        protected internal COMObject _parentObject;
 
         /// <summary>
         /// returns Type of native proxy
         /// </summary>
-        protected internal Type                 _instanceType;
+        protected internal Type _instanceType;
 
         /// <summary>
         /// returns the native wrapped proxy
         /// </summary>
-        protected internal object               _underlyingObject;
-        
+        protected internal object _underlyingObject;
+
         /// <summary>
         /// returns instance is an enumerator
         /// </summary>
-        protected internal bool                 _isEnumerator;        
+        protected internal bool _isEnumerator;
 
         /// <summary>
         /// returns instance is currently in diposing progress
         /// </summary>
-        protected internal volatile bool        _isCurrentlyDisposing;
-       
+        protected internal volatile bool _isCurrentlyDisposing;
+
         /// <summary>
         /// returns instance is diposed means unusable
         /// </summary>
-        protected internal volatile bool        _isDisposed;
-        
+        protected internal volatile bool _isDisposed;
+
         /// <summary>
         ///  child instance List
         /// </summary>
-        protected internal List<COMObject>      _listChildObjects    = new List<COMObject>();
-       
+        protected internal List<COMObject> _listChildObjects = new List<COMObject>();
+
+        /// <summary>
+        /// list of runtime supported entities
+        /// </summary>
+        Dictionary<string, string> _listSupportedEntities;
+
         #endregion
 
         #region Construction
@@ -62,8 +68,8 @@ namespace LateBindingApi.Core
         {
             // copy proxy
             _underlyingObject = replacedObject.UnderlyingObject;
-            _parentObject     = replacedObject.ParentObject;
-            _instanceType     = replacedObject.InstanceType;
+            _parentObject = replacedObject.ParentObject;
+            _instanceType = replacedObject.InstanceType;
 
             // copy childs
             foreach (IObject item in replacedObject.ListChildObjects)
@@ -74,7 +80,7 @@ namespace LateBindingApi.Core
             {
                 COMObject parentObject = replacedObject.ParentObject;
                 parentObject.RemoveChildObject(replacedObject);
-                
+
                 // add himself as child to parent object
                 parentObject.AddChildObject(this);
             }
@@ -82,7 +88,7 @@ namespace LateBindingApi.Core
             Factory.RemoveObjectFromList(replacedObject);
             Factory.AddObjectToList(this);
         }
-        
+
         /// <summary>
         /// creates new instance with given proxy
         /// </summary>
@@ -108,7 +114,7 @@ namespace LateBindingApi.Core
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
-            if (null!= parentObject)
+            if (null != parentObject)
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -148,7 +154,7 @@ namespace LateBindingApi.Core
             _underlyingObject = comProxy;
             _instanceType = comProxyType;
 
-            if(null!=parentObject)
+            if (null != parentObject)
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -181,6 +187,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// returns the native wrapped proxy
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object UnderlyingObject
         {
             get
@@ -202,11 +209,11 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns instance is diposed means unusable
+        /// NetOffice property: returns instance is diposed means unusable
         /// </summary>
         public bool IsDisposed
         {
-            get 
+            get
             {
                 return _isDisposed;
             }
@@ -251,14 +258,14 @@ namespace LateBindingApi.Core
                 return _isCurrentlyDisposing;
             }
         }
-        
+
         /// <summary>
         /// returns instance export events
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool IsEventBind
         {
-            get 
+            get
             {
                 return (null != (this as IEventBinding));
             }
@@ -289,7 +296,7 @@ namespace LateBindingApi.Core
             get
             {
                 IEventBinding bindInfo = this as IEventBinding;
-                if(null!=bindInfo)
+                if (null != bindInfo)
                     return bindInfo.HasEventRecipients;
                 else
                     return false;
@@ -311,6 +318,57 @@ namespace LateBindingApi.Core
         #endregion
 
         #region COMObject Methods
+
+        /// <summary>
+        /// NetOffice method: returns information the proxy provides a method or property with given name at runtime
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool EntityIsAvailable(string name)
+        {
+            return EntityIsAvailable(name, SupportEntityType.Both);
+        }
+
+        /// <summary>
+        ///  NetOffice method: returns information the proxy provides a method or property with given name at runtime
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="searchType">limit searching for method or property</param>
+        /// <returns></returns>
+        public bool EntityIsAvailable(string name, SupportEntityType searchType)
+        {
+            switch (searchType)
+            {
+                case SupportEntityType.Method:
+                    {
+                        if (null == _listSupportedEntities)
+                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+
+                        string outValue = null;
+                        return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
+                    }
+                case SupportEntityType.Property:
+                    {
+                        if (null == _listSupportedEntities)
+                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+
+                        string outValue = null;
+                        return _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
+                    }
+                default:
+                    {
+                        if (null == _listSupportedEntities)
+                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+
+                        string outValue = null;
+                        bool result = _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
+                        if (result)
+                            return true;
+
+                        return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
+                    }
+            }
+        }
 
         /// <summary>
         /// create object from progid
@@ -368,7 +426,7 @@ namespace LateBindingApi.Core
             // release himself from COM Runtime System
             if (null != _underlyingObject)
             {
-                if (_isEnumerator) 
+                if (_isEnumerator)
                 {
                     ICustomAdapter adapter = _underlyingObject as ICustomAdapter;
                     Marshal.ReleaseComObject(adapter.GetUnderlyingObject());
@@ -381,13 +439,13 @@ namespace LateBindingApi.Core
                 _underlyingObject = null;
             }
         }
-     
+
         #endregion
 
         #region IDisposable Members
 
         /// <summary>
-        /// dispose instance and all child instances
+        /// NetOffice method: dispose instance and all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
         public void Dispose(bool disposeEventBinding)
@@ -425,12 +483,19 @@ namespace LateBindingApi.Core
             // release proxy
             ReleaseCOMProxy();
 
+            // clear supportList
+            if (null != _listSupportedEntities)
+            {
+                _listSupportedEntities.Clear();
+                _listSupportedEntities = null;
+            }
+
             _isDisposed = true;
             _isCurrentlyDisposing = false;
         }
 
         /// <summary>
-        /// dispose instance and all child instances
+        /// NetOffice method: dispose instance and all child instances
         /// </summary>
         public void Dispose()
         {
@@ -438,7 +503,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// dispose all child instances
+        /// NetOffice method: dispose all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
         public void DisposeChildInstances(bool disposeEventBinding)
@@ -453,7 +518,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// dispose all child instances
+        /// NetOffice method: dispose all child instances
         /// </summary>
         public void DisposeChildInstances()
         {

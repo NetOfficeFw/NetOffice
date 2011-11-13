@@ -28,9 +28,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass TabStrip SupportByLibrary MSComctlLib, 6
+	/// CoClass TabStrip SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TabStrip : ITabStrip, IEventBinding 
 	{

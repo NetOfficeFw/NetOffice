@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Assistant SupportByLibrary Office, 9,10,11,12,14
+	/// DispatchInterface Assistant SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Assistant : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Top
 		{
 			get
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Left
 		{
 			get
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Balloon NewBalloon
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoBalloonErrorType BalloonError
 		{
 			get
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
 		{
 			get
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool Reduced
 		{
 			get
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool AssistWithHelp
 		{
 			get
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool AssistWithWizards
 		{
 			get
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool AssistWithAlerts
 		{
 			get
@@ -283,7 +283,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool MoveWhenInTheWay
 		{
 			get
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool Sounds
 		{
 			get
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool FeatureTips
 		{
 			get
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool MouseTips
 		{
 			get
@@ -363,7 +363,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool KeyboardShortcutTips
 		{
 			get
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool HighPriorityTips
 		{
 			get
@@ -403,7 +403,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool TipOfDay
 		{
 			get
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool GuessHelp
 		{
 			get
@@ -443,7 +443,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool SearchWhenProgramming
 		{
 			get
@@ -463,7 +463,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string Item
 		{
 			get
@@ -478,7 +478,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string FileName
 		{
 			get
@@ -498,7 +498,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public string Name
 		{
 			get
@@ -513,7 +513,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public bool On
 		{
 			get
@@ -538,7 +538,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void Move(Int32 xLeft, Int32 yTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xLeft, yTop);
@@ -548,7 +548,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void Help()
 		{
 			object[] paramsArray = null;
@@ -567,7 +567,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Left">optional object Left</param>
 		/// <param name="Bottom">optional object Bottom</param>
 		/// <param name="Right">optional object Right</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser, top, left, bottom, right);
@@ -581,7 +581,8 @@ namespace NetOffice.OfficeApi
 		/// <param name="On">bool On</param>
 		/// <param name="Callback">string Callback</param>
 		/// <param name="PrivateX">Int32 PrivateX</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 StartWizard(bool on, string callback, Int32 privateX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX);
@@ -592,10 +593,100 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="On">bool On</param>
+		/// <param name="Callback">string Callback</param>
+		/// <param name="PrivateX">Int32 PrivateX</param>
+		/// <param name="Animation">optional object Animation</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation);
+			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="On">bool On</param>
+		/// <param name="Callback">string Callback</param>
+		/// <param name="PrivateX">Int32 PrivateX</param>
+		/// <param name="Animation">optional object Animation</param>
+		/// <param name="CustomTeaser">optional object CustomTeaser</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser);
+			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="On">bool On</param>
+		/// <param name="Callback">string Callback</param>
+		/// <param name="PrivateX">Int32 PrivateX</param>
+		/// <param name="Animation">optional object Animation</param>
+		/// <param name="CustomTeaser">optional object CustomTeaser</param>
+		/// <param name="Top">optional object Top</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser, top);
+			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="On">bool On</param>
+		/// <param name="Callback">string Callback</param>
+		/// <param name="PrivateX">Int32 PrivateX</param>
+		/// <param name="Animation">optional object Animation</param>
+		/// <param name="CustomTeaser">optional object CustomTeaser</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Left">optional object Left</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser, top, left);
+			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="On">bool On</param>
+		/// <param name="Callback">string Callback</param>
+		/// <param name="PrivateX">Int32 PrivateX</param>
+		/// <param name="Animation">optional object Animation</param>
+		/// <param name="CustomTeaser">optional object CustomTeaser</param>
+		/// <param name="Top">optional object Top</param>
+		/// <param name="Left">optional object Left</param>
+		/// <param name="Bottom">optional object Bottom</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public Int32 StartWizard(bool on, string callback, Int32 privateX, object animation, object customTeaser, object top, object left, object bottom)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(on, callback, privateX, animation, customTeaser, top, left, bottom);
+			object returnItem = Invoker.MethodReturn(this, "StartWizard", paramsArray);
+			return (Int32)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="WizardID">Int32 WizardID</param>
 		/// <param name="varfSuccess">bool varfSuccess</param>
 		/// <param name="Animation">optional object Animation</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void EndWizard(Int32 wizardID, bool varfSuccess, object animation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, varfSuccess, animation);
@@ -607,7 +698,8 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="WizardID">Int32 WizardID</param>
 		/// <param name="varfSuccess">bool varfSuccess</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void EndWizard(Int32 wizardID, bool varfSuccess)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, varfSuccess);
@@ -620,7 +712,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="WizardID">Int32 WizardID</param>
 		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
 		/// <param name="Animation">optional object Animation</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act, object animation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, act, animation);
@@ -632,7 +724,8 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="WizardID">Int32 WizardID</param>
 		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void ActivateWizard(Int32 wizardID, NetOffice.OfficeApi.Enums.MsoWizardActType act)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wizardID, act);
@@ -642,7 +735,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public void ResetTips()
 		{
 			object[] paramsArray = null;
@@ -659,7 +752,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ald">NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald</param>
 		/// <param name="alq">NetOffice.OfficeApi.Enums.MsoAlertCancelType alq</param>
 		/// <param name="varfSysAlert">bool varfSysAlert</param>
-		[SupportByLibrary("Office", 10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 10,11,12,14)]
 		public Int32 DoAlert(string bstrAlertTitle, string bstrAlertText, NetOffice.OfficeApi.Enums.MsoAlertButtonType alb, NetOffice.OfficeApi.Enums.MsoAlertIconType alc, NetOffice.OfficeApi.Enums.MsoAlertDefaultType ald, NetOffice.OfficeApi.Enums.MsoAlertCancelType alq, bool varfSysAlert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrAlertTitle, bstrAlertText, alb, alc, ald, alq, varfSysAlert);

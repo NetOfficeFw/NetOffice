@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Assignments SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Assignments SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Assignments : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Project Parent
 		{
 			get
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -125,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Assignment get_UniqueID(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -139,7 +139,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Assignment this[object index]
 		{
@@ -162,7 +162,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="TaskID">optional object TaskID</param>
 		/// <param name="ResourceID">optional object ResourceID</param>
 		/// <param name="Units">optional object Units</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Assignment Add(object taskID, object resourceID, object units)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, resourceID, units);
@@ -174,10 +174,40 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Assignment Add()
 		{
 			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Assignment newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Assignment.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Assignment;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="TaskID">optional object TaskID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Assignment Add(object taskID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Assignment newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Assignment.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Assignment;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="TaskID">optional object TaskID</param>
+		/// <param name="ResourceID">optional object ResourceID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Assignment Add(object taskID, object resourceID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(taskID, resourceID);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			LateBindingApi.MSProjectApi.Assignment newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Assignment.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Assignment;
 			return newObject;
@@ -187,7 +217,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface Database SupportByLibrary DAO, 6,12
+	/// DispatchInterface Database SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Database : _DAO
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 CollatingOrder
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Connect
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Name
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 QueryTimeout
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Transactions
 		{
 			get
@@ -161,7 +161,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public bool Updatable
 		{
 			get
@@ -176,7 +176,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string Version
 		{
 			get
@@ -191,7 +191,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 RecordsAffected
 		{
 			get
@@ -206,7 +206,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.TableDefs TableDefs
 		{
 			get
@@ -222,7 +222,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDefs QueryDefs
 		{
 			get
@@ -238,7 +238,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Relations Relations
 		{
 			get
@@ -254,7 +254,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Containers Containers
 		{
 			get
@@ -270,7 +270,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordsets Recordsets
 		{
 			get
@@ -286,7 +286,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string ReplicaID
 		{
 			get
@@ -301,7 +301,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public string DesignMasterID
 		{
 			get
@@ -321,7 +321,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Connection Connection
 		{
 			get
@@ -340,7 +340,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -352,7 +352,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Query">string Query</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Execute(string query, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, options);
@@ -363,7 +363,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Query">string Query</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Execute(string query)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query);
@@ -376,7 +377,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset _30_OpenRecordset(string name, object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options);
@@ -389,10 +390,26 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset _30_OpenRecordset(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "_30_OpenRecordset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset _30_OpenRecordset(string name, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "_30_OpenRecordset", paramsArray);
 			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
 			return newObject;
@@ -405,7 +422,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Value">optional object Value</param>
 		/// <param name="DDL">optional object DDL</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
@@ -417,7 +434,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Property CreateProperty()
 		{
 			object[] paramsArray = null;
@@ -430,10 +448,55 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Property CreateProperty(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
+			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Property;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
+			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
+			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Property;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Value">optional object Value</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value);
+			object returnItem = Invoker.MethodReturn(this, "CreateProperty", paramsArray);
+			NetOffice.DAOApi.Property newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Property;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
 		/// <param name="Table">optional object Table</param>
 		/// <param name="ForeignTable">optional object ForeignTable</param>
 		/// <param name="Attributes">optional object Attributes</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Relation CreateRelation(object name, object table, object foreignTable, object attributes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, table, foreignTable, attributes);
@@ -445,7 +508,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Relation CreateRelation()
 		{
 			object[] paramsArray = null;
@@ -458,10 +522,55 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Relation CreateRelation(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateRelation", paramsArray);
+			NetOffice.DAOApi.Relation newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Relation.LateBindingApiWrapperType) as NetOffice.DAOApi.Relation;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Table">optional object Table</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Relation CreateRelation(object name, object table)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, table);
+			object returnItem = Invoker.MethodReturn(this, "CreateRelation", paramsArray);
+			NetOffice.DAOApi.Relation newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Relation.LateBindingApiWrapperType) as NetOffice.DAOApi.Relation;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="ForeignTable">optional object ForeignTable</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Relation CreateRelation(object name, object table, object foreignTable)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, table, foreignTable);
+			object returnItem = Invoker.MethodReturn(this, "CreateRelation", paramsArray);
+			NetOffice.DAOApi.Relation newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Relation.LateBindingApiWrapperType) as NetOffice.DAOApi.Relation;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
 		/// <param name="Attributes">optional object Attributes</param>
 		/// <param name="SourceTableName">optional object SourceTableName</param>
 		/// <param name="Connect">optional object Connect</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.TableDef CreateTableDef(object name, object attributes, object sourceTableName, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, attributes, sourceTableName, connect);
@@ -473,7 +582,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.TableDef CreateTableDef()
 		{
 			object[] paramsArray = null;
@@ -485,7 +595,52 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.TableDef CreateTableDef(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateTableDef", paramsArray);
+			NetOffice.DAOApi.TableDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.TableDef.LateBindingApiWrapperType) as NetOffice.DAOApi.TableDef;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Attributes">optional object Attributes</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.TableDef CreateTableDef(object name, object attributes)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, attributes);
+			object returnItem = Invoker.MethodReturn(this, "CreateTableDef", paramsArray);
+			NetOffice.DAOApi.TableDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.TableDef.LateBindingApiWrapperType) as NetOffice.DAOApi.TableDef;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Attributes">optional object Attributes</param>
+		/// <param name="SourceTableName">optional object SourceTableName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.TableDef CreateTableDef(object name, object attributes, object sourceTableName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, attributes, sourceTableName);
+			object returnItem = Invoker.MethodReturn(this, "CreateTableDef", paramsArray);
+			NetOffice.DAOApi.TableDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.TableDef.LateBindingApiWrapperType) as NetOffice.DAOApi.TableDef;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void BeginTrans()
 		{
 			object[] paramsArray = null;
@@ -496,7 +651,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Options">Int32 Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void CommitTrans(Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
@@ -506,7 +661,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Rollback()
 		{
 			object[] paramsArray = null;
@@ -519,7 +674,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Name">string Name</param>
 		/// <param name="Options">optional object Options</param>
 		/// <param name="Inconsistent">optional object Inconsistent</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateDynaset(string name, object options, object inconsistent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, inconsistent);
@@ -532,7 +687,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateDynaset(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -544,9 +700,24 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Options">optional object Options</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset CreateDynaset(string name, object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
+			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="Name">optional object Name</param>
 		/// <param name="SQLText">optional object SQLText</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name, object sQLText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, sQLText);
@@ -558,7 +729,8 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDef CreateQueryDef()
 		{
 			object[] paramsArray = null;
@@ -570,9 +742,23 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.QueryDef CreateQueryDef(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "CreateQueryDef", paramsArray);
+			NetOffice.DAOApi.QueryDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.QueryDef.LateBindingApiWrapperType) as NetOffice.DAOApi.QueryDef;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="Source">string Source</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot(string source, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, options);
@@ -585,7 +771,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Source">string Source</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -598,7 +785,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void DeleteQueryDef(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -609,7 +796,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="SQL">string SQL</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int32 ExecuteSQL(string sQL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sQL);
@@ -621,7 +808,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset ListFields(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -633,7 +820,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset ListTables()
 		{
 			object[] paramsArray = null;
@@ -646,7 +833,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.QueryDef OpenQueryDef(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -660,7 +847,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenTable(string name, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
@@ -673,7 +860,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenTable(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -687,7 +875,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="DbPathName">string DbPathName</param>
 		/// <param name="ExchangeType">optional object ExchangeType</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Synchronize(string dbPathName, object exchangeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dbPathName, exchangeType);
@@ -698,7 +886,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="DbPathName">string DbPathName</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Synchronize(string dbPathName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dbPathName);
@@ -711,7 +900,7 @@ namespace NetOffice.DAOApi
 		/// <param name="PathName">string PathName</param>
 		/// <param name="Description">string Description</param>
 		/// <param name="Options">optional object Options</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MakeReplica(string pathName, string description, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, description, options);
@@ -723,7 +912,8 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="PathName">string PathName</param>
 		/// <param name="Description">string Description</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void MakeReplica(string pathName, string description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, description);
@@ -735,7 +925,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="bstrOld">string bstrOld</param>
 		/// <param name="bstrNew">string bstrNew</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void NewPassword(string bstrOld, string bstrNew)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrOld, bstrNew);
@@ -749,7 +939,7 @@ namespace NetOffice.DAOApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Options">optional object Options</param>
 		/// <param name="LockEdit">optional object LockEdit</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options, object lockEdit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options, lockEdit);
@@ -762,7 +952,8 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -774,8 +965,39 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
+			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Options">optional object Options</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("DAO", 6,12)]
+		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, type, options);
+			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
+			NetOffice.DAOApi.Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary DAO 6, 12
+		/// </summary>
 		/// <param name="DbPathName">string DbPathName</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void PopulatePartial(string dbPathName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dbPathName);

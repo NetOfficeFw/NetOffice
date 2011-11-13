@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceFolder SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceFolder SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFolder : _IMsoDispObj
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string FolderName
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="DeleteEventIfFolderContainsFiles">optional object DeleteEventIfFolderContainsFiles</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void Delete(object deleteEventIfFolderContainsFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deleteEventIfFolderContainsFiles);
@@ -121,7 +121,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

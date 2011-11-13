@@ -26,9 +26,18 @@ namespace Example04
 
             // Create an Outlook Application object. 
             Outlook.Application outlookApplication = new Outlook.Application();
-            
-            // one simple call
-            outlookApplication.Session.SendAndReceive(false);
+
+            // SendAndReceive is supported from Outlook 2007 or higher
+            // we check at runtime the feature is available
+            if(outlookApplication.Session.EntityIsAvailable("SendAndReceive"))
+            {
+                // one simple call
+                outlookApplication.Session.SendAndReceive(false);
+            }
+            else
+            {
+                MessageBox.Show(this, "This version of MS-Outlook doesnt support SendAndReceive.", "Example04",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
 
             // close outlook and dispose
             outlookApplication.Quit();

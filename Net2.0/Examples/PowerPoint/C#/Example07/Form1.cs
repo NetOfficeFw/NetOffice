@@ -36,19 +36,16 @@ namespace Example07
             Office.CommandBar commandBar;
             Office.CommandBarButton commandBarBtn;
 
-            // start powerpoint and turn off msg boxes
+            // start powerpoint
             _powerApplication = new PowerPoint.Application();
-            _powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
             
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = _powerApplication.Presentations.Add(MsoTriState.msoTrue);
             PowerPoint.Slide slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank);
 
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_powerApplication.CommandBars["Menu Bar"].Controls.Add(
-                                                                                MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_powerApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup);
             commandBarPopup.Caption = "commandBarPopup";
-
 
             #region few words, how to access the picture
             /*
@@ -64,7 +61,7 @@ namespace Example07
             #region CommandBarButton
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             Clipboard.SetDataObject(this.Icon.ToBitmap());
@@ -80,18 +77,18 @@ namespace Example07
             commandBar.Visible = true;
 
             // add a button to the toolbar
-            commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            commandBarBtn = (Office.CommandBarButton)commandBar.Controls.Add(MsoControlType.msoControlButton);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             commandBarBtn.FaceId = 3;
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
             // add a dropdown box to the toolbar
-            commandBarPopup = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            commandBarPopup = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup);
             commandBarPopup.Caption = "commandBarPopup";
 
             // add a button to the popup, we use an own icon for the button
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             Clipboard.SetDataObject(this.Icon.ToBitmap());

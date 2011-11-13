@@ -14,9 +14,9 @@ namespace LateBindingApi.MSProjectApi
 	#endregion
 
 	///<summary>
-	/// CoClass Global SupportByLibrary MSProject, 12,14
+	/// CoClass Global SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Global : _Global, IEventBinding 
 	{

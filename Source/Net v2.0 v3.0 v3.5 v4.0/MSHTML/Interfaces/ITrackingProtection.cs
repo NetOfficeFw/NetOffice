@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ITrackingProtection SupportByLibrary MSHTML, 4
+	/// Interface ITrackingProtection SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ITrackingProtection : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrURL">string bstrURL</param>
 		/// <param name="pfAllowed">Int32 pfAllowed</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EvaluateUrl(string bstrURL, Int32 pfAllowed)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrURL, pfAllowed);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfEnabled">Int32 pfEnabled</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetEnabled(Int32 pfEnabled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfEnabled);

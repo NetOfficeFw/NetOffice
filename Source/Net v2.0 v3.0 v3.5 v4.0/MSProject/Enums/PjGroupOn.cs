@@ -4,199 +4,199 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjGroupOn
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnEachValue = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnInterval = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateEachValue = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateMinute = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateHour = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateDay = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateWeek = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateThirdOfMonth = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateMonth = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateQtr = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDateYear = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationEachValue = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationMinutes = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationHours = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationDays = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationWeeks = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnDurationMonths = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnOutlineEachValue = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnOutlineLevel = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPctEachValue = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPctInterval = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPct1_99 = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPct1_50 = 43,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>44</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPct1_25 = 44,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>45</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnPct1_10 = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>50</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnTextEachValue = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>51</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjGroupOnTextPrefix = 51
 	}
 }

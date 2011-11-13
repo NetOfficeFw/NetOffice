@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISurfacePresenter SupportByLibrary MSHTML, 4
+	/// Interface ISurfacePresenter SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISurfacePresenter : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="uBuffer">UIntPtr uBuffer</param>
 		/// <param name="pDirty">tagRECT pDirty</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Present(UIntPtr uBuffer, tagRECT pDirty)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uBuffer, pDirty);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="backBufferIndex">UIntPtr backBufferIndex</param>
 		/// <param name="riid">Guid riid</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void GetBuffer(UIntPtr backBufferIndex, Guid riid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(backBufferIndex, riid);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsCurrent()
 		{
 			object[] paramsArray = null;

@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlScaleType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4132</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlScaleLinear = -4132,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4133</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlScaleLogarithmic = -4133
 	}
 }

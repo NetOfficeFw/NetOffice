@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface WebServices SupportByLibrary Access, 14
+	/// DispatchInterface WebServices SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebServices : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public COMObject Parent
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.WebService this[object index]
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public Int32 Count
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -158,7 +158,10 @@ namespace NetOffice.AccessApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Access", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Access, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Access", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

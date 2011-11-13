@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// DispatchInterface DDataSourceObject SupportByLibrary Outlook, 10
+	/// DispatchInterface DDataSourceObject SupportByLibraryAttribute Outlook, 10
 	///</summary>
-	[SupportByLibrary("Outlook", 10)]
+	[SupportByLibraryAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DDataSourceObject : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Outlook", 10)]
+		[SupportByLibraryAttribute("Outlook", 10)]
 		public COMObject OutlookItem
 		{
 			get

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceFiles SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceFiles SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFiles : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SharedWorkspaceFile this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool ItemCountExceeded
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentFolder">optional object ParentFolder</param>
 		/// <param name="OverwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
 		/// <param name="KeepInSync">optional object KeepInSync</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
@@ -161,10 +161,42 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="ParentFolder">optional object ParentFolder</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="FileName">string FileName</param>
+		/// <param name="ParentFolder">optional object ParentFolder</param>
+		/// <param name="OverwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.OfficeApi.SharedWorkspaceFile newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
@@ -174,7 +206,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

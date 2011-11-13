@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceMembers SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceMembers SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceMembers : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SharedWorkspaceMember this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool ItemCountExceeded
 		{
 			get
@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="DomainName">string DomainName</param>
 		/// <param name="DisplayName">string DisplayName</param>
 		/// <param name="Role">optional object Role</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName, role);
@@ -163,7 +163,8 @@ namespace NetOffice.OfficeApi
 		/// <param name="Email">string Email</param>
 		/// <param name="DomainName">string DomainName</param>
 		/// <param name="DisplayName">string DisplayName</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName);
@@ -176,7 +177,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

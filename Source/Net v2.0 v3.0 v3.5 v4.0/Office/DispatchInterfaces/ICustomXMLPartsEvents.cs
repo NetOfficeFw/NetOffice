@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomXMLPartsEvents SupportByLibrary Office, 12,14
+	/// DispatchInterface ICustomXMLPartsEvents SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICustomXMLPartsEvents : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="NewPart">NetOffice.OfficeApi.CustomXMLPart NewPart</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void PartAfterAdd(NetOffice.OfficeApi.CustomXMLPart newPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newPart);
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="OldPart">NetOffice.OfficeApi.CustomXMLPart OldPart</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void PartBeforeDelete(NetOffice.OfficeApi.CustomXMLPart oldPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldPart);
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="Part">NetOffice.OfficeApi.CustomXMLPart Part</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void PartAfterLoad(NetOffice.OfficeApi.CustomXMLPart part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(part);

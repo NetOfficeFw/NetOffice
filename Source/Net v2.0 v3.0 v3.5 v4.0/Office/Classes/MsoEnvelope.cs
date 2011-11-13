@@ -16,9 +16,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass MsoEnvelope SupportByLibrary Office, 10,11,12,14
+	/// CoClass MsoEnvelope SupportByLibraryAttribute Office, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MsoEnvelope : IMsoEnvelopeVB, IEventBinding 
 	{

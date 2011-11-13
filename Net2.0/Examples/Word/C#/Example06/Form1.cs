@@ -31,8 +31,7 @@ namespace Example06
 
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
-            wordApplication.DisplayAlerts = NetOffice.WordApi.Enums.WdAlertLevel.wdAlertsNone; 
-
+            wordApplication.Visible = true;
             /*
             we register some events. note: the event trigger was called from word, means an other Thread
             remove the Quit() call below and check out more events if you want

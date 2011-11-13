@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjDayLabel
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_di = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>119</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_ddi = 119,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_ddd = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_dddd = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjDayLabelNoDateFormat = 35
 	}
 }

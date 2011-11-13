@@ -4,108 +4,108 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14, 
+	 /// SupportByLibrary Office 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoBevelType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelTypeMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelNone = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelRelaxedInset = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelCircle = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelSlope = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelCross = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelAngle = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelSoftRound = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelConvex = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelCoolSlant = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelDivot = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelRiblet = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelHardEdge = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoBevelArtDeco = 13
 	}
 }

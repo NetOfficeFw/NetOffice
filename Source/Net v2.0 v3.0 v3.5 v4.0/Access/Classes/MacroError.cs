@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 	#endregion
 
 	///<summary>
-	/// CoClass MacroError SupportByLibrary Access, 12,14
+	/// CoClass MacroError SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MacroError : _MacroError, IEventBinding 
 	{

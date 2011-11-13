@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLPainterEventInfo SupportByLibrary MSHTML, 4
+	/// Interface IHTMLPainterEventInfo SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLPainterEventInfo : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="plEventInfoFlags">Int32 plEventInfoFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetEventInfoFlags(Int32 plEventInfoFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plEventInfoFlags);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppElement">LateBindingApi.MSHTMLApi.IHTMLElement ppElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetEventTarget(LateBindingApi.MSHTMLApi.IHTMLElement ppElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElement);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCursor(Int32 lPartID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID);
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
 		/// <param name="pbstrPart">string pbstrPart</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 StringFromPartID(Int32 lPartID, string pbstrPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID, pbstrPart);

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLPaintSite SupportByLibrary MSHTML, 4
+	/// Interface IHTMLPaintSite SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLPaintSite : COMObject
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InvalidatePainterInfo()
 		{
 			object[] paramsArray = null;
@@ -90,7 +90,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="prcInvalid">tagRECT prcInvalid</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InvalidateRect(tagRECT prcInvalid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(prcInvalid);
@@ -102,7 +102,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="rgnInvalid">_RemotableHandle rgnInvalid</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InvalidateRegion(_RemotableHandle rgnInvalid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rgnInvalid);
@@ -115,7 +115,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pDrawInfo">_HTML_PAINT_DRAW_INFO pDrawInfo</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetDrawInfo(Int32 lFlags, _HTML_PAINT_DRAW_INFO pDrawInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lFlags, pDrawInfo);
@@ -128,7 +128,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="ptGlobal">tagPOINT ptGlobal</param>
 		/// <param name="pptLocal">tagPOINT pptLocal</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 TransformGlobalToLocal(tagPOINT ptGlobal, tagPOINT pptLocal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ptGlobal, pptLocal);
@@ -141,7 +141,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="ptLocal">tagPOINT ptLocal</param>
 		/// <param name="pptGlobal">tagPOINT pptGlobal</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 TransformLocalToGlobal(tagPOINT ptLocal, tagPOINT pptGlobal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ptLocal, pptGlobal);
@@ -153,7 +153,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="plCookie">Int32 plCookie</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetHitTestCookie(Int32 plCookie)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plCookie);

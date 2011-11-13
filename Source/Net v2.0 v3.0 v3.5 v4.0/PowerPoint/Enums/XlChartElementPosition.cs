@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14, 
+	 /// SupportByLibrary PowerPoint 14
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartElementPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlChartElementPositionAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4114</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlChartElementPositionCustom = -4114
 	}
 }

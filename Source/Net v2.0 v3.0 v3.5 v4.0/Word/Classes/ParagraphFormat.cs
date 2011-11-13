@@ -14,9 +14,9 @@ namespace NetOffice.WordApi
 	#endregion
 
 	///<summary>
-	/// CoClass ParagraphFormat SupportByLibrary Word, 9,10,11,12,14
+	/// CoClass ParagraphFormat SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ParagraphFormat : _ParagraphFormat, IEventBinding 
 	{

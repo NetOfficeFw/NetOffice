@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLChangePlayback SupportByLibrary MSHTML, 4
+	/// Interface IHTMLChangePlayback SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLChangePlayback : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pbRecord">byte pbRecord</param>
 		/// <param name="fForward">Int32 fForward</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ExecChange(byte pbRecord, Int32 fForward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbRecord, fForward);

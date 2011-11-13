@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGPathSegLinetoHorizontalAbs SupportByLibrary MSHTML, 4
+	/// CoClass SVGPathSegLinetoHorizontalAbs SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGPathSegLinetoHorizontalAbs : DispSVGPathSegLinetoHorizontalAbs, IEventBinding 
 	{

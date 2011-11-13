@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupContainer SupportByLibrary MSHTML, 4
+	/// Interface IMarkupContainer SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupContainer : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppDoc">LateBindingApi.MSHTMLApi.IHTMLDocument2 ppDoc</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 OwningDoc(LateBindingApi.MSHTMLApi.IHTMLDocument2 ppDoc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppDoc);

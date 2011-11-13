@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLPainter SupportByLibrary MSHTML, 4
+	/// Interface IHTMLPainter SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLPainter : COMObject
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="lDrawFlags">Int32 lDrawFlags</param>
 		/// <param name="hdc">_RemotableHandle hdc</param>
 		/// <param name="pvDrawObject">object pvDrawObject</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Draw(tagRECT rcBounds, tagRECT rcUpdate, Int32 lDrawFlags, _RemotableHandle hdc, object pvDrawObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rcBounds, rcUpdate, lDrawFlags, hdc, pvDrawObject);
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="size">tagSIZE size</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 onresize(tagSIZE size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size);
@@ -107,7 +107,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pInfo">_HTML_PAINTER_INFO pInfo</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetPainterInfo(_HTML_PAINTER_INFO pInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pInfo);
@@ -121,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pt">tagPOINT pt</param>
 		/// <param name="pbHit">Int32 pbHit</param>
 		/// <param name="plPartID">Int32 plPartID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 HitTestPoint(tagPOINT pt, Int32 pbHit, Int32 plPartID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pt, pbHit, plPartID);

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GetRunningOutlookInstance")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ministerium für Staatssicherheit")]
-[assembly: AssemblyProduct("GetRunningOutlookInstance")]
-[assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")]
+[assembly: AssemblyCompany("http://netoffice.codeplex.com")]
+[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyCopyright("Copyright © 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

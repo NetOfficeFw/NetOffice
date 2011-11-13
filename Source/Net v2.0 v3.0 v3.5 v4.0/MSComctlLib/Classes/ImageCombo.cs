@@ -26,9 +26,9 @@ namespace NetOffice.MSComctlLibApi
 	#endregion
 
 	///<summary>
-	/// CoClass ImageCombo SupportByLibrary MSComctlLib, 6
+	/// CoClass ImageCombo SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ImageCombo : IImageCombo, IEventBinding 
 	{

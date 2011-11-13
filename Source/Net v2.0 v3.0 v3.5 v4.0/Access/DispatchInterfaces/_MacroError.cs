@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface _MacroError SupportByLibrary Access, 12,14
+	/// DispatchInterface _MacroError SupportByLibraryAttribute Access, 12,14
 	///</summary>
-	[SupportByLibrary("Access", 12,14)]
+	[SupportByLibraryAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _MacroError : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Condition
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string ActionName
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Arguments
 		{
 			get
@@ -121,7 +121,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string Description
 		{
 			get
@@ -136,7 +136,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public Int32 Number
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public string MacroName
 		{
 			get
@@ -170,7 +170,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 12,14)]
+		[SupportByLibraryAttribute("Access", 12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IIMEServices SupportByLibrary MSHTML, 4
+	/// Interface IIMEServices SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IIMEServices : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppActiveIMM">LateBindingApi.MSHTMLApi.IActiveIMMApp ppActiveIMM</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetActiveIMM(LateBindingApi.MSHTMLApi.IActiveIMMApp ppActiveIMM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppActiveIMM);

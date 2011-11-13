@@ -15,9 +15,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass RecordNavigationControl SupportByLibrary OWC10, 1
+	/// CoClass RecordNavigationControl SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class RecordNavigationControl : INavigationControl, IEventBinding 
 	{

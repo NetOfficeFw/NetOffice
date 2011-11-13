@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass CanvasRenderingContext2D SupportByLibrary MSHTML, 4
+	/// CoClass CanvasRenderingContext2D SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CanvasRenderingContext2D : DispCanvasRenderingContext2D, IEventBinding 
 	{

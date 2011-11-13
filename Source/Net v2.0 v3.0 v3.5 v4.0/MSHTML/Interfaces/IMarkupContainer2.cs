@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupContainer2 SupportByLibrary MSHTML, 4
+	/// Interface IMarkupContainer2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupContainer2 : IMarkupContainer
 	{
@@ -82,7 +82,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ppChangeLog">LateBindingApi.MSHTMLApi.IHTMLChangeLog ppChangeLog</param>
 		/// <param name="fForward">Int32 fForward</param>
 		/// <param name="fBackward">Int32 fBackward</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CreateChangeLog(LateBindingApi.MSHTMLApi.IHTMLChangeSink pChangeSink, LateBindingApi.MSHTMLApi.IHTMLChangeLog ppChangeLog, Int32 fForward, Int32 fBackward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, ppChangeLog, fForward, fBackward);
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pChangeSink">LateBindingApi.MSHTMLApi.IHTMLChangeSink pChangeSink</param>
 		/// <param name="pdwCookie">Int32 pdwCookie</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterForDirtyRange(LateBindingApi.MSHTMLApi.IHTMLChangeSink pChangeSink, Int32 pdwCookie)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, pdwCookie);
@@ -107,7 +107,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="dwCookie">Int32 dwCookie</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 UnRegisterForDirtyRange(Int32 dwCookie)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie);
@@ -121,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwCookie">Int32 dwCookie</param>
 		/// <param name="pIPointerBegin">LateBindingApi.MSHTMLApi.IMarkupPointer pIPointerBegin</param>
 		/// <param name="pIPointerEnd">LateBindingApi.MSHTMLApi.IMarkupPointer pIPointerEnd</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetAndClearDirtyRange(Int32 dwCookie, LateBindingApi.MSHTMLApi.IMarkupPointer pIPointerBegin, LateBindingApi.MSHTMLApi.IMarkupPointer pIPointerEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie, pIPointerBegin, pIPointerEnd);
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetVersionNumber()
 		{
 			object[] paramsArray = null;
@@ -144,7 +144,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppElementMaster">LateBindingApi.MSHTMLApi.IHTMLElement ppElementMaster</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetMasterElement(LateBindingApi.MSHTMLApi.IHTMLElement ppElementMaster)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElementMaster);

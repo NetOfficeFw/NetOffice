@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IDisplayPointer SupportByLibrary MSHTML, 4
+	/// Interface IDisplayPointer SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDisplayPointer : COMObject
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pElementContext">LateBindingApi.MSHTMLApi.IHTMLElement pElementContext</param>
 		/// <param name="dwHitTestOptions">Int32 dwHitTestOptions</param>
 		/// <param name="pdwHitTestResults">Int32 pdwHitTestResults</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 moveToPoint(tagPOINT ptPoint, LateBindingApi.MSHTMLApi.Enums._COORD_SYSTEM eCoordSystem, LateBindingApi.MSHTMLApi.IHTMLElement pElementContext, Int32 dwHitTestOptions, Int32 pdwHitTestResults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ptPoint, eCoordSystem, pElementContext, dwHitTestOptions, pdwHitTestResults);
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="eMoveUnit">LateBindingApi.MSHTMLApi.Enums._DISPLAY_MOVEUNIT eMoveUnit</param>
 		/// <param name="lXPos">Int32 lXPos</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveUnit(LateBindingApi.MSHTMLApi.Enums._DISPLAY_MOVEUNIT eMoveUnit, Int32 lXPos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eMoveUnit, lXPos);
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pMarkupPointer">LateBindingApi.MSHTMLApi.IMarkupPointer pMarkupPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 PositionMarkupPointer(LateBindingApi.MSHTMLApi.IMarkupPointer pMarkupPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pMarkupPointer);
@@ -120,7 +120,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToPointer(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer);
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="eGravity">LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY eGravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetPointerGravity(LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY eGravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eGravity);
@@ -144,7 +144,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="peGravity">LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY peGravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetPointerGravity(LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY peGravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(peGravity);
@@ -156,7 +156,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="eGravity">LateBindingApi.MSHTMLApi.Enums._DISPLAY_GRAVITY eGravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetDisplayGravity(LateBindingApi.MSHTMLApi.Enums._DISPLAY_GRAVITY eGravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eGravity);
@@ -168,7 +168,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="peGravity">LateBindingApi.MSHTMLApi.Enums._DISPLAY_GRAVITY peGravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetDisplayGravity(LateBindingApi.MSHTMLApi.Enums._DISPLAY_GRAVITY peGravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(peGravity);
@@ -180,7 +180,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfPositioned">Int32 pfPositioned</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsPositioned(Int32 pfPositioned)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfPositioned);
@@ -191,7 +191,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Unposition()
 		{
 			object[] paramsArray = null;
@@ -204,7 +204,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsEqual">Int32 pfIsEqual</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsEqualTo(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer, Int32 pfIsEqual)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsEqual);
@@ -217,7 +217,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsLeftOf">Int32 pfIsLeftOf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsLeftOf(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer, Int32 pfIsLeftOf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsLeftOf);
@@ -230,7 +230,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsRightOf">Int32 pfIsRightOf</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsRightOf(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer, Int32 pfIsRightOf)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsRightOf);
@@ -242,7 +242,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfBOL">Int32 pfBOL</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsAtBOL(Int32 pfBOL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfBOL);
@@ -255,7 +255,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointer">LateBindingApi.MSHTMLApi.IMarkupPointer pPointer</param>
 		/// <param name="pDispLineContext">LateBindingApi.MSHTMLApi.IDisplayPointer pDispLineContext</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToMarkupPointer(LateBindingApi.MSHTMLApi.IMarkupPointer pPointer, LateBindingApi.MSHTMLApi.IDisplayPointer pDispLineContext)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointer, pDispLineContext);
@@ -266,7 +266,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 scrollIntoView()
 		{
 			object[] paramsArray = null;
@@ -278,7 +278,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppLineInfo">LateBindingApi.MSHTMLApi.ILineInfo ppLineInfo</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetLineInfo(LateBindingApi.MSHTMLApi.ILineInfo ppLineInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppLineInfo);
@@ -290,7 +290,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppLayoutElement">LateBindingApi.MSHTMLApi.IHTMLElement ppLayoutElement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetFlowElement(LateBindingApi.MSHTMLApi.IHTMLElement ppLayoutElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppLayoutElement);
@@ -302,7 +302,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pdwBreaks">Int32 pdwBreaks</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 QueryBreaks(Int32 pdwBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwBreaks);

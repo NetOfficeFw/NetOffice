@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLAttributeCollection4 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLAttributeCollection4 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLAttributeCollection4 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 length
 		{
 			get
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pvarNS">object pvarNS</param>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 getNamedItemNS(object pvarNS, string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarNS, bstrName);
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pNodeIn">LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 pNodeIn</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 setNamedItemNS(LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 pNodeIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNodeIn);
@@ -123,7 +123,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pvarNS">object pvarNS</param>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 removeNamedItemNS(object pvarNS, string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarNS, bstrName);
@@ -136,7 +136,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 getNamedItem(string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
@@ -149,7 +149,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pNodeIn">LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 pNodeIn</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 setNamedItem(LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 pNodeIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNodeIn);
@@ -162,7 +162,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 removeNamedItem(string bstrName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
@@ -175,7 +175,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMAttribute2 item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

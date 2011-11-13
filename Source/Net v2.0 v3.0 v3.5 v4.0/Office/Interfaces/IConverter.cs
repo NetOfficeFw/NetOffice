@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverter SupportByLibrary Office, 14
+	/// Interface IConverter SupportByLibraryAttribute Office, 14
 	///</summary>
-	[SupportByLibrary("Office", 14)]
+	[SupportByLibraryAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverter : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcuic);
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrGetFormat(string bstrPath, string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath, pbstrClass, pcap, ppcp, pcuic);
@@ -156,7 +156,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">string pbstrErrorMsg</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrGetErrorString(Int32 hrErr, string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);

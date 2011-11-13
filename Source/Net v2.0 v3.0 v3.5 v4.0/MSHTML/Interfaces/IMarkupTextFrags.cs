@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupTextFrags SupportByLibrary MSHTML, 4
+	/// Interface IMarkupTextFrags SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupTextFrags : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pcFrags">Int32 pcFrags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetTextFragCount(Int32 pcFrags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcFrags);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="iFrag">Int32 iFrag</param>
 		/// <param name="pbstrFrag">string pbstrFrag</param>
 		/// <param name="pPointerFrag">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFrag</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetTextFrag(Int32 iFrag, string pbstrFrag, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFrag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag, pbstrFrag, pPointerFrag);
@@ -105,7 +105,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="iFrag">Int32 iFrag</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RemoveTextFrag(Int32 iFrag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag);
@@ -119,7 +119,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="iFrag">Int32 iFrag</param>
 		/// <param name="bstrInsert">string bstrInsert</param>
 		/// <param name="pPointerInsert">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerInsert</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InsertTextFrag(Int32 iFrag, string bstrInsert, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerInsert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag, bstrInsert, pPointerInsert);
@@ -133,7 +133,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pPointerFind">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFind</param>
 		/// <param name="piFrag">Int32 piFrag</param>
 		/// <param name="pfFragFound">Int32 pfFragFound</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 FindTextFragFromMarkupPointer(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFind, Int32 piFrag, Int32 pfFragFound)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerFind, piFrag, pfFragFound);

@@ -17,9 +17,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass Results SupportByLibrary Outlook, 10,11,12,14
+	/// CoClass Results SupportByLibraryAttribute Outlook, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Results : _Results, IEventBinding 
 	{

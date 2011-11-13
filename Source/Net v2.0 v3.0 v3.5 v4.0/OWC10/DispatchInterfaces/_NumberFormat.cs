@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface _NumberFormat SupportByLibrary OWC10, 1
+	/// DispatchInterface _NumberFormat SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NumberFormat : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string Name
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string Code
 		{
 			get
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Value">object Value</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string get_Format(object value, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, count);
@@ -132,7 +132,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 get_Width(Int32 hDC, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
@@ -146,7 +146,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 get_Height(Int32 hDC, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
@@ -174,7 +174,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="HorizontalAlignment">Int32 HorizontalAlignment</param>
 		/// <param name="VerticalAlignment">Int32 VerticalAlignment</param>
 		/// <param name="Value">object Value</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Render(Int32 hDC, Int32 hDCInfo, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 horizontalAlignment, Int32 verticalAlignment, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, hDCInfo, cx1, cy1, cx2, cy2, left, top, width, height, horizontalAlignment, verticalAlignment, value);

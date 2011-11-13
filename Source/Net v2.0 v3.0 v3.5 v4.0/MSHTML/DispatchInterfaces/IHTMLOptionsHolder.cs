@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLOptionsHolder SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLOptionsHolder SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLOptionsHolder : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDocument2 document
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLFontNamesCollection fonts
 		{
 			get
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object execArg
 		{
 			get
@@ -136,7 +136,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 errorLine
 		{
 			get
@@ -156,7 +156,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 errorCharacter
 		{
 			get
@@ -176,7 +176,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 errorCode
 		{
 			get
@@ -196,7 +196,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string errorMessage
 		{
 			get
@@ -216,7 +216,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool errorDebug
 		{
 			get
@@ -236,7 +236,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLWindow2 unsecuredWindowOfDocument
 		{
 			get
@@ -252,7 +252,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string findText
 		{
 			get
@@ -272,7 +272,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool anythingAfterFrameset
 		{
 			get
@@ -292,7 +292,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string secureConnectionInfo
 		{
 			get
@@ -311,7 +311,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fontName">string fontName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLFontSizesCollection sizes(string fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);
@@ -327,7 +327,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="initDir">optional object initDir</param>
 		/// <param name="filter">optional object filter</param>
 		/// <param name="title">optional object title</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string openfiledlg(object initFile, object initDir, object filter, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir, filter, title);
@@ -338,7 +338,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string openfiledlg()
 		{
 			object[] paramsArray = null;
@@ -350,10 +351,52 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string openfiledlg(object initFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile);
+			object returnItem = Invoker.MethodReturn(this, "openfiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
+		/// <param name="initDir">optional object initDir</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string openfiledlg(object initFile, object initDir)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir);
+			object returnItem = Invoker.MethodReturn(this, "openfiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
+		/// <param name="initDir">optional object initDir</param>
+		/// <param name="filter">optional object filter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string openfiledlg(object initFile, object initDir, object filter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir, filter);
+			object returnItem = Invoker.MethodReturn(this, "openfiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
 		/// <param name="filter">optional object filter</param>
 		/// <param name="title">optional object title</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string savefiledlg(object initFile, object initDir, object filter, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir, filter, title);
@@ -364,7 +407,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string savefiledlg()
 		{
 			object[] paramsArray = null;
@@ -375,8 +419,50 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string savefiledlg(object initFile)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile);
+			object returnItem = Invoker.MethodReturn(this, "savefiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
+		/// <param name="initDir">optional object initDir</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string savefiledlg(object initFile, object initDir)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir);
+			object returnItem = Invoker.MethodReturn(this, "savefiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="initFile">optional object initFile</param>
+		/// <param name="initDir">optional object initDir</param>
+		/// <param name="filter">optional object filter</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public string savefiledlg(object initFile, object initDir, object filter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(initFile, initDir, filter);
+			object returnItem = Invoker.MethodReturn(this, "savefiledlg", paramsArray);
+			return (string)returnItem;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
 		/// <param name="initColor">optional object initColor</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 choosecolordlg(object initColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initColor);
@@ -387,7 +473,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 choosecolordlg()
 		{
 			object[] paramsArray = null;
@@ -398,7 +485,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void showSecurityInfo()
 		{
 			object[] paramsArray = null;
@@ -409,7 +496,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="object">LateBindingApi.MSHTMLApi.IHTMLObjectElement object</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isApartmentModel(LateBindingApi.MSHTMLApi.IHTMLObjectElement _object)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object);
@@ -421,7 +508,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fontName">string fontName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 getCharset(string fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);

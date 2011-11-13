@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IVBDataObject SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IVBDataObject SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBDataObject : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IVBDataObjectFiles Files
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -106,7 +106,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="sFormat">Int16 sFormat</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public object GetData(Int16 sFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sFormat);
@@ -126,7 +126,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="sFormat">Int16 sFormat</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public bool GetFormat(Int16 sFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sFormat);
@@ -139,7 +139,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="vValue">optional object vValue</param>
 		/// <param name="vFormat">optional object vFormat</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void SetData(object vValue, object vFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vValue, vFormat);
@@ -149,10 +149,23 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void SetData()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "SetData", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="vValue">optional object vValue</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public void SetData(object vValue)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(vValue);
 			Invoker.Method(this, "SetData", paramsArray);
 		}
 

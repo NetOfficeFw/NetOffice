@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface IAddinHost SupportByLibrary OWC10, 1
+	/// DispatchInterface IAddinHost SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAddinHost : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="varoper">object varoper</param>
 		/// <param name="grbit">NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object CoerceOper(object varoper, NetOffice.OWC10Api.Enums.AddinClientTypeEnum grbit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varoper, grbit);
@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public object RandOper()
 		{
 			object[] paramsArray = null;

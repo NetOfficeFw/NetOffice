@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLEditHost SupportByLibrary MSHTML, 4
+	/// Interface IHTMLEditHost SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditHost : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pIElement">LateBindingApi.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="prcNew">tagRECT prcNew</param>
 		/// <param name="eHandle">LateBindingApi.MSHTMLApi.Enums._ELEMENT_CORNER eHandle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SnapRect(LateBindingApi.MSHTMLApi.IHTMLElement pIElement, tagRECT prcNew, LateBindingApi.MSHTMLApi.Enums._ELEMENT_CORNER eHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, prcNew, eHandle);

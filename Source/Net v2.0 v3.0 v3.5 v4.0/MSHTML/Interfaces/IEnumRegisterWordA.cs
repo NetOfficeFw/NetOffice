@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IEnumRegisterWordA SupportByLibrary MSHTML, 4
+	/// Interface IEnumRegisterWordA SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumRegisterWordA : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppEnum">LateBindingApi.MSHTMLApi.IEnumRegisterWordA ppEnum</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Clone(LateBindingApi.MSHTMLApi.IEnumRegisterWordA ppEnum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ulCount">Int32 ulCount</param>
 		/// <param name="rgRegisterWord">__MIDL___MIDL_itf_mshtml_0001_0042_0001 rgRegisterWord</param>
 		/// <param name="pcFetched">Int32 pcFetched</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Next(Int32 ulCount, __MIDL___MIDL_itf_mshtml_0001_0042_0001 rgRegisterWord, Int32 pcFetched)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ulCount, rgRegisterWord, pcFetched);
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 reset()
 		{
 			object[] paramsArray = null;
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ulCount">Int32 ulCount</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Skip(Int32 ulCount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ulCount);

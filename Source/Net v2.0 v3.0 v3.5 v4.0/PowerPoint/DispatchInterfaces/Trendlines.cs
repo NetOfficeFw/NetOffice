@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface Trendlines SupportByLibrary PowerPoint, 14
+	/// DispatchInterface Trendlines SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Trendlines : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Count
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -151,7 +151,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="DisplayEquation">optional object DisplayEquation</param>
 		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
@@ -164,7 +164,8 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -176,8 +177,134 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="Forward">optional object Forward</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Backward">optional object Backward</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Backward">optional object Backward</param>
+		/// <param name="Intercept">optional object Intercept</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Backward">optional object Backward</param>
+		/// <param name="Intercept">optional object Intercept</param>
+		/// <param name="DisplayEquation">optional object DisplayEquation</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
+		/// <param name="Type">NetOffice.PowerPointApi.Enums.XlTrendlineType Type</param>
+		/// <param name="Order">optional object Order</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="Forward">optional object Forward</param>
+		/// <param name="Backward">optional object Backward</param>
+		/// <param name="Intercept">optional object Intercept</param>
+		/// <param name="DisplayEquation">optional object DisplayEquation</param>
+		/// <param name="DisplayRSquared">optional object DisplayRSquared</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary PowerPoint 14
+		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Trendline this[object index]
 		{
@@ -194,7 +321,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">optional object Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Trendline _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -206,7 +333,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Trendline _Default()
 		{
 			object[] paramsArray = null;
@@ -219,7 +347,10 @@ namespace NetOffice.PowerPointApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("PowerPoint", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute PowerPoint, 14
+		/// </summary>
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

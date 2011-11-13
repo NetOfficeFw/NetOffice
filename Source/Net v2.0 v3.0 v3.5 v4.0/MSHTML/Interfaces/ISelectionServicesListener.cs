@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISelectionServicesListener SupportByLibrary MSHTML, 4
+	/// Interface ISelectionServicesListener SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISelectionServicesListener : COMObject
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 BeginSelectionUndo()
 		{
 			object[] paramsArray = null;
@@ -89,7 +89,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 EndSelectionUndo()
 		{
 			object[] paramsArray = null;
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pIElementEnd">LateBindingApi.MSHTMLApi.IMarkupPointer pIElementEnd</param>
 		/// <param name="pIElementContentStart">LateBindingApi.MSHTMLApi.IMarkupPointer pIElementContentStart</param>
 		/// <param name="pIElementContentEnd">LateBindingApi.MSHTMLApi.IMarkupPointer pIElementContentEnd</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 OnSelectedElementExit(LateBindingApi.MSHTMLApi.IMarkupPointer pIElementStart, LateBindingApi.MSHTMLApi.IMarkupPointer pIElementEnd, LateBindingApi.MSHTMLApi.IMarkupPointer pIElementContentStart, LateBindingApi.MSHTMLApi.IMarkupPointer pIElementContentEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElementStart, pIElementEnd, pIElementContentStart, pIElementContentEnd);
@@ -117,7 +117,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="eType">LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE eType</param>
 		/// <param name="pIListener">LateBindingApi.MSHTMLApi.ISelectionServicesListener pIListener</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 OnChangeType(LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE eType, LateBindingApi.MSHTMLApi.ISelectionServicesListener pIListener)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eType, pIListener);
@@ -129,7 +129,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pTypeDetail">string pTypeDetail</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetTypeDetail(string pTypeDetail)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTypeDetail);

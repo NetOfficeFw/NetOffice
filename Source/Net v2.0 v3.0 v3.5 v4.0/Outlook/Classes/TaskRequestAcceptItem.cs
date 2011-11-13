@@ -39,9 +39,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass TaskRequestAcceptItem SupportByLibrary Outlook, 9,10,11,12,14
+	/// CoClass TaskRequestAcceptItem SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TaskRequestAcceptItem : _TaskRequestAcceptItem, IEventBinding 
 	{

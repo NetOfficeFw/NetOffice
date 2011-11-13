@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface SchemaRowsources SupportByLibrary OWC10, 1
+	/// DispatchInterface SchemaRowsources SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SchemaRowsources : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.SchemaRowsource this[object index]
 		{
@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Name">string Name</param>
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
@@ -130,7 +130,8 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
@@ -145,7 +146,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Name">string Name</param>
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
 		/// <param name="CommandText">optional object CommandText</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
@@ -159,7 +160,8 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="RowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
@@ -172,7 +174,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -183,7 +185,10 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OWC10", 1)]
+		/// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

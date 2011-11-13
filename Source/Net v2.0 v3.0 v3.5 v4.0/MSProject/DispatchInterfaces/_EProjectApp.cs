@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface _EProjectApp SupportByLibrary MSProject, 12,14
+	/// DispatchInterface _EProjectApp SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _EProjectApp : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void NewProject(LateBindingApi.MSProjectApi.Project pj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="tsk">LateBindingApi.MSProjectApi.Task tsk</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeTaskDelete(LateBindingApi.MSProjectApi.Task tsk, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tsk, cancel);
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="res">LateBindingApi.MSProjectApi.Resource res</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeResourceDelete(LateBindingApi.MSProjectApi.Resource res, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(res, cancel);
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="asg">LateBindingApi.MSProjectApi.Assignment asg</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeAssignmentDelete(LateBindingApi.MSProjectApi.Assignment asg, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(asg, cancel);
@@ -130,7 +130,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Field">LateBindingApi.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="NewVal">object NewVal</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeTaskChange(LateBindingApi.MSProjectApi.Task tsk, LateBindingApi.MSProjectApi.Enums.PjField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tsk, field, newVal, cancel);
@@ -144,7 +144,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Field">LateBindingApi.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="NewVal">object NewVal</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeResourceChange(LateBindingApi.MSProjectApi.Resource res, LateBindingApi.MSProjectApi.Enums.PjField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(res, field, newVal, cancel);
@@ -158,7 +158,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Field">LateBindingApi.MSProjectApi.Enums.PjAssignmentField Field</param>
 		/// <param name="NewVal">object NewVal</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeAssignmentChange(LateBindingApi.MSProjectApi.Assignment asg, LateBindingApi.MSProjectApi.Enums.PjAssignmentField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(asg, field, newVal, cancel);
@@ -170,7 +170,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeTaskNew(LateBindingApi.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -182,7 +182,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeResourceNew(LateBindingApi.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -194,7 +194,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeAssignmentNew(LateBindingApi.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -206,7 +206,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeClose(LateBindingApi.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -218,7 +218,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforePrint(LateBindingApi.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -231,7 +231,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
 		/// <param name="SaveAsUi">bool SaveAsUi</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectBeforeSave(LateBindingApi.MSProjectApi.Project pj, bool saveAsUi, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, saveAsUi, cancel);
@@ -242,7 +242,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="pj">LateBindingApi.MSProjectApi.Project pj</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void ProjectCalculate(LateBindingApi.MSProjectApi.Project pj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj);

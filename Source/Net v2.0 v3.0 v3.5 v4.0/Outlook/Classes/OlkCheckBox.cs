@@ -27,9 +27,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkCheckBox SupportByLibrary Outlook, 12,14
+	/// CoClass OlkCheckBox SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkCheckBox : _OlkCheckBox, IEventBinding 
 	{

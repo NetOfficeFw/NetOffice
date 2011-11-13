@@ -79,9 +79,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLFormElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLFormElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLFormElement : DispHTMLFormElement, IEventBinding 
 	{

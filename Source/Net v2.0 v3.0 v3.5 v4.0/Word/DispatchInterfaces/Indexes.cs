@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Indexes SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Indexes SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Indexes : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdIndexFormat Format
 		{
 			get
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Index this[Int32 index]
 		{
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
 		/// <param name="AccentedLetters">optional object AccentedLetters</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
@@ -198,10 +198,77 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator);
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers);
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type);
+			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
 			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
 			return newObject;
@@ -219,7 +286,7 @@ namespace NetOffice.WordApi
 		/// <param name="Bold">optional object Bold</param>
 		/// <param name="Italic">optional object Italic</param>
 		/// <param name="Reading">optional object Reading</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic, object reading)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading);
@@ -232,10 +299,116 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		/// <param name="BookmarkName">optional object BookmarkName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		/// <param name="BookmarkName">optional object BookmarkName</param>
+		/// <param name="Bold">optional object Bold</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
 			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
@@ -252,7 +425,28 @@ namespace NetOffice.WordApi
 		/// <param name="BookmarkName">optional object BookmarkName</param>
 		/// <param name="Bold">optional object Bold</param>
 		/// <param name="Italic">optional object Italic</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
+			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
+			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		/// <param name="BookmarkName">optional object BookmarkName</param>
+		/// <param name="Bold">optional object Bold</param>
+		/// <param name="Italic">optional object Italic</param>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
@@ -263,7 +457,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -273,8 +468,101 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		/// <param name="BookmarkName">optional object BookmarkName</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="Entry">optional object Entry</param>
+		/// <param name="EntryAutoText">optional object EntryAutoText</param>
+		/// <param name="CrossReference">optional object CrossReference</param>
+		/// <param name="CrossReferenceAutoText">optional object CrossReferenceAutoText</param>
+		/// <param name="BookmarkName">optional object BookmarkName</param>
+		/// <param name="Bold">optional object Bold</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold);
+			Invoker.Method(this, "MarkAllEntries", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
 		/// <param name="ConcordanceFileName">string ConcordanceFileName</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void AutoMarkEntries(string concordanceFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(concordanceFileName);
@@ -292,7 +580,7 @@ namespace NetOffice.WordApi
 		/// <param name="AccentedLetters">optional object AccentedLetters</param>
 		/// <param name="SortBy">optional object SortBy</param>
 		/// <param name="IndexLanguage">optional object IndexLanguage</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy, object indexLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage);
@@ -305,10 +593,116 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Range">NetOffice.WordApi.Range Range</param>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
+		/// <param name="AccentedLetters">optional object AccentedLetters</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Range">NetOffice.WordApi.Range Range</param>
+		/// <param name="HeadingSeparator">optional object HeadingSeparator</param>
+		/// <param name="RightAlignPageNumbers">optional object RightAlignPageNumbers</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="NumberOfColumns">optional object NumberOfColumns</param>
+		/// <param name="AccentedLetters">optional object AccentedLetters</param>
+		/// <param name="SortBy">optional object SortBy</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.WordApi.Index newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Index.LateBindingApiWrapperType) as NetOffice.WordApi.Index;
 			return newObject;
@@ -318,7 +712,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

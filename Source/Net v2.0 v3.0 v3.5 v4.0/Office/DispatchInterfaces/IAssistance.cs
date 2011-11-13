@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IAssistance SupportByLibrary Office, 12,14
+	/// DispatchInterface IAssistance SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAssistance : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
 		/// <param name="Scope">string Scope</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ShowHelp(string helpId, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId, scope);
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Query">string Query</param>
 		/// <param name="Scope">string Scope</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void SearchHelp(string query, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, scope);
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void SetDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="HelpId">string HelpId</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ClearDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);

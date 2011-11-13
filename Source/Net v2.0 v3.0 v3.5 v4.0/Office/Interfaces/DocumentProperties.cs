@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface DocumentProperties SupportByLibrary Office, 9,10,11,12,14
+	/// Interface DocumentProperties SupportByLibraryAttribute Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperties : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.DocumentProperty this[object index]
 		{
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public COMObject Application
 		{
 			get
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Type">optional object Type</param>
 		/// <param name="Value">optional object Value</param>
 		/// <param name="LinkSource">optional object LinkSource</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value, linkSource);
@@ -178,10 +178,44 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="Name">string Name</param>
 		/// <param name="LinkToContent">bool LinkToContent</param>
-		[SupportByLibrary("Office", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="LinkToContent">bool LinkToContent</param>
+		/// <param name="Type">optional object Type</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Name">string Name</param>
+		/// <param name="LinkToContent">bool LinkToContent</param>
+		/// <param name="Type">optional object Type</param>
+		/// <param name="Value">optional object Value</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.OfficeApi.DocumentProperty newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
@@ -191,7 +225,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 9,10,11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 9,10,11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

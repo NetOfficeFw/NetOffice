@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLTxtRange SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLTxtRange SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLTxtRange : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string htmlText
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string text
 		{
 			get
@@ -114,7 +114,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLElement parentElement()
 		{
 			object[] paramsArray = null;
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLTxtRange duplicate()
 		{
 			object[] paramsArray = null;
@@ -139,7 +139,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="range">LateBindingApi.MSHTMLApi.IHTMLTxtRange range</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool inRange(LateBindingApi.MSHTMLApi.IHTMLTxtRange range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -151,7 +151,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="range">LateBindingApi.MSHTMLApi.IHTMLTxtRange range</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isEqual(LateBindingApi.MSHTMLApi.IHTMLTxtRange range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -163,7 +163,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fStart">bool fStart</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void scrollIntoView(bool fStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fStart);
@@ -174,7 +174,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="Start">bool Start</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void collapse(bool start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -185,7 +185,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="Unit">string Unit</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool expand(string unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
@@ -198,7 +198,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="Unit">string Unit</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 move(string unit, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -211,7 +211,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="Unit">string Unit</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 moveStart(string unit, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -224,7 +224,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="Unit">string Unit</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 moveEnd(string unit, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
@@ -235,7 +235,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void select()
 		{
 			object[] paramsArray = null;
@@ -246,7 +246,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="html">string html</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void pasteHTML(string html)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(html);
@@ -257,7 +257,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="element">LateBindingApi.MSHTMLApi.IHTMLElement element</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void moveToElementText(LateBindingApi.MSHTMLApi.IHTMLElement element)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
@@ -269,7 +269,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="how">string how</param>
 		/// <param name="SourceRange">LateBindingApi.MSHTMLApi.IHTMLTxtRange SourceRange</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setEndPoint(string how, LateBindingApi.MSHTMLApi.IHTMLTxtRange sourceRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(how, sourceRange);
@@ -281,7 +281,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="how">string how</param>
 		/// <param name="SourceRange">LateBindingApi.MSHTMLApi.IHTMLTxtRange SourceRange</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 compareEndPoints(string how, LateBindingApi.MSHTMLApi.IHTMLTxtRange sourceRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(how, sourceRange);
@@ -295,7 +295,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="String">string String</param>
 		/// <param name="Count">Int32 Count</param>
 		/// <param name="Flags">Int32 Flags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool findText(string _string, Int32 count, Int32 flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, count, flags);
@@ -308,7 +308,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void moveToPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -318,7 +318,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string getBookmark()
 		{
 			object[] paramsArray = null;
@@ -330,7 +330,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="Bookmark">string Bookmark</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool moveToBookmark(string bookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bookmark);
@@ -342,7 +342,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool queryCommandSupported(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -354,7 +354,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool queryCommandEnabled(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -366,7 +366,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool queryCommandState(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -378,7 +378,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool queryCommandIndeterm(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -390,7 +390,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string queryCommandText(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -402,7 +402,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object queryCommandValue(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -424,7 +424,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">bool showUI</param>
 		/// <param name="value">optional object value</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool execCommand(string cmdID, bool showUI, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI, value);
@@ -437,7 +437,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">bool showUI</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool execCommand(string cmdID, bool showUI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI);
@@ -449,7 +450,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool execCommandShowHelp(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);

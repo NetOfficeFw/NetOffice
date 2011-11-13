@@ -79,9 +79,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLLegendElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLLegendElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLLegendElement : DispHTMLLegendElement, IEventBinding 
 	{

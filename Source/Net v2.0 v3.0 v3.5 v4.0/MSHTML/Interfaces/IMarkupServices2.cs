@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupServices2 SupportByLibrary MSHTML, 4
+	/// Interface IMarkupServices2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupServices2 : IMarkupServices
 	{
@@ -84,7 +84,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ppContainerResult">LateBindingApi.MSHTMLApi.IMarkupContainer ppContainerResult</param>
 		/// <param name="pPointerStart">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerStart</param>
 		/// <param name="pPointerFinish">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFinish</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ParseGlobalEx(_userHGLOBAL hglobalHTML, Int32 dwFlags, LateBindingApi.MSHTMLApi.IMarkupContainer pContext, LateBindingApi.MSHTMLApi.IMarkupContainer ppContainerResult, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerStart, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFinish)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hglobalHTML, dwFlags, pContext, ppContainerResult, pPointerStart, pPointerFinish);
@@ -101,7 +101,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pPointerStatus">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerStatus</param>
 		/// <param name="ppElemFailBottom">LateBindingApi.MSHTMLApi.IHTMLElement ppElemFailBottom</param>
 		/// <param name="ppElemFailTop">LateBindingApi.MSHTMLApi.IHTMLElement ppElemFailTop</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 ValidateElements(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerStart, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerFinish, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerTarget, LateBindingApi.MSHTMLApi.IMarkupPointer pPointerStatus, LateBindingApi.MSHTMLApi.IHTMLElement ppElemFailBottom, LateBindingApi.MSHTMLApi.IHTMLElement ppElemFailTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerStart, pPointerFinish, pPointerTarget, pPointerStatus, ppElemFailBottom, ppElemFailTop);
@@ -114,7 +114,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pSegmentList">LateBindingApi.MSHTMLApi.ISegmentList pSegmentList</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SaveSegmentsToClipboard(LateBindingApi.MSHTMLApi.ISegmentList pSegmentList, Int32 dwFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pSegmentList, dwFlags);

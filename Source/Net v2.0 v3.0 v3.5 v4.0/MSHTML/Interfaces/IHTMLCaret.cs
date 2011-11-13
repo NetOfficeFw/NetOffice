@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLCaret SupportByLibrary MSHTML, 4
+	/// Interface IHTMLCaret SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLCaret : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="fScrollIntoView">Int32 fScrollIntoView</param>
 		/// <param name="eDir">LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveCaretToPointer(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer, Int32 fScrollIntoView, LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, fScrollIntoView, eDir);
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="fVisible">Int32 fVisible</param>
 		/// <param name="fScrollIntoView">Int32 fScrollIntoView</param>
 		/// <param name="eDir">LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveCaretToPointerEx(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer, Int32 fVisible, Int32 fScrollIntoView, LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, fVisible, fScrollIntoView, eDir);
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pIMarkupPointer">LateBindingApi.MSHTMLApi.IMarkupPointer pIMarkupPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveMarkupPointerToCaret(LateBindingApi.MSHTMLApi.IMarkupPointer pIMarkupPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIMarkupPointer);
@@ -120,7 +120,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pDispPointer">LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveDisplayPointerToCaret(LateBindingApi.MSHTMLApi.IDisplayPointer pDispPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer);
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pIsVisible">Int32 pIsVisible</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsVisible(Int32 pIsVisible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIsVisible);
@@ -144,7 +144,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fScrollIntoView">Int32 fScrollIntoView</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Show(Int32 fScrollIntoView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fScrollIntoView);
@@ -155,7 +155,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Hide()
 		{
 			object[] paramsArray = null;
@@ -168,7 +168,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pText">Int16 pText</param>
 		/// <param name="lLen">Int32 lLen</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 InsertText(Int16 pText, Int32 lLen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pText, lLen);
@@ -179,7 +179,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 scrollIntoView()
 		{
 			object[] paramsArray = null;
@@ -192,7 +192,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="fTranslate">Int32 fTranslate</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetLocation(tagPOINT pPoint, Int32 fTranslate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPoint, fTranslate);
@@ -204,7 +204,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="peDir">LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION peDir</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetCaretDirection(LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION peDir)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(peDir);
@@ -216,7 +216,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="eDir">LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCaretDirection(LateBindingApi.MSHTMLApi.Enums._CARET_DIRECTION eDir)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eDir);

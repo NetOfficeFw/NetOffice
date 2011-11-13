@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcPrintQuality
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acHigh = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acMedium = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acLow = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acDraft = 3
 	}
 }

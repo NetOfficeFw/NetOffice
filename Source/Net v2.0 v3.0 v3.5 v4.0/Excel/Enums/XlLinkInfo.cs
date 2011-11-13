@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLinkInfo
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlEditionDate = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlUpdateState = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Excel", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		 xlLinkInfoStatus = 3
 	}
 }

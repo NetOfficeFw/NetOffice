@@ -34,7 +34,10 @@ namespace Example06
             Outlook.MailItem mailItem = outlookApplication.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
             mailItem.CloseEvent += new NetOffice.OutlookApi.MailItem_CloseEventHandler(mailItem_CloseEvent);
 
-            mailItem.BodyFormat = OlBodyFormat.olFormatPlain;
+            // BodyFormat is not available in Outlook 2000
+            // we check at runtime is property is available
+            if(mailItem.EntityIsAvailable("BodyFormat"))
+                mailItem.BodyFormat = OlBodyFormat.olFormatPlain;
             mailItem.Body = "Body of Example06 " + DateTime.Now.ToLongTimeString();
             mailItem.Subject = "Example06";
             mailItem.Display();

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementNamespaceFactory2 SupportByLibrary MSHTML, 4
+	/// Interface IElementNamespaceFactory2 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementNamespaceFactory2 : IElementNamespaceFactory
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pNamespace">LateBindingApi.MSHTMLApi.IElementNamespace pNamespace</param>
 		/// <param name="bstrImplementation">string bstrImplementation</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CreateWithImplementation(LateBindingApi.MSHTMLApi.IElementNamespace pNamespace, string bstrImplementation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNamespace, bstrImplementation);

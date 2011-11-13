@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface _IProjectDoc SupportByLibrary MSProject, 12,14
+	/// DispatchInterface _IProjectDoc SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IProjectDoc : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Manager
 		{
 			get
@@ -104,7 +104,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Company
 		{
 			get
@@ -132,7 +132,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Author
 		{
 			get
@@ -160,7 +160,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Keywords
 		{
 			get
@@ -188,7 +188,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ProjectNotes
 		{
 			get
@@ -208,7 +208,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ProjectStart
 		{
 			get
@@ -236,7 +236,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ProjectFinish
 		{
 			get
@@ -264,7 +264,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object CurrentDate
 		{
 			get
@@ -292,7 +292,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object StatusDate
 		{
 			get
@@ -320,7 +320,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ScheduleFromStart
 		{
 			get
@@ -340,7 +340,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Comments
 		{
 			get
@@ -368,7 +368,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Title
 		{
 			get
@@ -396,7 +396,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Subject
 		{
 			get
@@ -424,7 +424,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Windows Windows
 		{
 			get
@@ -445,7 +445,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 MinuteLabelDisplay
 		{
 			get
@@ -465,7 +465,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 HourLabelDisplay
 		{
 			get
@@ -485,7 +485,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 DayLabelDisplay
 		{
 			get
@@ -505,7 +505,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 WeekLabelDisplay
 		{
 			get
@@ -525,7 +525,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 YearLabelDisplay
 		{
 			get
@@ -545,7 +545,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 MonthLabelDisplay
 		{
 			get
@@ -565,7 +565,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool SpaceBeforeTimeLabels
 		{
 			get
@@ -585,7 +585,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjTaskFixedType DefaultTaskType
 		{
 			get
@@ -605,7 +605,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DefaultEffortDriven
 		{
 			get
@@ -625,7 +625,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool UseFYStartYear
 		{
 			get
@@ -645,7 +645,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoFilter
 		{
 			get
@@ -665,7 +665,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool HonorConstraints
 		{
 			get
@@ -685,7 +685,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool MultipleCriticalPaths
 		{
 			get
@@ -705,7 +705,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LevelFromDate
 		{
 			get
@@ -733,7 +733,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LevelToDate
 		{
 			get
@@ -761,7 +761,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool LevelEntireProject
 		{
 			get
@@ -781,7 +781,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjAccrueAt DefaultFixedCostAccrual
 		{
 			get
@@ -801,7 +801,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool SpreadCostsToStatusDate
 		{
 			get
@@ -821,7 +821,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool SpreadPercentCompleteToStatusDate
 		{
 			get
@@ -841,7 +841,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoCalcCosts
 		{
 			get
@@ -861,7 +861,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ShowExternalSuccessors
 		{
 			get
@@ -881,7 +881,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ShowExternalPredecessors
 		{
 			get
@@ -901,7 +901,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ShowCrossProjectLinksInfo
 		{
 			get
@@ -921,7 +921,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AcceptNewExternalData
 		{
 			get
@@ -941,7 +941,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjPhoneticType PhoneticType
 		{
 			get
@@ -961,7 +961,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjWorkgroupMessages WorkgroupMessages
 		{
 			get
@@ -981,7 +981,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ServerURL
 		{
 			get
@@ -1001,7 +1001,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ServerPath
 		{
 			get
@@ -1021,7 +1021,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ReceiveNotifications
 		{
 			get
@@ -1041,7 +1041,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool SendHyperlinkNote
 		{
 			get
@@ -1061,7 +1061,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjColor HyperlinkColor
 		{
 			get
@@ -1081,7 +1081,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjColor FollowedHyperlinkColor
 		{
 			get
@@ -1101,7 +1101,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool UnderlineHyperlinks
 		{
 			get
@@ -1121,7 +1121,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjTeamStatusCompletedWork AskForCompletedWork
 		{
 			get
@@ -1141,7 +1141,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool TrackOvertimeWork
 		{
 			get
@@ -1161,7 +1161,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool TeamMembersCanDeclineTasks
 		{
 			get
@@ -1181,7 +1181,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ShowEstimatedDuration
 		{
 			get
@@ -1201,7 +1201,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool NewTasksEstimated
 		{
 			get
@@ -1221,7 +1221,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool WBSCodeGenerate
 		{
 			get
@@ -1241,7 +1241,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool WBSVerifyUniqueness
 		{
 			get
@@ -1261,7 +1261,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool UpdateProjOnSave
 		{
 			get
@@ -1281,7 +1281,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjAuthentication ServerIdentification
 		{
 			get
@@ -1301,7 +1301,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool VBASigned
 		{
 			get
@@ -1321,7 +1321,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ExpandDatabaseTimephasedData
 		{
 			get
@@ -1341,7 +1341,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DatabaseProjectUniqueID
 		{
 			get
@@ -1369,7 +1369,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ActualWork
 		{
 			get
@@ -1397,7 +1397,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Cost1
 		{
 			get
@@ -1425,7 +1425,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Cost2
 		{
 			get
@@ -1453,7 +1453,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Cost3
 		{
 			get
@@ -1481,7 +1481,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BaselineWork
 		{
 			get
@@ -1509,7 +1509,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BaselineCost
 		{
 			get
@@ -1537,7 +1537,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object FixedCost
 		{
 			get
@@ -1565,7 +1565,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string WBS
 		{
 			get
@@ -1585,7 +1585,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Delay
 		{
 			get
@@ -1613,7 +1613,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Priority
 		{
 			get
@@ -1641,7 +1641,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Duration1
 		{
 			get
@@ -1669,7 +1669,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Duration2
 		{
 			get
@@ -1697,7 +1697,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Duration3
 		{
 			get
@@ -1725,7 +1725,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object PercentWorkComplete
 		{
 			get
@@ -1753,7 +1753,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object FixedDuration
 		{
 			get
@@ -1781,7 +1781,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BaselineStart
 		{
 			get
@@ -1809,7 +1809,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BaselineFinish
 		{
 			get
@@ -1837,7 +1837,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text1
 		{
 			get
@@ -1857,7 +1857,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start1
 		{
 			get
@@ -1885,7 +1885,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish1
 		{
 			get
@@ -1913,7 +1913,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text2
 		{
 			get
@@ -1933,7 +1933,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start2
 		{
 			get
@@ -1961,7 +1961,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish2
 		{
 			get
@@ -1989,7 +1989,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text3
 		{
 			get
@@ -2009,7 +2009,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start3
 		{
 			get
@@ -2037,7 +2037,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish3
 		{
 			get
@@ -2065,7 +2065,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text4
 		{
 			get
@@ -2085,7 +2085,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start4
 		{
 			get
@@ -2113,7 +2113,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish4
 		{
 			get
@@ -2141,7 +2141,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text5
 		{
 			get
@@ -2161,7 +2161,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start5
 		{
 			get
@@ -2189,7 +2189,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish5
 		{
 			get
@@ -2217,7 +2217,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text6
 		{
 			get
@@ -2237,7 +2237,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text7
 		{
 			get
@@ -2257,7 +2257,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text8
 		{
 			get
@@ -2277,7 +2277,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text9
 		{
 			get
@@ -2297,7 +2297,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Text10
 		{
 			get
@@ -2317,7 +2317,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Marked
 		{
 			get
@@ -2345,7 +2345,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag1
 		{
 			get
@@ -2373,7 +2373,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag2
 		{
 			get
@@ -2401,7 +2401,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag3
 		{
 			get
@@ -2429,7 +2429,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag4
 		{
 			get
@@ -2457,7 +2457,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag5
 		{
 			get
@@ -2485,7 +2485,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag6
 		{
 			get
@@ -2513,7 +2513,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag7
 		{
 			get
@@ -2541,7 +2541,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag8
 		{
 			get
@@ -2569,7 +2569,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag9
 		{
 			get
@@ -2597,7 +2597,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Flag10
 		{
 			get
@@ -2625,7 +2625,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Rollup
 		{
 			get
@@ -2653,7 +2653,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double Number1
 		{
 			get
@@ -2673,7 +2673,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double Number2
 		{
 			get
@@ -2693,7 +2693,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double Number3
 		{
 			get
@@ -2713,7 +2713,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double Number4
 		{
 			get
@@ -2733,7 +2733,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double Number5
 		{
 			get
@@ -2753,7 +2753,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Notes
 		{
 			get
@@ -2773,7 +2773,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Contact
 		{
 			get
@@ -2793,7 +2793,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object HideBar
 		{
 			get
@@ -2821,7 +2821,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrencySymbol
 		{
 			get
@@ -2841,7 +2841,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjPlacement CurrencySymbolPosition
 		{
 			get
@@ -2861,7 +2861,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int16 CurrencyDigits
 		{
 			get
@@ -2881,7 +2881,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 ShowCriticalSlack
 		{
 			get
@@ -2901,7 +2901,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjUnit DefaultDurationUnits
 		{
 			get
@@ -2921,7 +2921,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjUnit DefaultWorkUnits
 		{
 			get
@@ -2941,7 +2941,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool StartOnCurrentDate
 		{
 			get
@@ -2961,7 +2961,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoTrack
 		{
 			get
@@ -2981,7 +2981,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoSplitTasks
 		{
 			get
@@ -3001,7 +3001,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoLinkTasks
 		{
 			get
@@ -3021,7 +3021,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DefaultStartTime
 		{
 			get
@@ -3049,7 +3049,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DefaultFinishTime
 		{
 			get
@@ -3077,7 +3077,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double HoursPerDay
 		{
 			get
@@ -3097,7 +3097,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double HoursPerWeek
 		{
 			get
@@ -3117,7 +3117,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Double DaysPerMonth
 		{
 			get
@@ -3137,7 +3137,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DefaultResourceStandardRate
 		{
 			get
@@ -3165,7 +3165,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DefaultResourceOvertimeRate
 		{
 			get
@@ -3193,7 +3193,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DisplayProjectSummaryTask
 		{
 			get
@@ -3213,7 +3213,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AutoAddResources
 		{
 			get
@@ -3233,7 +3233,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjWeekday StartWeekOn
 		{
 			get
@@ -3253,7 +3253,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjMonth StartYearIn
 		{
 			get
@@ -3273,7 +3273,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AllowTaskDelegation
 		{
 			get
@@ -3293,7 +3293,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Name
 		{
 			get
@@ -3313,7 +3313,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjPublishInformationOnSave PublishInformationOnSave
 		{
 			get
@@ -3333,7 +3333,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ProjectGuideFunctionalLayoutPage
 		{
 			get
@@ -3353,7 +3353,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ProjectGuideSaveBuffer
 		{
 			get
@@ -3373,7 +3373,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ProjectGuideContent
 		{
 			get
@@ -3393,7 +3393,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ProjectServerUsedForTracking
 		{
 			get
@@ -3413,7 +3413,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjProjectServerTrackingMethod TrackingMethod
 		{
 			get
@@ -3433,7 +3433,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool MoveCompleted
 		{
 			get
@@ -3453,7 +3453,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AndMoveRemaining
 		{
 			get
@@ -3473,7 +3473,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool MoveRemaining
 		{
 			get
@@ -3493,7 +3493,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AndMoveCompleted
 		{
 			get
@@ -3513,7 +3513,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjEarnedValueMethod DefaultEarnedValueMethod
 		{
 			get
@@ -3533,7 +3533,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjBaselines EarnedValueBaseline
 		{
 			get
@@ -3553,7 +3553,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ProjectGuideUseDefaultFunctionalLayoutPage
 		{
 			get
@@ -3573,7 +3573,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ProjectGuideUseDefaultContent
 		{
 			get
@@ -3593,7 +3593,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool EnterpriseActualsSynched
 		{
 			get
@@ -3613,7 +3613,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool RemoveFileProperties
 		{
 			get
@@ -3633,7 +3633,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool AdministrativeProject
 		{
 			get
@@ -3653,7 +3653,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Windows2 Windows2
 		{
 			get
@@ -3674,7 +3674,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrencyCode
 		{
 			get
@@ -3694,7 +3694,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 TaskErrorCount
 		{
 			get
@@ -3714,7 +3714,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool IsTemplate
 		{
 			get
@@ -3734,7 +3734,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string _CodeName
 		{
 			get
@@ -3754,7 +3754,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CodeName
 		{
 			get
@@ -3769,7 +3769,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Tasks OutlineChildren
 		{
 			get
@@ -3785,7 +3785,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object CostVariance
 		{
 			get
@@ -3808,7 +3808,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task ProjectSummaryTask
 		{
 			get
@@ -3824,7 +3824,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object RemainingCost
 		{
 			get
@@ -3847,7 +3847,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BCWP
 		{
 			get
@@ -3870,7 +3870,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BCWS
 		{
 			get
@@ -3893,7 +3893,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object SV
 		{
 			get
@@ -3916,7 +3916,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object CV
 		{
 			get
@@ -3939,7 +3939,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string OutlineNumber
 		{
 			get
@@ -3954,7 +3954,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Critical
 		{
 			get
@@ -3977,7 +3977,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object FreeSlack
 		{
 			get
@@ -4000,7 +4000,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object TotalSlack
 		{
 			get
@@ -4023,7 +4023,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 UniqueID
 		{
 			get
@@ -4038,7 +4038,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 OutlineLevel
 		{
 			get
@@ -4053,7 +4053,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object BaselineDuration
 		{
 			get
@@ -4076,7 +4076,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object DurationVariance
 		{
 			get
@@ -4099,7 +4099,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object EarlyStart
 		{
 			get
@@ -4122,7 +4122,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object EarlyFinish
 		{
 			get
@@ -4145,7 +4145,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LateStart
 		{
 			get
@@ -4168,7 +4168,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object StartVariance
 		{
 			get
@@ -4191,7 +4191,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object FinishVariance
 		{
 			get
@@ -4214,7 +4214,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Project
 		{
 			get
@@ -4237,7 +4237,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Milestone
 		{
 			get
@@ -4260,7 +4260,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object RemainingDuration
 		{
 			get
@@ -4283,7 +4283,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object PercentComplete
 		{
 			get
@@ -4306,7 +4306,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Start
 		{
 			get
@@ -4329,7 +4329,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Finish
 		{
 			get
@@ -4352,7 +4352,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ResourceNames
 		{
 			get
@@ -4375,7 +4375,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ResourceInitials
 		{
 			get
@@ -4398,7 +4398,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Resume
 		{
 			get
@@ -4421,7 +4421,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Stop
 		{
 			get
@@ -4444,7 +4444,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ResumeNoEarlierThan
 		{
 			get
@@ -4467,7 +4467,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ConstraintType
 		{
 			get
@@ -4490,7 +4490,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ConstraintDate
 		{
 			get
@@ -4513,7 +4513,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ActualCost
 		{
 			get
@@ -4536,7 +4536,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Cost
 		{
 			get
@@ -4559,7 +4559,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Created
 		{
 			get
@@ -4582,7 +4582,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ActualDuration
 		{
 			get
@@ -4605,7 +4605,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Duration
 		{
 			get
@@ -4628,7 +4628,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LateFinish
 		{
 			get
@@ -4651,7 +4651,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ActualFinish
 		{
 			get
@@ -4674,7 +4674,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Objects
 		{
 			get
@@ -4689,7 +4689,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object RemainingWork
 		{
 			get
@@ -4712,7 +4712,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ResourceGroup
 		{
 			get
@@ -4735,7 +4735,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ActualStart
 		{
 			get
@@ -4758,7 +4758,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Summary
 		{
 			get
@@ -4781,7 +4781,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Template
 		{
 			get
@@ -4796,7 +4796,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object UpdateNeeded
 		{
 			get
@@ -4819,7 +4819,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Work
 		{
 			get
@@ -4842,7 +4842,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object WorkVariance
 		{
 			get
@@ -4865,7 +4865,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LinkedFields
 		{
 			get
@@ -4888,7 +4888,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Confirmed
 		{
 			get
@@ -4911,7 +4911,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ReadOnly
 		{
 			get
@@ -4926,7 +4926,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool HasPassword
 		{
 			get
@@ -4941,7 +4941,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool WriteReserved
 		{
 			get
@@ -4956,7 +4956,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -4972,7 +4972,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -4988,7 +4988,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object Index
 		{
 			get
@@ -5011,7 +5011,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List MapList
 		{
 			get
@@ -5027,7 +5027,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Tasks Tasks
 		{
 			get
@@ -5043,7 +5043,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Resources Resources
 		{
 			get
@@ -5059,7 +5059,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Calendars BaseCalendars
 		{
 			get
@@ -5075,7 +5075,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject BuiltinDocumentProperties
 		{
 			get
@@ -5091,7 +5091,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject CustomDocumentProperties
 		{
 			get
@@ -5107,7 +5107,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject Container
 		{
 			get
@@ -5123,7 +5123,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Calendar Calendar
 		{
 			get
@@ -5139,7 +5139,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 NumberOfTasks
 		{
 			get
@@ -5154,7 +5154,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 NumberOfResources
 		{
 			get
@@ -5169,7 +5169,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string FullName
 		{
 			get
@@ -5184,7 +5184,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string Path
 		{
 			get
@@ -5199,7 +5199,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ResourcePoolName
 		{
 			get
@@ -5214,7 +5214,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool Saved
 		{
 			get
@@ -5229,7 +5229,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object CreationDate
 		{
 			get
@@ -5252,7 +5252,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LastPrintedDate
 		{
 			get
@@ -5275,7 +5275,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object LastSaveDate
 		{
 			get
@@ -5298,7 +5298,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string LastSavedBy
 		{
 			get
@@ -5313,7 +5313,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string RevisionNumber
 		{
 			get
@@ -5328,7 +5328,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ViewList
 		{
 			get
@@ -5344,7 +5344,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List TaskViewList
 		{
 			get
@@ -5360,7 +5360,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ResourceViewList
 		{
 			get
@@ -5376,7 +5376,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool ReadOnlyRecommended
 		{
 			get
@@ -5391,7 +5391,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ReportList
 		{
 			get
@@ -5407,7 +5407,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List TaskFilterList
 		{
 			get
@@ -5423,7 +5423,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ResourceFilterList
 		{
 			get
@@ -5439,7 +5439,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List TaskTableList
 		{
 			get
@@ -5455,7 +5455,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ResourceTableList
 		{
 			get
@@ -5471,7 +5471,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrentView
 		{
 			get
@@ -5486,7 +5486,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrentTable
 		{
 			get
@@ -5501,7 +5501,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrentFilter
 		{
 			get
@@ -5516,7 +5516,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 ID
 		{
 			get
@@ -5531,7 +5531,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -5547,7 +5547,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool UserControl
 		{
 			get
@@ -5562,7 +5562,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public NetOffice.VBIDEApi.VBProject VBProject
 		{
 			get
@@ -5578,7 +5578,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Subprojects Subprojects
 		{
 			get
@@ -5594,7 +5594,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string CurrentGroup
 		{
 			get
@@ -5609,7 +5609,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List TaskGroupList
 		{
 			get
@@ -5625,7 +5625,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.List ResourceGroupList
 		{
 			get
@@ -5641,7 +5641,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.TaskGroups TaskGroups
 		{
 			get
@@ -5657,7 +5657,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ResourceGroups ResourceGroups
 		{
 			get
@@ -5673,7 +5673,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Enums.PjProjectType Type
 		{
 			get
@@ -5688,7 +5688,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Views Views
 		{
 			get
@@ -5704,7 +5704,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Tables TaskTables
 		{
 			get
@@ -5720,7 +5720,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Tables ResourceTables
 		{
 			get
@@ -5736,7 +5736,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Filters TaskFilters
 		{
 			get
@@ -5752,7 +5752,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Filters ResourceFilters
 		{
 			get
@@ -5768,7 +5768,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ViewsSingle ViewsSingle
 		{
 			get
@@ -5784,7 +5784,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ViewsCombination ViewsCombination
 		{
 			get
@@ -5801,7 +5801,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Baseline">LateBindingApi.MSProjectApi.Enums.PjBaselines Baseline</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object get_BaselineSavedDate(LateBindingApi.MSProjectApi.Enums.PjBaselines baseline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseline);
@@ -5821,7 +5821,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string ProjectNamePrefix
 		{
 			get
@@ -5836,7 +5836,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string VersionName
 		{
 			get
@@ -5851,7 +5851,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 TempToDoList
 		{
 			get
@@ -5871,7 +5871,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.OutlineCodes OutlineCodes
 		{
 			get
@@ -5887,7 +5887,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public NetOffice.OfficeApi.SharedWorkspace SharedWorkspace
 		{
 			get
@@ -5903,7 +5903,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public NetOffice.OfficeApi.DocumentLibraryVersions DocumentLibraryVersions
 		{
 			get
@@ -5919,7 +5919,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool CanCheckIn
 		{
 			get
@@ -5934,7 +5934,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 HyperlinkColorEx
 		{
 			get
@@ -5954,7 +5954,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 FollowedHyperlinkColorEx
 		{
 			get
@@ -5974,7 +5974,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool NewTasksCreatedAsManual
 		{
 			get
@@ -5994,7 +5994,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.TaskGroups2 TaskGroups2
 		{
 			get
@@ -6010,7 +6010,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.ResourceGroups2 ResourceGroups2
 		{
 			get
@@ -6026,7 +6026,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool ManuallyScheduledTasksAutoRespectLinks
 		{
 			get
@@ -6046,7 +6046,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool KeepTaskOnNearestWorkingTimeWhenMadeAutoScheduled
 		{
 			get
@@ -6066,7 +6066,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool ShowTaskWarnings
 		{
 			get
@@ -6086,7 +6086,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public bool ShowTaskSuggestions
 		{
 			get
@@ -6106,7 +6106,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.Tasks DetectCycle
 		{
 			get
@@ -6140,7 +6140,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="ClearActuals">optional object ClearActuals</param>
 		/// <param name="ClearResourceRates">optional object ClearResourceRates</param>
 		/// <param name="ClearFixedCosts">optional object ClearFixedCosts</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts);
@@ -6152,7 +6152,8 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="Name">object Name</param>
 		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
@@ -6162,7 +6163,241 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		/// <param name="FormatID">optional object FormatID</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		/// <param name="FormatID">optional object FormatID</param>
+		/// <param name="Map">optional object Map</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		/// <param name="FormatID">optional object FormatID</param>
+		/// <param name="Map">optional object Map</param>
+		/// <param name="ClearBaseline">optional object ClearBaseline</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		/// <param name="FormatID">optional object FormatID</param>
+		/// <param name="Map">optional object Map</param>
+		/// <param name="ClearBaseline">optional object ClearBaseline</param>
+		/// <param name="ClearActuals">optional object ClearActuals</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Name">object Name</param>
+		/// <param name="Format">LateBindingApi.MSProjectApi.Enums.PjFileFormat Format</param>
+		/// <param name="Backup">optional object Backup</param>
+		/// <param name="ReadOnly">optional object ReadOnly</param>
+		/// <param name="TaskInformation">optional object TaskInformation</param>
+		/// <param name="Filtered">optional object Filtered</param>
+		/// <param name="Table">optional object Table</param>
+		/// <param name="UserID">optional object UserID</param>
+		/// <param name="DatabasePassWord">optional object DatabasePassWord</param>
+		/// <param name="FormatID">optional object FormatID</param>
+		/// <param name="Map">optional object Map</param>
+		/// <param name="ClearBaseline">optional object ClearBaseline</param>
+		/// <param name="ClearActuals">optional object ClearActuals</param>
+		/// <param name="ClearResourceRates">optional object ClearResourceRates</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void SaveAs(object name, LateBindingApi.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates);
+			Invoker.Method(this, "SaveAs", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -6172,7 +6407,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void LevelClearDates()
 		{
 			object[] paramsArray = null;
@@ -6183,7 +6418,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="Value">string Value</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void AppendNotes(string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -6193,7 +6428,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void MakeServerURLTrusted()
 		{
 			object[] paramsArray = null;
@@ -6206,7 +6441,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="SaveChanges">optional object SaveChanges</param>
 		/// <param name="Comment">optional object Comment</param>
 		/// <param name="MakePublic">optional object MakePublic</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void CheckIn(object saveChanges, object comment, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comment, makePublic);
@@ -6216,7 +6451,8 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void CheckIn()
 		{
 			object[] paramsArray = null;
@@ -6226,9 +6462,34 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void CheckIn(object saveChanges)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
+			Invoker.Method(this, "CheckIn", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="SaveChanges">optional object SaveChanges</param>
+		/// <param name="Comment">optional object Comment</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public void CheckIn(object saveChanges, object comment)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comment);
+			Invoker.Method(this, "CheckIn", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
 		/// <param name="ObjectType">LateBindingApi.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string GetObjectMatchingID(LateBindingApi.MSProjectApi.Enums.PjOrganizer objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -6242,7 +6503,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="ObjectType">LateBindingApi.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="ObjectName">string ObjectName</param>
 		/// <param name="MatchingID">string MatchingID</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public void SetObjectMatchingID(LateBindingApi.MSProjectApi.Enums.PjOrganizer objectType, string objectName, string matchingID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, matchingID);
@@ -6254,7 +6515,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="ObjectType">LateBindingApi.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="MatchingID">string MatchingID</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string GetDisplayNameFromObjectMatchingID(LateBindingApi.MSProjectApi.Enums.PjOrganizer objectType, string matchingID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, matchingID);
@@ -6269,7 +6530,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="DeliverableStartDate">object DeliverableStartDate</param>
 		/// <param name="DeliverableFinishDate">object DeliverableFinishDate</param>
 		/// <param name="TaskGuid">string TaskGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string DeliverableCreate(string deliverableName, object deliverableStartDate, object deliverableFinishDate, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableName, deliverableStartDate, deliverableFinishDate, taskGuid);
@@ -6284,7 +6545,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="DeliverableName">string DeliverableName</param>
 		/// <param name="DeliverableStartDate">object DeliverableStartDate</param>
 		/// <param name="DeliverableFinishDate">object DeliverableFinishDate</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableUpdate(string deliverableGuid, string deliverableName, object deliverableStartDate, object deliverableFinishDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, deliverableName, deliverableStartDate, deliverableFinishDate);
@@ -6296,7 +6557,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableDelete(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6309,7 +6570,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
 		/// <param name="TaskGuid">string TaskGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableDependencyCreate(string deliverableGuid, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
@@ -6321,7 +6582,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableDependencyDelete(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6333,7 +6594,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="DeliverableGuid">optional object DeliverableGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableRefreshServerCache(object deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6344,7 +6605,8 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableRefreshServerCache()
 		{
 			object[] paramsArray = null;
@@ -6355,7 +6617,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject DeliverablesGetServerCachedXml()
 		{
 			object[] paramsArray = null;
@@ -6367,7 +6629,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject DeliverablesGetXml()
 		{
 			object[] paramsArray = null;
@@ -6379,7 +6641,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string GetServerProjectGuid()
 		{
 			object[] paramsArray = null;
@@ -6392,7 +6654,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
 		/// <param name="TaskGuid">string TaskGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableLinkToTask(string deliverableGuid, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
@@ -6404,7 +6666,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableLinkToProject(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6415,7 +6677,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverablesClearAll()
 		{
 			object[] paramsArray = null;
@@ -6427,7 +6689,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="DeliverableGuid">string DeliverableGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public bool DeliverableAcceptChanges(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6438,7 +6700,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public string DeliverablesGetProviderProjects()
 		{
 			object[] paramsArray = null;
@@ -6450,7 +6712,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="ProjectGuid">string ProjectGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public COMObject DeliverablesGetByProject(string projectGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectGuid);
@@ -6463,7 +6725,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="TaskGuid">string TaskGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 GetTaskIndexByGuid(string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskGuid);
@@ -6475,7 +6737,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="ProjectGuid">string ProjectGuid</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object ReadWssData(string projectGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectGuid);
@@ -6494,7 +6756,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public object GetWinprojURLs()
 		{
 			object[] paramsArray = null;
@@ -6513,7 +6775,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 LocalResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6524,7 +6786,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 ImportResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6535,7 +6797,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 ResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6546,7 +6808,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 LocalResourceCount()
 		{
 			object[] paramsArray = null;
@@ -6557,7 +6819,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 ResourceCount()
 		{
 			object[] paramsArray = null;
@@ -6571,7 +6833,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="AssignmentToDrag">object AssignmentToDrag</param>
 		/// <param name="DestinationResource">optional object DestinationResource</param>
 		/// <param name="DestinationTime">optional object DestinationTime</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void RSVDragSimulator(object assignmentToDrag, object destinationResource, object destinationTime)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag, destinationResource, destinationTime);
@@ -6582,7 +6844,8 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// </summary>
 		/// <param name="AssignmentToDrag">object AssignmentToDrag</param>
-		[SupportByLibrary("MSProject", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void RSVDragSimulator(object assignmentToDrag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag);
@@ -6592,8 +6855,21 @@ namespace LateBindingApi.MSProjectApi
 		/// <summary>
 		/// SupportByLibrary MSProject 14
 		/// </summary>
+		/// <param name="AssignmentToDrag">object AssignmentToDrag</param>
+		/// <param name="DestinationResource">optional object DestinationResource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 14)]
+		public void RSVDragSimulator(object assignmentToDrag, object destinationResource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag, destinationResource);
+			Invoker.Method(this, "RSVDragSimulator", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 14
+		/// </summary>
 		/// <param name="CustomUIXML">string CustomUIXML</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void SetCustomUI(string customUIXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customUIXML);
@@ -6611,7 +6887,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="FromDate">optional object FromDate</param>
 		/// <param name="ToDate">optional object ToDate</param>
 		/// <param name="FixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void ExportAsFixedFormat(string filename, LateBindingApi.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate, fixedFormatExtClassPtr);
@@ -6626,10 +6902,46 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="IncludeDocumentProperties">bool IncludeDocumentProperties</param>
 		/// <param name="IncludeDocumentMarkup">bool IncludeDocumentMarkup</param>
 		/// <param name="ArchiveFormat">bool ArchiveFormat</param>
-		[SupportByLibrary("MSProject", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public void ExportAsFixedFormat(string filename, LateBindingApi.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileType">LateBindingApi.MSProjectApi.Enums.PjDocExportType FileType</param>
+		/// <param name="IncludeDocumentProperties">bool IncludeDocumentProperties</param>
+		/// <param name="IncludeDocumentMarkup">bool IncludeDocumentMarkup</param>
+		/// <param name="ArchiveFormat">bool ArchiveFormat</param>
+		/// <param name="FromDate">optional object FromDate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 14)]
+		public void ExportAsFixedFormat(string filename, LateBindingApi.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
+			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="FileType">LateBindingApi.MSProjectApi.Enums.PjDocExportType FileType</param>
+		/// <param name="IncludeDocumentProperties">bool IncludeDocumentProperties</param>
+		/// <param name="IncludeDocumentMarkup">bool IncludeDocumentMarkup</param>
+		/// <param name="ArchiveFormat">bool ArchiveFormat</param>
+		/// <param name="FromDate">optional object FromDate</param>
+		/// <param name="ToDate">optional object ToDate</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 14)]
+		public void ExportAsFixedFormat(string filename, LateBindingApi.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
 		}
 

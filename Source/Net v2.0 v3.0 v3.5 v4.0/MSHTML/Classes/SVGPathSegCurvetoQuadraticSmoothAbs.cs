@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass SVGPathSegCurvetoQuadraticSmoothAbs SupportByLibrary MSHTML, 4
+	/// CoClass SVGPathSegCurvetoQuadraticSmoothAbs SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SVGPathSegCurvetoQuadraticSmoothAbs : DispSVGPathSegCurvetoQuadraticSmoothAbs, IEventBinding 
 	{

@@ -16,9 +16,9 @@ namespace NetOffice.OfficeApi
 	#endregion
 
 	///<summary>
-	/// CoClass CustomTaskPane SupportByLibrary Office, 12,14
+	/// CoClass CustomTaskPane SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomTaskPane : _CustomTaskPane, IEventBinding 
 	{

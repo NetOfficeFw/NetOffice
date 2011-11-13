@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 	#endregion
 
 	///<summary>
-	/// CoClass PrivDBEngine SupportByLibrary DAO, 6,12
+	/// CoClass PrivDBEngine SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PrivDBEngine : _DBEngine, IEventBinding 
 	{

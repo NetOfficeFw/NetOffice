@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14, 
+	 /// SupportByLibrary PowerPoint 14
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlReadingOrder
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-5002</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlContext = -5002,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-5003</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlLTR = -5003,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-5004</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlRTL = -5004
 	}
 }

@@ -49,7 +49,7 @@ Public Class Form1
             workbookFile = String.Format("{0}\Example07{1}", Environment.CurrentDirectory, fileExtension)
             workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
 
-        Catch throwedException As Exception
+        Catch throwedException As System.Runtime.InteropServices.COMException
 
             Dim message As String = String.Format("An error is occured.{0}ExceptionTrace:{0}", Environment.NewLine)
 

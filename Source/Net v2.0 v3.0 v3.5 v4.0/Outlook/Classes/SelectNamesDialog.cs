@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass SelectNamesDialog SupportByLibrary Outlook, 12,14
+	/// CoClass SelectNamesDialog SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SelectNamesDialog : _SelectNamesDialog, IEventBinding 
 	{

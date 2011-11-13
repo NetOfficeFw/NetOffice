@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispHTMLDOMTextNode SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispHTMLDOMTextNode SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLDOMTextNode : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string data
 		{
 			get
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 length
 		{
 			get
@@ -111,7 +111,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 nodeType
 		{
 			get
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode parentNode
 		{
 			get
@@ -142,7 +142,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject childNodes
 		{
 			get
@@ -158,7 +158,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject attributes
 		{
 			get
@@ -174,7 +174,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string nodeName
 		{
 			get
@@ -189,7 +189,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object nodeValue
 		{
 			get
@@ -217,7 +217,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode firstChild
 		{
 			get
@@ -233,7 +233,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode lastChild
 		{
 			get
@@ -249,7 +249,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode previousSibling
 		{
 			get
@@ -265,7 +265,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode nextSibling
 		{
 			get
@@ -281,7 +281,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject ownerDocument
 		{
 			get
@@ -297,7 +297,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject constructor
 		{
 			get
@@ -313,7 +313,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string wholeText
 		{
 			get
@@ -328,7 +328,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object prefix
 		{
 			get
@@ -356,7 +356,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object localName
 		{
 			get
@@ -379,7 +379,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object namespaceURI
 		{
 			get
@@ -402,7 +402,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object textContent
 		{
 			get
@@ -433,7 +433,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string toString()
 		{
 			object[] paramsArray = null;
@@ -445,7 +445,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode splitText(Int32 offset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset);
@@ -459,7 +459,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string substringData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -471,7 +471,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void appendData(string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrstring);
@@ -483,7 +483,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void insertData(Int32 offset, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, bstrstring);
@@ -495,7 +495,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void deleteData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -508,7 +508,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void replaceData(Int32 offset, Int32 count, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count, bstrstring);
@@ -518,7 +518,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasChildNodes()
 		{
 			object[] paramsArray = null;
@@ -531,7 +531,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="refChild">optional object refChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode insertBefore(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild, object refChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild, refChild);
@@ -544,7 +544,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode insertBefore(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild);
@@ -557,7 +558,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="oldChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode removeChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldChild);
@@ -571,7 +572,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="oldChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode replaceChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild, LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild, oldChild);
@@ -584,7 +585,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fDeep">bool fDeep</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode cloneNode(bool fDeep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fDeep);
@@ -597,7 +598,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fDeep">bool fDeep</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode removeNode(bool fDeep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fDeep);
@@ -610,7 +611,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="otherNode">LateBindingApi.MSHTMLApi.IHTMLDOMNode otherNode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode swapNode(LateBindingApi.MSHTMLApi.IHTMLDOMNode otherNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(otherNode);
@@ -623,7 +624,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="replacement">LateBindingApi.MSHTMLApi.IHTMLDOMNode replacement</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode replaceNode(LateBindingApi.MSHTMLApi.IHTMLDOMNode replacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replacement);
@@ -636,7 +637,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode appendChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild);
@@ -650,7 +651,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string ie9_substringData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -663,7 +664,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ie9_insertData(Int32 offset, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, bstrstring);
@@ -675,7 +676,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ie9_deleteData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -688,7 +689,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void ie9_replaceData(Int32 offset, Int32 count, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count, bstrstring);
@@ -699,7 +700,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_splitText(Int32 offset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset);
@@ -712,7 +713,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode replaceWholeText(string bstrText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText);
@@ -724,7 +725,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasAttributes()
 		{
 			object[] paramsArray = null;
@@ -735,7 +736,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void normalize()
 		{
 			object[] paramsArray = null;
@@ -746,7 +747,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="otherNode">LateBindingApi.MSHTMLApi.IHTMLDOMNode3 otherNode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isEqualNode(LateBindingApi.MSHTMLApi.IHTMLDOMNode3 otherNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(otherNode);
@@ -758,7 +759,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pvarPrefix">object pvarPrefix</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object lookupNamespaceURI(object pvarPrefix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarPrefix);
@@ -778,7 +779,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pvarNamespaceURI">object pvarNamespaceURI</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public object lookupPrefix(object pvarNamespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarNamespaceURI);
@@ -798,7 +799,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pvarNamespace">object pvarNamespace</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isDefaultNamespace(object pvarNamespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarNamespace);
@@ -810,7 +811,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_appendChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild);
@@ -824,7 +825,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="refChild">optional object refChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_insertBefore(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild, object refChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild, refChild);
@@ -837,7 +838,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_insertBefore(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild);
@@ -850,7 +852,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="oldChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_removeChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldChild);
@@ -864,7 +866,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="oldChild">LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDOMNode ie9_replaceChild(LateBindingApi.MSHTMLApi.IHTMLDOMNode newChild, LateBindingApi.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newChild, oldChild);
@@ -877,7 +879,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="otherNode">LateBindingApi.MSHTMLApi.IHTMLDOMNode3 otherNode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isSameNode(LateBindingApi.MSHTMLApi.IHTMLDOMNode3 otherNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(otherNode);
@@ -889,7 +891,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="otherNode">LateBindingApi.MSHTMLApi.IHTMLDOMNode otherNode</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int16 compareDocumentPosition(LateBindingApi.MSHTMLApi.IHTMLDOMNode otherNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(otherNode);
@@ -902,7 +904,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="feature">string feature</param>
 		/// <param name="version">object version</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool isSupported(string feature, object version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(feature, version);
@@ -916,7 +918,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void addEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -929,7 +931,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="type">string type</param>
 		/// <param name="listener">object listener</param>
 		/// <param name="useCapture">bool useCapture</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void removeEventListener(string type, object listener, bool useCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, listener, useCapture);
@@ -940,7 +942,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="evt">LateBindingApi.MSHTMLApi.IDOMEvent evt</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool dispatchEvent(LateBindingApi.MSHTMLApi.IDOMEvent evt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(evt);

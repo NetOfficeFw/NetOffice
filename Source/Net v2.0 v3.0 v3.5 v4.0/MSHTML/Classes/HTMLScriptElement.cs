@@ -78,9 +78,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLScriptElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLScriptElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLScriptElement : DispHTMLScriptElement, IEventBinding 
 	{

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface WorkWeeks SupportByLibrary MSProject, 12,14
+	/// DispatchInterface WorkWeeks SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WorkWeeks : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Calendar Parent
 		{
 			get
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -125,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.WorkWeek this[object index]
 		{
@@ -148,7 +148,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="Start">object Start</param>
 		/// <param name="Finish">optional object Finish</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.WorkWeek Add(object start, object finish, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, finish, name);
@@ -161,10 +161,26 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// </summary>
 		/// <param name="Start">object Start</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.WorkWeek Add(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.WorkWeek newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.WorkWeek.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.WorkWeek;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.WorkWeek Add(object start, object finish)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(start, finish);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			LateBindingApi.MSProjectApi.WorkWeek newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.WorkWeek.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.WorkWeek;
 			return newObject;
@@ -174,7 +190,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

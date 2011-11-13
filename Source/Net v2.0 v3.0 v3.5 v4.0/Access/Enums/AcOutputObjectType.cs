@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcOutputObjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputTable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputQuery = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputForm = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputReport = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputModule = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputDataAccessPage = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputServerView = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Access", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
 		 acOutputStoredProcedure = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acOutputFunction = 10
 	}
 }

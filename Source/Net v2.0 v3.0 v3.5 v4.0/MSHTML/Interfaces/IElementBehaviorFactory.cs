@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehaviorFactory SupportByLibrary MSHTML, 4
+	/// Interface IElementBehaviorFactory SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorFactory : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="bstrBehavior">string bstrBehavior</param>
 		/// <param name="bstrBehaviorUrl">string bstrBehaviorUrl</param>
 		/// <param name="pSite">LateBindingApi.MSHTMLApi.IElementBehaviorSite pSite</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IElementBehavior FindBehavior(string bstrBehavior, string bstrBehaviorUrl, LateBindingApi.MSHTMLApi.IElementBehaviorSite pSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBehavior, bstrBehaviorUrl, pSite);

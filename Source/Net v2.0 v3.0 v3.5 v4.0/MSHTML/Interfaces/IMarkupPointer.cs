@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IMarkupPointer SupportByLibrary MSHTML, 4
+	/// Interface IMarkupPointer SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupPointer : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppDoc">LateBindingApi.MSHTMLApi.IHTMLDocument2 ppDoc</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 OwningDoc(LateBindingApi.MSHTMLApi.IHTMLDocument2 ppDoc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppDoc);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pGravity">LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY pGravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Gravity(LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY pGravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pGravity);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="Gravity">LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY Gravity</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetGravity(LateBindingApi.MSHTMLApi.Enums._POINTER_GRAVITY gravity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(gravity);
@@ -115,7 +115,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfCling">Int32 pfCling</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Cling(Int32 pfCling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfCling);
@@ -127,7 +127,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="fCLing">Int32 fCLing</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 SetCling(Int32 fCLing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fCLing);
@@ -138,7 +138,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 Unposition()
 		{
 			object[] paramsArray = null;
@@ -150,7 +150,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfPositioned">Int32 pfPositioned</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsPositioned(Int32 pfPositioned)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfPositioned);
@@ -162,7 +162,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppContainer">LateBindingApi.MSHTMLApi.IMarkupContainer ppContainer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetContainer(LateBindingApi.MSHTMLApi.IMarkupContainer ppContainer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppContainer);
@@ -175,7 +175,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pElement">LateBindingApi.MSHTMLApi.IHTMLElement pElement</param>
 		/// <param name="eAdj">LateBindingApi.MSHTMLApi.Enums._ELEMENT_ADJACENCY eAdj</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveAdjacentToElement(LateBindingApi.MSHTMLApi.IHTMLElement pElement, LateBindingApi.MSHTMLApi.Enums._ELEMENT_ADJACENCY eAdj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pElement, eAdj);
@@ -187,7 +187,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pPointer">LateBindingApi.MSHTMLApi.IMarkupPointer pPointer</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToPointer(LateBindingApi.MSHTMLApi.IMarkupPointer pPointer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointer);
@@ -200,7 +200,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pContainer">LateBindingApi.MSHTMLApi.IMarkupContainer pContainer</param>
 		/// <param name="fAtStart">Int32 fAtStart</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveToContainer(LateBindingApi.MSHTMLApi.IMarkupContainer pContainer, Int32 fAtStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pContainer, fAtStart);
@@ -216,7 +216,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ppElement">LateBindingApi.MSHTMLApi.IHTMLElement ppElement</param>
 		/// <param name="pcch">Int32 pcch</param>
 		/// <param name="pchText">Int16 pchText</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 left(Int32 fMove, LateBindingApi.MSHTMLApi.Enums._MARKUP_CONTEXT_TYPE pContext, LateBindingApi.MSHTMLApi.IHTMLElement ppElement, Int32 pcch, Int16 pchText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fMove, pContext, ppElement, pcch, pchText);
@@ -232,7 +232,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="ppElement">LateBindingApi.MSHTMLApi.IHTMLElement ppElement</param>
 		/// <param name="pcch">Int32 pcch</param>
 		/// <param name="pchText">Int16 pchText</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 right(Int32 fMove, LateBindingApi.MSHTMLApi.Enums._MARKUP_CONTEXT_TYPE pContext, LateBindingApi.MSHTMLApi.IHTMLElement ppElement, Int32 pcch, Int16 pchText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fMove, pContext, ppElement, pcch, pchText);
@@ -244,7 +244,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppElemCurrent">LateBindingApi.MSHTMLApi.IHTMLElement ppElemCurrent</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CurrentScope(LateBindingApi.MSHTMLApi.IHTMLElement ppElemCurrent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElemCurrent);
@@ -257,7 +257,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointerThat">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat</param>
 		/// <param name="pfResult">Int32 pfResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsLeftOf(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat, Int32 pfResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerThat, pfResult);
@@ -270,7 +270,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointerThat">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat</param>
 		/// <param name="pfResult">Int32 pfResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsLeftOfOrEqualTo(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat, Int32 pfResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerThat, pfResult);
@@ -283,7 +283,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointerThat">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat</param>
 		/// <param name="pfResult">Int32 pfResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsRightOf(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat, Int32 pfResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerThat, pfResult);
@@ -296,7 +296,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointerThat">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat</param>
 		/// <param name="pfResult">Int32 pfResult</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsRightOfOrEqualTo(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat, Int32 pfResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerThat, pfResult);
@@ -309,7 +309,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pPointerThat">LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat</param>
 		/// <param name="pfAreEqual">Int32 pfAreEqual</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsEqualTo(LateBindingApi.MSHTMLApi.IMarkupPointer pPointerThat, Int32 pfAreEqual)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerThat, pfAreEqual);
@@ -321,7 +321,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="muAction">LateBindingApi.MSHTMLApi.Enums._MOVEUNIT_ACTION muAction</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MoveUnit(LateBindingApi.MSHTMLApi.Enums._MOVEUNIT_ACTION muAction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(muAction);
@@ -336,7 +336,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="dwFlags">Int32 dwFlags</param>
 		/// <param name="pIEndMatch">LateBindingApi.MSHTMLApi.IMarkupPointer pIEndMatch</param>
 		/// <param name="pIEndSearch">LateBindingApi.MSHTMLApi.IMarkupPointer pIEndSearch</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 findText(string pchFindText, Int32 dwFlags, LateBindingApi.MSHTMLApi.IMarkupPointer pIEndMatch, LateBindingApi.MSHTMLApi.IMarkupPointer pIEndSearch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchFindText, dwFlags, pIEndMatch, pIEndSearch);

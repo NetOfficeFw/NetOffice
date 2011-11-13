@@ -36,7 +36,8 @@ Partial Class Form1
         Me.textBox1.Name = "textBox1"
         Me.textBox1.Size = New System.Drawing.Size(304, 118)
         Me.textBox1.TabIndex = 7
-        Me.textBox1.Text = "create a button and macro there will be executed on click."
+        Me.textBox1.Text = "create a button and macro there will be executed on click. the option ""Trust acce" & _
+            "ss to Visual Basic Project"" must be set"
         '
         'button1
         '

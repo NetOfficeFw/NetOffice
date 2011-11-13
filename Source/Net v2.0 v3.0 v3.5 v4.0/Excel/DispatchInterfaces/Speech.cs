@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface Speech SupportByLibrary Excel, 10,11,12,14
+	/// DispatchInterface Speech SupportByLibraryAttribute Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Speech : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public bool SpeakCellOnEnter
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="SpeakAsync">optional object SpeakAsync</param>
 		/// <param name="SpeakXML">optional object SpeakXML</param>
 		/// <param name="Purge">optional object Purge</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Speak(string text, object speakAsync, object speakXML, object purge)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML, purge);
@@ -134,10 +134,38 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Text">string Text</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public void Speak(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
+			Invoker.Method(this, "Speak", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Text">string Text</param>
+		/// <param name="SpeakAsync">optional object SpeakAsync</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void Speak(string text, object speakAsync)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync);
+			Invoker.Method(this, "Speak", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// </summary>
+		/// <param name="Text">string Text</param>
+		/// <param name="SpeakAsync">optional object SpeakAsync</param>
+		/// <param name="SpeakXML">optional object SpeakXML</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		public void Speak(string text, object speakAsync, object speakXML)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML);
 			Invoker.Method(this, "Speak", paramsArray);
 		}
 

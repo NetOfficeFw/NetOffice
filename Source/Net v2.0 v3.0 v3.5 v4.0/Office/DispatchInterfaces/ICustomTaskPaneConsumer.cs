@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface ICustomTaskPaneConsumer SupportByLibrary Office, 12,14
+	/// DispatchInterface ICustomTaskPaneConsumer SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICustomTaskPaneConsumer : COMObject
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="CTPFactoryInst">NetOffice.OfficeApi.ICTPFactory CTPFactoryInst</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void CTPFactoryAvailable(NetOffice.OfficeApi.ICTPFactory cTPFactoryInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPFactoryInst);

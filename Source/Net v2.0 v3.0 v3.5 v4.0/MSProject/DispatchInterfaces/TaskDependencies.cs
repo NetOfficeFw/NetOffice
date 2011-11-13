@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface TaskDependencies SupportByLibrary MSProject, 12,14
+	/// DispatchInterface TaskDependencies SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TaskDependencies : COMObject ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.TaskDependency this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task Parent
 		{
 			get
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -148,7 +148,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="From">LateBindingApi.MSProjectApi.Task From</param>
 		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjTaskLinkType Type</param>
 		/// <param name="Lag">optional object Lag</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.TaskDependency Add(LateBindingApi.MSProjectApi.Task from, LateBindingApi.MSProjectApi.Enums.PjTaskLinkType type, object lag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type, lag);
@@ -162,7 +162,8 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="From">LateBindingApi.MSProjectApi.Task From</param>
 		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjTaskLinkType Type</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.TaskDependency Add(LateBindingApi.MSProjectApi.Task from, LateBindingApi.MSProjectApi.Enums.PjTaskLinkType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type);
@@ -175,7 +176,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

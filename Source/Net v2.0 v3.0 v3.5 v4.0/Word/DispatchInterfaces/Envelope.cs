@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface Envelope SupportByLibrary Word, 9,10,11,12,14
+	/// DispatchInterface Envelope SupportByLibraryAttribute Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Envelope : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,7 +123,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range Address
 		{
 			get
@@ -139,7 +139,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Range ReturnAddress
 		{
 			get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DefaultPrintBarCode
 		{
 			get
@@ -175,7 +175,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DefaultPrintFIMA
 		{
 			get
@@ -195,7 +195,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single DefaultHeight
 		{
 			get
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single DefaultWidth
 		{
 			get
@@ -235,7 +235,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public string DefaultSize
 		{
 			get
@@ -255,7 +255,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DefaultOmitReturnAddress
 		{
 			get
@@ -275,7 +275,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdPaperTray FeedSource
 		{
 			get
@@ -295,7 +295,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single AddressFromLeft
 		{
 			get
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single AddressFromTop
 		{
 			get
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single ReturnAddressFromLeft
 		{
 			get
@@ -355,7 +355,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public Single ReturnAddressFromTop
 		{
 			get
@@ -375,7 +375,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Style AddressStyle
 		{
 			get
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Style ReturnAddressStyle
 		{
 			get
@@ -407,7 +407,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdEnvelopeOrientation DefaultOrientation
 		{
 			get
@@ -427,7 +427,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public bool DefaultFaceUp
 		{
 			get
@@ -447,7 +447,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public bool Vertical
 		{
 			get
@@ -467,7 +467,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single RecipientNamefromLeft
 		{
 			get
@@ -487,7 +487,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single RecipientNamefromTop
 		{
 			get
@@ -507,7 +507,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single RecipientPostalfromLeft
 		{
 			get
@@ -527,7 +527,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single RecipientPostalfromTop
 		{
 			get
@@ -547,7 +547,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single SenderNamefromLeft
 		{
 			get
@@ -567,7 +567,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single SenderNamefromTop
 		{
 			get
@@ -587,7 +587,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single SenderPostalfromLeft
 		{
 			get
@@ -607,7 +607,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public Single SenderPostalfromTop
 		{
 			get
@@ -628,7 +628,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="Address">optional object Address</param>
@@ -648,7 +648,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
-		[SupportByLibrary("Word", 9)]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
@@ -686,7 +686,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
@@ -696,7 +696,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void Insert()
 		{
 			object[] paramsArray = null;
@@ -704,7 +705,347 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ExtractAddress">optional object ExtractAddress</param>
 		/// <param name="Address">optional object Address</param>
@@ -724,7 +1065,313 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
-		[SupportByLibrary("Word", 9)]
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft);
+			Invoker.Method(this, "Insert", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
@@ -762,7 +1409,7 @@ namespace NetOffice.WordApi
 		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="SenderPostalfromTop">optional object SenderPostalfromTop</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft, senderPostalfromTop);
@@ -772,7 +1419,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -782,7 +1430,653 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
+		/// <param name="PrintEPostage">optional object PrintEPostage</param>
+		/// <param name="Vertical">optional object Vertical</param>
+		/// <param name="RecipientNamefromLeft">optional object RecipientNamefromLeft</param>
+		/// <param name="RecipientNamefromTop">optional object RecipientNamefromTop</param>
+		/// <param name="RecipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
+		/// <param name="RecipientPostalfromTop">optional object RecipientPostalfromTop</param>
+		/// <param name="SenderNamefromLeft">optional object SenderNamefromLeft</param>
+		/// <param name="SenderNamefromTop">optional object SenderNamefromTop</param>
+		/// <param name="SenderPostalfromLeft">optional object SenderPostalfromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation, printEPostage, vertical, recipientNamefromLeft, recipientNamefromTop, recipientPostalfromLeft, recipientPostalfromTop, senderNamefromLeft, senderNamefromTop, senderPostalfromLeft);
+			Invoker.Method(this, "PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
 		public void UpdateDocument()
 		{
 			object[] paramsArray = null;
@@ -810,7 +2104,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
@@ -820,10 +2114,351 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void Insert2000()
 		{
 			object[] paramsArray = null;
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop);
+			Invoker.Method(this, "Insert2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void Insert2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp);
 			Invoker.Method(this, "Insert2000", paramsArray);
 		}
 
@@ -848,7 +2483,7 @@ namespace NetOffice.WordApi
 		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="DefaultOrientation">optional object DefaultOrientation</param>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp, defaultOrientation);
@@ -858,7 +2493,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -868,7 +2504,347 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 10,11,12,14)]
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		/// <param name="ExtractAddress">optional object ExtractAddress</param>
+		/// <param name="Address">optional object Address</param>
+		/// <param name="AutoText">optional object AutoText</param>
+		/// <param name="OmitReturnAddress">optional object OmitReturnAddress</param>
+		/// <param name="ReturnAddress">optional object ReturnAddress</param>
+		/// <param name="ReturnAutoText">optional object ReturnAutoText</param>
+		/// <param name="PrintBarCode">optional object PrintBarCode</param>
+		/// <param name="PrintFIMA">optional object PrintFIMA</param>
+		/// <param name="Size">optional object Size</param>
+		/// <param name="Height">optional object Height</param>
+		/// <param name="Width">optional object Width</param>
+		/// <param name="FeedSource">optional object FeedSource</param>
+		/// <param name="AddressFromLeft">optional object AddressFromLeft</param>
+		/// <param name="AddressFromTop">optional object AddressFromTop</param>
+		/// <param name="ReturnAddressFromLeft">optional object ReturnAddressFromLeft</param>
+		/// <param name="ReturnAddressFromTop">optional object ReturnAddressFromTop</param>
+		/// <param name="DefaultFaceUp">optional object DefaultFaceUp</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		public void PrintOut2000(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(extractAddress, address, autoText, omitReturnAddress, returnAddress, returnAutoText, printBarCode, printFIMA, size, height, width, feedSource, addressFromLeft, addressFromTop, returnAddressFromLeft, returnAddressFromTop, defaultFaceUp);
+			Invoker.Method(this, "PrintOut2000", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 10, 11, 12, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 10,11,12,14)]
 		public void Options()
 		{
 			object[] paramsArray = null;

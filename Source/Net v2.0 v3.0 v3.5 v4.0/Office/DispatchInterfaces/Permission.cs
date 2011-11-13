@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface Permission SupportByLibrary Office, 11,12,14
+	/// DispatchInterface Permission SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Permission : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.UserPermission this[object index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool EnableTrustedBrowser
 		{
 			get
@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool Enabled
 		{
 			get
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string RequestPermissionURL
 		{
 			get
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string PolicyName
 		{
 			get
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string PolicyDescription
 		{
 			get
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool StoreLicenses
 		{
 			get
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public string DocumentAuthor
 		{
 			get
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool PermissionFromPolicy
 		{
 			get
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="UserId">string UserId</param>
 		/// <param name="Permission">optional object Permission</param>
 		/// <param name="ExpirationDate">optional object ExpirationDate</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission, expirationDate);
@@ -290,7 +290,8 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="UserId">string UserId</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId);
@@ -302,8 +303,23 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
+		/// <param name="UserId">string UserId</param>
+		/// <param name="Permission">optional object Permission</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.UserPermission newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void ApplyPolicy(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -313,7 +329,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public void RemoveAll()
 		{
 			object[] paramsArray = null;
@@ -324,7 +340,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

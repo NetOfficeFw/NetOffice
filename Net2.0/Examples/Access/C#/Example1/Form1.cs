@@ -32,7 +32,7 @@ namespace Example01
 
             // create database name 
             string fileExtension = GetDefaultExtension(accessApplication);
-            string documentFile = string.Format("{0}\\Example01{1}", Environment.CurrentDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example01{1}", Application.StartupPath, fileExtension);
             
             // delete old database if exists
             if (System.IO.File.Exists(documentFile))
@@ -52,15 +52,20 @@ namespace Example01
         #region Helper
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".mdbx"
+        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
         /// </summary>
         /// <param name="application">the instance</param>
         /// <returns>the extension</returns>
         private static string GetDefaultExtension(Access.Application application)
         {
+            // Access 2000 doesnt have the Version property(unfortunately)
+            // we check for support with the SupportEntity method, implemented by NetOffice
+            if (!application.EntityIsAvailable("Version"))
+                return ".mdb";
+
             double Version = Convert.ToDouble(application.Version);
             if (Version >= 120.00)
-                return ".mdbx";
+                return ".accdb";
             else
                 return ".mdb";
         }

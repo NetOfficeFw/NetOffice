@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface PropertyPage SupportByLibrary Outlook, 9,10,11,12,14
+	/// Interface PropertyPage SupportByLibraryAttribute Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class PropertyPage : COMObject
 	{
@@ -75,7 +75,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public bool Dirty
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="HelpFile">string HelpFile</param>
 		/// <param name="HelpContext">Int32 HelpContext</param>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 GetPageInfo(string helpFile, Int32 helpContext)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContext);
@@ -106,7 +106,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Apply()
 		{
 			object[] paramsArray = null;

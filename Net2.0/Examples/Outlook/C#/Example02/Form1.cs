@@ -31,8 +31,8 @@ namespace Example02
             Outlook.TaskItem newTask = outlookApplication.CreateItem(OlItemType.olTaskItem) as Outlook.TaskItem;
 
             // Configure the task at hand and save it.
-            newTask.Subject = "Don't forget to check for NetOffice.DeveloperUtils updates";
-            newTask.Body = "check updates here: http://netoffice.codeplex.com";
+            newTask.Subject = "Don't forget to check for NetOffice.DeveloperToolbox updates";
+            newTask.Body = "check updates here: http://netoffice.codeplex.com/releases";
             newTask.DueDate = DateTime.Now;
             newTask.Importance = OlImportance.olImportanceHigh;
             

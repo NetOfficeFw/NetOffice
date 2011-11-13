@@ -56,8 +56,8 @@ Partial Class Form1
         Me.textBox1.Name = "textBox1"
         Me.textBox1.Size = New System.Drawing.Size(507, 124)
         Me.textBox1.TabIndex = 19
-        Me.textBox1.Text = "This example contains code to catch events in power point." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "example 9 shows you h" & _
-            "ow to catch click events from gui." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.textBox1.Text = "This example contains code to catch events in power point." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "example 7 shows you h" & _
+            "ow to catch click events from gui."
         '
         'button1
         '

@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IAppEvents SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IAppEvents SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAppEvents : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 NewWorkbook(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetSelectionChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -106,7 +106,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -132,7 +132,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetActivate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -144,7 +144,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetDeactivate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetCalculate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookOpen(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookActivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookDeactivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookBeforeClose(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookBeforeSave(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, saveAsUI, cancel);
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookBeforePrint(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Sh">object Sh</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookNewSheet(NetOffice.ExcelApi.Workbook wb, object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, sh);
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookAddinInstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WorkbookAddinUninstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -295,7 +295,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WindowResize(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WindowActivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -321,7 +321,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 WindowDeactivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.Hyperlink Target</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SheetFollowHyperlink(object sh, NetOffice.ExcelApi.Hyperlink target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Sh">object Sh</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 SheetPivotTableUpdate(object sh, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 WorkbookPivotTableCloseConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
@@ -373,7 +373,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByLibrary("Excel", 10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
 		public Int32 WorkbookPivotTableOpenConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="SyncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 WorkbookSync(NetOffice.ExcelApi.Workbook wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, syncEventType);
@@ -402,7 +402,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Url">string Url</param>
 		/// <param name="IsRefresh">bool IsRefresh</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 WorkbookBeforeXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, isRefresh, cancel);
@@ -417,7 +417,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="IsRefresh">bool IsRefresh</param>
 		/// <param name="Result">NetOffice.ExcelApi.Enums.XlXmlImportResult Result</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 WorkbookAfterXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, isRefresh, result);
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 WorkbookBeforeXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, cancel);
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="Url">string Url</param>
 		/// <param name="Result">NetOffice.ExcelApi.Enums.XlXmlExportResult Result</param>
-		[SupportByLibrary("Excel", 11,12,14)]
+		[SupportByLibraryAttribute("Excel", 11,12,14)]
 		public Int32 WorkbookAfterXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, result);
@@ -462,7 +462,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Description">string Description</param>
 		/// <param name="Sheet">string Sheet</param>
 		/// <param name="Success">bool Success</param>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 WorkbookRowsetComplete(NetOffice.ExcelApi.Workbook wb, string description, string sheet, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, description, sheet, success);
@@ -473,7 +473,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 12,14)]
+		[SupportByLibraryAttribute("Excel", 12,14)]
 		public Int32 AfterCalculate()
 		{
 			object[] paramsArray = null;
@@ -487,7 +487,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Sh">object Sh</param>
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="TargetRange">NetOffice.ExcelApi.Range TargetRange</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 SheetPivotTableAfterValueChange(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, targetRange);
@@ -503,7 +503,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -519,7 +519,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -534,7 +534,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="TargetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="ValueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="ValueChangeEnd">Int32 ValueChangeEnd</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 SheetPivotTableBeforeDiscardChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd);
@@ -546,7 +546,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowOpen(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -559,7 +559,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.ExcelApi.ProtectedViewWindow pvw, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, cancel);
@@ -573,7 +573,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="Reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowBeforeClose(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, reason, cancel);
@@ -585,7 +585,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowResize(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -597,7 +597,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowActivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -609,7 +609,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 ProtectedViewWindowDeactivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -622,7 +622,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Success">bool Success</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 WorkbookAfterSave(NetOffice.ExcelApi.Workbook wb, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, success);
@@ -635,7 +635,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="Ch">NetOffice.ExcelApi.Chart Ch</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 WorkbookNewChart(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Chart ch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, ch);

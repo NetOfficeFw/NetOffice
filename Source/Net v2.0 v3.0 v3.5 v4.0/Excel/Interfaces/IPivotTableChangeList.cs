@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IPivotTableChangeList SupportByLibrary Excel, 14
+	/// Interface IPivotTableChangeList SupportByLibraryAttribute Excel, 14
 	///</summary>
-	[SupportByLibrary("Excel", 14)]
+	[SupportByLibraryAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPivotTableChangeList : COMObject ,IEnumerable
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ValueChange get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.ValueChange this[object index]
 		{
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 Count
 		{
 			get
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="AllocationValue">optional object AllocationValue</param>
 		/// <param name="AllocationMethod">optional object AllocationMethod</param>
 		/// <param name="AllocationWeightExpression">optional object AllocationWeightExpression</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod, object allocationWeightExpression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tuple, value, allocationValue, allocationMethod, allocationWeightExpression);
@@ -192,10 +192,44 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="Tuple">string Tuple</param>
 		/// <param name="Value">Double Value</param>
-		[SupportByLibrary("Excel", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tuple, value);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ValueChange newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ValueChange.LateBindingApiWrapperType) as NetOffice.ExcelApi.ValueChange;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Tuple">string Tuple</param>
+		/// <param name="Value">Double Value</param>
+		/// <param name="AllocationValue">optional object AllocationValue</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(tuple, value, allocationValue);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.ValueChange newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ValueChange.LateBindingApiWrapperType) as NetOffice.ExcelApi.ValueChange;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Tuple">string Tuple</param>
+		/// <param name="Value">Double Value</param>
+		/// <param name="AllocationValue">optional object AllocationValue</param>
+		/// <param name="AllocationMethod">optional object AllocationMethod</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.ValueChange Add(string tuple, Double value, object allocationValue, object allocationMethod)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(tuple, value, allocationValue, allocationMethod);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.ExcelApi.ValueChange newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ValueChange.LateBindingApiWrapperType) as NetOffice.ExcelApi.ValueChange;
 			return newObject;
@@ -205,7 +239,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

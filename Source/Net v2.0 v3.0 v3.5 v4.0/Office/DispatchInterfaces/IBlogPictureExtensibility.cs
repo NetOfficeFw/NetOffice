@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface IBlogPictureExtensibility SupportByLibrary Office, 12,14
+	/// DispatchInterface IBlogPictureExtensibility SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogPictureExtensibility : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="BlogPictureProvider">string BlogPictureProvider</param>
 		/// <param name="FriendlyName">string FriendlyName</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void BlogPictureProviderProperties(string blogPictureProvider, string friendlyName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(blogPictureProvider, friendlyName);
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="BlogProvider">string BlogProvider</param>
 		/// <param name="ParentWindow">Int32 ParentWindow</param>
 		/// <param name="Document">object Document</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(account, blogProvider, parentWindow, document);
@@ -111,7 +111,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Image">object Image</param>
 		/// <param name="PictureURI">string PictureURI</param>
 		/// <param name="ImageType">Int32 ImageType</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void PublishPicture(string account, Int32 parentWindow, object document, object image, string pictureURI, Int32 imageType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, image, pictureURI, imageType);

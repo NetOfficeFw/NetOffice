@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _CodePane SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _CodePane SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CodePane : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodePanes Collection
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window Window
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 TopLine
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 CountOfVisibleLines
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodeModule CodeModule
 		{
 			get
@@ -175,7 +175,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Enums.vbext_CodePaneview CodePaneView
 		{
 			get
@@ -197,7 +197,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="StartColumn">Int32 StartColumn</param>
 		/// <param name="EndLine">Int32 EndLine</param>
 		/// <param name="EndColumn">Int32 EndColumn</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void GetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, startColumn, endLine, endColumn);
@@ -211,7 +211,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="StartColumn">Int32 StartColumn</param>
 		/// <param name="EndLine">Int32 EndLine</param>
 		/// <param name="EndColumn">Int32 EndColumn</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void SetSelection(Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, startColumn, endLine, endColumn);
@@ -221,7 +221,7 @@ namespace NetOffice.VBIDEApi
 		/// <summary>
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void Show()
 		{
 			object[] paramsArray = null;

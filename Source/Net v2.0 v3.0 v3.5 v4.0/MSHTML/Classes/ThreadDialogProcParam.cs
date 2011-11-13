@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass ThreadDialogProcParam SupportByLibrary MSHTML, 4
+	/// CoClass ThreadDialogProcParam SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ThreadDialogProcParam : IHTMLModelessInit, IEventBinding 
 	{

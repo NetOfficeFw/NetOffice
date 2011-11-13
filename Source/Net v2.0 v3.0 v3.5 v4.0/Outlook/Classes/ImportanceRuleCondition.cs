@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass ImportanceRuleCondition SupportByLibrary Outlook, 12,14
+	/// CoClass ImportanceRuleCondition SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ImportanceRuleCondition : _ImportanceRuleCondition, IEventBinding 
 	{

@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispHTMLDOMImplementation SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispHTMLDOMImplementation SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLDOMImplementation : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject constructor
 		{
 			get
@@ -97,7 +97,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
 		/// <param name="version">optional object version</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasFeature(string bstrfeature, object version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrfeature, version);
@@ -109,7 +109,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool hasFeature(string bstrfeature)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrfeature);
@@ -123,7 +124,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="bstrQualifiedName">string bstrQualifiedName</param>
 		/// <param name="pvarPublicId">object pvarPublicId</param>
 		/// <param name="pvarSystemId">object pvarSystemId</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IDOMDocumentType createDocumentType(string bstrQualifiedName, object pvarPublicId, object pvarSystemId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrQualifiedName, pvarPublicId, pvarSystemId);
@@ -138,7 +139,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pvarNS">object pvarNS</param>
 		/// <param name="pvarTagName">object pvarTagName</param>
 		/// <param name="pDocumentType">LateBindingApi.MSHTMLApi.IDOMDocumentType pDocumentType</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDocument7 createDocument(object pvarNS, object pvarTagName, LateBindingApi.MSHTMLApi.IDOMDocumentType pDocumentType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarNS, pvarTagName, pDocumentType);
@@ -151,7 +152,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrTitle">string bstrTitle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLDocument7 createHTMLDocument(string bstrTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTitle);
@@ -165,7 +166,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
 		/// <param name="version">optional object version</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool ie9_hasFeature(string bstrfeature, object version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrfeature, version);
@@ -177,7 +178,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool ie9_hasFeature(string bstrfeature)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrfeature);

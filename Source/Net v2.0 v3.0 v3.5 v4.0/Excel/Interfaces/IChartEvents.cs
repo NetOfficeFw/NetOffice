@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// Interface IChartEvents SupportByLibrary Excel, 9,10,11,12,14
+	/// Interface IChartEvents SupportByLibraryAttribute Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IChartEvents : COMObject
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Activate()
 		{
 			object[] paramsArray = null;
@@ -89,7 +89,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Deactivate()
 		{
 			object[] paramsArray = null;
@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Resize()
 		{
 			object[] paramsArray = null;
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Shift">Int32 Shift</param>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 MouseDown(Int32 button, Int32 shift, Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button, shift, x, y);
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Shift">Int32 Shift</param>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 MouseUp(Int32 button, Int32 shift, Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button, shift, x, y);
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Shift">Int32 Shift</param>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 MouseMove(Int32 button, Int32 shift, Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(button, shift, x, y);
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 BeforeRightClick(bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 DragPlot()
 		{
 			object[] paramsArray = null;
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 DragOver()
 		{
 			object[] paramsArray = null;
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Arg1">Int32 Arg1</param>
 		/// <param name="Arg2">Int32 Arg2</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 BeforeDoubleClick(Int32 elementID, Int32 arg1, Int32 arg2, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(elementID, arg1, arg2, cancel);
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="ElementID">Int32 ElementID</param>
 		/// <param name="Arg1">Int32 Arg1</param>
 		/// <param name="Arg2">Int32 Arg2</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Select(Int32 elementID, Int32 arg1, Int32 arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(elementID, arg1, arg2);
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="SeriesIndex">Int32 SeriesIndex</param>
 		/// <param name="PointIndex">Int32 PointIndex</param>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 SeriesChange(Int32 seriesIndex, Int32 pointIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(seriesIndex, pointIndex);
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByLibrary Excel 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
+		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Calculate()
 		{
 			object[] paramsArray = null;

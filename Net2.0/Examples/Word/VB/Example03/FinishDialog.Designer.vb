@@ -81,7 +81,7 @@ Partial Class FinishDialog
         Me.Padding = New System.Windows.Forms.Padding(9)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Example02"
+        Me.Text = "Example03"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

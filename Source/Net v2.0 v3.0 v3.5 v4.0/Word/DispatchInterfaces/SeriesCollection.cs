@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface SeriesCollection SupportByLibrary Word, 14
+	/// DispatchInterface SeriesCollection SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Count
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
 		/// <param name="SeriesLabels">optional object SeriesLabels</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
 		/// <param name="Replace">optional object Replace</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
@@ -161,7 +161,8 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">NetOffice.WordApi.Enums.XlRowCol Rowcol</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -174,9 +175,42 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.WordApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol, object seriesLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">NetOffice.WordApi.Enums.XlRowCol Rowcol</param>
+		/// <param name="SeriesLabels">optional object SeriesLabels</param>
+		/// <param name="CategoryLabels">optional object CategoryLabels</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public NetOffice.WordApi.Series Add(object source, NetOffice.WordApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.Series newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="Source">object Source</param>
 		/// <param name="Rowcol">optional object Rowcol</param>
 		/// <param name="CategoryLabels">optional object CategoryLabels</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -196,7 +230,8 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Source">object Source</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -215,8 +250,30 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
+		/// <param name="Source">object Source</param>
+		/// <param name="Rowcol">optional object Rowcol</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public object Extend(object source, object rowcol)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
+			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Series this[object index]
 		{
@@ -232,7 +289,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 14
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
@@ -245,7 +302,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Series _Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -258,7 +315,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1, 
+	 /// SupportByLibrary OWC10 1
 	 /// </summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartLegendPositionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 chLegendPositionAutomatic = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 chLegendPositionTop = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 chLegendPositionBottom = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 chLegendPositionLeft = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 chLegendPositionRight = 4
 	}
 }

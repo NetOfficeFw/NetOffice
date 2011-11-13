@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Field SupportByLibrary ADODB, 2.1,2.5
+	/// DispatchInterface Field SupportByLibraryAttribute ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.1,2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field : Field20
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public Int32 ActualSize
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public Int32 Attributes
 		{
 			get
@@ -111,7 +111,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public Int32 DefinedSize
 		{
 			get
@@ -131,7 +131,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public string Name
 		{
 			get
@@ -146,7 +146,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
 		{
 			get
@@ -166,7 +166,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public object Value
 		{
 			get
@@ -194,7 +194,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public byte Precision
 		{
 			get
@@ -214,7 +214,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public byte NumericScale
 		{
 			get
@@ -234,7 +234,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public object OriginalValue
 		{
 			get
@@ -257,7 +257,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public object UnderlyingValue
 		{
 			get
@@ -280,7 +280,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public COMObject DataFormat
 		{
 			get
@@ -301,7 +301,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
@@ -317,7 +317,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public Int32 Status
 		{
 			get
@@ -336,7 +336,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		/// <param name="Data">object Data</param>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public void AppendChunk(object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data);
@@ -347,7 +347,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.1
 		/// </summary>
 		/// <param name="Length">Int32 Length</param>
-		[SupportByLibrary("ADODB", 2.1)]
+		[SupportByLibraryAttribute("ADODB", 2.1)]
 		public object GetChunk(Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(length);

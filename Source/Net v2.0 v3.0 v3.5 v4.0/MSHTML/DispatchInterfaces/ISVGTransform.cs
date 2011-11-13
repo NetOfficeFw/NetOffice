@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface ISVGTransform SupportByLibrary MSHTML, 4
+	/// DispatchInterface ISVGTransform SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ISVGTransform : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int16 type
 		{
 			get
@@ -96,7 +96,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.ISVGMatrix matrix
 		{
 			get
@@ -117,7 +117,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Single angle
 		{
 			get
@@ -141,7 +141,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="matrix">LateBindingApi.MSHTMLApi.ISVGMatrix matrix</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setMatrix(LateBindingApi.MSHTMLApi.ISVGMatrix matrix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(matrix);
@@ -153,7 +153,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="tx">Single tx</param>
 		/// <param name="ty">Single ty</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setTranslate(Single tx, Single ty)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tx, ty);
@@ -165,7 +165,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="sx">Single sx</param>
 		/// <param name="sy">Single sy</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setScale(Single sx, Single sy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sx, sy);
@@ -178,7 +178,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="angle">Single angle</param>
 		/// <param name="cx">Single cx</param>
 		/// <param name="cy">Single cy</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setRotate(Single angle, Single cx, Single cy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, cx, cy);
@@ -189,7 +189,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="angle">Single angle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setSkewX(Single angle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle);
@@ -200,7 +200,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="angle">Single angle</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void setSkewY(Single angle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle);

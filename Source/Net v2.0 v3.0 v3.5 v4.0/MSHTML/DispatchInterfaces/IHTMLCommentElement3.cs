@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLCommentElement3 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLCommentElement3 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLCommentElement3 : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string substringData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -94,7 +94,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void insertData(Int32 offset, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, bstrstring);
@@ -106,7 +106,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void deleteData(Int32 offset, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
@@ -119,7 +119,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="Count">Int32 Count</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void replaceData(Int32 offset, Int32 count, string bstrstring)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(offset, count, bstrstring);

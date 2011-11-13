@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ICanvasPixelArrayData SupportByLibrary MSHTML, 4
+	/// Interface ICanvasPixelArrayData SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ICanvasPixelArrayData : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="ppBuffer">byte ppBuffer</param>
 		/// <param name="pBufferLength">Int32 pBufferLength</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetBufferPointer(byte ppBuffer, Int32 pBufferLength)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppBuffer, pBufferLength);

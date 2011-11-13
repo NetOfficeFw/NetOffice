@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehaviorLayout SupportByLibrary MSHTML, 4
+	/// Interface IElementBehaviorLayout SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorLayout : COMObject
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pptTranslateBy">tagPOINT pptTranslateBy</param>
 		/// <param name="pptTopLeft">tagPOINT pptTopLeft</param>
 		/// <param name="psizeProposed">tagSIZE psizeProposed</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetSize(Int32 dwFlags, tagSIZE sizeContent, tagPOINT pptTranslateBy, tagPOINT pptTopLeft, tagSIZE psizeProposed)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwFlags, sizeContent, pptTranslateBy, pptTopLeft, psizeProposed);
@@ -94,7 +94,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetLayoutInfo()
 		{
 			object[] paramsArray = null;
@@ -107,7 +107,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pptTopLeft">tagPOINT pptTopLeft</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetPosition(Int32 lFlags, tagPOINT pptTopLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lFlags, pptTopLeft);
@@ -120,7 +120,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="psizeIn">tagSIZE psizeIn</param>
 		/// <param name="prcOut">tagRECT prcOut</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 MapSize(tagSIZE psizeIn, tagRECT prcOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(psizeIn, prcOut);

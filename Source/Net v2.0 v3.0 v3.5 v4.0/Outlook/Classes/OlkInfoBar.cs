@@ -19,9 +19,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkInfoBar SupportByLibrary Outlook, 12,14
+	/// CoClass OlkInfoBar SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkInfoBar : _OlkInfoBar, IEventBinding 
 	{

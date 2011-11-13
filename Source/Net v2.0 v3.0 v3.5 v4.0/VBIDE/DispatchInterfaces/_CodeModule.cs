@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _CodeModule SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _CodeModule SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CodeModule : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBComponent Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public string Name
 		{
 			get
@@ -130,7 +130,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="StartLine">Int32 StartLine</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public string get_Lines(Int32 startLine, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
@@ -142,7 +142,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 CountOfLines
 		{
 			get
@@ -159,7 +159,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
 		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
@@ -173,7 +173,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
 		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
@@ -187,7 +187,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="ProcName">string ProcName</param>
 		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
@@ -201,7 +201,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="Line">Int32 Line</param>
 		/// <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public string get_ProcOfLine(Int32 line, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, procKind);
@@ -213,7 +213,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 CountOfDeclarationLines
 		{
 			get
@@ -228,7 +228,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.CodePane CodePane
 		{
 			get
@@ -248,7 +248,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="String">string String</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void AddFromString(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -259,7 +259,7 @@ namespace NetOffice.VBIDEApi
 		/// SupportByLibrary VBIDE 5.3, 12
 		/// </summary>
 		/// <param name="FileName">string FileName</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void AddFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -271,7 +271,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="Line">Int32 Line</param>
 		/// <param name="String">string String</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void InsertLines(Int32 line, string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
@@ -283,7 +283,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="StartLine">Int32 StartLine</param>
 		/// <param name="Count">Int32 Count</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void DeleteLines(Int32 startLine, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
@@ -295,7 +295,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="Line">Int32 Line</param>
 		/// <param name="String">string String</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public void ReplaceLine(Int32 line, string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
@@ -307,7 +307,7 @@ namespace NetOffice.VBIDEApi
 		/// </summary>
 		/// <param name="EventName">string EventName</param>
 		/// <param name="ObjectName">string ObjectName</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public Int32 CreateEventProc(string eventName, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventName, objectName);
@@ -326,7 +326,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="WholeWord">bool WholeWord</param>
 		/// <param name="MatchCase">bool MatchCase</param>
 		/// <param name="PatternSearch">bool PatternSearch</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);

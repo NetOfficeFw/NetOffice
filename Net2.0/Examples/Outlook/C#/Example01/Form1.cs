@@ -32,7 +32,9 @@ namespace Example1
             listView1.Items.Clear();
             labelItemsCount.Text = string.Format("You have {0} e-mails.", inboxFolder.Items.Count);
             
-            // we fetch the inbox folder items
+            // we fetch the inbox folder items. ATTENTION: items is null if you have no items in inbox folder
+            // office products initialize ALL collections on demand. this is just an example, we dont check for null here
+            // NOTE: for some uninitialized collections you get an exception while accessing
             Outlook._Items items = inboxFolder.Items;
             COMObject item = null;
             int i = 1;
@@ -57,6 +59,5 @@ namespace Example1
             outlookApplication.Quit();
             outlookApplication.Dispose();
         }
-
     }
 }

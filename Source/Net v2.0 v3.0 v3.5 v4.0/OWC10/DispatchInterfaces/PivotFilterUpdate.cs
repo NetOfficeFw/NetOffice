@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotFilterUpdate SupportByLibrary OWC10, 1
+	/// DispatchInterface PivotFilterUpdate SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotFilterUpdate : COMObject
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum get_StateOf(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
@@ -89,7 +89,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool IsDirty
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Click(NetOffice.OWC10Api.PivotMember member)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member);
@@ -121,7 +121,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Member">NetOffice.OWC10Api.PivotMember Member</param>
 		/// <param name="OldMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum OldMemberState</param>
 		/// <param name="NewMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum NewMemberState</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ClickFromTo(NetOffice.OWC10Api.PivotMember member, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum oldMemberState, NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum newMemberState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(member, oldMemberState, newMemberState);
@@ -131,7 +131,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Apply()
 		{
 			object[] paramsArray = null;

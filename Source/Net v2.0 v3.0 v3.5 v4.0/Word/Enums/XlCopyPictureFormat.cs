@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14, 
+	 /// SupportByLibrary Word 14
 	 /// </summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCopyPictureFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlBitmap = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14, 
+		 /// SupportByLibrary Word 14
 		 /// </summary>
 		 /// <remarks>-4147</remarks>
-		 [SupportByLibrary("Word", 14)]
+		 [SupportByLibraryAttribute("Word", 14)]
 		 xlPicture = -4147
 	}
 }

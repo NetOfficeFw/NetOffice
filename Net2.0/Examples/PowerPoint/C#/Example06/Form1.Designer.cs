@@ -62,8 +62,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(507, 124);
             this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "This example contains code to catch events in power point.\r\nexample 9 shows you h" +
-                "ow to catch click events from gui.\r\n";
+            this.textBox1.Text = "This example contains code to catch events in power point.\r\nexample 7 shows you h" +
+                "ow to catch click events from gui.";
             // 
             // button1
             // 

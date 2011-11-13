@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
+	 /// SupportByLibrary PowerPoint 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 10,11,12,14)]
+	[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAnimTextUnitEffect
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-1</remarks>
-		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 [SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		 msoAnimTextUnitEffectMixed = -1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 [SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		 msoAnimTextUnitEffectByParagraph = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 [SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		 msoAnimTextUnitEffectByCharacter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 10, 11, 12, 14, 
+		 /// SupportByLibrary PowerPoint 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("PowerPoint", 10,11,12,14)]
+		 [SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
 		 msoAnimTextUnitEffectByWord = 2
 	}
 }

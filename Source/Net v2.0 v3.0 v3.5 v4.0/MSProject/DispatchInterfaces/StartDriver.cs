@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface StartDriver SupportByLibrary MSProject, 12,14
+	/// DispatchInterface StartDriver SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class StartDriver : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ActualStartDrivers ActualStartDrivers
 		{
 			get
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.PredecessorDrivers PredecessorDrivers
 		{
 			get
@@ -108,7 +108,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ChildDrivers ChildTaskDrivers
 		{
 			get
@@ -124,7 +124,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.CalendarDrivers CalendarDrivers
 		{
 			get
@@ -140,7 +140,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Task Parent
 		{
 			get
@@ -156,7 +156,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -172,7 +172,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 Suggestions
 		{
 			get
@@ -187,7 +187,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public Int32 Warnings
 		{
 			get
@@ -203,7 +203,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="overallocationType">LateBindingApi.MSProjectApi.Enums.PjOverallocationType overallocationType</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public LateBindingApi.MSProjectApi.OverAllocatedAssignments get_OverAllocatedAssignments(LateBindingApi.MSProjectApi.Enums.PjOverallocationType overallocationType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(overallocationType);
@@ -218,7 +218,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="StartDate">object StartDate</param>
 		/// <param name="FinishDate">object FinishDate</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public object get_EffectiveDateDifference(object startDate, object finishDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, finishDate);
@@ -240,7 +240,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="Date">object Date</param>
 		/// <param name="Duration">object Duration</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public object get_EffectiveDateAdd(object date, object duration)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, duration);
@@ -262,7 +262,7 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="Date">object Date</param>
 		/// <param name="Duration">object Duration</param>
-		[SupportByLibrary("MSProject", 14)]
+		[SupportByLibraryAttribute("MSProject", 14)]
 		public object get_EffectiveDateSubtract(object date, object duration)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, duration);

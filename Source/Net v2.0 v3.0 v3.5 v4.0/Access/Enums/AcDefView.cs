@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 10, 11, 12, 14, 
+	 /// SupportByLibrary Access 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Access", 10,11,12,14)]
+	[SupportByLibraryAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcDefView
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acDefViewSingle = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acDefViewContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acDefViewDatasheet = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acDefViewPivotTable = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14, 
+		 /// SupportByLibrary Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Access", 10,11,12,14)]
+		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
 		 acDefViewPivotChart = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14, 
+		 /// SupportByLibrary Access 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Access", 12,14)]
+		 [SupportByLibraryAttribute("Access", 12,14)]
 		 acDefViewSplitForm = 5
 	}
 }

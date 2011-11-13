@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface ISegmentList SupportByLibrary MSHTML, 4
+	/// Interface ISegmentList SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISegmentList : COMObject
 	{
@@ -79,7 +79,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="ppIIter">LateBindingApi.MSHTMLApi.ISegmentListIterator ppIIter</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 CreateIterator(LateBindingApi.MSHTMLApi.ISegmentListIterator ppIIter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIIter);
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="peType">LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE peType</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetType(LateBindingApi.MSHTMLApi.Enums._SELECTION_TYPE peType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(peType);
@@ -103,7 +103,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pfEmpty">Int32 pfEmpty</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 IsEmpty(Int32 pfEmpty)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfEmpty);

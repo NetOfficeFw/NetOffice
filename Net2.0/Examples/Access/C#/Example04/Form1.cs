@@ -29,7 +29,7 @@ namespace Example04
         private void buttonSelectDatabase_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "(*.mdb)|*.mdb|(*.mdbx)|.mdbx";
+            ofd.Filter = "(*.mdb)|*.mdb|(*.accdb)|.accdb";
             if (DialogResult.OK == ofd.ShowDialog(this))
             {
                 textBoxFilePath.Text = ofd.FileName;
@@ -64,7 +64,6 @@ namespace Example04
             TreeNode tnContainers = treeViewInfo.Nodes.Add("Containers");
             foreach (DAO.Container item in database.Containers)
                 tnContainers.Nodes.Add(item.Name); 
-        
         }
     }
 }

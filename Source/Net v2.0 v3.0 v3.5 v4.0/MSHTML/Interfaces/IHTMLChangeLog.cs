@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IHTMLChangeLog SupportByLibrary MSHTML, 4
+	/// Interface IHTMLChangeLog SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLChangeLog : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="pbBuffer">byte pbBuffer</param>
 		/// <param name="nBufferSize">Int32 nBufferSize</param>
 		/// <param name="pnRecordLength">Int32 pnRecordLength</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetNextChange(byte pbBuffer, Int32 nBufferSize, Int32 pnRecordLength)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbBuffer, nBufferSize, pnRecordLength);

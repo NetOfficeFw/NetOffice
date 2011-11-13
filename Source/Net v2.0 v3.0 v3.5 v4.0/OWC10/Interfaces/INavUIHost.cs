@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface INavUIHost SupportByLibrary OWC10, 1
+	/// Interface INavUIHost SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class INavUIHost : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 IsButtonEnabled(Int32 navbtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn);
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
 		/// <param name="Cancel">Int32 Cancel</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 BeforeButtonClick(Int32 navbtn, Int32 cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn, cancel);
@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 AfterButtonClick(Int32 navbtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn);
@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="DisplayText">string DisplayText</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetDisplayText(string displayText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayText);
@@ -127,7 +127,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 OnNavUIChange()
 		{
 			object[] paramsArray = null;
@@ -138,7 +138,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 IsFilterOn()
 		{
 			object[] paramsArray = null;
@@ -149,7 +149,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 IsContextBiDi()
 		{
 			object[] paramsArray = null;
@@ -161,7 +161,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="FontName">string FontName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 GetFontName(string fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);

@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1, 
+	 /// SupportByLibrary OWC10 1
 	 /// </summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCalculation
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 xlCalculationAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1, 
+		 /// SupportByLibrary OWC10 1
 		 /// </summary>
 		 /// <remarks>-4135</remarks>
-		 [SupportByLibrary("OWC10", 1)]
+		 [SupportByLibraryAttribute("OWC10", 1)]
 		 xlCalculationManual = -4135
 	}
 }

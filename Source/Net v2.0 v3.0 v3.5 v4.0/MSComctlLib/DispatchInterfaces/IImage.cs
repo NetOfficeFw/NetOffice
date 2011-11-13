@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
-	/// DispatchInterface IImage SupportByLibrary MSComctlLib, 6
+	/// DispatchInterface IImage SupportByLibraryAttribute MSComctlLib, 6
 	///</summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IImage : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public Int16 Index
 		{
 			get
@@ -96,7 +96,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public string Key
 		{
 			get
@@ -116,7 +116,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public object Tag
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public stdole.Picture Picture
 		{
 			get
@@ -172,7 +172,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="x">optional object x</param>
 		/// <param name="y">optional object y</param>
 		/// <param name="Style">optional object Style</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC, object x, object y, object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y, style);
@@ -183,7 +183,8 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		[SupportByLibrary("MSComctlLib", 6)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC);
@@ -193,7 +194,34 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByLibrary MSComctlLib 6
 		/// </summary>
-		[SupportByLibrary("MSComctlLib", 6)]
+		/// <param name="hDC">Int32 hDC</param>
+		/// <param name="x">optional object x</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public void Draw(Int32 hDC, object x)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x);
+			Invoker.Method(this, "Draw", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		/// <param name="hDC">Int32 hDC</param>
+		/// <param name="x">optional object x</param>
+		/// <param name="y">optional object y</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
+		public void Draw(Int32 hDC, object x, object y)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y);
+			Invoker.Method(this, "Draw", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSComctlLib 6
+		/// </summary>
+		[SupportByLibraryAttribute("MSComctlLib", 6)]
 		public stdole.Picture ExtractIcon()
 		{
 			object[] paramsArray = null;

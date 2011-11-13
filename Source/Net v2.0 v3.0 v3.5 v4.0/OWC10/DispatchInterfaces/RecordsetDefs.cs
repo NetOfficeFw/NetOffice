@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface RecordsetDefs SupportByLibrary OWC10, 1
+	/// DispatchInterface RecordsetDefs SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RecordsetDefs : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OWC10Api.RecordsetDef this[object index]
 		{
@@ -115,7 +115,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="SchemaRowsource">object SchemaRowsource</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaRowsource, name);
@@ -128,7 +128,8 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="SchemaRowsource">object SchemaRowsource</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDef Add(object schemaRowsource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaRowsource);
@@ -143,7 +144,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="Source">string Source</param>
 		/// <param name="RowsourceType">optional object RowsourceType</param>
 		/// <param name="Name">optional object Name</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowsourceType, name);
@@ -156,7 +157,8 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Source">string Source</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDef AddNew(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -168,8 +170,23 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
+		/// <param name="Source">string Source</param>
+		/// <param name="RowsourceType">optional object RowsourceType</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
+		public NetOffice.OWC10Api.RecordsetDef AddNew(string source, object rowsourceType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, rowsourceType);
+			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
+			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.RecordsetDef.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDef;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary OWC10 1
+		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -180,7 +197,10 @@ namespace NetOffice.OWC10Api
    
         #region IEnumerable Members
         
-        [SupportByLibrary("OWC10", 1)]
+		/// <summary>
+		/// SupportByLibraryAttribute OWC10, 1
+		/// </summary>
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

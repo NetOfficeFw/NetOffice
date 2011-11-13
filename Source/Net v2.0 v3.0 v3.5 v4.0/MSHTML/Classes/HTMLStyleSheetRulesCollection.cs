@@ -14,9 +14,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLStyleSheetRulesCollection SupportByLibrary MSHTML, 4
+	/// CoClass HTMLStyleSheetRulesCollection SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLStyleSheetRulesCollection : DispHTMLStyleSheetRulesCollection, IEventBinding 
 	{

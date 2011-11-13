@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface ProtectedViewWindows SupportByLibrary Word, 14
+	/// DispatchInterface ProtectedViewWindows SupportByLibraryAttribute Word, 14
 	///</summary>
-	[SupportByLibrary("Word", 14)]
+	[SupportByLibraryAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindows : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 Count
 		{
 			get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.ProtectedViewWindow this[object index]
 		{
@@ -164,7 +164,7 @@ namespace NetOffice.WordApi
 		/// <param name="PasswordDocument">optional object PasswordDocument</param>
 		/// <param name="Visible">optional object Visible</param>
 		/// <param name="OpenAndRepair">optional object OpenAndRepair</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument, object visible, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles, passwordDocument, visible, openAndRepair);
@@ -177,10 +177,59 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="FileName">object FileName</param>
-		[SupportByLibrary("Word", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
 		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.WordApi.ProtectedViewWindow;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.WordApi.ProtectedViewWindow;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles, passwordDocument);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.WordApi.ProtectedViewWindow;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Word 14
+		/// </summary>
+		/// <param name="FileName">object FileName</param>
+		/// <param name="AddToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="PasswordDocument">optional object PasswordDocument</param>
+		/// <param name="Visible">optional object Visible</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Word", 14)]
+		public NetOffice.WordApi.ProtectedViewWindow Open(object fileName, object addToRecentFiles, object passwordDocument, object visible)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addToRecentFiles, passwordDocument, visible);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
 			NetOffice.WordApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.WordApi.ProtectedViewWindow;
 			return newObject;
@@ -190,7 +239,10 @@ namespace NetOffice.WordApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Word", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Word, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Word", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

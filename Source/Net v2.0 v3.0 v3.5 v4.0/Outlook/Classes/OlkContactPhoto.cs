@@ -25,9 +25,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass OlkContactPhoto SupportByLibrary Outlook, 12,14
+	/// CoClass OlkContactPhoto SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkContactPhoto : _OlkContactPhoto, IEventBinding 
 	{

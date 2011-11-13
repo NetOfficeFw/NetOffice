@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// Interface IElementBehaviorSiteOM SupportByLibrary MSHTML, 4
+	/// Interface IElementBehaviorSiteOM SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorSiteOM : COMObject
 	{
@@ -80,7 +80,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pchEvent">string pchEvent</param>
 		/// <param name="lFlags">Int32 lFlags</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterEvent(string pchEvent, Int32 lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchEvent, lFlags);
@@ -92,7 +92,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pchEvent">string pchEvent</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 GetEventCookie(string pchEvent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchEvent);
@@ -105,7 +105,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="lCookie">Int32 lCookie</param>
 		/// <param name="pEventObject">LateBindingApi.MSHTMLApi.IHTMLEventObj pEventObject</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 FireEvent(Int32 lCookie, LateBindingApi.MSHTMLApi.IHTMLEventObj pEventObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lCookie, pEventObject);
@@ -116,7 +116,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public LateBindingApi.MSHTMLApi.IHTMLEventObj CreateEventObject()
 		{
 			object[] paramsArray = null;
@@ -129,7 +129,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pchName">string pchName</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterName(string pchName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchName);
@@ -141,7 +141,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="pchUrn">string pchUrn</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 RegisterUrn(string pchUrn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchUrn);

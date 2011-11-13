@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
-	/// DispatchInterface MediaBookmarks SupportByLibrary PowerPoint, 14
+	/// DispatchInterface MediaBookmarks SupportByLibraryAttribute PowerPoint, 14
 	///</summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MediaBookmarks : Collection
 	{
@@ -80,7 +80,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByLibrary PowerPoint 14
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.MediaBookmark this[Int32 index]
 		{
@@ -98,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="Position">Int32 Position</param>
 		/// <param name="Name">string Name</param>
-		[SupportByLibrary("PowerPoint", 14)]
+		[SupportByLibraryAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.MediaBookmark Add(Int32 position, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, name);

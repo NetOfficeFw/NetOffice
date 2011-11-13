@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi
 {
 	///<summary>
-	/// DispatchInterface IApplicationEvents4 SupportByLibrary Word, 11,12,14
+	/// DispatchInterface IApplicationEvents4 SupportByLibraryAttribute Word, 11,12,14
 	///</summary>
-	[SupportByLibrary("Word", 11,12,14)]
+	[SupportByLibraryAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IApplicationEvents4 : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void Startup()
 		{
 			object[] paramsArray = null;
@@ -89,7 +89,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void Quit()
 		{
 			object[] paramsArray = null;
@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentChange()
 		{
 			object[] paramsArray = null;
@@ -110,7 +110,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentOpen(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -122,7 +122,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentBeforeClose(NetOffice.WordApi.Document doc, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentBeforePrint(NetOffice.WordApi.Document doc, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SaveAsUI">bool SaveAsUI</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentBeforeSave(NetOffice.WordApi.Document doc, bool saveAsUI, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, saveAsUI, cancel);
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void NewDocument(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowActivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowDeactivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
@@ -193,7 +193,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowSelectionChange(NetOffice.WordApi.Selection sel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel);
@@ -205,7 +205,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowBeforeRightClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowBeforeDoubleClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void EPostagePropertyDialog(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -239,7 +239,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void EPostageInsert(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="DocResult">NetOffice.WordApi.Document DocResult</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeAfterMerge(NetOffice.WordApi.Document doc, NetOffice.WordApi.Document docResult)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, docResult);
@@ -262,7 +262,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeAfterRecordMerge(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
 		/// <param name="StartRecord">Int32 StartRecord</param>
 		/// <param name="EndRecord">Int32 EndRecord</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeBeforeMerge(NetOffice.WordApi.Document doc, Int32 startRecord, Int32 endRecord, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, startRecord, endRecord, cancel);
@@ -288,7 +288,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeBeforeRecordMerge(NetOffice.WordApi.Document doc, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
@@ -299,7 +299,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeDataSourceLoad(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -311,7 +311,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Handled">bool Handled</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeDataSourceValidate(NetOffice.WordApi.Document doc, bool handled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, handled);
@@ -322,7 +322,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeWizardSendToCustom(NetOffice.WordApi.Document doc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc);
@@ -336,7 +336,7 @@ namespace NetOffice.WordApi
 		/// <param name="FromState">Int32 FromState</param>
 		/// <param name="ToState">Int32 ToState</param>
 		/// <param name="Handled">bool Handled</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void MailMergeWizardStateChange(NetOffice.WordApi.Document doc, Int32 fromState, Int32 toState, bool handled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, fromState, toState, handled);
@@ -348,7 +348,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void WindowSize(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
@@ -362,7 +362,7 @@ namespace NetOffice.WordApi
 		/// <param name="OldXMLNode">NetOffice.WordApi.XMLNode OldXMLNode</param>
 		/// <param name="NewXMLNode">NetOffice.WordApi.XMLNode NewXMLNode</param>
 		/// <param name="Reason">Int32 Reason</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void XMLSelectionChange(NetOffice.WordApi.Selection sel, NetOffice.WordApi.XMLNode oldXMLNode, NetOffice.WordApi.XMLNode newXMLNode, Int32 reason)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sel, oldXMLNode, newXMLNode, reason);
@@ -373,7 +373,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 11, 12, 14
 		/// </summary>
 		/// <param name="XMLNode">NetOffice.WordApi.XMLNode XMLNode</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void XMLValidationError(NetOffice.WordApi.XMLNode xMLNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xMLNode);
@@ -385,7 +385,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="SyncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void DocumentSync(NetOffice.WordApi.Document doc, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, syncEventType);
@@ -406,7 +406,7 @@ namespace NetOffice.WordApi
 		/// <param name="bstrPaperFeed">string bstrPaperFeed</param>
 		/// <param name="fPrint">bool fPrint</param>
 		/// <param name="fCancel">bool fCancel</param>
-		[SupportByLibrary("Word", 11,12,14)]
+		[SupportByLibraryAttribute("Word", 11,12,14)]
 		public void EPostageInsertEx(NetOffice.WordApi.Document doc, Int32 cpDeliveryAddrStart, Int32 cpDeliveryAddrEnd, Int32 cpReturnAddrStart, Int32 cpReturnAddrEnd, Int32 xaWidth, Int32 yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, bool fCancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, cpDeliveryAddrStart, cpDeliveryAddrEnd, cpReturnAddrStart, cpReturnAddrEnd, xaWidth, yaHeight, bstrPrinterName, bstrPaperFeed, fPrint, fCancel);
@@ -418,7 +418,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="Doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="Handled">bool Handled</param>
-		[SupportByLibrary("Word", 12,14)]
+		[SupportByLibraryAttribute("Word", 12,14)]
 		public Int32 MailMergeDataSourceValidate2(NetOffice.WordApi.Document doc, bool handled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(doc, handled);
@@ -430,7 +430,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowOpen(NetOffice.WordApi.ProtectedViewWindow pvWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow);
@@ -443,7 +443,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.WordApi.ProtectedViewWindow pvWindow, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow, cancel);
@@ -457,7 +457,7 @@ namespace NetOffice.WordApi
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="CloseReason">Int32 CloseReason</param>
 		/// <param name="Cancel">bool Cancel</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowBeforeClose(NetOffice.WordApi.ProtectedViewWindow pvWindow, Int32 closeReason, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow, closeReason, cancel);
@@ -469,7 +469,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowSize(NetOffice.WordApi.ProtectedViewWindow pvWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow);
@@ -481,7 +481,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowActivate(NetOffice.WordApi.ProtectedViewWindow pvWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow);
@@ -493,7 +493,7 @@ namespace NetOffice.WordApi
 		/// SupportByLibrary Word 14
 		/// </summary>
 		/// <param name="PvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
-		[SupportByLibrary("Word", 14)]
+		[SupportByLibraryAttribute("Word", 14)]
 		public Int32 ProtectedViewWindowDeactivate(NetOffice.WordApi.ProtectedViewWindow pvWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvWindow);

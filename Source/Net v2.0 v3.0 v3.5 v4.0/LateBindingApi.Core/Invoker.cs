@@ -50,6 +50,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -68,6 +69,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
          }
@@ -87,6 +89,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -106,6 +109,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -126,6 +130,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -147,6 +152,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -170,6 +176,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -189,6 +196,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -209,6 +217,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
@@ -229,6 +238,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
@@ -250,6 +260,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }           
         }
@@ -274,6 +285,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
@@ -299,6 +311,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
@@ -317,6 +330,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }             
         }
@@ -336,6 +350,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -355,6 +370,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
@@ -373,6 +389,7 @@ namespace LateBindingApi.Core
             }
             catch (Exception throwedException)
             {
+                DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             } 
         }
@@ -452,23 +469,23 @@ namespace LateBindingApi.Core
             {
                 if (null != param)
                 {
-                    if (param is COMObject)
+                    COMObject comObject = param as COMObject;
+                    if (null != comObject)
                     {
-                        COMObject comObject = param as COMObject;
                         comObject.Dispose();
                     }
                     else
                     {
-                        Type paramType = param.GetType();
-                        if (true == paramType.IsCOMObject)
+                        if (param is MarshalByRefObject)
                             Marshal.ReleaseComObject(param);
                     }
                 }
             }
             catch (Exception throwedException)
             {
-                throw new System.Runtime.InteropServices.COMException("", throwedException);
-            }             
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
+            }
         }
 
         /// <summary>

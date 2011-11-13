@@ -13,22 +13,18 @@ namespace LateBindingApi.Core
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     internal interface IDispatch
     {
-
+        [PreserveSig]
         int GetTypeInfoCount();
 
-        System.Runtime.InteropServices.ComTypes.ITypeInfo GetTypeInfo([MarshalAs(UnmanagedType.U4)] int iTInfo,[MarshalAs(UnmanagedType.U4)] int lcid);
+        System.Runtime.InteropServices.ComTypes.ITypeInfo GetTypeInfo([MarshalAs(UnmanagedType.U4)] int iTInfo, [MarshalAs(UnmanagedType.U4)] int lcid);
 
         [PreserveSig]
         int GetIDsOfNames(ref Guid riid, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)] string[] rgsNames, int cNames, int lcid, [MarshalAs(UnmanagedType.LPArray)] int[] rgDispId);
-        
+
         [PreserveSig]
-        int Invoke(int dispIdMember, ref Guid riid, [MarshalAs(UnmanagedType.U4)] int lcid, [MarshalAs(UnmanagedType.U4)]  
-                                                        int dwFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, 
-                                                        [Out, MarshalAs(UnmanagedType.LPArray)] object[] pVarResult, 
-                                                        ref System.Runtime.InteropServices.ComTypes.EXCEPINFO pExcepInfo, 
-                                                        [Out, MarshalAs(UnmanagedType.LPArray)] IntPtr[] pArgErr);
+        int Invoke(int dispIdMember, ref Guid riid, [MarshalAs(UnmanagedType.U4)] int lcid, [MarshalAs(UnmanagedType.U4)] int dwFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, [Out, MarshalAs(UnmanagedType.LPArray)] object[] pVarResult, ref System.Runtime.InteropServices.ComTypes.EXCEPINFO pExcepInfo, [Out, MarshalAs(UnmanagedType.LPArray)] IntPtr[] pArgErr);
     }
-    
+
     #endregion
 
     /// <summary>
@@ -37,7 +33,7 @@ namespace LateBindingApi.Core
     public static class Factory
     {
         #region Fields
-        
+
         private static List<COMObject> _globalObjectList = new List<COMObject>();
         private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private static Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
@@ -47,13 +43,13 @@ namespace LateBindingApi.Core
         #endregion
 
         #region Properties
-        
+
         /// <summary>
         /// returns an array about currently loaded LateBindingApi assemblies
         /// </summary>
         public static IFactoryInfo[] Assemblies
         {
-            get 
+            get
             {
                 return _factoryList.ToArray();
             }
@@ -79,7 +75,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <param name="proxyCount"></param>
         public delegate void ProxyCountChangedHandler(int proxyCount);
-        
+
         /// <summary>
         /// notify info the count of proxies there open are changed
         /// in case of notify comes from event trigger created proxy the call comes from other thread
@@ -96,32 +92,44 @@ namespace LateBindingApi.Core
         /// </summary>
         public static void Initialize()
         {
-            Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
-            foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
+            try
             {
-                Assembly itemAssembly = Assembly.Load(item);
-                object[] attributes = itemAssembly.GetCustomAttributes(true);
-                foreach (object itemAttribute in attributes)
-                {
-                    string fullnameAttribute = itemAttribute.GetType().FullName;
-                    if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
-                    {
-                        Type factoryInfoType = itemAssembly.GetType(item.Name + ".Utils.ProjectInfo");
-                        IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+                DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize()");
 
-                        bool exists = false;
-                        foreach (IFactoryInfo itemFactory in _factoryList)
+                Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
+                foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
+                {
+                    Assembly itemAssembly = Assembly.Load(item);
+                    object[] attributes = itemAssembly.GetCustomAttributes(true);
+                    foreach (object itemAttribute in attributes)
+                    {
+                        string fullnameAttribute = itemAttribute.GetType().FullName;
+                        if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
                         {
-                            if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                            Type factoryInfoType = itemAssembly.GetType(item.Name + ".Utils.ProjectInfo");
+                            IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+
+                            bool exists = false;
+                            foreach (IFactoryInfo itemFactory in _factoryList)
                             {
-                                exists = true;
-                                break;
+                                if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                                {
+                                    exists = true;
+                                    break;
+                                }
                             }
+                            if (!exists)
+                                _factoryList.Add(factoryInfo);
                         }
-                        if (!exists)
-                            _factoryList.Add(factoryInfo);
                     }
                 }
+
+                DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize() passed");
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw (throwedException);
             }
         }
 
@@ -131,6 +139,68 @@ namespace LateBindingApi.Core
         public static void Clear()
         {
             _factoryList.Clear();
+        }
+
+        /// <summary>
+        /// creates an entity support list for a proxy
+        /// </summary>
+        /// <param name="comProxy"></param>
+        /// <returns></returns>
+        internal static Dictionary<string, string> GetSupportedEntities(object comProxy)
+        {
+            Dictionary<string, string> supportList = new Dictionary<string, string>();
+            IDispatch dispatch = comProxy as IDispatch;
+            if (null == dispatch)
+                throw new COMException("Unable to cast underlying proxy to IDispatch.");
+
+            COMTypes.ITypeInfo typeInfo = dispatch.GetTypeInfo(0, 0);
+            if (null == typeInfo)
+                throw new COMException("GetTypeInfo returns null.");
+
+            IntPtr typeAttrPointer = IntPtr.Zero;
+            typeInfo.GetTypeAttr(out typeAttrPointer);
+
+            COMTypes.TYPEATTR typeAttr = (COMTypes.TYPEATTR)Marshal.PtrToStructure(typeAttrPointer, typeof(COMTypes.TYPEATTR));
+            for (int i = 0; i < typeAttr.cFuncs; i++)
+            {
+                string strName, strDocString, strHelpFile;
+                int dwHelpContext;
+                IntPtr funcDescPointer = IntPtr.Zero;
+                System.Runtime.InteropServices.ComTypes.FUNCDESC funcDesc;
+                typeInfo.GetFuncDesc(i, out funcDescPointer);
+                funcDesc = (COMTypes.FUNCDESC)Marshal.PtrToStructure(funcDescPointer, typeof(System.Runtime.InteropServices.ComTypes.FUNCDESC));
+
+                switch (funcDesc.invkind)
+                {
+                    case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYGET:
+                    case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
+                    case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
+                        {
+                            typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                            string outValue = "";
+                            bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
+                            if (!exists)
+                                supportList.Add("Property-" + strName, strDocString);
+                            break;
+                        }
+                    case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_FUNC:
+                        {
+                            typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                            string outValue = "";
+                            bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
+                            if (!exists)
+                                supportList.Add("Method-" + strName, strDocString);
+                            break;
+                        }
+                }
+
+                typeInfo.ReleaseFuncDesc(funcDescPointer);
+            }
+
+            typeInfo.ReleaseTypeAttr(typeAttrPointer);
+            Marshal.ReleaseComObject(typeInfo);
+
+            return supportList;
         }
 
         #endregion
@@ -146,19 +216,27 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject CreateKnownObjectFromComProxy(COMObject caller, object comProxy, Type wrapperClassType)
         {
-            if (null == comProxy)
-                return null;
-
-            // create new proxyType
-            Type comProxyType = null;
-            if (false == _proxyTypeCache.TryGetValue(wrapperClassType.FullName, out comProxyType))
+            try
             {
-                comProxyType = comProxy.GetType();
-                _proxyTypeCache.Add(wrapperClassType.FullName, comProxyType);
-            }
+                if (null == comProxy)
+                    return null;
 
-            COMObject newClass = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType }) as COMObject;
-            return newClass;
+                // create new proxyType
+                Type comProxyType = null;
+                if (false == _proxyTypeCache.TryGetValue(wrapperClassType.FullName, out comProxyType))
+                {
+                    comProxyType = comProxy.GetType();
+                    _proxyTypeCache.Add(wrapperClassType.FullName, comProxyType);
+                }
+
+                COMObject newClass = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType }) as COMObject;
+                return newClass;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
+            }
         }
 
         /// <summary>
@@ -170,15 +248,23 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject[] CreateKnownObjectArrayFromComProxy(COMObject caller, object[] comProxyArray, Type wrapperClassType)
         {
-            if (null == comProxyArray)
-                return null;
+            try
+            {
+                if (null == comProxyArray)
+                    return null;
 
-            Type comVariantType = null;
-            COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
-            for (int i = 0; i < comProxyArray.Length; i++)
-                newVariantArray[i] = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType }) as COMObject;
+                Type comVariantType = null;
+                COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
+                for (int i = 0; i < comProxyArray.Length; i++)
+                    newVariantArray[i] = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType }) as COMObject;
 
-            return newVariantArray;
+                return newVariantArray;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
+            }
         }
 
         /// <summary>
@@ -188,25 +274,33 @@ namespace LateBindingApi.Core
         /// <param name="comProxy">new created proxy</param>
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy)
-        { 
-            if (null == comProxy)
-                return null;
-           
-            IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
-           
-            string className = TypeDescriptor.GetClassName(comProxy);
-            string fullClassName = factoryInfo.Namespace + "." + className;
-
-            // create new proxyType
-            Type comProxyType = null;
-            if (false == _proxyTypeCache.TryGetValue(fullClassName, out comProxyType))
+        {
+            try
             {
-                comProxyType = comProxy.GetType();
-                _proxyTypeCache.Add(fullClassName, comProxyType); 
-            }
+                if (null == comProxy)
+                    return null;
 
-            COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);            
-            return newObject;
+                IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
+
+                string className = TypeDescriptor.GetClassName(comProxy);
+                string fullClassName = factoryInfo.Namespace + "." + className;
+
+                // create new proxyType
+                Type comProxyType = null;
+                if (false == _proxyTypeCache.TryGetValue(fullClassName, out comProxyType))
+                {
+                    comProxyType = comProxy.GetType();
+                    _proxyTypeCache.Add(fullClassName, comProxyType);
+                }
+
+                COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
+                return newObject;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
+            }
         }
 
         /// <summary>
@@ -218,17 +312,25 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy, Type comProxyType)
         {
-            if (null == comProxy)
-                return null;
+            try
+            {
+                if (null == comProxy)
+                    return null;
 
-            IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
+                IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
 
-            string className = TypeDescriptor.GetClassName(comProxy);
-            string fullClassName = factoryInfo.Namespace + "." + className;
+                string className = TypeDescriptor.GetClassName(comProxy);
+                string fullClassName = factoryInfo.Namespace + "." + className;
 
-            // create new classType
-            COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
-            return newObject;
+                // create new classType
+                COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
+                return newObject;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
+            }
         }
 
         /// <summary>
@@ -243,26 +345,34 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
-            Type classType = null;
-            if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
+            try
             {
-                // cached classType
-                object newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy });
-                return newClass as COMObject;
-            }
-            else
-            {
-                // create new classType
-                classType = factoryInfo.Assembly.GetType(fullClassName);
-                if (null == classType)
-                    throw new ArgumentException("Class not exists: " + fullClassName);
+                Type classType = null;
+                if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
+                {
+                    // cached classType
+                    object newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy });
+                    return newClass as COMObject;
+                }
+                else
+                {
+                    // create new classType
+                    classType = factoryInfo.Assembly.GetType(fullClassName);
+                    if (null == classType)
+                        throw new ArgumentException("Class not exists: " + fullClassName);
 
-                _wrapperTypeCache.Add(fullClassName, classType);
-                COMObject newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
-                return newClass;
+                    _wrapperTypeCache.Add(fullClassName, classType);
+                    COMObject newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
+                    return newClass;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
             }
         }
-        
+
         /// <summary>
         ///  creates a new COMObject array
         /// </summary>
@@ -271,24 +381,32 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
         public static COMObject[] CreateObjectArrayFromComProxy(COMObject caller, object[] comProxyArray)
         {
-            if (null == comProxyArray)
-                return null;
-
-            Type comVariantType = null;
-            COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
-            for (int i = 0; i < comProxyArray.Length; i++)
+            try
             {
-                comVariantType = comProxyArray[i].GetType();
-                IFactoryInfo factoryInfo = GetFactoryInfo(comProxyArray[i]);
-                string className = TypeDescriptor.GetClassName(comProxyArray[i]);
-                string fullClassName = factoryInfo.Namespace + "." + className;
-                newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName);
+                if (null == comProxyArray)
+                    return null;
+
+                Type comVariantType = null;
+                COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
+                for (int i = 0; i < comProxyArray.Length; i++)
+                {
+                    comVariantType = comProxyArray[i].GetType();
+                    IFactoryInfo factoryInfo = GetFactoryInfo(comProxyArray[i]);
+                    string className = TypeDescriptor.GetClassName(comProxyArray[i]);
+                    string fullClassName = factoryInfo.Namespace + "." + className;
+                    newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName);
+                }
+                return newVariantArray;
             }
-            return newVariantArray;
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw throwedException;
+            }
         }
- 
+
         #endregion
-        
+
         #region Object List Methods
 
         /// <summary>
@@ -349,7 +467,7 @@ namespace LateBindingApi.Core
         /// <param name="comProxy"></param>
         /// <returns></returns>
         private static Guid GetParentLibraryGuid(object comProxy)
-        {             
+        {
             IDispatch dispatcher = comProxy as IDispatch;
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);
             COMTypes.ITypeLib parentTypeLib = null;
@@ -370,14 +488,14 @@ namespace LateBindingApi.Core
                 parentTypeLib.ReleaseTLibAttr(attributesPointer);
                 Marshal.ReleaseComObject(parentTypeLib);
 
-                _hostCache.Add(typeGuid, parentGuid); 
+                _hostCache.Add(typeGuid, parentGuid);
             }
 
             Marshal.ReleaseComObject(typeInfo);
 
             return parentGuid;
         }
-        
+
         /// <summary>
         /// get wrapper class factory info 
         /// </summary>
@@ -393,10 +511,10 @@ namespace LateBindingApi.Core
             }
 
             string className = TypeDescriptor.GetClassName(comProxy);
-            Guid hostGuid  = GetParentLibraryGuid(comProxy);
-        
+            Guid hostGuid = GetParentLibraryGuid(comProxy);
+
             foreach (IFactoryInfo item in _factoryList)
-            {              
+            {
                 if (true == hostGuid.Equals(item.ComponentGuid))
                     return item;
             }
@@ -404,7 +522,7 @@ namespace LateBindingApi.Core
             // failback
             foreach (IFactoryInfo item in _factoryList)
             {
-                if(item.Contains(className))
+                if (item.Contains(className))
                     return item;
             }
 

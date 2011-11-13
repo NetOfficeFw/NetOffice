@@ -13,7 +13,7 @@ Public Class Form1
     Private Sub buttonSelectDatabase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonSelectDatabase.Click
 
         Dim ofd As New OpenFileDialog()
-        ofd.Filter = "(*.mdb)|*.mdb|(*.mdbx)|.mdbx"
+        ofd.Filter = "(*.mdb)|*.mdb|(*.accdb)|.accdb"
 
         If (DialogResult.OK = ofd.ShowDialog(Me)) Then
 
@@ -57,6 +57,5 @@ Public Class Form1
         Next item
 
     End Sub
-
 
 End Class

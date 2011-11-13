@@ -39,7 +39,7 @@ Partial Class Form1
         Me.textBoxBody.Name = "textBoxBody"
         Me.textBoxBody.Size = New System.Drawing.Size(316, 121)
         Me.textBoxBody.TabIndex = 19
-        Me.textBoxBody.Text = "Works fine! thx."
+        Me.textBoxBody.Text = "This is a test mail."
         Me.textBoxBody.WordWrap = False
         '
         'textBoxSubject

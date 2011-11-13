@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 	#endregion
 
 	///<summary>
-	/// CoClass CategoryRuleCondition SupportByLibrary Outlook, 12,14
+	/// CoClass CategoryRuleCondition SupportByLibraryAttribute Outlook, 12,14
 	///</summary>
-	[SupportByLibrary("Outlook", 12,14)]
+	[SupportByLibraryAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CategoryRuleCondition : _CategoryRuleCondition, IEventBinding 
 	{

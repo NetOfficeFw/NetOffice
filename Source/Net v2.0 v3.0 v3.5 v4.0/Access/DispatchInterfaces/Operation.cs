@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi
 {
 	///<summary>
-	/// DispatchInterface Operation SupportByLibrary Access, 14
+	/// DispatchInterface Operation SupportByLibraryAttribute Access, 14
 	///</summary>
-	[SupportByLibrary("Access", 14)]
+	[SupportByLibraryAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Operation : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,7 +92,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public string Name
 		{
 			get
@@ -107,7 +107,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public NetOffice.AccessApi.WSParameters WSParameters
 		{
 			get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="bstrParameters">string bstrParameters</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public object Execute(string bstrParameters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrParameters);
@@ -147,7 +147,7 @@ namespace NetOffice.AccessApi
 		/// SupportByLibrary Access 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		[SupportByLibrary("Access", 14)]
+		[SupportByLibraryAttribute("Access", 14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

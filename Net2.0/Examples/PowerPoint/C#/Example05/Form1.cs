@@ -25,9 +25,8 @@ namespace Example05
             // Initialize Api COMObject Support
             LateBindingApi.Core.Factory.Initialize();
 
-            // start powerpoint and turn off msg boxes
+            // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
-            powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -38,7 +37,7 @@ namespace Example05
 
             // save the document
             string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", Environment.CurrentDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example05{1}", Application.StartupPath, fileExtension);
             presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
 
             // close power point and dispose reference

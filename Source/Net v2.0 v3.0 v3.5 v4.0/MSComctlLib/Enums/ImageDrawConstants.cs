@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 6, 
+	 /// SupportByLibrary MSComctlLib 6
 	 /// </summary>
-	[SupportByLibrary("MSComctlLib", 6)]
+	[SupportByLibraryAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ImageDrawConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 6, 
+		 /// SupportByLibrary MSComctlLib 6
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSComctlLib", 6)]
+		 [SupportByLibraryAttribute("MSComctlLib", 6)]
 		 imlNormal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 6, 
+		 /// SupportByLibrary MSComctlLib 6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSComctlLib", 6)]
+		 [SupportByLibraryAttribute("MSComctlLib", 6)]
 		 imlTransparent = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 6, 
+		 /// SupportByLibrary MSComctlLib 6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSComctlLib", 6)]
+		 [SupportByLibraryAttribute("MSComctlLib", 6)]
 		 imlSelected = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 6, 
+		 /// SupportByLibrary MSComctlLib 6
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSComctlLib", 6)]
+		 [SupportByLibraryAttribute("MSComctlLib", 6)]
 		 imlFocus = 3
 	}
 }

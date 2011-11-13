@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlColorIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlColorIndexNone = -4142
 	}
 }

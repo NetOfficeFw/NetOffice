@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface DropTarget SupportByLibrary OWC10, 1
+	/// DispatchInterface DropTarget SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DropTarget : COMObject
 	{
@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="KeyState">Int32 KeyState</param>
 		/// <param name="Effect">Int32 Effect</param>
 		/// <param name="Object">object Object</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DragEnter(Int32 x, Int32 y, Int32 keyState, Int32 effect, object _object)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect, _object);
@@ -98,7 +98,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="y">Int32 y</param>
 		/// <param name="KeyState">Int32 KeyState</param>
 		/// <param name="Effect">Int32 Effect</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DragOver(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void DragLeave()
 		{
 			object[] paramsArray = null;
@@ -122,7 +122,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="y">Int32 y</param>
 		/// <param name="KeyState">Int32 KeyState</param>
 		/// <param name="Effect">Int32 Effect</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void Drop(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);

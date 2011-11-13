@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// Interface DesignAdviseSink SupportByLibrary OWC10, 1
+	/// Interface DesignAdviseSink SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DesignAdviseSink : COMObject
 	{
@@ -81,7 +81,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
 		/// <param name="fGrid">Int32 fGrid</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectAdded(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp, object varObject, Int32 fGrid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp, varObject, fGrid);
@@ -94,7 +94,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectDeleted(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp, object varObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp, varObject);
@@ -108,7 +108,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
 		/// <param name="bstrRsd">string bstrRsd</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectMoved(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp, object varObject, string bstrRsd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp, varObject, bstrRsd);
@@ -119,7 +119,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 DataModelLoad()
 		{
 			object[] paramsArray = null;
@@ -132,7 +132,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectChanged(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp, object varObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp, varObject);
@@ -144,7 +144,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectDeleteComplete(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp);
@@ -158,7 +158,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
 		/// <param name="bstrPreviousName">string bstrPreviousName</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ObjectRenamed(NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp, object varObject, string bstrPreviousName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dscobjtyp, varObject, bstrPreviousName);

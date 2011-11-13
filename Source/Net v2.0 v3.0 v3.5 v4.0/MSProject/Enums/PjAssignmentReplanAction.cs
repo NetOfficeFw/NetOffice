@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14, 
+	 /// SupportByLibrary MSProject 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 14)]
+	[SupportByLibraryAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjAssignmentReplanAction
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjConstrainToMaxUnitsByIncreasingDuration = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjConstrainToMaxUnitsByDecreasingWork = 1
 	}
 }

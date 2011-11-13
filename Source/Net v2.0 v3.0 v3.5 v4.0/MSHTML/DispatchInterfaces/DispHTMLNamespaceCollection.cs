@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface DispHTMLNamespaceCollection SupportByLibrary MSHTML, 4
+	/// DispatchInterface DispHTMLNamespaceCollection SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLNamespaceCollection : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public Int32 length
 		{
 			get
@@ -91,7 +91,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject constructor
 		{
 			get
@@ -111,7 +111,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject item(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -126,7 +126,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrUrn">string bstrUrn</param>
 		/// <param name="implementationUrl">optional object implementationUrl</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject add(string bstrNamespace, string bstrUrn, object implementationUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNamespace, bstrUrn, implementationUrl);
@@ -140,7 +140,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrUrn">string bstrUrn</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public COMObject add(string bstrNamespace, string bstrUrn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNamespace, bstrUrn);

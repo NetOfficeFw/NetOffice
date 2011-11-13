@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
-	/// DispatchInterface _Windows SupportByLibrary VBIDE, 5.3,12
+	/// DispatchInterface _Windows SupportByLibraryAttribute VBIDE, 5.3,12
 	///</summary>
-	[SupportByLibrary("VBIDE", 5.3,12)]
+	[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Windows : _Windows_old
 	{
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="Caption">string Caption</param>
 		/// <param name="GuidPosition">string GuidPosition</param>
 		/// <param name="DocObj">object DocObj</param>
-		[SupportByLibrary("VBIDE", 5.3,12)]
+		[SupportByLibraryAttribute("VBIDE", 5.3,12)]
 		public NetOffice.VBIDEApi.Window CreateToolWindow(NetOffice.VBIDEApi.AddIn addInInst, string progId, string caption, string guidPosition, object docObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(addInInst, progId, caption, guidPosition, docObj);

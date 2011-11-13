@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLOpsProfile SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLOpsProfile SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLOpsProfile : COMObject
 	{
@@ -81,7 +81,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool addRequest(string name, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, reserved);
@@ -93,7 +93,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool addRequest(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -104,7 +105,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void clearRequest()
 		{
 			object[] paramsArray = null;
@@ -120,7 +121,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname, object domain, object path, object expire, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire, reserved);
@@ -131,7 +132,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void doRequest(object usage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage);
@@ -141,8 +143,66 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doRequest(object usage, object fname)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname);
+			Invoker.Method(this, "doRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doRequest(object usage, object fname, object domain)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain);
+			Invoker.Method(this, "doRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		/// <param name="path">optional object path</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doRequest(object usage, object fname, object domain, object path)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path);
+			Invoker.Method(this, "doRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		/// <param name="path">optional object path</param>
+		/// <param name="expire">optional object expire</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doRequest(object usage, object fname, object domain, object path, object expire)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire);
+			Invoker.Method(this, "doRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
 		/// <param name="name">string name</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string getAttribute(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -156,7 +216,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
 		/// <param name="prefs">optional object prefs</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool setAttribute(string name, string value, object prefs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value, prefs);
@@ -169,7 +229,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool setAttribute(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -180,7 +241,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool commitChanges()
 		{
 			object[] paramsArray = null;
@@ -193,7 +254,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool addReadRequest(string name, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, reserved);
@@ -205,7 +266,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool addReadRequest(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -222,7 +284,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname, object domain, object path, object expire, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire, reserved);
@@ -233,7 +295,8 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage);
@@ -243,7 +306,65 @@ namespace LateBindingApi.MSHTMLApi
 		/// <summary>
 		/// SupportByLibrary MSHTML 4
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doReadRequest(object usage, object fname)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname);
+			Invoker.Method(this, "doReadRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doReadRequest(object usage, object fname, object domain)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain);
+			Invoker.Method(this, "doReadRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		/// <param name="path">optional object path</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doReadRequest(object usage, object fname, object domain, object path)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path);
+			Invoker.Method(this, "doReadRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		/// <param name="usage">object usage</param>
+		/// <param name="fname">optional object fname</param>
+		/// <param name="domain">optional object domain</param>
+		/// <param name="path">optional object path</param>
+		/// <param name="expire">optional object expire</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSHTML", 4)]
+		public void doReadRequest(object usage, object fname, object domain, object path, object expire)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire);
+			Invoker.Method(this, "doReadRequest", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSHTML 4
+		/// </summary>
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public bool doWriteRequest()
 		{
 			object[] paramsArray = null;

@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi
 {
 	///<summary>
-	/// DispatchInterface QueryDefs SupportByLibrary DAO, 6,12
+	/// DispatchInterface QueryDefs SupportByLibraryAttribute DAO, 6,12
 	///</summary>
-	[SupportByLibrary("DAO", 6,12)]
+	[SupportByLibraryAttribute("DAO", 6,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class QueryDefs : _DynaCollection ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.DAOApi
 		/// SupportByLibrary DAO 6, 12
 		/// Get
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public Int16 Count
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 		/// Get
 		/// </summary>
 		/// <param name="Item">object Item</param>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.DAOApi.QueryDef this[object item]
 		{
@@ -113,7 +113,7 @@ namespace NetOffice.DAOApi
 		/// <summary>
 		/// SupportByLibrary DAO 6, 12
 		/// </summary>
-		[SupportByLibrary("DAO", 6,12)]
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -124,7 +124,10 @@ namespace NetOffice.DAOApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("DAO", 6,12)]
+		/// <summary>
+		/// SupportByLibraryAttribute DAO, 6,12
+		/// </summary>
+		[SupportByLibraryAttribute("DAO", 6,12)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

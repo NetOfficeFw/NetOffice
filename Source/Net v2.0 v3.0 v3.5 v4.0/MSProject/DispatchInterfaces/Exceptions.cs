@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface Exceptions SupportByLibrary MSProject, 12,14
+	/// DispatchInterface Exceptions SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Exceptions : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Calendar Parent
 		{
 			get
@@ -109,7 +109,7 @@ namespace LateBindingApi.MSProjectApi
 		/// SupportByLibrary MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -125,7 +125,7 @@ namespace LateBindingApi.MSProjectApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public LateBindingApi.MSProjectApi.Exception this[object index]
 		{
@@ -156,7 +156,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="MonthItem">optional object MonthItem</param>
 		/// <param name="Month">optional object Month</param>
 		/// <param name="MonthDay">optional object MonthDay</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem, object month, object monthDay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem, month, monthDay);
@@ -170,10 +170,167 @@ namespace LateBindingApi.MSProjectApi
 		/// </summary>
 		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="Start">object Start</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Period">optional object Period</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="DaysOfWeek">optional object DaysOfWeek</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="DaysOfWeek">optional object DaysOfWeek</param>
+		/// <param name="MonthPosition">optional object MonthPosition</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="DaysOfWeek">optional object DaysOfWeek</param>
+		/// <param name="MonthPosition">optional object MonthPosition</param>
+		/// <param name="MonthItem">optional object MonthItem</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary MSProject 12, 14
+		/// </summary>
+		/// <param name="Type">LateBindingApi.MSProjectApi.Enums.PjExceptionType Type</param>
+		/// <param name="Start">object Start</param>
+		/// <param name="Finish">optional object Finish</param>
+		/// <param name="Occurrences">optional object Occurrences</param>
+		/// <param name="Name">optional object Name</param>
+		/// <param name="Period">optional object Period</param>
+		/// <param name="DaysOfWeek">optional object DaysOfWeek</param>
+		/// <param name="MonthPosition">optional object MonthPosition</param>
+		/// <param name="MonthItem">optional object MonthItem</param>
+		/// <param name="Month">optional object Month</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
+		public LateBindingApi.MSProjectApi.Exception Add(LateBindingApi.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem, object month)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem, month);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			LateBindingApi.MSProjectApi.Exception newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,LateBindingApi.MSProjectApi.Exception.LateBindingApiWrapperType) as LateBindingApi.MSProjectApi.Exception;
 			return newObject;
@@ -183,7 +340,10 @@ namespace LateBindingApi.MSProjectApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("MSProject", 12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

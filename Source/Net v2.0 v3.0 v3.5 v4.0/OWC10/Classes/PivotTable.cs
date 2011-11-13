@@ -43,9 +43,9 @@ namespace NetOffice.OWC10Api
 	#endregion
 
 	///<summary>
-	/// CoClass PivotTable SupportByLibrary OWC10, 1
+	/// CoClass PivotTable SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PivotTable : IPivotControl, IEventBinding 
 	{

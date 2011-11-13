@@ -121,6 +121,6 @@
     <value>COMObject is the common base type for all objects in NetOffice which are based on CoClasses or Interfaces
 and also the type for anonymous COM Proxies at design time. This example shows you how to use.
 
-See chapter1 and chapter5 in technical documentation for further info.</value>
+See chapter1 and chapter2 in technical documentation for further info.</value>
   </data>
 </root>

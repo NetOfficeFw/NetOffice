@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface FieldList SupportByLibrary OWC10, 1
+	/// DispatchInterface FieldList SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FieldList : COMObject
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 ClipboardFormat
 		{
 			get
@@ -91,7 +91,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public string InstanceID
 		{
 			get
@@ -106,7 +106,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public stdole.IFont Font
 		{
 			get
@@ -127,7 +127,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public bool MultiSelect
 		{
 			get
@@ -147,7 +147,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.FieldListSelectRestriction SelectRestriction
 		{
 			get
@@ -171,7 +171,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="bVisible">bool bVisible</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListHierarchy CreateHierarchy(bool bVisible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bVisible);
@@ -187,7 +187,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="iHeight">Int32 iHeight</param>
 		/// <param name="pip">stdole.IPicture pip</param>
 		/// <param name="crMask">Int32 crMask</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public Int32 AddBitmap(Int32 iWidth, Int32 iHeight, stdole.IPicture pip, Int32 crMask)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iWidth, iHeight, pip, crMask);
@@ -199,7 +199,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="pfln">NetOffice.OWC10Api.FieldListNode pfln</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode GetNextSelected(NetOffice.OWC10Api.FieldListNode pfln)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
@@ -211,7 +211,7 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByLibrary OWC10 1
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void ClearSelection()
 		{
 			object[] paramsArray = null;
@@ -223,7 +223,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="iImage">Int32 iImage</param>
 		/// <param name="iOverlay">Int32 iOverlay</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void SetOverlayImage(Int32 iImage, Int32 iOverlay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iImage, iOverlay);

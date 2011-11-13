@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14, 
+	 /// SupportByLibrary PowerPoint 14
 	 /// </summary>
-	[SupportByLibrary("PowerPoint", 14)]
+	[SupportByLibraryAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4115</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlDash = -4115,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlDashDot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlDashDotDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4118</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlDot = -4118,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4119</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlDouble = -4119,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlSlantDashDot = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14, 
+		 /// SupportByLibrary PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibrary("PowerPoint", 14)]
+		 [SupportByLibraryAttribute("PowerPoint", 14)]
 		 xlLineStyleNone = -4142
 	}
 }

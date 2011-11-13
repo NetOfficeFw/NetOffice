@@ -8,9 +8,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// Interface IConverterApplicationPreferences SupportByLibrary Office, 14
+	/// Interface IConverterApplicationPreferences SupportByLibraryAttribute Office, 14
 	///</summary>
-	[SupportByLibrary("Office", 14)]
+	[SupportByLibraryAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="plcid">Int32 plcid</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrGetLcid(Int32 plcid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plcid);
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="phwnd">Int32 phwnd</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrGetHwnd(Int32 phwnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(phwnd);
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrGetApplication(string pbstrApplication)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrApplication);
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 14
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByLibrary("Office", 14)]
+		[SupportByLibraryAttribute("Office", 14)]
 		public Int32 HrCheckFormat(Int32 pFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);

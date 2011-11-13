@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14, 
+	 /// SupportByLibrary MSProject 12, 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjFileFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjMPP = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjTXT = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjCSV = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjXLS = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14, 
+		 /// SupportByLibrary MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("MSProject", 12,14)]
+		 [SupportByLibraryAttribute("MSProject", 12,14)]
 		 pjMPT = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjXLSX = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjXLSB = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjMPP9 = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjMPP12 = 23
 	}
 }

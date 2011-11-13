@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SignatureProvider SupportByLibrary Office, 12,14
+	/// DispatchInterface SignatureProvider SupportByLibraryAttribute Office, 12,14
 	///</summary>
-	[SupportByLibrary("Office", 12,14)]
+	[SupportByLibraryAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureProvider : COMObject
 	{
@@ -83,7 +83,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="XmlDsigStream">object XmlDsigStream</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siglnimg, psigsetup, psiginfo, xmlDsigStream);
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ShowSignatureSetup(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup);
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ShowSigningCeremony(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo);
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="XmlDsigStream">object XmlDsigStream</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void SignXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, psigsetup, psiginfo, xmlDsigStream);
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="ParentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void NotifySignatureAdded(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo);
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="XmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void VerifyXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres);
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="XmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public void ShowSignatureDetails(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres);
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 12, 14
 		/// </summary>
 		/// <param name="sigprovdet">NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sigprovdet);
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="QueryContinue">object QueryContinue</param>
 		/// <param name="Stream">object Stream</param>
-		[SupportByLibrary("Office", 12,14)]
+		[SupportByLibraryAttribute("Office", 12,14)]
 		public byte[] HashStream(object queryContinue, object stream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, stream);

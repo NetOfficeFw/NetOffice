@@ -4,395 +4,395 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Office", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoPatternType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternMixed = -2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern5Percent = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern10Percent = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern20Percent = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern25Percent = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern30Percent = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern40Percent = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern50Percent = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern60Percent = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern70Percent = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern75Percent = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern80Percent = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPattern90Percent = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDarkHorizontal = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDarkVertical = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDarkDownwardDiagonal = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDarkUpwardDiagonal = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternSmallCheckerBoard = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternTrellis = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLightHorizontal = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLightVertical = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLightDownwardDiagonal = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLightUpwardDiagonal = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternSmallGrid = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDottedDiamond = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternWideDownwardDiagonal = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternWideUpwardDiagonal = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>27</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDashedUpwardDiagonal = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>28</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDashedDownwardDiagonal = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>29</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternNarrowVertical = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternNarrowHorizontal = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDashedVertical = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDashedHorizontal = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLargeConfetti = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLargeGrid = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternHorizontalBrick = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternLargeCheckerBoard = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>37</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternSmallConfetti = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternZigZag = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternSolidDiamond = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDiagonalBrick = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternOutlinedDiamond = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternPlaid = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternSphere = 43,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>44</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternWeave = 44,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>45</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDottedGrid = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>46</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternDivot = 46,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>47</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternShingle = 47,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>48</remarks>
-		 [SupportByLibrary("Office", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
 		 msoPatternWave = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>49</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternHorizontal = 49,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>50</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternVertical = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>51</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternCross = 51,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>52</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternDownwardDiagonal = 52,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>53</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternUpwardDiagonal = 53,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14, 
+		 /// SupportByLibrary Office 12, 14
 		 /// </summary>
 		 /// <remarks>54</remarks>
-		 [SupportByLibrary("Office", 12,14)]
+		 [SupportByLibraryAttribute("Office", 12,14)]
 		 msoPatternDiagonalCross = 54
 	}
 }

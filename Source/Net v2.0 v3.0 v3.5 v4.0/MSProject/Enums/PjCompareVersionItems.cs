@@ -4,59 +4,59 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14, 
+	 /// SupportByLibrary MSProject 14
 	 /// </summary>
-	[SupportByLibrary("MSProject", 14)]
+	[SupportByLibraryAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjCompareVersionItems
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsAllDifferences = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsChangedItems = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsUnchangedItems = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsCommonItems = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsUniqueItemsOfVersion1 = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsUniqueItemsOfVersion2 = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14, 
+		 /// SupportByLibrary MSProject 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibrary("MSProject", 14)]
+		 [SupportByLibraryAttribute("MSProject", 14)]
 		 pjCompareVersionItemsAllItems = 6
 	}
 }

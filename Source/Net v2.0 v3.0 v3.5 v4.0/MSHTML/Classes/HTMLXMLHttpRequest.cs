@@ -16,9 +16,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLXMLHttpRequest SupportByLibrary MSHTML, 4
+	/// CoClass HTMLXMLHttpRequest SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLXMLHttpRequest : DispHTMLXMLHttpRequest, IEventBinding 
 	{

@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibrary("Excel", 9,10,11,12,14)]
+	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlDeleteShiftDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4159</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlShiftToLeft = -4159,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14, 
+		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4162</remarks>
-		 [SupportByLibrary("Excel", 9,10,11,12,14)]
+		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
 		 xlShiftUp = -4162
 	}
 }

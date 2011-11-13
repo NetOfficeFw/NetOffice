@@ -31,13 +31,16 @@ namespace Example06
 
             // start powerpoint and turn off msg boxes
             PowerPoint.Application powerApplication = new PowerPoint.Application();
-            powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
+	        powerApplication.Visible = MsoTriState.msoTrue;
+
+            // PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set
+            if(powerApplication.EntityIsAvailable("DisplayAlerts"))
+                powerApplication.DisplayAlerts = PpAlertLevel.ppAlertsNone;
 
             /*
             we register some events. note: the event trigger was called from power point, means an other Thread
             remove the Quit() call below and check out more events if you want
             */
-
             powerApplication.PresentationCloseEvent += new NetOffice.PowerPointApi.Application_PresentationCloseEventHandler(powerApplication_PresentationCloseEvent);
             powerApplication.AfterNewPresentationEvent += new NetOffice.PowerPointApi.Application_AfterNewPresentationEventHandler(powerApplication_AfterNewPresentationEvent);
              

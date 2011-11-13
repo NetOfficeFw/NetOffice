@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
-	/// DispatchInterface SharedWorkspaceTasks SupportByLibrary Office, 11,12,14
+	/// DispatchInterface SharedWorkspaceTasks SupportByLibraryAttribute Office, 11,12,14
 	///</summary>
-	[SupportByLibrary("Office", 11,12,14)]
+	[SupportByLibraryAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceTasks : _IMsoDispObj ,IEnumerable
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">Int32 Index</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SharedWorkspaceTask this[Int32 index]
 		{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public bool ItemCountExceeded
 		{
 			get
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="Assignee">optional object Assignee</param>
 		/// <param name="Description">optional object Description</param>
 		/// <param name="DueDate">optional object DueDate</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description, dueDate);
@@ -163,10 +163,77 @@ namespace NetOffice.OfficeApi
 		/// SupportByLibrary Office 11, 12, 14
 		/// </summary>
 		/// <param name="Title">string Title</param>
-		[SupportByLibrary("Office", 11,12,14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="Title">string Title</param>
+		/// <param name="Status">optional object Status</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(title, status);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="Title">string Title</param>
+		/// <param name="Status">optional object Status</param>
+		/// <param name="Priority">optional object Priority</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="Title">string Title</param>
+		/// <param name="Status">optional object Status</param>
+		/// <param name="Priority">optional object Priority</param>
+		/// <param name="Assignee">optional object Assignee</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Office 11, 12, 14
+		/// </summary>
+		/// <param name="Title">string Title</param>
+		/// <param name="Status">optional object Status</param>
+		/// <param name="Priority">optional object Priority</param>
+		/// <param name="Assignee">optional object Assignee</param>
+		/// <param name="Description">optional object Description</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Office", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
 			NetOffice.OfficeApi.SharedWorkspaceTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
@@ -176,7 +243,10 @@ namespace NetOffice.OfficeApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Office", 11,12,14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Office, 11,12,14
+		/// </summary>
+		[SupportByLibraryAttribute("Office", 11,12,14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

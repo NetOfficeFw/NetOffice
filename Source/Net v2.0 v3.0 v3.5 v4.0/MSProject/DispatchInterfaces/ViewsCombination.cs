@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSProjectApi
 {
 	///<summary>
-	/// DispatchInterface ViewsCombination SupportByLibrary MSProject, 12,14
+	/// DispatchInterface ViewsCombination SupportByLibraryAttribute MSProject, 12,14
 	///</summary>
-	[SupportByLibrary("MSProject", 12,14)]
+	[SupportByLibraryAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewsCombination : Views
 	{
@@ -83,7 +83,7 @@ namespace LateBindingApi.MSProjectApi
 		/// <param name="TopView">object TopView</param>
 		/// <param name="BottomView">object BottomView</param>
 		/// <param name="ShowInMenu">bool ShowInMenu</param>
-		[SupportByLibrary("MSProject", 12,14)]
+		[SupportByLibraryAttribute("MSProject", 12,14)]
 		public LateBindingApi.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, bool showInMenu)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView, showInMenu);

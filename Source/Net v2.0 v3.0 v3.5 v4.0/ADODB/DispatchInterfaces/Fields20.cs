@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
-	/// DispatchInterface Fields20 SupportByLibrary ADODB, 2.5
+	/// DispatchInterface Fields20 SupportByLibraryAttribute ADODB, 2.5
 	///</summary>
-	[SupportByLibrary("ADODB", 2.5)]
+	[SupportByLibraryAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Fields20 : Fields15 ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public Int32 Count
 		{
 			get
@@ -95,7 +95,7 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -109,7 +109,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="DefinedSize">Int32 DefinedSize</param>
 		/// <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
@@ -120,7 +120,7 @@ namespace NetOffice.ADODBApi
 		/// SupportByLibrary ADODB 2.5
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("ADODB", 2.5)]
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -131,7 +131,10 @@ namespace NetOffice.ADODBApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("ADODB", 2.5)]
+		/// <summary>
+		/// SupportByLibraryAttribute ADODB, 2.5
+		/// </summary>
+		[SupportByLibraryAttribute("ADODB", 2.5)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");

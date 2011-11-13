@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
-	/// DispatchInterface PivotDataAxis SupportByLibrary OWC10, 1
+	/// DispatchInterface PivotDataAxis SupportByLibraryAttribute OWC10, 1
 	///</summary>
-	[SupportByLibrary("OWC10", 1)]
+	[SupportByLibraryAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotDataAxis : PivotAxis
 	{
@@ -76,7 +76,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotTotals Totals
 		{
 			get
@@ -97,7 +97,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="Total">NetOffice.OWC10Api.PivotTotal Total</param>
 		/// <param name="Before">optional object Before</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total, before);
@@ -108,7 +108,8 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Total">NetOffice.OWC10Api.PivotTotal Total</param>
-		[SupportByLibrary("OWC10", 1)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total);
@@ -119,7 +120,7 @@ namespace NetOffice.OWC10Api
 		/// SupportByLibrary OWC10 1
 		/// </summary>
 		/// <param name="Total">object Total</param>
-		[SupportByLibrary("OWC10", 1)]
+		[SupportByLibraryAttribute("OWC10", 1)]
 		public void RemoveTotal(object total)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(total);

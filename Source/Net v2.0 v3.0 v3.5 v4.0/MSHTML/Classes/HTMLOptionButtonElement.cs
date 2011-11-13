@@ -82,9 +82,9 @@ namespace LateBindingApi.MSHTMLApi
 	#endregion
 
 	///<summary>
-	/// CoClass HTMLOptionButtonElement SupportByLibrary MSHTML, 4
+	/// CoClass HTMLOptionButtonElement SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class HTMLOptionButtonElement : DispIHTMLOptionButtonElement, IEventBinding 
 	{

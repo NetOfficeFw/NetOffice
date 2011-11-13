@@ -10,9 +10,9 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
-	/// DispatchInterface ProtectedViewWindows SupportByLibrary Excel, 14
+	/// DispatchInterface ProtectedViewWindows SupportByLibraryAttribute Excel, 14
 	///</summary>
-	[SupportByLibrary("Excel", 14)]
+	[SupportByLibraryAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindows : COMObject ,IEnumerable
 	{
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -93,7 +93,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -108,7 +108,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public Int32 Count
 		{
 			get
@@ -140,7 +140,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.ProtectedViewWindow this[object index]
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="Index">object Index</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ProtectedViewWindow get__Default(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="Password">optional object Password</param>
 		/// <param name="AddToMru">optional object AddToMru</param>
 		/// <param name="RepairMode">optional object RepairMode</param>
-		[SupportByLibrary("Excel", 14)]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru, repairMode);
@@ -191,10 +191,42 @@ namespace NetOffice.ExcelApi
 		/// SupportByLibrary Excel 14
 		/// </summary>
 		/// <param name="Filename">string Filename</param>
-		[SupportByLibrary("Excel", 14)]
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Password">optional object Password</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, password);
+			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
+			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByLibrary Excel 14
+		/// </summary>
+		/// <param name="Filename">string Filename</param>
+		/// <param name="Password">optional object Password</param>
+		/// <param name="AddToMru">optional object AddToMru</param>
+		[CustomMethodAttribute]
+		[SupportByLibraryAttribute("Excel", 14)]
+		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
 			NetOffice.ExcelApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
 			return newObject;
@@ -204,7 +236,10 @@ namespace NetOffice.ExcelApi
    
         #region IEnumerable Members
         
-        [SupportByLibrary("Excel", 14)]
+		/// <summary>
+		/// SupportByLibraryAttribute Excel, 14
+		/// </summary>
+		[SupportByLibraryAttribute("Excel", 14)]
 		public IEnumerator GetEnumerator()
 		{
 			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");

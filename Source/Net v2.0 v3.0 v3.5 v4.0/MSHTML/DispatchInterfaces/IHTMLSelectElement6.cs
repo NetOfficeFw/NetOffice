@@ -9,9 +9,9 @@ using LateBindingApi.Core;
 namespace LateBindingApi.MSHTMLApi
 {
 	///<summary>
-	/// DispatchInterface IHTMLSelectElement6 SupportByLibrary MSHTML, 4
+	/// DispatchInterface IHTMLSelectElement6 SupportByLibraryAttribute MSHTML, 4
 	///</summary>
-	[SupportByLibrary("MSHTML", 4)]
+	[SupportByLibraryAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLSelectElement6 : COMObject
 	{
@@ -76,7 +76,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// SupportByLibrary MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public string value
 		{
 			get
@@ -101,7 +101,7 @@ namespace LateBindingApi.MSHTMLApi
 		/// </summary>
 		/// <param name="pElem">LateBindingApi.MSHTMLApi.IHTMLOptionElement pElem</param>
 		/// <param name="pvarBefore">object pvarBefore</param>
-		[SupportByLibrary("MSHTML", 4)]
+		[SupportByLibraryAttribute("MSHTML", 4)]
 		public void add(LateBindingApi.MSHTMLApi.IHTMLOptionElement pElem, object pvarBefore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pElem, pvarBefore);
