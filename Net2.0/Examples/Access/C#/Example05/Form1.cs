@@ -59,7 +59,7 @@ namespace Example05
         
 
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarPopup.Caption = "commandBarPopup";
 
 
@@ -77,7 +77,7 @@ namespace Example05
             #region CommandBarButton
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             Clipboard.SetDataObject(this.Icon.ToBitmap());

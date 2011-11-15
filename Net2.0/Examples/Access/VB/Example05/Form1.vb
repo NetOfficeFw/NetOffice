@@ -40,7 +40,7 @@ Public Class Form1
         _accessApplication = New Access.Application()
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _accessApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup)
+        Dim commandBarPopup As Office.CommandBarPopup = _accessApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup, Missing.Value, Missing.Value, Missing.Value, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' you can see we use an own icon via .PasteFace()

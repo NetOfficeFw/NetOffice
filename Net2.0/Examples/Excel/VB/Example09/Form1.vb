@@ -37,7 +37,7 @@ Public Class Form1
         Dim workBook As Excel.Workbook = _excelApplication.Workbooks.Add()
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _excelApplication.CommandBars("Worksheet Menu Bar").Controls.Add(MsoControlType.msoControlPopup)
+        Dim commandBarPopup As Office.CommandBarPopup = _excelApplication.CommandBars("Worksheet Menu Bar").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' you can see we use an own icon via .PasteFace()
@@ -47,7 +47,7 @@ Public Class Form1
         ' For example, a COMAddin running as InProcServer and can access the Picture Property
 
         ' add a button to the popup
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         Clipboard.SetDataObject(Me.Icon.ToBitmap())
@@ -56,11 +56,11 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         'add a new toolbar
-        commandBar = _excelApplication.CommandBars.Add("MyCommandBar", MsoBarPosition.msoBarTop)
+        commandBar = _excelApplication.CommandBars.Add("MyCommandBar", MsoBarPosition.msoBarTop, False, True)
         commandBar.Visible = True
 
         ' add a button to the toolbar
-        commandBarBtn = commandBar.Controls.Add(MsoControlType.msoControlButton)
+        commandBarBtn = commandBar.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         commandBarBtn.FaceId = 3
@@ -68,11 +68,11 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' add a dropdown box to the toolbar
-        commandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup)
+        commandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup, we use an own icon for the button
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         Clipboard.SetDataObject(Me.Icon.ToBitmap())
@@ -81,11 +81,11 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu
-        commandBarPopup = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup)
+        commandBarPopup = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup
-        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton)
+        commandBarBtn = commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
         commandBarBtn.Caption = "commandBarButton"
         commandBarBtn.FaceId = 9

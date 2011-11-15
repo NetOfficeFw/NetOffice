@@ -118,7 +118,7 @@ namespace COMAddinClassicExample
                 // we save the error info in addin registry key
 
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-
+                
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinRegistryKey + _prodId, true);
                 rk.SetValue("LastError", "An error occured in OnConnection.");
                 rk.SetValue("LastException", throwedException.Message);
