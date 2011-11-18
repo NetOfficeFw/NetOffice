@@ -358,13 +358,14 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
             Translator.TranslateControls(this, "ApplicationObserver.MessageTable.txt", _currentLanguageID);
         }
 
-        public void Release()
+        public new void Dispose()
         {
             if ((null != _applicationObserver) && (!this.DesignMode))
             {
                 _applicationObserver.Dispose();
                 _applicationObserver = null;
             }
+            base.Dispose();
         }
 
         #endregion

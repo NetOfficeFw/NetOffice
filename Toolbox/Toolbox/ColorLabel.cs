@@ -10,11 +10,11 @@ using System.Windows.Forms;
 namespace NetOffice.DeveloperToolbox
 {
     public enum ColorShift
-    { 
-        Red=0,
-        Green=1,
-        Blue =2,
-        All = 3        
+    {
+        Red = 0,
+        Green = 1,
+        Blue = 2,
+        All = 3
     }
 
     public partial class ColorLabel : UserControl

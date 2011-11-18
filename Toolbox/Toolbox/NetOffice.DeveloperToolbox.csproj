@@ -38,7 +38,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Cecil, Version=0.6.8.8607, Culture=neutral, processorArchitecture=MSIL">
@@ -64,7 +65,7 @@
     <Compile Include="ColorLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ColorLabel.Designer.cs">
+    <Compile Include="ColorLabel.designer.cs">
       <DependentUpon>ColorLabel.cs</DependentUpon>
     </Compile>
     <Compile Include="ErrorForm.cs">
@@ -339,8 +340,7 @@
     <EmbeddedResource Include="OfficeCompatibility\ReportMessageTable.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icon.ico" />
-    <Content Include="MYCOMP.ICO" />
+    <EmbeddedResource Include="MainIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
