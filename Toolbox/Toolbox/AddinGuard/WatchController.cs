@@ -165,6 +165,7 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _worker.WorkerSupportsCancellation = true;
             _worker.DoWork += new DoWorkEventHandler(_worker_DoWork);
 
+             // 32 Bit
             _addinItems.Add("Excel", Registry.LocalMachine, "Software\\Microsoft\\Office\\Excel\\Addins");
             _addinItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\Excel\\Addins");
             _addinItems.Add("Word", Registry.LocalMachine, "Software\\Microsoft\\Office\\Word\\Addins");
@@ -201,6 +202,44 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Access\\Resiliency\\DisabledItems");
+
+            // 64 Bit
+            _addinItems.Add("Excel", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Excel\\Addins");
+            _addinItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Excel\\Addins");
+            _addinItems.Add("Word", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Word\\Addins");
+            _addinItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Word\\Addins");
+            _addinItems.Add("Outlook", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Outlook\\Addins");
+            _addinItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Outlook\\Addins");
+            _addinItems.Add("PowerPoint", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\PowerPoint\\Addins");
+            _addinItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\PowerPoint\\Addins");
+            _addinItems.Add("Access", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Access\\Addins");
+            _addinItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Access\\Addins");
+
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Access\\Resiliency\\DisabledItems");
 
             StartWatch();
         }

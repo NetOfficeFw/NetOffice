@@ -16,8 +16,10 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
     {
         #region Fields
 
-        UtilsRegistry _localMachine;
-        UtilsRegistry _currentUser;      
+        UtilsRegistry _localMachine32;
+        UtilsRegistry _currentUser32;
+        UtilsRegistry _localMachine64;
+        UtilsRegistry _currentUser64;  
         int           _currentLanguageID;
         bool          _userIsAdmin;
 
@@ -32,9 +34,13 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
                 InitializeComponent();
                 if (!DesignMode)
                 {
-                    _localMachine = new UtilsRegistry(Registry.LocalMachine, @"Software\Microsoft\Office");
-                    _currentUser = new UtilsRegistry(Registry.CurrentUser, @"Software\Microsoft\Office");
-
+                    _localMachine32 = new UtilsRegistry(Registry.LocalMachine, @"Software\Microsoft\Office");
+                    _currentUser32 = new UtilsRegistry(Registry.CurrentUser, @"Software\Microsoft\Office");
+                    if (Is64Bit)
+                    { 
+                        _localMachine64 = new UtilsRegistry(Registry.LocalMachine, @"Software\Wow6432Node\Microsoft\Office");
+                        _currentUser64 = new UtilsRegistry(Registry.CurrentUser, @"Software\Wow6432Node\Microsoft\Office");
+                    }
                     _userIsAdmin = IsAdministrator();
                     pictureBoxNoAdminHint.Visible = !_userIsAdmin;
                     labelNoAdminHint.Visible = !_userIsAdmin;
@@ -51,6 +57,16 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
         #endregion
 
         #region Properties
+
+        public bool Is64Bit
+        {
+            get
+            {
+                return true;
+                string value = Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE", EnvironmentVariableTarget.Machine);
+                return value.StartsWith("x86") ? false : true;
+            }
+        }
 
         private bool IsAdministrator()
         {
@@ -74,15 +90,42 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
         private void ShowKeys()
         {
             treeViewRegistry.Nodes.Clear();
-            TreeNode node = treeViewRegistry.Nodes.Add("LocalMachine");
-            node.Tag = _localMachine;
-            foreach (UtilsRegistryKey key in _localMachine.Key.Keys)
-                ShowRegNode(key, node);
-          
-            node = treeViewRegistry.Nodes.Add("CurrentUser");
-            node.Tag = _currentUser;
-            foreach (UtilsRegistryKey key in _currentUser.Key.Keys)
-                ShowRegNode(key, node);
+            TreeNode node = null;
+
+            if (_localMachine32.Exists)
+            { 
+                node = treeViewRegistry.Nodes.Add("LocalMachine");
+                node.Tag = _localMachine32;
+                foreach (UtilsRegistryKey key in _localMachine32.Key.Keys)
+                    ShowRegNode(key, node);
+            }
+
+            if (_currentUser32.Exists)
+            { 
+                node = treeViewRegistry.Nodes.Add("CurrentUser");
+                node.Tag = _currentUser32;
+                foreach (UtilsRegistryKey key in _currentUser32.Key.Keys)
+                    ShowRegNode(key, node);
+            }
+
+            if (Is64Bit)
+            {
+                if (_localMachine64.Exists)
+                {
+                    node = treeViewRegistry.Nodes.Add("LocalMachine [x64]");
+                    node.Tag = _localMachine64;
+                    foreach (UtilsRegistryKey key in _localMachine64.Key.Keys)
+                        ShowRegNode(key, node);
+                }
+
+                if (_currentUser64.Exists)
+                { 
+                    node = treeViewRegistry.Nodes.Add("CurrentUser [x64]");
+                    node.Tag = _currentUser64;
+                    foreach (UtilsRegistryKey key in _currentUser64.Key.Keys)
+                        ShowRegNode(key, node);
+                }
+            }
         }
 
         private void ShowRegNodeChilds(UtilsRegistryKey key, TreeNode node)
@@ -139,9 +182,9 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
         private UtilsRegistry GetRegistry(TreeNode node)
         {
             if (node.FullPath.StartsWith("LocalMachine", StringComparison.InvariantCultureIgnoreCase))
-                return _localMachine;
+                return _localMachine32;
             else
-                return _currentUser;
+                return _currentUser32;
         }
 
         private string GetFullNodePath(TreeNode node)

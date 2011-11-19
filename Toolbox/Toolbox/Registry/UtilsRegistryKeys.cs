@@ -54,10 +54,13 @@ namespace NetOffice.DeveloperToolbox.WindowsRegistry
         public IEnumerator GetEnumerator()
         {
             RegistryKey key = _parent.Open();
-            string[] valueNames = key.GetSubKeyNames();
-            foreach (string item in valueNames)
-                yield return this[item];
-            key.Close();
+            if (null != key)
+            {
+                string[] valueNames = key.GetSubKeyNames();
+                foreach (string item in valueNames)
+                    yield return this[item];
+                key.Close();
+            }
         }
 
         #endregion
