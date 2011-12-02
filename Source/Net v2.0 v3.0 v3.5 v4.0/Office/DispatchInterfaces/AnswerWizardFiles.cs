@@ -161,8 +161,8 @@ namespace NetOffice.OfficeApi
         {
 			int count = Count;
 			string[] enumeratorObjects = new string[count];
-			for (int i = 1; i <= count; i++)
-				enumeratorObjects[i] = this[i];
+			for (int i = 0; i < count; i++)
+				enumeratorObjects[i] = this[i+1];
 
 			foreach (string item in enumeratorObjects)
 				yield return item;
@@ -170,6 +170,8 @@ namespace NetOffice.OfficeApi
 
         #endregion
         
+
+
 		#pragma warning restore
 	}
 }

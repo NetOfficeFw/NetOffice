@@ -290,7 +290,7 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
                             _stopFlagAgreed = true;
                         _stopFlagAgreed = false;
 
-                        while ((DateTime.Now - _lastCheck).Seconds < 1)
+                        while ((DateTime.Now - _lastCheck).TotalSeconds < 1)
                             System.Threading.Thread.Sleep(1000);
 
                         foreach (DisabledKey item in _disabledItems)

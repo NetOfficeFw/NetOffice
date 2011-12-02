@@ -19,11 +19,11 @@ using LateBindingApi.Core;
 */
 
 [assembly: AssemblyTitle("PowerPoint")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("NetOffice PowerPoint Api")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("http://netoffice.codeplex.com")]
+[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyCopyright("Copyright © Sebastian Lange 2011 ")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("1.3.0.0")]

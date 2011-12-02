@@ -38,8 +38,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>NetOffice.Icon.32x32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Cecil, Version=0.6.8.8607, Culture=neutral, processorArchitecture=MSIL">
@@ -340,7 +339,7 @@
     <EmbeddedResource Include="OfficeCompatibility\ReportMessageTable.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainIcon.ico" />
+    <Content Include="NetOffice.Icon.32x32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

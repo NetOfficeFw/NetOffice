@@ -215,8 +215,8 @@ namespace NetOffice.OfficeApi
         {
 			int count = Count;
 			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 1; i <= count; i++)
-				enumeratorObjects[i] = this[i];
+			for (int i = 0; i < count; i++)
+				enumeratorObjects[i] = this[i+1];
 
 			foreach (COMObject item in enumeratorObjects)
 				yield return item;
@@ -224,6 +224,8 @@ namespace NetOffice.OfficeApi
 
         #endregion
         
+
+
 		#pragma warning restore
 	}
 }

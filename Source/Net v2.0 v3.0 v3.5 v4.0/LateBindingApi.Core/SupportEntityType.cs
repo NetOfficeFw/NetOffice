@@ -1,7 +1,7 @@
 ﻿namespace LateBindingApi.Core
 {
     /// <summary>
-    /// search parameter for the SupportEntity Method
+    /// search parameter for the EntityIsAvailable Method
     /// </summary>
     public enum SupportEntityType
     {

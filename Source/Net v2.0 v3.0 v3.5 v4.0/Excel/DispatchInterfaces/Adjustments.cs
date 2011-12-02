@@ -139,8 +139,8 @@ namespace NetOffice.ExcelApi
         {
 			int count = Count;
 			Single[] enumeratorObjects = new Single[count];
-			for (int i = 1; i <= count; i++)
-				enumeratorObjects[i] = this[i];
+			for (int i = 0; i < count; i++)
+				enumeratorObjects[i] = this[i+1];
 
 			foreach (Single item in enumeratorObjects)
 				yield return item;
@@ -148,6 +148,8 @@ namespace NetOffice.ExcelApi
 
         #endregion
         
+
+
 		#pragma warning restore
 	}
 }
