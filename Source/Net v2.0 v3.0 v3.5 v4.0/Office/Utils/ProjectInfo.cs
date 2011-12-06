@@ -13,13 +13,14 @@ namespace OfficeApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "NetOffice.OfficeApi";
         private Guid     _componentGuid = new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace OfficeApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[0];
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

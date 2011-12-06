@@ -54,6 +54,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Slide(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -62,12 +63,14 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Slide(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Slide(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -75,6 +78,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>		
 		public Slide():base("PowerPoint.Slide")
 		{
+			
 		}
 		
 		/// <summary>
@@ -83,6 +87,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="progId">registered ProgID</param>
 		public Slide(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

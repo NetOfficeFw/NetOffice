@@ -53,6 +53,7 @@ namespace NetOffice.VBIDEApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Component(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -61,12 +62,14 @@ namespace NetOffice.VBIDEApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Component(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Component(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -74,6 +77,7 @@ namespace NetOffice.VBIDEApi
         /// </summary>		
 		public Component():base("VBIDE.Component")
 		{
+			
 		}
 		
 		/// <summary>
@@ -82,6 +86,7 @@ namespace NetOffice.VBIDEApi
         /// <param name="progId">registered ProgID</param>
 		public Component(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

@@ -56,6 +56,7 @@ namespace NetOffice.OfficeApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public CustomTaskPane(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -64,12 +65,14 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomTaskPane(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomTaskPane(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -77,6 +80,7 @@ namespace NetOffice.OfficeApi
         /// </summary>		
 		public CustomTaskPane():base("Office.CustomTaskPane")
 		{
+			
 		}
 		
 		/// <summary>
@@ -85,6 +89,7 @@ namespace NetOffice.OfficeApi
         /// <param name="progId">registered ProgID</param>
 		public CustomTaskPane(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

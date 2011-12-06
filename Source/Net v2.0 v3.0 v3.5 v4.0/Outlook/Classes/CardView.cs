@@ -53,6 +53,7 @@ namespace NetOffice.OutlookApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public CardView(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -61,12 +62,14 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CardView(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CardView(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -74,6 +77,7 @@ namespace NetOffice.OutlookApi
         /// </summary>		
 		public CardView():base("Outlook.CardView")
 		{
+			
 		}
 		
 		/// <summary>
@@ -82,6 +86,7 @@ namespace NetOffice.OutlookApi
         /// <param name="progId">registered ProgID</param>
 		public CardView(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

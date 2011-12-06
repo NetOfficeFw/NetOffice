@@ -1,0 +1,4 @@
+﻿	<Reference Include="%Name%, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+	  <SpecificVersion>False</SpecificVersion>
+	  <HintPath>NetOffice\%Name%.dll</HintPath>
+	</Reference>

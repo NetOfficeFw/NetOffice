@@ -64,6 +64,7 @@ namespace NetOffice.AccessApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public TabControl(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -72,12 +73,14 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TabControl(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TabControl(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -85,6 +88,7 @@ namespace NetOffice.AccessApi
         /// </summary>		
 		public TabControl():base("Access.TabControl")
 		{
+			
 		}
 		
 		/// <summary>
@@ -93,6 +97,7 @@ namespace NetOffice.AccessApi
         /// <param name="progId">registered ProgID</param>
 		public TabControl(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

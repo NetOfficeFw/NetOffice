@@ -112,6 +112,7 @@ namespace NetOffice.AccessApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public FormOld(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -120,12 +121,14 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public FormOld(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public FormOld(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -133,6 +136,7 @@ namespace NetOffice.AccessApi
         /// </summary>		
 		public FormOld():base("Access.FormOld")
 		{
+			
 		}
 		
 		/// <summary>
@@ -141,6 +145,7 @@ namespace NetOffice.AccessApi
         /// <param name="progId">registered ProgID</param>
 		public FormOld(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

@@ -13,13 +13,14 @@ namespace MSHTMLApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "LateBindingApi.MSHTMLApi";
         private Guid     _componentGuid = new Guid("3050F1C5-98B5-11CF-BB82-00AA00BDCE0B");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace MSHTMLApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[0];
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

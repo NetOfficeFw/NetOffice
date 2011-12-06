@@ -80,6 +80,7 @@ namespace NetOffice.OutlookApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public TaskRequestDeclineItem(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -88,12 +89,14 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TaskRequestDeclineItem(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TaskRequestDeclineItem(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -101,6 +104,7 @@ namespace NetOffice.OutlookApi
         /// </summary>		
 		public TaskRequestDeclineItem():base("Outlook.TaskRequestDeclineItem")
 		{
+			
 		}
 		
 		/// <summary>
@@ -109,6 +113,7 @@ namespace NetOffice.OutlookApi
         /// <param name="progId">registered ProgID</param>
 		public TaskRequestDeclineItem(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

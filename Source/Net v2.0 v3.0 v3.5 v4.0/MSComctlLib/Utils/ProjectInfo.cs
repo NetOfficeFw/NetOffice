@@ -13,13 +13,14 @@ namespace MSComctlLibApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "NetOffice.MSComctlLibApi";
         private Guid     _componentGuid = new Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace MSComctlLibApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[0];
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

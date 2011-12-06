@@ -32,5 +32,10 @@ namespace LateBindingApi.Core
         /// <param name="className"></param>
         /// <returns></returns>
         bool Contains(string className);
+
+        /// <summary>
+        /// returns a name array of dependent LateBindingApi assemblies
+        /// </summary>
+        string[] Dependencies { get; }
     }
 }

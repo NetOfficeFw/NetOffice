@@ -56,6 +56,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public OLEControl(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -64,12 +65,14 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OLEControl(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OLEControl(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -77,6 +80,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>		
 		public OLEControl():base("PowerPoint.OLEControl")
 		{
+			
 		}
 		
 		/// <summary>
@@ -85,6 +89,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="progId">registered ProgID</param>
 		public OLEControl(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

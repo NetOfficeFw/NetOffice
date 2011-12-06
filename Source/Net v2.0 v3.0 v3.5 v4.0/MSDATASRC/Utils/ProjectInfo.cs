@@ -13,13 +13,14 @@ namespace MSDATASRCApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "NetOffice.MSDATASRCApi";
         private Guid     _componentGuid = new Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace MSDATASRCApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[0];
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

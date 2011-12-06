@@ -122,6 +122,7 @@ namespace LateBindingApi.MSHTMLApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public HTMLOptionButtonElement(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -130,12 +131,14 @@ namespace LateBindingApi.MSHTMLApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public HTMLOptionButtonElement(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public HTMLOptionButtonElement(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -143,6 +146,7 @@ namespace LateBindingApi.MSHTMLApi
         /// </summary>		
 		public HTMLOptionButtonElement():base("MSHTML.HTMLOptionButtonElement")
 		{
+			
 		}
 		
 		/// <summary>
@@ -151,6 +155,7 @@ namespace LateBindingApi.MSHTMLApi
         /// <param name="progId">registered ProgID</param>
 		public HTMLOptionButtonElement(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

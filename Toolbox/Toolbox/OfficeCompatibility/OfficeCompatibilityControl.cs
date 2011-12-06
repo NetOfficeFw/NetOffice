@@ -161,6 +161,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 _result = AssemblyAnalyzer.AnalyzeAssembly(assemblyDefinition);
                 if (_result.ContainsNetOfficeReferences)
                 {
+                    buttonRefresh.Enabled = true;
+                    buttonReport.Enabled = true;
                     panelInvalidAssembly.Visible = false;
                     panelVersionTable.Visible = true;
                     panelNoNetOfficeReferences.Visible = false;
@@ -174,6 +176,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 }
                 else
                 {
+                    buttonRefresh.Enabled = false;
+                    buttonReport.Enabled = false;
                     panelInvalidAssembly.Visible = false;
                     panelVersionTable.Visible = false;
                     panelNoNetOfficeReferences.Visible = true;
@@ -182,6 +186,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             }
             catch (BadImageFormatException)
             {
+                    buttonRefresh.Enabled = false;
+                    buttonReport.Enabled = false;
                     panelVersionTable.Visible = false;
                     panelNoNetOfficeReferences.Visible = false;
                     panelResultTable.Visible = false;

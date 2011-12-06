@@ -85,6 +85,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			_callQuitInDispose = true;
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -93,12 +94,14 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			_callQuitInDispose = true;
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
+			_callQuitInDispose = true;
 		}
 		
 		/// <summary>
@@ -106,6 +109,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>		
 		public Application():base("PowerPoint.Application")
 		{
+			_callQuitInDispose = true;
 		}
 		
 		/// <summary>
@@ -114,6 +118,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
+			_callQuitInDispose = true;
 		}
 
 		#endregion

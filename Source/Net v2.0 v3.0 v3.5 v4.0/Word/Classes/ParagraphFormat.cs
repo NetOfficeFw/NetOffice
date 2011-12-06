@@ -53,6 +53,7 @@ namespace NetOffice.WordApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public ParagraphFormat(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -61,12 +62,14 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ParagraphFormat(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ParagraphFormat(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -74,6 +77,7 @@ namespace NetOffice.WordApi
         /// </summary>		
 		public ParagraphFormat():base("Word.ParagraphFormat")
 		{
+			
 		}
 		
 		/// <summary>
@@ -82,6 +86,7 @@ namespace NetOffice.WordApi
         /// <param name="progId">registered ProgID</param>
 		public ParagraphFormat(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

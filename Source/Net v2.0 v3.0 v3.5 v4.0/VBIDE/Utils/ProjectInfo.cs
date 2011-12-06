@@ -13,13 +13,14 @@ namespace VBIDEApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "NetOffice.VBIDEApi";
         private Guid     _componentGuid = new Guid("0002E157-0000-0000-C000-000000000046");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace VBIDEApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[]{"OfficeApi.dll"};
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

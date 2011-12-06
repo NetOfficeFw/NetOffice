@@ -40,8 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomEnumeratorAttribute.cs" />
@@ -53,7 +51,6 @@
     <Compile Include="COMObject.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Interfaces\IFactoryInfo.cs" />
-    <Compile Include="Interfaces\IObject.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="LateBindingAttribute.cs" />
     <Compile Include="Settings.cs" />

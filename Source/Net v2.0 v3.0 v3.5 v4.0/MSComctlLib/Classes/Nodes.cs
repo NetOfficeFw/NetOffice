@@ -53,6 +53,7 @@ namespace NetOffice.MSComctlLibApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Nodes(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -61,12 +62,14 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Nodes(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Nodes(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -74,6 +77,7 @@ namespace NetOffice.MSComctlLibApi
         /// </summary>		
 		public Nodes():base("MSComctlLib.Nodes")
 		{
+			
 		}
 		
 		/// <summary>
@@ -82,6 +86,7 @@ namespace NetOffice.MSComctlLibApi
         /// <param name="progId">registered ProgID</param>
 		public Nodes(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

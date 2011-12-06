@@ -13,13 +13,14 @@ namespace MSProjectApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "LateBindingApi.MSProjectApi";
         private Guid     _componentGuid = new Guid("A7107640-94DF-1068-855E-00DD01075445");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace MSProjectApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[]{"OfficeApi.dll","VBIDEApi.dll","MSHTMLApi.dll"};
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

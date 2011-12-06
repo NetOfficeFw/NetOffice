@@ -67,6 +67,7 @@ namespace NetOffice.OutlookApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public OlkTextBox(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -75,12 +76,14 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkTextBox(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkTextBox(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -88,6 +91,7 @@ namespace NetOffice.OutlookApi
         /// </summary>		
 		public OlkTextBox():base("Outlook.OlkTextBox")
 		{
+			
 		}
 		
 		/// <summary>
@@ -96,6 +100,7 @@ namespace NetOffice.OutlookApi
         /// <param name="progId">registered ProgID</param>
 		public OlkTextBox(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

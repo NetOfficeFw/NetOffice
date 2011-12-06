@@ -96,30 +96,55 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize()");
 
+                List<string> dependAssemblies = new List<string>();
                 Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
                 foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
                 {
-                    Assembly itemAssembly = Assembly.Load(item);
-                    object[] attributes = itemAssembly.GetCustomAttributes(true);
-                    foreach (object itemAttribute in attributes)
-                    {
-                        string fullnameAttribute = itemAttribute.GetType().FullName;
-                        if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
-                        {
-                            Type factoryInfoType = itemAssembly.GetType(item.Name + ".Utils.ProjectInfo");
-                            IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+                    DebugConsole.WriteLine(string.Format("Load assembly {0}.", item.Name));
 
-                            bool exists = false;
-                            foreach (IFactoryInfo itemFactory in _factoryList)
+                    Assembly itemAssembly = Assembly.Load(item);
+                    string[] depends = AddAssembly(item.Name, itemAssembly);
+                    foreach (string depend in depends)
+                    {
+                        bool found = false;
+                        foreach (string itemExistingDependency in dependAssemblies)
+                        {
+                            if (depend == itemExistingDependency)
                             {
-                                if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
-                                {
-                                    exists = true;
-                                    break;
-                                }
+                                found = true;
+                                break;
                             }
-                            if (!exists)
-                                _factoryList.Add(factoryInfo);
+                        }
+                        if (!found)
+                            dependAssemblies.Add(depend);
+                    }
+                }
+                
+                // try load non loaded dependent assemblies
+                if (Settings.EnableAdHocLoading)
+                { 
+                    foreach (string itemAssemblyName in dependAssemblies)
+                    {
+                        DebugConsole.WriteLine(string.Format("Try to load dependent assembly {0}.", itemAssemblyName));
+
+                        string fileName = callingAssembly.CodeBase.Substring(0, callingAssembly.CodeBase.LastIndexOf("/"))+ "/" + itemAssemblyName;
+                        fileName = fileName.Replace("/", "\\").Substring(8);
+
+                        if (System.IO.File.Exists(fileName))
+                        {
+                            try
+                            {
+                                Assembly dependAssembly = Assembly.LoadFile(fileName);
+                                AddAssembly(dependAssembly.GetName().Name, dependAssembly);
+                            }
+                            catch (Exception exception)
+                            {
+                                DebugConsole.WriteException(exception);
+                            }
+                        }
+                        else
+                        {
+                            DebugConsole.WriteLine(string.Format("Assembly {0} not found.", itemAssemblyName));
                         }
                     }
                 }
@@ -445,6 +470,56 @@ namespace LateBindingApi.Core
         #endregion
 
         #region Private Methods
+        
+        /// <summary>
+        /// add assembly to list
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="itemAssembly"></param>
+        /// <returns>list of dependend assemblies</returns>
+        private static string[] AddAssembly(string name, Assembly itemAssembly)
+        {
+            List<string> dependAssemblies = new List<string>();
+            object[] attributes = itemAssembly.GetCustomAttributes(true);
+            foreach (object itemAttribute in attributes)
+            {
+                string fullnameAttribute = itemAttribute.GetType().FullName;
+                if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
+                {
+                    Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
+                    IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+
+                    bool exists = false;
+                    foreach (IFactoryInfo itemFactory in _factoryList)
+                    {
+                        if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                        {
+                            exists = true;
+                            break;
+                        }
+                    }
+                    if (!exists)
+                        _factoryList.Add(factoryInfo);
+
+                    foreach (string itemDependency in factoryInfo.Dependencies)
+                    {
+                        bool found = false;
+                        foreach (string itemExistingDependency in dependAssemblies)
+                        {
+                            if (itemDependency == itemExistingDependency)
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found)
+                            dependAssemblies.Add(itemDependency);
+                    }
+                }
+            }
+
+            return dependAssemblies.ToArray();
+        }
 
         /// <summary>
         /// returns id of an interface

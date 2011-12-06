@@ -35,6 +35,11 @@ namespace LateBindingApi.Core
         protected internal bool _isEnumerator;
 
         /// <summary>
+        /// returns instance implement quit method and dispose call them automaticly
+        /// </summary>
+        protected internal bool _callQuitInDispose;
+
+        /// <summary>
         /// returns instance is currently in diposing progress
         /// </summary>
         protected internal volatile bool _isCurrentlyDisposing;
@@ -72,7 +77,7 @@ namespace LateBindingApi.Core
             _instanceType = replacedObject.InstanceType;
 
             // copy childs
-            foreach (IObject item in replacedObject.ListChildObjects)
+            foreach (COMObject item in replacedObject.ListChildObjects)
                 AddChildObject(item);
 
             // remove old object from parent chain
@@ -185,7 +190,7 @@ namespace LateBindingApi.Core
         #region COMObject Properties
 
         /// <summary>
-        /// returns the native wrapped proxy
+        /// NetOffice property: returns the native wrapped proxy
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object UnderlyingObject
@@ -197,7 +202,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns class name of native wrapped proxy
+        /// NetOffice property: returns class name of native wrapped proxy
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string UnderlyingTypeName
@@ -220,7 +225,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns Type of native proxy
+        /// NetOffice property: returns Type of native proxy
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Type InstanceType
@@ -232,7 +237,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns parent proxy object
+        /// NetOffice property: returns parent proxy object
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject ParentObject
@@ -248,7 +253,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns instance is currently in diposing progress
+        /// NetOffice property: returns instance is currently in diposing progress
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool IsCurrentlyDisposing
@@ -260,7 +265,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns instance export events
+        /// NetOffice property: returns instance export events
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool IsEventBind
@@ -272,7 +277,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// returns event bridge is advised
+        /// NetOffice property: returns event bridge is advised
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
@@ -288,7 +293,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        ///  retuns instance has one or more event recipients
+        /// NetOffice property: retuns instance has one or more event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients
@@ -371,7 +376,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// create object from progid
+        /// NetOffice method: create object from progid
         /// </summary>
         /// <param name="progId"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -384,21 +389,9 @@ namespace LateBindingApi.Core
             _underlyingObject = Activator.CreateInstance(_instanceType);
         }
 
+          
         /// <summary>
-        /// add object to child list
-        /// </summary>
-        /// <param name="childObject"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void AddChildObject(IObject childObject)
-        {
-            if (childObject is COMObject)
-                _listChildObjects.Add((COMObject)childObject);
-
-            throw new ArgumentException("childObject is an unkown type.");
-        }
-
-        /// <summary>
-        /// add object to child list
+        ///  NetOffice method: add object to child list
         /// </summary>
         /// <param name="childObject"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -418,7 +411,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// release com proxy
+        ///  NetOffice method: release com proxy
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void ReleaseCOMProxy()
@@ -440,6 +433,22 @@ namespace LateBindingApi.Core
             }
         }
 
+        /// <summary>
+        /// calls Quit for a proxy
+        /// </summary>
+        /// <param name="proxy"></param>
+        private static void CallQuit(object proxy)
+        {
+            try
+            {
+                if (Settings.EnableAutomaticQuit)
+                    Invoker.Method(proxy, "Quit");
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.WriteException(exception);                
+            }
+        }
         #endregion
 
         #region IDisposable Members
@@ -480,6 +489,10 @@ namespace LateBindingApi.Core
                 _parentObject = null;
             }
 
+            // call quit automaticly if wanted
+            if (_callQuitInDispose)
+                CallQuit(_underlyingObject);
+            
             // release proxy
             ReleaseCOMProxy();
 

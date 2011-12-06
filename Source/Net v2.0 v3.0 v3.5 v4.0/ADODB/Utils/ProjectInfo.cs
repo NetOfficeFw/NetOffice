@@ -13,13 +13,14 @@ namespace ADODBApi.Utils
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
-        #region Field
+        #region Fields
 
         private string   _namespace     = "NetOffice.ADODBApi";
         private Guid     _componentGuid = new Guid("00000201-0000-0010-8000-00AA006D2EA4");
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
-
+		private string[] _dependents;
+		
         #endregion
 
         #region Construction
@@ -71,6 +72,16 @@ namespace ADODBApi.Utils
             }
         }
 
+        public string[] Dependencies
+        {
+            get
+            {
+				if(null == _dependents)
+					_dependents = new string[0];
+                return _dependents;
+            }
+        }
+        
         #endregion
     }
     #pragma warning restore

@@ -74,6 +74,7 @@ namespace NetOffice.MSComctlLibApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public TreeView(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
+			
 		}
 		
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -82,12 +83,14 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TreeView(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TreeView(COMObject replacedObject) : base(replacedObject)
 		{
+			
 		}
 		
 		/// <summary>
@@ -95,6 +98,7 @@ namespace NetOffice.MSComctlLibApi
         /// </summary>		
 		public TreeView():base("MSComctlLib.TreeView")
 		{
+			
 		}
 		
 		/// <summary>
@@ -103,6 +107,7 @@ namespace NetOffice.MSComctlLibApi
         /// <param name="progId">registered ProgID</param>
 		public TreeView(string progId):base(progId)
 		{
+			
 		}
 
 		#endregion

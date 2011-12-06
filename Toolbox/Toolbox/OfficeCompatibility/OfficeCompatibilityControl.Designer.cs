@@ -43,6 +43,17 @@
             this.pictureBoxOk = new System.Windows.Forms.PictureBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.pictureBoxProblem = new System.Windows.Forms.PictureBox();
+            this.panelInvalidAssembly = new System.Windows.Forms.Panel();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.labelInvalidAssembly = new System.Windows.Forms.Label();
+            this.labelVersionTable = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelVersionTable = new System.Windows.Forms.Panel();
             this.tableLayoutResult = new NetOffice.DeveloperToolbox.OfficeCompatibility.CustomTableLayoutControl();
             this.pictureBoxAccess14 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAccess12 = new System.Windows.Forms.PictureBox();
@@ -86,22 +97,15 @@
             this.pictureBoxPowerPoint14 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPowerPoint11 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAccess09 = new System.Windows.Forms.PictureBox();
-            this.panelInvalidAssembly = new System.Windows.Forms.Panel();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.labelInvalidAssembly = new System.Windows.Forms.Label();
-            this.labelVersionTable = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelVersionTable = new System.Windows.Forms.Panel();
             this.panelNoNetOfficeReferences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelResultTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).BeginInit();
+            this.panelInvalidAssembly.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelVersionTable.SuspendLayout();
             this.tableLayoutResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).BeginInit();
@@ -133,10 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).BeginInit();
-            this.panelInvalidAssembly.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelVersionTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -220,6 +220,7 @@
             // buttonReport
             // 
             this.buttonReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReport.Enabled = false;
             this.buttonReport.Image = ((System.Drawing.Image)(resources.GetObject("buttonReport.Image")));
             this.buttonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonReport.Location = new System.Drawing.Point(452, 242);
@@ -246,7 +247,6 @@
             this.panelResultTable.Name = "panelResultTable";
             this.panelResultTable.Size = new System.Drawing.Size(578, 280);
             this.panelResultTable.TabIndex = 76;
-            this.panelResultTable.Visible = false;
             // 
             // labelVersionNotOk
             // 
@@ -286,6 +286,7 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.Enabled = false;
             this.buttonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefresh.Image")));
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRefresh.Location = new System.Drawing.Point(313, 242);
@@ -306,6 +307,135 @@
             this.pictureBoxProblem.Size = new System.Drawing.Size(16, 16);
             this.pictureBoxProblem.TabIndex = 82;
             this.pictureBoxProblem.TabStop = false;
+            // 
+            // panelInvalidAssembly
+            // 
+            this.panelInvalidAssembly.Controls.Add(this.pictureBox27);
+            this.panelInvalidAssembly.Controls.Add(this.labelInvalidAssembly);
+            this.panelInvalidAssembly.Location = new System.Drawing.Point(72, 44);
+            this.panelInvalidAssembly.Name = "panelInvalidAssembly";
+            this.panelInvalidAssembly.Size = new System.Drawing.Size(578, 24);
+            this.panelInvalidAssembly.TabIndex = 77;
+            this.panelInvalidAssembly.Visible = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
+            this.pictureBox27.Location = new System.Drawing.Point(20, 5);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox27.TabIndex = 81;
+            this.pictureBox27.TabStop = false;
+            // 
+            // labelInvalidAssembly
+            // 
+            this.labelInvalidAssembly.AutoSize = true;
+            this.labelInvalidAssembly.BackColor = System.Drawing.SystemColors.Control;
+            this.labelInvalidAssembly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelInvalidAssembly.Location = new System.Drawing.Point(42, 7);
+            this.labelInvalidAssembly.Name = "labelInvalidAssembly";
+            this.labelInvalidAssembly.Size = new System.Drawing.Size(401, 13);
+            this.labelInvalidAssembly.TabIndex = 72;
+            this.labelInvalidAssembly.Text = "Die angegebene Datei ist kein gültges .NET Assembly. (BadImageFormatException)";
+            // 
+            // labelVersionTable
+            // 
+            this.labelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVersionTable.AutoSize = true;
+            this.labelVersionTable.BackColor = System.Drawing.SystemColors.Control;
+            this.labelVersionTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelVersionTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionTable.Location = new System.Drawing.Point(24, 5);
+            this.labelVersionTable.Name = "labelVersionTable";
+            this.labelVersionTable.Size = new System.Drawing.Size(93, 13);
+            this.labelVersionTable.TabIndex = 78;
+            this.labelVersionTable.Text = "Versionstabelle";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Location = new System.Drawing.Point(24, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "09 = Office 2000";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Location = new System.Drawing.Point(24, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "10 = Office 2002";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Location = new System.Drawing.Point(24, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "11 = Office 2003";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Location = new System.Drawing.Point(24, 122);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 13);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "12 = Office 2007";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label7.Location = new System.Drawing.Point(24, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 89;
+            this.label7.Text = "14 = Office 2010";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.TabIndex = 90;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelVersionTable
+            // 
+            this.panelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelVersionTable.Controls.Add(this.pictureBox1);
+            this.panelVersionTable.Controls.Add(this.label7);
+            this.panelVersionTable.Controls.Add(this.label6);
+            this.panelVersionTable.Controls.Add(this.label5);
+            this.panelVersionTable.Controls.Add(this.label4);
+            this.panelVersionTable.Controls.Add(this.label3);
+            this.panelVersionTable.Controls.Add(this.labelVersionTable);
+            this.panelVersionTable.Location = new System.Drawing.Point(657, 101);
+            this.panelVersionTable.Name = "panelVersionTable";
+            this.panelVersionTable.Size = new System.Drawing.Size(132, 215);
+            this.panelVersionTable.TabIndex = 91;
             // 
             // tableLayoutResult
             // 
@@ -790,136 +920,6 @@
             this.pictureBoxAccess09.TabIndex = 104;
             this.pictureBoxAccess09.TabStop = false;
             // 
-            // panelInvalidAssembly
-            // 
-            this.panelInvalidAssembly.Controls.Add(this.pictureBox27);
-            this.panelInvalidAssembly.Controls.Add(this.labelInvalidAssembly);
-            this.panelInvalidAssembly.Location = new System.Drawing.Point(72, 44);
-            this.panelInvalidAssembly.Name = "panelInvalidAssembly";
-            this.panelInvalidAssembly.Size = new System.Drawing.Size(578, 24);
-            this.panelInvalidAssembly.TabIndex = 77;
-            this.panelInvalidAssembly.Visible = false;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(20, 5);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox27.TabIndex = 81;
-            this.pictureBox27.TabStop = false;
-            // 
-            // labelInvalidAssembly
-            // 
-            this.labelInvalidAssembly.AutoSize = true;
-            this.labelInvalidAssembly.BackColor = System.Drawing.SystemColors.Control;
-            this.labelInvalidAssembly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelInvalidAssembly.Location = new System.Drawing.Point(42, 7);
-            this.labelInvalidAssembly.Name = "labelInvalidAssembly";
-            this.labelInvalidAssembly.Size = new System.Drawing.Size(401, 13);
-            this.labelInvalidAssembly.TabIndex = 72;
-            this.labelInvalidAssembly.Text = "Die angegebene Datei ist kein gültges .NET Assembly. (BadImageFormatException)";
-            // 
-            // labelVersionTable
-            // 
-            this.labelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelVersionTable.AutoSize = true;
-            this.labelVersionTable.BackColor = System.Drawing.SystemColors.Control;
-            this.labelVersionTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelVersionTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersionTable.Location = new System.Drawing.Point(24, 5);
-            this.labelVersionTable.Name = "labelVersionTable";
-            this.labelVersionTable.Size = new System.Drawing.Size(93, 13);
-            this.labelVersionTable.TabIndex = 78;
-            this.labelVersionTable.Text = "Versionstabelle";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Location = new System.Drawing.Point(24, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "09 = Office 2000";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Location = new System.Drawing.Point(24, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "10 = Office 2002";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Location = new System.Drawing.Point(24, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 87;
-            this.label5.Text = "11 = Office 2003";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Location = new System.Drawing.Point(24, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
-            this.label6.TabIndex = 88;
-            this.label6.Text = "12 = Office 2007";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Location = new System.Drawing.Point(24, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 89;
-            this.label7.Text = "14 = Office 2010";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelVersionTable
-            // 
-            this.panelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelVersionTable.Controls.Add(this.pictureBox1);
-            this.panelVersionTable.Controls.Add(this.label7);
-            this.panelVersionTable.Controls.Add(this.label6);
-            this.panelVersionTable.Controls.Add(this.label5);
-            this.panelVersionTable.Controls.Add(this.label4);
-            this.panelVersionTable.Controls.Add(this.label3);
-            this.panelVersionTable.Controls.Add(this.labelVersionTable);
-            this.panelVersionTable.Location = new System.Drawing.Point(657, 101);
-            this.panelVersionTable.Name = "panelVersionTable";
-            this.panelVersionTable.Size = new System.Drawing.Size(132, 215);
-            this.panelVersionTable.TabIndex = 91;
-            this.panelVersionTable.Visible = false;
-            // 
             // OfficeCompatibilityControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -941,6 +941,12 @@
             this.panelResultTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).EndInit();
+            this.panelInvalidAssembly.ResumeLayout(false);
+            this.panelInvalidAssembly.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelVersionTable.ResumeLayout(false);
+            this.panelVersionTable.PerformLayout();
             this.tableLayoutResult.ResumeLayout(false);
             this.tableLayoutResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess14)).EndInit();
@@ -973,12 +979,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).EndInit();
-            this.panelInvalidAssembly.ResumeLayout(false);
-            this.panelInvalidAssembly.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelVersionTable.ResumeLayout(false);
-            this.panelVersionTable.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

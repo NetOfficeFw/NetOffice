@@ -12,7 +12,11 @@ namespace LateBindingApi.Core
     /// </summary>
     public static class Invoker
     {
+        #region Fields
+
         private static readonly string _exceptionMessage = "See inner exception for details.";
+        
+        #endregion
 
         #region Method
 

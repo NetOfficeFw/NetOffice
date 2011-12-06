@@ -33,7 +33,9 @@ namespace LateBindingApi.Core
         private static bool        _eventsEnabled = true;
         private static bool        _messageFilterEnabled;
         private static IntPtr      _messageFilter;
-
+        private static bool        _enableAutomaticQuit;
+        private static bool        _enableAdHocLoading = true;
+       
         #endregion
 
         #region Properties
@@ -106,6 +108,37 @@ namespace LateBindingApi.Core
                     CoRegisterMessageFilter(_messageFilter, ref filter);
                 }
                 _messageFilterEnabled = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or set the Quit() method for an application object was automaticly called while Dispose()
+        /// </summary>
+        public static bool EnableAutomaticQuit
+        {
+            get
+            {
+                return _enableAutomaticQuit;
+            }
+            set
+            {
+                _enableAutomaticQuit = value;
+            }
+        }
+        
+        /// <summary>
+        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static bool EnableAdHocLoading
+        {
+            get
+            {
+                return _enableAdHocLoading;
+            }
+            set
+            {
+                _enableAdHocLoading = value;
             }
         }
 

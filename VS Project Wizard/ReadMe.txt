@@ -1,0 +1,1 @@
+Unpack NetOffice Assemblies.rar if you want to compile the project

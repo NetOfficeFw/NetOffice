@@ -15,7 +15,8 @@ namespace NetOffice.DeveloperToolbox
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(currentDomain_UnhandledException);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm(args));
+                MainForm mainForm = new MainForm(args);
+                Application.Run(mainForm);
          }
 
         static void currentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

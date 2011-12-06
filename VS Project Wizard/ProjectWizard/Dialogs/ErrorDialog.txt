@@ -1,0 +1,16 @@
+﻿[German]
+this = Fehler
+labelErrorCaption = Leider ist ein unerwarteter Fehler aufgetreten.
+labelHint = Wenn Sie möchten können Sie das NetOffice Forum nutzen um weitere Hilfe zu erhalten.
+labelErrorLog = Fehlerprotokoll
+copyButton = Fehlerbericht in die Zwischenablage kopieren
+okayButton = OK
+[End]
+[English]
+this = Error
+labelErrorCaption = An unexpected error is occured.
+labelHint = You can use the NetOffice Disscusion Board for support.
+labelErrorLog = Error Log
+copyButton = Copy Error detail to Clipboard 
+okayButton = OK
+[End]
