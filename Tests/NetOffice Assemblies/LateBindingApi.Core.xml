@@ -1,0 +1,957 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LateBindingApi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:LateBindingApi.Core.SupportByLibraryAttribute">
+            <summary>
+            Indicates which COM Type Library Version supports the entity
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.SupportByLibraryAttribute.Name">
+            <summary>
+            returns library name
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.SupportByLibraryAttribute.Versions">
+            <summary>
+            returns all supported library versions of entity
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.SupportByLibraryAttribute.#ctor(System.String,System.Double[])">
+            <summary>
+            creates instance
+            </summary>
+            <param name="name"></param>
+            <param name="versions"></param>
+        </member>
+        <member name="T:LateBindingApi.Core.SinkHelper">
+            <summary>
+            Sink Helper Base Class for an Event Interface Sink helper class
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.#ctor(LateBindingApi.Core.COMObject)">
+            <summary>
+            creates instance
+            </summary>
+            <param name="eventClass"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.FindConnectionPoint(System.Runtime.InteropServices.ComTypes.IConnectionPointContainer,System.Runtime.InteropServices.ComTypes.IConnectionPoint@,System.String[])">
+            <summary>
+            try to find connection point by FindConnectionPoint
+            </summary>
+            <param name="connectionPointContainer"></param>
+            <param name="point"></param>
+            <param name="sinkIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.EnumConnectionPoint(System.Runtime.InteropServices.ComTypes.IConnectionPointContainer,System.Runtime.InteropServices.ComTypes.IConnectionPoint@,System.String[])">
+            <summary>
+            try to find connection point by EnumConnectionPoints
+            </summary>
+            <param name="connectionPointContainer"></param>
+            <param name="point"></param>
+            <param name="sinkIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.GetConnectionPoint(LateBindingApi.Core.COMObject,System.Runtime.InteropServices.ComTypes.IConnectionPoint@,System.String[])">
+            <summary>
+            get supported connection point from comProxy
+            </summary>
+            <param name="comProxy"></param>
+            <param name="point"></param>
+            <param name="sinkIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.DisposeAll">
+            <summary>
+            Dispose all active event bridges
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.SetupEventBinding(System.Runtime.InteropServices.ComTypes.IConnectionPoint)">
+            <summary>
+            create event binding
+            </summary>
+            <param name="connectPoint"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.RemoveEventBinding">
+            <summary>
+            release event binding
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.RemoveEventBinding(System.Boolean)">
+            <summary>
+            release event binding
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.SinkHelper.Dispose">
+            <summary>
+            remove eventbinding
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.Settings">
+            <summary>
+            Core Settings
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Settings.ThreadCulture">
+            <summary>
+            Used Thread Culture given in the Invoke Calls, default is en-US
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Settings.EnableEvents">
+            <summary>
+            Get or set the Event support, default is true 
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Settings.EnableMessageFilter">
+             <summary>
+             Get or set the Message Filter enabled.
+             The MessageFilter suspress any exceptional dialog messages, specialy the "Application ist waiting for another OLE Task" dialog
+            default is true
+             </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Settings.EnableAutomaticQuit">
+            <summary>
+            Get or set the Quit() method for an application object was automaticly called while Dispose()
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Settings.EnableAdHocLoading">
+            <summary>
+            Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.IEventBinding">
+            <summary>
+            EventBinding Interface
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.IEventBinding.GetEventRecipients(System.String)">
+            <summary>
+            returns array of all event listeners
+            </summary>
+            <param name="eventName">name of event</param>
+        </member>
+        <member name="M:LateBindingApi.Core.IEventBinding.DisposeSinkHelper">
+            <summary>
+            Dispose method
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.IEventBinding.EventBridgeInitialized">
+            <summary>
+            returns event bridge is advised
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.IEventBinding.HasEventRecipients">
+            <summary>
+            retuns instance has one or more event recipients
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.LateBindingApiException">
+            <summary>
+            signals an exception occured in LateBindingApi, not in corresond latebinded assembly
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.LateBindingApiException.#ctor(System.String)">
+            <summary>
+            creates instance
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:LateBindingApi.Core.Invoker">
+            <summary>
+            invoke helper functions
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.Method(LateBindingApi.Core.COMObject,System.String)">
+            <summary>
+            perform method as latebind call without parameters 
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.Method(System.Object,System.String)">
+            <summary>
+            perform method as latebind call without parameters 
+            </summary>
+            <param name="comObject">target proxy</param>
+            <param name="name">name of method</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.Method(LateBindingApi.Core.COMObject,System.String,System.Object[])">
+            <summary>
+            perform method as latebind call with parameters
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+            <param name="paramsArray">array with parameters</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.Method(System.Object,System.String,System.Object[])">
+            <summary>
+            perform method as latebind call with parameters 
+            </summary>
+            <param name="comObject">target proxy</param>
+            <param name="name">name of method</param>
+            <param name="paramsArray">array with parameters</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.Method(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Reflection.ParameterModifier[])">
+            <summary>
+            perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+            <param name="paramsArray">array with parameters</param>
+            <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.MethodReturn(LateBindingApi.Core.COMObject,System.String)">
+            <summary>
+            perform method as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.MethodReturn(LateBindingApi.Core.COMObject,System.String,System.Object[])">
+            <summary>
+            perform method as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+            <param name="paramsArray">array with parameters</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.MethodReturn(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Reflection.ParameterModifier[])">
+            <summary>
+            perform method as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of method</param>
+            <param name="paramsArray">array with parameters</param>
+            <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertyGet(System.Object,System.String)">
+            <summary>
+            perform property get as latebind call with return value
+            </summary>
+            <param name="comObject">target proxy</param>
+            <param name="name">name of property</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertyGet(LateBindingApi.Core.COMObject,System.String)">
+            <summary>
+            perform property get as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertyGet(System.Object,System.String,System.Object[])">
+            <summary>
+            perform property get as latebind call with return value
+            </summary>
+            <param name="comObject">target proxy</param>
+            <param name="name">name of property</param>
+            <param name="paramsArray">array with parameters</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertyGet(LateBindingApi.Core.COMObject,System.String,System.Object[])">
+            <summary>
+            perform property get as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="paramsArray">array with parameters</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertyGet(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Reflection.ParameterModifier[])">
+            <summary>
+            perform property get as latebind call with return value
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="paramsArray">array with parameters</param>
+            <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+            <returns>any return value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Object)">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="paramsArray">array with parameters</param> 
+            <param name="value">value to be set</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Object,System.Reflection.ParameterModifier[])">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="paramsArray">array with parameters</param> 
+            <param name="value">value to be set</param>
+            <param name="paramModifiers">array with modifiers correspond paramsArray</param>    
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object)">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="value">value to be set</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object,System.Reflection.ParameterModifier[])">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="value">value to be set</param>
+            <param name="paramModifiers">array with modifiers correspond paramsArray</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object[],System.Reflection.ParameterModifier[])">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject">target object</param>
+            <param name="name">name of property</param>
+            <param name="value">value array to be set</param>
+            <param name="paramModifiers">array with modifiers correspond paramsArray</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.PropertySet(LateBindingApi.Core.COMObject,System.String,System.Object[])">
+            <summary>
+            perform property set as latebind call
+            </summary>
+            <param name="comObject"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.CreateParamModifiers(System.Boolean[])">
+            <summary>
+            create parameter modifiers array
+            </summary>
+            <param name="isRef">parameter is given as ref(ByRef in Visual Basic)</param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.ValidateParam(System.Object)">
+            <summary>
+            replace null with Type.Missing, replace COMObject with COMObject.UnderlyingObject
+            </summary>
+            <param name="param">value to check</param>
+            <returns>validated value</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.ValidateParamsArray(System.Object[])">
+            <summary>
+            calls ValidateParam for every array item
+            </summary>
+            <param name="paramsArray">array with parameters</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.ReleaseParam(System.Object)">
+            <summary>
+            calls dipose in case if param is COMObject, calls Marshal.ReleaseComObject in case of param is a COM proxy
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.ReleaseParamsArray(System.Object[])">
+            <summary>
+            calls ReleaseParam for every array item
+            </summary>
+            <param name="paramsArray">any value array</param>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.CreateEventParamsArray(System.Object[])">
+            <summary>
+            copy the param array or returns null if paramsArray not set
+            </summary>
+            <param name="paramsArray">array with parameters</param>
+            <returns>array copy or null</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Invoker.CreateEventParamsArray(System.Boolean[],System.Object[])">
+            <summary>
+            copy the param array or returns null if paramsArray not set
+            </summary>
+            <param name="paramsModifier">ararry with modifiers correspond paramsArray</param>
+            <param name="paramsArray">array with parameters</param>
+            <returns>array copy or null</returns>
+        </member>
+        <member name="T:LateBindingApi.Core.COMObject">
+            <summary>
+            represents a managed COM proxy 
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._parentObject">
+            <summary>
+             returns parent proxy object
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._instanceType">
+            <summary>
+            returns Type of native proxy
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._underlyingObject">
+            <summary>
+            returns the native wrapped proxy
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._isEnumerator">
+            <summary>
+            returns instance is an enumerator
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._callQuitInDispose">
+            <summary>
+            returns instance implement quit method and dispose call them automaticly
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._isCurrentlyDisposing">
+            <summary>
+            returns instance is currently in diposing progress
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._isDisposed">
+            <summary>
+            returns instance is diposed means unusable
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._listChildObjects">
+            <summary>
+             child instance List
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.COMObject._listSupportedEntities">
+            <summary>
+            list of runtime supported entities
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(LateBindingApi.Core.COMObject)">
+            <summary>
+            creates instance and replace the given replacedObject in proxy management
+            all created childs from replacedObject are now childs from the new instance
+            </summary>
+            <param name="replacedObject"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(System.Object)">
+            <summary>
+            creates new instance with given proxy
+            </summary>
+            <param name="comProxy"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(LateBindingApi.Core.COMObject,System.Object)">
+            <summary>
+            creates new instance with given proxy and parent info
+            </summary>
+            <param name="parentObject"></param>
+            <param name="comProxy"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(LateBindingApi.Core.COMObject,System.Object,System.Boolean)">
+            <summary>
+            creates new instance with given proxy, parent info and info instance is an enumerator
+            </summary>
+            <param name="parentObject"></param>
+            <param name="comProxy"></param>
+             <param name="isEnumerator"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <summary>
+            creates new instance with given proxy, type info and parent info
+            </summary>
+            <param name="parentObject"></param>
+            <param name="comProxy"></param>
+            <param name="comProxyType"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor(System.String)">
+            <summary>
+            creates a new instace with progid
+            </summary>
+            <param name="progId">registered ProgID</param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.#ctor">
+            <summary>
+            not usable stub constructor
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.EntityIsAvailable(System.String)">
+            <summary>
+            NetOffice method: returns information the proxy provides a method or property with given name at runtime
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.EntityIsAvailable(System.String,LateBindingApi.Core.SupportEntityType)">
+            <summary>
+             NetOffice method: returns information the proxy provides a method or property with given name at runtime
+            </summary>
+            <param name="name"></param>
+            <param name="searchType">limit searching for method or property</param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.CreateFromProgId(System.String)">
+            <summary>
+            NetOffice method: create object from progid
+            </summary>
+            <param name="progId"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.AddChildObject(LateBindingApi.Core.COMObject)">
+            <summary>
+             NetOffice method: add object to child list
+            </summary>
+            <param name="childObject"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.RemoveChildObject(LateBindingApi.Core.COMObject)">
+            <summary>
+            remove object to child list
+            </summary>
+            <param name="childObject"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.ReleaseCOMProxy">
+            <summary>
+             NetOffice method: release com proxy
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.CallQuit(System.Object)">
+            <summary>
+            calls Quit for a proxy
+            </summary>
+            <param name="proxy"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.Dispose(System.Boolean)">
+            <summary>
+            NetOffice method: dispose instance and all child instances
+            </summary>
+            <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.Dispose">
+            <summary>
+            NetOffice method: dispose instance and all child instances
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.DisposeChildInstances(System.Boolean)">
+            <summary>
+            NetOffice method: dispose all child instances
+            </summary>
+            <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.DisposeChildInstances">
+            <summary>
+            NetOffice method: dispose all child instances
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.UnderlyingObject">
+            <summary>
+            NetOffice property: returns the native wrapped proxy
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.UnderlyingTypeName">
+            <summary>
+            NetOffice property: returns class name of native wrapped proxy
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.IsDisposed">
+            <summary>
+            NetOffice property: returns instance is diposed means unusable
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.InstanceType">
+            <summary>
+            NetOffice property: returns Type of native proxy
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.ParentObject">
+            <summary>
+            NetOffice property: returns parent proxy object
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.IsCurrentlyDisposing">
+            <summary>
+            NetOffice property: returns instance is currently in diposing progress
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.IsEventBind">
+            <summary>
+            NetOffice property: returns instance export events
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.EventBridgeInitialized">
+            <summary>
+            NetOffice property: returns event bridge is advised
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.HasEventRecipients">
+            <summary>
+            NetOffice property: retuns instance has one or more event recipients
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.COMObject.ListChildObjects">
+            <summary>
+             child instance List
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.CustomMethodAttribute">
+            <summary>
+            this method is a custom overload from NetOffice
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.SupportEntityType">
+            <summary>
+            search parameter for the EntityIsAvailable Method
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.SupportEntityType.Both">
+            <summary>
+            looking for a method or a property
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.SupportEntityType.Property">
+            <summary>
+            looking for a property only
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.SupportEntityType.Method">
+            <summary>
+            looking for a method only
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.Factory">
+            <summary>
+            Creation Factory for COMObject and derived types
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.Initialize">
+            <summary>
+            Must be called from client assembly for COMObject Support
+            Recieve FactoryInfos from all loaded LateBindingApi based Assemblies
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.Clear">
+            <summary>
+            clears factory informations List
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.GetSupportedEntities(System.Object)">
+            <summary>
+            creates an entity support list for a proxy
+            </summary>
+            <param name="comProxy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <summary>
+            creates a new COMObject based on wrapperClassType
+            </summary>
+            <param name="caller"></param>
+            <param name="comProxy"></param>
+            <param name="wrapperClassType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateKnownObjectArrayFromComProxy(LateBindingApi.Core.COMObject,System.Object[],System.Type)">
+            <summary>
+            creates a new COMObject array based on wrapperClassType
+            </summary>
+            <param name="caller"></param>
+            <param name="comProxyArray"></param>
+            <param name="wrapperClassType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateObjectFromComProxy(LateBindingApi.Core.COMObject,System.Object)">
+            <summary>
+            creates a new COMObject based on classType of comProxy 
+            </summary>
+            <param name="caller">parent there have created comProxy</param>
+            <param name="comProxy">new created proxy</param>
+            <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateObjectFromComProxy(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <summary>
+            creates a new COMObject based on classType of comProxy 
+            </summary>
+            <param name="caller">parent there have created comProxy</param>
+            <param name="comProxy">new created proxy</param>
+            <param name="comProxyType">Type of comProxy</param>
+            <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateObjectFromComProxy(LateBindingApi.Core.IFactoryInfo,LateBindingApi.Core.COMObject,System.Object,System.Type,System.String,System.String)">
+            <summary>
+            creates a new COMObject from factoryInfo
+            </summary>
+            <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
+            <param name="caller">parent there have created comProxy</param>
+            <param name="comProxy">new created proxy</param>
+            <param name="comProxyType">Type of comProxy</param>
+            <param name="className">name of COMServer proxy class</param>
+            <param name="fullClassName">full namespace and name of COMServer proxy class</param>
+            <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.CreateObjectArrayFromComProxy(LateBindingApi.Core.COMObject,System.Object[])">
+            <summary>
+             creates a new COMObject array
+            </summary>
+            <param name="caller">parent there have created comProxy</param>
+            <param name="comProxyArray">new created proxy array</param>
+            <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.DisposeAllCOMProxies">
+            <summary>
+            dispose all open objects
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.AddObjectToList(LateBindingApi.Core.COMObject)">
+            <summary>
+            add object to global list
+            </summary>
+            <param name="proxy"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.RemoveObjectFromList(LateBindingApi.Core.COMObject)">
+            <summary>
+            remove object from global list
+            </summary>
+            <param name="proxy"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.AddAssembly(System.String,System.Reflection.Assembly)">
+            <summary>
+            add assembly to list
+            </summary>
+            <param name="name"></param>
+            <param name="itemAssembly"></param>
+            <returns>list of dependend assemblies</returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.GetTypeGuid(System.Runtime.InteropServices.ComTypes.ITypeInfo)">
+            <summary>
+            returns id of an interface
+            </summary>
+            <param name="typeInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.GetParentLibraryGuid(System.Object)">
+            <summary>
+            get the guid from type lib there is the type defined
+            </summary>
+            <param name="comProxy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.GetFactoryInfo(System.Object)">
+            <summary>
+            get wrapper class factory info 
+            </summary>
+            <param name="comProxy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.Factory.GetObjectType(System.Object)">
+            <summary>
+            returns the Type for comProxy or null if param not set
+            </summary>
+            <param name="comProxy"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LateBindingApi.Core.Factory.Assemblies">
+            <summary>
+            returns an array about currently loaded LateBindingApi assemblies
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.Factory.ProxyCount">
+            <summary>
+            Returns count count of open proxies
+            </summary>
+        </member>
+        <member name="E:LateBindingApi.Core.Factory.ProxyCountChanged">
+            <summary>
+            notify info the count of proxies there open are changed
+            in case of notify comes from event trigger created proxy the call comes from other thread
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.Factory.ProxyCountChangedHandler">
+            <summary>
+            ProxyCountChanged delegate
+            </summary>
+            <param name="proxyCount"></param>
+        </member>
+        <member name="T:LateBindingApi.Core.LateBindingAttribute">
+            <summary>
+            Indicates assembly is a latebinding api assembly
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.LateBindingAttribute.SupportedApiVersion">
+            <summary>
+            version
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.LateBindingAttribute.#ctor(System.String)">
+            <summary>
+            creates instance
+            </summary>
+            <param name="apiVersion"></param>
+        </member>
+        <member name="T:LateBindingApi.Core.IFactoryInfo">
+            <summary>
+            info about a lateBinding assembly
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.IFactoryInfo.Contains(System.String)">
+            <summary>
+            returns info a class with given name exists in lateBinding assembly
+            </summary>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LateBindingApi.Core.IFactoryInfo.Namespace">
+            <summary>
+            namespace of assembly
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.IFactoryInfo.ComponentGuid">
+            <summary>
+            guid of component there represents the lateBinding assembly
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.IFactoryInfo.Assembly">
+            <summary>
+            assembly info of lateBinding assembly
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.IFactoryInfo.Dependencies">
+            <summary>
+            returns a name array of dependent LateBindingApi assemblies
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.ConsoleMode">
+            <summary>
+            Operation mode for DebugConsole
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.ConsoleMode.None">
+            <summary>
+            debug log are not enabled
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.ConsoleMode.Console">
+            <summary>
+            debug log was redirected to System.Console
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.ConsoleMode.LogFile">
+            <summary>
+            debug log append to a logfile
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.ConsoleMode.MemoryList">
+            <summary>
+            hold all debug and exceptions logs in a internal string list
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.DebugConsole">
+            <summary>
+            offers various debug, log and diagnostic functionality
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.DebugConsole.ClearMessagesList">
+            <summary>
+            clears message buffer
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.DebugConsole.WriteLine(System.String)">
+            <summary>
+            write log message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.DebugConsole.WriteException(System.Exception)">
+            <summary>
+            write exception log message
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.DebugConsole.AppendToLogFile(System.String)">
+            <summary>
+            append message to logfile
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:LateBindingApi.Core.DebugConsole.CreateExecptionLog(System.Exception)">
+            <summary>
+            convert an exception to a string
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LateBindingApi.Core.DebugConsole.AppendTimeInfoEnabled">
+            <summary>
+            append current time information in messages
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.DebugConsole.Mode">
+            <summary>
+            operation mode
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.DebugConsole.FileName">
+            <summary>
+            name full file path and name of a logfile, must be set if Mode == LogFile
+            </summary>
+        </member>
+        <member name="P:LateBindingApi.Core.DebugConsole.Messages">
+            <summary>
+            returns all collected messages if Mode == MemoryList
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.CustomEnumeratorAttribute">
+            <summary>
+            this enumerator is not supported by the instance, its a custom service by NetOffice
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.EntityType">
+            <summary>
+            Indicates original type of entity
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsCoClass">
+            <summary>
+            entity is class
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsDispatchInterface">
+            <summary>
+            entity is dispatch interface
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsInterface">
+            <summary>
+            entity is interface
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsModule">
+            <summary>
+            entity is module
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsEnum">
+            <summary>
+            entity is enum
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsStruct">
+            <summary>
+            entity is struct
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityType.IsConstants">
+            <summary>
+            entity is const module
+            </summary>
+        </member>
+        <member name="T:LateBindingApi.Core.EntityTypeAttribute">
+            <summary>
+            Indicates original type of entity in COM Type Library
+            </summary>
+        </member>
+        <member name="F:LateBindingApi.Core.EntityTypeAttribute.Type">
+            <summary>
+            returns type of entity
+            </summary>
+        </member>
+        <member name="M:LateBindingApi.Core.EntityTypeAttribute.#ctor(LateBindingApi.Core.EntityType)">
+            <summary>
+            creates instance
+            </summary>
+            <param name="type"></param>
+        </member>
+    </members>
+</doc>

@@ -36,17 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ExcelApi, Version=1.3.0.0, Culture=neutral, PublicKeyToken=b1d22616f2ea9ad3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Assemblies\ExcelApi.dll</HintPath>
+      <HintPath>..\..\..\NetOffice Assemblies\ExcelApi.dll</HintPath>
     </Reference>
-    <Reference Include="LateBindingApi.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="LateBindingApi.Core, Version=1.3.0.0, Culture=neutral, PublicKeyToken=89c3bee3540d2d4c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Assemblies\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\NetOffice Assemblies\LateBindingApi.Core.dll</HintPath>
     </Reference>
-    <Reference Include="OfficeApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="OfficeApi, Version=1.3.0.0, Culture=neutral, PublicKeyToken=0e3d40a252277b73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Assemblies\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\NetOffice Assemblies\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.DataSetExtensions" />
