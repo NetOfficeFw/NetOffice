@@ -20,31 +20,17 @@ Public Class Form1
         Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
         Dim workSheet As Excel.Worksheet = workBook.Worksheets(1)
 
-        ' do background color for cells
-        Dim listSeperator As String = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ListSeparator
 
-        ' draw a smile face
-        Dim rangeAdressFace As String = String.Format("$C10:$M10{0}$C30:$M30{0}$C11:$C30{0}$M11:$M30", listSeperator)
-        workSheet.get_Range(rangeAdressFace).Interior.Color = ToDouble(Color.DarkGreen)
+        ' draw back color and perform the BorderAround method
+        workSheet.get_Range("$B2:$B5").Interior.Color = ToDouble(Color.DarkGreen)
+        workSheet.get_Range("$B2:$B5").BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic)
 
-        Dim rangeAdressEyes As String = String.Format("$F14{0}$J14", listSeperator)
-        workSheet.get_Range(rangeAdressEyes).Interior.Color = ToDouble(Color.Black)
+        ' draw back color and border the range explicitly
+        workSheet.get_Range("$D2:$D5").Interior.Color = ToDouble(Color.DarkGreen)
+        workSheet.get_Range("$D2:$D5").Borders(XlBordersIndex.xlInsideHorizontal).LineStyle = XlLineStyle.xlDouble
+        workSheet.get_Range("$D2:$D5").Borders(XlBordersIndex.xlInsideHorizontal).Weight = 4
+        workSheet.get_Range("$D2:$D5").Borders(XlBordersIndex.xlInsideHorizontal).Color = ToDouble(Color.Black)
 
-        Dim rangeAdressNoise As String = String.Format("$G18:$I19", listSeperator)
-        workSheet.get_Range(rangeAdressNoise).Interior.Color = ToDouble(Color.DarkGreen)
-
-        Dim rangeAdressMouth As String = String.Format("$F26{0}$J26{0}$G27:$I27", listSeperator)
-        workSheet.get_Range(rangeAdressMouth).Interior.Color = ToDouble(Color.DarkGreen)
-
-        ' border the face with the border arround method
-        workSheet.get_Range(rangeAdressFace).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic)
-        workSheet.get_Range(rangeAdressEyes).BorderAround(XlLineStyle.xlDashDot, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic)
-        workSheet.get_Range(rangeAdressNoise).BorderAround(XlLineStyle.xlDouble, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic)
-
-        ' border explicitly
-        workSheet.get_Range(rangeAdressMouth).Borders(XlBordersIndex.xlEdgeBottom).LineStyle = XlLineStyle.xlDouble
-        workSheet.get_Range(rangeAdressMouth).Borders(XlBordersIndex.xlEdgeBottom).Weight = 4
-        workSheet.get_Range(rangeAdressMouth).Borders(XlBordersIndex.xlEdgeBottom).Color = ToDouble(Color.Black)
 
         ' save the book
         Dim fileExtension As String = GetDefaultExtension(excelApplication)
