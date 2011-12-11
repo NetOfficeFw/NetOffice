@@ -2287,7 +2287,7 @@
             <param name="Subject">string Subject</param>
             <param name="ShowMessage">bool ShowMessage</param>
         </member>
-        <member name="M:NetOffice.PowerPointApi._Presentation.NewSectionAfter(System.Int32,System.Boolean,System.String,System.Int32)">
+        <member name="M:NetOffice.PowerPointApi._Presentation.NewSectionAfter(System.Int32,System.Boolean,System.String,System.Int32@)">
             <summary>
             SupportByLibrary PowerPoint 12, 14
             </summary>
@@ -18577,7 +18577,7 @@
             <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
             <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
         </member>
-        <member name="M:NetOffice.PowerPointApi.TextRange.RotatedBounds(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+        <member name="M:NetOffice.PowerPointApi.TextRange.RotatedBounds(System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@)">
             <summary>
             SupportByLibrary PowerPoint 9, 10, 11, 12, 14
             </summary>
@@ -24109,7 +24109,7 @@
             <param name="DistributeCmd">NetOffice.OfficeApi.Enums.MsoDistributeCmd DistributeCmd</param>
             <param name="RelativeTo">NetOffice.OfficeApi.Enums.MsoTriState RelativeTo</param>
         </member>
-        <member name="M:NetOffice.PowerPointApi.ShapeRange.GetPolygonalRepresentation(System.Int32,System.Single,System.Int32,NetOffice.OfficeApi.Enums.MsoTriState)">
+        <member name="M:NetOffice.PowerPointApi.ShapeRange.GetPolygonalRepresentation(System.Int32,System.Single,System.Int32@,NetOffice.OfficeApi.Enums.MsoTriState@)">
             <summary>
             SupportByLibrary PowerPoint 9, 10, 11, 12, 14
             </summary>

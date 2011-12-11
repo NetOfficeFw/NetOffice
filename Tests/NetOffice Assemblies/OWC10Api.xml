@@ -310,7 +310,7 @@
             </summary>
             <param name="ErrorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.ChErrorBars.GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum,System.Object,System.Object)">
+        <member name="M:NetOffice.OWC10Api.ChErrorBars.GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum,System.Object@,System.Object@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -3507,7 +3507,7 @@
         <member name="M:NetOffice.OWC10Api.IEnumOleUndoUnits.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IEnumOleUndoUnits.RemoteNext(System.Int32,NetOffice.OWC10Api.IOleUndoUnit,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IEnumOleUndoUnits.RemoteNext(System.Int32,NetOffice.OWC10Api.IOleUndoUnit@,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -3526,7 +3526,7 @@
             SupportByLibrary OWC10 1
             </summary>
         </member>
-        <member name="M:NetOffice.OWC10Api.IEnumOleUndoUnits.Clone(NetOffice.OWC10Api.IEnumOleUndoUnits)">
+        <member name="M:NetOffice.OWC10Api.IEnumOleUndoUnits.Clone(NetOffice.OWC10Api.IEnumOleUndoUnits@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -5638,7 +5638,7 @@
             </summary>
             <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetOpenParentState(System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetOpenParentState(System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -5662,25 +5662,25 @@
             </summary>
             <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoManager.EnumUndoable(NetOffice.OWC10Api.IEnumOleUndoUnits)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoManager.EnumUndoable(NetOffice.OWC10Api.IEnumOleUndoUnits@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
             <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoManager.EnumRedoable(NetOffice.OWC10Api.IEnumOleUndoUnits)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoManager.EnumRedoable(NetOffice.OWC10Api.IEnumOleUndoUnits@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
             <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetLastUndoDescription(System.String)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetLastUndoDescription(System.String@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
             <param name="pbstr">string pbstr</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetLastRedoDescription(System.String)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoManager.GetLastRedoDescription(System.String@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -10863,7 +10863,7 @@
             </summary>
             <param name="Dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.ChSeries.GetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum,System.Object,System.Object)">
+        <member name="M:NetOffice.OWC10Api.ChSeries.GetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum,System.Object@,System.Object@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -13369,7 +13369,7 @@
         <member name="M:NetOffice.OWC10Api.IXRangeEnum.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IXRangeEnum.Next(System.Int32,System.Object,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IXRangeEnum.Next(System.Int32,System.Object@,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -13388,7 +13388,7 @@
             SupportByLibrary OWC10 1
             </summary>
         </member>
-        <member name="M:NetOffice.OWC10Api.IXRangeEnum.Clone(NetOffice.OWC10Api.IXRangeEnum)">
+        <member name="M:NetOffice.OWC10Api.IXRangeEnum.Clone(NetOffice.OWC10Api.IXRangeEnum@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -13400,7 +13400,7 @@
             </summary>
             <param name="nTraverseCode">UIntPtr nTraverseCode</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IXRangeEnum.ChangeType(System.Object,System.Object,System.Int16)">
+        <member name="M:NetOffice.OWC10Api.IXRangeEnum.ChangeType(System.Object@,System.Object,System.Int16)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -13408,7 +13408,7 @@
             <param name="In">object In</param>
             <param name="vt">Int16 vt</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IXRangeEnum.GetElements(System.Int32,System.Int32,System.Object,System.Int32,System.Int16,System.Int32,System.Object)">
+        <member name="M:NetOffice.OWC10Api.IXRangeEnum.GetElements(System.Int32,System.Int32,System.Object,System.Int32@,System.Int16,System.Int32,System.Object)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -18471,7 +18471,7 @@
             </summary>
             <param name="Dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.ChChart.GetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum,System.Object,System.Object)">
+        <member name="M:NetOffice.OWC10Api.ChChart.GetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum,System.Object@,System.Object@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20408,7 +20408,7 @@
             </summary>
             <param name="Element">object Element</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.ScriptValidate(System.Object,System.Object,System.Object,System.String,NetOffice.OWC10Api.Enums.DscDropLocationEnum,NetOffice.OWC10Api.Enums.DscDropTypeEnum,System.String,System.Object,System.Object)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.ScriptValidate(System.Object,System.Object,System.Object,System.String,NetOffice.OWC10Api.Enums.DscDropLocationEnum,NetOffice.OWC10Api.Enums.DscDropTypeEnum,System.String@,System.Object@,System.Object@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20422,7 +20422,7 @@
             <param name="RowsourcesOut">object RowsourcesOut</param>
             <param name="RelationshipsOut">object RelationshipsOut</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.ValidateDrop(System.Object,System.String,NetOffice.OWC10Api.Enums.DscDropLocationEnum,NetOffice.OWC10Api.Enums.DscDropTypeEnum,System.String,System.Object,System.Object,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.ValidateDrop(System.Object,System.String,NetOffice.OWC10Api.Enums.DscDropLocationEnum,NetOffice.OWC10Api.Enums.DscDropTypeEnum,System.String@,System.Object@,System.Object@,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20470,7 +20470,7 @@
             SupportByLibrary OWC10 1
             </summary>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetSectionInfo(System.Object,System.String,NetOffice.OWC10Api.Enums.SectTypeEnum,NetOffice.OWC10Api.GroupLevel)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetSectionInfo(System.Object,System.String@,NetOffice.OWC10Api.Enums.SectTypeEnum@,NetOffice.OWC10Api.GroupLevel@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20498,7 +20498,7 @@
             </summary>
             <param name="bstrRecordset">string bstrRecordset</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum,System.String)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum,System.String@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20518,7 +20518,7 @@
             <param name="RecordsetName">string RecordsetName</param>
             <param name="Recordset">NetOffice.ADODBApi.Recordset Recordset</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetOfflineDisplayInfo(System.String,System.String,System.String,System.String)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.GetOfflineDisplayInfo(System.String@,System.String@,System.String@,System.String@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -20533,7 +20533,7 @@
             </summary>
             <param name="RefreshType">NetOffice.OWC10Api.Enums.RefreshType RefreshType</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IDataSourceControl.FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel,System.Int32,NetOffice.OWC10Api.GroupLevel)">
+        <member name="M:NetOffice.OWC10Api.IDataSourceControl.FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel,System.Int32,NetOffice.OWC10Api.GroupLevel@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -25188,13 +25188,13 @@
             </summary>
             <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoUnit.GetDescription(System.String)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoUnit.GetDescription(System.String@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
             <param name="pbstr">string pbstr</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleUndoUnit.GetUnitType(System.Guid,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IOleUndoUnit.GetUnitType(System.Guid@,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -25251,7 +25251,7 @@
             </summary>
             <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.IOleParentUndoUnit.GetParentState(System.Int32)">
+        <member name="M:NetOffice.OWC10Api.IOleParentUndoUnit.GetParentState(System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -27831,7 +27831,7 @@
         <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreSelect(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreSelect(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -27850,7 +27850,7 @@
             <param name="nOldNodeId">Int32 nOldNodeId</param>
             <param name="nOldTypeId">Int32 nOldTypeId</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreExpand(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreExpand(System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -27867,7 +27867,7 @@
             <param name="nTypeId">Int32 nTypeId</param>
             <param name="fExpand">Int32 fExpand</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreDrag(System.Int32,System.Int32,System.Object,System.Object,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.PreDrag(System.Int32,System.Int32,System.Object@,System.Object@,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -27892,7 +27892,7 @@
             <param name="nNodeId">Int32 nNodeId</param>
             <param name="nTypeId">Int32 nTypeId</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.ContextMenu(System.Int32,System.Int32,System.UIntPtr,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.ContextMenu(System.Int32,System.Int32,System.UIntPtr,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>
@@ -27936,7 +27936,7 @@
             <param name="nNodeId">Int32 nNodeId</param>
             <param name="nTypeId">Int32 nTypeId</param>
         </member>
-        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.KeyEvent(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OWC10Api.FieldListHierarchySite.KeyEvent(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
             SupportByLibrary OWC10 1
             </summary>

@@ -17690,20 +17690,20 @@
             SupportByLibrary Word 10, 11, 12, 14
             </summary>
         </member>
-        <member name="M:NetOffice.WordApi.DiagramNode.MoveNode(NetOffice.WordApi.DiagramNode,NetOffice.OfficeApi.Enums.MsoRelativeNodePosition)">
+        <member name="M:NetOffice.WordApi.DiagramNode.MoveNode(NetOffice.WordApi.DiagramNode@,NetOffice.OfficeApi.Enums.MsoRelativeNodePosition)">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
             </summary>
             <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
             <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
         </member>
-        <member name="M:NetOffice.WordApi.DiagramNode.ReplaceNode(NetOffice.WordApi.DiagramNode)">
+        <member name="M:NetOffice.WordApi.DiagramNode.ReplaceNode(NetOffice.WordApi.DiagramNode@)">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
             </summary>
             <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
         </member>
-        <member name="M:NetOffice.WordApi.DiagramNode.SwapNode(NetOffice.WordApi.DiagramNode,NetOffice.OfficeApi.Enums.MsoRelativeNodePosition)">
+        <member name="M:NetOffice.WordApi.DiagramNode.SwapNode(NetOffice.WordApi.DiagramNode@,NetOffice.OfficeApi.Enums.MsoRelativeNodePosition)">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
             </summary>
@@ -17718,7 +17718,7 @@
             <param name="TargetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
             <param name="Pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
         </member>
-        <member name="M:NetOffice.WordApi.DiagramNode.TransferChildren(NetOffice.WordApi.DiagramNode)">
+        <member name="M:NetOffice.WordApi.DiagramNode.TransferChildren(NetOffice.WordApi.DiagramNode@)">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
             </summary>
@@ -29922,7 +29922,7 @@
             </summary>
             <param name="obj">object obj</param>
         </member>
-        <member name="M:NetOffice.WordApi.Window.GetPoint(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.WordApi.Window.GetPoint(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
             </summary>
@@ -53838,7 +53838,7 @@
             </summary>
             <param name="ChartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
         </member>
-        <member name="M:NetOffice.WordApi.Chart.GetChartElement(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.WordApi.Chart.GetChartElement(System.Int32,System.Int32,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Word 14
             </summary>
@@ -83610,7 +83610,7 @@
         <member name="M:NetOffice.WordApi.ConnectorFormat.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.WordApi.ConnectorFormat.BeginConnect(NetOffice.WordApi.Shape,System.Int32)">
+        <member name="M:NetOffice.WordApi.ConnectorFormat.BeginConnect(NetOffice.WordApi.Shape@,System.Int32)">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
             </summary>
@@ -83622,7 +83622,7 @@
             SupportByLibrary Word 9, 10, 11, 12, 14
             </summary>
         </member>
-        <member name="M:NetOffice.WordApi.ConnectorFormat.EndConnect(NetOffice.WordApi.Shape,System.Int32)">
+        <member name="M:NetOffice.WordApi.ConnectorFormat.EndConnect(NetOffice.WordApi.Shape@,System.Int32)">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
             </summary>

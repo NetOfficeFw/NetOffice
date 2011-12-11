@@ -42092,7 +42092,7 @@
             <param name="ProcName">string ProcName</param>
             <param name="ProcKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
         </member>
-        <member name="M:NetOffice.AccessApi.Module.get_ProcOfLine(System.Int32,NetOffice.VBIDEApi.Enums.vbext_ProcKind)">
+        <member name="M:NetOffice.AccessApi.Module.get_ProcOfLine(System.Int32,NetOffice.VBIDEApi.Enums.vbext_ProcKind@)">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
             Get

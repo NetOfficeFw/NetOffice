@@ -1005,7 +1005,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IAccessible.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi.IAccessible.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1013,7 +1013,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IAccessible.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi.IAccessible.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1047,7 +1047,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IAccessible.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi.IAccessible.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -1057,7 +1057,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IAccessible.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IAccessible.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -1274,7 +1274,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarControl.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBarControl.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1282,7 +1282,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarControl.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi.CommandBarControl.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1316,7 +1316,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarControl.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBarControl.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -1326,7 +1326,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarControl.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.CommandBarControl.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -1763,7 +1763,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1771,7 +1771,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -1819,7 +1819,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -1829,7 +1829,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi._CommandBarComboBox.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -2108,7 +2108,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarPopup.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBarPopup.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -2116,7 +2116,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarPopup.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi.CommandBarPopup.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -2150,7 +2150,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarPopup.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBarPopup.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -2160,7 +2160,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBarPopup.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.CommandBarPopup.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -3653,7 +3653,7 @@
         <member name="M:NetOffice.OfficeApi.IConverter.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverter.HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences,NetOffice.OfficeApi.IConverterUICallback)">
+        <member name="M:NetOffice.OfficeApi.IConverter.HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences@,NetOffice.OfficeApi.IConverterUICallback)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -3667,7 +3667,7 @@
             </summary>
             <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverter.HrImport(System.String,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences,NetOffice.OfficeApi.IConverterUICallback)">
+        <member name="M:NetOffice.OfficeApi.IConverter.HrImport(System.String,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences@,NetOffice.OfficeApi.IConverterUICallback)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -3677,7 +3677,7 @@
             <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
             <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverter.HrExport(System.String,System.String,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences,NetOffice.OfficeApi.IConverterUICallback)">
+        <member name="M:NetOffice.OfficeApi.IConverter.HrExport(System.String,System.String,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences@,NetOffice.OfficeApi.IConverterUICallback)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -3688,7 +3688,7 @@
             <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
             <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverter.HrGetFormat(System.String,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences,NetOffice.OfficeApi.IConverterUICallback)">
+        <member name="M:NetOffice.OfficeApi.IConverter.HrGetFormat(System.String,System.String@,NetOffice.OfficeApi.IConverterApplicationPreferences,NetOffice.OfficeApi.IConverterPreferences@,NetOffice.OfficeApi.IConverterUICallback)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -3698,7 +3698,7 @@
             <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
             <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverter.HrGetErrorString(System.Int32,System.String,NetOffice.OfficeApi.IConverterApplicationPreferences)">
+        <member name="M:NetOffice.OfficeApi.IConverter.HrGetErrorString(System.Int32,System.String@,NetOffice.OfficeApi.IConverterApplicationPreferences)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -6551,7 +6551,7 @@
         <member name="M:NetOffice.OfficeApi.IBlogPictureExtensibility.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogPictureExtensibility.BlogPictureProviderProperties(System.String,System.String)">
+        <member name="M:NetOffice.OfficeApi.IBlogPictureExtensibility.BlogPictureProviderProperties(System.String@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -6567,7 +6567,7 @@
             <param name="ParentWindow">Int32 ParentWindow</param>
             <param name="Document">object Document</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogPictureExtensibility.PublishPicture(System.String,System.Int32,System.Object,System.Object,System.String,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IBlogPictureExtensibility.PublishPicture(System.String,System.Int32,System.Object,System.Object,System.String@,System.Int32)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -7497,7 +7497,7 @@
         <member name="M:NetOffice.OfficeApi._CommandBars.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBars.get_IdsString(System.Int32,System.String)">
+        <member name="M:NetOffice.OfficeApi._CommandBars.get_IdsString(System.Int32,System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -7505,7 +7505,7 @@
             <param name="ids">Int32 ids</param>
             <param name="pbstrName">string pbstrName</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBars.get_TmcGetName(System.Int32,System.String)">
+        <member name="M:NetOffice.OfficeApi._CommandBars.get_TmcGetName(System.Int32,System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -9920,25 +9920,25 @@
         <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetLcid(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetLcid(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
             <param name="plcid">Int32 plcid</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetHwnd(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetHwnd(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
             <param name="phwnd">Int32 phwnd</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetApplication(System.String)">
+        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrGetApplication(System.String@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
             <param name="pbstrApplication">string pbstrApplication</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrCheckFormat(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterApplicationPreferences.HrCheckFormat(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -10819,6 +10819,39 @@
         <member name="T:NetOffice.OfficeApi.IRibbonControl">
             <summary>
              DispatchInterface IRibbonControl SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonControl.#ctor(LateBindingApi.Core.COMObject,System.Object)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonControl.#ctor(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+            <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonControl.#ctor(LateBindingApi.Core.COMObject)">
+            <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonControl.#ctor(System.String)">
+            <param name="progId">registered ProgID</param>
+        </member>
+        <member name="P:NetOffice.OfficeApi.IRibbonControl.Id">
+            <summary>
+            SupportByLibrary Office 12, 14
+            Get
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.IRibbonControl.Context">
+            <summary>
+            SupportByLibrary Office 12, 14
+            Get
+            </summary>
+        </member>
+        <member name="P:NetOffice.OfficeApi.IRibbonControl.Tag">
+            <summary>
+            SupportByLibrary Office 12, 14
+            Get
             </summary>
         </member>
         <member name="T:NetOffice.OfficeApi.ICustomTaskPaneConsumer">
@@ -16810,7 +16843,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -16818,7 +16851,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -16859,7 +16892,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -16869,7 +16902,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi._CommandBarActiveX.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -19292,14 +19325,14 @@
         <member name="M:NetOffice.OfficeApi.DocumentInspector.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.DocumentInspector.Inspect(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus,System.String)">
+        <member name="M:NetOffice.OfficeApi.DocumentInspector.Inspect(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
             <param name="Status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
             <param name="Results">string Results</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.DocumentInspector.Fix(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus,System.String)">
+        <member name="M:NetOffice.OfficeApi.DocumentInspector.Fix(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -22914,7 +22947,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBar.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBar.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -22922,7 +22955,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBar.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi.CommandBar.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -22956,7 +22989,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBar.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi.CommandBar.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -22966,7 +22999,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.CommandBar.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.CommandBar.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -24328,7 +24361,7 @@
             </summary>
             <param name="ParentWindow">object ParentWindow</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.EncryptionProvider.Authenticate(System.Object,System.Object,System.UIntPtr)">
+        <member name="M:NetOffice.OfficeApi.EncryptionProvider.Authenticate(System.Object,System.Object,System.UIntPtr@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -24373,7 +24406,7 @@
             <param name="EncryptedStream">object EncryptedStream</param>
             <param name="UnencryptedStream">object UnencryptedStream</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.EncryptionProvider.ShowSettings(System.Int32,System.Object,System.Boolean,System.Boolean)">
+        <member name="M:NetOffice.OfficeApi.EncryptionProvider.ShowSettings(System.Int32,System.Object,System.Boolean,System.Boolean@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -25428,7 +25461,7 @@
             </summary>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarButton.get_accHelpTopic(System.String,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarButton.get_accHelpTopic(System.String@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -25436,7 +25469,7 @@
             <param name="pszHelpFile">string pszHelpFile</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarButton.get_accHelpTopic(System.String)">
+        <member name="M:NetOffice.OfficeApi._CommandBarButton.get_accHelpTopic(System.String@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             Get
@@ -25470,7 +25503,7 @@
             </summary>
             <param name="flagsSelect">Int32 flagsSelect</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarButton.accLocation(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
+        <member name="M:NetOffice.OfficeApi._CommandBarButton.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -25480,7 +25513,7 @@
             <param name="pcyHeight">Int32 pcyHeight</param>
             <param name="varChild">optional object varChild</param>
         </member>
-        <member name="M:NetOffice.OfficeApi._CommandBarButton.accLocation(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi._CommandBarButton.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
             </summary>
@@ -29562,7 +29595,7 @@
             <param name="Format">Int32 Format</param>
             <param name="Size">Int32 Size</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IMsoChart.Evaluate(System.Object,System.Int32,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IMsoChart.Evaluate(System.Object,System.Int32,System.Int32@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -31044,6 +31077,57 @@
              DispatchInterface IRibbonUI SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.#ctor(LateBindingApi.Core.COMObject,System.Object)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.#ctor(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+            <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.#ctor(LateBindingApi.Core.COMObject)">
+            <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.#ctor(System.String)">
+            <param name="progId">registered ProgID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.Invalidate">
+            <summary>
+            SupportByLibrary Office 12, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.InvalidateControl(System.String)">
+            <summary>
+            SupportByLibrary Office 12, 14
+            </summary>
+            <param name="ControlID">string ControlID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.InvalidateControlMso(System.String)">
+            <summary>
+            SupportByLibrary Office 14
+            </summary>
+            <param name="ControlID">string ControlID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.ActivateTab(System.String)">
+            <summary>
+            SupportByLibrary Office 14
+            </summary>
+            <param name="ControlID">string ControlID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.ActivateTabMso(System.String)">
+            <summary>
+            SupportByLibrary Office 14
+            </summary>
+            <param name="ControlID">string ControlID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonUI.ActivateTabQ(System.String,System.String)">
+            <summary>
+            SupportByLibrary Office 14
+            </summary>
+            <param name="ControlID">string ControlID</param>
+            <param name="Namespace">string Namespace</param>
+        </member>
         <member name="T:NetOffice.OfficeApi.ThemeColor">
             <summary>
              DispatchInterface ThemeColor SupportByLibraryAttribute Office, 12,14
@@ -31590,7 +31674,7 @@
             </summary>
             <param name="uPercentComplete">UIntPtr uPercentComplete</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterUICallback.HrMessageBox(System.String,System.String,System.UIntPtr,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterUICallback.HrMessageBox(System.String,System.String,System.UIntPtr,System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -31599,7 +31683,7 @@
             <param name="uType">UIntPtr uType</param>
             <param name="pidResult">Int32 pidResult</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterUICallback.HrInputBox(System.String,System.String,System.String,System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterUICallback.HrInputBox(System.String,System.String,System.String@,System.Int32)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -31801,14 +31885,14 @@
         <member name="M:NetOffice.OfficeApi.IDocumentInspector.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IDocumentInspector.GetInfo(System.String,System.String)">
+        <member name="M:NetOffice.OfficeApi.IDocumentInspector.GetInfo(System.String@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
             <param name="Name">string Name</param>
             <param name="Desc">string Desc</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IDocumentInspector.Inspect(System.Object,NetOffice.OfficeApi.Enums.MsoDocInspectorStatus,System.String,System.String)">
+        <member name="M:NetOffice.OfficeApi.IDocumentInspector.Inspect(System.Object,NetOffice.OfficeApi.Enums.MsoDocInspectorStatus@,System.String@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -31817,7 +31901,7 @@
             <param name="Result">string Result</param>
             <param name="Action">string Action</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IDocumentInspector.Fix(System.Object,System.Int32,NetOffice.OfficeApi.Enums.MsoDocInspectorStatus,System.String)">
+        <member name="M:NetOffice.OfficeApi.IDocumentInspector.Fix(System.Object,System.Int32,NetOffice.OfficeApi.Enums.MsoDocInspectorStatus@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -33721,19 +33805,19 @@
         <member name="M:NetOffice.OfficeApi.IConverterPreferences.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrGetMacroEnabled(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrGetMacroEnabled(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
             <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrCheckFormat(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrCheckFormat(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
             <param name="pFormat">Int32 pFormat</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrGetLossySave(System.Int32)">
+        <member name="M:NetOffice.OfficeApi.IConverterPreferences.HrGetLossySave(System.Int32@)">
             <summary>
             SupportByLibrary Office 14
             </summary>
@@ -35048,7 +35132,7 @@
             <param name="MatchCase">NetOffice.OfficeApi.Enums.MsoTriState MatchCase</param>
             <param name="WholeWords">NetOffice.OfficeApi.Enums.MsoTriState WholeWords</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.TextRange2.RotatedBounds(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+        <member name="M:NetOffice.OfficeApi.TextRange2.RotatedBounds(System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37613,7 +37697,7 @@
         <member name="M:NetOffice.OfficeApi.IBlogExtensibility.#ctor(System.String)">
             <param name="progId">registered ProgID</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.BlogProviderProperties(System.String,System.String,NetOffice.OfficeApi.Enums.MsoBlogCategorySupport,System.Boolean)">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.BlogProviderProperties(System.String@,System.String@,NetOffice.OfficeApi.Enums.MsoBlogCategorySupport@,System.Boolean@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37622,7 +37706,7 @@
             <param name="CategorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
             <param name="Padding">bool Padding</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.SetupBlogAccount(System.String,System.Int32,System.Object,System.Boolean,System.Boolean)">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.SetupBlogAccount(System.String,System.Int32,System.Object,System.Boolean,System.Boolean@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37632,7 +37716,7 @@
             <param name="NewAccount">bool NewAccount</param>
             <param name="ShowPictureUI">bool ShowPictureUI</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetUserBlogs(System.String,System.Int32,System.Object,System.String[],System.String[],System.String[])">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetUserBlogs(System.String,System.Int32,System.Object,System.String[]@,System.String[]@,System.String[]@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37643,7 +37727,7 @@
             <param name="BlogIDs">String[] BlogIDs</param>
             <param name="BlogURLs">String[] BlogURLs</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetRecentPosts(System.String,System.Int32,System.Object,System.String[],System.String[],System.String[])">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetRecentPosts(System.String,System.Int32,System.Object,System.String[]@,System.String[]@,System.String[]@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37654,7 +37738,7 @@
             <param name="PostDates">String[] PostDates</param>
             <param name="PostIDs">String[] PostIDs</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.Open(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String[])">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.Open(System.String,System.String,System.Int32,System.String@,System.String@,System.String@,System.String[]@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37666,7 +37750,7 @@
             <param name="DatePosted">string DatePosted</param>
             <param name="Categories">String[] Categories</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.PublishPost(System.String,System.Int32,System.Object,System.String,System.String,System.String,System.String[],System.Boolean,System.String,System.String)">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.PublishPost(System.String,System.Int32,System.Object,System.String,System.String,System.String,System.String[],System.Boolean,System.String@,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37681,7 +37765,7 @@
             <param name="PostID">string PostID</param>
             <param name="PublishMessage">string PublishMessage</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.RepublishPost(System.String,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String[],System.Boolean,System.String)">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.RepublishPost(System.String,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String[],System.Boolean,System.String@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -37696,7 +37780,7 @@
             <param name="Draft">bool Draft</param>
             <param name="PublishMessage">string PublishMessage</param>
         </member>
-        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetCategories(System.String,System.Int32,System.Object,System.String[])">
+        <member name="M:NetOffice.OfficeApi.IBlogExtensibility.GetCategories(System.String,System.Int32,System.Object,System.String[]@)">
             <summary>
             SupportByLibrary Office 12, 14
             </summary>
@@ -38853,6 +38937,27 @@
             <summary>
              DispatchInterface IRibbonExtensibility SupportByLibraryAttribute Office, 12,14
             </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonExtensibility.#ctor(LateBindingApi.Core.COMObject,System.Object)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonExtensibility.#ctor(LateBindingApi.Core.COMObject,System.Object,System.Type)">
+            <param name="parentObject">object there has created the proxy</param>
+            <param name="comProxy">inner wrapped COM proxy</param>
+            <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonExtensibility.#ctor(LateBindingApi.Core.COMObject)">
+            <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonExtensibility.#ctor(System.String)">
+            <param name="progId">registered ProgID</param>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IRibbonExtensibility.GetCustomUI(System.String)">
+            <summary>
+            SupportByLibrary Office 12, 14
+            </summary>
+            <param name="RibbonID">string RibbonID</param>
         </member>
         <member name="T:NetOffice.OfficeApi.CustomXMLValidationError">
             <summary>
