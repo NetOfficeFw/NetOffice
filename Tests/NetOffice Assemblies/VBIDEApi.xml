@@ -723,14 +723,14 @@
         </member>
         <member name="M:NetOffice.VBIDEApi.Property.get_IndexedValue(System.Object)">
             <summary>
-            SupportByLibrary VBIDE 5.3, 11, 12
+            SupportByLibrary VBIDE 5.3, 11, 12, 5.3, 11, 12
             Get/Set
             </summary>
             <param name="Index1">object Index1</param>
         </member>
         <member name="M:NetOffice.VBIDEApi.Property.set_IndexedValue(System.Object,System.Object)">
             <summary>
-            SupportByLibrary VBIDE 5.3, 11, 12
+            SupportByLibrary VBIDE 5.3, 11, 12, 5.3, 11, 12
             Get/Set
             </summary>
             <param name="Index1">object Index1</param>

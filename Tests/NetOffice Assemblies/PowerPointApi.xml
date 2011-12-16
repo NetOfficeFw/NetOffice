@@ -319,7 +319,7 @@
         </member>
         <member name="P:NetOffice.PowerPointApi.DataLabel.Characters">
             <summary>
-            SupportByLibrary PowerPoint 14
+            SupportByLibrary PowerPoint 14, 14
             Get
             </summary>
         </member>
@@ -14186,7 +14186,7 @@
         </member>
         <member name="P:NetOffice.PowerPointApi.Chart.HasAxis">
             <summary>
-            SupportByLibrary PowerPoint 14
+            SupportByLibrary PowerPoint 14, 14
             Get/Set
             </summary>
         </member>
@@ -26332,7 +26332,7 @@
         </member>
         <member name="P:NetOffice.PowerPointApi.AxisTitle.Characters">
             <summary>
-            SupportByLibrary PowerPoint 14
+            SupportByLibrary PowerPoint 14, 14
             Get
             </summary>
         </member>
@@ -29904,7 +29904,7 @@
         </member>
         <member name="P:NetOffice.PowerPointApi.DisplayUnitLabel.Characters">
             <summary>
-            SupportByLibrary PowerPoint 14
+            SupportByLibrary PowerPoint 14, 14
             Get
             </summary>
         </member>
@@ -30104,7 +30104,7 @@
         </member>
         <member name="P:NetOffice.PowerPointApi.ChartTitle.Characters">
             <summary>
-            SupportByLibrary PowerPoint 14
+            SupportByLibrary PowerPoint 14, 14
             Get
             </summary>
         </member>

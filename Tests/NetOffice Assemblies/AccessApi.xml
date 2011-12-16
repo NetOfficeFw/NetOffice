@@ -5046,7 +5046,7 @@
         </member>
         <member name="M:NetOffice.AccessApi._Control.get_Column(System.Int32)">
             <summary>
-            SupportByLibrary Access 9, 10, 11, 12, 14
+            SupportByLibrary Access 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="Index">Int32 Index</param>
@@ -21197,7 +21197,7 @@
         </member>
         <member name="M:NetOffice.AccessApi._ListBox.get_Column(System.Int32)">
             <summary>
-            SupportByLibrary Access 9, 10, 11, 12, 14
+            SupportByLibrary Access 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="Index">Int32 Index</param>
@@ -22441,7 +22441,7 @@
         </member>
         <member name="M:NetOffice.AccessApi._Combobox.get_Column(System.Int32)">
             <summary>
-            SupportByLibrary Access 9, 10, 11, 12, 14
+            SupportByLibrary Access 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="Index">Int32 Index</param>
@@ -32168,19 +32168,19 @@
         </member>
         <member name="P:NetOffice.AccessApi._Attachment.FileName">
             <summary>
-            SupportByLibrary Access 12, 14
+            SupportByLibrary Access 12, 14, 12, 14
             Get
             </summary>
         </member>
         <member name="P:NetOffice.AccessApi._Attachment.FileType">
             <summary>
-            SupportByLibrary Access 12, 14
+            SupportByLibrary Access 12, 14, 12, 14
             Get
             </summary>
         </member>
         <member name="P:NetOffice.AccessApi._Attachment.FileURL">
             <summary>
-            SupportByLibrary Access 12, 14
+            SupportByLibrary Access 12, 14, 12, 14
             Get
             </summary>
         </member>
@@ -32378,13 +32378,13 @@
         </member>
         <member name="P:NetOffice.AccessApi._Attachment.FileData">
             <summary>
-            SupportByLibrary Access 12, 14
+            SupportByLibrary Access 12, 14, 12, 14
             Get
             </summary>
         </member>
         <member name="P:NetOffice.AccessApi._Attachment.PictureDisp">
             <summary>
-            SupportByLibrary Access 12, 14
+            SupportByLibrary Access 12, 14, 12, 14
             Get
             </summary>
         </member>

@@ -20879,7 +20879,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Global.get_SynonymInfo(System.String)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="Word">string Word</param>
@@ -20895,7 +20895,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Global.get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory,System.String)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -20911,7 +20911,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Global.get_FindKey(System.Int32)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="KeyCode">Int32 KeyCode</param>
@@ -34874,7 +34874,7 @@
         </member>
         <member name="P:NetOffice.WordApi.DisplayUnitLabel.Characters">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get
             </summary>
         </member>
@@ -39581,7 +39581,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Application.get_SynonymInfo(System.String)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="Word">string Word</param>
@@ -39597,7 +39597,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Application.get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory,System.String)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="KeyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -39613,7 +39613,7 @@
         </member>
         <member name="M:NetOffice.WordApi._Application.get_FindKey(System.Int32)">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
             <param name="KeyCode">Int32 KeyCode</param>
@@ -50160,7 +50160,7 @@
         </member>
         <member name="P:NetOffice.WordApi.AxisTitle.Characters">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get
             </summary>
         </member>
@@ -54290,7 +54290,7 @@
         </member>
         <member name="P:NetOffice.WordApi.Chart.ChartGroups">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get
             </summary>
         </member>
@@ -54344,7 +54344,7 @@
         </member>
         <member name="P:NetOffice.WordApi.Chart.HasAxis">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get/Set
             </summary>
         </member>
@@ -58988,7 +58988,7 @@
         </member>
         <member name="P:NetOffice.WordApi.ChartTitle.Characters">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get
             </summary>
         </member>
@@ -67897,7 +67897,7 @@
         </member>
         <member name="P:NetOffice.WordApi.DataLabel.Characters">
             <summary>
-            SupportByLibrary Word 14
+            SupportByLibrary Word 14, 14
             Get
             </summary>
         </member>
@@ -76491,7 +76491,7 @@
         </member>
         <member name="P:NetOffice.WordApi.RoutingSlip.Recipients">
             <summary>
-            SupportByLibrary Word 9, 10, 11, 12, 14
+            SupportByLibrary Word 9, 10, 11, 12, 14, 9, 10, 11, 12, 14
             Get
             </summary>
         </member>

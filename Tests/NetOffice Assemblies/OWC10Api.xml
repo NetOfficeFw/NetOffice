@@ -6699,7 +6699,7 @@
         </member>
         <member name="M:NetOffice.OWC10Api._Range.get_Address(System.Object,System.Object,NetOffice.OWC10Api.Enums.XlReferenceStyle)">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
             <param name="RowAbsolute">object RowAbsolute</param>
@@ -6731,7 +6731,7 @@
         </member>
         <member name="M:NetOffice.OWC10Api._Range.get_Range(System.Object)">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
             <param name="Cell1">object Cell1</param>
@@ -7039,7 +7039,7 @@
         </member>
         <member name="P:NetOffice.OWC10Api._Range._Default">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get/Set
             </summary>
         </member>
@@ -7189,6 +7189,13 @@
             <param name="RowIndex">object RowIndex</param>
             <param name="ColumnIndex">optional object ColumnIndex</param>
         </member>
+        <member name="P:NetOffice.OWC10Api._Range.Item(System.Object)">
+            <summary>
+            SupportByLibrary OWC10 1
+            Get
+            </summary>
+            <param name="RowIndex">object RowIndex</param>
+        </member>
         <member name="P:NetOffice.OWC10Api._Range.Left">
             <summary>
             SupportByLibrary OWC10 1
@@ -7233,7 +7240,7 @@
         </member>
         <member name="P:NetOffice.OWC10Api._Range.Offset">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
         </member>
@@ -7305,7 +7312,7 @@
         </member>
         <member name="P:NetOffice.OWC10Api._Range.Value">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get/Set
             </summary>
         </member>
@@ -8848,7 +8855,7 @@
         </member>
         <member name="P:NetOffice.OWC10Api.Workbook.Colors">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get/Set
             </summary>
         </member>
@@ -13958,7 +13965,7 @@
         </member>
         <member name="M:NetOffice.OWC10Api.Worksheet.get_Range(System.Object)">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
             <param name="Cell1">object Cell1</param>
@@ -15999,7 +16006,7 @@
         </member>
         <member name="M:NetOffice.OWC10Api.ISpreadsheet.get_Range(System.Object)">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
             <param name="Cell1">object Cell1</param>
@@ -20777,7 +20784,7 @@
         </member>
         <member name="P:NetOffice.OWC10Api.IDataSourceControl.ProviderType">
             <summary>
-            SupportByLibrary OWC10 1
+            SupportByLibrary OWC10 1, 1
             Get
             </summary>
         </member>
