@@ -1713,6 +1713,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._NavigationGroups.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._NavigationGroups.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -1787,6 +1793,12 @@
             </summary>
         </member>
         <member name="M:NetOffice.OutlookApi._Columns.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Columns.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -2181,6 +2193,11 @@
             SupportByLibraryAttribute Outlook, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Reminders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Reminders.Application">
             <summary>
             SupportByLibrary Outlook 10, 11, 12, 14
@@ -2374,6 +2391,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.Actions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.Actions.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -2490,6 +2513,12 @@
             <param name="Property">optional object Property</param>
         </member>
         <member name="M:NetOffice.OutlookApi.AddressEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.AddressEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -3885,6 +3914,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Items.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Items.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -4028,6 +4063,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Inspectors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Inspectors.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -4152,6 +4193,12 @@
             </summary>
         </member>
         <member name="M:NetOffice.OutlookApi._AutoFormatRules.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._AutoFormatRules.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -5331,6 +5378,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._UserDefinedProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._UserDefinedProperties.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -5919,6 +5972,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._OutlookBarShortcuts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._OutlookBarShortcuts.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -6058,6 +6117,12 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi._OutlookBarGroups.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._OutlookBarGroups.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -7276,6 +7341,11 @@
             SupportByLibraryAttribute Outlook, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Views.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Views.Application">
             <summary>
             SupportByLibrary Outlook 10, 11, 12, 14
@@ -8147,6 +8217,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Exceptions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Exceptions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -10056,6 +10132,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OutlookApi._RuleConditions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._RuleConditions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -14832,6 +14914,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.SyncObjects.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.SyncObjects.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -15519,6 +15607,12 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi._Categories.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Categories.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -16260,6 +16354,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Folders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Folders.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -16420,6 +16520,12 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi._OrderFields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._OrderFields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -18077,6 +18183,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._ViewFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._ViewFields.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -18286,6 +18398,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OutlookApi._Stores.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Stores.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -20046,6 +20164,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.PropertyPages.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.PropertyPages.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -21167,6 +21291,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._Accounts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._Accounts.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -21549,6 +21679,12 @@
             <param name="Property">string Property</param>
         </member>
         <member name="M:NetOffice.OutlookApi._Results.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Results.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 10,11,12,14
             This is a custom enumerator from NetOffice
@@ -22708,6 +22844,12 @@
             <param name="DisplayMode">NetOffice.OutlookApi.Enums.OlFolderDisplayMode DisplayMode</param>
         </member>
         <member name="M:NetOffice.OutlookApi._Explorers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Explorers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -23979,6 +24121,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._SimpleItems.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._SimpleItems.Application">
             <summary>
             SupportByLibrary Outlook 14
@@ -24645,6 +24793,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.AddressLists.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.AddressLists.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -24702,6 +24856,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Panes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Panes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -25779,6 +25939,12 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi._Rules.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._Rules.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -27219,6 +27385,11 @@
             SupportByLibraryAttribute Outlook, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.ItemProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.ItemProperties.Application">
             <summary>
             SupportByLibrary Outlook 10, 11, 12, 14
@@ -28498,6 +28669,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._AttachmentSelection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._AttachmentSelection.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -28600,6 +28777,12 @@
             <param name="ModuleType">NetOffice.OutlookApi.Enums.OlNavigationModuleType ModuleType</param>
         </member>
         <member name="M:NetOffice.OutlookApi._NavigationModules.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._NavigationModules.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -29640,6 +29823,12 @@
             <param name="DestinationTimeZone">NetOffice.OutlookApi._TimeZone DestinationTimeZone</param>
         </member>
         <member name="M:NetOffice.OutlookApi._TimeZones.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._TimeZones.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -30752,6 +30941,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.UserProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.UserProperties.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -31856,6 +32051,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.Recipients.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.Recipients.Application">
             <summary>
             SupportByLibrary Outlook 9, 10, 11, 12, 14
@@ -32737,6 +32938,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi.Conflicts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi.Conflicts.Application">
             <summary>
             SupportByLibrary Outlook 11, 12, 14
@@ -33211,6 +33418,12 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Links.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Links.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -35809,6 +36022,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OutlookApi._RuleActions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OutlookApi._RuleActions.Application">
             <summary>
             SupportByLibrary Outlook 12, 14
@@ -36072,6 +36291,12 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Attachments.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Attachments.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -36588,6 +36813,12 @@
             <param name="RemovableFolder">NetOffice.OutlookApi.NavigationFolder RemovableFolder</param>
         </member>
         <member name="M:NetOffice.OutlookApi._NavigationFolders.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi._NavigationFolders.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 12,14
             This is a custom enumerator from NetOffice
@@ -37347,6 +37578,12 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Pages.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Pages.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -38849,6 +39086,12 @@
             <param name="SelectionContents">NetOffice.OutlookApi.Enums.OlSelectionContents SelectionContents</param>
         </member>
         <member name="M:NetOffice.OutlookApi.Selection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Outlook, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OutlookApi.Selection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Outlook, 9,10,11,12,14
             This is a custom enumerator from NetOffice

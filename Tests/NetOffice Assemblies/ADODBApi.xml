@@ -2789,6 +2789,11 @@
             SupportByLibraryAttribute ADODB, 2.1,2.5
             </summary>
         </member>
+        <member name="M:NetOffice.ADODBApi._Collection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute ADODB, 2.1,2.5
+            </summary>
+        </member>
         <member name="P:NetOffice.ADODBApi._Collection.Count">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
@@ -5566,6 +5571,11 @@
             SupportByLibraryAttribute ADODB, 2.5
             </summary>
         </member>
+        <member name="M:NetOffice.ADODBApi.Fields20.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute ADODB, 2.5
+            </summary>
+        </member>
         <member name="P:NetOffice.ADODBApi.Fields20.Count">
             <summary>
             SupportByLibrary ADODB 2.5
@@ -5639,6 +5649,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute ADODB, 2.1,2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute ADODB, 2.1,2.5
             </summary>
@@ -6097,6 +6112,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Parameters.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute ADODB, 2.1,2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Parameters.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute ADODB, 2.1,2.5
             </summary>

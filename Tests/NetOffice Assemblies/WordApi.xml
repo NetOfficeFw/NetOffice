@@ -29,6 +29,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.CoAuthors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.CoAuthors.Application">
             <summary>
             SupportByLibrary Word 14
@@ -80,6 +85,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.CoAuthUpdates.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.CoAuthUpdates.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 14
             </summary>
@@ -2172,6 +2182,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.HeadingStyles.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.HeadingStyles.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -2667,6 +2682,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Columns.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Columns.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -5640,6 +5660,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.BuildingBlocks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.BuildingBlocks.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -5704,6 +5730,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.WordApi.ContentControlListEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ContentControlListEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             </summary>
@@ -5775,6 +5806,11 @@
             <param name="InstallForAllUsers">bool InstallForAllUsers</param>
         </member>
         <member name="M:NetOffice.WordApi.XMLNamespaces.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.XMLNamespaces.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
@@ -6103,6 +6139,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.HangulHanjaConversionDictionaries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.HangulHanjaConversionDictionaries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -6663,6 +6704,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.TablesOfContents.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.TablesOfContents.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -6934,6 +6980,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.MailMergeFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.MailMergeFields.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -7118,6 +7169,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Endnotes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Endnotes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -16806,6 +16862,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Trendlines.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Trendlines.Parent">
             <summary>
             SupportByLibrary Word 14
@@ -17624,6 +17685,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.MappedDataFields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.MappedDataFields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -18618,6 +18684,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Shapes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Shapes.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -18669,6 +18740,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.ListGalleries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ListGalleries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -18746,6 +18822,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ListTemplates.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ListTemplates.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -18803,6 +18884,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.CaptionLabels.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.CaptionLabels.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -19095,6 +19181,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.TwoInitialCapsExceptions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.TwoInitialCapsExceptions.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -19160,6 +19251,11 @@
             <param name="Range">NetOffice.WordApi.Range Range</param>
         </member>
         <member name="M:NetOffice.WordApi.AutoCorrectEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.AutoCorrectEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -22016,6 +22112,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.BuildingBlockEntries.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.BuildingBlockEntries.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -22074,6 +22176,11 @@
             <param name="Value">string Value</param>
         </member>
         <member name="M:NetOffice.WordApi.OMathAutoCorrectEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.OMathAutoCorrectEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             </summary>
@@ -22255,6 +22362,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ShapeNodes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ShapeNodes.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -22391,6 +22503,11 @@
             <param name="PageNumberAlignment">optional object PageNumberAlignment</param>
         </member>
         <member name="M:NetOffice.WordApi.PageNumbers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.PageNumbers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -25688,6 +25805,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.CustomLabels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.CustomLabels.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -25986,6 +26108,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ListEntries.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ListEntries.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -26204,6 +26331,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Paragraphs.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Paragraphs.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -26493,6 +26625,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Words.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Words.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -27809,6 +27946,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.SeriesCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.SeriesCollection.Parent">
             <summary>
             SupportByLibrary Word 14
@@ -27938,6 +28080,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Categories.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Categories.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             This is a custom enumerator from NetOffice
@@ -28121,6 +28269,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.TaskPanes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.TaskPanes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -28525,6 +28678,11 @@
             <param name="KeyCode">Int32 KeyCode</param>
         </member>
         <member name="M:NetOffice.WordApi.KeyBindings.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.KeyBindings.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -29017,6 +29175,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Indexes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Indexes.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -29079,6 +29242,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.AutoCaptions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.AutoCaptions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -29268,6 +29436,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.AutoTextEntries.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.AutoTextEntries.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -29365,6 +29538,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Footnotes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Footnotes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -29535,6 +29713,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Characters.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Characters.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -32954,6 +33137,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Lines.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Lines.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -33342,6 +33530,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.InlineShapes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.InlineShapes.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -33399,6 +33592,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.WordApi.GroupShapes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.GroupShapes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -33467,6 +33665,11 @@
             <param name="KeyCode">Int32 KeyCode</param>
         </member>
         <member name="M:NetOffice.WordApi.KeysBoundTo.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.KeysBoundTo.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -34012,6 +34215,11 @@
             <param name="Document">object Document</param>
         </member>
         <member name="M:NetOffice.WordApi.RecentFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.RecentFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -35075,6 +35283,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.DataLabels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.DataLabels.Parent">
             <summary>
             SupportByLibrary Word 14
@@ -35438,6 +35651,11 @@
             <param name="Type">NetOffice.WordApi.Enums.WdContentControlType Type</param>
         </member>
         <member name="M:NetOffice.WordApi.ContentControls.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ContentControls.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             </summary>
@@ -36368,6 +36586,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Hyperlinks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Hyperlinks.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -36451,6 +36674,11 @@
             <param name="NumColumns">Int32 NumColumns</param>
         </member>
         <member name="M:NetOffice.WordApi.TextColumns.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.TextColumns.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -36847,6 +37075,11 @@
             <param name="LongCitationAutoText">optional object LongCitationAutoText</param>
         </member>
         <member name="M:NetOffice.WordApi.TablesOfAuthorities.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.TablesOfAuthorities.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -43539,6 +43772,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.OMathBreaks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.OMathBreaks.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -43705,6 +43944,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.OMathMatCols.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.OMathMatCols.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             </summary>
@@ -44072,6 +44316,11 @@
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.CanvasShapes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.CanvasShapes.Application">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
@@ -44130,6 +44379,11 @@
             <param name="Range">NetOffice.WordApi.Range Range</param>
         </member>
         <member name="M:NetOffice.WordApi.EmailSignatureEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.EmailSignatureEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -44326,6 +44580,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Versions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Versions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -44542,6 +44801,11 @@
             <param name="Increment">Single Increment</param>
         </member>
         <member name="M:NetOffice.WordApi.ShapeRange.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ShapeRange.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -45114,6 +45378,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Subdocuments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Subdocuments.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -45190,6 +45459,11 @@
             <param name="RemoveFromList">bool RemoveFromList</param>
         </member>
         <member name="M:NetOffice.WordApi.AddIns.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.AddIns.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -45336,6 +45610,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.TablesOfAuthoritiesCategories.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.TablesOfAuthoritiesCategories.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -45648,6 +45927,11 @@
             <param name="Text">optional object Text</param>
         </member>
         <member name="M:NetOffice.WordApi.Fields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Fields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -46680,6 +46964,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Panes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Panes.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -46736,6 +47025,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Templates.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Templates.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -47779,6 +48073,11 @@
             <param name="PostID">string PostID</param>
         </member>
         <member name="M:NetOffice.WordApi.Documents.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Documents.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -50352,6 +50651,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Axes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Axes.Count">
             <summary>
             SupportByLibrary Word 14
@@ -50734,6 +51038,11 @@
             SupportByLibraryAttribute Word, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.OMathFunctions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.OMathFunctions.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -50856,6 +51165,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.SmartTagRecognizers.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.SmartTagRecognizers.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -50934,6 +51248,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.SmartTags.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.SmartTags.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -51370,6 +51689,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ListLevels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ListLevels.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -51584,6 +51908,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.FormFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.FormFields.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -51652,6 +51981,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Frames.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Frames.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -51848,6 +52182,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Cells.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Cells.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -51995,6 +52334,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Windows.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Windows.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -52071,6 +52415,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.Bookmarks.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Bookmarks.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -53404,6 +53753,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Points.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Points.Parent">
             <summary>
             SupportByLibrary Word 14
@@ -53583,6 +53937,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.WordApi.LegendEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.LegendEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 14
             </summary>
@@ -54663,6 +55022,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Breaks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Breaks.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -54714,6 +55078,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Rectangles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Rectangles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
@@ -54842,6 +55211,11 @@
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.CustomProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.CustomProperties.Count">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
@@ -54898,6 +55272,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.DiagramNodes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.DiagramNodes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -55207,6 +55586,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Adjustments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Adjustments.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -55259,6 +55644,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.ProofreadingErrors.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ProofreadingErrors.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -56914,6 +57304,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Revisions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Revisions.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -56965,6 +57360,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.MailMergeDataFields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.MailMergeDataFields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -57437,6 +57837,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Languages.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Languages.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -58912,6 +59317,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ProtectedViewWindows.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ProtectedViewWindows.Application">
             <summary>
             SupportByLibrary Word 14
@@ -59412,6 +59822,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.XMLChildNodeSuggestions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.XMLChildNodeSuggestions.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -59474,6 +59889,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.HTMLDivisions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.HTMLDivisions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -60012,6 +60432,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ListParagraphs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ListParagraphs.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -60143,6 +60568,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.MailMergeFieldNames.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.MailMergeFieldNames.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -60359,6 +60789,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.Styles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Styles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -62860,6 +63295,11 @@
             SupportByLibraryAttribute Word, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.OMaths.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.OMaths.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -62925,6 +63365,11 @@
             <param name="InstallForAllUsers">bool InstallForAllUsers</param>
         </member>
         <member name="M:NetOffice.WordApi.XMLSchemaReferences.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.XMLSchemaReferences.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
@@ -63475,6 +63920,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.ReadabilityStatistics.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.ReadabilityStatistics.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -63618,6 +64068,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Dialogs.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Dialogs.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -63975,6 +64430,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Comments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Comments.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -64071,6 +64531,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Tables.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Tables.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -64128,6 +64593,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Sentences.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Sentences.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -65070,6 +65540,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.CoAuthLocks.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.CoAuthLocks.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 14
             </summary>
@@ -66021,6 +66496,11 @@
             SupportByLibraryAttribute Word, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.OMathMatRows.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.OMathMatRows.Application">
             <summary>
             SupportByLibrary Word 12, 14
@@ -66251,6 +66731,11 @@
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.StyleSheets.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.StyleSheets.Application">
             <summary>
             SupportByLibrary Word 10, 11, 12, 14
@@ -66358,6 +66843,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.SpellingSuggestions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.SpellingSuggestions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -66570,6 +67060,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.FirstLetterExceptions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.FirstLetterExceptions.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -66663,6 +67158,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.TabStops.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.TabStops.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -66727,6 +67227,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.Variables.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Variables.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -68449,6 +68954,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.SmartTagTypes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.SmartTagTypes.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -68505,6 +69015,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.SmartTagActions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.SmartTagActions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
@@ -68622,6 +69137,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Frameset.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Frameset.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -69156,6 +69676,11 @@
             <param name="Separator">optional object Separator</param>
         </member>
         <member name="M:NetOffice.WordApi.Rows.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Rows.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -72191,6 +72716,11 @@
             SupportByLibraryAttribute Word, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Sources.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Sources.Count">
             <summary>
             SupportByLibrary Word 12, 14
@@ -72516,6 +73046,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Editors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Editors.Application">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -72567,6 +73103,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Pages.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Pages.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
@@ -75533,6 +76074,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.TablesOfFigures.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.TablesOfFigures.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -75823,6 +76369,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Borders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Borders.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -76030,6 +76581,11 @@
             <param name="Range">optional object Range</param>
         </member>
         <member name="M:NetOffice.WordApi.Sections.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Sections.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -76516,6 +77072,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.FontNames.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.FontNames.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -77837,6 +78398,11 @@
             SupportByLibraryAttribute Word, 14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Conflicts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Conflicts.Application">
             <summary>
             SupportByLibrary Word 14
@@ -77888,6 +78454,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.ChartGroups.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.ChartGroups.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 14
             </summary>
@@ -78110,6 +78681,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.OMathRecognizedFunctions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.OMathRecognizedFunctions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             </summary>
@@ -78343,6 +78919,12 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.OMathArgs.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.OMathArgs.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 12,14
             This is a custom enumerator from NetOffice
@@ -78775,6 +79357,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.OtherCorrectionsExceptions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.OtherCorrectionsExceptions.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -78899,6 +79486,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Dictionaries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Dictionaries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -79149,6 +79741,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.FileConverters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.FileConverters.Application">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -79210,6 +79807,11 @@
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.Lists.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.Lists.Count">
             <summary>
             SupportByLibrary Word 9, 10, 11, 12, 14
@@ -79261,6 +79863,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.StoryRanges.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.StoryRanges.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -79417,6 +80024,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.Tasks.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Tasks.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -83163,6 +83775,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.XSLTransforms.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.XSLTransforms.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -83233,6 +83850,11 @@
             SupportByLibraryAttribute Word, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.WordApi.XMLNodes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.WordApi.XMLNodes.Count">
             <summary>
             SupportByLibrary Word 11, 12, 14
@@ -83284,6 +83906,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.Reviewers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.Reviewers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -83441,6 +84068,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.WordApi.DiagramNodeChildren.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.DiagramNodeChildren.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 10,11,12,14
             </summary>
@@ -83721,6 +84353,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.WordApi.HangulAndAlphabetExceptions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.HangulAndAlphabetExceptions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>
@@ -84100,6 +84737,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.WordApi.HeadersFooters.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Word, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.WordApi.HeadersFooters.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Word, 9,10,11,12,14
             </summary>

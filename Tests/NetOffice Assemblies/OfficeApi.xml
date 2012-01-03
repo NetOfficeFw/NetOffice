@@ -399,6 +399,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.CustomXMLPrefixMappings.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.CustomXMLPrefixMappings.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -439,6 +444,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.WorkflowTasks.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.WorkflowTasks.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -563,6 +573,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.DiagramNodeChildren.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.DiagramNodeChildren.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
@@ -885,6 +900,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OfficeApi.GroupShapes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.GroupShapes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -2378,6 +2398,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.CommandBarControls.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.CommandBarControls.Count">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -3387,6 +3412,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.GradientStops.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.GradientStops.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 12, 14
@@ -3421,6 +3451,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.DocumentLibraryVersions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.DocumentLibraryVersions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
@@ -4277,6 +4312,11 @@
             <param name="Value">optional object Value</param>
         </member>
         <member name="M:NetOffice.OfficeApi.DocumentProperties.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.DocumentProperties.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -6756,6 +6796,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.DocumentInspectors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.DocumentInspectors.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 12, 14
@@ -7196,6 +7241,11 @@
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.CanvasShapes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.CanvasShapes.Parent">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -7273,6 +7323,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.SignatureSet.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SignatureSet.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
@@ -7729,6 +7784,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi._CommandBars.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi._CommandBars.ActionControl">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -7854,6 +7914,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.IMsoDataLabels.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IMsoDataLabels.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -8744,6 +8809,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.SmartArtLayouts.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SmartArtLayouts.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 14
             </summary>
@@ -9766,6 +9836,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.Shapes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.Shapes.Parent">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -10072,6 +10147,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.SeriesCollection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SeriesCollection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -10537,6 +10617,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.RulerLevels2.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.RulerLevels2.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -11055,6 +11140,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.MetaProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.MetaProperties.Item(System.Object)">
             <summary>
             SupportByLibrary Office 12, 14
@@ -11131,6 +11221,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.MsoDebugOptions_UTs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.MsoDebugOptions_UTs.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 12, 14
@@ -11182,6 +11277,11 @@
             <param name="DisplayName">string DisplayName</param>
         </member>
         <member name="M:NetOffice.OfficeApi.SharedWorkspaceMembers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SharedWorkspaceMembers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
@@ -11805,6 +11905,11 @@
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.DiagramNodes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.DiagramNodes.Parent">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -11856,6 +11961,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OfficeApi.FileTypes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.FileTypes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
@@ -11929,6 +12039,11 @@
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.FileDialogFilters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.FileDialogFilters.Parent">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -11968,6 +12083,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.HTMLProjectItems.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.HTMLProjectItems.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -12395,6 +12515,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.Adjustments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.Adjustments.Parent">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -12504,6 +12630,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OfficeApi.LegendEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.LegendEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -13991,6 +14122,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi._CustomXMLSchemaCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi._CustomXMLSchemaCollection.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -14126,6 +14262,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.PickerProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.PickerProperties.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 14
@@ -14167,6 +14308,11 @@
             <param name="Position">Single Position</param>
         </member>
         <member name="M:NetOffice.OfficeApi.TabStops2.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.TabStops2.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -14438,6 +14584,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.CustomXMLNodes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.CustomXMLNodes.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -14499,6 +14650,11 @@
             <param name="Description">optional object Description</param>
         </member>
         <member name="M:NetOffice.OfficeApi.SharedWorkspaceLinks.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SharedWorkspaceLinks.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
@@ -14634,6 +14790,11 @@
             <param name="SegmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
         </member>
         <member name="M:NetOffice.OfficeApi.ShapeNodes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.ShapeNodes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -14774,6 +14935,11 @@
             <param name="DisplayRSquared">optional object DisplayRSquared</param>
         </member>
         <member name="M:NetOffice.OfficeApi.Trendlines.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Trendlines.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -15572,6 +15738,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi._CustomXMLParts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi._CustomXMLParts.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -15678,6 +15849,11 @@
             <param name="AxisGroup">NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
         </member>
         <member name="M:NetOffice.OfficeApi.Axes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Axes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -15900,6 +16076,11 @@
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ScopeFolders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ScopeFolders.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -15984,6 +16165,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.IFoundFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.IFoundFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -19329,6 +19515,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ServerPolicy.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ServerPolicy.Item(System.Object)">
             <summary>
             SupportByLibrary Office 12, 14
@@ -19512,6 +19704,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.BalloonCheckboxes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.BalloonCheckboxes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -21446,6 +21643,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.EffectParameters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.EffectParameters.Item(System.Object)">
             <summary>
             SupportByLibrary Office 14
@@ -21510,6 +21712,11 @@
             <param name="ItemData">optional object ItemData</param>
         </member>
         <member name="M:NetOffice.OfficeApi.PickerResults.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.PickerResults.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 14
             </summary>
@@ -21983,6 +22190,11 @@
             <param name="Name">string Name</param>
         </member>
         <member name="M:NetOffice.OfficeApi.ThemeColorScheme.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.ThemeColorScheme.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -22573,6 +22785,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ODSOFilters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ODSOFilters.Count">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -22701,6 +22919,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.FoundFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.FoundFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -24107,6 +24330,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.PictureEffects.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.PictureEffects.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 14
@@ -24499,6 +24727,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.CustomXMLValidationErrors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.CustomXMLValidationErrors.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -24594,6 +24827,11 @@
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.SharedWorkspaceTasks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.SharedWorkspaceTasks.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 11, 12, 14
@@ -24640,6 +24878,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.FileDialogSelectedItems.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.FileDialogSelectedItems.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
@@ -24949,6 +25192,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.ShapeRange.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.ShapeRange.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -25302,6 +25550,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.Scripts.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Scripts.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
@@ -27471,6 +27724,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ChartGroups.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ChartGroups.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -28258,6 +28516,11 @@
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.SearchScopes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.SearchScopes.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -28352,6 +28615,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.WebPageFonts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.WebPageFonts.Count">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -28398,6 +28666,12 @@
             <param name="FileName">string FileName</param>
         </member>
         <member name="M:NetOffice.OfficeApi.AnswerWizardFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.AnswerWizardFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             This is a custom enumerator from NetOffice
@@ -28922,6 +29196,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.OfficeApi.SmartArtNodes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SmartArtNodes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 14
             </summary>
@@ -30840,6 +31119,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.SmartArtColors.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.SmartArtColors.Parent">
             <summary>
             SupportByLibrary Office 14
@@ -31237,6 +31521,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ODSOColumns.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ODSOColumns.Count">
             <summary>
             SupportByLibrary Office 10, 11, 12, 14
@@ -31355,6 +31645,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OfficeApi.SearchFolders.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SearchFolders.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 10,11,12,14
             </summary>
@@ -33461,6 +33756,11 @@
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.Permission.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.Permission.Item(System.Object)">
             <summary>
             SupportByLibrary Office 11, 12, 14
@@ -34815,6 +35115,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.PickerFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.PickerFields.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 14
@@ -35055,6 +35360,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.TextRange2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.TextRange2.Text">
             <summary>
             SupportByLibrary Office 12, 14
@@ -35234,6 +35544,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.WorkflowTemplates.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.WorkflowTemplates.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -35644,6 +35959,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OfficeApi.Points.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.Points.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 12,14
             </summary>
@@ -37554,6 +37874,11 @@
             SupportByLibraryAttribute Office, 14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.SmartArtQuickStyles.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.SmartArtQuickStyles.Parent">
             <summary>
             SupportByLibrary Office 14
@@ -37841,6 +38166,11 @@
             SupportByLibraryAttribute Office, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.ThemeFonts.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.ThemeFonts.Parent">
             <summary>
             SupportByLibrary Office 12, 14
@@ -37967,6 +38297,11 @@
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.SharedWorkspaceFolders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.SharedWorkspaceFolders.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 11, 12, 14
@@ -38043,6 +38378,11 @@
             <param name="OverwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
         </member>
         <member name="M:NetOffice.OfficeApi.SharedWorkspaceFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.SharedWorkspaceFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 11,12,14
             </summary>
@@ -39118,6 +39458,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.COMAddIns.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.COMAddIns.Count">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -39177,6 +39522,11 @@
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.OfficeApi.PropertyTests.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.OfficeApi.PropertyTests.Item(System.Int32)">
             <summary>
             SupportByLibrary Office 9, 10, 11, 12, 14
@@ -39211,6 +39561,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OfficeApi.BalloonLabels.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Office, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.OfficeApi.BalloonLabels.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Office, 9,10,11,12,14
             </summary>

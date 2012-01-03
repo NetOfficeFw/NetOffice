@@ -40,6 +40,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.AllObjects.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.AllObjects.Application">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -537,6 +542,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Pages.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Pages.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -1819,6 +1829,11 @@
             <param name="Width">optional object Width</param>
         </member>
         <member name="M:NetOffice.AccessApi._Form2.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._Form2.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 10,11,12,14
             </summary>
@@ -5403,6 +5418,11 @@
             SupportByLibraryAttribute Access, 14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.WSParameters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.WSParameters.Parent">
             <summary>
             SupportByLibrary Access 14
@@ -5503,6 +5523,11 @@
             SupportByLibraryAttribute Access, 14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.Operations.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.Operations.Parent">
             <summary>
             SupportByLibrary Access 14
@@ -5567,6 +5592,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi._TempVars.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._TempVars.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 12,14
             </summary>
@@ -5761,6 +5791,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.AccessApi._Report3.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._Report3.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 12,14
             </summary>
@@ -6908,6 +6943,11 @@
             SupportByLibraryAttribute Access, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._DependencyObjects.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._DependencyObjects.Application">
             <summary>
             SupportByLibrary Access 11, 12, 14
@@ -7531,6 +7571,11 @@
             <param name="Width">optional object Width</param>
         </member>
         <member name="M:NetOffice.AccessApi._Form3.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._Form3.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 12,14
             </summary>
@@ -9365,6 +9410,11 @@
             SupportByLibraryAttribute Access, 10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._Report2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._Report2.FormName">
             <summary>
             SupportByLibrary Access 10, 11, 12, 14
@@ -10094,6 +10144,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Printers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Printers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 10,11,12,14
             </summary>
@@ -13570,6 +13625,11 @@
             SupportByLibraryAttribute Access, 12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.ImportExportSpecifications.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.ImportExportSpecifications.Application">
             <summary>
             SupportByLibrary Access 12, 14
@@ -13790,6 +13850,11 @@
             <param name="bstrExpr">string bstrExpr</param>
         </member>
         <member name="M:NetOffice.AccessApi._Report.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._Report.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -16503,6 +16568,11 @@
             SupportByLibraryAttribute Access, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._AdditionalData.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._AdditionalData.Name">
             <summary>
             SupportByLibrary Access 11, 12, 14
@@ -16569,6 +16639,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi._References.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._References.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -17102,6 +17177,11 @@
             SupportByLibraryAttribute Access, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._SmartTags.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._SmartTags.Application">
             <summary>
             SupportByLibrary Access 11, 12, 14
@@ -17297,6 +17377,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi._SmartTagActions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._SmartTagActions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 11,12,14
             </summary>
@@ -19861,6 +19946,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.SharedResources.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.SharedResources.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 14
             </summary>
@@ -24460,6 +24550,11 @@
             SupportByLibraryAttribute Access, 11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._SmartTagProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._SmartTagProperties.Application">
             <summary>
             SupportByLibrary Access 11, 12, 14
@@ -24540,6 +24635,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Entities.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Entities.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 14
             </summary>
@@ -28975,6 +29075,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._Form.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._Form.FormName">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -32680,6 +32785,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.Controls.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.Controls.Application">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -33068,6 +33178,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi._LocalVars.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._LocalVars.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 14
             </summary>
@@ -34745,6 +34860,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._ItemsSelected.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._ItemsSelected.Item(System.Object)">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -35201,6 +35321,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.AccessObjectProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.AccessObjectProperties.Application">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -35253,6 +35378,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Modules.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Modules.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -35357,6 +35487,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi._TabControl.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi._TabControl.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -38979,6 +39114,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.DataAccessPages.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.DataAccessPages.Application">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -39031,6 +39171,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Reports.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Reports.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -39116,6 +39261,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.FormatConditions.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.FormatConditions.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -40261,6 +40411,11 @@
             SupportByLibraryAttribute Access, 14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.WebServices.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.WebServices.Application">
             <summary>
             SupportByLibrary Access 14
@@ -41343,6 +41498,11 @@
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi.Children.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi.Children.Item(System.Object)">
             <summary>
             SupportByLibrary Access 9, 10, 11, 12, 14
@@ -41939,6 +42099,11 @@
             SupportByLibraryAttribute Access, 14
             </summary>
         </member>
+        <member name="M:NetOffice.AccessApi._ReturnVars.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.AccessApi._ReturnVars.Application">
             <summary>
             SupportByLibrary Access 14
@@ -42011,6 +42176,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Forms.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Forms.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>
@@ -48448,6 +48618,11 @@
             <param name="dispid">Int32 dispid</param>
         </member>
         <member name="M:NetOffice.AccessApi.Properties.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute Access, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.AccessApi.Properties.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute Access, 9,10,11,12,14
             </summary>

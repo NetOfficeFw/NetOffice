@@ -153,6 +153,11 @@
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
         <member name="P:NetOffice.MSComctlLibApi.IColumnHeaders.Count">
             <summary>
             SupportByLibrary MSComctlLib 2
@@ -778,6 +783,11 @@
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IComboItems.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
         <member name="P:NetOffice.MSComctlLibApi.IComboItems.Count">
             <summary>
             SupportByLibrary MSComctlLib 2
@@ -812,6 +822,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IControls.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IControls.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -913,6 +928,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IListItems.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -1307,6 +1327,11 @@
             <param name="pvCaption">optional object pvCaption</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ITabs.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.ITabs.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -1721,6 +1746,11 @@
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IImages.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
         <member name="P:NetOffice.MSComctlLibApi.IImages.Count">
             <summary>
             SupportByLibrary MSComctlLib 2
@@ -2023,6 +2053,11 @@
             <param name="Style">optional object Style</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IButtons.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -2502,6 +2537,11 @@
             <param name="vIndex">object vIndex</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IVBDataObjectFiles.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IVBDataObjectFiles.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -3289,6 +3329,11 @@
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IListSubItems.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
         <member name="P:NetOffice.MSComctlLibApi.IListSubItems.Count">
             <summary>
             SupportByLibrary MSComctlLib 2
@@ -3465,6 +3510,11 @@
             <param name="Key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
@@ -4532,6 +4582,11 @@
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IPanels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
         <member name="P:NetOffice.MSComctlLibApi.IPanels.Count">
             <summary>
             SupportByLibrary MSComctlLib 2
@@ -4823,6 +4878,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute MSComctlLib, 2
+            </summary>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.INodes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute MSComctlLib, 2
             </summary>

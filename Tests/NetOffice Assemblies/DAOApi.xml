@@ -1110,6 +1110,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi._Collection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi._Collection.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -1164,6 +1169,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Indexes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.DAOApi.Indexes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute DAO, 6,12
             </summary>
@@ -2168,6 +2178,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.IndexFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.IndexFields.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -2853,6 +2868,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.Relations.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.Relations.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -3284,6 +3304,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Groups.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.DAOApi.Groups.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute DAO, 6,12
             </summary>
@@ -3797,6 +3822,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.TableDefs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.TableDefs.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -4228,6 +4258,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.Properties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.Properties.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -4540,6 +4575,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.Fields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.Fields.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -4579,6 +4619,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Workspaces.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.DAOApi.Workspaces.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute DAO, 6,12
             </summary>
@@ -5485,6 +5530,11 @@
             SupportByLibraryAttribute DAO, 6,12
             </summary>
         </member>
+        <member name="M:NetOffice.DAOApi.Users.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
         <member name="P:NetOffice.DAOApi.Users.Count">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -5524,6 +5574,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.QueryDefs.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute DAO, 6,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.DAOApi.QueryDefs.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute DAO, 6,12
             </summary>

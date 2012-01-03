@@ -226,6 +226,11 @@
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
         </member>
+        <member name="M:NetOffice.VBIDEApi._VBComponents_Old.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
         <member name="P:NetOffice.VBIDEApi._VBComponents_Old.Parent">
             <summary>
             SupportByLibrary VBIDE 5.3, 11, 12
@@ -347,6 +352,11 @@
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
         </member>
+        <member name="M:NetOffice.VBIDEApi._LinkedWindows.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
         <member name="P:NetOffice.VBIDEApi._LinkedWindows.VBE">
             <summary>
             SupportByLibrary VBIDE 5.3, 11, 12
@@ -444,6 +454,11 @@
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
         </member>
+        <member name="M:NetOffice.VBIDEApi._References.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
         <member name="P:NetOffice.VBIDEApi._References.Parent">
             <summary>
             SupportByLibrary VBIDE 5.3, 11, 12
@@ -494,6 +509,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.VBIDEApi._VBProjects_Old.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.VBIDEApi._VBProjects_Old.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
@@ -619,6 +639,11 @@
             <param name="FileName">string FileName</param>
         </member>
         <member name="M:NetOffice.VBIDEApi._Components.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.VBIDEApi._Components.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
@@ -870,6 +895,11 @@
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
         </member>
+        <member name="M:NetOffice.VBIDEApi._Properties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
         <member name="P:NetOffice.VBIDEApi._Properties.Application">
             <summary>
             SupportByLibrary VBIDE 5.3, 11, 12
@@ -1012,6 +1042,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.VBIDEApi.SelectedComponents.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.VBIDEApi.SelectedComponents.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
@@ -1562,6 +1597,11 @@
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
         </member>
+        <member name="M:NetOffice.VBIDEApi._Windows_old.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
         <member name="P:NetOffice.VBIDEApi._Windows_old.VBE">
             <summary>
             SupportByLibrary VBIDE 5.3, 11, 12
@@ -1654,6 +1694,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.VBIDEApi._CodePanes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.VBIDEApi._CodePanes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>
@@ -2033,6 +2078,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.VBIDEApi._AddIns.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute VBIDE, 5.3,11,12
+            </summary>
+        </member>
+        <member name="M:NetOffice.VBIDEApi._AddIns.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute VBIDE, 5.3,11,12
             </summary>

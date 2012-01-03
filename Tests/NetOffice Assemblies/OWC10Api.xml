@@ -157,6 +157,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.GroupLevels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.GroupLevels.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -432,6 +437,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.ChDataLabels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.ChDataLabels.Border">
             <summary>
             SupportByLibrary OWC10 1
@@ -574,6 +585,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChLegendEntries.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChLegendEntries.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -1139,6 +1155,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PivotMembers.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PivotMembers.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -1368,6 +1389,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.AllPageFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.AllPageFields.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -1419,6 +1445,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.SublistRelationships.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.SublistRelationships.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -1453,6 +1484,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.LookupSchemaRelationships.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.LookupSchemaRelationships.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -2927,6 +2963,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.ParameterValues.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.ParameterValues.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -2997,6 +3038,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.SchemaRowsources.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.SchemaRowsources.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -3858,6 +3904,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.SchemaRelationships.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.SchemaRelationships.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -4845,6 +4896,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotAggregates.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotAggregates.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -6124,6 +6180,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.SchemaParameters.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.SchemaParameters.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -6194,6 +6255,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PivotResultGroupFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PivotResultGroupFields.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -6228,6 +6294,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotFieldSets.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotFieldSets.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -7037,6 +7108,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api._Range.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api._Range._Default">
             <summary>
             SupportByLibrary OWC10 1, 1
@@ -7524,6 +7600,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.ElementExtensions.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.ElementExtensions.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -7684,6 +7765,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.SchemaRelatedFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.SchemaRelatedFields.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -7822,6 +7908,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Panes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Panes.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -7911,6 +8002,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.ChChartFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.ChChartFields.Item(System.Int32)">
             <summary>
             SupportByLibrary OWC10 1
@@ -7962,6 +8059,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChDataLabelsCollection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChDataLabelsCollection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -8059,6 +8161,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotRowMembers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotRowMembers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -8746,6 +8853,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.RecordsetDefs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.RecordsetDefs.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -9389,6 +9501,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChCharts.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChCharts.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -11476,6 +11593,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.AllGroupingDefs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.AllGroupingDefs.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -11718,6 +11840,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PivotPageMembers.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PivotPageMembers.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -11756,6 +11883,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PivotResultMemberProperties.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PivotResultMemberProperties.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -11790,6 +11922,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotAxisMembers.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotAxisMembers.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -13910,6 +14047,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Workbooks.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Workbooks.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -14552,6 +14694,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.ChSegments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.ChSegments.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -14666,6 +14814,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PivotColumnMembers.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PivotColumnMembers.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -14700,6 +14853,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotFields.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotFields.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -17159,6 +17317,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Worksheets.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Worksheets.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -17215,6 +17378,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Windows.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Windows.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -17261,6 +17429,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotTotals.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotTotals.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -17876,6 +18049,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PageRowsources.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PageRowsources.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -17914,6 +18092,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.SchemaDiagrams.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.SchemaDiagrams.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -17948,6 +18131,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.SchemaProperties.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.SchemaProperties.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -18030,6 +18218,12 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.Headings.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.Headings.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             This is a custom enumerator from NetOffice
@@ -18337,6 +18531,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Names.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Names.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -18395,6 +18594,12 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChErrorBarsCollection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChErrorBarsCollection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             This is a custom enumerator from NetOffice
@@ -21546,6 +21751,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.LookupRelationships.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.LookupRelationships.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -21628,6 +21838,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PageFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PageFields.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -21687,6 +21902,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.SchemaFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.SchemaFields.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -21732,6 +21952,11 @@
             <param name="Index">Int32 Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChTrendlines.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChTrendlines.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -22873,6 +23098,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.PageRelatedFields.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.PageRelatedFields.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -23077,6 +23307,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.Sheets.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.Sheets.Application">
             <summary>
             SupportByLibrary OWC10 1
@@ -23155,6 +23390,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChPoints.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChPoints.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -23503,6 +23743,11 @@
             <param name="Level">Int32 Level</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChCategoryLabels.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChCategoryLabels.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -24729,6 +24974,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.GroupingDefs.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.GroupingDefs.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -25120,6 +25370,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChAxes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChAxes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -25664,6 +25919,11 @@
             SupportByLibraryAttribute OWC10, 1
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.DataPages.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.DataPages.Item(System.Object)">
             <summary>
             SupportByLibrary OWC10 1
@@ -25736,6 +25996,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.SublistSchemaRelationships.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.SublistSchemaRelationships.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -25976,6 +26241,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.Filters.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.Filters.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -26253,6 +26523,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.OWC10Api.ChSeriesCollection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.ChSeriesCollection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -27388,6 +27663,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.OWC10Api.FieldListDragDataList.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.OWC10Api.FieldListDragDataList.Count">
             <summary>
             SupportByLibrary OWC10 1
@@ -27422,6 +27703,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.Borders.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.Borders.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -27508,6 +27794,11 @@
             <param name="Criterion">string Criterion</param>
         </member>
         <member name="M:NetOffice.OWC10Api.Criteria.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.Criteria.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>
@@ -27801,6 +28092,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.OWC10Api.PivotMemberProperties.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute OWC10, 1
+            </summary>
+        </member>
+        <member name="M:NetOffice.OWC10Api.PivotMemberProperties.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute OWC10, 1
             </summary>

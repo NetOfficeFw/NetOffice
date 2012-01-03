@@ -213,6 +213,11 @@
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.Points.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.Points.Parent">
             <summary>
             SupportByLibrary PowerPoint 14
@@ -1118,6 +1123,11 @@
             <param name="index">Int32 index</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.Collection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.Collection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
@@ -9269,6 +9279,11 @@
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.Axes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.Axes.Count">
             <summary>
             SupportByLibrary PowerPoint 14
@@ -10487,6 +10502,11 @@
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.LegendEntries.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.LegendEntries.Parent">
             <summary>
             SupportByLibrary PowerPoint 14
@@ -10870,6 +10890,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.PPRadioCluster.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.PPRadioCluster.Count">
             <summary>
             SupportByLibrary PowerPoint 9
@@ -11196,6 +11222,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.GroupShapes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.GroupShapes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
@@ -13322,6 +13353,11 @@
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.Trendlines.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.Trendlines.Parent">
             <summary>
             SupportByLibrary PowerPoint 14
@@ -14522,6 +14558,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.PowerPointApi.CanvasShapes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.CanvasShapes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 10,11,12,14
             </summary>
@@ -17591,6 +17632,11 @@
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.ShapeNodes.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.ShapeNodes.Application">
             <summary>
             SupportByLibrary PowerPoint 9, 10, 11, 12, 14
@@ -18161,6 +18207,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.PowerPointApi.DiagramNodes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.DiagramNodes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 10,11,12,14
             </summary>
@@ -20362,6 +20413,12 @@
             This is a custom enumerator from NetOffice
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.Adjustments.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            This is a custom enumerator from NetOffice
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.Adjustments.Application">
             <summary>
             SupportByLibrary PowerPoint 9, 10, 11, 12, 14
@@ -20672,6 +20729,11 @@
             <param name="Height">Single Height</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.Shapes.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.Shapes.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
@@ -23406,6 +23468,11 @@
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.DataLabels.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.DataLabels.Parent">
             <summary>
             SupportByLibrary PowerPoint 14
@@ -24178,6 +24245,11 @@
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
         </member>
+        <member name="M:NetOffice.PowerPointApi.ShapeRange.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
         <member name="P:NetOffice.PowerPointApi.ShapeRange.Application">
             <summary>
             SupportByLibrary PowerPoint 9, 10, 11, 12, 14
@@ -24691,6 +24763,11 @@
             <param name="toSection">Int32 toSection</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.SlideRange.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.SlideRange.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 9,10,11,12,14
             </summary>
@@ -25824,6 +25901,11 @@
             <param name="Index">object Index</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.SeriesCollection.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.SeriesCollection.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
@@ -27635,6 +27717,11 @@
             </summary>
         </member>
         <member name="M:NetOffice.PowerPointApi.DiagramNodeChildren.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 10,11,12,14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.DiagramNodeChildren.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 10,11,12,14
             </summary>
@@ -31815,6 +31902,11 @@
             <param name="progId">registered ProgID</param>
         </member>
         <member name="M:NetOffice.PowerPointApi.ChartGroups.GetEnumerator">
+            <summary>
+            SupportByLibraryAttribute PowerPoint, 14
+            </summary>
+        </member>
+        <member name="M:NetOffice.PowerPointApi.ChartGroups.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             SupportByLibraryAttribute PowerPoint, 14
             </summary>
