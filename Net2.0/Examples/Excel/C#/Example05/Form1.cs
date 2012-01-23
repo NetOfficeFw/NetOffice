@@ -15,9 +15,7 @@ namespace Example05
         {
             InitializeComponent();
 
-            /*
-            * Initialize Api COMObject Support
-            */
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
         }
 

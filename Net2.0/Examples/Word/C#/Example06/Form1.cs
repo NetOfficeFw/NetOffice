@@ -26,7 +26,7 @@ namespace Example06
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start word and turn off msg boxes

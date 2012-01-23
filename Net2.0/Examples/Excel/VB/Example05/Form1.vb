@@ -9,7 +9,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
@@ -30,7 +30,7 @@ Public Class Form1
 
         ' save the book 
         Dim fileExtension As String = GetDefaultExtension(excelApplication)
-        Dim workbookFile As String = String.Format("{0}\Example05{1}", Environment.CurrentDirectory, fileExtension)
+        Dim workbookFile As String = String.Format("{0}\Example05{1}", Application.StartupPath, fileExtension)
         workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
 
         ' close excel and dispose reference

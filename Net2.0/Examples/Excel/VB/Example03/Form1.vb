@@ -9,7 +9,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
@@ -66,28 +66,28 @@ Public Class Form1
         workSheet.get_Range("D6").NumberFormat = Pattern2
 
         workSheet.get_Range("A9").Value = "DateTime"
-        workSheet.get_Range("B10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern
-        workSheet.get_Range("C10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern
-        workSheet.get_Range("D10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern
-        workSheet.get_Range("E10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern
-        workSheet.get_Range("F10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern
+        workSheet.get_Range("B10").Value = cultureInfo.DateTimeFormat.FullDateTimePattern
+        workSheet.get_Range("C10").Value = cultureInfo.DateTimeFormat.LongDatePattern
+        workSheet.get_Range("D10").Value = cultureInfo.DateTimeFormat.ShortDatePattern
+        workSheet.get_Range("E10").Value = cultureInfo.DateTimeFormat.LongTimePattern
+        workSheet.get_Range("F10").Value = cultureInfo.DateTimeFormat.ShortTimePattern
 
         ' DateTime
         Dim dateTimeValue As DateTime = DateTime.Now
         workSheet.get_Range("B11").Value = dateTimeValue
-        workSheet.get_Range("B11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern
+        workSheet.get_Range("B11").NumberFormat = cultureInfo.DateTimeFormat.FullDateTimePattern
 
         workSheet.get_Range("C11").Value = dateTimeValue
-        workSheet.get_Range("C11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern
+        workSheet.get_Range("C11").NumberFormat = cultureInfo.DateTimeFormat.LongDatePattern
 
         workSheet.get_Range("D11").Value = dateTimeValue
-        workSheet.get_Range("D11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern
+        workSheet.get_Range("D11").NumberFormat = cultureInfo.DateTimeFormat.ShortDatePattern
 
         workSheet.get_Range("E11").Value = dateTimeValue
-        workSheet.get_Range("E11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern
+        workSheet.get_Range("E11").NumberFormat = cultureInfo.DateTimeFormat.LongTimePattern
 
         workSheet.get_Range("F11").Value = dateTimeValue
-        workSheet.get_Range("F11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern
+        workSheet.get_Range("F11").NumberFormat = cultureInfo.DateTimeFormat.ShortTimePattern
 
         ' string
         workSheet.get_Range("A14").Value = "String"
@@ -99,14 +99,14 @@ Public Class Form1
         workSheet.get_Range("B15").NumberFormat = "@"
 
         ' set colums
-        workSheet.Columns(1, Missing.Value).AutoFit()
-        workSheet.Columns(2, Missing.Value).AutoFit()
-        workSheet.Columns(3, Missing.Value).AutoFit()
-        workSheet.Columns(4, Missing.Value).AutoFit()
+        workSheet.Columns(1).AutoFit()
+        workSheet.Columns(2).AutoFit()
+        workSheet.Columns(3).AutoFit()
+        workSheet.Columns(4).AutoFit()
 
         ' save the book 
         Dim fileExtension As String = GetDefaultExtension(excelApplication)
-        Dim workbookFile As String = String.Format("{0}\Example03{1}", Environment.CurrentDirectory, fileExtension)
+        Dim workbookFile As String = String.Format("{0}\Example03{1}", Application.StartupPath, fileExtension)
         workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
 
         ' close excel and dispose reference

@@ -6,17 +6,20 @@
     <members>
         <member name="T:NetOffice.DAOApi.DBEngine">
             <summary>
-             CoClass DBEngine SupportByLibraryAttribute DAO, 6,12
+             CoClass DBEngine 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._DBEngine">
             <summary>
-             DispatchInterface _DBEngine SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _DBEngine 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._DAO">
             <summary>
-             DispatchInterface _DAO SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _DAO 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._DAO.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -59,7 +62,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Action">optional object Action</param>
+            <param name="action">optional object Action</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.Idle">
             <summary>
@@ -70,103 +73,103 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="SrcName">string SrcName</param>
-            <param name="DstName">string DstName</param>
-            <param name="DstLocale">optional object DstLocale</param>
-            <param name="Options">optional object Options</param>
-            <param name="SrcLocale">optional object SrcLocale</param>
+            <param name="srcName">string SrcName</param>
+            <param name="dstName">string DstName</param>
+            <param name="dstLocale">optional object DstLocale</param>
+            <param name="options">optional object Options</param>
+            <param name="srcLocale">optional object SrcLocale</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CompactDatabase(System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="SrcName">string SrcName</param>
-            <param name="DstName">string DstName</param>
+            <param name="srcName">string SrcName</param>
+            <param name="dstName">string DstName</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CompactDatabase(System.String,System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="SrcName">string SrcName</param>
-            <param name="DstName">string DstName</param>
-            <param name="DstLocale">optional object DstLocale</param>
+            <param name="srcName">string SrcName</param>
+            <param name="dstName">string DstName</param>
+            <param name="dstLocale">optional object DstLocale</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CompactDatabase(System.String,System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="SrcName">string SrcName</param>
-            <param name="DstName">string DstName</param>
-            <param name="DstLocale">optional object DstLocale</param>
-            <param name="Options">optional object Options</param>
+            <param name="srcName">string SrcName</param>
+            <param name="dstName">string DstName</param>
+            <param name="dstLocale">optional object DstLocale</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.RepairDatabase(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.RegisterDatabase(System.String,System.String,System.Boolean,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Dsn">string Dsn</param>
-            <param name="Driver">string Driver</param>
-            <param name="Silent">bool Silent</param>
-            <param name="Attributes">string Attributes</param>
+            <param name="dsn">string Dsn</param>
+            <param name="driver">string Driver</param>
+            <param name="silent">bool Silent</param>
+            <param name="attributes">string Attributes</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine._30_CreateWorkspace(System.String,System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
+            <param name="name">string Name</param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenDatabase(System.String,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
-            <param name="Connect">optional object Connect</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
+            <param name="connect">optional object Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenDatabase(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenDatabase(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenDatabase(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CreateDatabase(System.String,System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Locale">string Locale</param>
-            <param name="Option">optional object Option</param>
+            <param name="name">string Name</param>
+            <param name="locale">string Locale</param>
+            <param name="option">optional object Option</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CreateDatabase(System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Locale">string Locale</param>
+            <param name="name">string Name</param>
+            <param name="locale">string Locale</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.FreeLocks">
             <summary>
@@ -182,7 +185,12 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Option">Int32 Option</param>
+            <param name="option">optional Int32 Option = 0</param>
+        </member>
+        <member name="M:NetOffice.DAOApi._DBEngine.CommitTrans">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.Rollback">
             <summary>
@@ -193,82 +201,82 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Password">string Password</param>
+            <param name="name">string Name</param>
+            <param name="password">string Password</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.SetDataAccessOption(System.Int16,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Option">Int16 Option</param>
-            <param name="Value">object Value</param>
+            <param name="option">Int16 Option</param>
+            <param name="value">object Value</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.ISAMStats(System.Int32,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="StatNum">Int32 StatNum</param>
-            <param name="Reset">optional object Reset</param>
+            <param name="statNum">Int32 StatNum</param>
+            <param name="reset">optional object Reset</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.ISAMStats(System.Int32)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="StatNum">Int32 StatNum</param>
+            <param name="statNum">Int32 StatNum</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CreateWorkspace(System.String,System.String,System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
-            <param name="UseType">optional object UseType</param>
+            <param name="name">string Name</param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+            <param name="useType">optional object UseType</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.CreateWorkspace(System.String,System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
+            <param name="name">string Name</param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenConnection(System.String,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
-            <param name="Connect">optional object Connect</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
+            <param name="connect">optional object Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenConnection(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenConnection(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.OpenConnection(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
         </member>
         <member name="M:NetOffice.DAOApi._DBEngine.SetOption(System.Int32,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Option">Int32 Option</param>
-            <param name="Value">object Value</param>
+            <param name="option">Int32 Option</param>
+            <param name="value">object Value</param>
         </member>
         <member name="P:NetOffice.DAOApi._DBEngine.Version">
             <summary>
@@ -354,7 +362,8 @@
         </member>
         <member name="T:NetOffice.DAOApi._Group">
             <summary>
-             DispatchInterface _Group SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _Group 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._Group.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -376,9 +385,9 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
-            <param name="Password">optional object Password</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
+            <param name="password">optional object Password</param>
         </member>
         <member name="M:NetOffice.DAOApi._Group.CreateUser">
             <summary>
@@ -389,14 +398,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._Group.CreateUser(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
         </member>
         <member name="P:NetOffice.DAOApi._Group.Name">
             <summary>
@@ -418,7 +427,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Recordset">
             <summary>
-             DispatchInterface Recordset SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Recordset 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -450,6 +460,13 @@
             </summary>
             <param name="Item">object Item</param>
         </member>
+        <member name="M:NetOffice.DAOApi.Recordset.Collect(System.Object)">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            Alias for get_Collect
+            </summary>
+            <param name="Item">object Item</param>
+        </member>
         <member name="M:NetOffice.DAOApi.Recordset._30_CancelUpdate">
             <summary>
             SupportByLibrary DAO 6, 12
@@ -469,8 +486,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.OpenRecordset">
             <summary>
@@ -481,7 +498,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Delete">
             <summary>
@@ -497,25 +514,25 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Criteria">string Criteria</param>
+            <param name="criteria">string Criteria</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.FindLast(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Criteria">string Criteria</param>
+            <param name="criteria">string Criteria</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.FindNext(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Criteria">string Criteria</param>
+            <param name="criteria">string Criteria</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.FindPrevious(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Criteria">string Criteria</param>
+            <param name="criteria">string Criteria</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.MoveFirst">
             <summary>
@@ -541,170 +558,170 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
-            <param name="Key9">optional object Key9</param>
-            <param name="Key10">optional object Key10</param>
-            <param name="Key11">optional object Key11</param>
-            <param name="Key12">optional object Key12</param>
-            <param name="Key13">optional object Key13</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
+            <param name="key9">optional object Key9</param>
+            <param name="key10">optional object Key10</param>
+            <param name="key11">optional object Key11</param>
+            <param name="key12">optional object Key12</param>
+            <param name="key13">optional object Key13</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
-            <param name="Key9">optional object Key9</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
+            <param name="key9">optional object Key9</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
-            <param name="Key9">optional object Key9</param>
-            <param name="Key10">optional object Key10</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
+            <param name="key9">optional object Key9</param>
+            <param name="key10">optional object Key10</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
-            <param name="Key9">optional object Key9</param>
-            <param name="Key10">optional object Key10</param>
-            <param name="Key11">optional object Key11</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
+            <param name="key9">optional object Key9</param>
+            <param name="key10">optional object Key10</param>
+            <param name="key11">optional object Key11</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Seek(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Comparison">string Comparison</param>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">optional object Key2</param>
-            <param name="Key3">optional object Key3</param>
-            <param name="Key4">optional object Key4</param>
-            <param name="Key5">optional object Key5</param>
-            <param name="Key6">optional object Key6</param>
-            <param name="Key7">optional object Key7</param>
-            <param name="Key8">optional object Key8</param>
-            <param name="Key9">optional object Key9</param>
-            <param name="Key10">optional object Key10</param>
-            <param name="Key11">optional object Key11</param>
-            <param name="Key12">optional object Key12</param>
+            <param name="comparison">string Comparison</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">optional object Key2</param>
+            <param name="key3">optional object Key3</param>
+            <param name="key4">optional object Key4</param>
+            <param name="key5">optional object Key5</param>
+            <param name="key6">optional object Key6</param>
+            <param name="key7">optional object Key7</param>
+            <param name="key8">optional object Key8</param>
+            <param name="key9">optional object Key9</param>
+            <param name="key10">optional object Key10</param>
+            <param name="key11">optional object Key11</param>
+            <param name="key12">optional object Key12</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset._30_Update">
             <summary>
@@ -720,7 +737,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="NewQueryDef">optional object NewQueryDef</param>
+            <param name="newQueryDef">optional object NewQueryDef</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Requery">
             <summary>
@@ -731,21 +748,21 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="StartBookmark">optional object StartBookmark</param>
+            <param name="rows">Int32 Rows</param>
+            <param name="startBookmark">optional object StartBookmark</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Move(System.Int32)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Rows">Int32 Rows</param>
+            <param name="rows">Int32 Rows</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.FillCache(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Rows">optional object Rows</param>
-            <param name="StartBookmark">optional object StartBookmark</param>
+            <param name="rows">optional object Rows</param>
+            <param name="startBookmark">optional object StartBookmark</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.FillCache">
             <summary>
@@ -756,14 +773,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Rows">optional object Rows</param>
+            <param name="rows">optional object Rows</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.CreateDynaset(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
-            <param name="Inconsistent">optional object Inconsistent</param>
+            <param name="options">optional object Options</param>
+            <param name="inconsistent">optional object Inconsistent</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.CreateDynaset">
             <summary>
@@ -774,13 +791,13 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.CreateSnapshot(System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.CreateSnapshot">
             <summary>
@@ -806,7 +823,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="NumRows">optional object NumRows</param>
+            <param name="numRows">optional object NumRows</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.GetRows">
             <summary>
@@ -827,20 +844,41 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="UpdateType">Int32 UpdateType</param>
+            <param name="updateType">optional Int32 UpdateType = 1</param>
+        </member>
+        <member name="M:NetOffice.DAOApi.Recordset.CancelUpdate">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.Update(System.Int32,System.Boolean)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="UpdateType">Int32 UpdateType</param>
-            <param name="Force">bool Force</param>
+            <param name="updateType">optional Int32 UpdateType = 1</param>
+            <param name="force">optional bool Force = false</param>
+        </member>
+        <member name="M:NetOffice.DAOApi.Recordset.Update">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
+        </member>
+        <member name="M:NetOffice.DAOApi.Recordset.Update(System.Int32)">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
+            <param name="updateType">optional Int32 UpdateType = 1</param>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset.MoveLast(System.Int32)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = 0</param>
+        </member>
+        <member name="M:NetOffice.DAOApi.Recordset.MoveLast">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
         </member>
         <member name="P:NetOffice.DAOApi.Recordset.BOF">
             <summary>
@@ -1072,17 +1110,20 @@
         </member>
         <member name="T:NetOffice.DAOApi.Indexes">
             <summary>
-             DispatchInterface Indexes SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Indexes 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._DynaCollection">
             <summary>
-             DispatchInterface _DynaCollection SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _DynaCollection 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._Collection">
             <summary>
-             DispatchInterface _Collection SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _Collection 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._Collection.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1140,13 +1181,13 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Object">object Object</param>
+            <param name="object">object Object</param>
         </member>
         <member name="M:NetOffice.DAOApi._DynaCollection.Delete(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Indexes.#ctor(LateBindingApi.Core.COMObject,System.Object)">
             <param name="parentObject">object there has created the proxy</param>
@@ -1335,12 +1376,14 @@
         </member>
         <member name="T:NetOffice.DAOApi.User">
             <summary>
-             CoClass User SupportByLibraryAttribute DAO, 6,12
+             CoClass User 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._User">
             <summary>
-             DispatchInterface _User SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _User 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._User.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1369,8 +1412,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
         </member>
         <member name="M:NetOffice.DAOApi._User.CreateGroup">
             <summary>
@@ -1381,7 +1424,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="P:NetOffice.DAOApi._User.Name">
             <summary>
@@ -1437,12 +1480,14 @@
         </member>
         <member name="T:NetOffice.DAOApi.TableDef">
             <summary>
-             CoClass TableDef SupportByLibraryAttribute DAO, 6,12
+             CoClass TableDef 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._TableDef">
             <summary>
-             DispatchInterface _TableDef SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _TableDef 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1464,8 +1509,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.OpenRecordset">
             <summary>
@@ -1476,7 +1521,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.RefreshLink">
             <summary>
@@ -1487,9 +1532,9 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Size">optional object Size</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="size">optional object Size</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateField">
             <summary>
@@ -1500,20 +1545,20 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateField(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateIndex(System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateIndex">
             <summary>
@@ -1524,10 +1569,10 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateProperty">
             <summary>
@@ -1538,22 +1583,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._TableDef.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="P:NetOffice.DAOApi._TableDef.Attributes">
             <summary>
@@ -1669,7 +1714,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Documents">
             <summary>
-             DispatchInterface Documents SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Documents 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Documents.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1696,7 +1742,8 @@
         </member>
         <member name="T:NetOffice.DAOApi._Field">
             <summary>
-             DispatchInterface _Field SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _Field 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._Field.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1718,14 +1765,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Val">object Val</param>
+            <param name="val">object Val</param>
         </member>
         <member name="M:NetOffice.DAOApi._Field.GetChunk(System.Int32,System.Int32)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Offset">Int32 Offset</param>
-            <param name="Bytes">Int32 Bytes</param>
+            <param name="offset">Int32 Offset</param>
+            <param name="bytes">Int32 Bytes</param>
         </member>
         <member name="M:NetOffice.DAOApi._Field._30_FieldSize">
             <summary>
@@ -1736,10 +1783,10 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi._Field.CreateProperty">
             <summary>
@@ -1750,22 +1797,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._Field.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._Field.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="P:NetOffice.DAOApi._Field.CollatingOrder">
             <summary>
@@ -1895,7 +1942,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Workspace">
             <summary>
-             DispatchInterface Workspace SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Workspace 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1922,7 +1970,12 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = 0</param>
+        </member>
+        <member name="M:NetOffice.DAOApi.Workspace.CommitTrans">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.Close">
             <summary>
@@ -1938,54 +1991,54 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
-            <param name="Connect">optional object Connect</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
+            <param name="connect">optional object Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenDatabase(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenDatabase(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenDatabase(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateDatabase(System.String,System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Connect">string Connect</param>
-            <param name="Option">optional object Option</param>
+            <param name="name">string Name</param>
+            <param name="connect">string Connect</param>
+            <param name="option">optional object Option</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateDatabase(System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Connect">string Connect</param>
+            <param name="name">string Name</param>
+            <param name="connect">string Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateUser(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
-            <param name="Password">optional object Password</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
+            <param name="password">optional object Password</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateUser">
             <summary>
@@ -1996,21 +2049,21 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateUser(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateGroup(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="PID">optional object PID</param>
+            <param name="name">optional object Name</param>
+            <param name="pID">optional object PID</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.CreateGroup">
             <summary>
@@ -2021,37 +2074,37 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenConnection(System.String,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
-            <param name="Connect">optional object Connect</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
+            <param name="connect">optional object Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenConnection(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenConnection(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Workspace.OpenConnection(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="ReadOnly">optional object ReadOnly</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="readOnly">optional object ReadOnly</param>
         </member>
         <member name="P:NetOffice.DAOApi.Workspace.Name">
             <summary>
@@ -2150,7 +2203,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.IndexFields">
             <summary>
-             DispatchInterface IndexFields SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface IndexFields 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.IndexFields.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2429,7 +2483,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Group">
             <summary>
-             CoClass Group SupportByLibraryAttribute DAO, 6,12
+             CoClass Group 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Group.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2462,12 +2517,14 @@
         </member>
         <member name="T:NetOffice.DAOApi.QueryDef">
             <summary>
-             CoClass QueryDef SupportByLibraryAttribute DAO, 6,12
+             CoClass QueryDef 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._QueryDef">
             <summary>
-             DispatchInterface _QueryDef SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _QueryDef 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2494,8 +2551,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._30_OpenRecordset">
             <summary>
@@ -2506,14 +2563,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._30__OpenRecordset(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._30__OpenRecordset">
             <summary>
@@ -2524,7 +2581,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._Copy">
             <summary>
@@ -2535,7 +2592,7 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.Execute">
             <summary>
@@ -2553,8 +2610,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
-            <param name="Inconsistent">optional object Inconsistent</param>
+            <param name="options">optional object Options</param>
+            <param name="inconsistent">optional object Inconsistent</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateDynaset">
             <summary>
@@ -2565,13 +2622,13 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateSnapshot(System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">optional object Options</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateSnapshot">
             <summary>
@@ -2587,10 +2644,10 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateProperty">
             <summary>
@@ -2601,30 +2658,30 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.OpenRecordset(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
-            <param name="LockEdit">optional object LockEdit</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
+            <param name="lockEdit">optional object LockEdit</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.OpenRecordset">
             <summary>
@@ -2635,22 +2692,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.OpenRecordset(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._OpenRecordset(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
-            <param name="LockEdit">optional object LockEdit</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
+            <param name="lockEdit">optional object LockEdit</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._OpenRecordset">
             <summary>
@@ -2661,14 +2718,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef._OpenRecordset(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi._QueryDef.Cancel">
             <summary>
@@ -2807,7 +2864,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Field">
             <summary>
-             CoClass Field SupportByLibraryAttribute DAO, 6,12
+             CoClass Field 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Field.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2840,7 +2898,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Relations">
             <summary>
-             DispatchInterface Relations SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Relations 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Relations.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2888,7 +2947,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Parameters">
             <summary>
-             DispatchInterface Parameters SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Parameters 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Parameters.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2938,7 +2998,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Error">
             <summary>
-             DispatchInterface Error SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Error 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Error.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2988,7 +3049,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Container">
             <summary>
-             DispatchInterface Container SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Container 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Container.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3050,7 +3112,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Parameter">
             <summary>
-             DispatchInterface Parameter SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Parameter 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Parameter.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3094,7 +3157,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Property">
             <summary>
-             DispatchInterface Property SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Property 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Property.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3138,12 +3202,14 @@
         </member>
         <member name="T:NetOffice.DAOApi.Relation">
             <summary>
-             CoClass Relation SupportByLibraryAttribute DAO, 6,12
+             CoClass Relation 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="T:NetOffice.DAOApi._Relation">
             <summary>
-             DispatchInterface _Relation SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _Relation 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._Relation.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3165,9 +3231,9 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Size">optional object Size</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="size">optional object Size</param>
         </member>
         <member name="M:NetOffice.DAOApi._Relation.CreateField">
             <summary>
@@ -3178,14 +3244,14 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._Relation.CreateField(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="P:NetOffice.DAOApi._Relation.Name">
             <summary>
@@ -3253,7 +3319,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Errors">
             <summary>
-             DispatchInterface Errors SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Errors 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Errors.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3280,7 +3347,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Groups">
             <summary>
-             DispatchInterface Groups SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Groups 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Groups.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3328,7 +3396,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Containers">
             <summary>
-             DispatchInterface Containers SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Containers 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Containers.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3522,7 +3591,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Databases">
             <summary>
-             DispatchInterface Databases SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Databases 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Databases.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3761,7 +3831,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.PrivDBEngine">
             <summary>
-             CoClass PrivDBEngine SupportByLibraryAttribute DAO, 6,12
+             CoClass PrivDBEngine 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.PrivDBEngine.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3794,7 +3865,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.TableDefs">
             <summary>
-             DispatchInterface TableDefs SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface TableDefs 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.TableDefs.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3842,7 +3914,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Recordset2">
             <summary>
-             DispatchInterface Recordset2 SupportByLibraryAttribute DAO, 12
+             DispatchInterface Recordset2 
+             SupportByLibrary DAO, 12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Recordset2.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3874,7 +3947,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Field2">
             <summary>
-             DispatchInterface Field2 SupportByLibraryAttribute DAO, 12
+             DispatchInterface Field2 
+             SupportByLibrary DAO, 12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Field2.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3896,13 +3970,13 @@
             <summary>
             SupportByLibrary DAO 12
             </summary>
-            <param name="FileName">string FileName</param>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="M:NetOffice.DAOApi.Field2.SaveToFile(System.String)">
             <summary>
             SupportByLibrary DAO 12
             </summary>
-            <param name="FileName">string FileName</param>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="P:NetOffice.DAOApi.Field2.Properties">
             <summary>
@@ -3936,7 +4010,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.ComplexType">
             <summary>
-             DispatchInterface ComplexType SupportByLibraryAttribute DAO, 12
+             DispatchInterface ComplexType 
+             SupportByLibrary DAO, 12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.ComplexType.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3962,7 +4037,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Document">
             <summary>
-             DispatchInterface Document SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Document 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Document.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3984,10 +4060,10 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi.Document.CreateProperty">
             <summary>
@@ -3998,22 +4074,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Document.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Document.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="P:NetOffice.DAOApi.Document.Name">
             <summary>
@@ -4065,7 +4141,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Connections">
             <summary>
-             DispatchInterface Connections SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Connections 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Connections.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4203,7 +4280,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Recordsets">
             <summary>
-             DispatchInterface Recordsets SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Recordsets 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Recordsets.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4230,7 +4308,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Properties">
             <summary>
-             DispatchInterface Properties SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Properties 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Properties.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4390,7 +4469,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Connection">
             <summary>
-             DispatchInterface Connection SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Connection 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4422,8 +4502,8 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="SQLText">optional object SQLText</param>
+            <param name="name">optional object Name</param>
+            <param name="sQLText">optional object SQLText</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.CreateQueryDef">
             <summary>
@@ -4434,50 +4514,50 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.Execute(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Query">string Query</param>
-            <param name="Options">optional object Options</param>
+            <param name="query">string Query</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.Execute(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Query">string Query</param>
+            <param name="query">string Query</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.OpenRecordset(System.String,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
-            <param name="LockEdit">optional object LockEdit</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
+            <param name="lockEdit">optional object LockEdit</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.OpenRecordset(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.OpenRecordset(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Connection.OpenRecordset(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="P:NetOffice.DAOApi.Connection.Name">
             <summary>
@@ -4547,7 +4627,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Fields">
             <summary>
-             DispatchInterface Fields SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Fields 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Fields.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4595,7 +4676,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Workspaces">
             <summary>
-             DispatchInterface Workspaces SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Workspaces 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Workspaces.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4701,7 +4783,8 @@
         </member>
         <member name="T:NetOffice.DAOApi._Index">
             <summary>
-             DispatchInterface _Index SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface _Index 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi._Index.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4723,9 +4806,9 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Size">optional object Size</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="size">optional object Size</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateField">
             <summary>
@@ -4736,23 +4819,23 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateField(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateProperty(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateProperty">
             <summary>
@@ -4763,22 +4846,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi._Index.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="P:NetOffice.DAOApi._Index.Name">
             <summary>
@@ -4836,7 +4919,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Database">
             <summary>
-             DispatchInterface Database SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Database 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Database.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4863,44 +4947,44 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Query">string Query</param>
-            <param name="Options">optional object Options</param>
+            <param name="query">string Query</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.Execute(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Query">string Query</param>
+            <param name="query">string Query</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database._30_OpenRecordset(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database._30_OpenRecordset(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database._30_OpenRecordset(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateProperty(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
-            <param name="DDL">optional object DDL</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
+            <param name="dDL">optional object DDL</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateProperty">
             <summary>
@@ -4911,31 +4995,31 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateProperty(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateProperty(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional object Name</param>
+            <param name="type">optional object Type</param>
+            <param name="value">optional object Value</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateRelation(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Table">optional object Table</param>
-            <param name="ForeignTable">optional object ForeignTable</param>
-            <param name="Attributes">optional object Attributes</param>
+            <param name="name">optional object Name</param>
+            <param name="table">optional object Table</param>
+            <param name="foreignTable">optional object ForeignTable</param>
+            <param name="attributes">optional object Attributes</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateRelation">
             <summary>
@@ -4946,31 +5030,31 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateRelation(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Table">optional object Table</param>
+            <param name="name">optional object Name</param>
+            <param name="table">optional object Table</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateRelation(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Table">optional object Table</param>
-            <param name="ForeignTable">optional object ForeignTable</param>
+            <param name="name">optional object Name</param>
+            <param name="table">optional object Table</param>
+            <param name="foreignTable">optional object ForeignTable</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateTableDef(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Attributes">optional object Attributes</param>
-            <param name="SourceTableName">optional object SourceTableName</param>
-            <param name="Connect">optional object Connect</param>
+            <param name="name">optional object Name</param>
+            <param name="attributes">optional object Attributes</param>
+            <param name="sourceTableName">optional object SourceTableName</param>
+            <param name="connect">optional object Connect</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateTableDef">
             <summary>
@@ -4981,22 +5065,22 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateTableDef(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Attributes">optional object Attributes</param>
+            <param name="name">optional object Name</param>
+            <param name="attributes">optional object Attributes</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateTableDef(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="Attributes">optional object Attributes</param>
-            <param name="SourceTableName">optional object SourceTableName</param>
+            <param name="name">optional object Name</param>
+            <param name="attributes">optional object Attributes</param>
+            <param name="sourceTableName">optional object SourceTableName</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.BeginTrans">
             <summary>
@@ -5007,7 +5091,12 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = 0</param>
+        </member>
+        <member name="M:NetOffice.DAOApi.Database.CommitTrans">
+            <summary>
+            SupportByLibrary DAO 6, 12
+            </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Database.Rollback">
             <summary>
@@ -5018,29 +5107,29 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
-            <param name="Inconsistent">optional object Inconsistent</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
+            <param name="inconsistent">optional object Inconsistent</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateDynaset(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateDynaset(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateQueryDef(System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
-            <param name="SQLText">optional object SQLText</param>
+            <param name="name">optional object Name</param>
+            <param name="sQLText">optional object SQLText</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateQueryDef">
             <summary>
@@ -5051,38 +5140,38 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">optional object Name</param>
+            <param name="name">optional object Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateSnapshot(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Source">string Source</param>
-            <param name="Options">optional object Options</param>
+            <param name="source">string Source</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.CreateSnapshot(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Source">string Source</param>
+            <param name="source">string Source</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.DeleteQueryDef(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.ExecuteSQL(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="SQL">string SQL</param>
+            <param name="sQL">string SQL</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.ListFields(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.ListTables">
             <summary>
@@ -5093,48 +5182,48 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.OpenTable(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.OpenTable(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.Synchronize(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="DbPathName">string DbPathName</param>
-            <param name="ExchangeType">optional object ExchangeType</param>
+            <param name="dbPathName">string DbPathName</param>
+            <param name="exchangeType">optional object ExchangeType</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.Synchronize(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="DbPathName">string DbPathName</param>
+            <param name="dbPathName">string DbPathName</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.MakeReplica(System.String,System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="PathName">string PathName</param>
-            <param name="Description">string Description</param>
-            <param name="Options">optional object Options</param>
+            <param name="pathName">string PathName</param>
+            <param name="description">string Description</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.MakeReplica(System.String,System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="PathName">string PathName</param>
-            <param name="Description">string Description</param>
+            <param name="pathName">string PathName</param>
+            <param name="description">string Description</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.NewPassword(System.String,System.String)">
             <summary>
@@ -5147,37 +5236,37 @@
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
-            <param name="LockEdit">optional object LockEdit</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
+            <param name="lockEdit">optional object LockEdit</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.OpenRecordset(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
+            <param name="name">string Name</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.OpenRecordset(System.String,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.OpenRecordset(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">optional object Type</param>
-            <param name="Options">optional object Options</param>
+            <param name="name">string Name</param>
+            <param name="type">optional object Type</param>
+            <param name="options">optional object Options</param>
         </member>
         <member name="M:NetOffice.DAOApi.Database.PopulatePartial(System.String)">
             <summary>
             SupportByLibrary DAO 6, 12
             </summary>
-            <param name="DbPathName">string DbPathName</param>
+            <param name="dbPathName">string DbPathName</param>
         </member>
         <member name="P:NetOffice.DAOApi.Database.CollatingOrder">
             <summary>
@@ -5469,7 +5558,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Index">
             <summary>
-             CoClass Index SupportByLibraryAttribute DAO, 6,12
+             CoClass Index 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Index.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5502,7 +5592,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.Users">
             <summary>
-             DispatchInterface Users SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface Users 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.Users.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5550,7 +5641,8 @@
         </member>
         <member name="T:NetOffice.DAOApi.QueryDefs">
             <summary>
-             DispatchInterface QueryDefs SupportByLibraryAttribute DAO, 6,12
+             DispatchInterface QueryDefs 
+             SupportByLibrary DAO, 6,12
             </summary>
         </member>
         <member name="M:NetOffice.DAOApi.QueryDefs.#ctor(LateBindingApi.Core.COMObject,System.Object)">

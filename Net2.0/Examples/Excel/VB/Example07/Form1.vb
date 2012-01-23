@@ -10,7 +10,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         Dim workbookFile As String = ""
@@ -46,7 +46,7 @@ Public Class Form1
 
             ' save the book 
             Dim fileExtension As String = GetDefaultExtension(excelApplication)
-            workbookFile = String.Format("{0}\Example07{1}", Environment.CurrentDirectory, fileExtension)
+            workbookFile = String.Format("{0}\Example07{1}", Application.StartupPath, fileExtension)
             workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
 
         Catch throwedException As System.Runtime.InteropServices.COMException

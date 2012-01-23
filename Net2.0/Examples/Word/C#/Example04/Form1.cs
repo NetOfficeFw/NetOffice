@@ -23,7 +23,7 @@ namespace Example04
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // create simple a csv-file as datasource
@@ -59,7 +59,7 @@ namespace Example04
             wordApplication.Selection.TypeText(" or click ");
 
             object adress = newDocument.MailMerge.DataSource.DataFields[2].Value;
-            object screenTip = "come on dude click me, i know you want it...";
+            object screenTip = "come on and click me";
             object displayText = "here";
             newDocument.Hyperlinks.Add(wordApplication.Selection.Range, adress, Missing.Value, screenTip, displayText, Missing.Value);
 

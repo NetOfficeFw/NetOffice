@@ -19,6 +19,7 @@ Public Enum ext_DisconnectMode
     ext_dm_UserClosed = 1
 End Enum
 
+'' copy and paste from system.extension, keep the count of dependent assemblies as low as possible ;)
 <ComImport(), Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType(CShort(&H1040))> _
 Public Interface IDTExtensibility2
     <MethodImpl(MethodImplOptions.InternalCall, MethodCodeType:=MethodCodeType.Runtime), DispId(1)> _

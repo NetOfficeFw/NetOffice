@@ -12,7 +12,7 @@ Public Class Form1
         Dim powerApplication As PowerPoint.Application = Nothing
         Dim documentFile As String = Nothing
         Try
-            ' Initialize Api COMObject Support
+            ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
             ' start powerpoint

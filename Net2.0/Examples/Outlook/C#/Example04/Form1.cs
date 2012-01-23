@@ -21,7 +21,7 @@ namespace Example04
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // Create an Outlook Application object. 
@@ -36,7 +36,7 @@ namespace Example04
             }
             else
             {
-                MessageBox.Show(this, "This version of MS-Outlook doesnt support SendAndReceive.", "Example04",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(this, "This version of MS-Outlook doesnt support SendAndReceive.", "Example04", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
             // close outlook and dispose

@@ -8,7 +8,7 @@ Public Class Form1
         'Initialize Api COMObject Support
         LateBindingApi.Core.Factory.Initialize()
 
-        ' start application
+        ' Initialize NetOffice
         Dim application As New Excel.Application()
         application.DisplayAlerts = False
 

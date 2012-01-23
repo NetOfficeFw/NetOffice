@@ -20,7 +20,7 @@ namespace Tutorial06
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start application

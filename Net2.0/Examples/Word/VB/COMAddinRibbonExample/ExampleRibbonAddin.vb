@@ -34,7 +34,7 @@ Public Class ExampleRibbonAddin
 
         Try
 
-            ' initialize api
+            ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
             _wordApplication = New Word.Application(Nothing, Application)

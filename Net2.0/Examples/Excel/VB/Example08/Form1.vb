@@ -21,7 +21,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
@@ -50,7 +50,6 @@ Public Class Form1
         AddHandler excelApplication.SheetDeactivateEvent, sheetDeactivateHandler
 
         ' add a new workbook add a sheet and close
-        ' add a new workbook
         Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
         Dim workSheet As Excel.Worksheet = workBook.Worksheets(1)
         workBook.Close()

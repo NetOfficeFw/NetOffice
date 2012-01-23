@@ -18,7 +18,7 @@ namespace Example1
   
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
  
             // start outlook
@@ -33,16 +33,10 @@ namespace Example1
             labelItemsCount.Text = string.Format("You have {0} e-mails.", inboxFolder.Items.Count);
             
             // we fetch the inbox folder items. ATTENTION: items is null if you have no items in inbox folder
-            // office products initialize ALL collections on demand. this is just an example, we dont check for null here
+            // office products initialize ALL collections on demand. this is just an example, we dont check for null or exception here
             // NOTE: for some uninitialized collections you get an exception while accessing
-            Outlook._Items items = inboxFolder.Items;
-            COMObject item = null;
-            int i = 1;
-            do
+            foreach (COMObject item in inboxFolder.Items)
             {
-                if(null == item)
-                    item = items.GetFirst();
-
                 // not every item is a mail item
                 Outlook.MailItem mailItem = item as Outlook.MailItem;
                 if (null != mailItem)
@@ -51,9 +45,7 @@ namespace Example1
                     newItem.SubItems.Add(mailItem.Subject);
                 }
                 item.Dispose();
-                item = items.GetNext();
-                i++;
-            } while (null != item);
+            }
 
             // close outlook and dispose
             outlookApplication.Quit();

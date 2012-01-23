@@ -25,7 +25,7 @@ namespace Tutorial01
             *  and make sure your application instance removes from process list if you want.
             */
 
-            // Initialize Api COMObject Support 
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start application

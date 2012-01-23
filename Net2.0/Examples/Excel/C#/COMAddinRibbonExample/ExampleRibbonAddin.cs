@@ -101,8 +101,8 @@ namespace COMAddinRibbonExample
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
-            { 
-                // initialize api
+            {
+                // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
                 _excelApplication = new Excel.Application(null, Application);

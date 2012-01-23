@@ -40,7 +40,7 @@ namespace Example04
 
         private void ShowDatabaseInfo(string filePath)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start access 

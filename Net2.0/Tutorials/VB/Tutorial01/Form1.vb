@@ -8,7 +8,7 @@ Public Class Form1
         '  NetOffice manages COM Proxies for you to avoid any kind of memory leaks
         '  and make sure your application instance removes from process list if you want.
 
-        ' Initialize Api COMObject Support 
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start application

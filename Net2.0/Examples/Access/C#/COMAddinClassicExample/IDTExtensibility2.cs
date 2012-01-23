@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 
 namespace COMAddinClassicExample
-{
+{ 
     [ComVisible(true)]
     [Guid("289E9AF1-4973-11D1-AE81-00A0C90F26F4")]
     public enum ext_ConnectMode
@@ -29,6 +29,7 @@ namespace COMAddinClassicExample
         ext_dm_SolutionClosed
     }
 
+    /* copy and paste from system.extension, keep the count of dependent assemblies as low as possible ;) */ 
     [ComVisible(true)]
     [ComImport, Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType((short)0x1040)]
     public interface IDTExtensibility2

@@ -9,7 +9,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' initialize api
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start word and turn off msg boxes

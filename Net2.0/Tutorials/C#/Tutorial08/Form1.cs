@@ -20,7 +20,7 @@ namespace Tutorial08
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffices
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // create new instance

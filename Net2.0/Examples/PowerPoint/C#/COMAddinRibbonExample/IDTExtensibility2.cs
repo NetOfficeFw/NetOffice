@@ -29,6 +29,7 @@ namespace COMAddinRibbonExample
         ext_dm_SolutionClosed
     }
 
+    /* copy and paste from system.extension, keep the count of dependent assemblies as low as possible ;) */ 
     [ComVisible(true)]
     [ComImport, Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType((short)0x1040)]
     public interface IDTExtensibility2

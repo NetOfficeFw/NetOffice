@@ -23,7 +23,7 @@ namespace Example05
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start word and turn off msg boxes
@@ -42,8 +42,9 @@ namespace Example05
             module.Name = "NetOfficeTestModule";
            
             //add the macro
-            string codeLines = string.Format("Public Sub NetOfficeTestMacro()\r\n   {0}\r\nEnd Sub",
-                                             "Selection.TypeText (\"This text is written by a automatic created macro with NetOffice...\")");
+            string codeLines = string.Format("Public Sub NetOfficeTestMacro(){1}   {0}{1}End Sub",
+                                             "Selection.TypeText (\"This text is written by a automatic created macro with NetOffice...\"){1}",
+                                             Environment.NewLine);
             module.InsertLines(1, codeLines);
 
             //start the macro NetOfficeTestModule
@@ -56,7 +57,7 @@ namespace Example05
 
             //close word and dispose reference
             wordApplication.Quit();
-            //wordApplication.Dispose();
+            wordApplication.Dispose();
 
             FinishDialog fDialog = new FinishDialog("Document saved.", documentFile.ToString());
             fDialog.ShowDialog(this);

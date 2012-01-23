@@ -25,7 +25,7 @@ namespace Example06
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start outlook
@@ -35,9 +35,10 @@ namespace Example06
             mailItem.CloseEvent += new NetOffice.OutlookApi.MailItem_CloseEventHandler(mailItem_CloseEvent);
 
             // BodyFormat is not available in Outlook 2000
-            // we check at runtime is property is available
+            // we check at runtime the property is available
             if(mailItem.EntityIsAvailable("BodyFormat"))
                 mailItem.BodyFormat = OlBodyFormat.olFormatPlain;
+
             mailItem.Body = "Body of Example06 " + DateTime.Now.ToLongTimeString();
             mailItem.Subject = "Example06";
             mailItem.Display();

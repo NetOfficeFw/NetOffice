@@ -6,12 +6,14 @@
     <members>
         <member name="T:NetOffice.MSComctlLibApi.ColumnHeaders">
             <summary>
-             CoClass ColumnHeaders SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ColumnHeaders 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IColumnHeaders">
             <summary>
-             DispatchInterface IColumnHeaders SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IColumnHeaders 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -36,15 +38,22 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add_PreVB98(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Width">optional object Width</param>
-            <param name="Alignment">optional object Alignment</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="width">optional object Width</param>
+            <param name="alignment">optional object Alignment</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add_PreVB98">
             <summary>
@@ -55,31 +64,31 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add_PreVB98(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add_PreVB98(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add_PreVB98(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Width">optional object Width</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="width">optional object Width</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Clear">
             <summary>
@@ -90,18 +99,18 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Width">optional object Width</param>
-            <param name="Alignment">optional object Alignment</param>
-            <param name="Icon">optional object Icon</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="width">optional object Width</param>
+            <param name="alignment">optional object Alignment</param>
+            <param name="icon">optional object Icon</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add">
             <summary>
@@ -112,41 +121,41 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Width">optional object Width</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="width">optional object Width</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Width">optional object Width</param>
-            <param name="Alignment">optional object Alignment</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="width">optional object Width</param>
+            <param name="alignment">optional object Alignment</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeaders.GetEnumerator">
             <summary>
@@ -201,12 +210,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ProgressBar">
             <summary>
-             CoClass ProgressBar SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ProgressBar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IProgressBar">
             <summary>
-             DispatchInterface IProgressBar SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IProgressBar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IProgressBar.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -447,12 +458,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ButtonMenu">
             <summary>
-             CoClass ButtonMenu SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ButtonMenu 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IButtonMenu">
             <summary>
-             DispatchInterface IButtonMenu SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IButtonMenu 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenu.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -548,12 +561,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Tab">
             <summary>
-             CoClass Tab SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Tab 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ITab">
             <summary>
-             DispatchInterface ITab SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface ITab 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ITab.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -679,7 +694,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IComboItems">
             <summary>
-             DispatchInterface IComboItems SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IComboItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -711,16 +727,23 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IComboItems._CollectionDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get__CollectionDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Image">optional object Image</param>
-            <param name="SelImage">optional object SelImage</param>
-            <param name="Indentation">optional object Indentation</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="image">optional object Image</param>
+            <param name="selImage">optional object SelImage</param>
+            <param name="indentation">optional object Indentation</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add">
             <summary>
@@ -731,41 +754,41 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Image">optional object Image</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="image">optional object Image</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Image">optional object Image</param>
-            <param name="SelImage">optional object SelImage</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="image">optional object Image</param>
+            <param name="selImage">optional object SelImage</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.Clear">
             <summary>
@@ -776,7 +799,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItems.GetEnumerator">
             <summary>
@@ -803,7 +826,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IControls">
             <summary>
-             DispatchInterface IControls SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IControls 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IControls.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -846,7 +870,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IListItems">
             <summary>
-             DispatchInterface IListItems SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IListItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -871,15 +896,22 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IListItems.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Icon">optional object Icon</param>
-            <param name="SmallIcon">optional object SmallIcon</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="icon">optional object Icon</param>
+            <param name="smallIcon">optional object SmallIcon</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Add">
             <summary>
@@ -890,31 +922,31 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Icon">optional object Icon</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="icon">optional object Icon</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.Clear">
             <summary>
@@ -925,7 +957,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItems.GetEnumerator">
             <summary>
@@ -952,7 +984,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IToolbar">
             <summary>
-             DispatchInterface IToolbar SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IToolbar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IToolbar.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -984,17 +1017,17 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Key">string Key</param>
-            <param name="Subkey">string Subkey</param>
-            <param name="Value">string Value</param>
+            <param name="key">string Key</param>
+            <param name="subkey">string Subkey</param>
+            <param name="value">string Value</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IToolbar.RestoreToolbar(System.String,System.String,System.String)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Key">string Key</param>
-            <param name="Subkey">string Subkey</param>
-            <param name="Value">string Value</param>
+            <param name="key">string Key</param>
+            <param name="subkey">string Subkey</param>
+            <param name="value">string Value</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IToolbar.OLEDrag">
             <summary>
@@ -1174,7 +1207,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IComboItem">
             <summary>
-             DispatchInterface IComboItem SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IComboItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IComboItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1248,7 +1282,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ITabs">
             <summary>
-             DispatchInterface ITabs SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface ITabs 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ITabs.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1277,6 +1312,13 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             Get/Set
+            </summary>
+            <param name="pvIndex">object pvIndex</param>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.ITabs.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
             </summary>
             <param name="pvIndex">object pvIndex</param>
         </member>
@@ -1351,7 +1393,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IVBDataObject">
             <summary>
-             DispatchInterface IVBDataObject SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IVBDataObject 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IVBDataObject.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1667,12 +1710,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListImages">
             <summary>
-             CoClass ListImages SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListImages 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IImages">
             <summary>
-             DispatchInterface IImages SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IImages 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1704,13 +1749,20 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IImages.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Picture">optional object Picture</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="picture">optional object Picture</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.Add">
             <summary>
@@ -1721,14 +1773,14 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.Clear">
             <summary>
@@ -1739,7 +1791,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImages.GetEnumerator">
             <summary>
@@ -1794,7 +1846,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IColumnHeader">
             <summary>
-             DispatchInterface IColumnHeader SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IColumnHeader 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IColumnHeader.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1926,7 +1979,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ComboItems">
             <summary>
-             CoClass ComboItems SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ComboItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ComboItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1959,12 +2013,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Buttons">
             <summary>
-             CoClass Buttons SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Buttons 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IButtons">
             <summary>
-             DispatchInterface IButtons SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IButtons 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1996,11 +2052,18 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IButtons.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Remove(System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Clear">
             <summary>
@@ -2011,11 +2074,11 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Caption">optional object Caption</param>
-            <param name="Style">optional object Style</param>
-            <param name="Image">optional object Image</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="caption">optional object Caption</param>
+            <param name="style">optional object Style</param>
+            <param name="image">optional object Image</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Add">
             <summary>
@@ -2026,31 +2089,31 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Caption">optional object Caption</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="caption">optional object Caption</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Caption">optional object Caption</param>
-            <param name="Style">optional object Style</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="caption">optional object Caption</param>
+            <param name="style">optional object Style</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtons.GetEnumerator">
             <summary>
@@ -2105,7 +2168,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IImage">
             <summary>
-             DispatchInterface IImage SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IImage 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImage.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2130,7 +2194,7 @@
             <param name="hDC">Int32 hDC</param>
             <param name="x">optional object x</param>
             <param name="y">optional object y</param>
-            <param name="Style">optional object Style</param>
+            <param name="style">optional object Style</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImage.Draw(System.Int32)">
             <summary>
@@ -2184,7 +2248,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IListView">
             <summary>
-             DispatchInterface IListView SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IListView 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListView.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2207,8 +2272,8 @@
             SupportByLibrary MSComctlLib 2
             </summary>
             <param name="sz">string sz</param>
-            <param name="Where">optional object Where</param>
-            <param name="Index">optional object Index</param>
+            <param name="where">optional object Where</param>
+            <param name="index">optional object Index</param>
             <param name="fPartial">optional object fPartial</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListView.FindItem(System.String)">
@@ -2222,15 +2287,15 @@
             SupportByLibrary MSComctlLib 2
             </summary>
             <param name="sz">string sz</param>
-            <param name="Where">optional object Where</param>
+            <param name="where">optional object Where</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListView.FindItem(System.String,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
             <param name="sz">string sz</param>
-            <param name="Where">optional object Where</param>
-            <param name="Index">optional object Index</param>
+            <param name="where">optional object Where</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListView.GetFirstVisible">
             <summary>
@@ -2494,7 +2559,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IVBDataObjectFiles">
             <summary>
-             DispatchInterface IVBDataObjectFiles SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IVBDataObjectFiles 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IVBDataObjectFiles.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2695,7 +2761,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Controls">
             <summary>
-             CoClass Controls SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Controls 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.Controls.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2728,12 +2795,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Slider">
             <summary>
-             CoClass Slider SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Slider 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ISlider">
             <summary>
-             DispatchInterface ISlider SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface ISlider 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ISlider.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3082,12 +3151,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Button">
             <summary>
-             CoClass Button SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Button 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IButton">
             <summary>
-             DispatchInterface IButton SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IButton 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButton.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3243,7 +3314,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IListSubItems">
             <summary>
-             DispatchInterface IListSubItems SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IListSubItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3268,15 +3340,22 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IListSubItems.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="ReportIcon">optional object ReportIcon</param>
-            <param name="ToolTipText">optional object ToolTipText</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="reportIcon">optional object ReportIcon</param>
+            <param name="toolTipText">optional object ToolTipText</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Add">
             <summary>
@@ -3287,31 +3366,31 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="ReportIcon">optional object ReportIcon</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="reportIcon">optional object ReportIcon</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.Clear">
             <summary>
@@ -3322,7 +3401,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItems.GetEnumerator">
             <summary>
@@ -3407,7 +3486,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListImage">
             <summary>
-             CoClass ListImage SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListImage 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListImage.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3440,7 +3520,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IButtonMenus">
             <summary>
-             DispatchInterface IButtonMenus SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IButtonMenus 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3472,11 +3553,18 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.Remove(System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.Clear">
             <summary>
@@ -3487,9 +3575,9 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.Add">
             <summary>
@@ -3500,14 +3588,14 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IButtonMenus.GetEnumerator">
             <summary>
@@ -3641,12 +3729,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Node">
             <summary>
-             CoClass Node SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Node 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.INode">
             <summary>
-             DispatchInterface INode SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface INode 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INode.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3854,7 +3944,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ITabStrip">
             <summary>
-             DispatchInterface ITabStrip SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface ITabStrip 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ITabStrip.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4154,12 +4245,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ImageList">
             <summary>
-             CoClass ImageList SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ImageList 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IImageList">
             <summary>
-             DispatchInterface IImageList SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IImageList 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImageList.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4181,8 +4274,8 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Key1">object Key1</param>
-            <param name="Key2">object Key2</param>
+            <param name="key1">object Key1</param>
+            <param name="key2">object Key2</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImageList.AboutBox">
             <summary>
@@ -4261,7 +4354,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListView">
             <summary>
-             CoClass ListView SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListView 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListView.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4484,12 +4578,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Panels">
             <summary>
-             CoClass Panels SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Panels 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IPanels">
             <summary>
-             DispatchInterface IPanels SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IPanels 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4521,15 +4617,22 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.IPanels.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Style">optional object Style</param>
-            <param name="Picture">optional object Picture</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="style">optional object Style</param>
+            <param name="picture">optional object Picture</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Add">
             <summary>
@@ -4540,31 +4643,31 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
+            <param name="index">optional object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">optional object Index</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Style">optional object Style</param>
+            <param name="index">optional object Index</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="style">optional object Style</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.Clear">
             <summary>
@@ -4575,7 +4678,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanels.GetEnumerator">
             <summary>
@@ -4630,7 +4733,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.DataObject">
             <summary>
-             CoClass DataObject SupportByLibraryAttribute MSComctlLib, 2
+             CoClass DataObject 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.DataObject.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4773,12 +4877,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Nodes">
             <summary>
-             CoClass Nodes SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Nodes 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.INodes">
             <summary>
-             DispatchInterface INodes SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface INodes 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4810,16 +4916,23 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.MSComctlLibApi.INodes.ControlDefault(System.Object)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_ControlDefault
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
-            <param name="Relationship">optional object Relationship</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Image">optional object Image</param>
-            <param name="SelectedImage">optional object SelectedImage</param>
+            <param name="relative">optional object Relative</param>
+            <param name="relationship">optional object Relationship</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="image">optional object Image</param>
+            <param name="selectedImage">optional object SelectedImage</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add">
             <summary>
@@ -4830,41 +4943,41 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
+            <param name="relative">optional object Relative</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add(System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
-            <param name="Relationship">optional object Relationship</param>
+            <param name="relative">optional object Relative</param>
+            <param name="relationship">optional object Relationship</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add(System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
-            <param name="Relationship">optional object Relationship</param>
-            <param name="Key">optional object Key</param>
+            <param name="relative">optional object Relative</param>
+            <param name="relationship">optional object Relationship</param>
+            <param name="key">optional object Key</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add(System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
-            <param name="Relationship">optional object Relationship</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
+            <param name="relative">optional object Relative</param>
+            <param name="relationship">optional object Relationship</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Add(System.Object,System.Object,System.Object,System.Object,System.Object)">
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Relative">optional object Relative</param>
-            <param name="Relationship">optional object Relationship</param>
-            <param name="Key">optional object Key</param>
-            <param name="Text">optional object Text</param>
-            <param name="Image">optional object Image</param>
+            <param name="relative">optional object Relative</param>
+            <param name="relationship">optional object Relationship</param>
+            <param name="key">optional object Key</param>
+            <param name="text">optional object Text</param>
+            <param name="image">optional object Image</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.Clear">
             <summary>
@@ -4875,7 +4988,7 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.INodes.GetEnumerator">
             <summary>
@@ -4930,12 +5043,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Panel">
             <summary>
-             CoClass Panel SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Panel 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IPanel">
             <summary>
-             DispatchInterface IPanel SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IPanel 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IPanel.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5079,7 +5194,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Tabs">
             <summary>
-             CoClass Tabs SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Tabs 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.Tabs.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5112,7 +5228,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IListSubItem">
             <summary>
-             DispatchInterface IListSubItem SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IListSubItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListSubItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5243,7 +5360,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ButtonMenus">
             <summary>
-             CoClass ButtonMenus SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ButtonMenus 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ButtonMenus.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5276,7 +5394,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.DataObjectFiles">
             <summary>
-             CoClass DataObjectFiles SupportByLibraryAttribute MSComctlLib, 2
+             CoClass DataObjectFiles 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.DataObjectFiles.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5326,7 +5445,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.TabStrip">
             <summary>
-             CoClass TabStrip SupportByLibraryAttribute MSComctlLib, 2
+             CoClass TabStrip 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.TabStrip.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5499,7 +5619,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IImageCombo">
             <summary>
-             DispatchInterface IImageCombo SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IImageCombo 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IImageCombo.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5659,7 +5780,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IListItem">
             <summary>
-             DispatchInterface IListItem SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IListItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IListItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5688,6 +5810,13 @@
             <summary>
             SupportByLibrary MSComctlLib 2
             Get/Set
+            </summary>
+            <param name="Index">Int16 Index</param>
+        </member>
+        <member name="M:NetOffice.MSComctlLibApi.IListItem.SubItems(System.Int16)">
+            <summary>
+            SupportByLibrary MSComctlLib 2
+            Alias for get_SubItems
             </summary>
             <param name="Index">Int16 Index</param>
         </member>
@@ -5839,7 +5968,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.Toolbar">
             <summary>
-             CoClass Toolbar SupportByLibraryAttribute MSComctlLib, 2
+             CoClass Toolbar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.Toolbar.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6062,7 +6192,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListSubItem">
             <summary>
-             CoClass ListSubItem SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListSubItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListSubItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6095,7 +6226,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ITreeView">
             <summary>
-             DispatchInterface ITreeView SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface ITreeView 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ITreeView.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6371,7 +6503,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ImageCombo">
             <summary>
-             CoClass ImageCombo SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ImageCombo 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ImageCombo.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6524,12 +6657,14 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.StatusBar">
             <summary>
-             CoClass StatusBar SupportByLibraryAttribute MSComctlLib, 2
+             CoClass StatusBar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="T:NetOffice.MSComctlLibApi.IStatusBar">
             <summary>
-             DispatchInterface IStatusBar SupportByLibraryAttribute MSComctlLib, 2
+             DispatchInterface IStatusBar 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.IStatusBar.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6845,7 +6980,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ColumnHeader">
             <summary>
-             CoClass ColumnHeader SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ColumnHeader 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ColumnHeader.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6878,7 +7014,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListItem">
             <summary>
-             CoClass ListItem SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -7009,7 +7146,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListSubItems">
             <summary>
-             CoClass ListSubItems SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListSubItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListSubItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -7042,7 +7180,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ListItems">
             <summary>
-             CoClass ListItems SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ListItems 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ListItems.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -7128,7 +7267,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.ComboItem">
             <summary>
-             CoClass ComboItem SupportByLibraryAttribute MSComctlLib, 2
+             CoClass ComboItem 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.ComboItem.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -7161,7 +7301,8 @@
         </member>
         <member name="T:NetOffice.MSComctlLibApi.TreeView">
             <summary>
-             CoClass TreeView SupportByLibraryAttribute MSComctlLib, 2
+             CoClass TreeView 
+             SupportByLibrary MSComctlLib, 2
             </summary>
         </member>
         <member name="M:NetOffice.MSComctlLibApi.TreeView.#ctor(LateBindingApi.Core.COMObject,System.Object)">

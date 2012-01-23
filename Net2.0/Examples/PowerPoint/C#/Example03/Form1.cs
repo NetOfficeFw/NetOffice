@@ -27,7 +27,7 @@ namespace Example03
             PowerPoint.Application powerApplication = null;
             try
             {
-                // Initialize Api COMObject Support
+                // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
                 // start powerpoint
@@ -40,7 +40,7 @@ namespace Example03
                 // add new module and insert macro
                 // the option "Trust access to Visual Basic Project" must be set
                 VBE.CodeModule module = presentation.VBProject.VBComponents.Add(vbext_ComponentType.vbext_ct_StdModule).CodeModule;
-                string macro = string.Format("Sub NetOfficeTestMacro()\r\n   {0}\r\nEnd Sub", "MsgBox \"Thanks for click!\"");
+                string macro = string.Format("Sub NetOfficeTestMacro(){1}   {0}{1}End Sub", "MsgBox \"Thanks for click!\"{1}", Environment.NewLine);
                 module.InsertLines(1, macro);
 
                 // add button and connect with macro

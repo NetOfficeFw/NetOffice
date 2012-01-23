@@ -20,8 +20,8 @@ namespace Example02
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {  
-            // Initialize Api COMObject Support
+        {
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // Create an Outlook Application object. 

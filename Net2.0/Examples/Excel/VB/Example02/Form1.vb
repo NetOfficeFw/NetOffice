@@ -8,7 +8,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
@@ -72,16 +72,16 @@ Public Class Form1
         workSheet.get_Range("E9").VerticalAlignment = XlVAlign.xlVAlignJustify
 
         ' setup rows and columns
-        workSheet.Columns(1, Missing.Value).AutoFit()
-        workSheet.Columns(2, Missing.Value).ColumnWidth = 25
-        workSheet.Columns(3, Missing.Value).ColumnWidth = 25
-        workSheet.Columns(4, Missing.Value).ColumnWidth = 25
-        workSheet.Columns(5, Missing.Value).ColumnWidth = 25
-        workSheet.Rows(9, Missing.Value).RowHeight = 25
+        workSheet.Columns(1).AutoFit()
+        workSheet.Columns(2).ColumnWidth = 25
+        workSheet.Columns(3).ColumnWidth = 25
+        workSheet.Columns(4).ColumnWidth = 25
+        workSheet.Columns(5).ColumnWidth = 25
+        workSheet.Rows(9).RowHeight = 25
 
         ' save the book 
         Dim fileExtension As String = GetDefaultExtension(excelApplication)
-        Dim workbookFile As String = String.Format("{0}\Example02{1}", Environment.CurrentDirectory, fileExtension)
+        Dim workbookFile As String = String.Format("{0}\Example02{1}", Application.StartupPath, fileExtension)
         workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
 
         ' close excel and dispose reference

@@ -22,7 +22,7 @@ namespace Example03
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start word and turn off msg boxes

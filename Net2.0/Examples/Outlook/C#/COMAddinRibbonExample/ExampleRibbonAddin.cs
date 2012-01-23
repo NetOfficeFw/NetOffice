@@ -100,7 +100,7 @@ namespace COMAddinRibbonExample
         {
             try
             {
-                // initialize api
+                // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
                 _outlookApplication = new Outlook.Application(null, Application);

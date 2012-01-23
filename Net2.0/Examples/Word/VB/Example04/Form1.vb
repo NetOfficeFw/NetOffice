@@ -21,7 +21,7 @@ Public Class Form1
         File.AppendAllText(fileName, String.Format("{0},{1}{2}", "ProjectName", "ProjectLink", Environment.NewLine))
         File.AppendAllText(fileName, String.Format("{0},{1}{2}", "NetOffice", "http://netoffice.codeplex.com/", Environment.NewLine))
 
-        ' initialize api
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start word and turn off msg boxes
@@ -48,7 +48,7 @@ Public Class Form1
         wordApplication.Selection.TypeText(" or click ")
 
         newDocument.Hyperlinks.Add(wordApplication.Selection.Range, newDocument.MailMerge.DataSource.DataFields(2).Value, _
-                                   Missing.Value, "come on dude click me, i know you want it...", "here", Missing.Value)
+                                   Missing.Value, "come on and click me", "here", Missing.Value)
 
         'show the contents of the fields
         newDocument.MailMerge.ViewMailMergeFieldCodes = WdConstants.wdToggle

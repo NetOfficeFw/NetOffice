@@ -19,10 +19,10 @@ namespace Example03
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
-            // start excel and turn Application msg boxes
+            // start excel and turn off Application msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
 
@@ -76,28 +76,28 @@ namespace Example03
             workSheet.get_Range("D6").NumberFormat =  Pattern2;
 
             workSheet.get_Range("A9").Value = "DateTime";
-            workSheet.get_Range("B10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
-            workSheet.get_Range("C10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
-            workSheet.get_Range("D10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
-            workSheet.get_Range("E10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
-            workSheet.get_Range("F10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
+            workSheet.get_Range("B10").Value = cultureInfo.DateTimeFormat.FullDateTimePattern;
+            workSheet.get_Range("C10").Value = cultureInfo.DateTimeFormat.LongDatePattern;
+            workSheet.get_Range("D10").Value = cultureInfo.DateTimeFormat.ShortDatePattern;
+            workSheet.get_Range("E10").Value = cultureInfo.DateTimeFormat.LongTimePattern;
+            workSheet.get_Range("F10").Value = cultureInfo.DateTimeFormat.ShortTimePattern;
 
             // DateTime
             DateTime dateTimeValue = DateTime.Now;
             workSheet.get_Range("B11").Value = dateTimeValue;
-            workSheet.get_Range("B11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
+            workSheet.get_Range("B11").NumberFormat = cultureInfo.DateTimeFormat.FullDateTimePattern;
 
             workSheet.get_Range("C11").Value = dateTimeValue;
-            workSheet.get_Range("C11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
+            workSheet.get_Range("C11").NumberFormat = cultureInfo.DateTimeFormat.LongDatePattern;
 
             workSheet.get_Range("D11").Value = dateTimeValue;
-            workSheet.get_Range("D11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
+            workSheet.get_Range("D11").NumberFormat = cultureInfo.DateTimeFormat.ShortDatePattern;
 
             workSheet.get_Range("E11").Value = dateTimeValue;
-            workSheet.get_Range("E11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
+            workSheet.get_Range("E11").NumberFormat = cultureInfo.DateTimeFormat.LongTimePattern;
 
             workSheet.get_Range("F11").Value = dateTimeValue;
-            workSheet.get_Range("F11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
+            workSheet.get_Range("F11").NumberFormat = cultureInfo.DateTimeFormat.ShortTimePattern;
 
             // string
             workSheet.get_Range("A14").Value = "String";
@@ -109,10 +109,10 @@ namespace Example03
             workSheet.get_Range("B15").NumberFormat = "@";
 
             // set colums
-            workSheet.Columns[1, Missing.Value].AutoFit();
-            workSheet.Columns[2, Missing.Value].AutoFit();
-            workSheet.Columns[3, Missing.Value].AutoFit();
-            workSheet.Columns[4, Missing.Value].AutoFit();
+            workSheet.Columns[1].AutoFit();
+            workSheet.Columns[2].AutoFit();
+            workSheet.Columns[3].AutoFit();
+            workSheet.Columns[4].AutoFit();
        
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);

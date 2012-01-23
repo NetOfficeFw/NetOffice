@@ -6,7 +6,7 @@ Public Class Form1
 
     Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
 
-        ' Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start outlook
@@ -23,15 +23,7 @@ Public Class Form1
         ' we fetch the inbox folder items. ATTENTION: items is null if you have no items in inbox folder
         ' office products initialize ALL collections on demand. this is just an example, we dont check for null here
         ' NOTE: for some uninitialized collections you get an exception while accessing
-        Dim items As Outlook._Items = inboxFolder.Items
-        Dim item As COMObject = Nothing
-        Dim i As Integer = 1
-
-        Do
-
-            If (item Is Nothing) Then
-                item = items.GetFirst()
-            End If
+        For Each item As COMObject In inboxFolder.Items
 
             'not every item is a mail item
             If (TypeName(item) = "MailItem") Then
@@ -41,10 +33,8 @@ Public Class Form1
             End If
 
             item.Dispose()
-            item = items.GetNext()
-            i += 1
 
-        Loop While (Not item Is Nothing)
+        Next
 
         'close outlook and dispose
         outlookApplication.Quit()

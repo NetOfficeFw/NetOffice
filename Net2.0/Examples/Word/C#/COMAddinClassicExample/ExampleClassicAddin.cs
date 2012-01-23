@@ -110,7 +110,7 @@ namespace COMAddinClassicExample
         {
             try
             {
-                // initialize api
+                // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
                 _wordApplication = new Word.Application(null, Application);

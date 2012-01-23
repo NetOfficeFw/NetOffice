@@ -6,6 +6,18 @@ using System.Runtime.InteropServices;
 
 namespace COMAddinRibbonExample
 {
+
+    /* 
+     * why i have re-defined the ribbon interfaces here ? 
+     *
+     * NetOffice.OfficeApi.dll includes the 3 Ribbon Interfaces but if you implement these interfaces from the NetOffice assembly
+     * in your Addin class then Visual Studio try to register the NetOffice.OfficeApi.dll for COM Interop while compiling. 
+     *
+     * I have no solution for these problem at the moment. (re)define the interfaces here in the project works fine!
+     * Do you know a better way?
+     * contact me: public.sebastian@web.de
+     */
+
     #region Ribbon Interfaces
     [ComImport, Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType((short)0x1040)]
     public interface IRibbonUI

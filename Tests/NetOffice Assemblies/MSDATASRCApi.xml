@@ -11,7 +11,8 @@
         </member>
         <member name="T:NetOffice.MSDATASRCApi.DataSource">
             <summary>
-             Interface DataSource SupportByLibraryAttribute MSDATASRC, 1
+             Interface DataSource 
+             SupportByLibrary MSDATASRC, 1
             </summary>
         </member>
         <member name="M:NetOffice.MSDATASRCApi.DataSource.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -61,7 +62,8 @@
         </member>
         <member name="T:NetOffice.MSDATASRCApi.DataSourceListener">
             <summary>
-             Interface DataSourceListener SupportByLibraryAttribute MSDATASRC, 1
+             Interface DataSourceListener 
+             SupportByLibrary MSDATASRC, 1
             </summary>
         </member>
         <member name="M:NetOffice.MSDATASRCApi.DataSourceListener.#ctor(LateBindingApi.Core.COMObject,System.Object)">

@@ -122,6 +122,11 @@
             Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations
             </summary>
         </member>
+        <member name="P:LateBindingApi.Core.Settings.EnableDebugOutput">
+            <summary>
+            Get or set additonal debug output is enabled for trouble shooting 
+            </summary>
+        </member>
         <member name="T:LateBindingApi.Core.IEventBinding">
             <summary>
             EventBinding Interface
@@ -536,6 +541,24 @@
             NetOffice method: dispose all child instances
             </summary>
         </member>
+        <member name="M:LateBindingApi.Core.COMObject.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LateBindingApi.Core.COMObject.Equals(System.Object)">
+            <summary>
+            Determines whether two Object instances are equal.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:LateBindingApi.Core.COMObject.UnderlyingObject">
             <summary>
             NetOffice property: returns the native wrapped proxy
@@ -792,7 +815,7 @@
             <param name="className"></param>
             <returns></returns>
         </member>
-        <member name="P:LateBindingApi.Core.IFactoryInfo.Namespace">
+        <member name="P:LateBindingApi.Core.IFactoryInfo.AssemblyNamespace">
             <summary>
             namespace of assembly
             </summary>

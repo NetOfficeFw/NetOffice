@@ -26,7 +26,7 @@ namespace Example08
      
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start excel and turn off msg boxes
@@ -40,12 +40,12 @@ namespace Example08
             you can get event notifys from various objects: Application or Workbook or Worksheet for example
             */
 
-            excelApplication.NewWorkbookEvent += new Excel.Application_NewWorkbookEventHandler(excelApplication_NewWorkbook);
-            excelApplication.WorkbookBeforeCloseEvent += new Excel.Application_WorkbookBeforeCloseEventHandler(excelApplication_WorkbookBeforeClose);
-            excelApplication.WorkbookActivateEvent += new Excel.Application_WorkbookActivateEventHandler(excelApplication_WorkbookActivate);
-            excelApplication.WorkbookDeactivateEvent += new Excel.Application_WorkbookDeactivateEventHandler(excelApplication_WorkbookDeactivate);
-            excelApplication.SheetActivateEvent += new Excel.Application_SheetActivateEventHandler(_excelApplication_SheetActivateEvent);
-            excelApplication.SheetDeactivateEvent += new Excel.Application_SheetDeactivateEventHandler(_excelApplication_SheetDeactivateEvent);
+            excelApplication.NewWorkbookEvent += new Excel.Application_NewWorkbookEventHandler(ExcelApplication_NewWorkbook);
+            excelApplication.WorkbookBeforeCloseEvent += new Excel.Application_WorkbookBeforeCloseEventHandler(ExcelApplication_WorkbookBeforeClose);
+            excelApplication.WorkbookActivateEvent += new Excel.Application_WorkbookActivateEventHandler(ExcelApplication_WorkbookActivate);
+            excelApplication.WorkbookDeactivateEvent += new Excel.Application_WorkbookDeactivateEventHandler(ExcelApplication_WorkbookDeactivate);
+            excelApplication.SheetActivateEvent += new Excel.Application_SheetActivateEventHandler(ExcelApplication_SheetActivateEvent);
+            excelApplication.SheetDeactivateEvent += new Excel.Application_SheetDeactivateEventHandler(ExcelApplication_SheetDeactivateEvent);
 
             // add a new workbook add a sheet and close
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
@@ -56,43 +56,42 @@ namespace Example08
             excelApplication.Dispose();
         }
 
-        void _excelApplication_SheetDeactivateEvent(COMObject Sh)
+        void ExcelApplication_SheetDeactivateEvent(COMObject Sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetDeactivate called." });
             Sh.Dispose();
         }
 
-        void _excelApplication_SheetActivateEvent(COMObject Sh)
+        void ExcelApplication_SheetActivateEvent(COMObject Sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetActivate called." });
             Sh.Dispose();
         }
 
-        void excelApplication_NewWorkbook(Excel.Workbook Wb)
+        void ExcelApplication_NewWorkbook(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event NewWorkbook called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookBeforeClose(Excel.Workbook Wb, ref bool Cancel)
+        void ExcelApplication_WorkbookBeforeClose(Excel.Workbook Wb, ref bool Cancel)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookBeforeClose called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookActivate(Excel.Workbook Wb)
+        void ExcelApplication_WorkbookActivate(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookActivate called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookDeactivate(Excel.Workbook Wb)
+        void ExcelApplication_WorkbookDeactivate(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookDeactivate called." });
             Wb.Dispose();
         }
 
-         
         private void UpdateTextbox(string message)
         {
             textBoxEvents.AppendText(message + "\r\n");

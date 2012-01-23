@@ -27,7 +27,7 @@ Public Class Form1
 
     Private Sub ShowDatabaseInfo(ByVal filePath As String)
 
-        'Initialize Api COMObject Support
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' start access 

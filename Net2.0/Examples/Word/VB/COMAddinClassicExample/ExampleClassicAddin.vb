@@ -43,7 +43,7 @@ Public Class ExampleClassicAddin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
-            ' initialize api
+            ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
             _wordApplication = New Word.Application(Nothing, Application)

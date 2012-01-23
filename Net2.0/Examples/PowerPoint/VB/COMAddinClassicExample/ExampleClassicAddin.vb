@@ -42,7 +42,7 @@ Public Class ExampleClassicAddin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
-            ' initialize api
+            ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
             _powerApplication = New PowerPoint.Application(Nothing, Application)
@@ -163,7 +163,9 @@ Public Class ExampleClassicAddin
     End Sub
 
 #End Region
- 
+
+#Region "Setup GUI"
+
     ''' <summary>
     ''' creates gui elements
     ''' </summary>
@@ -223,6 +225,9 @@ Public Class ExampleClassicAddin
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
     End Sub
+#End Region
+
+#Region "Trigger"
 
     ''' <summary>
     ''' Click event trigger from created buttons. incoming call comes from word application thread.
@@ -237,5 +242,7 @@ Public Class ExampleClassicAddin
         Ctrl.Dispose()
 
     End Sub
+
+#End Region
 
 End Class

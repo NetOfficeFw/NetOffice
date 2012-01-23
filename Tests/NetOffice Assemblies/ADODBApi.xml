@@ -6,12 +6,14 @@
     <members>
         <member name="T:NetOffice.ADODBApi.Stream">
             <summary>
-             CoClass Stream SupportByLibraryAttribute ADODB, 2.5
+             CoClass Stream 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._Stream">
             <summary>
-             DispatchInterface _Stream SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface _Stream 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -33,17 +35,39 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="NumBytes">Int32 NumBytes</param>
+            <param name="numBytes">optional Int32 NumBytes = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.Read">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.Open(System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum,System.String,System.String)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">object Source</param>
-            <param name="Mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
+            <param name="source">object Source</param>
+            <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options = -1</param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.Open(System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.Open(System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options = -1</param>
+            <param name="userName">string UserName</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.Close">
             <summary>
@@ -59,7 +83,7 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Buffer">object Buffer</param>
+            <param name="buffer">object Buffer</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.SetEOS">
             <summary>
@@ -70,8 +94,14 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="DestStream">NetOffice.ADODBApi._Stream DestStream</param>
-            <param name="CharNumber">Int32 CharNumber</param>
+            <param name="destStream">NetOffice.ADODBApi._Stream DestStream</param>
+            <param name="charNumber">optional Int32 CharNumber = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.CopyTo(NetOffice.ADODBApi._Stream)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="destStream">NetOffice.ADODBApi._Stream DestStream</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.Flush">
             <summary>
@@ -82,27 +112,44 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FileName">string FileName</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.SaveOptionsEnum Options</param>
+            <param name="fileName">string FileName</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.SaveOptionsEnum Options = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.SaveToFile(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.LoadFromFile(System.String)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FileName">string FileName</param>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.ReadText(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="NumChars">Int32 NumChars</param>
+            <param name="numChars">optional Int32 NumChars = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.ReadText">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.WriteText(System.String,NetOffice.ADODBApi.Enums.StreamWriteEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Data">string Data</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.StreamWriteEnum Options</param>
+            <param name="data">string Data</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.StreamWriteEnum Options = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Stream.WriteText(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="data">string Data</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Stream.Cancel">
             <summary>
@@ -187,32 +234,38 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Recordset">
             <summary>
-             CoClass Recordset SupportByLibraryAttribute ADODB, 2.1,2.5
+             CoClass Recordset 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._Recordset">
             <summary>
-             DispatchInterface _Recordset SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _Recordset 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Recordset21">
             <summary>
-             DispatchInterface Recordset21 SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface Recordset21 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Recordset20">
             <summary>
-             DispatchInterface Recordset20 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Recordset20 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Recordset15">
             <summary>
-             DispatchInterface Recordset15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Recordset15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._ADO">
             <summary>
-             DispatchInterface _ADO SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _ADO 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._ADO.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -265,12 +318,19 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Collect(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            Alias for get_Collect
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.AddNew(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
-            <param name="Values">optional object Values</param>
+            <param name="fieldList">optional object FieldList</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.AddNew">
             <summary>
@@ -281,7 +341,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
+            <param name="fieldList">optional object FieldList</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.CancelUpdate">
             <summary>
@@ -297,41 +357,51 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Delete">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.GetRows(System.Int32,System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
-            <param name="Fields">optional object Fields</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
+            <param name="fields">optional object Fields</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.GetRows">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.GetRows(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
+            <param name="rows">optional Int32 Rows = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.GetRows(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Move(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
-            <param name="Start">optional object Start</param>
+            <param name="numRecords">Int32 NumRecords</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Move(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
+            <param name="numRecords">Int32 NumRecords</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.MoveNext">
             <summary>
@@ -357,30 +427,64 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Source">object Source</param>
-            <param name="ActiveConnection">object ActiveConnection</param>
-            <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
-            <param name="Options">Int32 Options</param>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Open(System.Object,System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum,NetOffice.ADODBApi.Enums.LockTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Requery(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Requery">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15._xResync(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15._xResync">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Update(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
-            <param name="Values">optional object Values</param>
+            <param name="fields">optional object Fields</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Update">
             <summary>
@@ -391,7 +495,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
+            <param name="fields">optional object Fields</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15._xClone">
             <summary>
@@ -402,19 +506,29 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.UpdateBatch">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.CancelBatch(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.CancelBatch">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.NextRecordset(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="RecordsAffected">optional object RecordsAffected</param>
+            <param name="recordsAffected">optional object RecordsAffected</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.NextRecordset">
             <summary>
@@ -425,24 +539,37 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="CursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
+            <param name="cursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
-            <param name="Start">optional object Start</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
+            <param name="start">optional object Start</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Find(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset15.Find(System.String,System.Int32)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset15.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Recordset15.AbsolutePosition">
             <summary>
@@ -600,45 +727,90 @@
             <summary>
             SupportByLibrary ADODB 2.1
             </summary>
-            <param name="FileName">string FileName</param>
-            <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+            <param name="fileName">string FileName</param>
+            <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.Save(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1
+            </summary>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset20.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String,System.String,System.String)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="StringFormat">NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat</param>
-            <param name="NumRows">Int32 NumRows</param>
-            <param name="ColumnDelimeter">string ColumnDelimeter</param>
-            <param name="RowDelimeter">string RowDelimeter</param>
-            <param name="NullExpr">string NullExpr</param>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+            <param name="rowDelimeter">string RowDelimeter</param>
+            <param name="nullExpr">string NullExpr</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+            <param name="rowDelimeter">string RowDelimeter</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset20.CompareBookmarks(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Bookmark1">object Bookmark1</param>
-            <param name="Bookmark2">object Bookmark2</param>
+            <param name="bookmark1">object Bookmark1</param>
+            <param name="bookmark2">object Bookmark2</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset20.Clone(NetOffice.ADODBApi.Enums.LockTypeEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.Clone">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset20.Resync(NetOffice.ADODBApi.Enums.AffectEnum,NetOffice.ADODBApi.Enums.ResyncEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
-            <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+            <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.Resync">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20.Resync(NetOffice.ADODBApi.Enums.AffectEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset20._xSave(System.String,NetOffice.ADODBApi.Enums.PersistFormatEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FileName">string FileName</param>
-            <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+            <param name="fileName">string FileName</param>
+            <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset20._xSave(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Recordset20.Properties">
             <summary>
@@ -699,12 +871,19 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Collect(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            Alias for get_Collect
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.AddNew(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
-            <param name="Values">optional object Values</param>
+            <param name="fieldList">optional object FieldList</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.AddNew">
             <summary>
@@ -715,7 +894,7 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
+            <param name="fieldList">optional object FieldList</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.CancelUpdate">
             <summary>
@@ -731,41 +910,51 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Delete">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.GetRows(System.Int32,System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
-            <param name="Fields">optional object Fields</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
+            <param name="fields">optional object Fields</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.GetRows">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.GetRows(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
+            <param name="rows">optional Int32 Rows = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.GetRows(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Move(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
-            <param name="Start">optional object Start</param>
+            <param name="numRecords">Int32 NumRecords</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Move(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
+            <param name="numRecords">Int32 NumRecords</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.MoveNext">
             <summary>
@@ -791,30 +980,64 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">object Source</param>
-            <param name="ActiveConnection">object ActiveConnection</param>
-            <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
-            <param name="Options">Int32 Options</param>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Open(System.Object,System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum,NetOffice.ADODBApi.Enums.LockTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Requery(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Requery">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21._xResync(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21._xResync">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Update(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
-            <param name="Values">optional object Values</param>
+            <param name="fields">optional object Fields</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Update">
             <summary>
@@ -825,7 +1048,7 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
+            <param name="fields">optional object Fields</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21._xClone">
             <summary>
@@ -836,19 +1059,29 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.UpdateBatch">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.CancelBatch(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.CancelBatch">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.NextRecordset(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="RecordsAffected">optional object RecordsAffected</param>
+            <param name="recordsAffected">optional object RecordsAffected</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.NextRecordset">
             <summary>
@@ -859,31 +1092,50 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="CursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
+            <param name="cursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
-            <param name="Start">optional object Start</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
+            <param name="start">optional object Start</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Find(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Find(System.String,System.Int32)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Recordset21.Seek(System.Object,NetOffice.ADODBApi.Enums.SeekEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="KeyValues">object KeyValues</param>
-            <param name="SeekOption">NetOffice.ADODBApi.Enums.SeekEnum SeekOption</param>
+            <param name="keyValues">object KeyValues</param>
+            <param name="seekOption">optional NetOffice.ADODBApi.Enums.SeekEnum SeekOption = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Recordset21.Seek(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="keyValues">object KeyValues</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Recordset21.Properties">
             <summary>
@@ -1058,12 +1310,19 @@
             </summary>
             <param name="Index">object Index</param>
         </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Collect(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            Alias for get_Collect
+            </summary>
+            <param name="Index">object Index</param>
+        </member>
         <member name="M:NetOffice.ADODBApi._Recordset.AddNew(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
-            <param name="Values">optional object Values</param>
+            <param name="fieldList">optional object FieldList</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.AddNew">
             <summary>
@@ -1074,7 +1333,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="FieldList">optional object FieldList</param>
+            <param name="fieldList">optional object FieldList</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.CancelUpdate">
             <summary>
@@ -1090,41 +1349,51 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Delete">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.GetRows(System.Int32,System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
-            <param name="Fields">optional object Fields</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
+            <param name="fields">optional object Fields</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.GetRows">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.GetRows(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
+            <param name="rows">optional Int32 Rows = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.GetRows(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Rows">Int32 Rows</param>
-            <param name="Start">optional object Start</param>
+            <param name="rows">optional Int32 Rows = -1</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Move(System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
-            <param name="Start">optional object Start</param>
+            <param name="numRecords">Int32 NumRecords</param>
+            <param name="start">optional object Start</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Move(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="NumRecords">Int32 NumRecords</param>
+            <param name="numRecords">Int32 NumRecords</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.MoveNext">
             <summary>
@@ -1150,30 +1419,64 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Source">object Source</param>
-            <param name="ActiveConnection">object ActiveConnection</param>
-            <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
-            <param name="Options">Int32 Options</param>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Open(System.Object,System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.CursorTypeEnum,NetOffice.ADODBApi.Enums.LockTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Requery(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Options">Int32 Options</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Requery">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset._xResync(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset._xResync">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Update(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
-            <param name="Values">optional object Values</param>
+            <param name="fields">optional object Fields</param>
+            <param name="values">optional object Values</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Update">
             <summary>
@@ -1184,7 +1487,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Fields">optional object Fields</param>
+            <param name="fields">optional object Fields</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset._xClone">
             <summary>
@@ -1195,19 +1498,29 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.UpdateBatch">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.CancelBatch(NetOffice.ADODBApi.Enums.AffectEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.CancelBatch">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.NextRecordset(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="RecordsAffected">optional object RecordsAffected</param>
+            <param name="recordsAffected">optional object RecordsAffected</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.NextRecordset">
             <summary>
@@ -1218,31 +1531,50 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="CursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
+            <param name="cursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
-            <param name="Start">optional object Start</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
+            <param name="start">optional object Start</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Find(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Find(System.String,System.Int32)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Find(System.String,System.Int32,NetOffice.ADODBApi.Enums.SearchDirectionEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Criteria">string Criteria</param>
-            <param name="SkipRecords">Int32 SkipRecords</param>
-            <param name="SearchDirection">NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection</param>
+            <param name="criteria">string Criteria</param>
+            <param name="skipRecords">optional Int32 SkipRecords = 0</param>
+            <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Seek(System.Object,NetOffice.ADODBApi.Enums.SeekEnum)">
             <summary>
             SupportByLibrary ADODB 2.1
             </summary>
-            <param name="KeyValues">object KeyValues</param>
-            <param name="SeekOption">NetOffice.ADODBApi.Enums.SeekEnum SeekOption</param>
+            <param name="keyValues">object KeyValues</param>
+            <param name="seekOption">optional NetOffice.ADODBApi.Enums.SeekEnum SeekOption = 1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Seek(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1
+            </summary>
+            <param name="keyValues">object KeyValues</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Cancel">
             <summary>
@@ -1253,45 +1585,90 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="FileName">string FileName</param>
-            <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+            <param name="fileName">string FileName</param>
+            <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset._xSave(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="fileName">string FileName</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String,System.String,System.String)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="StringFormat">NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat</param>
-            <param name="NumRows">Int32 NumRows</param>
-            <param name="ColumnDelimeter">string ColumnDelimeter</param>
-            <param name="RowDelimeter">string RowDelimeter</param>
-            <param name="NullExpr">string NullExpr</param>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+            <param name="rowDelimeter">string RowDelimeter</param>
+            <param name="nullExpr">string NullExpr</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.GetString(NetOffice.ADODBApi.Enums.StringFormatEnum,System.Int32,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+            <param name="numRows">optional Int32 NumRows = -1</param>
+            <param name="columnDelimeter">string ColumnDelimeter</param>
+            <param name="rowDelimeter">string RowDelimeter</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.CompareBookmarks(System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Bookmark1">object Bookmark1</param>
-            <param name="Bookmark2">object Bookmark2</param>
+            <param name="bookmark1">object Bookmark1</param>
+            <param name="bookmark2">object Bookmark2</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Clone(NetOffice.ADODBApi.Enums.LockTypeEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
+            <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Clone">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Resync(NetOffice.ADODBApi.Enums.AffectEnum,NetOffice.ADODBApi.Enums.ResyncEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="AffectRecords">NetOffice.ADODBApi.Enums.AffectEnum AffectRecords</param>
-            <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
+            <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Resync">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Resync(NetOffice.ADODBApi.Enums.AffectEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Recordset.Save(System.Object,NetOffice.ADODBApi.Enums.PersistFormatEnum)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Destination">object Destination</param>
-            <param name="PersistFormat">NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat</param>
+            <param name="destination">object Destination</param>
+            <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Recordset.Save(System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="destination">object Destination</param>
         </member>
         <member name="P:NetOffice.ADODBApi._Recordset.Properties">
             <summary>
@@ -1601,7 +1978,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADOConnectionConstruction15">
             <summary>
-             Interface ADOConnectionConstruction15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface ADOConnectionConstruction15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADOConnectionConstruction15.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1750,7 +2128,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Field15">
             <summary>
-             DispatchInterface Field15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Field15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Field15.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1772,13 +2151,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Data">object Data</param>
+            <param name="data">object Data</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Field15.GetChunk(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Length">Int32 Length</param>
+            <param name="length">Int32 Length</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Field15.ActualSize">
             <summary>
@@ -1842,7 +2221,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi._Parameter">
             <summary>
-             DispatchInterface _Parameter SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _Parameter 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Parameter.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -1864,7 +2244,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Val">object Val</param>
+            <param name="val">object Val</param>
         </member>
         <member name="P:NetOffice.ADODBApi._Parameter.Name">
             <summary>
@@ -2052,7 +2432,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ConnectionEventsVt">
             <summary>
-             Interface ConnectionEventsVt SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface ConnectionEventsVt 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ConnectionEventsVt.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2082,7 +2463,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="TransactionLevel">Int32 TransactionLevel</param>
+            <param name="transactionLevel">Int32 TransactionLevel</param>
             <param name="pError">NetOffice.ADODBApi.Error pError</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
@@ -2107,10 +2488,10 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Source">string Source</param>
-            <param name="CursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
-            <param name="LockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
-            <param name="Options">Int32 Options</param>
+            <param name="source">string Source</param>
+            <param name="cursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
+            <param name="lockType">NetOffice.ADODBApi.Enums.LockTypeEnum LockType</param>
+            <param name="options">Int32 Options</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
             <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
@@ -2120,7 +2501,7 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="RecordsAffected">Int32 RecordsAffected</param>
+            <param name="recordsAffected">Int32 RecordsAffected</param>
             <param name="pError">NetOffice.ADODBApi.Error pError</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
@@ -2131,10 +2512,10 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="ConnectionString">string ConnectionString</param>
-            <param name="UserID">string UserID</param>
-            <param name="Password">string Password</param>
-            <param name="Options">Int32 Options</param>
+            <param name="connectionString">string ConnectionString</param>
+            <param name="userID">string UserID</param>
+            <param name="password">string Password</param>
+            <param name="options">Int32 Options</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
         </member>
@@ -2178,12 +2559,14 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Record">
             <summary>
-             CoClass Record SupportByLibraryAttribute ADODB, 2.5
+             CoClass Record 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._Record">
             <summary>
-             DispatchInterface _Record SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface _Record 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Record.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2205,42 +2588,117 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">string Source</param>
-            <param name="Destination">string Destination</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options</param>
-            <param name="Async">bool Async</param>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options = -1</param>
+            <param name="async">bool Async</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.MoveRecord(System.String,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.MoveRecord(System.String,System.String,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.MoveRecord(System.String,System.String,System.String,System.String,NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Record.CopyRecord(System.String,System.String,System.String,System.String,NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum,System.Boolean)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">string Source</param>
-            <param name="Destination">string Destination</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options</param>
-            <param name="Async">bool Async</param>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options = -1</param>
+            <param name="async">bool Async</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.CopyRecord(System.String,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.CopyRecord(System.String,System.String,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.CopyRecord(System.String,System.String,System.String,System.String,NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">optional string Source = </param>
+            <param name="destination">optional string Destination = </param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Record.DeleteRecord(System.String,System.Boolean)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">string Source</param>
-            <param name="Async">bool Async</param>
+            <param name="source">string Source</param>
+            <param name="async">bool Async</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Record.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum,NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum,System.String,System.String)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Source">object Source</param>
-            <param name="ActiveConnection">object ActiveConnection</param>
-            <param name="Mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
-            <param name="CreateOptions">NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions</param>
-            <param name="Options">NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options</param>
-            <param name="UserName">string UserName</param>
-            <param name="Password">string Password</param>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
+            <param name="createOptions">optional NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions = -1</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options = -1</param>
+            <param name="userName">string UserName</param>
+            <param name="password">string Password</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum,NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
+            <param name="createOptions">optional NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions = -1</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi._Record.Open(System.Object,System.Object,NetOffice.ADODBApi.Enums.ConnectModeEnum,NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum,NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="source">object Source</param>
+            <param name="activeConnection">object ActiveConnection</param>
+            <param name="mode">NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
+            <param name="createOptions">optional NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions = -1</param>
+            <param name="options">optional NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options = -1</param>
+            <param name="userName">string UserName</param>
         </member>
         <member name="M:NetOffice.ADODBApi._Record.Close">
             <summary>
@@ -2329,7 +2787,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.IRecFields">
             <summary>
-             DispatchInterface IRecFields SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface IRecFields 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.IRecFields.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2452,17 +2911,20 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Connection">
             <summary>
-             CoClass Connection SupportByLibraryAttribute ADODB, 2.1,2.5
+             CoClass Connection 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._Connection">
             <summary>
-             DispatchInterface _Connection SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _Connection 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Connection15">
             <summary>
-             DispatchInterface Connection15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Connection15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Connection15.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2489,9 +2951,16 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="CommandText">string CommandText</param>
-            <param name="RecordsAffected">object RecordsAffected</param>
-            <param name="Options">Int32 Options</param>
+            <param name="commandText">string CommandText</param>
+            <param name="recordsAffected">object RecordsAffected</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Connection15.Execute(System.String,System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="commandText">string CommandText</param>
+            <param name="recordsAffected">object RecordsAffected</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Connection15.BeginTrans">
             <summary>
@@ -2512,31 +2981,57 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="ConnectionString">string ConnectionString</param>
-            <param name="UserID">string UserID</param>
-            <param name="Password">string Password</param>
-            <param name="Options">Int32 Options</param>
+            <param name="connectionString">optional string ConnectionString = </param>
+            <param name="userID">optional string UserID = </param>
+            <param name="password">optional string Password = </param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Connection15.Open">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Connection15.Open(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="connectionString">optional string ConnectionString = </param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Connection15.Open(System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="connectionString">optional string ConnectionString = </param>
+            <param name="userID">optional string UserID = </param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Connection15.Open(System.String,System.String,System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="connectionString">optional string ConnectionString = </param>
+            <param name="userID">optional string UserID = </param>
+            <param name="password">optional string Password = </param>
         </member>
         <member name="M:NetOffice.ADODBApi.Connection15.OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum,System.Object,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
-            <param name="Restrictions">optional object Restrictions</param>
-            <param name="SchemaID">optional object SchemaID</param>
+            <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
+            <param name="restrictions">optional object Restrictions</param>
+            <param name="schemaID">optional object SchemaID</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Connection15.OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
+            <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Connection15.OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
-            <param name="Restrictions">optional object Restrictions</param>
+            <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
+            <param name="restrictions">optional object Restrictions</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Connection15.ConnectionString">
             <summary>
@@ -2756,12 +3251,14 @@
         </member>
         <member name="T:NetOffice.ADODBApi._DynaCollection">
             <summary>
-             DispatchInterface _DynaCollection SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _DynaCollection 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi._Collection">
             <summary>
-             DispatchInterface _Collection SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _Collection 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi._Collection.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -2819,13 +3316,13 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Object">object Object</param>
+            <param name="object">object Object</param>
         </member>
         <member name="M:NetOffice.ADODBApi._DynaCollection.Delete(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="T:NetOffice.ADODBApi.Enums.RecordTypeEnum">
             <summary>
@@ -3083,7 +3580,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Parameter">
             <summary>
-             CoClass Parameter SupportByLibraryAttribute ADODB, 2.1,2.5
+             CoClass Parameter 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Parameter.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3116,7 +3614,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Property">
             <summary>
-             DispatchInterface Property SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Property 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Property.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3599,12 +4098,14 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Field">
             <summary>
-             DispatchInterface Field SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Field 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Field20">
             <summary>
-             DispatchInterface Field20 SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface Field20 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Field20.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3626,13 +4127,13 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Data">object Data</param>
+            <param name="data">object Data</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Field20.GetChunk(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Length">Int32 Length</param>
+            <param name="length">Int32 Length</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Field20.ActualSize">
             <summary>
@@ -3719,13 +4220,13 @@
             <summary>
             SupportByLibrary ADODB 2.1
             </summary>
-            <param name="Data">object Data</param>
+            <param name="data">object Data</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Field.GetChunk(System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1
             </summary>
-            <param name="Length">Int32 Length</param>
+            <param name="length">Int32 Length</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Field.ActualSize">
             <summary>
@@ -3807,7 +4308,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.RecordsetEventsVt">
             <summary>
-             Interface RecordsetEventsVt SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface RecordsetEventsVt 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.RecordsetEventsVt.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -3830,7 +4332,7 @@
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
             <param name="cFields">Int32 cFields</param>
-            <param name="Fields">object Fields</param>
+            <param name="fields">object Fields</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
         </member>
@@ -3839,7 +4341,7 @@
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
             <param name="cFields">Int32 cFields</param>
-            <param name="Fields">object Fields</param>
+            <param name="fields">object Fields</param>
             <param name="pError">NetOffice.ADODBApi.Error pError</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
@@ -3909,8 +4411,8 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Progress">Int32 Progress</param>
-            <param name="MaxProgress">Int32 MaxProgress</param>
+            <param name="progress">Int32 Progress</param>
+            <param name="maxProgress">Int32 MaxProgress</param>
             <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
             <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
         </member>
@@ -4408,7 +4910,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Errors">
             <summary>
-             DispatchInterface Errors SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Errors 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Errors.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4440,7 +4943,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Properties">
             <summary>
-             DispatchInterface Properties SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Properties 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Properties.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4467,7 +4971,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADOStreamConstruction">
             <summary>
-             Interface ADOStreamConstruction SupportByLibraryAttribute ADODB, 2.5
+             Interface ADOStreamConstruction 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADOStreamConstruction.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4592,7 +5097,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Fields15">
             <summary>
-             DispatchInterface Fields15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Fields15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields15.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4694,7 +5200,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADORecordConstruction">
             <summary>
-             Interface ADORecordConstruction SupportByLibraryAttribute ADODB, 2.5
+             Interface ADORecordConstruction 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADORecordConstruction.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -4726,7 +5233,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADORecordsetConstruction">
             <summary>
-             Interface ADORecordsetConstruction SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface ADORecordsetConstruction 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADORecordsetConstruction.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5004,12 +5512,14 @@
         </member>
         <member name="T:NetOffice.ADODBApi._Command">
             <summary>
-             DispatchInterface _Command SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface _Command 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="T:NetOffice.ADODBApi.Command15">
             <summary>
-             DispatchInterface Command15 SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Command15 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Command15.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5031,28 +5541,61 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="RecordsAffected">object RecordsAffected</param>
-            <param name="Parameters">object Parameters</param>
-            <param name="Options">Int32 Options</param>
+            <param name="recordsAffected">object RecordsAffected</param>
+            <param name="parameters">object Parameters</param>
+            <param name="options">optional Int32 Options = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Command15.Execute(System.Object,System.Object)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="recordsAffected">object RecordsAffected</param>
+            <param name="parameters">object Parameters</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Command15.CreateParameter(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,NetOffice.ADODBApi.Enums.ParameterDirectionEnum,System.Int32,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
-            <param name="Direction">NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
-            <param name="Size">Int32 Size</param>
-            <param name="Value">optional object Value</param>
+            <param name="name">optional string Name = </param>
+            <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
+            <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
+            <param name="size">optional Int32 Size = 0</param>
+            <param name="value">optional object Value</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Command15.CreateParameter">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Command15.CreateParameter(System.String)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="name">optional string Name = </param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Command15.CreateParameter(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="name">optional string Name = </param>
+            <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Command15.CreateParameter(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,NetOffice.ADODBApi.Enums.ParameterDirectionEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="name">optional string Name = </param>
+            <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
+            <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Command15.CreateParameter(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,NetOffice.ADODBApi.Enums.ParameterDirectionEnum,System.Int32)">
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
-            <param name="Direction">NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction</param>
-            <param name="Size">Int32 Size</param>
+            <param name="name">optional string Name = </param>
+            <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
+            <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
+            <param name="size">optional Int32 Size = 0</param>
         </member>
         <member name="P:NetOffice.ADODBApi.Command15.ActiveConnection">
             <summary>
@@ -5344,7 +5887,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Command">
             <summary>
-             CoClass Command SupportByLibraryAttribute ADODB, 2.1,2.5
+             CoClass Command 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Command.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5377,7 +5921,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADOCommandConstruction">
             <summary>
-             Interface ADOCommandConstruction SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface ADOCommandConstruction 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADOCommandConstruction.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5403,7 +5948,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.ADOConnectionConstruction">
             <summary>
-             Interface ADOConnectionConstruction SupportByLibraryAttribute ADODB, 2.1,2.5
+             Interface ADOConnectionConstruction 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.ADOConnectionConstruction.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5528,7 +6074,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Fields20">
             <summary>
-             DispatchInterface Fields20 SupportByLibraryAttribute ADODB, 2.5
+             DispatchInterface Fields20 
+             SupportByLibrary ADODB, 2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields20.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5555,16 +6102,31 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
-            <param name="DefinedSize">Int32 DefinedSize</param>
-            <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+            <param name="definedSize">optional Int32 DefinedSize = 0</param>
+            <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields20._Append(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields20._Append(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,System.Int32)">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+            <param name="definedSize">optional Int32 DefinedSize = 0</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields20.Delete(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields20.GetEnumerator">
             <summary>
@@ -5584,7 +6146,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Fields">
             <summary>
-             DispatchInterface Fields SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Fields 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -5611,26 +6174,41 @@
             <summary>
             SupportByLibrary ADODB 2.1, 2.5
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
-            <param name="DefinedSize">Int32 DefinedSize</param>
-            <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+            <param name="definedSize">optional Int32 DefinedSize = 0</param>
+            <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.Append(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,System.Int32,NetOffice.ADODBApi.Enums.FieldAttributeEnum,System.Object)">
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="Name">string Name</param>
-            <param name="Type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
-            <param name="DefinedSize">Int32 DefinedSize</param>
-            <param name="Attrib">NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib</param>
-            <param name="FieldValue">optional object FieldValue</param>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+            <param name="definedSize">optional Int32 DefinedSize = 0</param>
+            <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
+            <param name="fieldValue">optional object FieldValue</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields.Append(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields.Append(System.String,NetOffice.ADODBApi.Enums.DataTypeEnum,System.Int32)">
+            <summary>
+            SupportByLibrary ADODB 2.1, 2.5
+            </summary>
+            <param name="name">string Name</param>
+            <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+            <param name="definedSize">optional Int32 DefinedSize = 0</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.Delete(System.Object)">
             <summary>
             SupportByLibrary ADODB 2.1
             </summary>
-            <param name="Index">object Index</param>
+            <param name="index">object Index</param>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.Update">
             <summary>
@@ -5641,7 +6219,12 @@
             <summary>
             SupportByLibrary ADODB 2.5
             </summary>
-            <param name="ResyncValues">NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues</param>
+            <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
+        </member>
+        <member name="M:NetOffice.ADODBApi.Fields.Resync">
+            <summary>
+            SupportByLibrary ADODB 2.5
+            </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Fields.CancelUpdate">
             <summary>
@@ -6088,7 +6671,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Parameters">
             <summary>
-             DispatchInterface Parameters SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Parameters 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Parameters.#ctor(LateBindingApi.Core.COMObject,System.Object)">
@@ -6136,7 +6720,8 @@
         </member>
         <member name="T:NetOffice.ADODBApi.Error">
             <summary>
-             DispatchInterface Error SupportByLibraryAttribute ADODB, 2.1,2.5
+             DispatchInterface Error 
+             SupportByLibrary ADODB, 2.1,2.5
             </summary>
         </member>
         <member name="M:NetOffice.ADODBApi.Error.#ctor(LateBindingApi.Core.COMObject,System.Object)">

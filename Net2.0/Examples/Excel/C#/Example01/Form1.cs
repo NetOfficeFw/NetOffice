@@ -23,7 +23,7 @@ namespace Example01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // start excel and turn off msg boxes
@@ -38,7 +38,7 @@ namespace Example01
             // draw back color and perform the BorderAround method
             workSheet.get_Range("$B2:$B5").Interior.Color = ToDouble(Color.DarkGreen);
             workSheet.get_Range("$B2:$B5").BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic);
-
+            
             // draw back color and border the range explicitly
             workSheet.get_Range("$D2:$D5").Interior.Color = ToDouble(Color.DarkGreen);
             workSheet.get_Range("$D2:$D5").Borders[XlBordersIndex.xlInsideHorizontal].LineStyle = XlLineStyle.xlDouble;

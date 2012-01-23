@@ -11,7 +11,7 @@ Public Class Form1
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
 
-        ' Initialize Api COMObject Support 
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         Dim changeHandler As Factory.ProxyCountChangedHandler = AddressOf Me.Factory_ProxyCountChanged

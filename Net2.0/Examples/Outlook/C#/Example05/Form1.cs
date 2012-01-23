@@ -22,24 +22,26 @@ namespace Example05
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
 
             // Create an Outlook Application object. 
             Outlook.Application outlookApplication = new Outlook.Application();
 
             // enum contacts 
+            int i = 0;
             Outlook.MAPIFolder contactFolder = outlookApplication.Session.GetDefaultFolder(OlDefaultFolders.olFolderContacts);
-            for (int i = 1; i <= contactFolder.Items.Count; i++)
+            foreach (COMObject item in contactFolder.Items)
             {
-                Outlook.ContactItem contact = contactFolder.Items[i] as Outlook.ContactItem;
+                Outlook.ContactItem contact = item as Outlook.ContactItem;
                 if (null != contact)
                 {
+                    i++;
                     ListViewItem listItem = listView1.Items.Add(i.ToString());
                     listItem.SubItems.Add(contact.CompanyAndFullName);
                 }
             }
-           
+
             // close outlook and dispose
             outlookApplication.Quit();
             outlookApplication.Dispose();

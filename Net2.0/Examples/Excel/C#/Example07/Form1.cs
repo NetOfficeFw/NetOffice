@@ -19,7 +19,7 @@ namespace Example07
 
         private void button1_Click(object sender, EventArgs e)
         {   
-            // Initialize Api COMObject Support
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
             
             string workbookFile = null;
@@ -39,7 +39,8 @@ namespace Example07
                 globalModule.Name = "MyNewCodeModule";
 
                 // add a new procedure to the modul
-                globalModule.CodeModule.InsertLines(1, "Public Sub HelloWorld(Param as string)\r\n MsgBox \"Hello World!\" & vbnewline & Param\r\nEnd Sub");
+                string codeModule = string.Format("Public Sub HelloWorld(Param as string){0}MsgBox \"Hello World!\" & vbnewline & Param{0}End Sub{0}", Environment.NewLine);
+                globalModule.CodeModule.InsertLines(1, codeModule);
                  
                 // create a click event trigger for the first worksheet
                 int linePosition = workBook.VBProject.VBComponents[2].CodeModule.CreateEventProc("BeforeDoubleClick", "Worksheet");

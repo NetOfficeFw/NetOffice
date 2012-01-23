@@ -19,7 +19,7 @@ namespace Tutorial04
         {
             InitializeComponent();
 
-            // Initialize Api COMObject Support 
+            // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
             LateBindingApi.Core.Factory.ProxyCountChanged += new Factory.ProxyCountChangedHandler(Factory_ProxyCountChanged);
         }

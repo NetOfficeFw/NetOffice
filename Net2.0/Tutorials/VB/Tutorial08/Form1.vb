@@ -4,7 +4,7 @@ Public Class Form1
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' Initialize NetOffices
+        ' Initialize NetOffice
         LateBindingApi.Core.Factory.Initialize()
 
         ' create new instance
