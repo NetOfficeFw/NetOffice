@@ -528,7 +528,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     {
                         Mono.Cecil.Cil.Instruction methodInstruction = itemInstruction as Mono.Cecil.Cil.Instruction;
                         Mono.Cecil.FieldDefinition fieldDefinition = methodInstruction.Operand as Mono.Cecil.FieldDefinition;
-                        if (fieldDefinition.FieldType.IsValueType)
+                        if (fieldDefinition != null && fieldDefinition.FieldType.IsValueType)
                         {
                             Mono.Cecil.Cil.Instruction paramInstruction = GetParameterInstructionForField(methodInstruction);
                             if (null != paramInstruction)
