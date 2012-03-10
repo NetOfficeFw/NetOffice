@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF73F99F-DFC0-42D1-9EDF-AD7D890C53D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClientApplication</RootNamespace>
+    <AssemblyName>ClientApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{1E705792-F476-497B-99CB-E8C89FD80DA3}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excel\ExcelApi.csproj">
+      <Project>{C5EB22A4-FC7E-4AB1-9E4B-6380365F4879}</Project>
+      <Name>ExcelApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
+      <Project>{FA4A3102-B937-40B0-8947-FBBF86B493F8}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Word\WordApi.csproj">
+      <Project>{3241EC55-E23C-4544-8A8D-97DC48E31E2E}</Project>
+      <Name>WordApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Outlook\OutlookApi.csproj">
+      <Project>{715E7753-80D4-4725-9A2A-66D05BD7678F}</Project>
+      <Name>OutlookApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj">
+      <Project>{5E1DE7DA-162C-46F5-A1FA-46463C6BB088}</Project>
+      <Name>PowerPointApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Access\AccessApi.csproj">
+      <Project>{8042A2E4-7CE6-4D4A-8EE7-C8368ED20434}</Project>
+      <Name>AccessApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAOApi.csproj">
+      <Project>{7195FF6B-6BC9-40C7-8F14-EE04539C7614}</Project>
+      <Name>DAOApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ADODB\ADODBApi.csproj">
+      <Project>{51ED4F7D-AA7D-45C2-8374-D33D3DD97003}</Project>
+      <Name>ADODBApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OWC10\OWC10Api.csproj">
+      <Project>{80A06E73-BE60-4182-BE48-5A4E5B2E888C}</Project>
+      <Name>OWC10Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj">
+      <Project>{C38A5FB6-4E32-4DBA-9D0D-84A4BA2EBE73}</Project>
+      <Name>MSDATASRCApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj">
+      <Project>{B458B3F0-D66B-42E1-A737-098285A45A68}</Project>
+      <Name>MSComctlLibApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSProject\MSProjectApi.csproj">
+      <Project>{00D1FD43-279B-4268-BD76-BEB1F1EC27BF}</Project>
+      <Name>MSProjectApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSHTML\MSHTMLApi.csproj">
+      <Project>{647D3E96-C695-4E68-B4C7-14FA8836C91E}</Project>
+      <Name>MSHTMLApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LateBindingApi.Core\LateBindingApi.Core.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>LateBindingApi.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
