@@ -59,4 +59,5 @@ Public Class Test07
         End Try
 
     End Function
+
 End Class

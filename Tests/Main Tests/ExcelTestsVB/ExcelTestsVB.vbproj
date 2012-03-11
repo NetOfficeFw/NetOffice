@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +89,8 @@
     <Compile Include="Test05.vb" />
     <Compile Include="Test06.vb" />
     <Compile Include="Test07.vb" />
+    <Compile Include="Test08.vb" />
+    <Compile Include="Test09.vb" />
     <Compile Include="TestAssembly.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -129,6 +132,9 @@
       <Project>{9907200C-7CFD-4B1B-89F3-42DE866B194F}</Project>
       <Name>Tests.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Test08.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

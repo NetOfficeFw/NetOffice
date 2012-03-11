@@ -43,6 +43,7 @@ Public Class Test06
         Try
             application = New NetOffice.ExcelApi.Application()
             application.DisplayAlerts = False
+            application.Visible = True
             application.Workbooks.Add()
               
             ' we register some events. note: the event trigger was called from excel, means an other Thread

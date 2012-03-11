@@ -43,16 +43,10 @@ namespace ExcelTestsCSharp
                 _listPackages.Add(new Test05());
                 _listPackages.Add(new Test06());
                 _listPackages.Add(new Test07());
+                _listPackages.Add(new Test08());
+                _listPackages.Add(new Test09());
             }
             return _listPackages.ToArray();
-        }
-
-        public event OnErrorEventHandler OnError;
-
-        internal void RaiseOnError(ITestPackage sender, Exception exception)
-        {
-            if (null != OnError)
-                OnError(sender, exception);
         }
 
         #endregion

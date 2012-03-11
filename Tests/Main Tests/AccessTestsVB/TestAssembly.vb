@@ -1,0 +1,32 @@
+﻿Imports Tests.Core
+
+Public Class TestAssembly
+    Implements ITestAssembly
+
+    Private _listPackages As List(Of ITestPackage)
+
+    Public ReadOnly Property Language As String Implements Tests.Core.ITestAssembly.Language
+        Get
+            Return "VB"
+        End Get
+    End Property
+
+    Public Function LoadTestPackages() As Tests.Core.ITestPackage() Implements Tests.Core.ITestAssembly.LoadTestPackages
+
+        If IsNothing(_listPackages) Then
+
+            LateBindingApi.Core.Factory.Initialize()
+            _listPackages = New List(Of ITestPackage)
+        End If
+
+        Return _listPackages.ToArray()
+
+    End Function
+
+    Public ReadOnly Property OfficeProduct As String Implements Tests.Core.ITestAssembly.OfficeProduct
+        Get
+            Return "Access"
+        End Get
+    End Property
+
+End Class
