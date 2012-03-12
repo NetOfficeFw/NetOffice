@@ -58,8 +58,8 @@ namespace AccessTestsCSharp
                 DAO.Database newDatabase = application.DBEngine.Workspaces[0].CreateDatabase(documentFile, LanguageConstants.dbLangGeneral);
                 application.DBEngine.Workspaces[0].Close();
 
-                // setup database connection
-                OleDbConnection oleConnection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + documentFile);
+                // setup database connection                         'Provider=Microsoft.Jet.OLEDB.4.0;Data Source= < access2007
+                OleDbConnection oleConnection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=" + documentFile);
                 oleConnection.Open();
 
                 // create table

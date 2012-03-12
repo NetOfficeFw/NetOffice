@@ -96,7 +96,15 @@ Public Class Form1
         ' save the document
         Dim fileExtension As String = GetDefaultExtension(wordApplication)
         Dim documentFile As String = String.Format("{0}\Example03{1}", Application.StartupPath, fileExtension)
-        newDocument.SaveAs(documentFile)
+
+        ' newer word versions try to save the document in .odt(open document format) by default
+        ' we dont want this, we want .doc or .docx !!!
+        Dim version As Double = Convert.ToDouble(wordApplication.Version)
+        If (version >= 120.0) Then
+            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
+        Else
+            newDocument.SaveAs(documentFile)
+        End If
 
         ' close word and dispose reference
         wordApplication.Quit()

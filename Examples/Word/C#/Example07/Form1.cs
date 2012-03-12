@@ -47,7 +47,7 @@ namespace Example07
             _wordApplication.CustomizationContext = normalDotTemplate;
 
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, System.Type.Missing, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, System.Type.Missing, 1,true);
             commandBarPopup.Caption = "commandBarPopup";
 
             #region few words, how to access the picture
@@ -103,7 +103,7 @@ namespace Example07
             #region Create a new ContextMenu
 
             // add a commandbar popup
-            commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, false, true);
+            commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, false, 1, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             // add a button to the popup

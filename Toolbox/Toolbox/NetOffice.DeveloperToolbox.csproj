@@ -171,12 +171,12 @@
     <EmbeddedResource Include="OfficeCompatibility\Info1031.rtf" />
     <EmbeddedResource Include="OfficeCompatibility\Info1033.rtf" />
     <None Include="app.config" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Access.Description.xml.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Excel.Description.xml.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Office.Description.xml.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Outlook.Description.xml.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\PowerPoint.Description.xml.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\NetOfficeDocuFiles\Word.Description.xml.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\AccessApi.dll.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\ExcelApi.dll.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\OfficeApi.dll.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\OutlookApi.dll.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\PowerPointApi.dll.gz" />
+    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\WordApi.dll.gz" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

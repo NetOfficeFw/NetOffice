@@ -62,9 +62,8 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
         {
             get
             {
-                return true;
                 string value = Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE", EnvironmentVariableTarget.Machine);
-                return value.StartsWith("x86") ? false : true;
+                return value.StartsWith("x86") ? true : false;
             }
         }
 

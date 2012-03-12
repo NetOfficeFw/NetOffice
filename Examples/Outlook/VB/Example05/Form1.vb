@@ -13,20 +13,20 @@ Public Class Form1
         Dim outlookApplication = New Outlook.Application()
 
         ' enum contacts 
+        Dim index As Integer
         Dim contactFolder As Outlook.MAPIFolder = outlookApplication.Session.GetDefaultFolder(OlDefaultFolders.olFolderContacts)
 
-        For index As Integer = 1 To contactFolder.Items.Count
+        For Each item As COMObject In contactFolder.Items
 
-            If (TypeName(contactFolder.Items(index)) = "ContactItem") Then
-
+            If (TypeName(item) = "ContactItem") Then
+                index += 1
                 Dim contact As Outlook.ContactItem = contactFolder.Items(index)
                 Dim listItem As ListViewItem = listView1.Items.Add(index.ToString())
                 listItem.SubItems.Add(contact.CompanyAndFullName)
-
             End If
 
-        Next index
-
+        Next
+         
         'close outlook and dispose
         outlookApplication.Quit()
         outlookApplication.Dispose()

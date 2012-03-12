@@ -13,7 +13,7 @@ namespace GzipCompressor
             Console.WriteLine("Compress xml files to gzip.");          
 
             DirectoryInfo di = new DirectoryInfo(Environment.CurrentDirectory);
-            foreach (FileInfo fi in di.GetFiles("*.xml"))
+            foreach (FileInfo fi in di.GetFiles("*.dll"))
             {
                 using (FileStream inFile = fi.OpenRead())
                 {

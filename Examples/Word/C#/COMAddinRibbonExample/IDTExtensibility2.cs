@@ -7,6 +7,10 @@ using System.Text;
 
 namespace COMAddinRibbonExample
 {
+    /*
+     * taken from Extensibility2
+     * you can also use the reference to extensibility2.dll but i like to keep the assembly references low
+     */
     [ComVisible(true)]
     [Guid("289E9AF1-4973-11D1-AE81-00A0C90F26F4")]
     public enum ext_ConnectMode

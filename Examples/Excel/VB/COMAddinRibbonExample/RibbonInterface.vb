@@ -1,6 +1,12 @@
 ﻿Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
+'
+' whats the reason for the definition here? 
+' NetOffice.OfficeApi.dll contains the interfaces but the VS IDE try to register NetOffice.OfficeApi.dll for COM Interop if you implement them for an Addin
+' I dont have a solution for this problem at the moment. do you know a better way? contact me: public.sebastian@web.de
+'
+
 <ComImport(), Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType(CShort(&H1040))> _
 Public Interface IRibbonUI
     <MethodImpl(MethodImplOptions.InternalCall, MethodCodeType:=MethodCodeType.Runtime), DispId(1)> _

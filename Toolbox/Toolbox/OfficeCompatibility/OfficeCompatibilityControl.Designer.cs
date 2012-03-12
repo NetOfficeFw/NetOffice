@@ -54,6 +54,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelVersionTable = new System.Windows.Forms.Panel();
+            this.labelNetOfficeVersion = new System.Windows.Forms.Label();
             this.tableLayoutResult = new NetOffice.DeveloperToolbox.OfficeCompatibility.CustomTableLayoutControl();
             this.pictureBoxAccess14 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAccess12 = new System.Windows.Forms.PictureBox();
@@ -436,6 +437,19 @@
             this.panelVersionTable.Name = "panelVersionTable";
             this.panelVersionTable.Size = new System.Drawing.Size(132, 215);
             this.panelVersionTable.TabIndex = 91;
+            // 
+            // labelNetOfficeVersion
+            // 
+            this.labelNetOfficeVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNetOfficeVersion.AutoSize = true;
+            this.labelNetOfficeVersion.BackColor = System.Drawing.SystemColors.Control;
+            this.labelNetOfficeVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelNetOfficeVersion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelNetOfficeVersion.Location = new System.Drawing.Point(77, 399);
+            this.labelNetOfficeVersion.Name = "labelNetOfficeVersion";
+            this.labelNetOfficeVersion.Size = new System.Drawing.Size(181, 13);
+            this.labelNetOfficeVersion.TabIndex = 92;
+            this.labelNetOfficeVersion.Text = "Reference Assemblies: NetOffice 1.4";
             // 
             // tableLayoutResult
             // 
@@ -924,6 +938,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelNetOfficeVersion);
             this.Controls.Add(this.panelVersionTable);
             this.Controls.Add(this.panelInvalidAssembly);
             this.Controls.Add(this.panelNoNetOfficeReferences);
@@ -1054,5 +1069,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelVersionTable;
+        private System.Windows.Forms.Label labelNetOfficeVersion;
     }
 }

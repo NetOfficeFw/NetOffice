@@ -6,7 +6,13 @@ using System.Runtime.InteropServices;
 
 namespace COMAddinRibbonExample
 {
+    /*
+     * whats the reason for the definition here? 
+     * NetOffice.OfficeApi.dll contains the interfaces but the VS IDE try to register NetOffice.OfficeApi.dll for COM Interop if you implement them for an Addin
+     * I dont have a solution for this problem at the moment. do you know a better way? contact me: public.sebastian@web.de
+     */
     #region Ribbon Interfaces
+
     [ComImport, Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType((short)0x1040)]
     public interface IRibbonUI
     {

@@ -52,7 +52,14 @@ namespace Example05
             //save the document
             string fileExtension = GetDefaultExtension(wordApplication);
             object documentFile = string.Format("{0}\\Example05{1}", Application.StartupPath, fileExtension);
-            newDocument.SaveAs(documentFile);
+           
+            // newer word versions try to save the document in .odt(open document format) by default
+            // we dont want this, we want .doc or .docx !!!
+            double version = Convert.ToDouble(wordApplication.Version);
+            if (version >= 120.00)
+                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
+            else
+                newDocument.SaveAs(documentFile);
 
             //close word and dispose reference
             wordApplication.Quit();

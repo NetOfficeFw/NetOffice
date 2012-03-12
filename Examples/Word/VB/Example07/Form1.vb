@@ -40,7 +40,7 @@ Public Class Form1
         _wordApplication.CustomizationContext = normalDotTemplate
 
         ' add a commandbar popup
-        Dim commandBarPopup As Office.CommandBarPopup = _wordApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, System.Type.Missing, True)
+        Dim commandBarPopup As Office.CommandBarPopup = _wordApplication.CommandBars("Menu Bar").Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, System.Type.Missing, 1, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' you can see we use an own icon via .PasteFace()
@@ -84,7 +84,7 @@ Public Class Form1
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
         ' create context menu
-        commandBarPopup = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPopup = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, 1, True)
         commandBarPopup.Caption = "commandBarPopup"
 
         ' add a button to the popup
