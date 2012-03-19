@@ -67,11 +67,20 @@ Public Class Test06
             Dim sheetDeactivateHandler As Excel.Application_SheetDeactivateEventHandler = AddressOf Me.excelApplication_SheetDeactivateEvent
             AddHandler application.SheetDeactivateEvent, sheetDeactivateHandler
 
+            RemoveHandler application.NewWorkbookEvent, newWorkbookHandler
+            RemoveHandler application.WorkbookBeforeCloseEvent, beforeCloseHandler
+            RemoveHandler application.WorkbookActivateEvent, workbookActivateHandler
+            RemoveHandler application.WorkbookDeactivateEvent, workbookDeactivateHandler
+            RemoveHandler application.SheetActivateEvent, sheetActivateHandler
+            RemoveHandler application.SheetDeactivateEvent, sheetDeactivateHandler
+
             ' add a new workbook add a sheet and close
             ' add a new workbook
             Dim workBook As Excel.Workbook = application.Workbooks.Add()
             Dim workSheet As Excel.Worksheet = workBook.Worksheets(1)
             workBook.Close()
+
+            RemoveHandler application.SheetDeactivateEvent, sheetDeactivateHandler
 
             If (_newWorkbookEvent And _workbookBeforeCloseEvent And _sheetActivateEvent And _sheetDeactivateEvent And _workbookActivateEvent And _workbookDeactivateEvent) Then
                 Return New TestResult(True, DateTime.Now.Subtract(startTime), "", Nothing, "")

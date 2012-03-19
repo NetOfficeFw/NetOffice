@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
-<ComImport(), Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType(CShort(&H1040))> _
+<ComImport(), ComVisible(True), Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType(CShort(&H1040))> _
 Public Interface IRibbonUI
     <MethodImpl(MethodImplOptions.InternalCall, MethodCodeType:=MethodCodeType.Runtime), DispId(1)> _
     Sub Invalidate()
@@ -17,7 +17,7 @@ Public Interface IRibbonUI
     Sub ActivateTabQ(<[In](), MarshalAs(UnmanagedType.BStr)> ByVal ControlID As String, <[In](), MarshalAs(UnmanagedType.BStr)> ByVal [Namespace] As String)
 End Interface
 
-<ComImport(), Guid("000C0395-0000-0000-C000-000000000046"), TypeLibType(CShort(&H1040))> _
+<ComImport(), ComVisible(True), Guid("000C0395-0000-0000-C000-000000000046"), TypeLibType(CShort(&H1040))> _
 Public Interface IRibbonControl
     <DispId(1)> _
     ReadOnly Property Id() As <MarshalAs(UnmanagedType.BStr)> String
@@ -27,7 +27,7 @@ Public Interface IRibbonControl
     ReadOnly Property Tag() As <MarshalAs(UnmanagedType.BStr)> String
 End Interface
 
-<ComImport(), TypeLibType(CShort(&H1040)), Guid("000C0396-0000-0000-C000-000000000046")> _
+<ComImport(), ComVisible(True), TypeLibType(CShort(&H1040)), Guid("000C0396-0000-0000-C000-000000000046")> _
 Public Interface IRibbonExtensibility
     <MethodImpl(MethodImplOptions.InternalCall, MethodCodeType:=MethodCodeType.Runtime), DispId(1)> _
     Function GetCustomUI(<[In](), MarshalAs(UnmanagedType.BStr)> ByVal RibbonID As String) As <MarshalAs(UnmanagedType.BStr)> String

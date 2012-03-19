@@ -26,7 +26,7 @@ namespace ExcelAddinCSharp
         private bool _ribbonUIPassed;
         private bool _taskPanePassed;
 
-        public bool RibbonUI
+        public bool RibbonUIPassed
         {
             get
             {
@@ -113,12 +113,21 @@ namespace ExcelAddinCSharp
 
         public void CTPFactoryAvailable(object CTPFactoryInst)
         {
-            _myCtpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
-            _myPane = _myCtpFactory.CreateCTP("ExcelAddinCSharp.SampleControl", "NetOffice Sample Task Pane", Type.Missing);
-            _myPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
-            _myPane.Visible = true;
-            _myControl = _myPane.ContentControl as SampleControl;
-            _taskPanePassed = true;
+            try
+            {
+                _myCtpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
+                _myPane = _myCtpFactory.CreateCTP("ExcelAddinCSharp.SampleControl", "NetOffice Sample Pane(C#)", Type.Missing);
+                _myPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
+                _myPane.Visible = true;
+                _myControl = _myPane.ContentControl as SampleControl;
+                _taskPanePassed = true;
+            }
+            catch (Exception throwedException)
+            {
+                _taskPanePassed = false;
+                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
+                Console.WriteLine(details);
+            }
         }
 
         #endregion
@@ -200,8 +209,9 @@ namespace ExcelAddinCSharp
             }
             catch (Exception throwedException)
             {
+                _ribbonUIPassed = false;
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                //MessageBox.Show("An error occured in GetCustomUI." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(details);
                 return "";
             }
         }

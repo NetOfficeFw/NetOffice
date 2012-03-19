@@ -21,7 +21,7 @@ Public Class Test04
 
     Public ReadOnly Property Description As String Implements Tests.Core.ITestPackage.Description
         Get
-            Return "Insert text."
+            Return "Create custom UI."
         End Get
     End Property
 

@@ -13,7 +13,7 @@ Imports NetOffice.OfficeApi.Enums
 
 <GuidAttribute("9779BAB6-021F-4D3A-834F-6E4634CD1EDB"), ProgIdAttribute("ExcelAddinVB.TestAddin")> _
 Public Class TestAddin
-    Implements IDTExtensibility2, IRibbonExtensibility
+    Implements IDTExtensibility2, IRibbonExtensibility, ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
     Private Shared ReadOnly _prodId As String = "ExcelAddinVB.TestAddin"
@@ -42,14 +42,20 @@ Public Class TestAddin
     Private _myPane As Office._CustomTaskPane
     Private _myControl As SampleControl
 
-    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object)
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements ICustomTaskPaneConsumer.CTPFactoryAvailable
 
-        _myCtpFactory = New NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst)
-        _myPane = _myCtpFactory.CreateCTP("ExcelAddinVB.SampleControl", "NetOffice Sample Task Pane", Type.Missing)
-        _myPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
-        _myPane.Visible = True
-        _myControl = _myPane.ContentControl
-        _taskPanePassed = True
+        Try
+            _myCtpFactory = New NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst)
+            _myPane = _myCtpFactory.CreateCTP("ExcelAddinVB.SampleControl", "NetOffice Sample Pane (VB)", Type.Missing)
+            _myPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
+            _myPane.Visible = True
+            _myControl = _myPane.ContentControl
+            _taskPanePassed = True
+        Catch ex As Exception
+            _taskPanePassed = False
+            Console.WriteLine(ex.Message)
+        End Try
+
     End Sub
 
 #End Region
@@ -186,8 +192,9 @@ Public Class TestAddin
 
         Catch ex As Exception
 
+            _ribbonUIPassed = False
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in GetCustomUI." + details, "GetCustomUI " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Console.WriteLine(details)
             Return ""
 
         End Try

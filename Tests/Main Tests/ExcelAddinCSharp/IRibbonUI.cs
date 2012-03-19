@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace ExcelAddinCSharp
 {
     #region Ribbon Interfaces
-    [ComImport, Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType((short)0x1040)]
+    [ComImport, Guid("000C03A7-0000-0000-C000-000000000046"), TypeLibType((short)0x1040), ComVisible(true)]
     public interface IRibbonUI
     {
         [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
@@ -23,7 +23,7 @@ namespace ExcelAddinCSharp
         void ActivateTabQ([In, MarshalAs(UnmanagedType.BStr)] string ControlID, [In, MarshalAs(UnmanagedType.BStr)] string Namespace);
     }
 
-    [ComImport, Guid("000C0395-0000-0000-C000-000000000046"), TypeLibType((short)0x1040)]
+    [ComImport, Guid("000C0395-0000-0000-C000-000000000046"), TypeLibType((short)0x1040), ComVisible(true)]
     public interface IRibbonControl
     {
         [DispId(1)]
@@ -33,14 +33,23 @@ namespace ExcelAddinCSharp
         [DispId(3)]
         string Tag { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)] get; }
     }
+   
+   [ComImport, TypeLibType((short)0x1040), Guid("000C0396-0000-0000-C000-000000000046"), ComVisible(true)]
+   public interface IRibbonExtensibility
+   {
+       [return: MarshalAs(UnmanagedType.BStr)]
+       [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+       string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)] string RibbonID);
+   }
 
-    [ComImport, TypeLibType((short)0x1040), Guid("000C0396-0000-0000-C000-000000000046")]
-    public interface IRibbonExtensibility
-    {
-        [return: MarshalAs(UnmanagedType.BStr)]
-        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-        string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)] string RibbonID);
-    }
-
+   /*
+  [ComImport, Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short)0x1040)]
+ public interface IRibbonExtensibility
+ {
+     [return: MarshalAs(UnmanagedType.BStr)]
+     [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+     string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)] string RibbonID);
+ }
+*/
     #endregion
 }
