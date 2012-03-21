@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLFieldSetElement2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLFieldSetElement2 : COMObject
+	public class IHTMLFieldSetElement2 : IHTMLFieldSetElement
 	{
 		#pragma warning disable
 		#region Type Information
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLFormElement form
 		{
 			get

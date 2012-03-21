@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[ComImport, Guid("000C0354-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _CommandBarComboBoxEvents
 	{
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Change([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl);
 	}
@@ -64,8 +64,7 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi.CommandBarComboBox newCtrl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarComboBox;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCtrl;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
 		}
 
 		#endregion

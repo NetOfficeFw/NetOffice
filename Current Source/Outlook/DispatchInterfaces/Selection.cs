@@ -12,11 +12,11 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface Selection 
-	/// SupportByLibrary Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Selection : COMObject ,IEnumerable<object>
+	public class Selection : COMObject ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 14
+		/// SupportByVersion Outlook 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi.Enums.OlSelectionLocation Location
 		{
 			get
@@ -173,10 +173,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public COMObject this[object index]
 		{
@@ -190,10 +190,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 14
+		/// SupportByVersion Outlook 14
 		/// </summary>
 		/// <param name="selectionContents">NetOffice.OutlookApi.Enums.OlSelectionContents SelectionContents</param>
-		[SupportByLibraryAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14)]
 		public NetOffice.OutlookApi.Selection GetSelection(NetOffice.OutlookApi.Enums.OlSelectionContents selectionContents)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selectionContents);
@@ -203,47 +203,43 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-		
-        /// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-        {
-			int count = Count;
-			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 0; i < count; i++)
-				enumeratorObjects[i] = this[i+1];
-
-			foreach (COMObject item in enumeratorObjects)
-				yield return item;
-        }
-
-        #endregion
+       #region IEnumerable<COMObject> Member
         
+        /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
 
+       #endregion
+   
+       #region IEnumerable Members
+        
+       /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+       {
+            int count = Count;
+            COMObject[] enumeratorObjects = new COMObject[count];
+            for (int i = 0; i < count; i++)
+                enumeratorObjects[i] = this[i+1];
 
-		#pragma warning restore
+            foreach (COMObject item in enumeratorObjects)
+                yield return item;
+       }
+
+       #endregion
+       		#pragma warning restore
 	}
 }

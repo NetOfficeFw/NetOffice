@@ -12,11 +12,11 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ServerViewableItems 
-	/// SupportByLibrary Excel, 12,14
+	/// SupportByVersion Excel, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ServerViewableItems : COMObject ,IEnumerable<object>
+	public class ServerViewableItems : COMObject ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -138,17 +138,21 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		public COMObject get__Default(object index)
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Excel", 12,14)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public COMObject this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
+			}
 		}
 
 		#endregion
@@ -156,10 +160,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="obj">object Obj</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject Add(object obj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj);
@@ -169,10 +173,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -180,71 +184,44 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public void DeleteAll()
 		{
 			object[] paramsArray = null;
 			Invoker.Method(this, "DeleteAll", paramsArray);
 		}
 
-		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		#endregion
+
+       #region IEnumerable<COMObject> Member
+        
+        /// <summary>
+		/// SupportByVersionAttribute Excel, 12,14
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public COMObject this[object index]
+		[SupportByVersionAttribute("Excel", 12,14)]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Excel, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 12,14)]
+		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
-			}
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
-
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-        
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
-
-        #endregion
 		#pragma warning restore
 	}
 }

@@ -10,43 +10,43 @@ namespace NetOffice.ADODBApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[ComImport, Guid("00000400-0000-0010-8000-00AA006D2EA4"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ConnectionEvents
 	{
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void InfoMessage([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void BeginTransComplete([In] object transactionLevel, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void CommitTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void RollbackTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void WillExecute([In] [Out] ref object source, [In] object cursorType, [In] object lockType, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pCommand, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void ExecuteComplete([In] object recordsAffected, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pCommand, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void WillConnect([In] [Out] ref object connectionString, [In] [Out] ref object userID, [In] [Out] ref object password, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void ConnectComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void Disconnect([In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection);
 	}
@@ -100,8 +100,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("InfoMessage", ref paramsArray);
 		}
 
 		public void BeginTransComplete([In] object transactionLevel, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -122,8 +121,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeginTransComplete", ref paramsArray);
 		}
 
 		public void CommitTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -142,8 +140,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommitTransComplete", ref paramsArray);
 		}
 
 		public void RollbackTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -162,8 +159,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("RollbackTransComplete", ref paramsArray);
 		}
 
 		public void WillExecute([In] [Out] ref object source, [In] object cursorType, [In] object lockType, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pCommand, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -190,8 +186,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[5] = newpCommand;
 			paramsArray[6] = newpRecordset;
 			paramsArray[7] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillExecute", ref paramsArray);
 
 			source = (string)paramsArray[0];
 			options = (Int32)paramsArray[3];
@@ -219,8 +214,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[3] = newpCommand;
 			paramsArray[4] = newpRecordset;
 			paramsArray[5] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ExecuteComplete", ref paramsArray);
 		}
 
 		public void WillConnect([In] [Out] ref object connectionString, [In] [Out] ref object userID, [In] [Out] ref object password, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -241,8 +235,7 @@ namespace NetOffice.ADODBApi
 			paramsArray.SetValue(options, 3);
 			paramsArray[4] = newadStatus;
 			paramsArray[5] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillConnect", ref paramsArray);
 
 			connectionString = (string)paramsArray[0];
 			userID = (string)paramsArray[1];
@@ -266,8 +259,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ConnectComplete", ref paramsArray);
 		}
 
 		public void Disconnect([In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -284,8 +276,7 @@ namespace NetOffice.ADODBApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newadStatus;
 			paramsArray[1] = newpConnection;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Disconnect", ref paramsArray);
 		}
 
 		#endregion

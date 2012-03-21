@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IOLEDBConnection 
-	/// SupportByLibrary Excel, 12,14
+	/// SupportByVersion Excel, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOLEDBConnection : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject ADOConnection
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool BackgroundQuery
 		{
 			get
@@ -157,10 +157,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public object CommandText
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public object Connection
 		{
 			get
@@ -233,10 +233,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool EnableRefresh
 		{
 			get
@@ -253,10 +253,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public object LocalConnection
 		{
 			get
@@ -281,10 +281,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool MaintainConnection
 		{
 			get
@@ -301,25 +301,25 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public DateTime RefreshDate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RefreshDate", paramsArray);
-				return (DateTime)returnItem;
+				return NetRuntimeSystem.Convert.ToDateTime(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool Refreshing
 		{
 			get
@@ -331,10 +331,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool RefreshOnFileOpen
 		{
 			get
@@ -351,10 +351,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 RefreshPeriod
 		{
 			get
@@ -371,10 +371,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
 		{
 			get
@@ -391,10 +391,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool SavePassword
 		{
 			get
@@ -411,17 +411,17 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public string SourceConnectionFile
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceConnectionFile", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -431,17 +431,17 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public string SourceDataFile
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceDataFile", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -451,10 +451,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool OLAP
 		{
 			get
@@ -466,10 +466,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool UseLocalConnection
 		{
 			get
@@ -486,10 +486,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 MaxDrillthroughRecords
 		{
 			get
@@ -506,10 +506,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool IsConnected
 		{
 			get
@@ -521,10 +521,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
 		{
 			get
@@ -541,17 +541,17 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public string ServerSSOApplicationID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ServerSSOApplicationID", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -561,10 +561,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool AlwaysUseConnectionFile
 		{
 			get
@@ -581,10 +581,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool ServerFillColor
 		{
 			get
@@ -601,10 +601,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool ServerFontStyle
 		{
 			get
@@ -621,10 +621,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool ServerNumberFormat
 		{
 			get
@@ -641,10 +641,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool ServerTextColor
 		{
 			get
@@ -661,10 +661,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool RetrieveInOfficeUILang
 		{
 			get
@@ -681,10 +681,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.CalculatedMembers CalculatedMembers
 		{
 			get
@@ -697,10 +697,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 LocaleID
 		{
 			get
@@ -721,88 +721,88 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 CancelRefresh()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CancelRefresh", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 MakeConnection()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "MakeConnection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 Refresh()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Refresh", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		/// <param name="description">optional object Description</param>
 		/// <param name="keywords">optional object Keywords</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description, keywords);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 SaveAsODC(string oDCFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		/// <param name="description">optional object Description</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 SaveAsODC(string oDCFileName, object description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oDCFileName, description);
 			object returnItem = Invoker.MethodReturn(this, "SaveAsODC", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 Reconnect()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Reconnect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

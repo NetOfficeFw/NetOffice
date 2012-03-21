@@ -12,11 +12,11 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Frameset 
-	/// SupportByLibrary Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Frameset : COMObject ,IEnumerable<object>
+	public class Frameset : COMObject ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frameset ParentFrameset
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFramesetType Type
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFramesetSizeType WidthType
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFramesetSizeType HeightType
 		{
 			get
@@ -194,10 +194,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Width
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Height
 		{
 			get
@@ -234,10 +234,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 ChildFramesetCount
 		{
 			get
@@ -249,13 +249,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		/// <param name="index">Int32 Index</param>
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.Frameset get_ChildFramesetItem(Int32 index)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ChildFramesetItem", paramsArray);
 			NetOffice.WordApi.Frameset newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Frameset.LateBindingApiWrapperType) as NetOffice.WordApi.Frameset;
@@ -263,21 +264,21 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Alias for get_ChildFramesetItem
 		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		/// <param name="index">Int32 Index</param>
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frameset ChildFramesetItem(Int32 index)
 		{
 			return get_ChildFramesetItem(index);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Single FramesetBorderWidth
 		{
 			get
@@ -294,10 +295,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdColor FramesetBorderColor
 		{
 			get
@@ -314,10 +315,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdScrollbarType FrameScrollbarType
 		{
 			get
@@ -334,10 +335,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool FrameResizable
 		{
 			get
@@ -354,17 +355,17 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public string FrameName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FrameName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -374,10 +375,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool FrameDisplayBorders
 		{
 			get
@@ -394,17 +395,17 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public string FrameDefaultURL
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FrameDefaultURL", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -414,10 +415,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool FrameLinkToFile
 		{
 			get
@@ -438,10 +439,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="where">NetOffice.WordApi.Enums.WdFramesetNewFrameLocation Where</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frameset AddNewFrame(NetOffice.WordApi.Enums.WdFramesetNewFrameLocation where)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where);
@@ -451,9 +452,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -462,43 +463,33 @@ namespace NetOffice.WordApi
 
 		#endregion
 
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 9,10,11,12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<COMObject> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+        /// <summary>
+		/// SupportByVersionAttribute Word, 9,10,11,12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

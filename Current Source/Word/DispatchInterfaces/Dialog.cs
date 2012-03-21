@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Dialog 
-	/// SupportByLibrary Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Dialog : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdWordDialogTab DefaultTab
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdWordDialog Type
 		{
 			get
@@ -157,25 +157,25 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public string CommandName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public Int32 CommandBarId
 		{
 			get
@@ -191,57 +191,57 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="timeOut">optional object TimeOut</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Show(object timeOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(timeOut);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Show()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="timeOut">optional object TimeOut</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Display(object timeOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(timeOut);
 			object returnItem = Invoker.MethodReturn(this, "Display", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Display()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Display", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Execute()
 		{
 			object[] paramsArray = null;
@@ -249,9 +249,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Update()
 		{
 			object[] paramsArray = null;

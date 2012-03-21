@@ -12,9 +12,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface GradientStops 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GradientStops : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.GradientStop>
 	{
@@ -76,11 +76,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		/// <param name="index">Int32 Index</param>
+		[SupportByVersionAttribute("Office", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.GradientStop this[Int32 index]
 		{
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -113,21 +113,21 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		public void Delete(Int32 index)
+		[SupportByVersionAttribute("Office", 12,14)]
+		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "Delete", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -135,26 +135,26 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		public void Insert(Int32 rGB, Single position, Single transparency, Int32 index)
+		[SupportByVersionAttribute("Office", 12,14)]
+		public void Insert(Int32 rGB, Single position, object transparency, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index);
 			Invoker.Method(this, "Insert", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void Insert(Int32 rGB, Single position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position);
@@ -162,41 +162,41 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
-		public void Insert(Int32 rGB, Single position, Single transparency)
+		[SupportByVersionAttribute("Office", 12,14)]
+		public void Insert(Int32 rGB, Single position, object transparency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency);
 			Invoker.Method(this, "Insert", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		/// <param name="brightness">optional Single Brightness = 0</param>
-		[SupportByLibraryAttribute("Office", 14)]
-		public void Insert2(Int32 rGB, Single position, Single transparency, Int32 index, Single brightness)
+		[SupportByVersionAttribute("Office", 14)]
+		public void Insert2(Int32 rGB, Single position, object transparency, object index, object brightness)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index, brightness);
 			Invoker.Method(this, "Insert2", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public void Insert2(Int32 rGB, Single position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position);
@@ -204,29 +204,29 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 14)]
-		public void Insert2(Int32 rGB, Single position, Single transparency)
+		[SupportByVersionAttribute("Office", 14)]
+		public void Insert2(Int32 rGB, Single position, object transparency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency);
 			Invoker.Method(this, "Insert2", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="rGB">Int32 RGB</param>
 		/// <param name="position">Single Position</param>
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 14)]
-		public void Insert2(Int32 rGB, Single position, Single transparency, Int32 index)
+		[SupportByVersionAttribute("Office", 14)]
+		public void Insert2(Int32 rGB, Single position, object transparency, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index);
 			Invoker.Method(this, "Insert2", paramsArray);
@@ -234,43 +234,33 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.GradientStop> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
-        public IEnumerator<NetOffice.OfficeApi.GradientStop> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.GradientStop item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OfficeApi.GradientStop> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute Office, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
+       public IEnumerator<NetOffice.OfficeApi.GradientStop> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.GradientStop item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

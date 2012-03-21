@@ -17,11 +17,11 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CustomTaskPane 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomTaskPane : _CustomTaskPane, IEventBinding 
+	public class CustomTaskPane : _CustomTaskPane,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -94,13 +94,62 @@ namespace NetOffice.OfficeApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Office, 12,14
+		/// </summary>
+		private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Office 12 14
+		/// </summary>
+		[SupportByVersion("Office", 12,14)]
+		public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_VisibleStateChangeEvent += value;
+			}
+			remove
+			{
+				_VisibleStateChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Office, 12,14
+		/// </summary>
+		private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Office 12 14
+		/// </summary>
+		[SupportByVersion("Office", 12,14)]
+		public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DockPositionStateChangeEvent += value;
+			}
+			remove
+			{
+				_DockPositionStateChangeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -118,59 +167,7 @@ namespace NetOffice.OfficeApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Office, 12,14
-		/// </summary>
-		private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Office 12 14
-		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
-		public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_VisibleStateChangeEvent += value;
-			}
-			remove
-			{
-				_VisibleStateChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Office, 12,14
-		/// </summary>
-		private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Office 12 14
-		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
-		public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DockPositionStateChangeEvent += value;
-			}
-			remove
-			{
-				_DockPositionStateChangeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -181,25 +178,22 @@ namespace NetOffice.OfficeApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -222,8 +216,59 @@ namespace NetOffice.OfficeApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __CustomTaskPaneEvents_SinkHelper)
 			{
@@ -235,6 +280,7 @@ namespace NetOffice.OfficeApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

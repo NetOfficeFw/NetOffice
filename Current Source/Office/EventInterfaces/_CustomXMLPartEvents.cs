@@ -10,19 +10,19 @@ namespace NetOffice.OfficeApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[ComImport, Guid("000CDB07-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _CustomXMLPartEvents
 	{
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo);
 	}
@@ -74,8 +74,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewNode;
 			paramsArray[1] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
 		}
 
 		public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
@@ -96,8 +95,7 @@ namespace NetOffice.OfficeApi
 			paramsArray[1] = newOldParentNode;
 			paramsArray[2] = newOldNextSibling;
 			paramsArray[3] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NodeAfterDelete", ref paramsArray);
 		}
 
 		public void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
@@ -116,8 +114,7 @@ namespace NetOffice.OfficeApi
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newNewNode;
 			paramsArray[2] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NodeAfterReplace", ref paramsArray);
 		}
 
 		#endregion

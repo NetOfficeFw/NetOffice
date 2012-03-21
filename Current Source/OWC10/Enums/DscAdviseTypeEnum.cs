@@ -4,59 +4,59 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1
+	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DscAdviseTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscAdd = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscDelete = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscMove = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscLoad = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscChange = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscDeleteComplete = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 dscRename = 7
 	}
 }

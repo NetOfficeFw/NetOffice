@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface HTMLDocumentEvents2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class HTMLDocumentEvents2 : COMObject
+	public class HTMLDocumentEvents2 : DispHTMLDocument
 	{
 		#pragma warning disable
 		#region Type Information
@@ -79,46 +79,46 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onhelp(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onhelp", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onclick", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool ondblclick(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "ondblclick", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onkeydown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -126,10 +126,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onkeyup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -137,22 +137,22 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onkeypress(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onkeypress", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onmousedown(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -160,10 +160,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onmousemove(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -171,10 +171,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onmouseup(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -182,10 +182,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onmouseout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -193,10 +193,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onmouseover(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -204,10 +204,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onreadystatechange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -215,22 +215,22 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onbeforeupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onbeforeupdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onafterupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -238,22 +238,22 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onrowexit(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onrowexit", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onrowenter(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -261,70 +261,70 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool ondragstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "ondragstart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onselectstart(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onselectstart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onerrorupdate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onerrorupdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool oncontextmenu(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "oncontextmenu", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onstop(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onstop", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onrowsdelete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -332,10 +332,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onrowsinserted(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -343,10 +343,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void oncellchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -354,10 +354,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onpropertychange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -365,10 +365,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void ondatasetchanged(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -376,10 +376,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void ondataavailable(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -387,10 +387,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void ondatasetcomplete(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -398,10 +398,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onbeforeeditfocus(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -409,10 +409,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onselectionchange(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -420,34 +420,34 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool oncontrolselect(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "oncontrolselect", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onmousewheel(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onmousewheel", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onfocusin(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -455,10 +455,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onfocusout(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -466,10 +466,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void onactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -477,10 +477,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void ondeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
@@ -488,27 +488,27 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onbeforeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onbeforeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool onbeforedeactivate(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
 			object returnItem = Invoker.MethodReturn(this, "onbeforedeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLInputElement 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLInputElement : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "type", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,17 +95,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string value
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "value", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -115,17 +115,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -135,10 +135,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool status
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool disabled
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLFormElement form
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 size
 		{
 			get
@@ -211,10 +211,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 maxLength
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onchange
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onselect
 		{
 			get
@@ -287,17 +287,18 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string defaultValue
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "defaultValue", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -307,10 +308,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool readOnly
 		{
 			get
@@ -327,10 +328,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool indeterminate
 		{
 			get
@@ -347,10 +348,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool defaultChecked
 		{
 			get
@@ -367,22 +368,22 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool get_checked()
-		{
+		{		
 			object[] paramsArray = null;
 			object returnItem = Invoker.PropertyGet(this, "checked", paramsArray);
 			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void set_checked(bool value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -390,10 +391,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object border
 		{
 			get
@@ -418,10 +419,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 vspace
 		{
 			get
@@ -438,10 +439,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 hspace
 		{
 			get
@@ -458,17 +459,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string alt
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "alt", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -478,17 +479,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string src
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "src", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -498,17 +499,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string lowsrc
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "lowsrc", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -518,17 +519,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string vrml
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "vrml", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -538,17 +539,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string dynsrc
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "dynsrc", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -558,25 +559,25 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string readyState
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "readyState", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool complete
 		{
 			get
@@ -588,10 +589,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object loop
 		{
 			get
@@ -616,17 +617,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string align
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "align", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -636,10 +637,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onload
 		{
 			get
@@ -664,10 +665,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onerror
 		{
 			get
@@ -692,10 +693,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onabort
 		{
 			get
@@ -720,10 +721,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 width
 		{
 			get
@@ -740,10 +741,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 height
 		{
 			get
@@ -760,17 +761,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string Start
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -784,9 +785,9 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void select()
 		{
 			object[] paramsArray = null;
@@ -794,9 +795,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLTxtRange createTextRange()
 		{
 			object[] paramsArray = null;

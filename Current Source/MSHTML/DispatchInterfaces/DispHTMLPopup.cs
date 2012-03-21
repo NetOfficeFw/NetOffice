@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface DispHTMLPopup 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLPopup : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLDocument document
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool isOpen
 		{
 			get
@@ -110,14 +110,14 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="w">Int32 w</param>
 		/// <param name="h">Int32 h</param>
 		/// <param name="pElement">object pElement</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void Show(Int32 x, Int32 y, Int32 w, Int32 h, object pElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, w, h, pElement);
@@ -125,9 +125,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void Hide()
 		{
 			object[] paramsArray = null;

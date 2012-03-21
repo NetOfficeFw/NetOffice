@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO 6, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordsetTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbOpenTable = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbOpenDynaset = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbOpenSnapshot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbOpenForwardOnly = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbOpenDynamic = 16
 	}
 }

@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLStyleSheetPagesCollection 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLStyleSheetPagesCollection : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 length
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheetPage item(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

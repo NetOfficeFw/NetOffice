@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ChartGroup 
-	/// SupportByLibrary PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartGroup : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.DownBars DownBars
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.DropLines DropLines
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool HasDropLines
 		{
 			get
@@ -127,10 +127,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool HasHiLoLines
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool HasRadarAxisLabels
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool HasSeriesLines
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool HasUpDownBars
 		{
 			get
@@ -207,10 +207,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.HiLoLines HiLoLines
 		{
 			get
@@ -223,10 +223,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.SeriesLines SeriesLines
 		{
 			get
@@ -239,10 +239,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.UpBars UpBars
 		{
 			get
@@ -255,10 +255,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool VaryByCategories
 		{
 			get
@@ -275,10 +275,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlSizeRepresents SizeRepresents
 		{
 			get
@@ -295,10 +295,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool ShowNegativeBubbles
 		{
 			get
@@ -315,10 +315,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlChartSplitType SplitType
 		{
 			get
@@ -335,10 +335,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public object SplitValue
 		{
 			get
@@ -363,10 +363,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool Has3DShading
 		{
 			get
@@ -383,10 +383,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -398,10 +398,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -414,10 +414,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -430,10 +430,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup
 		{
 			get
@@ -450,10 +450,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 BubbleScale
 		{
 			get
@@ -470,10 +470,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 DoughnutHoleSize
 		{
 			get
@@ -490,10 +490,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 FirstSliceAngle
 		{
 			get
@@ -510,10 +510,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 GapWidth
 		{
 			get
@@ -530,10 +530,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Index
 		{
 			get
@@ -545,10 +545,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Overlap
 		{
 			get
@@ -565,10 +565,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.TickLabels RadarAxisLabels
 		{
 			get
@@ -581,10 +581,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Subtype
 		{
@@ -602,10 +602,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Type
 		{
@@ -623,10 +623,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 SecondPlotSize
 		{
 			get
@@ -647,10 +647,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject SeriesCollection(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -660,10 +660,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject SeriesCollection()
 		{
 			object[] paramsArray = null;

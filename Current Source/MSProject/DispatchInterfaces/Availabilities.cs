@@ -12,9 +12,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Availabilities 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Availabilities : COMObject ,IEnumerable<NetOffice.MSProjectApi.Availability>
 	{
@@ -76,11 +76,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Availability this[object index]
 		{
@@ -94,10 +94,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Resource Parent
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -145,12 +145,12 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="availableFrom">object AvailableFrom</param>
 		/// <param name="availableTo">object AvailableTo</param>
 		/// <param name="availableUnit">Double AvailableUnit</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Availability Add(object availableFrom, object availableTo, Double availableUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(availableFrom, availableTo, availableUnit);
@@ -161,43 +161,33 @@ namespace NetOffice.MSProjectApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.MSProjectApi.Availability> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute MSProject, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-        public IEnumerator<NetOffice.MSProjectApi.Availability> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.MSProjectApi.Availability item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.MSProjectApi.Availability> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute MSProject, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute MSProject, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
+       public IEnumerator<NetOffice.MSProjectApi.Availability> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.MSProjectApi.Availability item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

@@ -10,11 +10,11 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 14)]
+	[SupportByVersionAttribute("Outlook", 14)]
 	[ComImport, Guid("00063104-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface AccountSelectorEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64627)]
 		void SelectedAccountChange([In, MarshalAs(UnmanagedType.IDispatch)] object selectedAccount);
 	}
@@ -64,8 +64,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.Account newSelectedAccount = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, selectedAccount) as NetOffice.OutlookApi.Account;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelectedAccount;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SelectedAccountChange", ref paramsArray);
 		}
 
 		#endregion

@@ -11,9 +11,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Hyperlink 
-	/// SupportByLibrary Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Hyperlink : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string SubAddress
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SubAddress", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,17 +95,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Address
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -115,17 +115,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string EmailSubject
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EmailSubject", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -135,17 +135,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string ScreenTip
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScreenTip", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -155,17 +155,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string TextToDisplay
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextToDisplay", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -179,9 +179,9 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void AddToFavorites()
 		{
 			object[] paramsArray = null;
@@ -189,81 +189,81 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		/// <param name="extraInfo">object ExtraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
 			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
-		public void Follow(bool newWindow)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void Follow(object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow);
 			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
-		public void Follow(bool newWindow, bool addHistory)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void Follow(object newWindow, object addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory);
 			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		/// <param name="extraInfo">object ExtraInfo</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void Follow(object newWindow, object addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo);
 			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		/// <param name="extraInfo">object ExtraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void Follow(object newWindow, object addHistory, object extraInfo, object method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method);
 			Invoker.Method(this, "Follow", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="editNow">bool EditNow</param>
 		/// <param name="overwrite">bool Overwrite</param>
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void CreateNewDocument(string fileName, bool editNow, bool overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, editNow, overwrite);
@@ -271,16 +271,16 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
 			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLSubmitData 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLSubmitData : COMObject
+	public class IHTMLSubmitData : IHTMLFormElement3
 	{
 		#pragma warning disable
 		#region Type Information
@@ -79,22 +79,22 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="value">optional string value = </param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void appendNameValuePair(string name, string value)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void appendNameValuePair(object name, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
 			Invoker.Method(this, "appendNameValuePair", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void appendNameValuePair()
 		{
 			object[] paramsArray = null;
@@ -102,34 +102,34 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void appendNameValuePair(string name)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void appendNameValuePair(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "appendNameValuePair", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="filename">optional string filename = </param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void appendNameFilePair(string name, string filename)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void appendNameFilePair(object name, object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, filename);
 			Invoker.Method(this, "appendNameFilePair", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void appendNameFilePair()
 		{
 			object[] paramsArray = null;
@@ -137,21 +137,21 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void appendNameFilePair(string name)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void appendNameFilePair(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "appendNameFilePair", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void appendItemSeparator()
 		{
 			object[] paramsArray = null;

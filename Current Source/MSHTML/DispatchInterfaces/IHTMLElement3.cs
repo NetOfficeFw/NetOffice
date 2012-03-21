@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLElement3 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLElement3 : COMObject
+	public class IHTMLElement3 : IHTMLElement2
 	{
 		#pragma warning disable
 		#region Type Information
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool isMultiLine
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool canHaveHTML
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onlayoutcomplete
 		{
 			get
@@ -133,10 +133,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onpage
 		{
 			get
@@ -161,10 +161,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool inflateBlock
 		{
 			get
@@ -181,10 +182,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onbeforedeactivate
 		{
 			get
@@ -209,17 +210,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string contentEditable
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "contentEditable", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -229,10 +230,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool isContentEditable
 		{
 			get
@@ -244,10 +245,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool hideFocus
 		{
 			get
@@ -264,10 +265,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool disabled
 		{
 			get
@@ -284,10 +285,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool isDisabled
 		{
 			get
@@ -299,10 +300,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onmove
 		{
 			get
@@ -327,10 +328,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object oncontrolselect
 		{
 			get
@@ -355,10 +356,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onresizestart
 		{
 			get
@@ -383,10 +384,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onresizeend
 		{
 			get
@@ -411,10 +412,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onmovestart
 		{
 			get
@@ -439,10 +440,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onmoveend
 		{
 			get
@@ -467,10 +468,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onmouseenter
 		{
 			get
@@ -495,10 +496,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onmouseleave
 		{
 			get
@@ -523,10 +524,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onactivate
 		{
 			get
@@ -551,10 +552,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object ondeactivate
 		{
 			get
@@ -579,10 +580,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 glyphMode
 		{
 			get
@@ -598,11 +600,11 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="mergeThis">NetOffice.MSHTMLApi.IHTMLElement mergeThis</param>
 		/// <param name="pvarFlags">optional object pvarFlags</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void mergeAttributes(NetOffice.MSHTMLApi.IHTMLElement mergeThis, object pvarFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mergeThis, pvarFlags);
@@ -610,11 +612,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="mergeThis">NetOffice.MSHTMLApi.IHTMLElement mergeThis</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void mergeAttributes(NetOffice.MSHTMLApi.IHTMLElement mergeThis)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mergeThis);
@@ -622,9 +624,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void setActive()
 		{
 			object[] paramsArray = null;
@@ -632,40 +634,40 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrEventName">string bstrEventName</param>
 		/// <param name="pvarEventObject">optional object pvarEventObject</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool FireEvent(string bstrEventName, object pvarEventObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrEventName, pvarEventObject);
 			object returnItem = Invoker.MethodReturn(this, "FireEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrEventName">string bstrEventName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool FireEvent(string bstrEventName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrEventName);
 			object returnItem = Invoker.MethodReturn(this, "FireEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool dragDrop()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "dragDrop", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

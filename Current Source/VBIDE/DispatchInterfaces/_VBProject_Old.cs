@@ -11,9 +11,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBProject_Old 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _VBProject_Old : _ProjectTemplate
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public string HelpFile
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HelpFile", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,10 +95,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public Int32 HelpContextID
 		{
 			get
@@ -115,17 +115,17 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public string Description
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -135,10 +135,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Enums.vbext_VBAMode Mode
 		{
 			get
@@ -150,10 +150,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.References References
 		{
 			get
@@ -166,17 +166,17 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -186,10 +186,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -202,10 +202,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBProjects Collection
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Enums.vbext_ProjectProtection Protection
 		{
 			get
@@ -233,10 +233,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public bool Saved
 		{
 			get
@@ -248,10 +248,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBComponents VBComponents
 		{
 			get

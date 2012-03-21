@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface RTD 
-	/// SupportByLibrary Excel, 10,11,12,14
+	/// SupportByVersion Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RTD : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public Int32 ThrottleInterval
 		{
 			get
@@ -99,9 +99,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public void RefreshData()
 		{
 			object[] paramsArray = null;
@@ -109,9 +109,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public void RestartServers()
 		{
 			object[] paramsArray = null;

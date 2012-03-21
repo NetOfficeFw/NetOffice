@@ -10,123 +10,123 @@ namespace NetOffice.OWC10Api
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[ComImport, Guid("F5B39A87-1480-11D3-8549-00C04FAC67D7"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface IPivotControlEvents
 	{
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6003)]
 		void SelectionChange();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6004)]
 		void ViewChange([In] object reason);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6007)]
 		void DataChange([In] object reason);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6021)]
 		void PivotTableChange([In] object reason);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6043)]
 		void BeforeQuery();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6044)]
 		void Query();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6029)]
 		void OnConnect();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6030)]
 		void OnDisconnect();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6034)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6032)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6033)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6035)]
 		void MouseWheel([In] object page, [In] object count);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6005)]
 		void Click();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6006)]
 		void DblClick();
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1000)]
 		void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1001)]
 		void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
 		void CommandTipText([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
 		void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1004)]
 		void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In] object succeeded);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
 		void KeyDown([In] object keyCode, [In] object shift);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1008)]
 		void KeyUp([In] object keyCode, [In] object shift);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1010)]
 		void KeyPress([In] object keyAscii);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1006)]
 		void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1005)]
 		void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1007)]
 		void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1011)]
 		void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6045)]
 		void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object activeObject, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object arrowMode, [In, MarshalAs(UnmanagedType.IDispatch)] object caretPosition, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6046)]
 		void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6049)]
 		void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject);
 	}
@@ -174,8 +174,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
 		public void ViewChange([In] object reason)
@@ -190,8 +189,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.Enums.PivotViewReasonEnum newReason = (NetOffice.OWC10Api.Enums.PivotViewReasonEnum)reason;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
 		}
 
 		public void DataChange([In] object reason)
@@ -206,8 +204,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.Enums.PivotDataReasonEnum newReason = (NetOffice.OWC10Api.Enums.PivotDataReasonEnum)reason;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DataChange", ref paramsArray);
 		}
 
 		public void PivotTableChange([In] object reason)
@@ -222,8 +219,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.Enums.PivotTableReasonEnum newReason = (NetOffice.OWC10Api.Enums.PivotTableReasonEnum)reason;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PivotTableChange", ref paramsArray);
 		}
 
 		public void BeforeQuery()
@@ -236,8 +232,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeQuery", ref paramsArray);
 		}
 
 		public void Query()
@@ -250,8 +245,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Query", ref paramsArray);
 		}
 
 		public void OnConnect()
@@ -264,8 +258,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OnConnect", ref paramsArray);
 		}
 
 		public void OnDisconnect()
@@ -278,8 +271,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OnDisconnect", ref paramsArray);
 		}
 
 		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
@@ -300,8 +292,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 		}
 
 		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
@@ -322,8 +313,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 		}
 
 		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
@@ -344,8 +334,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 		}
 
 		public void MouseWheel([In] object page, [In] object count)
@@ -362,8 +351,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseWheel", ref paramsArray);
 		}
 
 		public void Click()
@@ -376,8 +364,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void DblClick()
@@ -390,8 +377,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 		}
 
 		public void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
@@ -408,8 +394,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
 		}
 
 		public void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
@@ -426,8 +411,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
 		}
 
 		public void CommandTipText([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption)
@@ -444,8 +428,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCaption;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommandTipText", ref paramsArray);
 		}
 
 		public void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
@@ -462,8 +445,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
 		}
 
 		public void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In] object succeeded)
@@ -480,8 +462,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newSucceeded;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
 		}
 
 		public void KeyDown([In] object keyCode, [In] object shift)
@@ -498,8 +479,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 		}
 
 		public void KeyUp([In] object keyCode, [In] object shift)
@@ -516,8 +496,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 		}
 
 		public void KeyPress([In] object keyAscii)
@@ -532,8 +511,7 @@ namespace NetOffice.OWC10Api
 			Int32 newKeyAscii = (Int32)keyAscii;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newKeyAscii;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 		}
 
 		public void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
@@ -552,8 +530,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			paramsArray[2] = newCancel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeKeyDown", ref paramsArray);
 		}
 
 		public void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
@@ -572,8 +549,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			paramsArray[2] = newCancel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeKeyUp", ref paramsArray);
 		}
 
 		public void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
@@ -590,8 +566,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray[1] = newCancel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeKeyPress", ref paramsArray);
 		}
 
 		public void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
@@ -612,8 +587,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[1] = newy;
 			paramsArray[2] = newMenu;
 			paramsArray[3] = newCancel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeContextMenu", ref paramsArray);
 		}
 
 		public void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object activeObject, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object arrowMode, [In, MarshalAs(UnmanagedType.IDispatch)] object caretPosition, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription)
@@ -640,8 +614,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[4] = newCaretPosition;
 			paramsArray[5] = newCancel;
 			paramsArray[6] = newErrorDescription;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("StartEdit", ref paramsArray);
 		}
 
 		public void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription)
@@ -662,8 +635,7 @@ namespace NetOffice.OWC10Api
 			paramsArray[1] = newFinalValue;
 			paramsArray[2] = newCancel;
 			paramsArray[3] = newErrorDescription;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("EndEdit", ref paramsArray);
 		}
 
 		public void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject)
@@ -680,8 +652,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newScreenTipText;
 			paramsArray[1] = newSourceObject;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
 		}
 
 		#endregion

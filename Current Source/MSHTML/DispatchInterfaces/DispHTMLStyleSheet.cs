@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface DispHTMLStyleSheet 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DispHTMLStyleSheet : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string title
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "title", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,10 +95,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheet parentStyleSheet
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLElement owningElement
 		{
 			get
@@ -127,10 +127,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool disabled
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool readOnly
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheetsCollection imports
 		{
 			get
@@ -178,17 +178,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string href
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "href", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -198,47 +198,47 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string type
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "type", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string id
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "id", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string media
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "media", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -248,17 +248,17 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string cssText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "cssText", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -268,10 +268,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheetRulesCollection rules
 		{
 			get
@@ -284,10 +284,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection pages
 		{
 			get
@@ -304,64 +304,64 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 addImport(string bstrUrl, Int32 lIndex)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 addImport(string bstrUrl, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addImport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 addImport(string bstrUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl);
 			object returnItem = Invoker.MethodReturn(this, "addImport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 addRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 addRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 addRule(string bstrSelector, string bstrStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle);
 			object returnItem = Invoker.MethodReturn(this, "addRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void removeImport(Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
@@ -369,10 +369,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void removeRule(Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
@@ -380,31 +380,31 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 addPageRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 addPageRule(string bstrSelector, string bstrStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

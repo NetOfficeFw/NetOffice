@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 10, 11, 12, 14
+	 /// SupportByVersion Access 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 10,11,12,14)]
+	[SupportByVersionAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcPrintColor
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acPRCMMonochrome = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acPRCMColor = 2
 	}
 }

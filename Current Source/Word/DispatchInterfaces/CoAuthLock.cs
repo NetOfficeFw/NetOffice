@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface CoAuthLock 
-	/// SupportByLibrary Word, 14
+	/// SupportByVersion Word, 14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CoAuthLock : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdLockType Type
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.CoAuthor Owner
 		{
 			get
@@ -153,10 +153,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
@@ -169,10 +169,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public bool HeaderFooter
 		{
 			get
@@ -188,9 +188,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public void Unlock()
 		{
 			object[] paramsArray = null;

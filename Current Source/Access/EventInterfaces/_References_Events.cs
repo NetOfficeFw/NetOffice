@@ -10,15 +10,15 @@ namespace NetOffice.AccessApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 	[ComImport, Guid("F163F201-ADA2-11CF-89A9-00A0C9054129"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _References_Events
 	{
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-		[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}
@@ -68,8 +68,7 @@ namespace NetOffice.AccessApi
 			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
 		}
 
 		public void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
@@ -84,8 +83,7 @@ namespace NetOffice.AccessApi
 			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);
 		}
 
 		#endregion

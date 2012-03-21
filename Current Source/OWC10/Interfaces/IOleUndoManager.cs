@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IOleUndoManager 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOleUndoManager : COMObject
 	{
@@ -78,47 +78,47 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Open(NetOffice.OWC10Api.IOleParentUndoUnit pPUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPUU);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		/// <param name="fCommit">Int32 fCommit</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Close(NetOffice.OWC10Api.IOleParentUndoUnit pPUU, Int32 fCommit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPUU, fCommit);
 			object returnItem = Invoker.MethodReturn(this, "Close", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Add(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pdwState">Int32 pdwState</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetOpenParentState(out Int32 pdwState)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -126,50 +126,50 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwState);
 			object returnItem = Invoker.MethodReturn(this, "GetOpenParentState", paramsArray);
 			pdwState = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 DiscardFrom(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "DiscardFrom", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 UndoTo(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "UndoTo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 RedoTo(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
 			object returnItem = Invoker.MethodReturn(this, "RedoTo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 EnumUndoable(out NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -177,14 +177,14 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumUndoable", paramsArray);
 			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 EnumRedoable(out NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -192,14 +192,14 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumRedoable", paramsArray);
 			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetLastUndoDescription(out string pbstr)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -207,14 +207,14 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetLastUndoDescription", paramsArray);
 			pbstr = (string)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetLastRedoDescription(out string pbstr)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -222,19 +222,19 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetLastRedoDescription", paramsArray);
 			pbstr = (string)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="fEnable">Int32 fEnable</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Enable(Int32 fEnable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fEnable);
 			object returnItem = Invoker.MethodReturn(this, "Enable", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

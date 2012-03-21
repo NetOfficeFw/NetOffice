@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface GroupLevel 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupLevel : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscGroupOnEnum GroupOn
 		{
 			get
@@ -95,10 +95,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Double GroupInterval
 		{
 			get
@@ -115,10 +115,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool GroupHeader
 		{
 			get
@@ -135,10 +135,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool GroupFooter
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool CaptionSection
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool RecordNavigationSection
 		{
 			get
@@ -195,10 +195,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 DataPageSize
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool ExpandedByDefault
 		{
 			get
@@ -235,17 +235,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string GroupFilterControl
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupFilterControl", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -255,17 +255,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string DefaultSort
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultSort", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -275,17 +275,18 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string RecordSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordSource", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -295,10 +296,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CaptionElementId
 		{
@@ -306,7 +307,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CaptionElementId", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -316,10 +317,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string HeaderElementId
 		{
@@ -327,7 +328,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeaderElementId", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -337,10 +338,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string FooterElementId
 		{
@@ -348,7 +349,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FooterElementId", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -358,10 +359,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string RecordNavigationElementId
 		{
@@ -369,7 +370,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordNavigationElementId", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -379,10 +380,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PageField GroupedOnField
 		{
 			get
@@ -395,17 +397,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string GroupFilterField
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupFilterField", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -415,10 +417,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SGWindow
 		{
 			get
@@ -435,10 +438,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public UIntPtr SGMessage
 		{
 			get
@@ -455,10 +459,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool AllowEdits
 		{
 			get
@@ -475,10 +479,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool AllowAdditions
 		{
 			get
@@ -495,10 +499,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool AllowDeletions
 		{
 			get
@@ -515,10 +519,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool RecordSelector
 		{
 			get
@@ -535,17 +539,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string AlternateRowColor
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AlternateRowColor", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -555,17 +559,18 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
@@ -574,11 +579,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="grfFlags">Int32 grfFlags</param>
 		/// <param name="vfSet">bool vfSet</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void SetDesignerFlags(Int32 grfFlags, bool vfSet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(grfFlags, vfSet);

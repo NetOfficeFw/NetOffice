@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface IRtdServer 
-	/// SupportByLibrary Excel, 10,11,12,14
+	/// SupportByVersion Excel, 10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IRtdServer : COMObject
 	{
@@ -79,24 +79,24 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="callbackObject">NetOffice.ExcelApi.IRTDUpdateEvent CallbackObject</param>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public Int32 ServerStart(NetOffice.ExcelApi.IRTDUpdateEvent callbackObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(callbackObject);
 			object returnItem = Invoker.MethodReturn(this, "ServerStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="topicID">Int32 TopicID</param>
 		/// <param name="strings">object[] Strings</param>
 		/// <param name="getNewValues">bool GetNewValues</param>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public object ConnectData(Int32 topicID, object[] strings, bool getNewValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topicID, (object)strings, getNewValues);
@@ -113,10 +113,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="topicCount">Int32 TopicCount</param>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public object[] RefreshData(Int32 topicCount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topicCount);
@@ -133,10 +133,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="topicID">Int32 TopicID</param>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public void DisconnectData(Int32 topicID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topicID);
@@ -144,20 +144,20 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public Int32 Heartbeat()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Heartbeat", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public void ServerTerminate()
 		{
 			object[] paramsArray = null;

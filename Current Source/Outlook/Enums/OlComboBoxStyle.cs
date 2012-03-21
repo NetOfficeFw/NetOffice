@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14
+	 /// SupportByVersion Outlook 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlComboBoxStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olComboBoxStyleCombo = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olComboBoxStyleList = 2
 	}
 }

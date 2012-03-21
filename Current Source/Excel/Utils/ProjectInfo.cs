@@ -47,7 +47,7 @@ namespace ExcelApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

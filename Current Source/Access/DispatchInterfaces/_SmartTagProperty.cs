@@ -11,9 +11,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _SmartTagProperty 
-	/// SupportByLibrary Access, 11,12,14
+	/// SupportByVersion Access, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Access", 11,12,14)]
+	[SupportByVersionAttribute("Access", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SmartTagProperty : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,17 +95,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14)]
 		public string Value
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -119,9 +119,9 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -129,16 +129,16 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
 			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

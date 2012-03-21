@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface LegendEntry 
-	/// SupportByLibrary Word, 14
+	/// SupportByVersion Word, 14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LegendEntry : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartFont Font
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Index
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.LegendKey LegendKey
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object AutoScaleFont
 		{
@@ -167,10 +167,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Double Left
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Double Top
 		{
 			get
@@ -197,10 +197,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Double Width
 		{
 			get
@@ -212,10 +212,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Double Height
 		{
 			get
@@ -227,10 +227,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
@@ -243,10 +243,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -278,9 +278,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -297,9 +297,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;

@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PictureEffect 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PictureEffect : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoPictureEffectType Type
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 Position
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public NetOffice.OfficeApi.EffectParameters EffectParameters
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -150,9 +150,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

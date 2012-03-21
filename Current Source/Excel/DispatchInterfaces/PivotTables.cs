@@ -12,9 +12,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface PivotTables 
-	/// SupportByLibrary Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotTables : COMObject ,IEnumerable<NetOffice.ExcelApi.PivotTable>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.PivotTable this[object index]
 		{
@@ -159,13 +159,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="readData">optional object ReadData</param>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable Add(NetOffice.ExcelApi.PivotCache pivotCache, object tableDestination, object tableName, object readData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pivotCache, tableDestination, tableName, readData);
@@ -175,14 +175,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="readData">optional object ReadData</param>
 		/// <param name="defaultVersion">optional object DefaultVersion</param>
-		[SupportByLibraryAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable Add(NetOffice.ExcelApi.PivotCache pivotCache, object tableDestination, object tableName, object readData, object defaultVersion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pivotCache, tableDestination, tableName, readData, defaultVersion);
@@ -192,12 +192,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable Add(NetOffice.ExcelApi.PivotCache pivotCache, object tableDestination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pivotCache, tableDestination);
@@ -207,13 +207,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
 		/// <param name="tableName">optional object TableName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		public NetOffice.ExcelApi.PivotTable Add(NetOffice.ExcelApi.PivotCache pivotCache, object tableDestination, object tableName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pivotCache, tableDestination, tableName);
@@ -224,43 +224,33 @@ namespace NetOffice.ExcelApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.PivotTable> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
-        public IEnumerator<NetOffice.ExcelApi.PivotTable> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.PivotTable item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.ExcelApi.PivotTable> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 9,10,11,12,14
+        /// <summary>
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+       public IEnumerator<NetOffice.ExcelApi.PivotTable> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.ExcelApi.PivotTable item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

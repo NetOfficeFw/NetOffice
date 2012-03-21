@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _MARKUP_CONTEXT_TYPE
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 CONTEXT_TYPE_None = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 CONTEXT_TYPE_Text = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 CONTEXT_TYPE_EnterScope = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 CONTEXT_TYPE_ExitScope = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 CONTEXT_TYPE_NoScope = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 MARKUP_CONTEXT_TYPE_Max = 2147483647
 	}
 }

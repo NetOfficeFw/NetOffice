@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathMatRow 
-	/// SupportByLibrary Word, 12,14
+	/// SupportByVersion Word, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathMatRow : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMathArgs Args
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public Int32 RowIndex
 		{
 			get
@@ -157,9 +157,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

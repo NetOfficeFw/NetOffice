@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlContinuous = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4115</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlDash = -4115,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlDashDot = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlDashDotDot = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4118</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlDot = -4118,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4119</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlDouble = -4119,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlSlantDashDot = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlLineStyleNone = -4142
 	}
 }

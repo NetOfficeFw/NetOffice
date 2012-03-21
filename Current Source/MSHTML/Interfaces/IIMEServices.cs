@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IIMEServices 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IIMEServices : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppActiveIMM">NetOffice.MSHTMLApi.IActiveIMMApp ppActiveIMM</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetActiveIMM(out NetOffice.MSHTMLApi.IActiveIMMApp ppActiveIMM)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,7 +89,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppActiveIMM);
 			object returnItem = Invoker.MethodReturn(this, "GetActiveIMM", paramsArray);
 			ppActiveIMM = (NetOffice.MSHTMLApi.IActiveIMMApp)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

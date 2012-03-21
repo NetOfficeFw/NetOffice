@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MetaProperty 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MetaProperty : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public object Value
 		{
 			get
@@ -103,40 +103,40 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public string Id
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Id", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public bool IsReadOnly
 		{
 			get
@@ -148,10 +148,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public bool IsRequired
 		{
 			get
@@ -163,10 +163,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoMetaPropertyType Type
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ValidationError
 		{
@@ -189,15 +189,15 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ValidationError", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -214,9 +214,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public string Validate()
 		{
 			object[] paramsArray = null;

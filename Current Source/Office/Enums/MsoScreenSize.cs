@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14
+	 /// SupportByVersion Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoScreenSize
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize544x376 = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize640x480 = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize720x512 = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize800x600 = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1024x768 = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1152x882 = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1152x900 = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1280x1024 = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1600x1200 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1800x1440 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoScreenSize1920x1200 = 10
 	}
 }

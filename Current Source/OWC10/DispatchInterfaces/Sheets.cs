@@ -12,11 +12,11 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface Sheets 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Sheets : COMObject ,IEnumerable<object>
+	public class Sheets : COMObject ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Count
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public COMObject this[object index]
 		{
@@ -125,10 +125,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Workbook Parent
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public object Visible
 		{
 			get
@@ -173,13 +173,13 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
 		/// <param name="count">optional object Count</param>
 		/// <param name="type">optional object Type</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Add(object before, object after, object count, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count, type);
@@ -189,10 +189,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Add()
 		{
 			object[] paramsArray = null;
@@ -202,11 +202,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Add(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -216,12 +216,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Add(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -231,13 +231,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
 		/// <param name="count">optional object Count</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Add(object before, object after, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count);
@@ -247,11 +247,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -259,10 +259,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -270,11 +270,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Copy(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -282,9 +282,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -292,11 +292,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -304,10 +304,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Move()
 		{
 			object[] paramsArray = null;
@@ -315,11 +315,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Move(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -327,10 +327,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="replace">optional object Replace</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
@@ -338,10 +338,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -350,43 +350,33 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute OWC10, 1
-		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<COMObject> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute OWC10, 1
+        /// <summary>
+		/// SupportByVersionAttribute OWC10, 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute OWC10, 1
+		/// </summary>
+		[SupportByVersionAttribute("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

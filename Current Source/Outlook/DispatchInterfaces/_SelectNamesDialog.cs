@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _SelectNamesDialog 
-	/// SupportByLibrary Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SelectNamesDialog : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -138,17 +138,17 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public string Caption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -158,10 +158,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Recipients Recipients
 		{
 			get
@@ -179,17 +179,17 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public string BccLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BccLabel", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -199,17 +199,17 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public string CcLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CcLabel", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -219,17 +219,17 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public string ToLabel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ToLabel", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -239,10 +239,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool AllowMultipleSelection
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool ForceResolution
 		{
 			get
@@ -279,10 +279,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool ShowOnlyInitialAddressList
 		{
 			get
@@ -299,10 +299,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlRecipientSelectors NumberOfRecipientSelectors
 		{
 			get
@@ -319,10 +319,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.AddressList InitialAddressList
 		{
 			get
@@ -344,21 +344,21 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool Display()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Display", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="defaultMode">NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void SetDefaultDisplayMode(NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultMode);

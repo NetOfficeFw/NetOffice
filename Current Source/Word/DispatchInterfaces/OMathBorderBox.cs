@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathBorderBox 
-	/// SupportByLibrary Word, 12,14
+	/// SupportByVersion Word, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathBorderBox : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.OMath E
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HideTop
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HideBot
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HideLeft
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HideRight
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool StrikeH
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool StrikeV
 		{
 			get
@@ -258,10 +258,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool StrikeBLTR
 		{
 			get
@@ -278,10 +278,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool StrikeTLBR
 		{
 			get

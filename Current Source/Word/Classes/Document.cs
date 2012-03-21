@@ -28,11 +28,11 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// CoClass Document 
-	/// SupportByLibrary Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Document : _Document, IEventBinding 
+	public class Document : _Document,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -106,13 +106,304 @@ namespace NetOffice.WordApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Word, 9,10,11,12,14
+		/// </summary>
+		private event Document_NewEventHandler _NewEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 9,10,11,12,14)]
+		public event Document_NewEventHandler NewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NewEvent += value;
+			}
+			remove
+			{
+				_NewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 9,10,11,12,14
+		/// </summary>
+		private event Document_OpenEventHandler _OpenEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 9,10,11,12,14)]
+		public event Document_OpenEventHandler OpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_OpenEvent += value;
+			}
+			remove
+			{
+				_OpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 9,10,11,12,14
+		/// </summary>
+		private event Document_CloseEventHandler _CloseEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 9,10,11,12,14)]
+		public event Document_CloseEventHandler CloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CloseEvent += value;
+			}
+			remove
+			{
+				_CloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 11,12,14
+		/// </summary>
+		private event Document_SyncEventHandler _SyncEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 11,12,14)]
+		public event Document_SyncEventHandler SyncEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SyncEvent += value;
+			}
+			remove
+			{
+				_SyncEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 11,12,14
+		/// </summary>
+		private event Document_XMLAfterInsertEventHandler _XMLAfterInsertEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 11,12,14)]
+		public event Document_XMLAfterInsertEventHandler XMLAfterInsertEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_XMLAfterInsertEvent += value;
+			}
+			remove
+			{
+				_XMLAfterInsertEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 11,12,14
+		/// </summary>
+		private event Document_XMLBeforeDeleteEventHandler _XMLBeforeDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 11 12 14
+		/// </summary>
+		[SupportByVersion("Word", 11,12,14)]
+		public event Document_XMLBeforeDeleteEventHandler XMLBeforeDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_XMLBeforeDeleteEvent += value;
+			}
+			remove
+			{
+				_XMLBeforeDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlAfterAddEventHandler _ContentControlAfterAddEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlAfterAddEventHandler ContentControlAfterAddEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlAfterAddEvent += value;
+			}
+			remove
+			{
+				_ContentControlAfterAddEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlBeforeDeleteEventHandler _ContentControlBeforeDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlBeforeDeleteEventHandler ContentControlBeforeDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlBeforeDeleteEvent += value;
+			}
+			remove
+			{
+				_ContentControlBeforeDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlOnExitEventHandler _ContentControlOnExitEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlOnExitEventHandler ContentControlOnExitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlOnExitEvent += value;
+			}
+			remove
+			{
+				_ContentControlOnExitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlOnEnterEventHandler _ContentControlOnEnterEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlOnEnterEventHandler ContentControlOnEnterEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlOnEnterEvent += value;
+			}
+			remove
+			{
+				_ContentControlOnEnterEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlBeforeStoreUpdateEventHandler _ContentControlBeforeStoreUpdateEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlBeforeStoreUpdateEventHandler ContentControlBeforeStoreUpdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlBeforeStoreUpdateEvent += value;
+			}
+			remove
+			{
+				_ContentControlBeforeStoreUpdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_ContentControlBeforeContentUpdateEventHandler _ContentControlBeforeContentUpdateEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_ContentControlBeforeContentUpdateEventHandler ContentControlBeforeContentUpdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContentControlBeforeContentUpdateEvent += value;
+			}
+			remove
+			{
+				_ContentControlBeforeContentUpdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Word, 12,14
+		/// </summary>
+		private event Document_BuildingBlockInsertEventHandler _BuildingBlockInsertEvent;
+
+		/// <summary>
+		/// SupportByVersion Word 12 14
+		/// </summary>
+		[SupportByVersion("Word", 12,14)]
+		public event Document_BuildingBlockInsertEventHandler BuildingBlockInsertEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BuildingBlockInsertEvent += value;
+			}
+			remove
+			{
+				_BuildingBlockInsertEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -136,301 +427,7 @@ namespace NetOffice.WordApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Word, 9,10,11,12,14
-		/// </summary>
-		private event Document_NewEventHandler _NewEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public event Document_NewEventHandler NewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NewEvent += value;
-			}
-			remove
-			{
-				_NewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 9,10,11,12,14
-		/// </summary>
-		private event Document_OpenEventHandler _OpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public event Document_OpenEventHandler OpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OpenEvent += value;
-			}
-			remove
-			{
-				_OpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 9,10,11,12,14
-		/// </summary>
-		private event Document_CloseEventHandler _CloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 9,10,11,12,14)]
-		public event Document_CloseEventHandler CloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CloseEvent += value;
-			}
-			remove
-			{
-				_CloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 11,12,14
-		/// </summary>
-		private event Document_SyncEventHandler _SyncEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
-		public event Document_SyncEventHandler SyncEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SyncEvent += value;
-			}
-			remove
-			{
-				_SyncEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 11,12,14
-		/// </summary>
-		private event Document_XMLAfterInsertEventHandler _XMLAfterInsertEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
-		public event Document_XMLAfterInsertEventHandler XMLAfterInsertEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_XMLAfterInsertEvent += value;
-			}
-			remove
-			{
-				_XMLAfterInsertEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 11,12,14
-		/// </summary>
-		private event Document_XMLBeforeDeleteEventHandler _XMLBeforeDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 11 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 11,12,14)]
-		public event Document_XMLBeforeDeleteEventHandler XMLBeforeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_XMLBeforeDeleteEvent += value;
-			}
-			remove
-			{
-				_XMLBeforeDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlAfterAddEventHandler _ContentControlAfterAddEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlAfterAddEventHandler ContentControlAfterAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlAfterAddEvent += value;
-			}
-			remove
-			{
-				_ContentControlAfterAddEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlBeforeDeleteEventHandler _ContentControlBeforeDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlBeforeDeleteEventHandler ContentControlBeforeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlBeforeDeleteEvent += value;
-			}
-			remove
-			{
-				_ContentControlBeforeDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlOnExitEventHandler _ContentControlOnExitEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlOnExitEventHandler ContentControlOnExitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlOnExitEvent += value;
-			}
-			remove
-			{
-				_ContentControlOnExitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlOnEnterEventHandler _ContentControlOnEnterEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlOnEnterEventHandler ContentControlOnEnterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlOnEnterEvent += value;
-			}
-			remove
-			{
-				_ContentControlOnEnterEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlBeforeStoreUpdateEventHandler _ContentControlBeforeStoreUpdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlBeforeStoreUpdateEventHandler ContentControlBeforeStoreUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlBeforeStoreUpdateEvent += value;
-			}
-			remove
-			{
-				_ContentControlBeforeStoreUpdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_ContentControlBeforeContentUpdateEventHandler _ContentControlBeforeContentUpdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_ContentControlBeforeContentUpdateEventHandler ContentControlBeforeContentUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContentControlBeforeContentUpdateEvent += value;
-			}
-			remove
-			{
-				_ContentControlBeforeContentUpdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Word, 12,14
-		/// </summary>
-		private event Document_BuildingBlockInsertEventHandler _BuildingBlockInsertEvent;
-
-		/// <summary>
-		/// SupportByLibrary Word 12 14
-		/// </summary>
-		[SupportByLibrary("Word", 12,14)]
-		public event Document_BuildingBlockInsertEventHandler BuildingBlockInsertEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BuildingBlockInsertEvent += value;
-			}
-			remove
-			{
-				_BuildingBlockInsertEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -441,25 +438,22 @@ namespace NetOffice.WordApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -482,8 +476,59 @@ namespace NetOffice.WordApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _documentEvents_SinkHelper)
 			{
@@ -500,6 +545,7 @@ namespace NetOffice.WordApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

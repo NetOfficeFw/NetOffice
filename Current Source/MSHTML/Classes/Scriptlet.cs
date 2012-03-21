@@ -25,11 +25,11 @@ namespace NetOffice.MSHTMLApi
 
 	///<summary>
 	/// CoClass Scriptlet 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Scriptlet : IWebBridge, IEventBinding 
+	public class Scriptlet : IWebBridge,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -67,7 +67,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -102,13 +102,238 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onscriptleteventEventHandler _onscriptleteventEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onscriptleteventEventHandler onscriptleteventEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onscriptleteventEvent += value;
+			}
+			remove
+			{
+				_onscriptleteventEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onreadystatechangeEventHandler _onreadystatechangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onreadystatechangeEventHandler onreadystatechangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onreadystatechangeEvent += value;
+			}
+			remove
+			{
+				_onreadystatechangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onclickEventHandler _onclickEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onclickEventHandler onclickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onclickEvent += value;
+			}
+			remove
+			{
+				_onclickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_ondblclickEventHandler _ondblclickEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_ondblclickEventHandler ondblclickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondblclickEvent += value;
+			}
+			remove
+			{
+				_ondblclickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onkeydownEventHandler _onkeydownEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onkeydownEventHandler onkeydownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeydownEvent += value;
+			}
+			remove
+			{
+				_onkeydownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onkeyupEventHandler _onkeyupEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onkeyupEventHandler onkeyupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeyupEvent += value;
+			}
+			remove
+			{
+				_onkeyupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onkeypressEventHandler _onkeypressEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onkeypressEventHandler onkeypressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeypressEvent += value;
+			}
+			remove
+			{
+				_onkeypressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onmousedownEventHandler _onmousedownEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onmousedownEventHandler onmousedownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmousedownEvent += value;
+			}
+			remove
+			{
+				_onmousedownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onmousemoveEventHandler _onmousemoveEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onmousemoveEventHandler onmousemoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmousemoveEvent += value;
+			}
+			remove
+			{
+				_onmousemoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event Scriptlet_onmouseupEventHandler _onmouseupEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event Scriptlet_onmouseupEventHandler onmouseupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmouseupEvent += value;
+			}
+			remove
+			{
+				_onmouseupEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -126,235 +351,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onscriptleteventEventHandler _onscriptleteventEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onscriptleteventEventHandler onscriptleteventEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onscriptleteventEvent += value;
-			}
-			remove
-			{
-				_onscriptleteventEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onreadystatechangeEventHandler _onreadystatechangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onreadystatechangeEventHandler onreadystatechangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onreadystatechangeEvent += value;
-			}
-			remove
-			{
-				_onreadystatechangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onclickEventHandler _onclickEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onclickEventHandler onclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onclickEvent += value;
-			}
-			remove
-			{
-				_onclickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_ondblclickEventHandler _ondblclickEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_ondblclickEventHandler ondblclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondblclickEvent += value;
-			}
-			remove
-			{
-				_ondblclickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onkeydownEventHandler _onkeydownEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onkeydownEventHandler onkeydownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeydownEvent += value;
-			}
-			remove
-			{
-				_onkeydownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onkeyupEventHandler _onkeyupEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onkeyupEventHandler onkeyupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeyupEvent += value;
-			}
-			remove
-			{
-				_onkeyupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onkeypressEventHandler _onkeypressEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onkeypressEventHandler onkeypressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeypressEvent += value;
-			}
-			remove
-			{
-				_onkeypressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onmousedownEventHandler _onmousedownEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onmousedownEventHandler onmousedownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousedownEvent += value;
-			}
-			remove
-			{
-				_onmousedownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onmousemoveEventHandler _onmousemoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onmousemoveEventHandler onmousemoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousemoveEvent += value;
-			}
-			remove
-			{
-				_onmousemoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event Scriptlet_onmouseupEventHandler _onmouseupEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event Scriptlet_onmouseupEventHandler onmouseupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseupEvent += value;
-			}
-			remove
-			{
-				_onmouseupEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -365,25 +362,22 @@ namespace NetOffice.MSHTMLApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -406,8 +400,59 @@ namespace NetOffice.MSHTMLApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _dWebBridgeEvents_SinkHelper)
 			{
@@ -419,6 +464,7 @@ namespace NetOffice.MSHTMLApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

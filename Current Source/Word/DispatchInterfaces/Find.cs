@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Find 
-	/// SupportByLibrary Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Find : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Forward
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Font Font
 		{
 			get
@@ -163,10 +163,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Found
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchAllWordForms
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchCase
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchWildcards
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchSoundsLike
 		{
 			get
@@ -258,10 +258,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchWholeWord
 		{
 			get
@@ -278,10 +278,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchFuzzy
 		{
 			get
@@ -298,10 +298,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchByte
 		{
 			get
@@ -318,10 +318,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.ParagraphFormat ParagraphFormat
 		{
 			get
@@ -339,10 +339,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public object Style
 		{
 			get
@@ -367,17 +367,17 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public string Text
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -387,10 +387,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
 		{
 			get
@@ -407,10 +407,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Highlight
 		{
 			get
@@ -427,10 +427,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Replacement Replacement
 		{
 			get
@@ -443,10 +443,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Frame Frame
 		{
 			get
@@ -459,10 +459,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdFindWrap Wrap
 		{
 			get
@@ -479,10 +479,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Format
 		{
 			get
@@ -499,10 +499,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
 		{
 			get
@@ -519,10 +519,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDOther
 		{
 			get
@@ -539,10 +539,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool CorrectHangulEndings
 		{
 			get
@@ -559,10 +559,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 NoProofing
 		{
 			get
@@ -579,10 +579,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchKashida
 		{
 			get
@@ -599,10 +599,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchDiacritics
 		{
 			get
@@ -619,10 +619,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchAlefHamza
 		{
 			get
@@ -639,10 +639,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool MatchControl
 		{
 			get
@@ -659,10 +659,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool MatchPhrase
 		{
 			get
@@ -679,10 +679,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool MatchPrefix
 		{
 			get
@@ -699,10 +699,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool MatchSuffix
 		{
 			get
@@ -719,10 +719,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool IgnoreSpace
 		{
 			get
@@ -739,10 +739,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool IgnorePunct
 		{
 			get
@@ -759,10 +759,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HanjaPhoneticHangul
 		{
 			get
@@ -783,7 +783,7 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -797,74 +797,74 @@ namespace NetOffice.WordApi
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		/// <param name="replace">optional object Replace</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -872,16 +872,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -890,16 +890,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -909,16 +909,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -929,16 +929,16 @@ namespace NetOffice.WordApi
 		/// <param name="forward">optional object Forward</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -950,16 +950,16 @@ namespace NetOffice.WordApi
 		/// <param name="wrap">optional object Wrap</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -972,16 +972,16 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -995,18 +995,18 @@ namespace NetOffice.WordApi
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteOld", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void ClearFormatting()
 		{
 			object[] paramsArray = null;
@@ -1014,9 +1014,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void SetAllFuzzyOptions()
 		{
 			object[] paramsArray = null;
@@ -1024,9 +1024,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void ClearAllFuzzyOptions()
 		{
 			object[] paramsArray = null;
@@ -1034,7 +1034,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1051,86 +1051,86 @@ namespace NetOffice.WordApi
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		/// <param name="matchControl">optional object MatchControl</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1138,16 +1138,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1156,16 +1156,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1175,16 +1175,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1195,16 +1195,16 @@ namespace NetOffice.WordApi
 		/// <param name="forward">optional object Forward</param>
 		/// <param name="wrap">optional object Wrap</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1216,16 +1216,16 @@ namespace NetOffice.WordApi
 		/// <param name="wrap">optional object Wrap</param>
 		/// <param name="format">optional object Format</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1238,16 +1238,16 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1261,16 +1261,16 @@ namespace NetOffice.WordApi
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		/// <param name="replace">optional object Replace</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1285,16 +1285,16 @@ namespace NetOffice.WordApi
 		/// <param name="replace">optional object Replace</param>
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1310,16 +1310,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1336,16 +1336,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1367,74 +1367,74 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreSpace">optional object IgnoreSpace</param>
 		/// <param name="ignorePunct">optional object IgnorePunct</param>
 		/// <param name="hanjaPhoneticHangul">optional object HanjaPhoneticHangul</param>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct, object hanjaPhoneticHangul)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct, hanjaPhoneticHangul);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
 		/// <param name="textColor">optional object TextColor</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
 		/// <param name="textColor">optional object TextColor</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1442,16 +1442,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1460,16 +1460,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		/// <param name="matchPrefix">optional object MatchPrefix</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1479,16 +1479,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchPrefix">optional object MatchPrefix</param>
 		/// <param name="matchSuffix">optional object MatchSuffix</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1499,16 +1499,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSuffix">optional object MatchSuffix</param>
 		/// <param name="matchPhrase">optional object MatchPhrase</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1520,16 +1520,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchPhrase">optional object MatchPhrase</param>
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1542,16 +1542,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1565,16 +1565,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1589,16 +1589,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		/// <param name="matchByte">optional object MatchByte</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1614,16 +1614,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchByte">optional object MatchByte</param>
 		/// <param name="matchFuzzy">optional object MatchFuzzy</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1640,16 +1640,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchFuzzy">optional object MatchFuzzy</param>
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1667,16 +1667,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1695,16 +1695,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1724,16 +1724,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		/// <param name="matchControl">optional object MatchControl</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1754,16 +1754,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchControl">optional object MatchControl</param>
 		/// <param name="ignoreSpace">optional object IgnoreSpace</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">object FindText</param>
 		/// <param name="highlightColor">optional object HighlightColor</param>
@@ -1785,27 +1785,27 @@ namespace NetOffice.WordApi
 		/// <param name="ignoreSpace">optional object IgnoreSpace</param>
 		/// <param name="ignorePunct">optional object IgnorePunct</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct);
 			object returnItem = Invoker.MethodReturn(this, "HitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool ClearHitHighlight()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ClearHitHighlight", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1827,86 +1827,86 @@ namespace NetOffice.WordApi
 		/// <param name="matchPhrase">optional object MatchPhrase</param>
 		/// <param name="ignoreSpace">optional object IgnoreSpace</param>
 		/// <param name="ignorePunct">optional object IgnorePunct</param>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace, object ignorePunct)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace, ignorePunct);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchWholeWord">optional object MatchWholeWord</param>
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1914,16 +1914,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchWildcards">optional object MatchWildcards</param>
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1932,16 +1932,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSoundsLike">optional object MatchSoundsLike</param>
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1951,16 +1951,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAllWordForms">optional object MatchAllWordForms</param>
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1971,16 +1971,16 @@ namespace NetOffice.WordApi
 		/// <param name="forward">optional object Forward</param>
 		/// <param name="wrap">optional object Wrap</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -1992,16 +1992,16 @@ namespace NetOffice.WordApi
 		/// <param name="wrap">optional object Wrap</param>
 		/// <param name="format">optional object Format</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2014,16 +2014,16 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2037,16 +2037,16 @@ namespace NetOffice.WordApi
 		/// <param name="replaceWith">optional object ReplaceWith</param>
 		/// <param name="replace">optional object Replace</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2061,16 +2061,16 @@ namespace NetOffice.WordApi
 		/// <param name="replace">optional object Replace</param>
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2086,16 +2086,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchKashida">optional object MatchKashida</param>
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2112,16 +2112,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchDiacritics">optional object MatchDiacritics</param>
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2139,16 +2139,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchAlefHamza">optional object MatchAlefHamza</param>
 		/// <param name="matchControl">optional object MatchControl</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2167,16 +2167,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchControl">optional object MatchControl</param>
 		/// <param name="matchPrefix">optional object MatchPrefix</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2196,16 +2196,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchPrefix">optional object MatchPrefix</param>
 		/// <param name="matchSuffix">optional object MatchSuffix</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2226,16 +2226,16 @@ namespace NetOffice.WordApi
 		/// <param name="matchSuffix">optional object MatchSuffix</param>
 		/// <param name="matchPhrase">optional object MatchPhrase</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="findText">optional object FindText</param>
 		/// <param name="matchCase">optional object MatchCase</param>
@@ -2257,12 +2257,12 @@ namespace NetOffice.WordApi
 		/// <param name="matchPhrase">optional object MatchPhrase</param>
 		/// <param name="ignoreSpace">optional object IgnoreSpace</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace);
 			object returnItem = Invoker.MethodReturn(this, "Execute2007", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

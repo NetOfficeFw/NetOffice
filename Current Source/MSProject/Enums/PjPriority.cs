@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14
+	 /// SupportByVersion MSProject 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjPriority
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityDoNotLevel = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityHighest = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityVeryHigh = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityHigher = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityHigh = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityMedium = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityLow = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityLower = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityVeryLow = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjPriorityLowest = 0
 	}
 }

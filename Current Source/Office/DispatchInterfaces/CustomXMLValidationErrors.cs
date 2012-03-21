@@ -12,9 +12,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomXMLValidationErrors 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomXMLValidationErrors : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">Int32 Index</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		/// <param name="index">Int32 Index</param>
+		[SupportByVersionAttribute("Office", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CustomXMLValidationError this[Int32 index]
 		{
@@ -129,26 +129,26 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
 		/// <param name="clearedOnUpdate">optional bool ClearedOnUpdate = true</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText, bool clearedOnUpdate)
+		[SupportByVersionAttribute("Office", 12,14)]
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText, clearedOnUpdate);
 			Invoker.Method(this, "Add", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName);
@@ -156,14 +156,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText)
+		[SupportByVersionAttribute("Office", 12,14)]
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText);
 			Invoker.Method(this, "Add", paramsArray);
@@ -171,43 +171,33 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
-        public IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.CustomXMLValidationError item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute Office, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
+       public IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.CustomXMLValidationError item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

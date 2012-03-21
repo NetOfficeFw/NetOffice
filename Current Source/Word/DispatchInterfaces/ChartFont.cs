@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ChartFont 
-	/// SupportByLibrary Word, 14
+	/// SupportByVersion Word, 14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartFont : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Background
 		{
 			get
@@ -103,10 +103,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Bold
 		{
 			get
@@ -131,10 +131,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Color
 		{
 			get
@@ -159,10 +159,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object ColorIndex
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object FontStyle
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Italic
 		{
 			get
@@ -243,10 +243,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Name
 		{
 			get
@@ -271,10 +271,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object OutlineFont
 		{
@@ -300,10 +300,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Shadow
 		{
@@ -329,10 +329,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Size
 		{
 			get
@@ -357,10 +357,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object StrikeThrough
 		{
 			get
@@ -385,10 +385,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Subscript
 		{
 			get
@@ -413,10 +413,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Superscript
 		{
 			get
@@ -441,10 +441,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public object Underline
 		{
 			get
@@ -469,10 +469,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Application
 		{
 			get
@@ -485,10 +485,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -500,10 +500,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get

@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChAxis 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChAxis : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisCrossesEnum Crosses
 		{
 			get
@@ -95,10 +95,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Double CrossesAtValue
 		{
 			get
@@ -115,10 +115,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChAxis CrossingAxis
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChFont Font
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasAutoMajorUnit
 		{
 			get
@@ -172,10 +172,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasAutoMinorUnit
 		{
 			get
@@ -192,10 +192,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasMajorGridlines
 		{
 			get
@@ -212,10 +212,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasMinorGridlines
 		{
 			get
@@ -232,10 +232,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasTitle
 		{
 			get
@@ -252,10 +252,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChGridlines MajorGridlines
 		{
 			get
@@ -284,10 +284,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartTickMarkEnum MajorTickMarks
 		{
 			get
@@ -304,10 +304,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Double MajorUnit
 		{
 			get
@@ -324,10 +324,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChGridlines MinorGridlines
 		{
 			get
@@ -340,10 +340,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartTickMarkEnum MinorTickMarks
 		{
 			get
@@ -360,10 +360,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Double MinorUnit
 		{
 			get
@@ -380,17 +380,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -400,10 +400,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChChart Parent
 		{
 			get
@@ -416,10 +416,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisPositionEnum Position
 		{
 			get
@@ -436,10 +436,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChScaling Scaling
 		{
 			get
@@ -452,10 +452,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public bool HasTickLabels
 		{
 			get
@@ -472,10 +472,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 TickLabelSpacing
 		{
 			get
@@ -492,10 +492,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 TickMarkSpacing
 		{
 			get
@@ -512,10 +512,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChTitle Title
 		{
 			get
@@ -528,10 +528,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisTypeEnum Type
 		{
 			get
@@ -543,10 +543,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Index
 		{
 			get
@@ -558,17 +558,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string NumberFormat
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumberFormat", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -578,10 +578,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisGroupingEnum GroupingType
 		{
 			get
@@ -598,10 +598,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum TickLabelUnitType
 		{
 			get
@@ -618,10 +618,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum TickMarkUnitType
 		{
 			get
@@ -638,10 +638,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GroupingUnit
 		{
 			get
@@ -658,10 +658,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartAxisUnitTypeEnum GroupingUnitType
 		{
 			get
@@ -678,10 +678,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartGroupingTotalFunctionEnum GroupingTotalFunction
 		{
 			get
@@ -698,10 +698,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Orientation
 		{
 			get
@@ -718,10 +718,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Top
 		{
 			get
@@ -738,10 +738,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Left
 		{
 			get
@@ -758,10 +758,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Bottom
 		{
 			get
@@ -773,10 +773,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Right
 		{
 			get
@@ -788,10 +788,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChCategoryLabels CategoryLabels
 		{
 			get
@@ -804,10 +804,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartSelectionsEnum ObjectType
 		{
 			get
@@ -823,9 +823,9 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -833,10 +833,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.Coordinate ValueToPoint(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);

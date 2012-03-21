@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 10, 11, 12, 14
+	 /// SupportByVersion Outlook 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlOfficeDocItemsType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olExcelWorkSheetItem = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olWordDocumentItem = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olPowerPointShowItem = 10
 	}
 }

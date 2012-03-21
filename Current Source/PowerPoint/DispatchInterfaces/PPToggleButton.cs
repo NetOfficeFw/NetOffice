@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPToggleButton 
-	/// SupportByLibrary PowerPoint, 9
+	/// SupportByVersion PowerPoint, 9
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPToggleButton : PPControl
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState State
 		{
 			get
@@ -95,10 +95,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get
@@ -115,17 +115,17 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public string OnClick
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnClick", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -139,9 +139,9 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public void Click()
 		{
 			object[] paramsArray = null;

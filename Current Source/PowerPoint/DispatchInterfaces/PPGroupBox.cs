@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPGroupBox 
-	/// SupportByLibrary PowerPoint, 9
+	/// SupportByVersion PowerPoint, 9
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPGroupBox : PPControl
 	{

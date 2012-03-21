@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 10, 11, 12, 14
+	 /// SupportByVersion Office 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoDiagramNodeType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoDiagramNode = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoDiagramAssistant = 2
 	}
 }

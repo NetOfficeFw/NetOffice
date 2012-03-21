@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Sync 
-	/// SupportByLibrary Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Sync : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
 		{
 			get
@@ -90,25 +90,25 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public string WorkspaceLastChangedBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorkspaceLastChangedBy", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public object LastSyncTime
 		{
 			get
@@ -128,10 +128,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
 		{
 			get
@@ -143,10 +143,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void GetUpdate()
 		{
 			object[] paramsArray = null;
@@ -173,9 +173,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void PutUpdate()
 		{
 			object[] paramsArray = null;
@@ -183,10 +183,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
 		/// <param name="syncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType SyncVersionType</param>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncVersionType);
@@ -194,10 +194,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
 		/// <param name="syncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType SyncConflictResolution</param>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncConflictResolution);
@@ -205,9 +205,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void Unsuspend()
 		{
 			object[] paramsArray = null;

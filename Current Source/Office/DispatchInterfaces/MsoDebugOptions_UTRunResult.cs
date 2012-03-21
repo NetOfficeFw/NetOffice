@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MsoDebugOptions_UTRunResult 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MsoDebugOptions_UTRunResult : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public bool Passed
 		{
 			get
@@ -90,17 +90,17 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public string ErrorString
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ErrorString", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 

@@ -37,11 +37,11 @@ namespace NetOffice.OWC10Api
 
 	///<summary>
 	/// CoClass DataSourceControl 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataSourceControl : IDataSourceControl, IEventBinding 
+	public class DataSourceControl : IDataSourceControl,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -79,7 +79,7 @@ namespace NetOffice.OWC10Api
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -114,13 +114,502 @@ namespace NetOffice.OWC10Api
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_CurrentEventHandler _CurrentEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_CurrentEventHandler CurrentEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CurrentEvent += value;
+			}
+			remove
+			{
+				_CurrentEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeExpandEventHandler _BeforeExpandEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeExpandEventHandler BeforeExpandEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeExpandEvent += value;
+			}
+			remove
+			{
+				_BeforeExpandEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeCollapseEventHandler _BeforeCollapseEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeCollapseEventHandler BeforeCollapseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeCollapseEvent += value;
+			}
+			remove
+			{
+				_BeforeCollapseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeFirstPageEventHandler _BeforeFirstPageEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeFirstPageEventHandler BeforeFirstPageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeFirstPageEvent += value;
+			}
+			remove
+			{
+				_BeforeFirstPageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforePreviousPageEventHandler _BeforePreviousPageEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforePreviousPageEventHandler BeforePreviousPageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforePreviousPageEvent += value;
+			}
+			remove
+			{
+				_BeforePreviousPageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeNextPageEventHandler _BeforeNextPageEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeNextPageEventHandler BeforeNextPageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeNextPageEvent += value;
+			}
+			remove
+			{
+				_BeforeNextPageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeLastPageEventHandler _BeforeLastPageEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeLastPageEventHandler BeforeLastPageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeLastPageEvent += value;
+			}
+			remove
+			{
+				_BeforeLastPageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_DataErrorEventHandler _DataErrorEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_DataErrorEventHandler DataErrorEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DataErrorEvent += value;
+			}
+			remove
+			{
+				_DataErrorEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_DataPageCompleteEventHandler _DataPageCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_DataPageCompleteEventHandler DataPageCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DataPageCompleteEvent += value;
+			}
+			remove
+			{
+				_DataPageCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeInitialBindEventHandler _BeforeInitialBindEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeInitialBindEventHandler BeforeInitialBindEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeInitialBindEvent += value;
+			}
+			remove
+			{
+				_BeforeInitialBindEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_RecordsetSaveProgressEventHandler _RecordsetSaveProgressEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_RecordsetSaveProgressEventHandler RecordsetSaveProgressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_RecordsetSaveProgressEvent += value;
+			}
+			remove
+			{
+				_RecordsetSaveProgressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_AfterDeleteEventHandler _AfterDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_AfterDeleteEventHandler AfterDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterDeleteEvent += value;
+			}
+			remove
+			{
+				_AfterDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_AfterInsertEventHandler _AfterInsertEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_AfterInsertEventHandler AfterInsertEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterInsertEvent += value;
+			}
+			remove
+			{
+				_AfterInsertEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_AfterUpdateEventHandler _AfterUpdateEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_AfterUpdateEventHandler AfterUpdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterUpdateEvent += value;
+			}
+			remove
+			{
+				_AfterUpdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeDeleteEventHandler _BeforeDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeDeleteEventHandler BeforeDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeDeleteEvent += value;
+			}
+			remove
+			{
+				_BeforeDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeInsertEventHandler _BeforeInsertEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeInsertEventHandler BeforeInsertEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeInsertEvent += value;
+			}
+			remove
+			{
+				_BeforeInsertEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeOverwriteEventHandler _BeforeOverwriteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeOverwriteEventHandler BeforeOverwriteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeOverwriteEvent += value;
+			}
+			remove
+			{
+				_BeforeOverwriteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_BeforeUpdateEventHandler BeforeUpdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeUpdateEvent += value;
+			}
+			remove
+			{
+				_BeforeUpdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_DirtyEventHandler _DirtyEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_DirtyEventHandler DirtyEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DirtyEvent += value;
+			}
+			remove
+			{
+				_DirtyEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_RecordExitEventHandler _RecordExitEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_RecordExitEventHandler RecordExitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_RecordExitEvent += value;
+			}
+			remove
+			{
+				_RecordExitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_UndoEventHandler _UndoEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_UndoEventHandler UndoEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_UndoEvent += value;
+			}
+			remove
+			{
+				_UndoEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event DataSourceControl_FocusEventHandler _FocusEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event DataSourceControl_FocusEventHandler FocusEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FocusEvent += value;
+			}
+			remove
+			{
+				_FocusEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -138,499 +627,7 @@ namespace NetOffice.OWC10Api
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_CurrentEventHandler _CurrentEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_CurrentEventHandler CurrentEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CurrentEvent += value;
-			}
-			remove
-			{
-				_CurrentEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeExpandEventHandler _BeforeExpandEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeExpandEventHandler BeforeExpandEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeExpandEvent += value;
-			}
-			remove
-			{
-				_BeforeExpandEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeCollapseEventHandler _BeforeCollapseEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeCollapseEventHandler BeforeCollapseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeCollapseEvent += value;
-			}
-			remove
-			{
-				_BeforeCollapseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeFirstPageEventHandler _BeforeFirstPageEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeFirstPageEventHandler BeforeFirstPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeFirstPageEvent += value;
-			}
-			remove
-			{
-				_BeforeFirstPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforePreviousPageEventHandler _BeforePreviousPageEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforePreviousPageEventHandler BeforePreviousPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforePreviousPageEvent += value;
-			}
-			remove
-			{
-				_BeforePreviousPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeNextPageEventHandler _BeforeNextPageEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeNextPageEventHandler BeforeNextPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeNextPageEvent += value;
-			}
-			remove
-			{
-				_BeforeNextPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeLastPageEventHandler _BeforeLastPageEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeLastPageEventHandler BeforeLastPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeLastPageEvent += value;
-			}
-			remove
-			{
-				_BeforeLastPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_DataErrorEventHandler _DataErrorEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_DataErrorEventHandler DataErrorEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DataErrorEvent += value;
-			}
-			remove
-			{
-				_DataErrorEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_DataPageCompleteEventHandler _DataPageCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_DataPageCompleteEventHandler DataPageCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DataPageCompleteEvent += value;
-			}
-			remove
-			{
-				_DataPageCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeInitialBindEventHandler _BeforeInitialBindEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeInitialBindEventHandler BeforeInitialBindEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeInitialBindEvent += value;
-			}
-			remove
-			{
-				_BeforeInitialBindEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_RecordsetSaveProgressEventHandler _RecordsetSaveProgressEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_RecordsetSaveProgressEventHandler RecordsetSaveProgressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RecordsetSaveProgressEvent += value;
-			}
-			remove
-			{
-				_RecordsetSaveProgressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_AfterDeleteEventHandler _AfterDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_AfterDeleteEventHandler AfterDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterDeleteEvent += value;
-			}
-			remove
-			{
-				_AfterDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_AfterInsertEventHandler _AfterInsertEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_AfterInsertEventHandler AfterInsertEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterInsertEvent += value;
-			}
-			remove
-			{
-				_AfterInsertEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_AfterUpdateEventHandler _AfterUpdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_AfterUpdateEventHandler AfterUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterUpdateEvent += value;
-			}
-			remove
-			{
-				_AfterUpdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeDeleteEventHandler _BeforeDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeDeleteEventHandler BeforeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeInsertEventHandler _BeforeInsertEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeInsertEventHandler BeforeInsertEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeInsertEvent += value;
-			}
-			remove
-			{
-				_BeforeInsertEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeOverwriteEventHandler _BeforeOverwriteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeOverwriteEventHandler BeforeOverwriteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeOverwriteEvent += value;
-			}
-			remove
-			{
-				_BeforeOverwriteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_BeforeUpdateEventHandler BeforeUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeUpdateEvent += value;
-			}
-			remove
-			{
-				_BeforeUpdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_DirtyEventHandler _DirtyEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_DirtyEventHandler DirtyEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DirtyEvent += value;
-			}
-			remove
-			{
-				_DirtyEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_RecordExitEventHandler _RecordExitEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_RecordExitEventHandler RecordExitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RecordExitEvent += value;
-			}
-			remove
-			{
-				_RecordExitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_UndoEventHandler _UndoEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_UndoEventHandler UndoEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_UndoEvent += value;
-			}
-			remove
-			{
-				_UndoEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event DataSourceControl_FocusEventHandler _FocusEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event DataSourceControl_FocusEventHandler FocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FocusEvent += value;
-			}
-			remove
-			{
-				_FocusEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -641,25 +638,22 @@ namespace NetOffice.OWC10Api
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -682,8 +676,59 @@ namespace NetOffice.OWC10Api
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __DataSourceControlEvent_SinkHelper)
 			{
@@ -695,6 +740,7 @@ namespace NetOffice.OWC10Api
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

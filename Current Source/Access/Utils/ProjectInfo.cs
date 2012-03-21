@@ -47,7 +47,7 @@ namespace AccessApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

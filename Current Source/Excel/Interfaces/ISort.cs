@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISort 
-	/// SupportByLibrary Excel, 12,14
+	/// SupportByVersion Excel, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISort : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Range Rng
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlYesNoGuess Header
 		{
 			get
@@ -157,10 +157,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public bool MatchCase
 		{
 			get
@@ -177,10 +177,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlSortOrientation Orientation
 		{
 			get
@@ -197,10 +197,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlSortMethod SortMethod
 		{
 			get
@@ -217,10 +217,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.SortFields SortFields
 		{
 			get
@@ -237,26 +237,26 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="rng">NetOffice.ExcelApi.Range Rng</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 SetRange(NetOffice.ExcelApi.Range rng)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rng);
 			object returnItem = Invoker.MethodReturn(this, "SetRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 Apply()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Apply", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

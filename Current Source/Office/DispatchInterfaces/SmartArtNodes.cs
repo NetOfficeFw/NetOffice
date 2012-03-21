@@ -12,9 +12,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SmartArtNodes 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtNodes : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.SmartArtNode>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public COMObject Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 Count
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SmartArtNode this[object index]
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public NetOffice.OfficeApi.SmartArtNode Add()
 		{
 			object[] paramsArray = null;
@@ -141,43 +141,33 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.SmartArtNode> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
-        public IEnumerator<NetOffice.OfficeApi.SmartArtNode> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.SmartArtNode item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OfficeApi.SmartArtNode> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 14
+        /// <summary>
+		/// SupportByVersionAttribute Office, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
+       public IEnumerator<NetOffice.OfficeApi.SmartArtNode> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.SmartArtNode item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

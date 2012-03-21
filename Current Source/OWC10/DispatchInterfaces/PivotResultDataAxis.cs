@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotResultDataAxis 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotResultDataAxis : PivotResultAxis
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotDataAxis SourceDataAxis
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotFields Fields
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotTotals Totals
 		{
 			get

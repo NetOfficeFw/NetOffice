@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IXmlMap 
-	/// SupportByLibrary Excel, 11,12,14
+	/// SupportByVersion Excel, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 11,12,14)]
+	[SupportByVersionAttribute("Excel", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlMap : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -121,32 +121,32 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public string _Default
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -156,10 +156,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool IsExportable
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool ShowImportExportValidationErrors
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool SaveDataSourceDefinition
 		{
 			get
@@ -211,10 +211,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool AdjustColumnWidth
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool PreserveColumnFilter
 		{
 			get
@@ -251,10 +251,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool PreserveNumberFormatting
 		{
 			get
@@ -271,10 +271,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public bool AppendOnImport
 		{
 			get
@@ -291,25 +291,25 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public string RootElementName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RootElementName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlNamespace RootElementNamespace
 		{
 			get
@@ -322,10 +322,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlSchemas Schemas
 		{
 			get
@@ -338,10 +338,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.XmlDataBinding DataBinding
 		{
 			get
@@ -354,10 +354,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
 			get
@@ -374,22 +374,22 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="url">string Url</param>
 		/// <param name="overwrite">optional object Overwrite</param>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, overwrite);
@@ -398,11 +398,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="url">string Url</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
@@ -411,11 +411,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="xmlData">string XmlData</param>
 		/// <param name="overwrite">optional object Overwrite</param>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xmlData, overwrite);
@@ -424,11 +424,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="xmlData">string XmlData</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xmlData);
@@ -437,11 +437,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="url">string Url</param>
 		/// <param name="overwrite">optional object Overwrite</param>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, overwrite);
@@ -450,11 +450,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="url">string Url</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
@@ -463,10 +463,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14
 		/// </summary>
 		/// <param name="data">string Data</param>
-		[SupportByLibraryAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14)]
 		public NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(out string data)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

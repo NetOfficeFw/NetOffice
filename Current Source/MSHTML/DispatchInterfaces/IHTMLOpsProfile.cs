@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLOpsProfile 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLOpsProfile : COMObject
 	{
@@ -79,35 +79,35 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool addRequest(string name, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, reserved);
 			object returnItem = Invoker.MethodReturn(this, "addRequest", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool addRequest(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "addRequest", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void clearRequest()
 		{
 			object[] paramsArray = null;
@@ -115,7 +115,7 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -123,7 +123,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname, object domain, object path, object expire, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire, reserved);
@@ -131,11 +131,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage);
@@ -143,12 +143,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname);
@@ -156,13 +156,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		/// <param name="domain">optional object domain</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname, object domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain);
@@ -170,14 +170,14 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		/// <param name="domain">optional object domain</param>
 		/// <param name="path">optional object path</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname, object domain, object path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path);
@@ -185,7 +185,7 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -193,7 +193,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doRequest(object usage, object fname, object domain, object path, object expire)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire);
@@ -201,10 +201,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string getAttribute(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -213,72 +213,72 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
 		/// <param name="prefs">optional object prefs</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool setAttribute(string name, string value, object prefs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value, prefs);
 			object returnItem = Invoker.MethodReturn(this, "setAttribute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool setAttribute(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
 			object returnItem = Invoker.MethodReturn(this, "setAttribute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool commitChanges()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "commitChanges", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool addReadRequest(string name, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, reserved);
 			object returnItem = Invoker.MethodReturn(this, "addReadRequest", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="name">string name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool addReadRequest(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "addReadRequest", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -286,7 +286,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		/// <param name="reserved">optional object reserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname, object domain, object path, object expire, object reserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire, reserved);
@@ -294,11 +294,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage);
@@ -306,12 +306,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname);
@@ -319,13 +319,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		/// <param name="domain">optional object domain</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname, object domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain);
@@ -333,14 +333,14 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
 		/// <param name="domain">optional object domain</param>
 		/// <param name="path">optional object path</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname, object domain, object path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path);
@@ -348,7 +348,7 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -356,7 +356,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="path">optional object path</param>
 		/// <param name="expire">optional object expire</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void doReadRequest(object usage, object fname, object domain, object path, object expire)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(usage, fname, domain, path, expire);
@@ -364,14 +364,14 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool doWriteRequest()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "doWriteRequest", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

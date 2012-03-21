@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface TimeScaleValue 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TimeScaleValue : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public object StartDate
 		{
 			get
@@ -98,10 +98,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public object EndDate
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public object Value
 		{
 			get
@@ -149,10 +149,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public Int32 Index
 		{
 			get
@@ -164,10 +164,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -180,10 +180,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -200,9 +200,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -210,9 +210,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

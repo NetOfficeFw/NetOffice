@@ -12,9 +12,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SignatureSet 
-	/// SupportByLibrary Office, 10,11,12,14
+	/// SupportByVersion Office, 10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureSet : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.Signature>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -91,11 +91,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="iSig">Int32 iSig</param>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.Signature this[Int32 iSig]
 		{
@@ -109,10 +109,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public bool CanAddSignatureLine
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Enums.MsoSignatureSubset Subset
 		{
 			get
@@ -160,10 +160,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public bool ShowSignaturesPane
 		{
 			get
@@ -184,9 +184,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public NetOffice.OfficeApi.Signature Add()
 		{
 			object[] paramsArray = null;
@@ -196,9 +196,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public void Commit()
 		{
 			object[] paramsArray = null;
@@ -206,10 +206,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Signature AddNonVisibleSignature(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
@@ -219,10 +219,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Signature AddNonVisibleSignature()
 		{
 			object[] paramsArray = null;
@@ -232,10 +232,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="varSigProv">optional object varSigProv</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Signature AddSignatureLine(object varSigProv)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSigProv);
@@ -245,10 +245,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public NetOffice.OfficeApi.Signature AddSignatureLine()
 		{
 			object[] paramsArray = null;
@@ -259,43 +259,33 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.Signature> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 10,11,12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
-        public IEnumerator<NetOffice.OfficeApi.Signature> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.Signature item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OfficeApi.Signature> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 10,11,12,14
+        /// <summary>
+		/// SupportByVersionAttribute Office, 10,11,12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
+       public IEnumerator<NetOffice.OfficeApi.Signature> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.Signature item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 10,11,12,14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

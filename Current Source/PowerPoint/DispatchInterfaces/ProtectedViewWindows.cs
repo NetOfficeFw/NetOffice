@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ProtectedViewWindows 
-	/// SupportByLibrary PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindows : Collection
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.ProtectedViewWindow this[Int32 index]
 		{
@@ -128,13 +128,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readPassword">optional string ReadPassword = </param>
 		/// <param name="openAndRepair">optional NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair = 0</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, string readPassword, NetOffice.OfficeApi.Enums.MsoTriState openAndRepair)
+		[SupportByVersionAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword, openAndRepair);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -143,11 +143,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -157,13 +157,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readPassword">optional string ReadPassword = </param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, string readPassword)
+		[SupportByVersionAttribute("PowerPoint", 14)]
+		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);

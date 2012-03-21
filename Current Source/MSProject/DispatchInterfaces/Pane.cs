@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Pane 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pane : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public object Index
 		{
 			get
@@ -134,9 +134,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -144,9 +144,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -154,9 +154,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.View View()
 		{
 			object[] paramsArray = null;

@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 9
+	 /// SupportByVersion PowerPoint 9
 	 /// </summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PpMarkerType
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppBoot = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppFileNew = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppFileOpen = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppFileSave = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppPrintForeground = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppPrintBackground = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppOLEInsert = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppSlideShowStart = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppSlideShowDraw = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppSlideViewScroll = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 9
+		 /// SupportByVersion PowerPoint 9
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 9)]
+		 [SupportByVersionAttribute("PowerPoint", 9)]
 		 ppDialogStart = 10
 	}
 }

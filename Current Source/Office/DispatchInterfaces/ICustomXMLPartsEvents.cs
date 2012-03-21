@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICustomXMLPartsEvents 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICustomXMLPartsEvents : COMObject
 	{
@@ -79,10 +79,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="newPart">NetOffice.OfficeApi.CustomXMLPart NewPart</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void PartAfterAdd(NetOffice.OfficeApi.CustomXMLPart newPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newPart);
@@ -90,10 +90,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="oldPart">NetOffice.OfficeApi.CustomXMLPart OldPart</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void PartBeforeDelete(NetOffice.OfficeApi.CustomXMLPart oldPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldPart);
@@ -101,10 +101,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="part">NetOffice.OfficeApi.CustomXMLPart Part</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void PartAfterLoad(NetOffice.OfficeApi.CustomXMLPart part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(part);

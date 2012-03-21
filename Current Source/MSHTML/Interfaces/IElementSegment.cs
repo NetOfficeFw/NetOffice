@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementSegment 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementSegment : ISegment
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppIElement">NetOffice.MSHTMLApi.IHTMLElement ppIElement</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetElement(out NetOffice.MSHTMLApi.IHTMLElement ppIElement)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,26 +89,26 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIElement);
 			object returnItem = Invoker.MethodReturn(this, "GetElement", paramsArray);
 			ppIElement = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="fPrimary">Int32 fPrimary</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SetPrimary(Int32 fPrimary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fPrimary);
 			object returnItem = Invoker.MethodReturn(this, "SetPrimary", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pfPrimary">Int32 pfPrimary</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 IsPrimary(out Int32 pfPrimary)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -116,7 +116,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfPrimary);
 			object returnItem = Invoker.MethodReturn(this, "IsPrimary", paramsArray);
 			pfPrimary = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

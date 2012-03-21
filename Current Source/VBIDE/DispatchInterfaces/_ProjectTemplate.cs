@@ -11,9 +11,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _ProjectTemplate 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ProjectTemplate : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Application
 		{
@@ -92,10 +92,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Parent
 		{

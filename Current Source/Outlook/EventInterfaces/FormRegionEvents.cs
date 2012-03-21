@@ -10,15 +10,15 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[ComImport, Guid("0006305B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface FormRegionEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64312)]
 		void Expanded([In] object expand);
 
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void Close();
 	}
@@ -68,8 +68,7 @@ namespace NetOffice.OutlookApi
 			bool newExpand = (bool)expand;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExpand;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Expanded", ref paramsArray);
 		}
 
 		public void Close()
@@ -82,8 +81,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		#endregion

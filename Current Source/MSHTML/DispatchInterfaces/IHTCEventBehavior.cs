@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTCEventBehavior 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTCEventBehavior : COMObject
+	public class IHTCEventBehavior : DispHTCEventBehavior
 	{
 		#pragma warning disable
 		#region Type Information
@@ -79,10 +79,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pVar">NetOffice.MSHTMLApi.IHTMLEventObj pVar</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void fire(NetOffice.MSHTMLApi.IHTMLEventObj pVar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pVar);

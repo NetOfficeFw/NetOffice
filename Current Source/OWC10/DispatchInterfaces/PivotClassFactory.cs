@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface PivotClassFactory 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotClassFactory : COMObject
 	{
@@ -75,13 +75,14 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(detailCell);
 			object returnItem = Invoker.PropertyGet(this, "NewDetailCell", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -89,24 +90,25 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_NewDetailCell
 		/// </summary>
-		/// <param name="DetailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
 		{
 			return get_NewDetailCell(detailCell);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(aggregate);
 			object returnItem = Invoker.PropertyGet(this, "NewAggregate", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -114,24 +116,25 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_NewAggregate
 		/// </summary>
-		/// <param name="Aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
 		{
 			return get_NewAggregate(aggregate);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowMember);
 			object returnItem = Invoker.PropertyGet(this, "NewRowMember", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -139,24 +142,25 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_NewRowMember
 		/// </summary>
-		/// <param name="RowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
 		{
 			return get_NewRowMember(rowMember);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(columnMember);
 			object returnItem = Invoker.PropertyGet(this, "NewColumnMember", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -164,24 +168,25 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_NewColumnMember
 		/// </summary>
-		/// <param name="ColumnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
 		{
 			return get_NewColumnMember(columnMember);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="cell">NetOffice.OWC10Api.PivotCell Cell</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_NewCell(NetOffice.OWC10Api.PivotCell cell)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(cell);
 			object returnItem = Invoker.PropertyGet(this, "NewCell", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -189,11 +194,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_NewCell
 		/// </summary>
-		/// <param name="Cell">NetOffice.OWC10Api.PivotCell Cell</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="cell">NetOffice.OWC10Api.PivotCell Cell</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject NewCell(NetOffice.OWC10Api.PivotCell cell)
 		{
 			return get_NewCell(cell);

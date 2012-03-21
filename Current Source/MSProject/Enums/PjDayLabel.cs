@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14
+	 /// SupportByVersion MSProject 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjDayLabel
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_di = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>119</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_ddi = 119,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_ddd = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjDayLabelDay_dddd = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjDayLabelNoDateFormat = 35
 	}
 }

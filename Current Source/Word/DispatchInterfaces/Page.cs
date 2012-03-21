@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Page 
-	/// SupportByLibrary Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Page : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Left
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Top
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Width
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Height
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Rectangles Rectangles
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Breaks Breaks
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public object EnhMetaFileBits
 		{
 			get

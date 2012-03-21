@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _OlkPageControl 
-	/// SupportByLibrary Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OlkPageControl : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlPageType Page
 		{
 			get

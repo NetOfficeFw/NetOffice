@@ -12,9 +12,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Documents 
-	/// SupportByLibrary Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Documents : COMObject ,IEnumerable<NetOffice.WordApi.Document>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Document this[object index]
 		{
@@ -159,12 +159,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="originalFormat">optional object OriginalFormat</param>
 		/// <param name="routeDocument">optional object RouteDocument</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Close(object saveChanges, object originalFormat, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat, routeDocument);
@@ -172,10 +172,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -183,11 +183,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Close(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
@@ -195,12 +195,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="originalFormat">optional object OriginalFormat</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Close(object saveChanges, object originalFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, originalFormat);
@@ -208,12 +208,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		/// <param name="newTemplate">optional object NewTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld(object template, object newTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate);
@@ -223,11 +223,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld()
 		{
 			object[] paramsArray = null;
@@ -237,12 +237,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document AddOld(object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template);
@@ -252,7 +252,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -265,7 +265,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="format">optional object Format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -275,12 +275,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -290,13 +290,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
@@ -306,14 +306,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
@@ -323,7 +323,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -331,7 +331,7 @@ namespace NetOffice.WordApi
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
@@ -341,7 +341,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -350,7 +350,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
@@ -360,7 +360,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
@@ -380,7 +380,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
 		/// <param name="revert">optional object Revert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
@@ -401,7 +401,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -413,7 +413,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
@@ -423,7 +423,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -436,7 +436,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document OpenOld(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -446,11 +446,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="noPrompt">optional object NoPrompt</param>
 		/// <param name="originalFormat">optional object OriginalFormat</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Save(object noPrompt, object originalFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(noPrompt, originalFormat);
@@ -458,10 +458,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Save()
 		{
 			object[] paramsArray = null;
@@ -469,11 +469,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="noPrompt">optional object NoPrompt</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public void Save(object noPrompt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(noPrompt);
@@ -481,13 +481,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		/// <param name="newTemplate">optional object NewTemplate</param>
 		/// <param name="documentType">optional object DocumentType</param>
 		/// <param name="visible">optional object Visible</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(object template, object newTemplate, object documentType, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate, documentType, visible);
@@ -497,10 +497,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add()
 		{
 			object[] paramsArray = null;
@@ -510,11 +510,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template);
@@ -524,12 +524,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		/// <param name="newTemplate">optional object NewTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(object template, object newTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate);
@@ -539,13 +539,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="template">optional object Template</param>
 		/// <param name="newTemplate">optional object NewTemplate</param>
 		/// <param name="documentType">optional object DocumentType</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Add(object template, object newTemplate, object documentType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(template, newTemplate, documentType);
@@ -555,7 +555,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -569,7 +569,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="encoding">optional object Encoding</param>
 		/// <param name="visible">optional object Visible</param>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -579,7 +579,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -596,7 +596,7 @@ namespace NetOffice.WordApi
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		/// <param name="noEncodingDialog">optional object NoEncodingDialog</param>
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
@@ -606,7 +606,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -624,7 +624,7 @@ namespace NetOffice.WordApi
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		/// <param name="noEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="xMLTransform">optional object XMLTransform</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
@@ -634,11 +634,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -648,12 +648,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
@@ -663,13 +663,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
@@ -679,14 +679,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
@@ -696,7 +696,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -704,7 +704,7 @@ namespace NetOffice.WordApi
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
@@ -714,7 +714,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -723,7 +723,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
@@ -733,7 +733,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -743,7 +743,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		/// <param name="revert">optional object Revert</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
@@ -753,7 +753,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -764,7 +764,7 @@ namespace NetOffice.WordApi
 		/// <param name="revert">optional object Revert</param>
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
@@ -774,7 +774,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -786,7 +786,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -796,7 +796,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -809,7 +809,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="format">optional object Format</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -819,7 +819,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -833,7 +833,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="encoding">optional object Encoding</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
@@ -843,7 +843,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -859,7 +859,7 @@ namespace NetOffice.WordApi
 		/// <param name="visible">optional object Visible</param>
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
@@ -869,7 +869,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -886,7 +886,7 @@ namespace NetOffice.WordApi
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
@@ -896,7 +896,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -911,7 +911,7 @@ namespace NetOffice.WordApi
 		/// <param name="encoding">optional object Encoding</param>
 		/// <param name="visible">optional object Visible</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -921,12 +921,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -936,13 +936,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
@@ -952,14 +952,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
@@ -969,7 +969,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -977,7 +977,7 @@ namespace NetOffice.WordApi
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
@@ -987,7 +987,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -996,7 +996,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
@@ -1006,7 +1006,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1016,7 +1016,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
@@ -1026,7 +1026,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1037,7 +1037,7 @@ namespace NetOffice.WordApi
 		/// <param name="revert">optional object Revert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
@@ -1047,7 +1047,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1059,7 +1059,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
@@ -1069,7 +1069,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1082,7 +1082,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -1092,7 +1092,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1106,7 +1106,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -1116,7 +1116,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1131,7 +1131,7 @@ namespace NetOffice.WordApi
 		/// <param name="encoding">optional object Encoding</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public NetOffice.WordApi.Document Open2000(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
@@ -1141,10 +1141,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public void CheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1152,19 +1152,19 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByLibraryAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14)]
 		public bool CanCheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "CanCheckOut", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1182,7 +1182,7 @@ namespace NetOffice.WordApi
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		/// <param name="noEncodingDialog">optional object NoEncodingDialog</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
@@ -1192,12 +1192,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1207,13 +1207,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
@@ -1223,14 +1223,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
@@ -1240,7 +1240,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1248,7 +1248,7 @@ namespace NetOffice.WordApi
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
@@ -1258,7 +1258,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1267,7 +1267,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
@@ -1277,7 +1277,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1287,7 +1287,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
@@ -1297,7 +1297,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1308,7 +1308,7 @@ namespace NetOffice.WordApi
 		/// <param name="revert">optional object Revert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
@@ -1318,7 +1318,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1330,7 +1330,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
@@ -1340,7 +1340,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1353,7 +1353,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -1363,7 +1363,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1377,7 +1377,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -1387,7 +1387,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1402,7 +1402,7 @@ namespace NetOffice.WordApi
 		/// <param name="encoding">optional object Encoding</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
@@ -1412,7 +1412,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1428,7 +1428,7 @@ namespace NetOffice.WordApi
 		/// <param name="visible">optional object Visible</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -1438,7 +1438,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1455,7 +1455,7 @@ namespace NetOffice.WordApi
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
@@ -1465,7 +1465,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1483,7 +1483,7 @@ namespace NetOffice.WordApi
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Document Open2002(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
@@ -1493,7 +1493,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1511,7 +1511,7 @@ namespace NetOffice.WordApi
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		/// <param name="noEncodingDialog">optional object NoEncodingDialog</param>
 		/// <param name="xMLTransform">optional object XMLTransform</param>
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog, object xMLTransform)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog, xMLTransform);
@@ -1521,11 +1521,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1535,12 +1535,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions);
@@ -1550,13 +1550,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly);
@@ -1566,14 +1566,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles);
@@ -1583,7 +1583,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1591,7 +1591,7 @@ namespace NetOffice.WordApi
 		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
@@ -1601,7 +1601,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1610,7 +1610,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordDocument">optional object PasswordDocument</param>
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
@@ -1620,7 +1620,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1630,7 +1630,7 @@ namespace NetOffice.WordApi
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		/// <param name="revert">optional object Revert</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
@@ -1640,7 +1640,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1651,7 +1651,7 @@ namespace NetOffice.WordApi
 		/// <param name="revert">optional object Revert</param>
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
@@ -1661,7 +1661,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1673,7 +1673,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
@@ -1683,7 +1683,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1696,7 +1696,7 @@ namespace NetOffice.WordApi
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
 		/// <param name="format">optional object Format</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format);
@@ -1706,7 +1706,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1720,7 +1720,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="encoding">optional object Encoding</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding);
@@ -1730,7 +1730,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1745,7 +1745,7 @@ namespace NetOffice.WordApi
 		/// <param name="encoding">optional object Encoding</param>
 		/// <param name="visible">optional object Visible</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible);
@@ -1755,7 +1755,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1771,7 +1771,7 @@ namespace NetOffice.WordApi
 		/// <param name="visible">optional object Visible</param>
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair);
@@ -1781,7 +1781,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1798,7 +1798,7 @@ namespace NetOffice.WordApi
 		/// <param name="openAndRepair">optional object OpenAndRepair</param>
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection);
@@ -1808,7 +1808,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="fileName">object FileName</param>
 		/// <param name="confirmConversions">optional object ConfirmConversions</param>
@@ -1826,7 +1826,7 @@ namespace NetOffice.WordApi
 		/// <param name="documentDirection">optional object DocumentDirection</param>
 		/// <param name="noEncodingDialog">optional object NoEncodingDialog</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document OpenNoRepairDialog(object fileName, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object format, object encoding, object visible, object openAndRepair, object documentDirection, object noEncodingDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, format, encoding, visible, openAndRepair, documentDirection, noEncodingDialog);
@@ -1836,14 +1836,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="providerID">string ProviderID</param>
 		/// <param name="postURL">string PostURL</param>
 		/// <param name="blogName">string BlogName</param>
 		/// <param name="postID">optional string PostID = </param>
-		[SupportByLibraryAttribute("Word", 12,14)]
-		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, string postID)
+		[SupportByVersionAttribute("Word", 12,14)]
+		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, object postID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName, postID);
 			object returnItem = Invoker.MethodReturn(this, "AddBlogDocument", paramsArray);
@@ -1852,13 +1852,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 12, 14
+		/// SupportByVersion Word 12, 14
 		/// </summary>
 		/// <param name="providerID">string ProviderID</param>
 		/// <param name="postURL">string PostURL</param>
 		/// <param name="blogName">string BlogName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName);
@@ -1869,43 +1869,33 @@ namespace NetOffice.WordApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.WordApi.Document> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 9,10,11,12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
-        public IEnumerator<NetOffice.WordApi.Document> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.WordApi.Document item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.WordApi.Document> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 9,10,11,12,14
+        /// <summary>
+		/// SupportByVersionAttribute Word, 9,10,11,12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+       public IEnumerator<NetOffice.WordApi.Document> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.WordApi.Document item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// </summary>
+		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

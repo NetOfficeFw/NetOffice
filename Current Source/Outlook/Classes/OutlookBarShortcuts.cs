@@ -18,11 +18,11 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OutlookBarShortcuts 
-	/// SupportByLibrary Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OutlookBarShortcuts : _OutlookBarShortcuts, IEventBinding 
+	public class OutlookBarShortcuts : _OutlookBarShortcuts,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -60,7 +60,7 @@ namespace NetOffice.OutlookApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -95,13 +95,84 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event OutlookBarShortcuts_ShortcutAddEventHandler _ShortcutAddEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event OutlookBarShortcuts_ShortcutAddEventHandler ShortcutAddEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShortcutAddEvent += value;
+			}
+			remove
+			{
+				_ShortcutAddEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event OutlookBarShortcuts_BeforeShortcutAddEventHandler _BeforeShortcutAddEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event OutlookBarShortcuts_BeforeShortcutAddEventHandler BeforeShortcutAddEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeShortcutAddEvent += value;
+			}
+			remove
+			{
+				_BeforeShortcutAddEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event OutlookBarShortcuts_BeforeShortcutRemoveEventHandler _BeforeShortcutRemoveEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event OutlookBarShortcuts_BeforeShortcutRemoveEventHandler BeforeShortcutRemoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeShortcutRemoveEvent += value;
+			}
+			remove
+			{
+				_BeforeShortcutRemoveEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -119,81 +190,7 @@ namespace NetOffice.OutlookApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event OutlookBarShortcuts_ShortcutAddEventHandler _ShortcutAddEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event OutlookBarShortcuts_ShortcutAddEventHandler ShortcutAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShortcutAddEvent += value;
-			}
-			remove
-			{
-				_ShortcutAddEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event OutlookBarShortcuts_BeforeShortcutAddEventHandler _BeforeShortcutAddEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event OutlookBarShortcuts_BeforeShortcutAddEventHandler BeforeShortcutAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShortcutAddEvent += value;
-			}
-			remove
-			{
-				_BeforeShortcutAddEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event OutlookBarShortcuts_BeforeShortcutRemoveEventHandler _BeforeShortcutRemoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event OutlookBarShortcuts_BeforeShortcutRemoveEventHandler BeforeShortcutRemoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeShortcutRemoveEvent += value;
-			}
-			remove
-			{
-				_BeforeShortcutRemoveEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -204,25 +201,22 @@ namespace NetOffice.OutlookApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -245,8 +239,59 @@ namespace NetOffice.OutlookApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _outlookBarShortcutsEvents_SinkHelper)
 			{
@@ -258,6 +303,7 @@ namespace NetOffice.OutlookApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

@@ -10,51 +10,51 @@ namespace NetOffice.MSHTMLApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[ComImport, Guid("96A0A4E0-D062-11CF-94B6-00AA0060275C"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface HTMLWindowEvents
 	{
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
 		void onload();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1008)]
 		void onunload();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147418102)]
 		void onhelp();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147418111)]
 		void onfocus();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147418112)]
 		void onblur();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
 		void onerror([In] object description, [In] object url, [In] object line);
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1016)]
 		void onresize();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1014)]
 		void onscroll();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1017)]
 		void onbeforeunload();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1024)]
 		void onbeforeprint();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1025)]
 		void onafterprint();
 	}
@@ -102,8 +102,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onload", ref paramsArray);
 		}
 
 		public void onunload()
@@ -116,8 +115,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onunload", ref paramsArray);
 		}
 
 		public void onhelp()
@@ -130,8 +128,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onhelp", ref paramsArray);
 		}
 
 		public void onfocus()
@@ -144,8 +141,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onfocus", ref paramsArray);
 		}
 
 		public void onblur()
@@ -158,8 +154,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onblur", ref paramsArray);
 		}
 
 		public void onerror([In] object description, [In] object url, [In] object line)
@@ -178,8 +173,7 @@ namespace NetOffice.MSHTMLApi
 			paramsArray[0] = newdescription;
 			paramsArray[1] = newurl;
 			paramsArray[2] = newline;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onerror", ref paramsArray);
 		}
 
 		public void onresize()
@@ -192,8 +186,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onresize", ref paramsArray);
 		}
 
 		public void onscroll()
@@ -206,8 +199,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onscroll", ref paramsArray);
 		}
 
 		public void onbeforeunload()
@@ -220,8 +212,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onbeforeunload", ref paramsArray);
 		}
 
 		public void onbeforeprint()
@@ -234,8 +225,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onbeforeprint", ref paramsArray);
 		}
 
 		public void onafterprint()
@@ -248,8 +238,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onafterprint", ref paramsArray);
 		}
 
 		#endregion

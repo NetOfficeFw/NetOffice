@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface EventInfo 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EventInfo : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public bool Cancel
 		{
 			get

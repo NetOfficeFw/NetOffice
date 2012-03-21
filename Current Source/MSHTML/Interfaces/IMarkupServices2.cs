@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IMarkupServices2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupServices2 : IMarkupServices
 	{
@@ -78,7 +78,7 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="hglobalHTML">_userHGLOBAL hglobalHTML</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
@@ -86,7 +86,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="ppContainerResult">NetOffice.MSHTMLApi.IMarkupContainer ppContainerResult</param>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
 		/// <param name="pPointerFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 ParseGlobalEx(_userHGLOBAL hglobalHTML, Int32 dwFlags, NetOffice.MSHTMLApi.IMarkupContainer pContext, out NetOffice.MSHTMLApi.IMarkupContainer ppContainerResult, NetOffice.MSHTMLApi.IMarkupPointer pPointerStart, NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false,false);
@@ -94,11 +94,11 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hglobalHTML, dwFlags, pContext, ppContainerResult, pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "ParseGlobalEx", paramsArray);
 			ppContainerResult = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
 		/// <param name="pPointerFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish</param>
@@ -106,7 +106,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="pPointerStatus">NetOffice.MSHTMLApi.IMarkupPointer pPointerStatus</param>
 		/// <param name="ppElemFailBottom">NetOffice.MSHTMLApi.IHTMLElement ppElemFailBottom</param>
 		/// <param name="ppElemFailTop">NetOffice.MSHTMLApi.IHTMLElement ppElemFailTop</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 ValidateElements(NetOffice.MSHTMLApi.IMarkupPointer pPointerStart, NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish, NetOffice.MSHTMLApi.IMarkupPointer pPointerTarget, NetOffice.MSHTMLApi.IMarkupPointer pPointerStatus, out NetOffice.MSHTMLApi.IHTMLElement ppElemFailBottom, out NetOffice.MSHTMLApi.IHTMLElement ppElemFailTop)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,true);
@@ -116,20 +116,20 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "ValidateElements", paramsArray);
 			ppElemFailBottom = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[4];
 			ppElemFailTop = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[5];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pSegmentList">NetOffice.MSHTMLApi.ISegmentList pSegmentList</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SaveSegmentsToClipboard(NetOffice.MSHTMLApi.ISegmentList pSegmentList, Int32 dwFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pSegmentList, dwFlags);
 			object returnItem = Invoker.MethodReturn(this, "SaveSegmentsToClipboard", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

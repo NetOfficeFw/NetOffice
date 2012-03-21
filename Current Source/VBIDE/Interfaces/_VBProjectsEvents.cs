@@ -10,9 +10,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// Interface _VBProjectsEvents 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _VBProjectsEvents : COMObject
 	{

@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdBreakType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdSectionBreakNextPage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdSectionBreakContinuous = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdSectionBreakEvenPage = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdSectionBreakOddPage = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdLineBreak = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPageBreak = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdColumnBreak = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdLineBreakClearLeft = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdLineBreakClearRight = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdTextWrappingBreak = 11
 	}
 }

@@ -9,25 +9,26 @@ using LateBindingApi.Core;
     http://latebindingapi.codeplex.com 
     
     Contains the following Type Libraries:
-	Name - Description - SupportByLibrary
-	DAO - Microsoft DAO 3.6 Object Library - 6
+	Name - Description - SupportByVersion
+	DAO - Microsoft DAO 3.6 Object Library - 3.6
 	DAO - <NoDescription> - 12
 
 */
 
 [assembly: AssemblyTitle("DAO")]
-[assembly: AssemblyDescription("NetOffice Api")]
+[assembly: AssemblyDescription("NetOffice DAO Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
 [assembly: AssemblyProduct("NetOffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.4.0.0")]
-[assembly: AssemblyFileVersion("1.4.0.0")]
-[assembly: ComVisibleAttribute(false)]
+[assembly: AssemblyVersion("1.4.0.1")]
+[assembly: AssemblyFileVersion("1.4.0.1")]
+[assembly: PrimaryInteropAssembly(1, 0)]
+[assembly: ImportedFromTypeLib("DAO")]
+[assembly: Guid("00025E01-0000-0000-C000-000000000046")]
 [assembly: LateBindingAttribute("1.0")]
-
 
 /*
 Alias Table

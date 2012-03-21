@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1
+	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ChartDataSourceTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 chDataSourceTypeUnknown = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 chDataSourceTypeSpreadsheet = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 chDataSourceTypePivotTable = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 chDataSourceTypeQuery = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 chDataSourceTypeDSC = 5
 	}
 }

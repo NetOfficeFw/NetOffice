@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 2
+	 /// SupportByVersion MSComctlLib 6.0
 	 /// </summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum TreeStyleConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwTextOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwPictureText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwPlusMinusText = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwPlusPictureText = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwTreelinesText = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwTreelinesPictureText = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwTreelinesPlusMinusText = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tvwTreelinesPlusMinusPictureText = 7
 	}
 }

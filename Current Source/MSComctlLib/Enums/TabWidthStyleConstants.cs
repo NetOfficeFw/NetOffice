@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 2
+	 /// SupportByVersion MSComctlLib 6.0
 	 /// </summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum TabWidthStyleConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tabJustified = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tabNonJustified = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tabFixed = 2
 	}
 }

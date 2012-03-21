@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14
+	 /// SupportByVersion PowerPoint 14
 	 /// </summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlLegendPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4107</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionBottom = -4107,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionCorner = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4131</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionLeft = -4131,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4152</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionRight = -4152,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4160</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionTop = -4160,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4161</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlLegendPositionCustom = -4161
 	}
 }

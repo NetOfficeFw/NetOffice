@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ProtectedViewWindow 
-	/// SupportByLibrary Word, 14
+	/// SupportByVersion Word, 14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindow : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public COMObject Parent
 		{
 			get
@@ -122,17 +122,17 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public string Caption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Document Document
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Left
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Top
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Width
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Height
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Enums.WdWindowState WindowState
 		{
 			get
@@ -258,10 +258,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public bool Active
 		{
 			get
@@ -273,10 +273,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public Int32 Index
 		{
 			get
@@ -288,10 +288,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public bool Visible
 		{
 			get
@@ -308,32 +308,32 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public string SourceName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public string SourcePath
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourcePath", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
@@ -342,9 +342,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -352,12 +352,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate, writePasswordDocument, writePasswordTemplate);
@@ -367,10 +367,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Document Edit()
 		{
 			object[] paramsArray = null;
@@ -380,11 +380,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Document Edit(object passwordTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate);
@@ -394,12 +394,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
 		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
 		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordTemplate, writePasswordDocument);
@@ -409,9 +409,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -419,9 +419,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 14
+		/// SupportByVersion Word 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14)]
 		public void ToggleRibbon()
 		{
 			object[] paramsArray = null;

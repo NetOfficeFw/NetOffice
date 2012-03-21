@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 10, 11, 12, 14
+	 /// SupportByVersion Office 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoFilterComparison
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonEqual = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonNotEqual = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonLessThan = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonGreaterThan = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonLessThanEqual = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonGreaterThanEqual = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonIsBlank = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonIsNotBlank = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonContains = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoFilterComparisonNotContains = 9
 	}
 }

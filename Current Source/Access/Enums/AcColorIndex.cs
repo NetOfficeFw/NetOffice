@@ -4,122 +4,122 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14
+	 /// SupportByVersion Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcColorIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexBlack = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexMaroon = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexGreen = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexOlive = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexDarkBlue = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexViolet = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexTeal = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexGray = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexSilver = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexRed = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexBrightGreen = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexYellow = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexBlue = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexFuschia = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexAqua = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acColorIndexWhite = 15
 	}
 }

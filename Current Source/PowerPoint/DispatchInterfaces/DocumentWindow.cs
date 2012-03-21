@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface DocumentWindow 
-	/// SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentWindow : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Selection Selection
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.View View
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Presentation Presentation
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpViewType ViewType
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState BlackAndWhite
 		{
 			get
@@ -195,10 +195,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Active
 		{
 			get
@@ -210,10 +210,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
 		{
 			get
@@ -230,25 +230,25 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public string Caption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Left
 		{
 			get
@@ -265,10 +265,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Top
 		{
 			get
@@ -285,10 +285,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Width
 		{
 			get
@@ -305,10 +305,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Single Height
 		{
 			get
@@ -325,10 +325,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 HWND
 		{
 			get
@@ -340,10 +340,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Pane ActivePane
 		{
 			get
@@ -356,10 +356,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.Panes Panes
 		{
 			get
@@ -372,10 +372,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 SplitVertical
 		{
 			get
@@ -392,10 +392,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 SplitHorizontal
 		{
 			get
@@ -416,9 +416,9 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void FitToPage()
 		{
 			object[] paramsArray = null;
@@ -426,9 +426,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -436,24 +436,24 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		/// <param name="toLeft">optional Int32 ToLeft = 0</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void LargeScroll(Int32 down, Int32 up, Int32 toRight, Int32 toLeft)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void LargeScroll()
 		{
 			object[] paramsArray = null;
@@ -461,63 +461,63 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void LargeScroll(Int32 down)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void LargeScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
 			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void LargeScroll(Int32 down, Int32 up)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void LargeScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
 			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void LargeScroll(Int32 down, Int32 up, Int32 toRight)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void LargeScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
 			Invoker.Method(this, "LargeScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		/// <param name="toLeft">optional Int32 ToLeft = 0</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SmallScroll(Int32 down, Int32 up, Int32 toRight, Int32 toLeft)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void SmallScroll()
 		{
 			object[] paramsArray = null;
@@ -525,48 +525,48 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SmallScroll(Int32 down)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void SmallScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
 			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SmallScroll(Int32 down, Int32 up)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void SmallScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
 			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="down">optional Int32 Down = 1</param>
 		/// <param name="up">optional Int32 Up = 0</param>
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SmallScroll(Int32 down, Int32 up, Int32 toRight)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void SmallScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
 			Invoker.Method(this, "SmallScroll", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public NetOffice.PowerPointApi.DocumentWindow NewWindow()
 		{
 			object[] paramsArray = null;
@@ -576,9 +576,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -586,11 +586,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="x">Int32 X</param>
 		/// <param name="y">Int32 Y</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public COMObject RangeFromPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -600,53 +600,53 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 PointsToScreenPixelsX(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(this, "PointsToScreenPixelsX", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public Int32 PointsToScreenPixelsY(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(this, "PointsToScreenPixelsY", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
 		/// <param name="width">Single Width</param>
 		/// <param name="height">Single Height</param>
 		/// <param name="start">optional NetOffice.OfficeApi.Enums.MsoTriState Start = -1</param>
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
-		public void ScrollIntoView(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState start)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		public void ScrollIntoView(Single left, Single top, Single width, Single height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
 		/// <param name="width">Single Width</param>
 		/// <param name="height">Single Height</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		public void ScrollIntoView(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -654,23 +654,23 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public bool IsSectionExpanded(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
 			object returnItem = Invoker.MethodReturn(this, "IsSectionExpanded", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="expand">bool Expand</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public void ExpandSection(Int32 sectionIndex, bool expand)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, expand);

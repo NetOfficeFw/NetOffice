@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14
+	 /// SupportByVersion MSProject 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 14)]
+	[SupportByVersionAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjDocExportType
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjPDF = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjXPS = 1
 	}
 }

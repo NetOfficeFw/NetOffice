@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterUICallback 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterUICallback : COMObject
 	{
@@ -78,25 +78,25 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrReportProgress(UIntPtr uPercentComplete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uPercentComplete);
 			object returnItem = Invoker.MethodReturn(this, "HrReportProgress", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="uType">UIntPtr uType</param>
 		/// <param name="pidResult">Int32 pidResult</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -104,17 +104,17 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, uType, pidResult);
 			object returnItem = Invoker.MethodReturn(this, "HrMessageBox", paramsArray);
 			pidResult = (Int32)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="pbstrInput">string pbstrInput</param>
 		/// <param name="fPassword">Int32 fPassword</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, pbstrInput, fPassword);
 			object returnItem = Invoker.MethodReturn(this, "HrInputBox", paramsArray);
 			pbstrInput = (string)paramsArray[2];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

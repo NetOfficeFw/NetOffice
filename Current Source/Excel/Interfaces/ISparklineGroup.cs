@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISparklineGroup 
-	/// SupportByLibrary Excel, 14
+	/// SupportByVersion Excel, 14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISparklineGroup : COMObject ,IEnumerable<NetOffice.ExcelApi.Sparkline>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 Count
 		{
 			get
@@ -137,11 +137,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Excel", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Sparkline this[object index]
 		{
@@ -155,10 +155,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Range Location
 		{
 			get
@@ -176,17 +176,17 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public string SourceData
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceData", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -196,17 +196,17 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public string DateRange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DateRange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -216,10 +216,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlSparkType Type
 		{
 			get
@@ -236,10 +236,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.FormatColor SeriesColor
 		{
 			get
@@ -252,10 +252,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SparkPoints Points
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SparkAxes Axes
 		{
 			get
@@ -284,10 +284,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
@@ -304,10 +304,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public bool DisplayHidden
 		{
 			get
@@ -324,10 +324,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public object LineWeight
 		{
 			get
@@ -352,10 +352,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlSparklineRowCol PlotBy
 		{
 			get
@@ -376,104 +376,94 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
 		/// <param name="location">NetOffice.ExcelApi.Range Location</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 ModifyLocation(NetOffice.ExcelApi.Range location)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location);
 			object returnItem = Invoker.MethodReturn(this, "ModifyLocation", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
 		/// <param name="sourceData">string SourceData</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 ModifySourceData(string sourceData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceData);
 			object returnItem = Invoker.MethodReturn(this, "ModifySourceData", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
 		/// <param name="location">NetOffice.ExcelApi.Range Location</param>
 		/// <param name="sourceData">string SourceData</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 Modify(NetOffice.ExcelApi.Range location, string sourceData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location, sourceData);
 			object returnItem = Invoker.MethodReturn(this, "Modify", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
 		/// <param name="dateRange">string DateRange</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 ModifyDateRange(string dateRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateRange);
 			object returnItem = Invoker.MethodReturn(this, "ModifyDateRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.Sparkline> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
-        public IEnumerator<NetOffice.ExcelApi.Sparkline> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.Sparkline item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.ExcelApi.Sparkline> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 14
+        /// <summary>
+		/// SupportByVersionAttribute Excel, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
+       public IEnumerator<NetOffice.ExcelApi.Sparkline> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.ExcelApi.Sparkline item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Excel, 14
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

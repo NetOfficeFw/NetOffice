@@ -12,9 +12,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _NavigationGroups 
-	/// SupportByLibrary Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NavigationGroups : COMObject ,IEnumerable<NetOffice.OutlookApi._NavigationGroup>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi._NavigationGroup this[object index]
 		{
@@ -175,10 +175,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="groupDisplayName">string GroupDisplayName</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.NavigationGroup Create(string groupDisplayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupDisplayName);
@@ -188,10 +188,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="group">NetOffice.OutlookApi.NavigationGroup Group</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Delete(NetOffice.OutlookApi.NavigationGroup group)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(group);
@@ -199,10 +199,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="defaultFolderGroup">NetOffice.OutlookApi.Enums.OlGroupType DefaultFolderGroup</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.NavigationGroup GetDefaultNavigationGroup(NetOffice.OutlookApi.Enums.OlGroupType defaultFolderGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultFolderGroup);
@@ -212,47 +212,43 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.OutlookApi._NavigationGroup> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Outlook, 12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
-		[CustomEnumerator]
-        public IEnumerator<NetOffice.OutlookApi._NavigationGroup> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OutlookApi._NavigationGroup item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-		
-        /// <summary>
-		/// SupportByLibraryAttribute Outlook, 12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
-		[CustomEnumerator]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-        {
-			int count = Count;
-			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 0; i < count; i++)
-				enumeratorObjects[i] = this[i+1];
-
-			foreach (COMObject item in enumeratorObjects)
-				yield return item;
-        }
-
-        #endregion
+       #region IEnumerable<NetOffice.OutlookApi._NavigationGroup> Member
         
+        /// <summary>
+		/// SupportByVersionAttribute Outlook, 12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 12,14)]
+        [CustomEnumerator]
+       public IEnumerator<NetOffice.OutlookApi._NavigationGroup> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OutlookApi._NavigationGroup item in innerEnumerator)
+               yield return item;
+       }
 
+       #endregion
+   
+       #region IEnumerable Members
+        
+       /// <summary>
+		/// SupportByVersionAttribute Outlook, 12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 12,14)]
+        [CustomEnumerator]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+       {
+            int count = Count;
+            COMObject[] enumeratorObjects = new COMObject[count];
+            for (int i = 0; i < count; i++)
+                enumeratorObjects[i] = this[i+1];
 
-		#pragma warning restore
+            foreach (COMObject item in enumeratorObjects)
+                yield return item;
+       }
+
+       #endregion
+       		#pragma warning restore
 	}
 }

@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface ISegment 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISegment : COMObject
 	{
@@ -78,16 +78,16 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIStart">NetOffice.MSHTMLApi.IMarkupPointer pIStart</param>
 		/// <param name="pIEnd">NetOffice.MSHTMLApi.IMarkupPointer pIEnd</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetPointers(NetOffice.MSHTMLApi.IMarkupPointer pIStart, NetOffice.MSHTMLApi.IMarkupPointer pIEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStart, pIEnd);
 			object returnItem = Invoker.MethodReturn(this, "GetPointers", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

@@ -11,9 +11,9 @@ namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Errors 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Errors : _Collection
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ADODBApi.Error this[object index]
 		{
@@ -97,9 +97,9 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Clear()
 		{
 			object[] paramsArray = null;

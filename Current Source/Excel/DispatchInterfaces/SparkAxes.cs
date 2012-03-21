@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface SparkAxes 
-	/// SupportByLibrary Excel, 14
+	/// SupportByVersion Excel, 14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SparkAxes : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SparkVerticalAxis Vertical
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.SparkHorizontalAxis Horizontal
 		{
 			get

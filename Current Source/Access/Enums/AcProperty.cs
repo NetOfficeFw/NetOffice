@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 12, 14
+	 /// SupportByVersion Access 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcProperty
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyEnabled = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyVisible = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyLocked = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyLeft = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyTop = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyWidth = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyHeight = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyForeColor = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyBackColor = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acPropertyCaption = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 14
+		 /// SupportByVersion Access 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Access", 14)]
+		 [SupportByVersionAttribute("Access", 14)]
 		 acPropertyValue = 10
 	}
 }

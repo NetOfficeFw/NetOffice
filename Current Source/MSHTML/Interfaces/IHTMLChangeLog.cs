@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLChangeLog 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLChangeLog : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pbBuffer">byte pbBuffer</param>
 		/// <param name="nBufferSize">Int32 nBufferSize</param>
 		/// <param name="pnRecordLength">Int32 pnRecordLength</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetNextChange(byte pbBuffer, Int32 nBufferSize, out Int32 pnRecordLength)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -91,7 +91,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pbBuffer, nBufferSize, pnRecordLength);
 			object returnItem = Invoker.MethodReturn(this, "GetNextChange", paramsArray);
 			pnRecordLength = (Int32)paramsArray[2];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

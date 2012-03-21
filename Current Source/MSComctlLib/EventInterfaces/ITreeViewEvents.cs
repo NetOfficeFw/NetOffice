@@ -10,87 +10,87 @@ namespace NetOffice.MSComctlLibApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[ComImport, Guid("C74190B5-8589-11D1-B16A-00C0F0283628"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ITreeViewEvents
 	{
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void BeforeLabelEdit([In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void AfterLabelEdit([In] [Out] ref object cancel, [In] [Out] ref object newString);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void Collapse([In, MarshalAs(UnmanagedType.IDispatch)] object node);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void Expand([In, MarshalAs(UnmanagedType.IDispatch)] object node);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void NodeClick([In, MarshalAs(UnmanagedType.IDispatch)] object node);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] object shift);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] object shift);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick();
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void NodeCheck([In, MarshalAs(UnmanagedType.IDispatch)] object node);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 	}
@@ -139,8 +139,7 @@ namespace NetOffice.MSComctlLibApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeLabelEdit", ref paramsArray);
 
 			cancel = (Int16)paramsArray[0];
 		}
@@ -157,8 +156,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(newString, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterLabelEdit", ref paramsArray);
 
 			cancel = (Int16)paramsArray[0];
 			newString = (string)paramsArray[1];
@@ -176,8 +174,7 @@ namespace NetOffice.MSComctlLibApi
 			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Collapse", ref paramsArray);
 		}
 
 		public void Expand([In, MarshalAs(UnmanagedType.IDispatch)] object node)
@@ -192,8 +189,7 @@ namespace NetOffice.MSComctlLibApi
 			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Expand", ref paramsArray);
 		}
 
 		public void NodeClick([In, MarshalAs(UnmanagedType.IDispatch)] object node)
@@ -208,8 +204,7 @@ namespace NetOffice.MSComctlLibApi
 			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NodeClick", ref paramsArray);
 		}
 
 		public void KeyDown([In] [Out] ref object keyCode, [In] object shift)
@@ -225,8 +220,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray[1] = newShift;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 
 			keyCode = (Int16)paramsArray[0];
 		}
@@ -244,8 +238,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray[1] = newShift;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 
 			keyCode = (Int16)paramsArray[0];
 		}
@@ -261,8 +254,7 @@ namespace NetOffice.MSComctlLibApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(keyAscii, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 
 			keyAscii = (Int16)paramsArray[0];
 		}
@@ -285,8 +277,7 @@ namespace NetOffice.MSComctlLibApi
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 		}
 
 		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
@@ -307,8 +298,7 @@ namespace NetOffice.MSComctlLibApi
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 		}
 
 		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
@@ -329,8 +319,7 @@ namespace NetOffice.MSComctlLibApi
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 		}
 
 		public void Click()
@@ -343,8 +332,7 @@ namespace NetOffice.MSComctlLibApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void DblClick()
@@ -357,8 +345,7 @@ namespace NetOffice.MSComctlLibApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 		}
 
 		public void NodeCheck([In, MarshalAs(UnmanagedType.IDispatch)] object node)
@@ -373,8 +360,7 @@ namespace NetOffice.MSComctlLibApi
 			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NodeCheck", ref paramsArray);
 		}
 
 		public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
@@ -389,8 +375,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(data, 0);
 			paramsArray.SetValue(allowedEffects, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLEStartDrag", ref paramsArray);
 
 			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			allowedEffects = (Int32)paramsArray[1];
@@ -408,8 +393,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(effect, 0);
 			paramsArray.SetValue(defaultCursors, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLEGiveFeedback", ref paramsArray);
 
 			effect = (Int32)paramsArray[0];
 			defaultCursors = (bool)paramsArray[1];
@@ -427,8 +411,7 @@ namespace NetOffice.MSComctlLibApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(data, 0);
 			paramsArray.SetValue(dataFormat, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLESetData", ref paramsArray);
 
 			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			dataFormat = (Int16)paramsArray[1];
@@ -445,8 +428,7 @@ namespace NetOffice.MSComctlLibApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(effect, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLECompleteDrag", ref paramsArray);
 
 			effect = (Int32)paramsArray[0];
 		}
@@ -468,8 +450,7 @@ namespace NetOffice.MSComctlLibApi
 			paramsArray.SetValue(x, 4);
 			paramsArray.SetValue(y, 5);
 			paramsArray.SetValue(state, 6);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLEDragOver", ref paramsArray);
 
 			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];
@@ -496,8 +477,7 @@ namespace NetOffice.MSComctlLibApi
 			paramsArray.SetValue(shift, 3);
 			paramsArray.SetValue(x, 4);
 			paramsArray.SetValue(y, 5);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OLEDragDrop", ref paramsArray);
 
 			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
 			effect = (Int32)paramsArray[1];

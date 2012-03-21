@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface FieldListHierarchySite 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class FieldListHierarchySite : COMObject
 	{
@@ -78,14 +78,14 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="nOldNodeId">Int32 nOldNodeId</param>
 		/// <param name="nOldTypeId">Int32 nOldTypeId</param>
 		/// <param name="pfPrevent">Int32 pfPrevent</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PreSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId, out Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -93,32 +93,32 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nOldNodeId, nOldTypeId, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "PreSelect", paramsArray);
 			pfPrevent = (Int32)paramsArray[4];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="nOldNodeId">Int32 nOldNodeId</param>
 		/// <param name="nOldTypeId">Int32 nOldTypeId</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PostSelect(Int32 nNodeId, Int32 nTypeId, Int32 nOldNodeId, Int32 nOldTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nOldNodeId, nOldTypeId);
 			object returnItem = Invoker.MethodReturn(this, "PostSelect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="fExpand">Int32 fExpand</param>
 		/// <param name="pfPrevent">Int32 pfPrevent</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PreExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand, out Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -126,32 +126,32 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, fExpand, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "PreExpand", paramsArray);
 			pfPrevent = (Int32)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="fExpand">Int32 fExpand</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PostExpand(Int32 nNodeId, Int32 nTypeId, Int32 fExpand)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, fExpand);
 			object returnItem = Invoker.MethodReturn(this, "PostExpand", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="ppobject">object ppobject</param>
 		/// <param name="ppPivotView">object ppPivotView</param>
 		/// <param name="pfPrevent">Int32 pfPrevent</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PreDrag(Int32 nNodeId, Int32 nTypeId, out object ppobject, out object ppPivotView, out Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
@@ -163,44 +163,44 @@ namespace NetOffice.OWC10Api
 			ppobject = (object)paramsArray[2];
 			ppPivotView = (object)paramsArray[3];
 			pfPrevent = (Int32)paramsArray[4];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="hRes">Int32 hRes</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PostDrag(Int32 nNodeId, Int32 nTypeId, Int32 hRes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, hRes);
 			object returnItem = Invoker.MethodReturn(this, "PostDrag", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PopulateChildren(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
 			object returnItem = Invoker.MethodReturn(this, "PopulateChildren", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="hMenu">UIntPtr hMenu</param>
 		/// <param name="pfPrevent">Int32 pfPrevent</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 ContextMenu(Int32 nNodeId, Int32 nTypeId, UIntPtr hMenu, out Int32 pfPrevent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -208,76 +208,76 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, hMenu, pfPrevent);
 			object returnItem = Invoker.MethodReturn(this, "ContextMenu", paramsArray);
 			pfPrevent = (Int32)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
 		/// <param name="wid">UIntPtr wid</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 DoCommand(Int32 nNodeId, Int32 nTypeId, UIntPtr wid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, wid);
 			object returnItem = Invoker.MethodReturn(this, "DoCommand", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 DoubleClick(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
 			object returnItem = Invoker.MethodReturn(this, "DoubleClick", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PostDelete(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
 			object returnItem = Invoker.MethodReturn(this, "PostDelete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nSelMask">Int32 nSelMask</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 PostMSelect(Int32 nSelMask)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nSelMask);
 			object returnItem = Invoker.MethodReturn(this, "PostMSelect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Click(Int32 nNodeId, Int32 nTypeId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId);
 			object returnItem = Invoker.MethodReturn(this, "Click", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -285,7 +285,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="nwParam">Int32 nwParam</param>
 		/// <param name="nlParam">Int32 nlParam</param>
 		/// <param name="pfStopProcessing">Int32 pfStopProcessing</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 KeyEvent(Int32 nNodeId, Int32 nTypeId, Int32 nMsg, Int32 nwParam, Int32 nlParam, out Int32 pfStopProcessing)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
@@ -293,7 +293,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(nNodeId, nTypeId, nMsg, nwParam, nlParam, pfStopProcessing);
 			object returnItem = Invoker.MethodReturn(this, "KeyEvent", paramsArray);
 			pfStopProcessing = (Int32)paramsArray[5];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

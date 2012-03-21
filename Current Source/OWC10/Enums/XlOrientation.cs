@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1
+	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlOrientation
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4170</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlDownward = -4170,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4128</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlHorizontal = -4128,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4171</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlUpward = -4171,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4166</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlVertical = -4166
 	}
 }

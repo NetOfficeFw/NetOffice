@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SmartDocument 
-	/// SupportByLibrary Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartDocument : _IMsoDispObj
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public string SolutionID
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SolutionID", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,17 +95,17 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public string SolutionURL
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SolutionURL", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -119,21 +119,21 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
 		/// <param name="considerAllSchemas">optional bool ConsiderAllSchemas = false</param>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
-		public void PickSolution(bool considerAllSchemas)
+		[SupportByVersionAttribute("Office", 11,12,14)]
+		public void PickSolution(object considerAllSchemas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(considerAllSchemas);
 			Invoker.Method(this, "PickSolution", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void PickSolution()
 		{
 			object[] paramsArray = null;
@@ -141,9 +141,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void RefreshPane()
 		{
 			object[] paramsArray = null;

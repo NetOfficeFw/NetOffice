@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _Rule 
-	/// SupportByLibrary Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Rule : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -138,17 +138,17 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -158,10 +158,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public Int32 ExecutionOrder
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.Enums.OlRuleType RuleType
 		{
 			get
@@ -193,10 +193,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool Enabled
 		{
 			get
@@ -213,10 +213,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public bool IsLocalRule
 		{
 			get
@@ -228,10 +228,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleActions Actions
 		{
 			get
@@ -244,10 +244,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleConditions Conditions
 		{
 			get
@@ -260,10 +260,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public NetOffice.OutlookApi.RuleConditions Exceptions
 		{
 			get
@@ -280,13 +280,13 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="showProgress">optional object ShowProgress</param>
 		/// <param name="folder">optional object Folder</param>
 		/// <param name="includeSubfolders">optional object IncludeSubfolders</param>
 		/// <param name="ruleExecuteOption">optional object RuleExecuteOption</param>
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Execute(object showProgress, object folder, object includeSubfolders, object ruleExecuteOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress, folder, includeSubfolders, ruleExecuteOption);
@@ -294,10 +294,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Execute()
 		{
 			object[] paramsArray = null;
@@ -305,11 +305,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="showProgress">optional object ShowProgress</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Execute(object showProgress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress);
@@ -317,12 +317,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="showProgress">optional object ShowProgress</param>
 		/// <param name="folder">optional object Folder</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Execute(object showProgress, object folder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress, folder);
@@ -330,13 +330,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14
 		/// </summary>
 		/// <param name="showProgress">optional object ShowProgress</param>
 		/// <param name="folder">optional object Folder</param>
 		/// <param name="includeSubfolders">optional object IncludeSubfolders</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		public void Execute(object showProgress, object folder, object includeSubfolders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showProgress, folder, includeSubfolders);

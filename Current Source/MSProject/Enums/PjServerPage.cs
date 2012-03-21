@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14
+	 /// SupportByVersion MSProject 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 14)]
+	[SupportByVersionAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjServerPage
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageApprovals = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageResourceCenter = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageProjectCenter = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPagePortfolioAnalyzer = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageStatusReports = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPagePermissions = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageProjectDetails = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageDocuments = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageIssues = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageRisks = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjServerPageWorkspace = 10
 	}
 }

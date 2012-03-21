@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPBitmap 
-	/// SupportByLibrary PowerPoint, 9
+	/// SupportByVersion PowerPoint, 9
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPBitmap : PPControl
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get
@@ -95,17 +95,17 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public string OnClick
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnClick", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{

@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Property 
-	/// SupportByLibrary DAO, 6,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Property : _DAO
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public object Value
 		{
 			get
@@ -103,17 +103,17 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -123,10 +123,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int16 Type
 		{
 			get
@@ -143,10 +143,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public bool Inherited
 		{
 			get

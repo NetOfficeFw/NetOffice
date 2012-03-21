@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 11, 12, 14
+	 /// SupportByVersion Outlook 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 11,12,14)]
+	[SupportByVersionAttribute("Outlook", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlExchangeConnectionMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olNoExchange = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>100</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olOffline = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>200</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olCachedOffline = 200,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>300</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olDisconnected = 300,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>400</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olCachedDisconnected = 400,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>500</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olCachedConnectedHeaders = 500,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>600</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olCachedConnectedDrizzle = 600,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>700</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olCachedConnectedFull = 700,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 11, 12, 14
+		 /// SupportByVersion Outlook 11, 12, 14
 		 /// </summary>
 		 /// <remarks>800</remarks>
-		 [SupportByLibraryAttribute("Outlook", 11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 11,12,14)]
 		 olOnline = 800
 	}
 }

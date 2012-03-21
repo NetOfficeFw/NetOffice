@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 12, 14
+	 /// SupportByVersion Word 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdPasteOptions
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdKeepSourceFormatting = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdMatchDestinationFormatting = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdKeepTextOnly = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdUseDestinationStyles = 3
 	}
 }

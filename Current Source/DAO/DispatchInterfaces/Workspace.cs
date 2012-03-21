@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Workspace 
-	/// SupportByLibrary DAO, 6,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Workspace : _DAO
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,32 +95,32 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string UserName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UserName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string _30_UserName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_30_UserName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -130,17 +130,17 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string _30_Password
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_30_Password", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -150,10 +150,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int16 IsolateODBCTrans
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Databases Databases
 		{
 			get
@@ -186,10 +186,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Users Users
 		{
 			get
@@ -202,10 +202,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Groups Groups
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 LoginTimeout
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 DefaultCursorDriver
 		{
 			get
@@ -258,10 +258,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 hEnv
 		{
@@ -274,10 +274,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 Type
 		{
 			get
@@ -289,10 +289,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Connections Connections
 		{
 			get
@@ -309,9 +309,9 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void BeginTrans()
 		{
 			object[] paramsArray = null;
@@ -319,21 +319,21 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="options">optional Int32 Options = 0</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
-		public void CommitTrans(Int32 options)
+		[SupportByVersionAttribute("DAO", 12,3.6)]
+		public void CommitTrans(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "CommitTrans", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void CommitTrans()
 		{
 			object[] paramsArray = null;
@@ -341,9 +341,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -351,9 +351,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void Rollback()
 		{
 			object[] paramsArray = null;
@@ -361,13 +361,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="connect">optional object Connect</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
@@ -377,11 +377,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -391,12 +391,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
@@ -406,13 +406,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
@@ -422,12 +422,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="connect">string Connect</param>
 		/// <param name="option">optional object Option</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database CreateDatabase(string name, string connect, object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, connect, option);
@@ -437,12 +437,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="connect">string Connect</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Database CreateDatabase(string name, string connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, connect);
@@ -452,12 +452,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="pID">optional object PID</param>
 		/// <param name="password">optional object Password</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID, password);
@@ -467,10 +467,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.User CreateUser()
 		{
 			object[] paramsArray = null;
@@ -480,11 +480,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.User CreateUser(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -494,12 +494,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="pID">optional object PID</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.User CreateUser(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
@@ -509,11 +509,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="pID">optional object PID</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
@@ -523,10 +523,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Group CreateGroup()
 		{
 			object[] paramsArray = null;
@@ -536,11 +536,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Group CreateGroup(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -550,13 +550,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="connect">optional object Connect</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
@@ -566,11 +566,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -580,12 +580,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
@@ -595,13 +595,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);

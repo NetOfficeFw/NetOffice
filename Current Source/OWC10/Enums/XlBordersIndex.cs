@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1
+	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlBordersIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlEdgeLeft = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlEdgeTop = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlEdgeBottom = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlEdgeRight = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlInsideVertical = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlInsideHorizontal = 12
 	}
 }

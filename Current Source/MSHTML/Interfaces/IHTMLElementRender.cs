@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLElementRender 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLElementRender : COMObject
 	{
@@ -78,28 +78,28 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="hdc">_RemotableHandle hdc</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 DrawToDC(_RemotableHandle hdc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hdc);
 			object returnItem = Invoker.MethodReturn(this, "DrawToDC", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrPrinterName">string bstrPrinterName</param>
 		/// <param name="hdc">_RemotableHandle hdc</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SetDocumentPrinter(string bstrPrinterName, _RemotableHandle hdc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPrinterName, hdc);
 			object returnItem = Invoker.MethodReturn(this, "SetDocumentPrinter", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

@@ -10,15 +10,15 @@ namespace NetOffice.ExcelApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[ComImport, Guid("0002441B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface RefreshEvents
 	{
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1596)]
 		void BeforeRefresh([In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1597)]
 		void AfterRefresh([In] object success);
 	}
@@ -67,8 +67,7 @@ namespace NetOffice.ExcelApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeRefresh", ref paramsArray);
 
 			cancel = (bool)paramsArray[0];
 		}
@@ -85,8 +84,7 @@ namespace NetOffice.ExcelApi
 			bool newSuccess = (bool)success;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSuccess;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterRefresh", ref paramsArray);
 		}
 
 		#endregion

@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IOleUndoUnit 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IOleUndoUnit : COMObject
 	{
@@ -78,22 +78,22 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Do(NetOffice.OWC10Api.IOleUndoManager pUndoManager)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUndoManager);
 			object returnItem = Invoker.MethodReturn(this, "Do", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetDescription(out string pbstr)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -101,15 +101,15 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstr);
 			object returnItem = Invoker.MethodReturn(this, "GetDescription", paramsArray);
 			pbstr = (string)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="pClsid">Guid pClsid</param>
 		/// <param name="plID">Int32 plID</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetUnitType(out Guid pClsid, out Int32 plID)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -119,18 +119,18 @@ namespace NetOffice.OWC10Api
 			object returnItem = Invoker.MethodReturn(this, "GetUnitType", paramsArray);
 			pClsid = (Guid)paramsArray[0];
 			plID = (Int32)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 OnNextAdd()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OnNextAdd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

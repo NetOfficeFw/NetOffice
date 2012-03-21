@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _styleLayoutGridType
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeNotSet = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeLoose = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeStrict = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleLayoutGridTypeFixed = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleLayoutGridType_Max = 2147483647
 	}
 }

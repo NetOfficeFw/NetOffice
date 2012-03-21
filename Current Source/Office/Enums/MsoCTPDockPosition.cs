@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14
+	 /// SupportByVersion Office 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoCTPDockPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 msoCTPDockPositionLeft = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 msoCTPDockPositionTop = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 msoCTPDockPositionRight = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 msoCTPDockPositionBottom = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 msoCTPDockPositionFloating = 4
 	}
 }

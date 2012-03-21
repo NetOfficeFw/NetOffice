@@ -112,7 +112,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <param name="parentObject"></param>
         /// <param name="comProxy"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy)
         {
             _parentObject = parentObject;
@@ -124,7 +124,7 @@ namespace LateBindingApi.Core
 
             Factory.AddObjectToList(this);
         }
- 
+
         /// <summary>
         /// creates new instance with given proxy, parent info and info instance is an enumerator
         /// </summary>
@@ -216,6 +216,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// NetOffice property: returns instance is diposed means unusable
         /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool IsDisposed
         {
             get
@@ -265,10 +266,22 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
+        ///  child instance List
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        internal List<COMObject> ListChildObjects
+        {
+            get
+            {
+                return _listChildObjects;
+            }
+        }
+
+        /// <summary>
         /// NetOffice property: returns instance export events
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool IsEventBind
+        public bool IsEventBinding
         {
             get
             {
@@ -280,7 +293,7 @@ namespace LateBindingApi.Core
         /// NetOffice property: returns event bridge is advised
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool EventBridgeInitialized
+        public bool IsEventBridgeInitialized
         {
             get
             {
@@ -296,27 +309,15 @@ namespace LateBindingApi.Core
         /// NetOffice property: retuns instance has one or more event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients
+        public bool IsWithEventRecipients
         {
             get
             {
                 IEventBinding bindInfo = this as IEventBinding;
                 if (null != bindInfo)
-                    return bindInfo.HasEventRecipients;
+                    return bindInfo.HasEventRecipients();
                 else
                     return false;
-            }
-        }
-
-        /// <summary>
-        ///  child instance List
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        internal List<COMObject> ListChildObjects
-        {
-            get
-            {
-                return _listChildObjects;
             }
         }
 
@@ -389,7 +390,6 @@ namespace LateBindingApi.Core
             _underlyingObject = Activator.CreateInstance(_instanceType);
         }
 
-          
         /// <summary>
         ///  NetOffice method: add object to child list
         /// </summary>
@@ -446,9 +446,10 @@ namespace LateBindingApi.Core
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);                
+                DebugConsole.WriteException(exception);
             }
         }
+
         #endregion
 
         #region IDisposable Members
@@ -457,7 +458,7 @@ namespace LateBindingApi.Core
         /// NetOffice method: dispose instance and all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
-        public void Dispose(bool disposeEventBinding)
+        public virtual void Dispose(bool disposeEventBinding)
         {
             // in case object export events and 
             // disposeEventBinding == true we dont remove the object from parents child list
@@ -471,7 +472,7 @@ namespace LateBindingApi.Core
             if (disposeEventBinding)
             {
                 if (null != eventBind)
-                    eventBind.DisposeSinkHelper();
+                    eventBind.DisposeEventBridge();
             }
             else
             {
@@ -492,16 +493,12 @@ namespace LateBindingApi.Core
             // call quit automaticly if wanted
             if (_callQuitInDispose)
                 CallQuit(_underlyingObject);
-            
+
             // release proxy
             ReleaseCOMProxy();
 
-            // clear supportList
-            if (null != _listSupportedEntities)
-            {
-                _listSupportedEntities.Clear();
-                _listSupportedEntities = null;
-            }
+            // clear supportList reference
+            _listSupportedEntities = null;
 
             _isDisposed = true;
             _isCurrentlyDisposing = false;
@@ -510,7 +507,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// NetOffice method: dispose instance and all child instances
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose()
         {
             Dispose(true);
         }
@@ -553,7 +550,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override int GetHashCode()
+        public new int GetHashCode()
         {
             return base.GetHashCode();
         }
@@ -563,7 +560,7 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override string ToString()
+        public new string ToString()
         {
             return base.ToString();
         }
@@ -573,9 +570,30 @@ namespace LateBindingApi.Core
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public override bool Equals(Object obj)
+        public new bool Equals(Object obj)
         {
             return base.Equals(obj);
+        }
+
+        /*
+        /// Determines whether two Object instances are equal.
+        /// </summary>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public new bool Equals(Object objA, Object objB)
+        {
+            return base.Equals(objA, objB);
+        }
+        */
+
+        /// <summary>
+        /// Gets a Type object that represents the specified type.
+        /// </summary>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public new Type GetType()
+        {
+            return base.GetType();
         }
 
         #endregion

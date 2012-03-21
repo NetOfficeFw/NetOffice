@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface LegendEntries 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LegendEntries : COMObject ,IEnumerable<NetOffice.OfficeApi.LegendEntry>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public COMObject Application
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 Creator
 		{
 			get
@@ -137,79 +137,56 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Office", 14)]
-		public NetOffice.OfficeApi.LegendEntry get__Default(object index)
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Office", 14)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.LegendEntry this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.LegendEntry.LateBindingApiWrapperType) as NetOffice.OfficeApi.LegendEntry;
 			return newObject;
+			}
 		}
 
 		#endregion
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		#endregion
+
+       #region IEnumerable<NetOffice.OfficeApi.LegendEntry> Member
+        
+        /// <summary>
+		/// SupportByVersionAttribute Office, 12,14
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OfficeApi.LegendEntry this[object index]
+		[SupportByVersionAttribute("Office", 12,14)]
+       public IEnumerator<NetOffice.OfficeApi.LegendEntry> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.LegendEntry item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 12,14)]
+		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.LegendEntry newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.LegendEntry.LateBindingApiWrapperType) as NetOffice.OfficeApi.LegendEntry;
-				return newObject;
-			}
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.OfficeApi.LegendEntry> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
-        public IEnumerator<NetOffice.OfficeApi.LegendEntry> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.LegendEntry item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-        
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
-
-        #endregion
 		#pragma warning restore
 	}
 }

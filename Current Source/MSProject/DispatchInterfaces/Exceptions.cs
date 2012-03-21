@@ -12,9 +12,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Exceptions 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Exceptions : COMObject ,IEnumerable<NetOffice.MSProjectApi.Exception>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Calendar Parent
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -123,11 +123,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Exception this[object index]
 		{
@@ -145,7 +145,7 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -158,7 +158,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="monthItem">optional object MonthItem</param>
 		/// <param name="month">optional object Month</param>
 		/// <param name="monthDay">optional object MonthDay</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem, object month, object monthDay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem, month, monthDay);
@@ -168,12 +168,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start);
@@ -183,13 +183,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
 		/// <param name="finish">optional object Finish</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish);
@@ -199,14 +199,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
 		/// <param name="finish">optional object Finish</param>
 		/// <param name="occurrences">optional object Occurrences</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences);
@@ -216,7 +216,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -224,7 +224,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="occurrences">optional object Occurrences</param>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name);
@@ -234,7 +234,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -243,7 +243,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="name">optional object Name</param>
 		/// <param name="period">optional object Period</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period);
@@ -253,7 +253,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -263,7 +263,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="period">optional object Period</param>
 		/// <param name="daysOfWeek">optional object DaysOfWeek</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek);
@@ -273,7 +273,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -284,7 +284,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="daysOfWeek">optional object DaysOfWeek</param>
 		/// <param name="monthPosition">optional object MonthPosition</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition);
@@ -294,7 +294,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -306,7 +306,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="monthPosition">optional object MonthPosition</param>
 		/// <param name="monthItem">optional object MonthItem</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem);
@@ -316,7 +316,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjExceptionType Type</param>
 		/// <param name="start">object Start</param>
@@ -329,7 +329,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="monthItem">optional object MonthItem</param>
 		/// <param name="month">optional object Month</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.Exception Add(NetOffice.MSProjectApi.Enums.PjExceptionType type, object start, object finish, object occurrences, object name, object period, object daysOfWeek, object monthPosition, object monthItem, object month)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, start, finish, occurrences, name, period, daysOfWeek, monthPosition, monthItem, month);
@@ -340,43 +340,33 @@ namespace NetOffice.MSProjectApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.MSProjectApi.Exception> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute MSProject, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-        public IEnumerator<NetOffice.MSProjectApi.Exception> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.MSProjectApi.Exception item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.MSProjectApi.Exception> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute MSProject, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute MSProject, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
+       public IEnumerator<NetOffice.MSProjectApi.Exception> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.MSProjectApi.Exception item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute MSProject, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

@@ -23,11 +23,11 @@ namespace NetOffice.MSProjectApi
 
 	///<summary>
 	/// CoClass Project 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Project : _IProjectDoc, IEventBinding 
+	public class Project : _IProjectDoc,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -65,7 +65,7 @@ namespace NetOffice.MSProjectApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -100,13 +100,194 @@ namespace NetOffice.MSProjectApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_OpenEventHandler _OpenEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_OpenEventHandler OpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_OpenEvent += value;
+			}
+			remove
+			{
+				_OpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_BeforeCloseEventHandler _BeforeCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_BeforeCloseEventHandler BeforeCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeCloseEvent += value;
+			}
+			remove
+			{
+				_BeforeCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_BeforeSaveEventHandler _BeforeSaveEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_BeforeSaveEventHandler BeforeSaveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeSaveEvent += value;
+			}
+			remove
+			{
+				_BeforeSaveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_BeforePrintEventHandler _BeforePrintEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_BeforePrintEventHandler BeforePrintEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforePrintEvent += value;
+			}
+			remove
+			{
+				_BeforePrintEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_CalculateEventHandler _CalculateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_CalculateEventHandler CalculateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CalculateEvent += value;
+			}
+			remove
+			{
+				_CalculateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_ChangeEventHandler _ChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_ChangeEventHandler ChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ChangeEvent += value;
+			}
+			remove
+			{
+				_ChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_ActivateEventHandler _ActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_ActivateEventHandler ActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ActivateEvent += value;
+			}
+			remove
+			{
+				_ActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Project_DeactivateEventHandler _DeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Project_DeactivateEventHandler DeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DeactivateEvent += value;
+			}
+			remove
+			{
+				_DeactivateEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -124,191 +305,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_OpenEventHandler _OpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_OpenEventHandler OpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OpenEvent += value;
-			}
-			remove
-			{
-				_OpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_BeforeCloseEventHandler _BeforeCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_BeforeCloseEventHandler BeforeCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeCloseEvent += value;
-			}
-			remove
-			{
-				_BeforeCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_BeforeSaveEventHandler _BeforeSaveEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_BeforeSaveEventHandler BeforeSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeSaveEvent += value;
-			}
-			remove
-			{
-				_BeforeSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_BeforePrintEventHandler _BeforePrintEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_BeforePrintEventHandler BeforePrintEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforePrintEvent += value;
-			}
-			remove
-			{
-				_BeforePrintEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_CalculateEventHandler _CalculateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_CalculateEventHandler CalculateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CalculateEvent += value;
-			}
-			remove
-			{
-				_CalculateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_ChangeEventHandler _ChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_ChangeEventHandler ChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ChangeEvent += value;
-			}
-			remove
-			{
-				_ChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_ActivateEventHandler _ActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_ActivateEventHandler ActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ActivateEvent += value;
-			}
-			remove
-			{
-				_ActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Project_DeactivateEventHandler _DeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Project_DeactivateEventHandler DeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DeactivateEvent += value;
-			}
-			remove
-			{
-				_DeactivateEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -319,25 +316,22 @@ namespace NetOffice.MSProjectApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -360,8 +354,59 @@ namespace NetOffice.MSProjectApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __EProjectDoc_SinkHelper)
 			{
@@ -373,6 +418,7 @@ namespace NetOffice.MSProjectApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

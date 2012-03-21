@@ -10,47 +10,47 @@ namespace NetOffice.MSHTMLApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[ComImport, Guid("A6D897FF-0A95-11D1-B0BA-006008166E11"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DWebBridgeEvents
 	{
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void onscriptletevent([In] object name, [In, MarshalAs(UnmanagedType.IDispatch)] object eventData);
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-609)]
 		void onreadystatechange();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void onclick();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void ondblclick();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void onkeydown();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void onkeyup();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void onkeypress();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void onmousedown();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void onmousemove();
 
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void onmouseup();
 	}
@@ -102,8 +102,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;
 			paramsArray[1] = neweventData;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onscriptletevent", ref paramsArray);
 		}
 
 		public void onreadystatechange()
@@ -116,8 +115,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		public void onclick()
@@ -130,8 +128,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onclick", ref paramsArray);
 		}
 
 		public void ondblclick()
@@ -144,8 +141,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ondblclick", ref paramsArray);
 		}
 
 		public void onkeydown()
@@ -158,8 +154,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onkeydown", ref paramsArray);
 		}
 
 		public void onkeyup()
@@ -172,8 +167,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onkeyup", ref paramsArray);
 		}
 
 		public void onkeypress()
@@ -186,8 +180,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onkeypress", ref paramsArray);
 		}
 
 		public void onmousedown()
@@ -200,8 +193,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onmousedown", ref paramsArray);
 		}
 
 		public void onmousemove()
@@ -214,8 +206,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onmousemove", ref paramsArray);
 		}
 
 		public void onmouseup()
@@ -228,8 +219,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onmouseup", ref paramsArray);
 		}
 
 		#endregion

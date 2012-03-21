@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 12, 14
+	 /// SupportByVersion Word 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdAlignmentTabRelative
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdMargin = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdIndent = 1
 	}
 }

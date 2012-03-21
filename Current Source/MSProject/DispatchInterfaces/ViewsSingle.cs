@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface ViewsSingle 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewsSingle : Views
 	{
@@ -79,7 +79,7 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -88,8 +88,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filter">object Filter</param>
 		/// <param name="group">object Group</param>
 		/// <param name="highlightFilt">optional bool HighlightFilt = false</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewSingle Add(string name, NetOffice.MSProjectApi.Enums.PjViewScreen screen, bool showInMenu, object table, object filter, object group, bool highlightFilt)
+		[SupportByVersionAttribute("MSProject", 12,14)]
+		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter, object group, object highlightFilt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group, highlightFilt);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -98,15 +98,15 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
 		/// <param name="table">object Table</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewSingle Add(string name, NetOffice.MSProjectApi.Enums.PjViewScreen screen, bool showInMenu, object table)
+		[SupportByVersionAttribute("MSProject", 12,14)]
+		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -115,7 +115,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -123,8 +123,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="table">object Table</param>
 		/// <param name="filter">object Filter</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewSingle Add(string name, NetOffice.MSProjectApi.Enums.PjViewScreen screen, bool showInMenu, object table, object filter)
+		[SupportByVersionAttribute("MSProject", 12,14)]
+		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -133,7 +133,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -142,8 +142,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filter">object Filter</param>
 		/// <param name="group">object Group</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewSingle Add(string name, NetOffice.MSProjectApi.Enums.PjViewScreen screen, bool showInMenu, object table, object filter, object group)
+		[SupportByVersionAttribute("MSProject", 12,14)]
+		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter, object group)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

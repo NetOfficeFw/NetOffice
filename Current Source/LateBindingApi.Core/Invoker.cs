@@ -15,7 +15,7 @@ namespace LateBindingApi.Core
         #region Fields
 
         private static readonly string _exceptionMessage = "See inner exception for details.";
-        
+
         #endregion
 
         #region Method
@@ -39,7 +39,7 @@ namespace LateBindingApi.Core
         {
             Method(comObject, name, null);
         }
-               
+
         /// <summary>
         /// perform method as latebind call with parameters
         /// </summary>
@@ -47,6 +47,29 @@ namespace LateBindingApi.Core
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         public static void Method(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if( (Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name,SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with parameters
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static void MethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
@@ -58,7 +81,7 @@ namespace LateBindingApi.Core
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
         }
-       
+
         /// <summary>
         /// perform method as latebind call with parameters 
         /// </summary>
@@ -68,7 +91,7 @@ namespace LateBindingApi.Core
         public static void Method(object comObject, string name, object[] paramsArray)
         {
             try
-            {
+            { 
                 comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
@@ -76,7 +99,7 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
             }
-         }
+        }
 
         /// <summary>
         /// perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
@@ -89,6 +112,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
                 comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
             }
             catch (Exception throwedException)
@@ -108,6 +134,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
                 object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
                 return returnValue;
             }
@@ -126,6 +155,31 @@ namespace LateBindingApi.Core
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         public static object MethodReturn(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static object MethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
@@ -151,6 +205,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
                 object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
                 return returnValue;
             }
@@ -195,6 +252,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
                 return returnValue;
             }
@@ -223,9 +283,10 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            }             
+            }
         }
 
+        
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
@@ -237,6 +298,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
                 return returnValue;
             }
@@ -244,8 +308,32 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            }             
+            }
         }
+
+        
+        /// <summary>
+        /// perform property get as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of property</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static object PropertyGetWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
+            }
+        }
+
 
         /// <summary>
         /// perform property get as latebind call with return value
@@ -259,6 +347,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
                 return returnValue;
             }
@@ -266,7 +357,7 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            }           
+            }
         }
 
         /// <summary>
@@ -280,6 +371,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 object[] newParamsArray = new object[paramsArray.Length + 1];
                 for (int i = 0; i < paramsArray.Length; i++)
                     newParamsArray[i] = paramsArray[i];
@@ -291,7 +385,7 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            } 
+            }
         }
 
         /// <summary>
@@ -306,6 +400,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 object[] newParamsArray = new object[paramsArray.Length + 1];
                 for (int i = 0; i < paramsArray.Length; i++)
                     newParamsArray[i] = paramsArray[i];
@@ -317,7 +414,7 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            } 
+            }
         }
 
         /// <summary>
@@ -330,13 +427,16 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            }             
+            }
         }
 
         /// <summary>
@@ -350,6 +450,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.ThreadCulture, null);
             }
             catch (Exception throwedException)
@@ -370,6 +473,9 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.ThreadCulture, null);
             }
             catch (Exception throwedException)
@@ -389,13 +495,16 @@ namespace LateBindingApi.Core
         {
             try
             {
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
+                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+
                 comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
             {
                 DebugConsole.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(_exceptionMessage, throwedException);
-            } 
+            }
         }
 
         #endregion
@@ -433,7 +542,7 @@ namespace LateBindingApi.Core
             {
                 COMObject comObject = param as COMObject;
                 if (null != comObject)
-                        param = comObject.UnderlyingObject;
+                    param = comObject.UnderlyingObject;
                 else if (param.GetType().IsEnum)
                     param = Convert.ToInt32(param);
 
@@ -452,7 +561,7 @@ namespace LateBindingApi.Core
             if (null != paramsArray)
             {
                 int parramArrayCount = paramsArray.Length;
-                for (int i = 0; i<parramArrayCount; i++)
+                for (int i = 0; i < parramArrayCount; i++)
                     paramsArray[i] = ValidateParam(paramsArray[i]);
                 return paramsArray;
             }
@@ -541,6 +650,6 @@ namespace LateBindingApi.Core
                 return null;
         }
 
-        #endregion      
+        #endregion
     }
 }

@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14
+	 /// SupportByVersion Word 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdCompatibilityMode
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdWord2003 = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdWord2007 = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdWord2010 = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>65535</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdCurrent = 65535
 	}
 }

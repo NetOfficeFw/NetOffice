@@ -36,6 +36,7 @@ namespace LateBindingApi.Core
         private static bool        _enableAutomaticQuit;
         private static bool        _enableAdHocLoading = true;
         private static bool        _enableDebugOutput = true;
+        private static bool        _enableSafeMode = false;
 
         #endregion
 
@@ -89,7 +90,7 @@ namespace LateBindingApi.Core
         /// <summary>
         /// Get or set the Message Filter enabled.
         /// The MessageFilter suspress any exceptional dialog messages, specialy the "Application ist waiting for another OLE Task" dialog
-        ///default is true
+        /// default is true
         /// </summary>
         public static bool EnableMessageFilter
         {
@@ -126,7 +127,22 @@ namespace LateBindingApi.Core
                 _enableAutomaticQuit = value;
             }
         }
-        
+
+        /// <summary>
+        /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesnt a EntityNotSupportedException is thrown
+        /// </summary>
+        public static bool EnableSafeMode
+        {
+            get
+            {
+                return _enableSafeMode;
+            }
+            set
+            {
+                _enableSafeMode = value;
+            }
+        }
+
         /// <summary>
         /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations
         /// </summary>
@@ -157,6 +173,7 @@ namespace LateBindingApi.Core
                 _enableDebugOutput = value;
             }
         }
+      
         #endregion
     }
 }

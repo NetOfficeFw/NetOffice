@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _styleDisplay
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayNotSet = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayBlock = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayInline = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayListItem = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayNone = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayTableHeaderGroup = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayTableFooterGroup = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplayInlineBlock = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleDisplay_Max = 2147483647
 	}
 }

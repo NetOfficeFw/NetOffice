@@ -10,9 +10,9 @@ namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
 	/// Interface DataSourceListener 
-	/// SupportByLibrary MSDATASRC, 1
+	/// SupportByVersion MSDATASRC, 1
 	///</summary>
-	[SupportByLibraryAttribute("MSDATASRC", 1)]
+	[SupportByVersionAttribute("MSDATASRC", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSourceListener : COMObject
 	{
@@ -78,42 +78,42 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSDATASRC 1
+		/// SupportByVersion MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberChanged(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberChanged", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSDATASRC 1
+		/// SupportByVersion MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberAdded(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberAdded", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSDATASRC 1
+		/// SupportByVersion MSDATASRC 1
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 1)]
 		public Int32 dataMemberRemoved(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberRemoved", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

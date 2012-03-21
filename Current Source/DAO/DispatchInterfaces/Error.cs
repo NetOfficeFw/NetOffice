@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Error 
-	/// SupportByLibrary DAO, 6,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Error : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 Number
 		{
 			get
@@ -90,40 +90,40 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Source
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Source", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Description
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string HelpFile
 		{
@@ -131,15 +131,15 @@ namespace NetOffice.DAOApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HelpFile", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 HelpContext
 		{

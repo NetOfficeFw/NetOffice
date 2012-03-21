@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLTable2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLTable2 : COMObject
+	public class IHTMLTable2 : IHTMLTable
 	{
 		#pragma warning disable
 		#region Type Information
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLElementCollection cells
 		{
 			get
@@ -95,9 +95,9 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void firstPage()
 		{
 			object[] paramsArray = null;
@@ -105,9 +105,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void lastPage()
 		{
 			object[] paramsArray = null;
@@ -115,12 +115,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="indexFrom">optional Int32 indexFrom = -1</param>
 		/// <param name="indexTo">optional Int32 indexTo = -1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public COMObject moveRow(Int32 indexFrom, Int32 indexTo)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public COMObject moveRow(object indexFrom, object indexTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(indexFrom, indexTo);
 			object returnItem = Invoker.MethodReturn(this, "moveRow", paramsArray);
@@ -129,10 +129,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public COMObject moveRow()
 		{
 			object[] paramsArray = null;
@@ -142,12 +142,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="indexFrom">optional Int32 indexFrom = -1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public COMObject moveRow(Int32 indexFrom)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public COMObject moveRow(object indexFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(indexFrom);
 			object returnItem = Invoker.MethodReturn(this, "moveRow", paramsArray);

@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface IEnumOleUndoUnits 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumOleUndoUnits : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgElt">NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
 		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 RemoteNext(Int32 cElt, out NetOffice.OWC10Api.IOleUndoUnit rgElt, out Int32 pcEltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -93,37 +93,37 @@ namespace NetOffice.OWC10Api
 			object returnItem = Invoker.MethodReturn(this, "RemoteNext", paramsArray);
 			rgElt = (NetOffice.OWC10Api.IOleUndoUnit)paramsArray[1];
 			pcEltFetched = (Int32)paramsArray[2];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Skip(Int32 cElt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt);
 			object returnItem = Invoker.MethodReturn(this, "Skip", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Reset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Reset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Clone(out NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -131,7 +131,7 @@ namespace NetOffice.OWC10Api
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
 			ppEnum = (NetOffice.OWC10Api.IEnumOleUndoUnits)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

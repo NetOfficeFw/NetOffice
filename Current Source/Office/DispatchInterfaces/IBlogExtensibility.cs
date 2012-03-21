@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IBlogExtensibility 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogExtensibility : COMObject
 	{
@@ -79,13 +79,13 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="blogProvider">string BlogProvider</param>
 		/// <param name="friendlyName">string FriendlyName</param>
 		/// <param name="categorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
 		/// <param name="padding">bool Padding</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void BlogProviderProperties(out string blogProvider, out string friendlyName, out NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, out bool padding)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -102,14 +102,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
 		/// <param name="document">object Document</param>
 		/// <param name="newAccount">bool NewAccount</param>
 		/// <param name="showPictureUI">bool ShowPictureUI</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, out bool showPictureUI)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="blogNames">String[] BlogNames</param>
 		/// <param name="blogIDs">String[] BlogIDs</param>
 		/// <param name="blogURLs">String[] BlogURLs</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void GetUserBlogs(string account, Int32 parentWindow, object document, out String[] blogNames, out String[] blogIDs, out String[] blogURLs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="postTitles">String[] PostTitles</param>
 		/// <param name="postDates">String[] PostDates</param>
 		/// <param name="postIDs">String[] PostIDs</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void GetRecentPosts(string account, Int32 parentWindow, object document, out String[] postTitles, out String[] postDates, out String[] postIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="postID">string PostID</param>
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="title">string Title</param>
 		/// <param name="datePosted">string DatePosted</param>
 		/// <param name="categories">String[] Categories</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void Open(string account, string postID, Int32 parentWindow, out string xHTML, out string title, out string datePosted, out String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true,true);
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="draft">bool Draft</param>
 		/// <param name="postID">string PostID</param>
 		/// <param name="publishMessage">string PublishMessage</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, out string postID, out string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="categories">String[] Categories</param>
 		/// <param name="draft">bool Draft</param>
 		/// <param name="publishMessage">string PublishMessage</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, out string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,false,true);
@@ -240,13 +240,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
 		/// <param name="document">object Document</param>
 		/// <param name="categories">String[] Categories</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public void GetCategories(string account, Int32 parentWindow, object document, out String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);

@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14
+	 /// SupportByVersion Word 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTickMark
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickMarkCross = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickMarkInside = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickMarkNone = -4142,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickMarkOutside = 3
 	}
 }

@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdKana
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdKanaKatakana = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdKanaHiragana = 9
 	}
 }

@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementNamespaceFactoryCallback 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementNamespaceFactoryCallback : COMObject
 	{
@@ -78,18 +78,18 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrTagName">string bstrTagName</param>
 		/// <param name="bstrAttrs">string bstrAttrs</param>
 		/// <param name="pNamespace">NetOffice.MSHTMLApi.IElementNamespace pNamespace</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Resolve(string bstrNamespace, string bstrTagName, string bstrAttrs, NetOffice.MSHTMLApi.IElementNamespace pNamespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNamespace, bstrTagName, bstrAttrs, pNamespace);
 			object returnItem = Invoker.MethodReturn(this, "Resolve", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

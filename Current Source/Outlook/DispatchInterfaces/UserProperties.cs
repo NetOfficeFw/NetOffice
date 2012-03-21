@@ -12,9 +12,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface UserProperties 
-	/// SupportByLibrary Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UserProperties : COMObject ,IEnumerable<NetOffice.OutlookApi.UserProperty>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi.UserProperty this[object index]
 		{
@@ -175,13 +175,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="addToFolderFields">optional object AddToFolderFields</param>
 		/// <param name="displayFormat">optional object DisplayFormat</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields, displayFormat);
@@ -191,12 +191,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -206,13 +206,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="addToFolderFields">optional object AddToFolderFields</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, addToFolderFields);
@@ -222,11 +222,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="custom">optional object Custom</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.UserProperty Find(string name, object custom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, custom);
@@ -236,11 +236,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.UserProperty Find(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -250,10 +250,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public void Remove(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -261,47 +261,43 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.OutlookApi.UserProperty> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-        public IEnumerator<NetOffice.OutlookApi.UserProperty> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OutlookApi.UserProperty item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-		
-        /// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-        {
-			int count = Count;
-			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 0; i < count; i++)
-				enumeratorObjects[i] = this[i+1];
-
-			foreach (COMObject item in enumeratorObjects)
-				yield return item;
-        }
-
-        #endregion
+       #region IEnumerable<NetOffice.OutlookApi.UserProperty> Member
         
+        /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+       public IEnumerator<NetOffice.OutlookApi.UserProperty> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OutlookApi.UserProperty item in innerEnumerator)
+               yield return item;
+       }
 
+       #endregion
+   
+       #region IEnumerable Members
+        
+       /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+       {
+            int count = Count;
+            COMObject[] enumeratorObjects = new COMObject[count];
+            for (int i = 0; i < count; i++)
+                enumeratorObjects[i] = this[i+1];
 
-		#pragma warning restore
+            foreach (COMObject item in enumeratorObjects)
+                yield return item;
+       }
+
+       #endregion
+       		#pragma warning restore
 	}
 }

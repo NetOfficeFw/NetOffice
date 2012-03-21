@@ -28,11 +28,11 @@ namespace NetOffice.MSHTMLApi
 
 	///<summary>
 	/// CoClass HTMLObjectElement 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLObjectElement : DispHTMLObjectElement, IEventBinding 
+	public class HTMLObjectElement : DispHTMLObjectElement,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -70,7 +70,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -105,13 +105,304 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onbeforeupdateEventHandler _onbeforeupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onbeforeupdateEventHandler onbeforeupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onbeforeupdateEvent += value;
+			}
+			remove
+			{
+				_onbeforeupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onafterupdateEventHandler _onafterupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onafterupdateEventHandler onafterupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onafterupdateEvent += value;
+			}
+			remove
+			{
+				_onafterupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onerrorupdateEventHandler _onerrorupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onerrorupdateEventHandler onerrorupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onerrorupdateEvent += value;
+			}
+			remove
+			{
+				_onerrorupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onrowexitEventHandler _onrowexitEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onrowexitEventHandler onrowexitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowexitEvent += value;
+			}
+			remove
+			{
+				_onrowexitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onrowenterEventHandler _onrowenterEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onrowenterEventHandler onrowenterEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowenterEvent += value;
+			}
+			remove
+			{
+				_onrowenterEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_ondatasetchangedEventHandler _ondatasetchangedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_ondatasetchangedEventHandler ondatasetchangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondatasetchangedEvent += value;
+			}
+			remove
+			{
+				_ondatasetchangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_ondataavailableEventHandler _ondataavailableEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_ondataavailableEventHandler ondataavailableEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondataavailableEvent += value;
+			}
+			remove
+			{
+				_ondataavailableEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_ondatasetcompleteEventHandler _ondatasetcompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_ondatasetcompleteEventHandler ondatasetcompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondatasetcompleteEvent += value;
+			}
+			remove
+			{
+				_ondatasetcompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onerrorEventHandler _onerrorEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onerrorEventHandler onerrorEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onerrorEvent += value;
+			}
+			remove
+			{
+				_onerrorEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onrowsdeleteEventHandler _onrowsdeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onrowsdeleteEventHandler onrowsdeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowsdeleteEvent += value;
+			}
+			remove
+			{
+				_onrowsdeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onrowsinsertedEventHandler _onrowsinsertedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onrowsinsertedEventHandler onrowsinsertedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowsinsertedEvent += value;
+			}
+			remove
+			{
+				_onrowsinsertedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_oncellchangeEventHandler _oncellchangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_oncellchangeEventHandler oncellchangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_oncellchangeEvent += value;
+			}
+			remove
+			{
+				_oncellchangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLObjectElement_onreadystatechangeEventHandler _onreadystatechangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLObjectElement_onreadystatechangeEventHandler onreadystatechangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onreadystatechangeEvent += value;
+			}
+			remove
+			{
+				_onreadystatechangeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -129,301 +420,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onbeforeupdateEventHandler _onbeforeupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onbeforeupdateEventHandler onbeforeupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeupdateEvent += value;
-			}
-			remove
-			{
-				_onbeforeupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onafterupdateEventHandler _onafterupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onafterupdateEventHandler onafterupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onafterupdateEvent += value;
-			}
-			remove
-			{
-				_onafterupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onerrorupdateEventHandler _onerrorupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onerrorupdateEventHandler onerrorupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onerrorupdateEvent += value;
-			}
-			remove
-			{
-				_onerrorupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onrowexitEventHandler _onrowexitEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onrowexitEventHandler onrowexitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowexitEvent += value;
-			}
-			remove
-			{
-				_onrowexitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onrowenterEventHandler _onrowenterEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onrowenterEventHandler onrowenterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowenterEvent += value;
-			}
-			remove
-			{
-				_onrowenterEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_ondatasetchangedEventHandler _ondatasetchangedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_ondatasetchangedEventHandler ondatasetchangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetchangedEvent += value;
-			}
-			remove
-			{
-				_ondatasetchangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_ondataavailableEventHandler _ondataavailableEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_ondataavailableEventHandler ondataavailableEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondataavailableEvent += value;
-			}
-			remove
-			{
-				_ondataavailableEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_ondatasetcompleteEventHandler _ondatasetcompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_ondatasetcompleteEventHandler ondatasetcompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetcompleteEvent += value;
-			}
-			remove
-			{
-				_ondatasetcompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onerrorEventHandler _onerrorEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onerrorEventHandler onerrorEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onerrorEvent += value;
-			}
-			remove
-			{
-				_onerrorEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onrowsdeleteEventHandler _onrowsdeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onrowsdeleteEventHandler onrowsdeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsdeleteEvent += value;
-			}
-			remove
-			{
-				_onrowsdeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onrowsinsertedEventHandler _onrowsinsertedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onrowsinsertedEventHandler onrowsinsertedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsinsertedEvent += value;
-			}
-			remove
-			{
-				_onrowsinsertedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_oncellchangeEventHandler _oncellchangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_oncellchangeEventHandler oncellchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncellchangeEvent += value;
-			}
-			remove
-			{
-				_oncellchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event HTMLObjectElement_onreadystatechangeEventHandler _onreadystatechangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event HTMLObjectElement_onreadystatechangeEventHandler onreadystatechangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onreadystatechangeEvent += value;
-			}
-			remove
-			{
-				_onreadystatechangeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -434,25 +431,22 @@ namespace NetOffice.MSHTMLApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -475,8 +469,59 @@ namespace NetOffice.MSHTMLApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _hTMLObjectElementEvents_SinkHelper)
 			{
@@ -488,6 +533,7 @@ namespace NetOffice.MSHTMLApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

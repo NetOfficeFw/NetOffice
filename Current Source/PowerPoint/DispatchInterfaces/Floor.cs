@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Floor 
-	/// SupportByLibrary PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Floor : COMObject
 	{
@@ -75,25 +75,25 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartBorder Border
 		{
@@ -123,10 +123,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.Interior Interior
 		{
@@ -140,10 +140,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartFillFormat Fill
 		{
@@ -157,10 +157,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public object PictureType
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Thickness
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
@@ -221,10 +221,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Creator
 		{
 			get
@@ -236,10 +236,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -256,9 +256,9 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -275,9 +275,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public object ClearFormats()
 		{
 			object[] paramsArray = null;
@@ -294,9 +294,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public void Paste()
 		{
 			object[] paramsArray = null;

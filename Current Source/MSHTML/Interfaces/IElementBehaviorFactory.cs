@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementBehaviorFactory 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorFactory : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrBehavior">string bstrBehavior</param>
 		/// <param name="bstrBehaviorUrl">string bstrBehaviorUrl</param>
 		/// <param name="pSite">NetOffice.MSHTMLApi.IElementBehaviorSite pSite</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IElementBehavior FindBehavior(string bstrBehavior, string bstrBehaviorUrl, NetOffice.MSHTMLApi.IElementBehaviorSite pSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBehavior, bstrBehaviorUrl, pSite);

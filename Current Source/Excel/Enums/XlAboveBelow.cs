@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 12, 14
+	 /// SupportByVersion Excel 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAboveBelow
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlAboveAverage = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlBelowAverage = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlEqualAboveAverage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlEqualBelowAverage = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlAboveStdDev = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlBelowStdDev = 5
 	}
 }

@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14
+	 /// SupportByVersion PowerPoint 14
 	 /// </summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlBorderWeight
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlHairline = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4138</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlMedium = -4138,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlThick = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlThin = 2
 	}
 }

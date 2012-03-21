@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICommandBarsEvents 
-	/// SupportByLibrary Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICommandBarsEvents : COMObject
 	{
@@ -79,9 +79,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public void OnUpdate()
 		{
 			object[] paramsArray = null;

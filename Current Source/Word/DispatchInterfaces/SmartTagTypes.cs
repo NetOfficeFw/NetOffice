@@ -12,9 +12,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface SmartTagTypes 
-	/// SupportByLibrary Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTagTypes : COMObject ,IEnumerable<NetOffice.WordApi.SmartTagType>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.SmartTagType this[object index]
 		{
@@ -159,9 +159,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public void ReloadAll()
 		{
 			object[] paramsArray = null;
@@ -170,43 +170,33 @@ namespace NetOffice.WordApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.WordApi.SmartTagType> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 11,12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-        public IEnumerator<NetOffice.WordApi.SmartTagType> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.WordApi.SmartTagType item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.WordApi.SmartTagType> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 11,12,14
+        /// <summary>
+		/// SupportByVersionAttribute Word, 11,12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
+       public IEnumerator<NetOffice.WordApi.SmartTagType> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.WordApi.SmartTagType item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Word, 11,12,14
+		/// </summary>
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

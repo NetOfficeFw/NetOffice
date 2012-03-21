@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPIcon 
-	/// SupportByLibrary PowerPoint, 9
+	/// SupportByVersion PowerPoint, 9
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPIcon : PPControl
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get

@@ -11,9 +11,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface WebService 
-	/// SupportByLibrary Access, 14
+	/// SupportByVersion Access, 14
 	///</summary>
-	[SupportByLibraryAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebService : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14)]
 		public COMObject Parent
 		{
 			get
@@ -91,25 +91,25 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14)]
 		public NetOffice.AccessApi.Entities Entities
 		{
 			get
@@ -126,16 +126,16 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
 			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

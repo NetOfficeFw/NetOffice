@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14
+	 /// SupportByVersion Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoHTMLProjectOpen
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoHTMLProjectOpenSourceView = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoHTMLProjectOpenTextView = 2
 	}
 }

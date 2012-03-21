@@ -34,11 +34,11 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Application 
-	/// SupportByLibrary Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _Application, IEventBinding 
+	public class Application : _Application,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -76,23 +76,24 @@ namespace NetOffice.OutlookApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <summary>
@@ -100,7 +101,8 @@ namespace NetOffice.OutlookApi
         /// </summary>		
 		public Application():base("Outlook.Application")
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
 		
 		/// <summary>
@@ -109,17 +111,462 @@ namespace NetOffice.OutlookApi
         /// <param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
+		}
+		
+/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		public override void Dispose(bool disposeEventBinding)
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;	
+			base.Dispose(disposeEventBinding);
+		}
+
+		/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		public override void Dispose()
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;
+			base.Dispose();
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_ItemSendEventHandler _ItemSendEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_ItemSendEventHandler ItemSendEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ItemSendEvent += value;
+			}
+			remove
+			{
+				_ItemSendEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_NewMailEventHandler _NewMailEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_NewMailEventHandler NewMailEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NewMailEvent += value;
+			}
+			remove
+			{
+				_NewMailEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_ReminderEventHandler _ReminderEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_ReminderEventHandler ReminderEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReminderEvent += value;
+			}
+			remove
+			{
+				_ReminderEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_OptionsPagesAddEventHandler _OptionsPagesAddEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_OptionsPagesAddEventHandler OptionsPagesAddEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_OptionsPagesAddEvent += value;
+			}
+			remove
+			{
+				_OptionsPagesAddEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_StartupEventHandler _StartupEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_StartupEventHandler StartupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_StartupEvent += value;
+			}
+			remove
+			{
+				_StartupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// </summary>
+		private event Application_QuitEventHandler _QuitEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		public event Application_QuitEventHandler QuitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QuitEvent += value;
+			}
+			remove
+			{
+				_QuitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Application_AdvancedSearchCompleteEventHandler _AdvancedSearchCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Application_AdvancedSearchCompleteEventHandler AdvancedSearchCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AdvancedSearchCompleteEvent += value;
+			}
+			remove
+			{
+				_AdvancedSearchCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Application_AdvancedSearchStoppedEventHandler _AdvancedSearchStoppedEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Application_AdvancedSearchStoppedEventHandler AdvancedSearchStoppedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AdvancedSearchStoppedEvent += value;
+			}
+			remove
+			{
+				_AdvancedSearchStoppedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Application_MAPILogonCompleteEventHandler _MAPILogonCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Application_MAPILogonCompleteEventHandler MAPILogonCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MAPILogonCompleteEvent += value;
+			}
+			remove
+			{
+				_MAPILogonCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 11,12,14
+		/// </summary>
+		private event Application_NewMailExEventHandler _NewMailExEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 11,12,14)]
+		public event Application_NewMailExEventHandler NewMailExEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NewMailExEvent += value;
+			}
+			remove
+			{
+				_NewMailExEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_AttachmentContextMenuDisplayEventHandler _AttachmentContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_AttachmentContextMenuDisplayEventHandler AttachmentContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AttachmentContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_AttachmentContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_FolderContextMenuDisplayEventHandler _FolderContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_FolderContextMenuDisplayEventHandler FolderContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FolderContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_FolderContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_StoreContextMenuDisplayEventHandler _StoreContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_StoreContextMenuDisplayEventHandler StoreContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_StoreContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_StoreContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_ShortcutContextMenuDisplayEventHandler _ShortcutContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_ShortcutContextMenuDisplayEventHandler ShortcutContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShortcutContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_ShortcutContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_ViewContextMenuDisplayEventHandler _ViewContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_ViewContextMenuDisplayEventHandler ViewContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ViewContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_ViewContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_ItemContextMenuDisplayEventHandler _ItemContextMenuDisplayEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_ItemContextMenuDisplayEventHandler ItemContextMenuDisplayEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ItemContextMenuDisplayEvent += value;
+			}
+			remove
+			{
+				_ItemContextMenuDisplayEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_ContextMenuCloseEventHandler _ContextMenuCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_ContextMenuCloseEventHandler ContextMenuCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContextMenuCloseEvent += value;
+			}
+			remove
+			{
+				_ContextMenuCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_ItemLoadEventHandler _ItemLoadEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_ItemLoadEventHandler ItemLoadEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ItemLoadEvent += value;
+			}
+			remove
+			{
+				_ItemLoadEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event Application_BeforeFolderSharingDialogEventHandler _BeforeFolderSharingDialogEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event Application_BeforeFolderSharingDialogEventHandler BeforeFolderSharingDialogEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeFolderSharingDialogEvent += value;
+			}
+			remove
+			{
+				_BeforeFolderSharingDialogEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -149,433 +596,7 @@ namespace NetOffice.OutlookApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_ItemSendEventHandler _ItemSendEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_ItemSendEventHandler ItemSendEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ItemSendEvent += value;
-			}
-			remove
-			{
-				_ItemSendEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_NewMailEventHandler _NewMailEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_NewMailEventHandler NewMailEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NewMailEvent += value;
-			}
-			remove
-			{
-				_NewMailEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_ReminderEventHandler _ReminderEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_ReminderEventHandler ReminderEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReminderEvent += value;
-			}
-			remove
-			{
-				_ReminderEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_OptionsPagesAddEventHandler _OptionsPagesAddEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_OptionsPagesAddEventHandler OptionsPagesAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OptionsPagesAddEvent += value;
-			}
-			remove
-			{
-				_OptionsPagesAddEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_StartupEventHandler _StartupEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_StartupEventHandler StartupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StartupEvent += value;
-			}
-			remove
-			{
-				_StartupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 9,10,11,12,14
-		/// </summary>
-		private event Application_QuitEventHandler _QuitEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 9,10,11,12,14)]
-		public event Application_QuitEventHandler QuitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_QuitEvent += value;
-			}
-			remove
-			{
-				_QuitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Application_AdvancedSearchCompleteEventHandler _AdvancedSearchCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Application_AdvancedSearchCompleteEventHandler AdvancedSearchCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AdvancedSearchCompleteEvent += value;
-			}
-			remove
-			{
-				_AdvancedSearchCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Application_AdvancedSearchStoppedEventHandler _AdvancedSearchStoppedEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Application_AdvancedSearchStoppedEventHandler AdvancedSearchStoppedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AdvancedSearchStoppedEvent += value;
-			}
-			remove
-			{
-				_AdvancedSearchStoppedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Application_MAPILogonCompleteEventHandler _MAPILogonCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Application_MAPILogonCompleteEventHandler MAPILogonCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MAPILogonCompleteEvent += value;
-			}
-			remove
-			{
-				_MAPILogonCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 11,12,14
-		/// </summary>
-		private event Application_NewMailExEventHandler _NewMailExEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 11,12,14)]
-		public event Application_NewMailExEventHandler NewMailExEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NewMailExEvent += value;
-			}
-			remove
-			{
-				_NewMailExEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_AttachmentContextMenuDisplayEventHandler _AttachmentContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_AttachmentContextMenuDisplayEventHandler AttachmentContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AttachmentContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_AttachmentContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_FolderContextMenuDisplayEventHandler _FolderContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_FolderContextMenuDisplayEventHandler FolderContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FolderContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_FolderContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_StoreContextMenuDisplayEventHandler _StoreContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_StoreContextMenuDisplayEventHandler StoreContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StoreContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_StoreContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_ShortcutContextMenuDisplayEventHandler _ShortcutContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_ShortcutContextMenuDisplayEventHandler ShortcutContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ShortcutContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_ShortcutContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_ViewContextMenuDisplayEventHandler _ViewContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_ViewContextMenuDisplayEventHandler ViewContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ViewContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_ViewContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_ItemContextMenuDisplayEventHandler _ItemContextMenuDisplayEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_ItemContextMenuDisplayEventHandler ItemContextMenuDisplayEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ItemContextMenuDisplayEvent += value;
-			}
-			remove
-			{
-				_ItemContextMenuDisplayEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_ContextMenuCloseEventHandler _ContextMenuCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_ContextMenuCloseEventHandler ContextMenuCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ContextMenuCloseEvent += value;
-			}
-			remove
-			{
-				_ContextMenuCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_ItemLoadEventHandler _ItemLoadEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_ItemLoadEventHandler ItemLoadEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ItemLoadEvent += value;
-			}
-			remove
-			{
-				_ItemLoadEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event Application_BeforeFolderSharingDialogEventHandler _BeforeFolderSharingDialogEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event Application_BeforeFolderSharingDialogEventHandler BeforeFolderSharingDialogEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeFolderSharingDialogEvent += value;
-			}
-			remove
-			{
-				_BeforeFolderSharingDialogEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -586,25 +607,22 @@ namespace NetOffice.OutlookApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -627,8 +645,59 @@ namespace NetOffice.OutlookApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _applicationEvents_SinkHelper)
 			{
@@ -650,6 +719,7 @@ namespace NetOffice.OutlookApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

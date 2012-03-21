@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IConnections 
-	/// SupportByLibrary Excel, 12,14
+	/// SupportByVersion Excel, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConnections : COMObject ,IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -137,17 +137,21 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.WorkbookConnection get__Default(object index)
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Excel", 12,14)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.ExcelApi.WorkbookConnection this[object index]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
 			return newObject;
+			}
 		}
 
 		#endregion
@@ -155,10 +159,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -168,14 +172,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
 		/// <param name="connectionString">object ConnectionString</param>
 		/// <param name="commandText">object CommandText</param>
 		/// <param name="lCmdtype">optional object lCmdtype</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype);
@@ -185,14 +189,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		/// SupportByVersion Excel 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
 		/// <param name="connectionString">object ConnectionString</param>
 		/// <param name="commandText">object CommandText</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14)]
 		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText);
@@ -201,62 +205,35 @@ namespace NetOffice.ExcelApi
 			return newObject;
 		}
 
-		/// <summary>
-		/// SupportByLibrary Excel 12, 14
+		#endregion
+
+       #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection> Member
+        
+        /// <summary>
+		/// SupportByVersionAttribute Excel, 12,14
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.ExcelApi.WorkbookConnection this[object index]
+		[SupportByVersionAttribute("Excel", 12,14)]
+       public IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.ExcelApi.WorkbookConnection item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Excel, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 12,14)]
+		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			get
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.ExcelApi.WorkbookConnection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
-				return newObject;
-			}
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-        public IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.WorkbookConnection item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-        
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 12,14)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
-
-        #endregion
 		#pragma warning restore
 	}
 }

@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14
+	 /// SupportByVersion MSProject 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 14)]
+	[SupportByVersionAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjFilterViewType
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjFilterViewTypeTask = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjFilterViewTypeResource = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>65535</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjFilterViewTypeUseView = 65535
 	}
 }

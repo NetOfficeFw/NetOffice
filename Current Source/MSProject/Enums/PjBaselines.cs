@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14
+	 /// SupportByVersion MSProject 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjBaselines
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline1 = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline2 = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline3 = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline4 = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline5 = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline6 = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline7 = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline8 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline9 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBaseline10 = 10
 	}
 }

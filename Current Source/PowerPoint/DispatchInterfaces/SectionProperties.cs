@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SectionProperties 
-	/// SupportByLibrary PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SectionProperties : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public COMObject Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 Count
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public string Name(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
@@ -138,11 +138,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">string sectionName</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public void Rename(Int32 sectionIndex, string sectionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, sectionName);
@@ -150,74 +150,74 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 SlidesCount(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
 			object returnItem = Invoker.MethodReturn(this, "SlidesCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 FirstSlide(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
 			object returnItem = Invoker.MethodReturn(this, "FirstSlide", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="slideIndex">Int32 SlideIndex</param>
 		/// <param name="sectionName">string sectionName</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 AddBeforeSlide(Int32 slideIndex, string sectionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideIndex, sectionName);
 			object returnItem = Invoker.MethodReturn(this, "AddBeforeSlide", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">optional object sectionName</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 AddSection(Int32 sectionIndex, object sectionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, sectionName);
 			object returnItem = Invoker.MethodReturn(this, "AddSection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public Int32 AddSection(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
 			object returnItem = Invoker.MethodReturn(this, "AddSection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="toPos">Int32 toPos</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public void Move(Int32 sectionIndex, Int32 toPos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, toPos);
@@ -225,11 +225,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="deleteSlides">bool deleteSlides</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public void Delete(Int32 sectionIndex, bool deleteSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, deleteSlides);
@@ -237,10 +237,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 14
+		/// SupportByVersion PowerPoint 14
 		/// </summary>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		public string SectionID(Int32 sectionIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);

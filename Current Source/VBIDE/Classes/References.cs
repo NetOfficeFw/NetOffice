@@ -17,11 +17,11 @@ namespace NetOffice.VBIDEApi
 
 	///<summary>
 	/// CoClass References 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class References : _References, IEventBinding 
+	public class References : _References,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -59,7 +59,7 @@ namespace NetOffice.VBIDEApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -94,13 +94,62 @@ namespace NetOffice.VBIDEApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion VBIDE, 11,12,5.3
+		/// </summary>
+		private event References_ItemAddedEventHandler _ItemAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion VBIDE 11 12 5.3
+		/// </summary>
+		[SupportByVersion("VBIDE", 11,12,5.3)]
+		public event References_ItemAddedEventHandler ItemAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ItemAddedEvent += value;
+			}
+			remove
+			{
+				_ItemAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion VBIDE, 11,12,5.3
+		/// </summary>
+		private event References_ItemRemovedEventHandler _ItemRemovedEvent;
+
+		/// <summary>
+		/// SupportByVersion VBIDE 11 12 5.3
+		/// </summary>
+		[SupportByVersion("VBIDE", 11,12,5.3)]
+		public event References_ItemRemovedEventHandler ItemRemovedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ItemRemovedEvent += value;
+			}
+			remove
+			{
+				_ItemRemovedEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -118,59 +167,7 @@ namespace NetOffice.VBIDEApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary VBIDE, 5.3,11,12
-		/// </summary>
-		private event References_ItemAddedEventHandler _ItemAddedEvent;
-
-		/// <summary>
-		/// SupportByLibrary VBIDE 5.3 11 12
-		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,11,12)]
-		public event References_ItemAddedEventHandler ItemAddedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ItemAddedEvent += value;
-			}
-			remove
-			{
-				_ItemAddedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary VBIDE, 5.3,11,12
-		/// </summary>
-		private event References_ItemRemovedEventHandler _ItemRemovedEvent;
-
-		/// <summary>
-		/// SupportByLibrary VBIDE 5.3 11 12
-		/// </summary>
-		[SupportByLibrary("VBIDE", 5.3,11,12)]
-		public event References_ItemRemovedEventHandler ItemRemovedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ItemRemovedEvent += value;
-			}
-			remove
-			{
-				_ItemRemovedEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -181,25 +178,22 @@ namespace NetOffice.VBIDEApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -222,8 +216,59 @@ namespace NetOffice.VBIDEApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __dispReferences_Events_SinkHelper)
 			{
@@ -235,6 +280,7 @@ namespace NetOffice.VBIDEApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

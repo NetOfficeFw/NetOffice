@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlFormatConditionOperator
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlBetween = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlNotBetween = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlEqual = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlNotEqual = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlGreater = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlLess = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlGreaterEqual = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlLessEqual = 8
 	}
 }

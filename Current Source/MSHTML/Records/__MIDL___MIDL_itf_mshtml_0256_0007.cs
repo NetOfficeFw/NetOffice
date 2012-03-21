@@ -5,53 +5,53 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[StructLayout(LayoutKind.Sequential, Pack=4), Guid("00000000-0000-0000-0000-000000000000")]
 	[EntityTypeAttribute(EntityType.IsStruct)]
 	public struct __MIDL___MIDL_itf_mshtml_0256_0007
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwSize;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwStyle;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwCount;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwSelection;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwPageStart;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 dwPageSize;
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object[] dwOffset;
 	}
 }

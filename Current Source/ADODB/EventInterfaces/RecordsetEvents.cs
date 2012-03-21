@@ -10,51 +10,51 @@ namespace NetOffice.ADODBApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[ComImport, Guid("00000266-0000-0010-8000-00AA006D2EA4"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface RecordsetEvents
 	{
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void WillChangeField([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
 		void FieldChangeComplete([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
 		void WillChangeRecord([In] object adReason, [In] object cRecords, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void RecordChangeComplete([In] object adReason, [In] object cRecords, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void WillChangeRecordset([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void RecordsetChangeComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void WillMove([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void MoveComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void EndOfRecordset([In] [Out] ref object fMoreData, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void FetchProgress([In] object progress, [In] object maxProgress, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
 		void FetchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 	}
@@ -110,8 +110,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newFields;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillChangeField", ref paramsArray);
 		}
 
 		public void FieldChangeComplete([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -134,8 +133,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[2] = newpError;
 			paramsArray[3] = newadStatus;
 			paramsArray[4] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FieldChangeComplete", ref paramsArray);
 		}
 
 		public void WillChangeRecord([In] object adReason, [In] object cRecords, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -156,8 +154,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newcRecords;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillChangeRecord", ref paramsArray);
 		}
 
 		public void RecordChangeComplete([In] object adReason, [In] object cRecords, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -180,8 +177,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[2] = newpError;
 			paramsArray[3] = newadStatus;
 			paramsArray[4] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("RecordChangeComplete", ref paramsArray);
 		}
 
 		public void WillChangeRecordset([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -200,8 +196,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillChangeRecordset", ref paramsArray);
 		}
 
 		public void RecordsetChangeComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -222,8 +217,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("RecordsetChangeComplete", ref paramsArray);
 		}
 
 		public void WillMove([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -242,8 +236,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WillMove", ref paramsArray);
 		}
 
 		public void MoveComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -264,8 +257,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MoveComplete", ref paramsArray);
 		}
 
 		public void EndOfRecordset([In] [Out] ref object fMoreData, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -283,8 +275,7 @@ namespace NetOffice.ADODBApi
 			paramsArray.SetValue(fMoreData, 0);
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("EndOfRecordset", ref paramsArray);
 
 			fMoreData = (bool)paramsArray[0];
 		}
@@ -307,8 +298,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[1] = newMaxProgress;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FetchProgress", ref paramsArray);
 		}
 
 		public void FetchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
@@ -327,8 +317,7 @@ namespace NetOffice.ADODBApi
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FetchComplete", ref paramsArray);
 		}
 
 		#endregion

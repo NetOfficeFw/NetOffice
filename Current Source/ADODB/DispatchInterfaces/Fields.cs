@@ -12,9 +12,9 @@ namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Fields 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Fields : Fields20 ,IEnumerable<NetOffice.ADODBApi.Field>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 Count
 		{
 			get
@@ -91,11 +91,11 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ADODBApi.Field this[object index]
 		{
@@ -113,9 +113,9 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -123,41 +123,41 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "Append", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		/// <param name="fieldValue">optional object FieldValue</param>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue)
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib, object fieldValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib, fieldValue);
 			Invoker.Method(this, "Append", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -165,24 +165,24 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize)
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize);
 			Invoker.Method(this, "Append", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -190,9 +190,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Update()
 		{
 			object[] paramsArray = null;
@@ -200,21 +200,21 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
-		public void Resync(NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void Resync(object resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Resync()
 		{
 			object[] paramsArray = null;
@@ -222,9 +222,9 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void CancelUpdate()
 		{
 			object[] paramsArray = null;
@@ -233,43 +233,33 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.ADODBApi.Field> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
-        public IEnumerator<NetOffice.ADODBApi.Field> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ADODBApi.Field item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.ADODBApi.Field> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute ADODB, 2.1,2.5
+        /// <summary>
+		/// SupportByVersionAttribute ADODB, 2.1,2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+       public IEnumerator<NetOffice.ADODBApi.Field> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.ADODBApi.Field item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute ADODB, 2.1,2.5
+		/// </summary>
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

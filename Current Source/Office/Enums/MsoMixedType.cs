@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14
+	 /// SupportByVersion Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoMixedType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>32768</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoIntegerMixed = 32768,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-2147483648</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoSingleMixed = -2147483648
 	}
 }

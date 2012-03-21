@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface HTMLProject 
-	/// SupportByLibrary Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HTMLProject : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.Enums.MsoHTMLProjectState State
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public NetOffice.OfficeApi.HTMLProjectItems HTMLProjectItems
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -126,21 +126,21 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="refresh">optional bool Refresh = true</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
-		public void RefreshProject(bool refresh)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		public void RefreshProject(object refresh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refresh);
 			Invoker.Method(this, "RefreshProject", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public void RefreshProject()
 		{
 			object[] paramsArray = null;
@@ -148,21 +148,21 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="refresh">optional bool Refresh = true</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
-		public void RefreshDocument(bool refresh)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		public void RefreshDocument(object refresh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refresh);
 			Invoker.Method(this, "RefreshDocument", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public void RefreshDocument()
 		{
 			object[] paramsArray = null;
@@ -170,21 +170,21 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="openKind">optional NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind = 0</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
-		public void Open(NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		public void Open(object openKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(openKind);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public void Open()
 		{
 			object[] paramsArray = null;

@@ -4,17 +4,17 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14
+	 /// SupportByVersion Outlook 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlFormatText
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olFormatTextText = 1
 	}
 }

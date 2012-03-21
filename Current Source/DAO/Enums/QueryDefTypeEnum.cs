@@ -4,101 +4,101 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO 6, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum QueryDefTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQSelect = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>224</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQProcedure = 224,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>240</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQAction = 240,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQCrosstab = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQDelete = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>48</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQUpdate = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQAppend = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>80</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQMakeTable = 80,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>96</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQDDL = 96,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>112</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQSQLPassThrough = 112,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQSetOperation = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>144</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQSPTBulk = 144,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>160</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbQCompound = 160
 	}
 }

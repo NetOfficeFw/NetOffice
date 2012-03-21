@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14
+	 /// SupportByVersion Word 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdLockType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdLockNone = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdLockReservation = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdLockEphemeral = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 wdLockChanged = 3
 	}
 }

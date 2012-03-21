@@ -12,9 +12,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Axes 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable<NetOffice.OfficeApi.IMsoAxis>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		public Int32 Count
 		{
 			get
@@ -91,29 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 12, 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
-		[SupportByLibraryAttribute("Office", 12,14)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup]
-		{
-			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
-			return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Office 14
-		/// Get
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public COMObject Application
 		{
 			get
@@ -126,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 Creator
 		{
 			get
@@ -141,39 +122,47 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
-		/// <param name="AxisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
-		[SupportByLibraryAttribute("Office", 14)]
-		public NetOffice.OfficeApi.IMsoAxis get__Default(NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup)
+		/// <param name="type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
+		/// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
+		[SupportByVersionAttribute("Office", 14)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, object axisGroup]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
+			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		/// <param name="Type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
-		[SupportByLibraryAttribute("Office", 14)]
-		public NetOffice.OfficeApi.IMsoAxis get__Default(NetOffice.OfficeApi.Enums.XlAxisType type)
+		/// <param name="type">NetOffice.OfficeApi.Enums.XlAxisType Type</param>
+		[SupportByVersionAttribute("Office", 14)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type]
 		{
+			get
+{			
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.OfficeApi.IMsoAxis newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
+			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public COMObject Parent
 		{
 			get
@@ -191,43 +180,33 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OfficeApi.IMsoAxis> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
-        public IEnumerator<NetOffice.OfficeApi.IMsoAxis> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OfficeApi.IMsoAxis item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OfficeApi.IMsoAxis> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Office, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute Office, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
+       public IEnumerator<NetOffice.OfficeApi.IMsoAxis> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OfficeApi.IMsoAxis item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Office, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Office", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

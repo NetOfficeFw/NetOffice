@@ -11,9 +11,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface VBE 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class VBE : Application
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBProjects VBProjects
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.CodePanes CodePanes
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Windows Windows
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Events Events
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBProject ActiveVBProject
 		{
 			get
@@ -176,10 +176,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.VBComponent SelectedVBComponent
 		{
 			get
@@ -192,10 +192,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Window MainWindow
 		{
 			get
@@ -208,10 +208,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Window ActiveWindow
 		{
 			get
@@ -224,10 +224,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.CodePane ActiveCodePane
 		{
 			get
@@ -245,10 +245,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.Addins Addins
 		{
 			get

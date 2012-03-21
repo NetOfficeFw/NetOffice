@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IXRangeEnum 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IXRangeEnum : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public UIntPtr RowCount
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public UIntPtr ColCount
 		{
 			get
@@ -109,12 +109,12 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgvar">object rgvar</param>
 		/// <param name="pcEltFetched">Int32 pcEltFetched</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Next(Int32 cElt, out object rgvar, out Int32 pcEltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -127,10 +127,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Skip(Int32 cElt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cElt);
@@ -138,9 +138,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Reset()
 		{
 			object[] paramsArray = null;
@@ -148,10 +148,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Clone(out NetOffice.OWC10Api.IXRangeEnum ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -162,10 +162,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="nTraverseCode">UIntPtr nTraverseCode</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void SetTraversal(UIntPtr nTraverseCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nTraverseCode);
@@ -173,12 +173,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		/// <param name="out">object Out</param>
-		/// <param name="in">object In</param>
+		/// <param name="_out">object Out</param>
+		/// <param name="_in">object In</param>
 		/// <param name="vt">Int16 vt</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void ChangeType(out object _out, object _in, Int16 vt)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false);
@@ -189,7 +189,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="iStart">Int32 iStart</param>
@@ -198,7 +198,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="vtCoerceTo">Int16 vtCoerceTo</param>
 		/// <param name="vtbCoerceFrom">Int32 vtbCoerceFrom</param>
 		/// <param name="fill">object Fill</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void GetElements(Int32 cElt, Int32 iStart, object rvarDest, out Int32 pcFetched, Int16 vtCoerceTo, Int32 vtbCoerceFrom, object fill)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false,false,false);

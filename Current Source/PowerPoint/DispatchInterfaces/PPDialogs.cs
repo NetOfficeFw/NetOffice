@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PPDialogs 
-	/// SupportByLibrary PowerPoint, 9
+	/// SupportByVersion PowerPoint, 9
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9)]
+	[SupportByVersionAttribute("PowerPoint", 9)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PPDialogs : Collection
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Tags Tags
 		{
 			get
@@ -107,17 +107,17 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -131,10 +131,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.PPDialog this[object index]
 		{
@@ -148,7 +148,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -158,8 +158,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		/// <param name="displayHelp">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp = -1</param>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position, NetOffice.OfficeApi.Enums.MsoTriState displayHelp)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position, object displayHelp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
 			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
@@ -168,14 +168,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
 		/// <param name="width">Single Width</param>
 		/// <param name="height">Single Height</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -193,8 +193,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">Single Height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal);
 			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -212,8 +212,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow);
 			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
@@ -222,7 +222,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -232,8 +232,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position);
 			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
@@ -242,7 +242,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -252,8 +252,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		/// <param name="displayHelp">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp = -1</param>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position, NetOffice.OfficeApi.Enums.MsoTriState displayHelp)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position, object displayHelp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
 			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
@@ -262,14 +262,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
 		/// <param name="width">Single Width</param>
 		/// <param name="height">Single Height</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -279,7 +279,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -287,8 +287,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">Single Height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal);
 			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
@@ -297,7 +297,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -306,8 +306,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow);
 			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
@@ -316,7 +316,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -326,8 +326,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState modal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position);
 			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
@@ -336,15 +336,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, NetOffice.OfficeApi.Enums.MsoTriState bModal, object parentWindow, NetOffice.PowerPointApi.Enums.PpDialogPositioning position)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal, object parentWindow, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal, parentWindow, position);
 			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
@@ -353,12 +353,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID);
@@ -368,14 +368,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, NetOffice.OfficeApi.Enums.MsoTriState bModal)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal);
 			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
@@ -384,15 +384,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, NetOffice.OfficeApi.Enums.MsoTriState bModal, object parentWindow)
+		[SupportByVersionAttribute("PowerPoint", 9)]
+		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal, object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal, parentWindow);
 			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
@@ -401,9 +401,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPAlert AddAlert()
 		{
 			object[] paramsArray = null;
@@ -413,13 +413,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
 		/// <param name="icon">NetOffice.PowerPointApi.Enums.PpAlertIcon icon</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, NetOffice.PowerPointApi.Enums.PpAlertType type, NetOffice.PowerPointApi.Enums.PpAlertIcon icon, object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, type, icon, parentWindow);
@@ -428,13 +428,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary PowerPoint 9
+		/// SupportByVersion PowerPoint 9
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
 		/// <param name="icon">NetOffice.PowerPointApi.Enums.PpAlertIcon icon</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("PowerPoint", 9)]
+		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, NetOffice.PowerPointApi.Enums.PpAlertType type, NetOffice.PowerPointApi.Enums.PpAlertIcon icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, type, icon);

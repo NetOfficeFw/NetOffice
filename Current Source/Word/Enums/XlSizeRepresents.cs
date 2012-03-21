@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14
+	 /// SupportByVersion Word 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlSizeRepresents
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlSizeIsWidth = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlSizeIsArea = 1
 	}
 }

@@ -4,115 +4,115 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14
+	 /// SupportByVersion Outlook 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlMousePointer
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerArrow = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerCross = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerIBeam = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerSizeNESW = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerSizeNS = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerSizeNWSE = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerSizeWE = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerUpArrow = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerHourGlass = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerNoDrop = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerAppStarting = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerHelp = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerSizeAll = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>99</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olMousePointerCustom = 99
 	}
 }

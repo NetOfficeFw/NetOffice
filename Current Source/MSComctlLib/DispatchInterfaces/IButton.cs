@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IButton 
-	/// SupportByLibrary MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6.0
 	///</summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IButton : COMObject
 	{
@@ -75,18 +75,17 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public string _ObjectDefault
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_ObjectDefault", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -96,17 +95,17 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public string Caption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -116,10 +115,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public object Tag
 		{
 			get
@@ -144,10 +143,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public bool Enabled
 		{
 			get
@@ -164,10 +163,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Int16 Index
 		{
 			get
@@ -184,17 +183,17 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public string Key
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Key", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -204,17 +203,17 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public string ToolTipText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ToolTipText", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -224,10 +223,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public bool Visible
 		{
 			get
@@ -244,10 +243,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Single Width
 		{
 			get
@@ -264,10 +263,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Single Height
 		{
 			get
@@ -284,10 +283,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Single Top
 		{
 			get
@@ -304,10 +303,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Single Left
 		{
 			get
@@ -324,10 +323,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.Enums.ValueConstants Value
 		{
 			get
@@ -344,10 +343,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants Style
 		{
 			get
@@ -364,17 +363,17 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public string Description
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -384,10 +383,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public object Image
 		{
 			get
@@ -412,10 +411,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public bool MixedState
 		{
 			get
@@ -432,10 +431,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.IButtonMenus ButtonMenus
 		{
 			get

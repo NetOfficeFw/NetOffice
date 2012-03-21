@@ -12,9 +12,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface INodes 
-	/// SupportByLibrary MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6.0
 	///</summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class INodes : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.INode>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public Int16 Count
 		{
 			get
@@ -96,14 +96,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.INode get_ControlDefault(object index)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
 			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
@@ -111,11 +111,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.INode value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -123,31 +123,36 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Alias for get_ControlDefault
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// Get/Set
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.INode this[object index]
 		{
 			get
-{			
+			{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
 			NetOffice.MSComctlLibApi.INode newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
 			return newObject;
+			}
+			set
+			{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			Invoker.PropertySet(this, "Item", paramsArray, value);
 			}
 		}
 
@@ -156,7 +161,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		/// <param name="relationship">optional object Relationship</param>
@@ -164,7 +169,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object Text</param>
 		/// <param name="image">optional object Image</param>
 		/// <param name="selectedImage">optional object SelectedImage</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image, object selectedImage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image, selectedImage);
@@ -174,10 +179,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add()
 		{
 			object[] paramsArray = null;
@@ -187,11 +192,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative);
@@ -201,12 +206,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		/// <param name="relationship">optional object Relationship</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship);
@@ -216,13 +221,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		/// <param name="relationship">optional object Relationship</param>
 		/// <param name="key">optional object Key</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key);
@@ -232,14 +237,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		/// <param name="relationship">optional object Relationship</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text);
@@ -249,7 +254,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="relative">optional object Relative</param>
 		/// <param name="relationship">optional object Relationship</param>
@@ -257,7 +262,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object Text</param>
 		/// <param name="image">optional object Image</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image);
@@ -267,9 +272,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -277,10 +282,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6.0
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -289,43 +294,33 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.MSComctlLibApi.INode> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute MSComctlLib, 2
-		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
-        public IEnumerator<NetOffice.MSComctlLibApi.INode> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.MSComctlLibApi.INode item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.MSComctlLibApi.INode> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute MSComctlLib, 2
+        /// <summary>
+		/// SupportByVersionAttribute MSComctlLib, 6.0
 		/// </summary>
-		[SupportByLibraryAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+       public IEnumerator<NetOffice.MSComctlLibApi.INode> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.MSComctlLibApi.INode item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute MSComctlLib, 6.0
+		/// </summary>
+		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

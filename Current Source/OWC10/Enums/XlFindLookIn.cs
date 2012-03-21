@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary OWC10 1
+	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlFindLookIn
 	{
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4123</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlFormulas = -4123,
 
 		 /// <summary>
-		 /// SupportByLibrary OWC10 1
+		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>-4163</remarks>
-		 [SupportByLibraryAttribute("OWC10", 1)]
+		 [SupportByVersionAttribute("OWC10", 1)]
 		 xlValues = -4163
 	}
 }

@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 12, 14
+	 /// SupportByVersion Outlook 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlFormatInteger
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olFormatIntegerPlain = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olFormatIntegerComputer1 = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olFormatIntegerComputer2 = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olFormatIntegerComputer3 = 4
 	}
 }

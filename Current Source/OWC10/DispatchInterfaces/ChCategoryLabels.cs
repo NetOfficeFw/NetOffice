@@ -12,9 +12,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ChCategoryLabels 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChCategoryLabels : COMObject ,IEnumerable<NetOffice.OWC10Api.ChCategoryLabel>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 LevelCount
 		{
 			get
@@ -91,23 +91,24 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Level">optional Int32 Level</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
-		public Int32 get_ItemCount(Int32 level)
-		{
+		/// <param name="level">optional Int32 Level</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Int32 get_ItemCount(object level)
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.PropertyGet(this, "ItemCount", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 ItemCount
 		{
 			get
@@ -119,10 +120,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.ChAxis Parent
 		{
 			get
@@ -135,14 +136,14 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		/// <param name="Level">optional Int32 Level</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="index">object Index</param>
+		/// <param name="level">optional Int32 Level</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OWC10Api.ChCategoryLabel this[object index, Int32 level]
+		public NetOffice.OWC10Api.ChCategoryLabel this[object index, object level]
 		{
 			get
 {			
@@ -154,10 +155,28 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		public NetOffice.OWC10Api.ChCategoryLabel this[object index]
+		{
+			get
+{			
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
+			NetOffice.OWC10Api.ChCategoryLabel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
+			return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultGroupAxis PivotAxis
 		{
 			get
@@ -175,43 +194,33 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
-        #region IEnumerable<NetOffice.OWC10Api.ChCategoryLabel> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute OWC10, 1
-		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
-        public IEnumerator<NetOffice.OWC10Api.ChCategoryLabel> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OWC10Api.ChCategoryLabel item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.OWC10Api.ChCategoryLabel> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute OWC10, 1
+        /// <summary>
+		/// SupportByVersionAttribute OWC10, 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+       public IEnumerator<NetOffice.OWC10Api.ChCategoryLabel> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OWC10Api.ChCategoryLabel item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute OWC10, 1
+		/// </summary>
+		[SupportByVersionAttribute("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

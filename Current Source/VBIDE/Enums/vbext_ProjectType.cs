@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary VBIDE 5.3, 11, 12
+	 /// SupportByVersion VBIDE 11, 12, 5.3
 	 /// </summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum vbext_ProjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary VBIDE 5.3, 11, 12
+		 /// SupportByVersion VBIDE 11, 12, 5.3
 		 /// </summary>
 		 /// <remarks>100</remarks>
-		 [SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		 [SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		 vbext_pt_HostProject = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary VBIDE 5.3, 11, 12
+		 /// SupportByVersion VBIDE 11, 12, 5.3
 		 /// </summary>
 		 /// <remarks>101</remarks>
-		 [SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		 [SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		 vbext_pt_StandAlone = 101
 	}
 }

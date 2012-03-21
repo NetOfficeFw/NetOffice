@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAxisCrosses
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlAxisCrossesAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4114</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlAxisCrossesCustom = -4114,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlAxisCrossesMaximum = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlAxisCrossesMinimum = 4
 	}
 }

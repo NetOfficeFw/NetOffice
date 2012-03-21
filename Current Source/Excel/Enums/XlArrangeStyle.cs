@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlArrangeStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlArrangeStyleCascade = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4128</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlArrangeStyleHorizontal = -4128,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlArrangeStyleTiled = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4166</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlArrangeStyleVertical = -4166
 	}
 }

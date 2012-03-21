@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlInsertShiftDirection
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4121</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlShiftDown = -4121,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>-4161</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlShiftToRight = -4161
 	}
 }

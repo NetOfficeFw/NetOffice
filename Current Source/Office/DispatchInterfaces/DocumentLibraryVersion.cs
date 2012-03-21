@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface DocumentLibraryVersion 
-	/// SupportByLibrary Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentLibraryVersion : _IMsoDispObj
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public object Modified
 		{
 			get
@@ -98,10 +98,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -113,10 +113,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -129,32 +129,32 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public string ModifiedBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ModifiedBy", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public string Comments
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Comments", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
@@ -163,9 +163,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -173,9 +173,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public COMObject Open()
 		{
 			object[] paramsArray = null;
@@ -185,9 +185,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14)]
 		public COMObject Restore()
 		{
 			object[] paramsArray = null;

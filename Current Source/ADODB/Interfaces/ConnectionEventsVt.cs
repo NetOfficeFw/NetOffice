@@ -10,9 +10,9 @@ namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// Interface ConnectionEventsVt 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ConnectionEventsVt : COMObject
 	{
@@ -78,64 +78,64 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 InfoMessage(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pError, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "InfoMessage", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="transactionLevel">Int32 TransactionLevel</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 BeginTransComplete(Int32 transactionLevel, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(transactionLevel, pError, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "BeginTransComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 CommitTransComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pError, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "CommitTransComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 RollbackTransComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pError, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "RollbackTransComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="cursorType">NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType</param>
@@ -145,16 +145,16 @@ namespace NetOffice.ADODBApi
 		/// <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 WillExecute(string source, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "WillExecute", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="recordsAffected">Int32 RecordsAffected</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
@@ -162,16 +162,16 @@ namespace NetOffice.ADODBApi
 		/// <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 ExecuteComplete(Int32 recordsAffected, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, pError, adStatus, pCommand, pRecordset, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "ExecuteComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="connectionString">string ConnectionString</param>
 		/// <param name="userID">string UserID</param>
@@ -179,39 +179,39 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">Int32 Options</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 WillConnect(string connectionString, string userID, string password, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password, options, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "WillConnect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 ConnectComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pError, adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "ConnectComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1, 2.5
+		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-		[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 Disconnect(NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(adStatus, pConnection);
 			object returnItem = Invoker.MethodReturn(this, "Disconnect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

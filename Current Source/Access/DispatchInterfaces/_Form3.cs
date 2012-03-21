@@ -12,11 +12,11 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Form3 
-	/// SupportByLibrary Access, 12,14
+	/// SupportByVersion Access, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Form3 : NetOffice.OfficeApi.IAccessible ,IEnumerable<object>
+	public class _Form3 : _Form2 ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string FormName
 		{
@@ -87,7 +87,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -97,17 +97,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string RecordSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordSource", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -117,17 +117,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Filter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Filter", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -137,10 +137,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool FilterOn
 		{
 			get
@@ -157,17 +157,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OrderBy
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OrderBy", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -177,10 +177,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool OrderByOn
 		{
 			get
@@ -197,10 +197,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AllowFilters
 		{
 			get
@@ -217,17 +217,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Caption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -237,17 +237,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte DefaultView
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultView", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -257,17 +257,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte ViewsAllowed
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ViewsAllowed", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -277,10 +277,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool AllowEditing
 		{
@@ -298,10 +298,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 DefaultEditing
 		{
@@ -319,10 +319,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AllowEdits
 		{
 			get
@@ -339,10 +339,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AllowDeletions
 		{
 			get
@@ -359,10 +359,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AllowAdditions
 		{
 			get
@@ -379,10 +379,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool DataEntry
 		{
 			get
@@ -399,10 +399,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte AllowUpdating
 		{
@@ -410,7 +410,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowUpdating", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -420,17 +420,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte RecordsetType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordsetType", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -440,17 +440,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte RecordLocks
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordLocks", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -460,17 +460,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte ScrollBars
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScrollBars", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -480,10 +480,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool RecordSelectors
 		{
 			get
@@ -500,10 +500,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool NavigationButtons
 		{
 			get
@@ -520,10 +520,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool DividingLines
 		{
 			get
@@ -540,10 +540,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AutoResize
 		{
 			get
@@ -560,10 +560,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool AutoCenter
 		{
 			get
@@ -580,10 +580,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool PopUp
 		{
 			get
@@ -600,10 +600,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool Modal
 		{
 			get
@@ -620,17 +620,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte BorderStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BorderStyle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -640,10 +640,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool ControlBox
 		{
 			get
@@ -660,10 +660,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool MinButton
 		{
@@ -681,10 +681,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool MaxButton
 		{
@@ -702,17 +702,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte MinMaxButtons
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinMaxButtons", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -722,10 +722,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool CloseButton
 		{
 			get
@@ -742,10 +742,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool WhatsThisButton
 		{
@@ -763,10 +763,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 Width
 		{
 			get
@@ -783,17 +783,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Picture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -803,17 +803,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte PictureType
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureType", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -823,17 +823,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte PictureSizeMode
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureSizeMode", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -843,17 +843,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte PictureAlignment
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureAlignment", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -863,10 +863,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool PictureTiling
 		{
 			get
@@ -883,17 +883,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte Cycle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Cycle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -903,17 +903,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string MenuBar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MenuBar", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -923,17 +923,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Toolbar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Toolbar", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -943,10 +943,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool ShortcutMenu
 		{
 			get
@@ -963,17 +963,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string ShortcutMenuBar
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ShortcutMenuBar", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -983,10 +983,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 GridX
 		{
 			get
@@ -1003,10 +1003,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 GridY
 		{
 			get
@@ -1023,10 +1023,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool LayoutForPrint
 		{
 			get
@@ -1043,10 +1043,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool FastLaserPrinting
 		{
 			get
@@ -1063,17 +1063,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string HelpFile
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HelpFile", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1083,10 +1083,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 HelpContextId
 		{
 			get
@@ -1103,10 +1103,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 RowHeight
 		{
 			get
@@ -1123,17 +1123,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string DatasheetFontName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DatasheetFontName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1143,10 +1143,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 DatasheetFontHeight
 		{
 			get
@@ -1163,10 +1163,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 DatasheetFontWeight
 		{
 			get
@@ -1183,10 +1183,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool DatasheetFontItalic
 		{
 			get
@@ -1203,10 +1203,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool DatasheetFontUnderline
 		{
 			get
@@ -1223,10 +1223,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte TabularCharSet
 		{
@@ -1234,7 +1234,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TabularCharSet", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -1244,17 +1244,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte DatasheetGridlinesBehavior
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DatasheetGridlinesBehavior", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -1264,10 +1264,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 DatasheetGridlinesColor
 		{
 			get
@@ -1284,17 +1284,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte DatasheetCellsEffect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DatasheetCellsEffect", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -1304,10 +1304,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 DatasheetForeColor
 		{
 			get
@@ -1324,10 +1324,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool ShowGrid
 		{
@@ -1345,10 +1345,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 DatasheetBackColor
 		{
 			get
@@ -1365,10 +1365,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 Hwnd
 		{
 			get
@@ -1385,10 +1385,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 Count
 		{
 			get
@@ -1405,10 +1405,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 Page
 		{
 			get
@@ -1425,10 +1425,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 Pages
 		{
 			get
@@ -1445,10 +1445,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 LogicalPageWidth
 		{
@@ -1466,10 +1466,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 LogicalPageHeight
 		{
@@ -1487,10 +1487,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 ZoomControl
 		{
@@ -1508,10 +1508,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool Visible
 		{
 			get
@@ -1528,10 +1528,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool Painting
 		{
 			get
@@ -1548,10 +1548,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PrtMip
 		{
 			get
@@ -1576,10 +1577,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PrtDevMode
 		{
 			get
@@ -1604,10 +1606,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PrtDevNames
 		{
 			get
@@ -1632,10 +1635,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 FrozenColumns
 		{
 			get
@@ -1652,10 +1655,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public object Bookmark
 		{
 			get
@@ -1680,10 +1683,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte TabularFamily
 		{
@@ -1691,7 +1694,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TabularFamily", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -1701,17 +1704,18 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string _Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1721,17 +1725,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string PaletteSource
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PaletteSource", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1741,17 +1745,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Tag
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tag", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1761,10 +1765,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PaintPalette
 		{
 			get
@@ -1789,17 +1794,18 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnMenu
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMenu", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1809,10 +1815,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public object OpenArgs
 		{
 			get
@@ -1837,10 +1843,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 ConnectSynch
 		{
@@ -1858,17 +1864,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnCurrent
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnCurrent", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1878,17 +1884,18 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnInsert
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnInsert", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1898,17 +1905,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string BeforeInsert
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeInsert", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1918,17 +1925,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string AfterInsert
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterInsert", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1938,17 +1945,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string BeforeUpdate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeUpdate", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1958,17 +1965,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string AfterUpdate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterUpdate", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1978,17 +1985,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnDirty
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDirty", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -1998,17 +2005,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnDelete
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDelete", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2018,17 +2025,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string BeforeDelConfirm
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeDelConfirm", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2038,17 +2045,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string AfterDelConfirm
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterDelConfirm", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2058,17 +2065,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnOpen
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnOpen", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2078,17 +2085,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnLoad
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnLoad", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2098,17 +2105,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnResize
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnResize", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2118,17 +2125,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnUnload
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnUnload", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2138,17 +2145,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnClose
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnClose", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2158,17 +2165,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnActivate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnActivate", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2178,17 +2185,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnDeactivate
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDeactivate", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2198,17 +2205,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnGotFocus
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnGotFocus", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2218,17 +2225,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnLostFocus
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnLostFocus", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2238,17 +2245,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnClick
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnClick", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2258,17 +2265,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnDblClick
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDblClick", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2278,17 +2285,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseDown
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseDown", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2298,17 +2305,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseMove
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseMove", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2318,17 +2325,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnMouseUp
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseUp", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2338,17 +2345,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyDown
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyDown", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2358,17 +2365,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyUp
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyUp", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2378,17 +2385,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnKeyPress
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyPress", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2398,10 +2405,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool KeyPreview
 		{
 			get
@@ -2418,17 +2425,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnError
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnError", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2438,17 +2445,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnFilter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnFilter", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2458,17 +2465,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnApplyFilter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnApplyFilter", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2478,17 +2485,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string OnTimer
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnTimer", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2498,10 +2505,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 TimerInterval
 		{
 			get
@@ -2518,10 +2525,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool Dirty
 		{
 			get
@@ -2538,10 +2545,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 WindowWidth
 		{
 			get
@@ -2558,10 +2565,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 WindowHeight
 		{
 			get
@@ -2578,10 +2585,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 CurrentView
 		{
 			get
@@ -2598,10 +2605,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 CurrentSectionTop
 		{
 			get
@@ -2618,10 +2625,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 CurrentSectionLeft
 		{
 			get
@@ -2638,10 +2645,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 SelLeft
 		{
 			get
@@ -2658,10 +2665,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 SelTop
 		{
 			get
@@ -2678,10 +2685,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 SelWidth
 		{
 			get
@@ -2698,10 +2705,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 SelHeight
 		{
 			get
@@ -2718,10 +2725,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 CurrentRecord
 		{
 			get
@@ -2738,10 +2745,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PictureData
 		{
 			get
@@ -2766,10 +2774,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 InsideHeight
 		{
 			get
@@ -2786,10 +2794,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 InsideWidth
 		{
 			get
@@ -2806,10 +2814,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PicturePalette
 		{
 			get
@@ -2834,10 +2843,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool HasModule
 		{
 			get
@@ -2854,10 +2863,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 acHiddenCurrentPage
 		{
@@ -2875,17 +2884,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public byte Orientation
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -2895,10 +2904,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool AllowDesignChanges
 		{
@@ -2916,17 +2925,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string ServerFilter
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ServerFilter", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2936,10 +2945,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool ServerFilterByForm
 		{
 			get
@@ -2956,10 +2965,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int32 MaxRecords
 		{
 			get
@@ -2976,17 +2985,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string UniqueTable
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UniqueTable", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -2996,17 +3005,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string ResyncCommand
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ResyncCommand", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3016,17 +3025,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string InputParameters
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InputParameters", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3036,10 +3045,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool MaxRecButton
 		{
 			get
@@ -3056,10 +3065,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -3072,10 +3081,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -3088,10 +3097,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 NewRecord
 		{
 			get
@@ -3103,10 +3112,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control ActiveControl
 		{
 			get
@@ -3119,13 +3128,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="ControlType">Int32 ControlType</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		/// <param name="controlType">Int32 ControlType</param>
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.Control get_DefaultControl(Int32 controlType)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(controlType);
 			object returnItem = Invoker.PropertyGet(this, "DefaultControl", paramsArray);
 			NetOffice.AccessApi.Control newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Control.LateBindingApiWrapperType) as NetOffice.AccessApi.Control;
@@ -3133,21 +3143,21 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Alias for get_DefaultControl
 		/// </summary>
-		/// <param name="ControlType">Int32 ControlType</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		/// <param name="controlType">Int32 ControlType</param>
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Control DefaultControl(Int32 controlType)
 		{
 			return get_DefaultControl(controlType);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject Dynaset
 		{
@@ -3161,10 +3171,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public COMObject RecordsetClone
 		{
 			get
@@ -3177,10 +3187,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public COMObject Recordset
 		{
 			get
@@ -3198,14 +3208,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12
+		/// SupportByVersion Access 12
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 12)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 12)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.Section get__SectionOld(object index)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_SectionOld", paramsArray);
 			NetOffice.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Section.LateBindingApiWrapperType) as NetOffice.AccessApi.Section;
@@ -3213,21 +3223,21 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12
+		/// SupportByVersion Access 12
 		/// Alias for get__SectionOld
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 12)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 12)]
 		public NetOffice.AccessApi.Section _SectionOld(object index)
 		{
 			return get__SectionOld(index);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Form Form
 		{
 			get
@@ -3240,10 +3250,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Module Module
 		{
 			get
@@ -3256,10 +3266,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Properties Properties
 		{
 			get
@@ -3272,10 +3282,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.Control ConnectControl
 		{
@@ -3289,10 +3299,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi.Controls Controls
 		{
 			get
@@ -3305,17 +3315,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3325,10 +3335,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public Int16 SubdatasheetHeight
 		{
 			get
@@ -3345,10 +3355,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public bool SubdatasheetExpanded
 		{
 			get
@@ -3365,17 +3375,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public byte DatasheetBorderLineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DatasheetBorderLineStyle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -3385,17 +3395,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public byte DatasheetColumnHeaderUnderlineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DatasheetColumnHeaderUnderlineStyle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -3405,17 +3415,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public byte HorizontalDatasheetGridlineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalDatasheetGridlineStyle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -3425,17 +3435,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public byte VerticalDatasheetGridlineStyle
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VerticalDatasheetGridlineStyle", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -3445,10 +3455,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public Int16 WindowTop
 		{
 			get
@@ -3460,10 +3470,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public Int16 WindowLeft
 		{
 			get
@@ -3475,17 +3485,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string OnUndo
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnUndo", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3495,10 +3505,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnRecordExit
 		{
@@ -3506,7 +3516,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnRecordExit", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3516,10 +3526,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public COMObject PivotTable
 		{
 			get
@@ -3532,10 +3542,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public COMObject ChartSpace
 		{
 			get
@@ -3548,10 +3558,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public NetOffice.AccessApi._Printer Printer
 		{
 			get
@@ -3569,10 +3579,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool Moveable
 		{
 			get
@@ -3589,10 +3599,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeginBatchEdit
 		{
@@ -3600,7 +3610,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeginBatchEdit", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3610,10 +3620,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string UndoBatchEdit
 		{
@@ -3621,7 +3631,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UndoBatchEdit", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3631,10 +3641,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeBeginTransaction
 		{
@@ -3642,7 +3652,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeBeginTransaction", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3652,10 +3662,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterBeginTransaction
 		{
@@ -3663,7 +3673,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterBeginTransaction", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3673,10 +3683,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeCommitTransaction
 		{
@@ -3684,7 +3694,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeCommitTransaction", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3694,10 +3704,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterCommitTransaction
 		{
@@ -3705,7 +3715,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterCommitTransaction", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3715,10 +3725,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string RollbackTransaction
 		{
@@ -3726,7 +3736,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RollbackTransaction", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3736,10 +3746,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool AllowFormView
 		{
 			get
@@ -3756,10 +3766,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool AllowDatasheetView
 		{
 			get
@@ -3776,10 +3786,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool AllowPivotTableView
 		{
 			get
@@ -3796,10 +3806,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool AllowPivotChartView
 		{
 			get
@@ -3816,17 +3826,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string OnConnect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnConnect", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3836,17 +3846,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string OnDisconnect
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDisconnect", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3856,17 +3866,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string PivotTableChange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTableChange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3876,17 +3886,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string Query
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Query", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3896,17 +3906,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string BeforeQuery
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeQuery", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3916,17 +3926,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string SelectionChange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectionChange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3936,17 +3946,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string CommandBeforeExecute
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBeforeExecute", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3956,17 +3966,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string CommandChecked
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandChecked", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3976,17 +3986,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string CommandEnabled
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandEnabled", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -3996,17 +4006,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string CommandExecute
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandExecute", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4016,17 +4026,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string DataSetChange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataSetChange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4036,17 +4046,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string BeforeScreenTip
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeScreenTip", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4056,17 +4066,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string AfterFinalRender
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterFinalRender", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4076,17 +4086,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string AfterRender
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterRender", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4096,17 +4106,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string AfterLayout
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterLayout", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4116,17 +4126,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string BeforeRender
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeRender", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4136,17 +4146,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string MouseWheel
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseWheel", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4156,17 +4166,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string ViewChange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ViewChange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4176,17 +4186,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string DataChange
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataChange", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4196,10 +4206,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool FetchDefaults
 		{
 			get
@@ -4216,10 +4226,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool BatchUpdates
 		{
@@ -4237,10 +4247,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte CommitOnClose
 		{
@@ -4248,7 +4258,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommitOnClose", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -4258,10 +4268,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool CommitOnNavigation
 		{
@@ -4279,10 +4289,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public bool UseDefaultPrinter
 		{
 			get
@@ -4299,17 +4309,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public string RecordSourceQualifier
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordSourceQualifier", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4319,10 +4329,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool FilterOnLoad
 		{
 			get
@@ -4339,10 +4349,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool OrderByOnLoad
 		{
 			get
@@ -4359,10 +4369,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcSplitFormOrientation SplitFormOrientation
 		{
 			get
@@ -4379,10 +4389,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcSplitFormDatasheet SplitFormDatasheet
 		{
 			get
@@ -4399,10 +4409,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool SplitFormSplitterBar
 		{
 			get
@@ -4419,10 +4429,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public NetOffice.AccessApi.Enums.AcSplitFormPrinting SplitFormPrinting
 		{
 			get
@@ -4439,10 +4449,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool SplitFormSplitterBarSave
 		{
 			get
@@ -4459,17 +4469,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public string NavigationCaption
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NavigationCaption", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4479,10 +4489,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnCurrentMacro
 		{
@@ -4490,7 +4500,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnCurrentMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4500,10 +4510,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeInsertMacro
 		{
@@ -4511,7 +4521,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeInsertMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4521,10 +4531,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterInsertMacro
 		{
@@ -4532,7 +4542,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterInsertMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4542,10 +4552,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeUpdateMacro
 		{
@@ -4553,7 +4563,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeUpdateMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4563,10 +4573,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterUpdateMacro
 		{
@@ -4574,7 +4584,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterUpdateMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4584,10 +4594,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnDirtyMacro
 		{
@@ -4595,7 +4605,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDirtyMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4605,10 +4615,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnDeleteMacro
 		{
@@ -4616,7 +4626,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDeleteMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4626,10 +4636,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeDelConfirmMacro
 		{
@@ -4637,7 +4647,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeDelConfirmMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4647,10 +4657,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterDelConfirmMacro
 		{
@@ -4658,7 +4668,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterDelConfirmMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4668,10 +4678,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnOpenMacro
 		{
@@ -4679,7 +4689,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnOpenMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4689,10 +4699,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnLoadMacro
 		{
@@ -4700,7 +4710,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnLoadMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4710,10 +4720,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnResizeMacro
 		{
@@ -4721,7 +4731,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnResizeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4731,10 +4741,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnUnloadMacro
 		{
@@ -4742,7 +4752,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnUnloadMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4752,10 +4762,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnCloseMacro
 		{
@@ -4763,7 +4773,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnCloseMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4773,10 +4783,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnActivateMacro
 		{
@@ -4784,7 +4794,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnActivateMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4794,10 +4804,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnDeactivateMacro
 		{
@@ -4805,7 +4815,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDeactivateMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4815,10 +4825,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnGotFocusMacro
 		{
@@ -4826,7 +4836,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnGotFocusMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4836,10 +4846,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnLostFocusMacro
 		{
@@ -4847,7 +4857,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnLostFocusMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4857,10 +4867,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnClickMacro
 		{
@@ -4868,7 +4878,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnClickMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4878,10 +4888,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnDblClickMacro
 		{
@@ -4889,7 +4899,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDblClickMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4899,10 +4909,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnMouseDownMacro
 		{
@@ -4910,7 +4920,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseDownMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4920,10 +4930,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnMouseMoveMacro
 		{
@@ -4931,7 +4941,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseMoveMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4941,10 +4951,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnMouseUpMacro
 		{
@@ -4952,7 +4962,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnMouseUpMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4962,10 +4972,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnKeyDownMacro
 		{
@@ -4973,7 +4983,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyDownMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -4983,10 +4993,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnKeyUpMacro
 		{
@@ -4994,7 +5004,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyUpMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5004,10 +5014,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnKeyPressMacro
 		{
@@ -5015,7 +5025,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnKeyPressMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5025,10 +5035,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnErrorMacro
 		{
@@ -5036,7 +5046,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnErrorMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5046,10 +5056,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnFilterMacro
 		{
@@ -5057,7 +5067,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnFilterMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5067,10 +5077,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnApplyFilterMacro
 		{
@@ -5078,7 +5088,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnApplyFilterMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5088,10 +5098,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnTimerMacro
 		{
@@ -5099,7 +5109,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnTimerMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5109,10 +5119,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnUndoMacro
 		{
@@ -5120,7 +5130,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnUndoMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5130,10 +5140,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnRecordExitMacro
 		{
@@ -5141,7 +5151,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnRecordExitMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5151,10 +5161,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeginBatchEditMacro
 		{
@@ -5162,7 +5172,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeginBatchEditMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5172,10 +5182,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string UndoBatchEditMacro
 		{
@@ -5183,7 +5193,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UndoBatchEditMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5193,10 +5203,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeBeginTransactionMacro
 		{
@@ -5204,7 +5214,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeBeginTransactionMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5214,10 +5224,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterBeginTransactionMacro
 		{
@@ -5225,7 +5235,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterBeginTransactionMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5235,10 +5245,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeCommitTransactionMacro
 		{
@@ -5246,7 +5256,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeCommitTransactionMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5256,10 +5266,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterCommitTransactionMacro
 		{
@@ -5267,7 +5277,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterCommitTransactionMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5277,10 +5287,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string RollbackTransactionMacro
 		{
@@ -5288,7 +5298,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RollbackTransactionMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5298,10 +5308,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnConnectMacro
 		{
@@ -5309,7 +5319,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnConnectMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5319,10 +5329,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnDisconnectMacro
 		{
@@ -5330,7 +5340,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OnDisconnectMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5340,10 +5350,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string PivotTableChangeMacro
 		{
@@ -5351,7 +5361,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTableChangeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5361,10 +5371,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string QueryMacro
 		{
@@ -5372,7 +5382,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "QueryMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5382,10 +5392,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeQueryMacro
 		{
@@ -5393,7 +5403,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeQueryMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5403,10 +5413,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string SelectionChangeMacro
 		{
@@ -5414,7 +5424,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectionChangeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5424,10 +5434,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CommandBeforeExecuteMacro
 		{
@@ -5435,7 +5445,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBeforeExecuteMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5445,10 +5455,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CommandCheckedMacro
 		{
@@ -5456,7 +5466,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandCheckedMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5466,10 +5476,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CommandEnabledMacro
 		{
@@ -5477,7 +5487,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandEnabledMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5487,10 +5497,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CommandExecuteMacro
 		{
@@ -5498,7 +5508,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandExecuteMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5508,10 +5518,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string DataSetChangeMacro
 		{
@@ -5519,7 +5529,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataSetChangeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5529,10 +5539,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeScreenTipMacro
 		{
@@ -5540,7 +5550,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeScreenTipMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5550,10 +5560,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterFinalRenderMacro
 		{
@@ -5561,7 +5571,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterFinalRenderMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5571,10 +5581,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterRenderMacro
 		{
@@ -5582,7 +5592,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterRenderMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5592,10 +5602,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AfterLayoutMacro
 		{
@@ -5603,7 +5613,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AfterLayoutMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5613,10 +5623,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string BeforeRenderMacro
 		{
@@ -5624,7 +5634,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BeforeRenderMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5634,10 +5644,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string MouseWheelMacro
 		{
@@ -5645,7 +5655,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseWheelMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5655,10 +5665,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ViewChangeMacro
 		{
@@ -5666,7 +5676,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ViewChangeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5676,10 +5686,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string DataChangeMacro
 		{
@@ -5687,7 +5697,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataChangeMacro", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5697,10 +5707,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool AllowLayoutView
 		{
 			get
@@ -5717,10 +5727,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public Int32 DatasheetAlternateBackColor
 		{
 			get
@@ -5737,17 +5747,17 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public byte DisplayOnSharePointSite
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DisplayOnSharePointSite", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -5757,10 +5767,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public Int32 SplitFormSize
 		{
 			get
@@ -5777,13 +5787,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi._Section get_Section(object index)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Section", paramsArray);
 			NetOffice.AccessApi._Section newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._Section;
@@ -5791,28 +5802,28 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// Alias for get_Section
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public NetOffice.AccessApi._Section Section(object index)
 		{
 			return get_Section(index);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public string RibbonName
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RibbonName", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -5822,10 +5833,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		public bool FitToScreen
 		{
 			get
@@ -5842,14 +5853,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// Get
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.Section get_SectionOld(object index)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "SectionOld", paramsArray);
 			NetOffice.AccessApi.Section newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Section.LateBindingApiWrapperType) as NetOffice.AccessApi.Section;
@@ -5857,11 +5868,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 14
+		/// SupportByVersion Access 14
 		/// Alias for get_SectionOld
 		/// </summary>
-		/// <param name="Index">object Index</param>
-		[SupportByLibraryAttribute("Access", 14)]
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Access", 14)]
 		public NetOffice.AccessApi.Section SectionOld(object index)
 		{
 			return get_SectionOld(index);
@@ -5872,9 +5883,9 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void Undo()
 		{
 			object[] paramsArray = null;
@@ -5882,9 +5893,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void Recalc()
 		{
 			object[] paramsArray = null;
@@ -5892,9 +5903,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void Requery()
 		{
 			object[] paramsArray = null;
@@ -5902,9 +5913,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -5912,9 +5923,9 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void Repaint()
 		{
 			object[] paramsArray = null;
@@ -5922,24 +5933,24 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pageNumber">Int32 PageNumber</param>
 		/// <param name="right">optional Int32 Right = 0</param>
 		/// <param name="down">optional Int32 Down = 0</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
-		public void GoToPage(Int32 pageNumber, Int32 right, Int32 down)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void GoToPage(Int32 pageNumber, object right, object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right, down);
 			Invoker.Method(this, "GoToPage", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pageNumber">Int32 PageNumber</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void GoToPage(Int32 pageNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber);
@@ -5947,22 +5958,22 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="pageNumber">Int32 PageNumber</param>
 		/// <param name="right">optional Int32 Right = 0</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
-		public void GoToPage(Int32 pageNumber, Int32 right)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		public void GoToPage(Int32 pageNumber, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right);
 			Invoker.Method(this, "GoToPage", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public void SetFocus()
 		{
 			object[] paramsArray = null;
@@ -5970,12 +5981,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
@@ -5992,12 +6003,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		public object _Evaluate(string bstrExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
@@ -6014,13 +6025,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public void Move(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
@@ -6028,11 +6039,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">object Left</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public void Move(object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left);
@@ -6040,12 +6051,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public void Move(object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
@@ -6053,13 +6064,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Access 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14)]
 		public void Move(object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
@@ -6068,43 +6079,33 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Access, 12,14
-		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<COMObject> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Access, 12,14
+        /// <summary>
+		/// SupportByVersionAttribute Access, 12,14
 		/// </summary>
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Access, 12,14
+		/// </summary>
+		[SupportByVersionAttribute("Access", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

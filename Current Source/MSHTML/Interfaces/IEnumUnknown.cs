@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IEnumUnknown 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumUnknown : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		/// <param name="rgelt">object rgelt</param>
 		/// <param name="pceltFetched">Int32 pceltFetched</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 RemoteNext(Int32 celt, out object rgelt, out Int32 pceltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -93,37 +93,37 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "RemoteNext", paramsArray);
 			rgelt = (object)paramsArray[1];
 			pceltFetched = (Int32)paramsArray[2];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Skip(Int32 celt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(celt);
 			object returnItem = Invoker.MethodReturn(this, "Skip", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 reset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "reset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.MSHTMLApi.IEnumUnknown ppEnum</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Clone(out NetOffice.MSHTMLApi.IEnumUnknown ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -131,7 +131,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
 			ppEnum = (NetOffice.MSHTMLApi.IEnumUnknown)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

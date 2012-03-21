@@ -10,19 +10,19 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[ComImport, Guid("000630F4-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface NavigationGroupsEvents_12
 	{
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64458)]
 		void SelectedChange([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder);
 
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64459)]
 		void NavigationFolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder);
 
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64460)]
 		void NavigationFolderRemove();
 	}
@@ -72,8 +72,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SelectedChange", ref paramsArray);
 		}
 
 		public void NavigationFolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder)
@@ -88,8 +87,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NavigationFolderAdd", ref paramsArray);
 		}
 
 		public void NavigationFolderRemove()
@@ -102,8 +100,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NavigationFolderRemove", ref paramsArray);
 		}
 
 		#endregion

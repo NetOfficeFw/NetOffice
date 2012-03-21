@@ -10,59 +10,59 @@ namespace NetOffice.WordApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14)]
 	[ComImport, Guid("00020A02-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DocumentEvents2
 	{
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void New();
 
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void Open();
 
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void Close();
 
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void Sync([In] object syncEventType);
 
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
-		[SupportByLibraryAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template);
 	}
@@ -110,8 +110,7 @@ namespace NetOffice.WordApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("New", ref paramsArray);
 		}
 
 		public void Open()
@@ -124,8 +123,7 @@ namespace NetOffice.WordApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
 		}
 
 		public void Close()
@@ -138,8 +136,7 @@ namespace NetOffice.WordApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		public void Sync([In] object syncEventType)
@@ -154,8 +151,7 @@ namespace NetOffice.WordApi
 			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSyncEventType;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Sync", ref paramsArray);
 		}
 
 		public void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo)
@@ -172,8 +168,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewXMLNode;
 			paramsArray[1] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("XMLAfterInsert", ref paramsArray);
 		}
 
 		public void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo)
@@ -192,8 +187,7 @@ namespace NetOffice.WordApi
 			paramsArray[0] = newDeletedRange;
 			paramsArray[1] = newOldXMLNode;
 			paramsArray[2] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("XMLBeforeDelete", ref paramsArray);
 		}
 
 		public void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo)
@@ -210,8 +204,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewContentControl;
 			paramsArray[1] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlAfterAdd", ref paramsArray);
 		}
 
 		public void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo)
@@ -228,8 +221,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newOldContentControl;
 			paramsArray[1] = newInUndoRedo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlBeforeDelete", ref paramsArray);
 		}
 
 		public void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel)
@@ -245,8 +237,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlOnExit", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -263,8 +254,7 @@ namespace NetOffice.WordApi
 			NetOffice.WordApi.ContentControl newContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newContentControl;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlOnEnter", ref paramsArray);
 		}
 
 		public void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
@@ -280,8 +270,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlBeforeStoreUpdate", ref paramsArray);
 
 			content = (string)paramsArray[1];
 		}
@@ -299,8 +288,7 @@ namespace NetOffice.WordApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ContentControlBeforeContentUpdate", ref paramsArray);
 
 			content = (string)paramsArray[1];
 		}
@@ -325,8 +313,7 @@ namespace NetOffice.WordApi
 			paramsArray[2] = newCategory;
 			paramsArray[3] = newBlockType;
 			paramsArray[4] = newTemplate;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BuildingBlockInsert", ref paramsArray);
 		}
 
 		#endregion

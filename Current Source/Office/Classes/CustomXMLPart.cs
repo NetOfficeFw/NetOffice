@@ -18,11 +18,11 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CustomXMLPart 
-	/// SupportByLibrary Office, 12,14
+	/// SupportByVersion Office, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomXMLPart : _CustomXMLPart, IEventBinding 
+	public class CustomXMLPart : _CustomXMLPart,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -95,13 +95,84 @@ namespace NetOffice.OfficeApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Office, 12,14
+		/// </summary>
+		private event CustomXMLPart_NodeAfterInsertEventHandler _NodeAfterInsertEvent;
+
+		/// <summary>
+		/// SupportByVersion Office 12 14
+		/// </summary>
+		[SupportByVersion("Office", 12,14)]
+		public event CustomXMLPart_NodeAfterInsertEventHandler NodeAfterInsertEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NodeAfterInsertEvent += value;
+			}
+			remove
+			{
+				_NodeAfterInsertEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Office, 12,14
+		/// </summary>
+		private event CustomXMLPart_NodeAfterDeleteEventHandler _NodeAfterDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Office 12 14
+		/// </summary>
+		[SupportByVersion("Office", 12,14)]
+		public event CustomXMLPart_NodeAfterDeleteEventHandler NodeAfterDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NodeAfterDeleteEvent += value;
+			}
+			remove
+			{
+				_NodeAfterDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Office, 12,14
+		/// </summary>
+		private event CustomXMLPart_NodeAfterReplaceEventHandler _NodeAfterReplaceEvent;
+
+		/// <summary>
+		/// SupportByVersion Office 12 14
+		/// </summary>
+		[SupportByVersion("Office", 12,14)]
+		public event CustomXMLPart_NodeAfterReplaceEventHandler NodeAfterReplaceEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NodeAfterReplaceEvent += value;
+			}
+			remove
+			{
+				_NodeAfterReplaceEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -119,81 +190,7 @@ namespace NetOffice.OfficeApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Office, 12,14
-		/// </summary>
-		private event CustomXMLPart_NodeAfterInsertEventHandler _NodeAfterInsertEvent;
-
-		/// <summary>
-		/// SupportByLibrary Office 12 14
-		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
-		public event CustomXMLPart_NodeAfterInsertEventHandler NodeAfterInsertEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NodeAfterInsertEvent += value;
-			}
-			remove
-			{
-				_NodeAfterInsertEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Office, 12,14
-		/// </summary>
-		private event CustomXMLPart_NodeAfterDeleteEventHandler _NodeAfterDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary Office 12 14
-		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
-		public event CustomXMLPart_NodeAfterDeleteEventHandler NodeAfterDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NodeAfterDeleteEvent += value;
-			}
-			remove
-			{
-				_NodeAfterDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Office, 12,14
-		/// </summary>
-		private event CustomXMLPart_NodeAfterReplaceEventHandler _NodeAfterReplaceEvent;
-
-		/// <summary>
-		/// SupportByLibrary Office 12 14
-		/// </summary>
-		[SupportByLibrary("Office", 12,14)]
-		public event CustomXMLPart_NodeAfterReplaceEventHandler NodeAfterReplaceEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NodeAfterReplaceEvent += value;
-			}
-			remove
-			{
-				_NodeAfterReplaceEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -204,25 +201,22 @@ namespace NetOffice.OfficeApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -245,8 +239,59 @@ namespace NetOffice.OfficeApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __CustomXMLPartEvents_SinkHelper)
 			{
@@ -258,6 +303,7 @@ namespace NetOffice.OfficeApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

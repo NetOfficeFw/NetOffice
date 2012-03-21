@@ -46,11 +46,11 @@ namespace NetOffice.OWC10Api
 
 	///<summary>
 	/// CoClass Spreadsheet 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Spreadsheet : ISpreadsheet, IEventBinding 
+	public class Spreadsheet : ISpreadsheet,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -88,7 +88,7 @@ namespace NetOffice.OWC10Api
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -123,13 +123,700 @@ namespace NetOffice.OWC10Api
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_BeforeContextMenuEventHandler BeforeContextMenuEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeContextMenuEvent += value;
+			}
+			remove
+			{
+				_BeforeContextMenuEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_BeforeKeyDownEventHandler BeforeKeyDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyDownEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_BeforeKeyPressEventHandler BeforeKeyPressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyPressEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyPressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_BeforeKeyUpEventHandler BeforeKeyUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyUpEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_ClickEventHandler _ClickEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_ClickEventHandler ClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ClickEvent += value;
+			}
+			remove
+			{
+				_ClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_CommandEnabledEventHandler _CommandEnabledEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_CommandEnabledEventHandler CommandEnabledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandEnabledEvent += value;
+			}
+			remove
+			{
+				_CommandEnabledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_CommandCheckedEventHandler _CommandCheckedEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_CommandCheckedEventHandler CommandCheckedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandCheckedEvent += value;
+			}
+			remove
+			{
+				_CommandCheckedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_CommandTipTextEventHandler _CommandTipTextEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_CommandTipTextEventHandler CommandTipTextEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandTipTextEvent += value;
+			}
+			remove
+			{
+				_CommandTipTextEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandBeforeExecuteEvent += value;
+			}
+			remove
+			{
+				_CommandBeforeExecuteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_CommandExecuteEventHandler _CommandExecuteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_CommandExecuteEventHandler CommandExecuteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandExecuteEvent += value;
+			}
+			remove
+			{
+				_CommandExecuteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_DblClickEventHandler _DblClickEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_DblClickEventHandler DblClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DblClickEvent += value;
+			}
+			remove
+			{
+				_DblClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_EndEditEventHandler _EndEditEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_EndEditEventHandler EndEditEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_EndEditEvent += value;
+			}
+			remove
+			{
+				_EndEditEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_InitializeEventHandler _InitializeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_InitializeEventHandler InitializeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_InitializeEvent += value;
+			}
+			remove
+			{
+				_InitializeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_KeyDownEventHandler _KeyDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_KeyDownEventHandler KeyDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyDownEvent += value;
+			}
+			remove
+			{
+				_KeyDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_KeyPressEventHandler _KeyPressEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_KeyPressEventHandler KeyPressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyPressEvent += value;
+			}
+			remove
+			{
+				_KeyPressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_KeyUpEventHandler _KeyUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_KeyUpEventHandler KeyUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyUpEvent += value;
+			}
+			remove
+			{
+				_KeyUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_LoadCompletedEventHandler _LoadCompletedEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_LoadCompletedEventHandler LoadCompletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_LoadCompletedEvent += value;
+			}
+			remove
+			{
+				_LoadCompletedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_MouseDownEventHandler _MouseDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_MouseDownEventHandler MouseDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseDownEvent += value;
+			}
+			remove
+			{
+				_MouseDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_MouseOutEventHandler _MouseOutEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_MouseOutEventHandler MouseOutEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseOutEvent += value;
+			}
+			remove
+			{
+				_MouseOutEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_MouseOverEventHandler _MouseOverEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_MouseOverEventHandler MouseOverEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseOverEvent += value;
+			}
+			remove
+			{
+				_MouseOverEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_MouseUpEventHandler _MouseUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_MouseUpEventHandler MouseUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseUpEvent += value;
+			}
+			remove
+			{
+				_MouseUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_MouseWheelEventHandler _MouseWheelEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_MouseWheelEventHandler MouseWheelEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseWheelEvent += value;
+			}
+			remove
+			{
+				_MouseWheelEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SelectionChangeEventHandler _SelectionChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SelectionChangeEventHandler SelectionChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectionChangeEvent += value;
+			}
+			remove
+			{
+				_SelectionChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SelectionChangingEventHandler _SelectionChangingEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SelectionChangingEventHandler SelectionChangingEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectionChangingEvent += value;
+			}
+			remove
+			{
+				_SelectionChangingEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SheetActivateEventHandler _SheetActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SheetActivateEventHandler SheetActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetActivateEvent += value;
+			}
+			remove
+			{
+				_SheetActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SheetCalculateEventHandler _SheetCalculateEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SheetCalculateEventHandler SheetCalculateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetCalculateEvent += value;
+			}
+			remove
+			{
+				_SheetCalculateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SheetChangeEventHandler _SheetChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SheetChangeEventHandler SheetChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetChangeEvent += value;
+			}
+			remove
+			{
+				_SheetChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SheetDeactivateEventHandler _SheetDeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SheetDeactivateEventHandler SheetDeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetDeactivateEvent += value;
+			}
+			remove
+			{
+				_SheetDeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetFollowHyperlinkEvent += value;
+			}
+			remove
+			{
+				_SheetFollowHyperlinkEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_StartEditEventHandler _StartEditEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_StartEditEventHandler StartEditEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_StartEditEvent += value;
+			}
+			remove
+			{
+				_StartEditEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event Spreadsheet_ViewChangeEventHandler _ViewChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event Spreadsheet_ViewChangeEventHandler ViewChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ViewChangeEvent += value;
+			}
+			remove
+			{
+				_ViewChangeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -147,697 +834,7 @@ namespace NetOffice.OWC10Api
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_BeforeContextMenuEventHandler BeforeContextMenuEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeContextMenuEvent += value;
-			}
-			remove
-			{
-				_BeforeContextMenuEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_BeforeKeyDownEventHandler BeforeKeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyDownEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_BeforeKeyPressEventHandler BeforeKeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyPressEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_BeforeKeyUpEventHandler BeforeKeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyUpEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_ClickEventHandler _ClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_ClickEventHandler ClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ClickEvent += value;
-			}
-			remove
-			{
-				_ClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_CommandEnabledEventHandler _CommandEnabledEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_CommandEnabledEventHandler CommandEnabledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandEnabledEvent += value;
-			}
-			remove
-			{
-				_CommandEnabledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_CommandCheckedEventHandler _CommandCheckedEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_CommandCheckedEventHandler CommandCheckedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandCheckedEvent += value;
-			}
-			remove
-			{
-				_CommandCheckedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_CommandTipTextEventHandler _CommandTipTextEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_CommandTipTextEventHandler CommandTipTextEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandTipTextEvent += value;
-			}
-			remove
-			{
-				_CommandTipTextEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandBeforeExecuteEvent += value;
-			}
-			remove
-			{
-				_CommandBeforeExecuteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_CommandExecuteEventHandler _CommandExecuteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_CommandExecuteEventHandler CommandExecuteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandExecuteEvent += value;
-			}
-			remove
-			{
-				_CommandExecuteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_DblClickEventHandler _DblClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_DblClickEventHandler DblClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DblClickEvent += value;
-			}
-			remove
-			{
-				_DblClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_EndEditEventHandler _EndEditEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_EndEditEventHandler EndEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_EndEditEvent += value;
-			}
-			remove
-			{
-				_EndEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_InitializeEventHandler _InitializeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_InitializeEventHandler InitializeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_InitializeEvent += value;
-			}
-			remove
-			{
-				_InitializeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_KeyDownEventHandler _KeyDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_KeyDownEventHandler KeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyDownEvent += value;
-			}
-			remove
-			{
-				_KeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_KeyPressEventHandler _KeyPressEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_KeyPressEventHandler KeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyPressEvent += value;
-			}
-			remove
-			{
-				_KeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_KeyUpEventHandler _KeyUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_KeyUpEventHandler KeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyUpEvent += value;
-			}
-			remove
-			{
-				_KeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_LoadCompletedEventHandler _LoadCompletedEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_LoadCompletedEventHandler LoadCompletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_LoadCompletedEvent += value;
-			}
-			remove
-			{
-				_LoadCompletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_MouseDownEventHandler _MouseDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_MouseDownEventHandler MouseDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseDownEvent += value;
-			}
-			remove
-			{
-				_MouseDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_MouseOutEventHandler _MouseOutEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_MouseOutEventHandler MouseOutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseOutEvent += value;
-			}
-			remove
-			{
-				_MouseOutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_MouseOverEventHandler _MouseOverEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_MouseOverEventHandler MouseOverEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseOverEvent += value;
-			}
-			remove
-			{
-				_MouseOverEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_MouseUpEventHandler _MouseUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_MouseUpEventHandler MouseUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseUpEvent += value;
-			}
-			remove
-			{
-				_MouseUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_MouseWheelEventHandler _MouseWheelEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_MouseWheelEventHandler MouseWheelEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseWheelEvent += value;
-			}
-			remove
-			{
-				_MouseWheelEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SelectionChangeEventHandler _SelectionChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SelectionChangeEventHandler SelectionChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionChangeEvent += value;
-			}
-			remove
-			{
-				_SelectionChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SelectionChangingEventHandler _SelectionChangingEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SelectionChangingEventHandler SelectionChangingEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionChangingEvent += value;
-			}
-			remove
-			{
-				_SelectionChangingEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SheetActivateEventHandler _SheetActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SheetActivateEventHandler SheetActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SheetActivateEvent += value;
-			}
-			remove
-			{
-				_SheetActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SheetCalculateEventHandler _SheetCalculateEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SheetCalculateEventHandler SheetCalculateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SheetCalculateEvent += value;
-			}
-			remove
-			{
-				_SheetCalculateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SheetChangeEventHandler _SheetChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SheetChangeEventHandler SheetChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SheetChangeEvent += value;
-			}
-			remove
-			{
-				_SheetChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SheetDeactivateEventHandler _SheetDeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SheetDeactivateEventHandler SheetDeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SheetDeactivateEvent += value;
-			}
-			remove
-			{
-				_SheetDeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SheetFollowHyperlinkEvent += value;
-			}
-			remove
-			{
-				_SheetFollowHyperlinkEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_StartEditEventHandler _StartEditEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_StartEditEventHandler StartEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_StartEditEvent += value;
-			}
-			remove
-			{
-				_StartEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event Spreadsheet_ViewChangeEventHandler _ViewChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event Spreadsheet_ViewChangeEventHandler ViewChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ViewChangeEvent += value;
-			}
-			remove
-			{
-				_ViewChangeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -848,25 +845,22 @@ namespace NetOffice.OWC10Api
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -889,8 +883,59 @@ namespace NetOffice.OWC10Api
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _iSpreadsheetEventSink_SinkHelper)
 			{
@@ -902,6 +947,7 @@ namespace NetOffice.OWC10Api
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

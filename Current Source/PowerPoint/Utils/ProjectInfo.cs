@@ -47,7 +47,7 @@ namespace PowerPointApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

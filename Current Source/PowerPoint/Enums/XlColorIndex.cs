@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14
+	 /// SupportByVersion PowerPoint 14
 	 /// </summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlColorIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlColorIndexAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlColorIndexNone = -4142
 	}
 }

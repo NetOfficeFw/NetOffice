@@ -12,9 +12,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _OutlookBarShortcuts 
-	/// SupportByLibrary Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _OutlookBarShortcuts : COMObject ,IEnumerable<NetOffice.OutlookApi.OutlookBarShortcut>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi.OutlookBarShortcut this[object index]
 		{
@@ -175,12 +175,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="target">object Target</param>
 		/// <param name="name">string Name</param>
 		/// <param name="index">optional object Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.OutlookBarShortcut Add(object target, string name, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, name, index);
@@ -190,12 +190,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="target">object Target</param>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public NetOffice.OutlookApi.OutlookBarShortcut Add(object target, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, name);
@@ -205,10 +205,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -216,47 +216,43 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.OutlookApi.OutlookBarShortcut> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-        public IEnumerator<NetOffice.OutlookApi.OutlookBarShortcut> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.OutlookApi.OutlookBarShortcut item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-		
-        /// <summary>
-		/// SupportByLibraryAttribute Outlook, 9,10,11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
-		[CustomEnumerator]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-        {
-			int count = Count;
-			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 0; i < count; i++)
-				enumeratorObjects[i] = this[i+1];
-
-			foreach (COMObject item in enumeratorObjects)
-				yield return item;
-        }
-
-        #endregion
+       #region IEnumerable<NetOffice.OutlookApi.OutlookBarShortcut> Member
         
+        /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+       public IEnumerator<NetOffice.OutlookApi.OutlookBarShortcut> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.OutlookApi.OutlookBarShortcut item in innerEnumerator)
+               yield return item;
+       }
 
+       #endregion
+   
+       #region IEnumerable Members
+        
+       /// <summary>
+		/// SupportByVersionAttribute Outlook, 9,10,11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+        [CustomEnumerator]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+       {
+            int count = Count;
+            COMObject[] enumeratorObjects = new COMObject[count];
+            for (int i = 0; i < count; i++)
+                enumeratorObjects[i] = this[i+1];
 
-		#pragma warning restore
+            foreach (COMObject item in enumeratorObjects)
+                yield return item;
+       }
+
+       #endregion
+       		#pragma warning restore
 	}
 }

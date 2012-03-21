@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[ComImport, Guid("2C247F22-8591-11D1-B16A-00C0F0283628"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ImageListEvents
 	{

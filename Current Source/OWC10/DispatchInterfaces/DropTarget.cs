@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface DropTarget 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DropTarget : COMObject
 	{
@@ -79,14 +79,14 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="keyState">Int32 KeyState</param>
 		/// <param name="effect">Int32 Effect</param>
-		/// <param name="object">object Object</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="_object">object Object</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void DragEnter(Int32 x, Int32 y, Int32 keyState, Int32 effect, object _object)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect, _object);
@@ -94,13 +94,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="keyState">Int32 KeyState</param>
 		/// <param name="effect">Int32 Effect</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void DragOver(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
@@ -108,9 +108,9 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void DragLeave()
 		{
 			object[] paramsArray = null;
@@ -118,13 +118,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="keyState">Int32 KeyState</param>
 		/// <param name="effect">Int32 Effect</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Drop(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);

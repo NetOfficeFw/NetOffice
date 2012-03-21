@@ -70,11 +70,11 @@ namespace NetOffice.MSProjectApi
 
 	///<summary>
 	/// CoClass Application 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _MSProject, IEventBinding 
+	public class Application : _MSProject,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -110,23 +110,24 @@ namespace NetOffice.MSProjectApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <summary>
@@ -134,7 +135,8 @@ namespace NetOffice.MSProjectApi
         /// </summary>		
 		public Application():base("MSProject.Application")
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
 		
 		/// <summary>
@@ -143,17 +145,1254 @@ namespace NetOffice.MSProjectApi
         /// <param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
+		}
+		
+/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		public override void Dispose(bool disposeEventBinding)
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;	
+			base.Dispose(disposeEventBinding);
+		}
+
+		/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		public override void Dispose()
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;
+			base.Dispose();
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_NewProjectEventHandler _NewProjectEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_NewProjectEventHandler NewProjectEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NewProjectEvent += value;
+			}
+			remove
+			{
+				_NewProjectEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskDeleteEventHandler _ProjectBeforeTaskDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskDeleteEventHandler ProjectBeforeTaskDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskDeleteEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceDeleteEventHandler _ProjectBeforeResourceDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceDeleteEventHandler ProjectBeforeResourceDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceDeleteEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentDeleteEventHandler _ProjectBeforeAssignmentDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentDeleteEventHandler ProjectBeforeAssignmentDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentDeleteEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskChangeEventHandler _ProjectBeforeTaskChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskChangeEventHandler ProjectBeforeTaskChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskChangeEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceChangeEventHandler _ProjectBeforeResourceChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceChangeEventHandler ProjectBeforeResourceChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceChangeEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentChangeEventHandler _ProjectBeforeAssignmentChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentChangeEventHandler ProjectBeforeAssignmentChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentChangeEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskNewEventHandler _ProjectBeforeTaskNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskNewEventHandler ProjectBeforeTaskNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskNewEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceNewEventHandler _ProjectBeforeResourceNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceNewEventHandler ProjectBeforeResourceNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceNewEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentNewEventHandler _ProjectBeforeAssignmentNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentNewEventHandler ProjectBeforeAssignmentNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentNewEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeCloseEventHandler _ProjectBeforeCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeCloseEventHandler ProjectBeforeCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeCloseEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforePrintEventHandler _ProjectBeforePrintEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforePrintEventHandler ProjectBeforePrintEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforePrintEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforePrintEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeSaveEventHandler _ProjectBeforeSaveEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeSaveEventHandler ProjectBeforeSaveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeSaveEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeSaveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectCalculateEventHandler _ProjectCalculateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectCalculateEventHandler ProjectCalculateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectCalculateEvent += value;
+			}
+			remove
+			{
+				_ProjectCalculateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowGoalAreaChangeEventHandler _WindowGoalAreaChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowGoalAreaChangeEventHandler WindowGoalAreaChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowGoalAreaChangeEvent += value;
+			}
+			remove
+			{
+				_WindowGoalAreaChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowSelectionChangeEvent += value;
+			}
+			remove
+			{
+				_WindowSelectionChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowBeforeViewChangeEventHandler _WindowBeforeViewChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowBeforeViewChangeEventHandler WindowBeforeViewChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowBeforeViewChangeEvent += value;
+			}
+			remove
+			{
+				_WindowBeforeViewChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowViewChangeEventHandler _WindowViewChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowViewChangeEventHandler WindowViewChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowViewChangeEvent += value;
+			}
+			remove
+			{
+				_WindowViewChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowActivateEventHandler _WindowActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowActivateEventHandler WindowActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowActivateEvent += value;
+			}
+			remove
+			{
+				_WindowActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowDeactivateEvent += value;
+			}
+			remove
+			{
+				_WindowDeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowSidepaneDisplayChangeEventHandler _WindowSidepaneDisplayChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowSidepaneDisplayChangeEventHandler WindowSidepaneDisplayChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowSidepaneDisplayChangeEvent += value;
+			}
+			remove
+			{
+				_WindowSidepaneDisplayChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WindowSidepaneTaskChangeEventHandler _WindowSidepaneTaskChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WindowSidepaneTaskChangeEventHandler WindowSidepaneTaskChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowSidepaneTaskChangeEvent += value;
+			}
+			remove
+			{
+				_WindowSidepaneTaskChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_WorkpaneDisplayChangeEventHandler _WorkpaneDisplayChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_WorkpaneDisplayChangeEventHandler WorkpaneDisplayChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WorkpaneDisplayChangeEvent += value;
+			}
+			remove
+			{
+				_WorkpaneDisplayChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_LoadWebPageEventHandler _LoadWebPageEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_LoadWebPageEventHandler LoadWebPageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_LoadWebPageEvent += value;
+			}
+			remove
+			{
+				_LoadWebPageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectAfterSaveEventHandler _ProjectAfterSaveEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectAfterSaveEventHandler ProjectAfterSaveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectAfterSaveEvent += value;
+			}
+			remove
+			{
+				_ProjectAfterSaveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectTaskNewEventHandler _ProjectTaskNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectTaskNewEventHandler ProjectTaskNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectTaskNewEvent += value;
+			}
+			remove
+			{
+				_ProjectTaskNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectResourceNewEventHandler _ProjectResourceNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectResourceNewEventHandler ProjectResourceNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectResourceNewEvent += value;
+			}
+			remove
+			{
+				_ProjectResourceNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectAssignmentNewEventHandler _ProjectAssignmentNewEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectAssignmentNewEventHandler ProjectAssignmentNewEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectAssignmentNewEvent += value;
+			}
+			remove
+			{
+				_ProjectAssignmentNewEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeSaveBaselineEventHandler _ProjectBeforeSaveBaselineEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeSaveBaselineEventHandler ProjectBeforeSaveBaselineEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeSaveBaselineEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeSaveBaselineEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeClearBaselineEventHandler _ProjectBeforeClearBaselineEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeClearBaselineEventHandler ProjectBeforeClearBaselineEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeClearBaselineEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforeClearBaselineEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeClose2EventHandler _ProjectBeforeClose2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeClose2EventHandler ProjectBeforeClose2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeClose2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeClose2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforePrint2EventHandler _ProjectBeforePrint2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforePrint2EventHandler ProjectBeforePrint2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforePrint2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforePrint2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeSave2EventHandler _ProjectBeforeSave2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeSave2EventHandler ProjectBeforeSave2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeSave2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeSave2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskDelete2EventHandler _ProjectBeforeTaskDelete2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskDelete2EventHandler ProjectBeforeTaskDelete2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskDelete2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskDelete2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceDelete2EventHandler _ProjectBeforeResourceDelete2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceDelete2EventHandler ProjectBeforeResourceDelete2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceDelete2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceDelete2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentDelete2EventHandler _ProjectBeforeAssignmentDelete2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentDelete2EventHandler ProjectBeforeAssignmentDelete2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentDelete2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentDelete2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskChange2EventHandler _ProjectBeforeTaskChange2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskChange2EventHandler ProjectBeforeTaskChange2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskChange2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskChange2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceChange2EventHandler _ProjectBeforeResourceChange2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceChange2EventHandler ProjectBeforeResourceChange2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceChange2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceChange2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentChange2EventHandler _ProjectBeforeAssignmentChange2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentChange2EventHandler ProjectBeforeAssignmentChange2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentChange2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentChange2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeTaskNew2EventHandler _ProjectBeforeTaskNew2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeTaskNew2EventHandler ProjectBeforeTaskNew2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeTaskNew2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeTaskNew2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeResourceNew2EventHandler _ProjectBeforeResourceNew2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeResourceNew2EventHandler ProjectBeforeResourceNew2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeResourceNew2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeResourceNew2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforeAssignmentNew2EventHandler _ProjectBeforeAssignmentNew2Event;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforeAssignmentNew2EventHandler ProjectBeforeAssignmentNew2Event
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforeAssignmentNew2Event += value;
+			}
+			remove
+			{
+				_ProjectBeforeAssignmentNew2Event -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ApplicationBeforeCloseEventHandler _ApplicationBeforeCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ApplicationBeforeCloseEventHandler ApplicationBeforeCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ApplicationBeforeCloseEvent += value;
+			}
+			remove
+			{
+				_ApplicationBeforeCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_OnUndoOrRedoEventHandler _OnUndoOrRedoEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_OnUndoOrRedoEventHandler OnUndoOrRedoEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_OnUndoOrRedoEvent += value;
+			}
+			remove
+			{
+				_OnUndoOrRedoEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_AfterCubeBuiltEventHandler _AfterCubeBuiltEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_AfterCubeBuiltEventHandler AfterCubeBuiltEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterCubeBuiltEvent += value;
+			}
+			remove
+			{
+				_AfterCubeBuiltEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_LoadWebPaneEventHandler _LoadWebPaneEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_LoadWebPaneEventHandler LoadWebPaneEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_LoadWebPaneEvent += value;
+			}
+			remove
+			{
+				_LoadWebPaneEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_JobStartEventHandler _JobStartEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_JobStartEventHandler JobStartEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_JobStartEvent += value;
+			}
+			remove
+			{
+				_JobStartEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_JobCompletedEventHandler _JobCompletedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_JobCompletedEventHandler JobCompletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_JobCompletedEvent += value;
+			}
+			remove
+			{
+				_JobCompletedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_SaveStartingToServerEventHandler _SaveStartingToServerEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_SaveStartingToServerEventHandler SaveStartingToServerEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SaveStartingToServerEvent += value;
+			}
+			remove
+			{
+				_SaveStartingToServerEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_SaveCompletedToServerEventHandler _SaveCompletedToServerEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_SaveCompletedToServerEventHandler SaveCompletedToServerEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SaveCompletedToServerEvent += value;
+			}
+			remove
+			{
+				_SaveCompletedToServerEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ProjectBeforePublishEventHandler _ProjectBeforePublishEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ProjectBeforePublishEventHandler ProjectBeforePublishEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProjectBeforePublishEvent += value;
+			}
+			remove
+			{
+				_ProjectBeforePublishEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_PaneActivateEventHandler _PaneActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_PaneActivateEventHandler PaneActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PaneActivateEvent += value;
+			}
+			remove
+			{
+				_PaneActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_SecondaryViewChangeEventHandler _SecondaryViewChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_SecondaryViewChangeEventHandler SecondaryViewChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SecondaryViewChangeEvent += value;
+			}
+			remove
+			{
+				_SecondaryViewChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_IsFunctionalitySupportedEventHandler _IsFunctionalitySupportedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_IsFunctionalitySupportedEventHandler IsFunctionalitySupportedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_IsFunctionalitySupportedEvent += value;
+			}
+			remove
+			{
+				_IsFunctionalitySupportedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject, 12,14
+		/// </summary>
+		private event Application_ConnectionStatusChangedEventHandler _ConnectionStatusChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSProject 12 14
+		/// </summary>
+		[SupportByVersion("MSProject", 12,14)]
+		public event Application_ConnectionStatusChangedEventHandler ConnectionStatusChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ConnectionStatusChangedEvent += value;
+			}
+			remove
+			{
+				_ConnectionStatusChangedEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -171,1225 +1410,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_NewProjectEventHandler _NewProjectEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_NewProjectEventHandler NewProjectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NewProjectEvent += value;
-			}
-			remove
-			{
-				_NewProjectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskDeleteEventHandler _ProjectBeforeTaskDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskDeleteEventHandler ProjectBeforeTaskDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskDeleteEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceDeleteEventHandler _ProjectBeforeResourceDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceDeleteEventHandler ProjectBeforeResourceDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceDeleteEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentDeleteEventHandler _ProjectBeforeAssignmentDeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentDeleteEventHandler ProjectBeforeAssignmentDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentDeleteEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentDeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskChangeEventHandler _ProjectBeforeTaskChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskChangeEventHandler ProjectBeforeTaskChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskChangeEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceChangeEventHandler _ProjectBeforeResourceChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceChangeEventHandler ProjectBeforeResourceChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceChangeEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentChangeEventHandler _ProjectBeforeAssignmentChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentChangeEventHandler ProjectBeforeAssignmentChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentChangeEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskNewEventHandler _ProjectBeforeTaskNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskNewEventHandler ProjectBeforeTaskNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskNewEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceNewEventHandler _ProjectBeforeResourceNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceNewEventHandler ProjectBeforeResourceNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceNewEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentNewEventHandler _ProjectBeforeAssignmentNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentNewEventHandler ProjectBeforeAssignmentNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentNewEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeCloseEventHandler _ProjectBeforeCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeCloseEventHandler ProjectBeforeCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeCloseEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforePrintEventHandler _ProjectBeforePrintEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforePrintEventHandler ProjectBeforePrintEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforePrintEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforePrintEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeSaveEventHandler _ProjectBeforeSaveEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeSaveEventHandler ProjectBeforeSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeSaveEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectCalculateEventHandler _ProjectCalculateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectCalculateEventHandler ProjectCalculateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectCalculateEvent += value;
-			}
-			remove
-			{
-				_ProjectCalculateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowGoalAreaChangeEventHandler _WindowGoalAreaChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowGoalAreaChangeEventHandler WindowGoalAreaChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowGoalAreaChangeEvent += value;
-			}
-			remove
-			{
-				_WindowGoalAreaChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowSelectionChangeEvent += value;
-			}
-			remove
-			{
-				_WindowSelectionChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowBeforeViewChangeEventHandler _WindowBeforeViewChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowBeforeViewChangeEventHandler WindowBeforeViewChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowBeforeViewChangeEvent += value;
-			}
-			remove
-			{
-				_WindowBeforeViewChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowViewChangeEventHandler _WindowViewChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowViewChangeEventHandler WindowViewChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowViewChangeEvent += value;
-			}
-			remove
-			{
-				_WindowViewChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowActivateEventHandler _WindowActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowActivateEventHandler WindowActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowActivateEvent += value;
-			}
-			remove
-			{
-				_WindowActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowDeactivateEvent += value;
-			}
-			remove
-			{
-				_WindowDeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowSidepaneDisplayChangeEventHandler _WindowSidepaneDisplayChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowSidepaneDisplayChangeEventHandler WindowSidepaneDisplayChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowSidepaneDisplayChangeEvent += value;
-			}
-			remove
-			{
-				_WindowSidepaneDisplayChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WindowSidepaneTaskChangeEventHandler _WindowSidepaneTaskChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WindowSidepaneTaskChangeEventHandler WindowSidepaneTaskChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowSidepaneTaskChangeEvent += value;
-			}
-			remove
-			{
-				_WindowSidepaneTaskChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_WorkpaneDisplayChangeEventHandler _WorkpaneDisplayChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_WorkpaneDisplayChangeEventHandler WorkpaneDisplayChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WorkpaneDisplayChangeEvent += value;
-			}
-			remove
-			{
-				_WorkpaneDisplayChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_LoadWebPageEventHandler _LoadWebPageEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_LoadWebPageEventHandler LoadWebPageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_LoadWebPageEvent += value;
-			}
-			remove
-			{
-				_LoadWebPageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectAfterSaveEventHandler _ProjectAfterSaveEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectAfterSaveEventHandler ProjectAfterSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectAfterSaveEvent += value;
-			}
-			remove
-			{
-				_ProjectAfterSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectTaskNewEventHandler _ProjectTaskNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectTaskNewEventHandler ProjectTaskNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectTaskNewEvent += value;
-			}
-			remove
-			{
-				_ProjectTaskNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectResourceNewEventHandler _ProjectResourceNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectResourceNewEventHandler ProjectResourceNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectResourceNewEvent += value;
-			}
-			remove
-			{
-				_ProjectResourceNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectAssignmentNewEventHandler _ProjectAssignmentNewEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectAssignmentNewEventHandler ProjectAssignmentNewEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectAssignmentNewEvent += value;
-			}
-			remove
-			{
-				_ProjectAssignmentNewEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeSaveBaselineEventHandler _ProjectBeforeSaveBaselineEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeSaveBaselineEventHandler ProjectBeforeSaveBaselineEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeSaveBaselineEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeSaveBaselineEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeClearBaselineEventHandler _ProjectBeforeClearBaselineEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeClearBaselineEventHandler ProjectBeforeClearBaselineEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeClearBaselineEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforeClearBaselineEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeClose2EventHandler _ProjectBeforeClose2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeClose2EventHandler ProjectBeforeClose2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeClose2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeClose2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforePrint2EventHandler _ProjectBeforePrint2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforePrint2EventHandler ProjectBeforePrint2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforePrint2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforePrint2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeSave2EventHandler _ProjectBeforeSave2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeSave2EventHandler ProjectBeforeSave2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeSave2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeSave2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskDelete2EventHandler _ProjectBeforeTaskDelete2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskDelete2EventHandler ProjectBeforeTaskDelete2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskDelete2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskDelete2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceDelete2EventHandler _ProjectBeforeResourceDelete2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceDelete2EventHandler ProjectBeforeResourceDelete2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceDelete2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceDelete2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentDelete2EventHandler _ProjectBeforeAssignmentDelete2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentDelete2EventHandler ProjectBeforeAssignmentDelete2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentDelete2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentDelete2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskChange2EventHandler _ProjectBeforeTaskChange2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskChange2EventHandler ProjectBeforeTaskChange2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskChange2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskChange2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceChange2EventHandler _ProjectBeforeResourceChange2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceChange2EventHandler ProjectBeforeResourceChange2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceChange2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceChange2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentChange2EventHandler _ProjectBeforeAssignmentChange2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentChange2EventHandler ProjectBeforeAssignmentChange2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentChange2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentChange2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeTaskNew2EventHandler _ProjectBeforeTaskNew2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeTaskNew2EventHandler ProjectBeforeTaskNew2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeTaskNew2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeTaskNew2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeResourceNew2EventHandler _ProjectBeforeResourceNew2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeResourceNew2EventHandler ProjectBeforeResourceNew2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeResourceNew2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeResourceNew2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforeAssignmentNew2EventHandler _ProjectBeforeAssignmentNew2Event;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforeAssignmentNew2EventHandler ProjectBeforeAssignmentNew2Event
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforeAssignmentNew2Event += value;
-			}
-			remove
-			{
-				_ProjectBeforeAssignmentNew2Event -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ApplicationBeforeCloseEventHandler _ApplicationBeforeCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ApplicationBeforeCloseEventHandler ApplicationBeforeCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ApplicationBeforeCloseEvent += value;
-			}
-			remove
-			{
-				_ApplicationBeforeCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_OnUndoOrRedoEventHandler _OnUndoOrRedoEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_OnUndoOrRedoEventHandler OnUndoOrRedoEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OnUndoOrRedoEvent += value;
-			}
-			remove
-			{
-				_OnUndoOrRedoEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_AfterCubeBuiltEventHandler _AfterCubeBuiltEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_AfterCubeBuiltEventHandler AfterCubeBuiltEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterCubeBuiltEvent += value;
-			}
-			remove
-			{
-				_AfterCubeBuiltEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_LoadWebPaneEventHandler _LoadWebPaneEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_LoadWebPaneEventHandler LoadWebPaneEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_LoadWebPaneEvent += value;
-			}
-			remove
-			{
-				_LoadWebPaneEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_JobStartEventHandler _JobStartEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_JobStartEventHandler JobStartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_JobStartEvent += value;
-			}
-			remove
-			{
-				_JobStartEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_JobCompletedEventHandler _JobCompletedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_JobCompletedEventHandler JobCompletedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_JobCompletedEvent += value;
-			}
-			remove
-			{
-				_JobCompletedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_SaveStartingToServerEventHandler _SaveStartingToServerEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_SaveStartingToServerEventHandler SaveStartingToServerEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SaveStartingToServerEvent += value;
-			}
-			remove
-			{
-				_SaveStartingToServerEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_SaveCompletedToServerEventHandler _SaveCompletedToServerEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_SaveCompletedToServerEventHandler SaveCompletedToServerEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SaveCompletedToServerEvent += value;
-			}
-			remove
-			{
-				_SaveCompletedToServerEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ProjectBeforePublishEventHandler _ProjectBeforePublishEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ProjectBeforePublishEventHandler ProjectBeforePublishEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProjectBeforePublishEvent += value;
-			}
-			remove
-			{
-				_ProjectBeforePublishEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_PaneActivateEventHandler _PaneActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_PaneActivateEventHandler PaneActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PaneActivateEvent += value;
-			}
-			remove
-			{
-				_PaneActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_SecondaryViewChangeEventHandler _SecondaryViewChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_SecondaryViewChangeEventHandler SecondaryViewChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SecondaryViewChangeEvent += value;
-			}
-			remove
-			{
-				_SecondaryViewChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_IsFunctionalitySupportedEventHandler _IsFunctionalitySupportedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_IsFunctionalitySupportedEventHandler IsFunctionalitySupportedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_IsFunctionalitySupportedEvent += value;
-			}
-			remove
-			{
-				_IsFunctionalitySupportedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSProject, 12,14
-		/// </summary>
-		private event Application_ConnectionStatusChangedEventHandler _ConnectionStatusChangedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSProject 12 14
-		/// </summary>
-		[SupportByLibrary("MSProject", 12,14)]
-		public event Application_ConnectionStatusChangedEventHandler ConnectionStatusChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConnectionStatusChangedEvent += value;
-			}
-			remove
-			{
-				_ConnectionStatusChangedEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -1400,25 +1421,22 @@ namespace NetOffice.MSProjectApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1441,8 +1459,59 @@ namespace NetOffice.MSProjectApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __EProjectApp2_SinkHelper)
 			{
@@ -1454,6 +1523,7 @@ namespace NetOffice.MSProjectApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

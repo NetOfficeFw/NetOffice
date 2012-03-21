@@ -10,15 +10,15 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 	[ComImport, Guid("000630A5-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _ViewsEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
 		void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64071)]
 		void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 	}
@@ -68,8 +68,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ViewAdd", ref paramsArray);
 		}
 
 		public void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view)
@@ -84,8 +83,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ViewRemove", ref paramsArray);
 		}
 
 		#endregion

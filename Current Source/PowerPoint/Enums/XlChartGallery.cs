@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary PowerPoint 14
+	 /// SupportByVersion PowerPoint 14
 	 /// </summary>
-	[SupportByLibraryAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlChartGallery
 	{
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlBuiltIn = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlUserDefined = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary PowerPoint 14
+		 /// SupportByVersion PowerPoint 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibraryAttribute("PowerPoint", 14)]
+		 [SupportByVersionAttribute("PowerPoint", 14)]
 		 xlAnyGallery = 23
 	}
 }

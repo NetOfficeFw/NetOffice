@@ -4,115 +4,115 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdPaperTray
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterDefaultBin = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterUpperBin = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterOnlyBin = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterLowerBin = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterMiddleBin = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterManualFeed = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterEnvelopeFeed = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterManualEnvelopeFeed = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterAutomaticSheetFeed = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterTractorFeed = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterSmallFormatBin = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterLargeFormatBin = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterLargeCapacityBin = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterPaperCassette = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrinterFormSource = 15
 	}
 }

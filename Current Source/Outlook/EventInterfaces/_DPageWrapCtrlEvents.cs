@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[ComImport, Guid("494F0971-DD96-11D2-AF70-006008AFF117"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _DPageWrapCtrlEvents
 	{

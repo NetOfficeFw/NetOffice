@@ -12,9 +12,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface SlicerCacheLevels 
-	/// SupportByLibrary Excel, 14
+	/// SupportByVersion Excel, 14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlicerCacheLevels : COMObject ,IEnumerable<NetOffice.ExcelApi.SlicerCacheLevel>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public COMObject Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
 		public Int32 Count
 		{
 			get
@@ -138,50 +138,20 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Excel 14
+		/// SupportByVersion Excel 14
 		/// Get
 		/// </summary>
-		/// <param name="Level">optional object Level</param>
-		[SupportByLibraryAttribute("Excel", 14)]
+		/// <param name="level">optional object Level</param>
+		[SupportByVersionAttribute("Excel", 14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.SlicerCacheLevel this[object level]
 		{
 			get
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevel.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevel;
-			return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel 14
-		/// Get
-		/// </summary>
-		/// <param name="Level">optional object Level</param>
-		[SupportByLibraryAttribute("Excel", 14)]
-		public NetOffice.ExcelApi.SlicerCacheLevel get__Default(object level)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
 			NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevel.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevel;
 			return newObject;
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel 14
-		/// Get
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
-		public NetOffice.ExcelApi.SlicerCacheLevel _Default
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.SlicerCacheLevel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevel.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevel;
-				return newObject;
 			}
 		}
 
@@ -191,43 +161,33 @@ namespace NetOffice.ExcelApi
 
 		#endregion
 
-        #region IEnumerable<NetOffice.ExcelApi.SlicerCacheLevel> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 14
-		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
-        public IEnumerator<NetOffice.ExcelApi.SlicerCacheLevel> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.ExcelApi.SlicerCacheLevel item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<NetOffice.ExcelApi.SlicerCacheLevel> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute Excel, 14
+        /// <summary>
+		/// SupportByVersionAttribute Excel, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14)]
+       public IEnumerator<NetOffice.ExcelApi.SlicerCacheLevel> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.ExcelApi.SlicerCacheLevel item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute Excel, 14
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.PropertyGet(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

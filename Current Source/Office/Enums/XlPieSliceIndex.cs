@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 14
+	 /// SupportByVersion Office 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPieSliceIndex
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlOuterCounterClockwisePoint = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlOuterCenterPoint = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlOuterClockwisePoint = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlMidClockwiseRadiusPoint = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlCenterPoint = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlMidCounterClockwiseRadiusPoint = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlInnerClockwisePoint = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlInnerCenterPoint = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 xlInnerCounterClockwisePoint = 9
 	}
 }

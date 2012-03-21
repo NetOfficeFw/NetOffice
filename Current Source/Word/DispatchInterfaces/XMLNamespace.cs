@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLNamespace 
-	/// SupportByLibrary Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLNamespace : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -122,57 +122,58 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public string URI
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "URI", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public string get_Location(bool allUsers)
-		{
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public string get_Location(object allUsers)
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public void set_Location(bool allUsers, string value)
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		public void set_Location(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Location", paramsArray, value);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public string Location
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -182,42 +183,43 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public string get_Alias(bool allUsers)
-		{
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public string get_Alias(object allUsers)
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public void set_Alias(bool allUsers, string value)
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		public void set_Alias(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Alias", paramsArray, value);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public string Alias
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -227,10 +229,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.XSLTransforms XSLTransforms
 		{
 			get
@@ -243,13 +245,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
-		{
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public NetOffice.WordApi.XSLTransform get_DefaultTransform(object allUsers)
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
 			NetOffice.WordApi.XSLTransform newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
@@ -257,22 +260,22 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="AllUsers">optional bool AllUsers</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		public void set_DefaultTransform(bool allUsers, NetOffice.WordApi.XSLTransform value)
+		/// <param name="allUsers">optional bool AllUsers</param>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+		public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "DefaultTransform", paramsArray, value);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.XSLTransform DefaultTransform
 		{
 			get
@@ -294,10 +297,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="document">object Document</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public void AttachToDocument(object document)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(document);
@@ -305,9 +308,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

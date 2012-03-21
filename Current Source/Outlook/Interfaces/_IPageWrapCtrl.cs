@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// Interface _IPageWrapCtrl 
-	/// SupportByLibrary Outlook, 10
+	/// SupportByVersion Outlook, 10
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class _IPageWrapCtrl : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public Int32 BackColor
 		{
 			get

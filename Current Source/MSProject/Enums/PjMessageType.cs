@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14
+	 /// SupportByVersion MSProject 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjMessageType
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjOKOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjOKCancel = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjYesNo = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjYesNoCancel = 3
 	}
 }

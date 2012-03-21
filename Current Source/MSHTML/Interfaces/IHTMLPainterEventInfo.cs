@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLPainterEventInfo 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLPainterEventInfo : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="plEventInfoFlags">Int32 plEventInfoFlags</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetEventInfoFlags(out Int32 plEventInfoFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,39 +89,39 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plEventInfoFlags);
 			object returnItem = Invoker.MethodReturn(this, "GetEventInfoFlags", paramsArray);
 			plEventInfoFlags = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppElement">NetOffice.MSHTMLApi.IHTMLElement ppElement</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetEventTarget(NetOffice.MSHTMLApi.IHTMLElement ppElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElement);
 			object returnItem = Invoker.MethodReturn(this, "GetEventTarget", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SetCursor(Int32 lPartID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID);
 			object returnItem = Invoker.MethodReturn(this, "SetCursor", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
 		/// <param name="pbstrPart">string pbstrPart</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 StringFromPartID(Int32 lPartID, out string pbstrPart)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -129,7 +129,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID, pbstrPart);
 			object returnItem = Invoker.MethodReturn(this, "StringFromPartID", paramsArray);
 			pbstrPart = (string)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

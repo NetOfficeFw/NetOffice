@@ -58,13 +58,13 @@ namespace LateBindingApi.Core
                     if (null != refPoint)
                     {
                         point = refPoint;
-                        return sinkIds[i-1];
+                        return sinkIds[i - 1];
                     }
                 }
 
                 return null;
             }
-            catch(Exception throwedException)
+            catch (Exception throwedException)
             {
                 DebugConsole.WriteException(throwedException);
                 return null;
@@ -113,8 +113,8 @@ namespace LateBindingApi.Core
                 return null;
             }
             finally
-            { 
-                if(null != enumPoints)
+            {
+                if (null != enumPoints)
                     Marshal.ReleaseComObject(enumPoints);
             }
         }
@@ -130,7 +130,7 @@ namespace LateBindingApi.Core
         public static string GetConnectionPoint(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
         {
             if (null == sinkIds)
-                return null;            
+                return null;
 
             IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
 
@@ -139,7 +139,7 @@ namespace LateBindingApi.Core
 
             if (Settings.EnableDebugOutput)
                 DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".FindConnectionPoint");
-           
+
             string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
 
             if (Settings.EnableDebugOutput)
@@ -228,13 +228,13 @@ namespace LateBindingApi.Core
                 catch (Exception throwedException)
                 {
                     DebugConsole.WriteException(throwedException);
-                    throw (throwedException);
+                    throw new COMException("An error occured.", throwedException);
                 }
 
                 _connectionPoint = null;
                 _connectionCookie = 0;
 
-                if(removeFromList)
+                if (removeFromList)
                     _pointList.Remove(this);
             }
         }

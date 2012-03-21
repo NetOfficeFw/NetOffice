@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LateBindingApi.Core</RootNamespace>
     <AssemblyName>LateBindingApi.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>LateBindingApi.Core_v4.0.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -33,6 +34,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,24 +60,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomEnumeratorAttribute.cs" />
-    <Compile Include="CustomMethodAttribute.cs" />
+    <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
+    <Compile Include="Attributes\CustomMethodAttribute.cs" />
     <Compile Include="DebugConsole.cs" />
-    <Compile Include="EntityTypeAttribute.cs" />
+    <Compile Include="Attributes\EntityTypeAttribute.cs" />
+    <Compile Include="EntityNotSupportedException.cs" />
     <Compile Include="LateBindingApiException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="COMObject.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Interfaces\IFactoryInfo.cs" />
     <Compile Include="Invoker.cs" />
-    <Compile Include="LateBindingAttribute.cs" />
+    <Compile Include="Attributes\LateBindingAttribute.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SinkHelper.cs" />
-    <Compile Include="SupportByLibraryAttribute.cs" />
+    <Compile Include="Attributes\SupportByVersionAttribute.cs" />
     <Compile Include="Interfaces\IEventBinding.cs" />
     <Compile Include="SupportEntityType.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

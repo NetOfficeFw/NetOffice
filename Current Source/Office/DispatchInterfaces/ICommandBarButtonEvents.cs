@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICommandBarButtonEvents 
-	/// SupportByLibrary Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICommandBarButtonEvents : COMObject
 	{
@@ -79,11 +79,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// </summary>
 		/// <param name="ctrl">NetOffice.OfficeApi.CommandBarButton Ctrl</param>
 		/// <param name="cancelDefault">bool CancelDefault</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public void Click(NetOffice.OfficeApi.CommandBarButton ctrl, bool cancelDefault)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ctrl, cancelDefault);

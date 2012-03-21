@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Recordset2 
-	/// SupportByLibrary DAO, 12
+	/// SupportByVersion DAO, 12
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 12)]
+	[SupportByVersionAttribute("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Recordset2 : Recordset
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public NetOffice.DAOApi.Properties Properties
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public NetOffice.DAOApi.Recordset ParentRecordset
 		{
 			get

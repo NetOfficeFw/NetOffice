@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface ISecureUrlHost 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISecureUrlHost : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pfAllow">Int32 pfAllow</param>
 		/// <param name="pchUrlInQuestion">Int16 pchUrlInQuestion</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 ValidateSecureUrl(out Int32 pfAllow, Int16 pchUrlInQuestion, Int32 dwFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false);
@@ -91,7 +91,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfAllow, pchUrlInQuestion, dwFlags);
 			object returnItem = Invoker.MethodReturn(this, "ValidateSecureUrl", paramsArray);
 			pfAllow = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

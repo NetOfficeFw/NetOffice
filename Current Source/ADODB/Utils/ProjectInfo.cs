@@ -47,7 +47,7 @@ namespace ADODBApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

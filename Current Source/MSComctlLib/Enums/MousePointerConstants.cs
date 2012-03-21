@@ -4,129 +4,129 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 2
+	 /// SupportByVersion MSComctlLib 6.0
 	 /// </summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MousePointerConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccArrow = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCross = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccIBeam = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccIcon = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSize = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSizeNESW = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSizeNS = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSizeNWSE = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSizeEW = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccUpArrow = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccHourglass = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccNoDrop = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccArrowHourglass = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccArrowQuestion = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccSizeAll = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>99</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCustom = 99
 	}
 }

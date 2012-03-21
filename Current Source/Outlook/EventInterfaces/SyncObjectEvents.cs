@@ -10,23 +10,23 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("00063085-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface SyncObjectEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void SyncStart();
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void Progress([In] object state, [In] object description, [In] object value, [In] object max);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void OnError([In] object code, [In] object description);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void SyncEnd();
 	}
@@ -74,8 +74,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SyncStart", ref paramsArray);
 		}
 
 		public void Progress([In] object state, [In] object description, [In] object value, [In] object max)
@@ -96,8 +95,7 @@ namespace NetOffice.OutlookApi
 			paramsArray[1] = newDescription;
 			paramsArray[2] = newValue;
 			paramsArray[3] = newMax;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Progress", ref paramsArray);
 		}
 
 		public void OnError([In] object code, [In] object description)
@@ -114,8 +112,7 @@ namespace NetOffice.OutlookApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCode;
 			paramsArray[1] = newDescription;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("OnError", ref paramsArray);
 		}
 
 		public void SyncEnd()
@@ -128,8 +125,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SyncEnd", ref paramsArray);
 		}
 
 		#endregion

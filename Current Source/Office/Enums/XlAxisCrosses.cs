@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14
+	 /// SupportByVersion Office 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAxisCrosses
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4105</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlAxisCrossesAutomatic = -4105,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4114</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlAxisCrossesCustom = -4114,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlAxisCrossesMaximum = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlAxisCrossesMinimum = 4
 	}
 }

@@ -12,9 +12,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Editors 
-	/// SupportByLibrary Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Editors : COMObject ,IEnumerable<NetOffice.WordApi.Editor>
 	{
@@ -76,10 +76,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Creator
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public COMObject Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Editor this[object index]
 		{
@@ -159,10 +159,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14
 		/// </summary>
 		/// <param name="editorID">object EditorID</param>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14)]
 		public NetOffice.WordApi.Editor Add(object editorID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(editorID);
@@ -172,47 +172,43 @@ namespace NetOffice.WordApi
 		}
 
 		#endregion
-
-        #region IEnumerable<NetOffice.WordApi.Editor> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute Word, 11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		[CustomEnumerator]
-        public IEnumerator<NetOffice.WordApi.Editor> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (NetOffice.WordApi.Editor item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
-		
-        /// <summary>
-		/// SupportByLibraryAttribute Word, 11,12,14
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByLibraryAttribute("Word", 11,12,14)]
-		[CustomEnumerator]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-        {
-			int count = Count;
-			COMObject[] enumeratorObjects = new COMObject[count];
-			for (int i = 0; i < count; i++)
-				enumeratorObjects[i] = this[i+1];
-
-			foreach (COMObject item in enumeratorObjects)
-				yield return item;
-        }
-
-        #endregion
+       #region IEnumerable<NetOffice.WordApi.Editor> Member
         
+        /// <summary>
+		/// SupportByVersionAttribute Word, 11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+        [CustomEnumerator]
+       public IEnumerator<NetOffice.WordApi.Editor> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (NetOffice.WordApi.Editor item in innerEnumerator)
+               yield return item;
+       }
 
+       #endregion
+   
+       #region IEnumerable Members
+        
+       /// <summary>
+		/// SupportByVersionAttribute Word, 11,12,14
+		/// This is a custom enumerator from NetOffice
+		/// </summary>
+		[SupportByVersionAttribute("Word", 11,12,14)]
+        [CustomEnumerator]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+       {
+            int count = Count;
+            COMObject[] enumeratorObjects = new COMObject[count];
+            for (int i = 0; i < count; i++)
+                enumeratorObjects[i] = this[i+1];
 
-		#pragma warning restore
+            foreach (COMObject item in enumeratorObjects)
+                yield return item;
+       }
+
+       #endregion
+       		#pragma warning restore
 	}
 }

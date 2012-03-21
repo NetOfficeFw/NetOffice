@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLEditHost 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditHost : COMObject
 	{
@@ -78,17 +78,17 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="prcNew">tagRECT prcNew</param>
 		/// <param name="eHandle">NetOffice.MSHTMLApi.Enums._ELEMENT_CORNER eHandle</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SnapRect(NetOffice.MSHTMLApi.IHTMLElement pIElement, tagRECT prcNew, NetOffice.MSHTMLApi.Enums._ELEMENT_CORNER eHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, prcNew, eHandle);
 			object returnItem = Invoker.MethodReturn(this, "SnapRect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

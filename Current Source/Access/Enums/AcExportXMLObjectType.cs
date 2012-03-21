@@ -4,59 +4,59 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 10, 11, 12, 14
+	 /// SupportByVersion Access 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 10,11,12,14)]
+	[SupportByVersionAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcExportXMLObjectType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportTable = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportQuery = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportForm = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportReport = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportServerView = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportStoredProcedure = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acExportFunction = 10
 	}
 }

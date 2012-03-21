@@ -28,11 +28,11 @@ namespace NetOffice.ExcelApi
 
 	///<summary>
 	/// CoClass Chart 
-	/// SupportByLibrary Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Chart : _Chart, IEventBinding 
+	public class Chart : _Chart,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -105,13 +105,304 @@ namespace NetOffice.ExcelApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_ActivateEventHandler _ActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_ActivateEventHandler ActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ActivateEvent += value;
+			}
+			remove
+			{
+				_ActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_DeactivateEventHandler _DeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_DeactivateEventHandler DeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DeactivateEvent += value;
+			}
+			remove
+			{
+				_DeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_ResizeEventHandler _ResizeEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_ResizeEventHandler ResizeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ResizeEvent += value;
+			}
+			remove
+			{
+				_ResizeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_MouseDownEventHandler _MouseDownEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_MouseDownEventHandler MouseDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseDownEvent += value;
+			}
+			remove
+			{
+				_MouseDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_MouseUpEventHandler _MouseUpEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_MouseUpEventHandler MouseUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseUpEvent += value;
+			}
+			remove
+			{
+				_MouseUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_MouseMoveEventHandler _MouseMoveEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_MouseMoveEventHandler MouseMoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseMoveEvent += value;
+			}
+			remove
+			{
+				_MouseMoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_BeforeRightClickEventHandler _BeforeRightClickEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_BeforeRightClickEventHandler BeforeRightClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeRightClickEvent += value;
+			}
+			remove
+			{
+				_BeforeRightClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_DragPlotEventHandler _DragPlotEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_DragPlotEventHandler DragPlotEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DragPlotEvent += value;
+			}
+			remove
+			{
+				_DragPlotEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_DragOverEventHandler _DragOverEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_DragOverEventHandler DragOverEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DragOverEvent += value;
+			}
+			remove
+			{
+				_DragOverEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeDoubleClickEvent += value;
+			}
+			remove
+			{
+				_BeforeDoubleClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_SelectEventHandler _SelectEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_SelectEventHandler SelectEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectEvent += value;
+			}
+			remove
+			{
+				_SelectEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_SeriesChangeEventHandler _SeriesChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_SeriesChangeEventHandler SeriesChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SeriesChangeEvent += value;
+			}
+			remove
+			{
+				_SeriesChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 9,10,11,12,14
+		/// </summary>
+		private event Chart_CalculateEventHandler _CalculateEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Excel", 9,10,11,12,14)]
+		public event Chart_CalculateEventHandler CalculateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CalculateEvent += value;
+			}
+			remove
+			{
+				_CalculateEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -129,301 +420,7 @@ namespace NetOffice.ExcelApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_ActivateEventHandler _ActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_ActivateEventHandler ActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ActivateEvent += value;
-			}
-			remove
-			{
-				_ActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_DeactivateEventHandler _DeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_DeactivateEventHandler DeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DeactivateEvent += value;
-			}
-			remove
-			{
-				_DeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_ResizeEventHandler _ResizeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_ResizeEventHandler ResizeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ResizeEvent += value;
-			}
-			remove
-			{
-				_ResizeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_MouseDownEventHandler _MouseDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_MouseDownEventHandler MouseDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseDownEvent += value;
-			}
-			remove
-			{
-				_MouseDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_MouseUpEventHandler _MouseUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_MouseUpEventHandler MouseUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseUpEvent += value;
-			}
-			remove
-			{
-				_MouseUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_MouseMoveEventHandler _MouseMoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_MouseMoveEventHandler MouseMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseMoveEvent += value;
-			}
-			remove
-			{
-				_MouseMoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_BeforeRightClickEventHandler _BeforeRightClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_BeforeRightClickEventHandler BeforeRightClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeRightClickEvent += value;
-			}
-			remove
-			{
-				_BeforeRightClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_DragPlotEventHandler _DragPlotEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_DragPlotEventHandler DragPlotEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DragPlotEvent += value;
-			}
-			remove
-			{
-				_DragPlotEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_DragOverEventHandler _DragOverEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_DragOverEventHandler DragOverEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DragOverEvent += value;
-			}
-			remove
-			{
-				_DragOverEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDoubleClickEvent += value;
-			}
-			remove
-			{
-				_BeforeDoubleClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_SelectEventHandler _SelectEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_SelectEventHandler SelectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectEvent += value;
-			}
-			remove
-			{
-				_SelectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_SeriesChangeEventHandler _SeriesChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_SeriesChangeEventHandler SeriesChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SeriesChangeEvent += value;
-			}
-			remove
-			{
-				_SeriesChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Excel, 9,10,11,12,14
-		/// </summary>
-		private event Chart_CalculateEventHandler _CalculateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Excel 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Excel", 9,10,11,12,14)]
-		public event Chart_CalculateEventHandler CalculateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CalculateEvent += value;
-			}
-			remove
-			{
-				_CalculateEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -434,25 +431,22 @@ namespace NetOffice.ExcelApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -475,8 +469,59 @@ namespace NetOffice.ExcelApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _chartEvents_SinkHelper)
 			{
@@ -488,6 +533,7 @@ namespace NetOffice.ExcelApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _IDpxCtrl 
-	/// SupportByLibrary Outlook, 10
+	/// SupportByVersion Outlook, 10
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IDpxCtrl : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public Int32 StartDate
 		{
 			get
@@ -95,10 +95,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public Int32 EndDate
 		{
 			get

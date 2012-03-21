@@ -47,7 +47,7 @@ namespace MSProjectApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

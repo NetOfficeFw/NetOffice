@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface NewFile 
-	/// SupportByLibrary Office, 10,11,12,14
+	/// SupportByVersion Office, 10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NewFile : _IMsoDispObj
 	{
@@ -79,117 +79,117 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Add(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Add(string fileName, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Add(string fileName, object section, object displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Remove(string fileName, object section, object displayName, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Remove(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Remove(string fileName, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public bool Remove(string fileName, object section, object displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

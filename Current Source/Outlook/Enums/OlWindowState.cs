@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+	 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlWindowState
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olMaximized = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olMinimized = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olNormalWindow = 2
 	}
 }

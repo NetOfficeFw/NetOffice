@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14
+	 /// SupportByVersion Office 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlDataLabelPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4108</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionCenter = -4108,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionAbove = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionBelow = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4131</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionLeft = -4131,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4152</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionRight = -4152,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionOutsideEnd = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionInsideEnd = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionInsideBase = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionBestFit = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionMixed = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLabelPositionCustom = 7
 	}
 }

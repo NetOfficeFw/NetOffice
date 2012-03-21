@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.1, 2.5
+	 /// SupportByVersion ADODB 2.1, 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CompareEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adCompareLessThan = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adCompareEqual = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adCompareGreaterThan = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adCompareNotEqual = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adCompareNotComparable = 4
 	}
 }

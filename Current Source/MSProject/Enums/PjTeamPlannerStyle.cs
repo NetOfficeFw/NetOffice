@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 14
+	 /// SupportByVersion MSProject 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 14)]
+	[SupportByVersionAttribute("MSProject", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjTeamPlannerStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjTPScheduledWork = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjTPActualWork = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjTPSRA = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjTPLateTask = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 14
+		 /// SupportByVersion MSProject 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 14)]
 		 pjTPManualTask = 4
 	}
 }

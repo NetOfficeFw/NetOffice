@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLOptionElementFactory 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLOptionElementFactory : COMObject
 	{
@@ -79,13 +79,13 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="text">optional object text</param>
 		/// <param name="value">optional object value</param>
 		/// <param name="defaultSelected">optional object defaultSelected</param>
 		/// <param name="selected">optional object selected</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected, object selected)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected, selected);
@@ -95,10 +95,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create()
 		{
 			object[] paramsArray = null;
@@ -108,11 +108,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="text">optional object text</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -122,12 +122,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="text">optional object text</param>
 		/// <param name="value">optional object value</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value);
@@ -137,13 +137,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="text">optional object text</param>
 		/// <param name="value">optional object value</param>
 		/// <param name="defaultSelected">optional object defaultSelected</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected);

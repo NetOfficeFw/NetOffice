@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 14
+	 /// SupportByVersion Excel 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlPortugueseReform
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 14
+		 /// SupportByVersion Excel 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 14)]
+		 [SupportByVersionAttribute("Excel", 14)]
 		 xlPortuguesePreReform = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 14
+		 /// SupportByVersion Excel 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Excel", 14)]
+		 [SupportByVersionAttribute("Excel", 14)]
 		 xlPortuguesePostReform = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 14
+		 /// SupportByVersion Excel 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Excel", 14)]
+		 [SupportByVersionAttribute("Excel", 14)]
 		 xlPortugueseBoth = 3
 	}
 }

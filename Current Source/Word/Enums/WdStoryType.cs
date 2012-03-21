@@ -4,129 +4,129 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdStoryType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdMainTextStory = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdFootnotesStory = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdEndnotesStory = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdCommentsStory = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdTextFrameStory = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdEvenPagesHeaderStory = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrimaryHeaderStory = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdEvenPagesFooterStory = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPrimaryFooterStory = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdFirstPageHeaderStory = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdFirstPageFooterStory = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdFootnoteSeparatorStory = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdFootnoteContinuationSeparatorStory = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdFootnoteContinuationNoticeStory = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdEndnoteSeparatorStory = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdEndnoteContinuationSeparatorStory = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 11, 12, 14
+		 /// SupportByVersion Word 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibraryAttribute("Word", 11,12,14)]
+		 [SupportByVersionAttribute("Word", 11,12,14)]
 		 wdEndnoteContinuationNoticeStory = 17
 	}
 }

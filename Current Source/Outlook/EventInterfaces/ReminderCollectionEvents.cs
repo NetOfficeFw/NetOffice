@@ -10,31 +10,31 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 	[ComImport, Guid("000630B2-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ReminderCollectionEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64147)]
 		void BeforeReminderShow([In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64148)]
 		void ReminderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject);
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64149)]
 		void ReminderChange([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject);
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64150)]
 		void ReminderFire([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject);
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64151)]
 		void ReminderRemove();
 
-		[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64152)]
 		void Snooze([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject);
 	}
@@ -83,8 +83,7 @@ namespace NetOffice.OutlookApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeReminderShow", ref paramsArray);
 
 			cancel = (bool)paramsArray[0];
 		}
@@ -101,8 +100,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ReminderAdd", ref paramsArray);
 		}
 
 		public void ReminderChange([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
@@ -117,8 +115,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ReminderChange", ref paramsArray);
 		}
 
 		public void ReminderFire([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
@@ -133,8 +130,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ReminderFire", ref paramsArray);
 		}
 
 		public void ReminderRemove()
@@ -147,8 +143,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ReminderRemove", ref paramsArray);
 		}
 
 		public void Snooze([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
@@ -163,8 +158,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Snooze", ref paramsArray);
 		}
 
 		#endregion

@@ -10,19 +10,19 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("00063076-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface FoldersEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void FolderRemove();
 	}
@@ -72,8 +72,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.MAPIFolder newFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FolderAdd", ref paramsArray);
 		}
 
 		public void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder)
@@ -88,8 +87,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.MAPIFolder newFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FolderChange", ref paramsArray);
 		}
 
 		public void FolderRemove()
@@ -102,8 +100,7 @@ namespace NetOffice.OutlookApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("FolderRemove", ref paramsArray);
 		}
 
 		#endregion

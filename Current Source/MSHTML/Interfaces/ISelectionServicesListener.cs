@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface ISelectionServicesListener 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISelectionServicesListener : COMObject
 	{
@@ -78,60 +78,60 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 BeginSelectionUndo()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "BeginSelectionUndo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 EndSelectionUndo()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "EndSelectionUndo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIElementStart">NetOffice.MSHTMLApi.IMarkupPointer pIElementStart</param>
 		/// <param name="pIElementEnd">NetOffice.MSHTMLApi.IMarkupPointer pIElementEnd</param>
 		/// <param name="pIElementContentStart">NetOffice.MSHTMLApi.IMarkupPointer pIElementContentStart</param>
 		/// <param name="pIElementContentEnd">NetOffice.MSHTMLApi.IMarkupPointer pIElementContentEnd</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 OnSelectedElementExit(NetOffice.MSHTMLApi.IMarkupPointer pIElementStart, NetOffice.MSHTMLApi.IMarkupPointer pIElementEnd, NetOffice.MSHTMLApi.IMarkupPointer pIElementContentStart, NetOffice.MSHTMLApi.IMarkupPointer pIElementContentEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElementStart, pIElementEnd, pIElementContentStart, pIElementContentEnd);
 			object returnItem = Invoker.MethodReturn(this, "OnSelectedElementExit", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="eType">NetOffice.MSHTMLApi.Enums._SELECTION_TYPE eType</param>
 		/// <param name="pIListener">NetOffice.MSHTMLApi.ISelectionServicesListener pIListener</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 OnChangeType(NetOffice.MSHTMLApi.Enums._SELECTION_TYPE eType, NetOffice.MSHTMLApi.ISelectionServicesListener pIListener)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eType, pIListener);
 			object returnItem = Invoker.MethodReturn(this, "OnChangeType", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pTypeDetail">string pTypeDetail</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetTypeDetail(out string pTypeDetail)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -139,7 +139,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pTypeDetail);
 			object returnItem = Invoker.MethodReturn(this, "GetTypeDetail", paramsArray);
 			pTypeDetail = (string)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

@@ -4,129 +4,129 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdDefaultFilePath
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdDocumentsPath = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdPicturesPath = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdUserTemplatesPath = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdWorkgroupTemplatesPath = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdUserOptionsPath = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdAutoRecoverPath = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdToolsPath = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdTutorialPath = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdStartupPath = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdProgramPath = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdGraphicsFiltersPath = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdTextConvertersPath = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdProofingToolsPath = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdTempFilePath = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdCurrentFolderPath = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdStyleGalleryPath = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdBorderArtPath = 19
 	}
 }

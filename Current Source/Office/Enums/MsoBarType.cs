@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14
+	 /// SupportByVersion Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoBarType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoBarTypeNormal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoBarTypeMenuBar = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoBarTypePopup = 2
 	}
 }

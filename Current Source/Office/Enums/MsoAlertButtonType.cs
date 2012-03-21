@@ -4,59 +4,59 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 10, 11, 12, 14
+	 /// SupportByVersion Office 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoAlertButtonType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonOK = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonOKCancel = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonAbortRetryIgnore = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonYesNoCancel = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonYesNo = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonRetryCancel = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoAlertButtonYesAllNoCancel = 6
 	}
 }

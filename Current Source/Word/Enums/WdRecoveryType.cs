@@ -4,136 +4,136 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 10, 11, 12, 14
+	 /// SupportByVersion Word 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 10,11,12,14)]
+	[SupportByVersionAttribute("Word", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdRecoveryType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdPasteDefault = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdSingleCellText = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdSingleCellTable = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdListContinueNumbering = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdListRestartNumbering = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdTableInsertAsRows = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdTableAppendTable = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdTableOriginalFormatting = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdChartPicture = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdChart = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdChartLinked = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdFormatOriginalFormatting = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdFormatSurroundingFormattingWithEmphasis = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdFormatPlainText = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdTableOverwriteCells = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdListCombineWithExistingList = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdListDontMerge = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdUseDestinationStylesRecovery = 19
 	}
 }

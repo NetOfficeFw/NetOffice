@@ -47,7 +47,7 @@ namespace MSHTMLApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface DropSource 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DropSource : COMObject
 	{
@@ -79,10 +79,10 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="dwEffect">Int32 dwEffect</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void GiveFeedback(Int32 dwEffect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwEffect);
@@ -90,11 +90,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="escapePressed">bool EscapePressed</param>
 		/// <param name="keyState">Int32 KeyState</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void QueryContinueDrag(bool escapePressed, Int32 keyState)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(escapePressed, keyState);

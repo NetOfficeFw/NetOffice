@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface ViewsCombination 
-	/// SupportByLibrary MSProject, 12,14
+	/// SupportByVersion MSProject, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewsCombination : Views
 	{
@@ -79,14 +79,14 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="topView">object TopView</param>
 		/// <param name="bottomView">object BottomView</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		[SupportByLibraryAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, bool showInMenu)
+		[SupportByVersionAttribute("MSProject", 12,14)]
+		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, object showInMenu)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView, showInMenu);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -95,13 +95,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSProject 12, 14
+		/// SupportByVersion MSProject 12, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="topView">object TopView</param>
 		/// <param name="bottomView">object BottomView</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14)]
 		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView);

@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 2
+	 /// SupportByVersion MSComctlLib 6.0
 	 /// </summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ValueConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tbrUnpressed = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 tbrPressed = 1
 	}
 }

@@ -26,11 +26,11 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OlkContactPhoto 
-	/// SupportByLibrary Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkContactPhoto : _OlkContactPhoto, IEventBinding 
+	public class OlkContactPhoto : _OlkContactPhoto,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -68,7 +68,7 @@ namespace NetOffice.OutlookApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -103,13 +103,260 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_ClickEventHandler _ClickEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_ClickEventHandler ClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ClickEvent += value;
+			}
+			remove
+			{
+				_ClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_DoubleClickEventHandler _DoubleClickEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_DoubleClickEventHandler DoubleClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DoubleClickEvent += value;
+			}
+			remove
+			{
+				_DoubleClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_MouseDownEventHandler _MouseDownEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_MouseDownEventHandler MouseDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseDownEvent += value;
+			}
+			remove
+			{
+				_MouseDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_MouseMoveEventHandler _MouseMoveEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_MouseMoveEventHandler MouseMoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseMoveEvent += value;
+			}
+			remove
+			{
+				_MouseMoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_MouseUpEventHandler _MouseUpEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_MouseUpEventHandler MouseUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseUpEvent += value;
+			}
+			remove
+			{
+				_MouseUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_EnterEventHandler _EnterEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_EnterEventHandler EnterEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_EnterEvent += value;
+			}
+			remove
+			{
+				_EnterEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_ExitEventHandler _ExitEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_ExitEventHandler ExitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ExitEvent += value;
+			}
+			remove
+			{
+				_ExitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_KeyDownEventHandler _KeyDownEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_KeyDownEventHandler KeyDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyDownEvent += value;
+			}
+			remove
+			{
+				_KeyDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_KeyPressEventHandler _KeyPressEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_KeyPressEventHandler KeyPressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyPressEvent += value;
+			}
+			remove
+			{
+				_KeyPressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_KeyUpEventHandler _KeyUpEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_KeyUpEventHandler KeyUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyUpEvent += value;
+			}
+			remove
+			{
+				_KeyUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 12,14
+		/// </summary>
+		private event OlkContactPhoto_ChangeEventHandler _ChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 12,14)]
+		public event OlkContactPhoto_ChangeEventHandler ChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ChangeEvent += value;
+			}
+			remove
+			{
+				_ChangeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -127,257 +374,7 @@ namespace NetOffice.OutlookApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_ClickEventHandler _ClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_ClickEventHandler ClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ClickEvent += value;
-			}
-			remove
-			{
-				_ClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_DoubleClickEventHandler _DoubleClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_DoubleClickEventHandler DoubleClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DoubleClickEvent += value;
-			}
-			remove
-			{
-				_DoubleClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_MouseDownEventHandler _MouseDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_MouseDownEventHandler MouseDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseDownEvent += value;
-			}
-			remove
-			{
-				_MouseDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_MouseMoveEventHandler _MouseMoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_MouseMoveEventHandler MouseMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseMoveEvent += value;
-			}
-			remove
-			{
-				_MouseMoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_MouseUpEventHandler _MouseUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_MouseUpEventHandler MouseUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseUpEvent += value;
-			}
-			remove
-			{
-				_MouseUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_EnterEventHandler _EnterEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_EnterEventHandler EnterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_EnterEvent += value;
-			}
-			remove
-			{
-				_EnterEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_ExitEventHandler _ExitEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_ExitEventHandler ExitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ExitEvent += value;
-			}
-			remove
-			{
-				_ExitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_KeyDownEventHandler _KeyDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_KeyDownEventHandler KeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyDownEvent += value;
-			}
-			remove
-			{
-				_KeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_KeyPressEventHandler _KeyPressEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_KeyPressEventHandler KeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyPressEvent += value;
-			}
-			remove
-			{
-				_KeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_KeyUpEventHandler _KeyUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_KeyUpEventHandler KeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyUpEvent += value;
-			}
-			remove
-			{
-				_KeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 12,14
-		/// </summary>
-		private event OlkContactPhoto_ChangeEventHandler _ChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 12,14)]
-		public event OlkContactPhoto_ChangeEventHandler ChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ChangeEvent += value;
-			}
-			remove
-			{
-				_ChangeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -388,25 +385,22 @@ namespace NetOffice.OutlookApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -429,8 +423,59 @@ namespace NetOffice.OutlookApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _olkContactPhotoEvents_SinkHelper)
 			{
@@ -442,6 +487,7 @@ namespace NetOffice.OutlookApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

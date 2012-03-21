@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 10, 11, 12, 14
+	 /// SupportByVersion Access 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 10,11,12,14)]
+	[SupportByVersionAttribute("Access", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcFileFormat
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acFileFormatAccess2 = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acFileFormatAccess95 = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acFileFormatAccess97 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acFileFormatAccess2000 = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 10, 11, 12, 14
+		 /// SupportByVersion Access 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Access", 10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 10,11,12,14)]
 		 acFileFormatAccess2002 = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acFileFormatAccess2007 = 12
 	}
 }

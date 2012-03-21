@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementBehaviorLayout 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorLayout : COMObject
 	{
@@ -78,51 +78,51 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="dwFlags">Int32 dwFlags</param>
 		/// <param name="sizeContent">tagSIZE sizeContent</param>
 		/// <param name="pptTranslateBy">tagPOINT pptTranslateBy</param>
 		/// <param name="pptTopLeft">tagPOINT pptTopLeft</param>
 		/// <param name="psizeProposed">tagSIZE psizeProposed</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetSize(Int32 dwFlags, tagSIZE sizeContent, tagPOINT pptTranslateBy, tagPOINT pptTopLeft, tagSIZE psizeProposed)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwFlags, sizeContent, pptTranslateBy, pptTopLeft, psizeProposed);
 			object returnItem = Invoker.MethodReturn(this, "GetSize", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetLayoutInfo()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetLayoutInfo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pptTopLeft">tagPOINT pptTopLeft</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetPosition(Int32 lFlags, tagPOINT pptTopLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lFlags, pptTopLeft);
 			object returnItem = Invoker.MethodReturn(this, "GetPosition", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="psizeIn">tagSIZE psizeIn</param>
 		/// <param name="prcOut">tagRECT prcOut</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MapSize(tagSIZE psizeIn, out tagRECT prcOut)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -130,7 +130,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(psizeIn, prcOut);
 			object returnItem = Invoker.MethodReturn(this, "MapSize", paramsArray);
 			prcOut = (tagRECT)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

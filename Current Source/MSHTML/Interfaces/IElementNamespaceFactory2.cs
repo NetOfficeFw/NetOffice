@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementNamespaceFactory2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementNamespaceFactory2 : IElementNamespaceFactory
 	{
@@ -78,16 +78,16 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pNamespace">NetOffice.MSHTMLApi.IElementNamespace pNamespace</param>
 		/// <param name="bstrImplementation">string bstrImplementation</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 CreateWithImplementation(NetOffice.MSHTMLApi.IElementNamespace pNamespace, string bstrImplementation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pNamespace, bstrImplementation);
 			object returnItem = Invoker.MethodReturn(this, "CreateWithImplementation", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

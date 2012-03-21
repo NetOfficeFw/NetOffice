@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 14
+	 /// SupportByVersion Word 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTickLabelPosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>-4127</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickLabelPositionHigh = -4127,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>-4134</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickLabelPositionLow = -4134,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickLabelPositionNextToAxis = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 14
+		 /// SupportByVersion Word 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibraryAttribute("Word", 14)]
+		 [SupportByVersionAttribute("Word", 14)]
 		 xlTickLabelPositionNone = -4142
 	}
 }

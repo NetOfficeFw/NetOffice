@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementBehaviorRender 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementBehaviorRender : COMObject
 	{
@@ -78,42 +78,42 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="hdc">_RemotableHandle hdc</param>
 		/// <param name="lLayer">Int32 lLayer</param>
 		/// <param name="pRect">tagRECT pRect</param>
 		/// <param name="pReserved">object pReserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Draw(_RemotableHandle hdc, Int32 lLayer, tagRECT pRect, object pReserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hdc, lLayer, pRect, pReserved);
 			object returnItem = Invoker.MethodReturn(this, "Draw", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetRenderInfo()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetRenderInfo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="pReserved">object pReserved</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 HitTestPoint(tagPOINT pPoint, object pReserved)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPoint, pReserved);
 			object returnItem = Invoker.MethodReturn(this, "HitTestPoint", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

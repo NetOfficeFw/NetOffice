@@ -47,7 +47,7 @@ namespace MSComctlLibApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

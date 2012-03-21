@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Field2 
-	/// SupportByLibrary DAO, 12
+	/// SupportByVersion DAO, 12
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 12)]
+	[SupportByVersionAttribute("DAO", 12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field2 : _Field
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public NetOffice.DAOApi.Properties Properties
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public NetOffice.DAOApi.ComplexType ComplexType
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public bool IsComplex
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public bool AppendOnly
 		{
 			get
@@ -142,17 +142,17 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public string Expression
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Expression", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -166,10 +166,10 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public void LoadFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -177,10 +177,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 12
+		/// SupportByVersion DAO 12
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByLibraryAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12)]
 		public void SaveToFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

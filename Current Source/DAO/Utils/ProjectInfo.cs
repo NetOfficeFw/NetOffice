@@ -47,7 +47,7 @@ namespace DAOApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

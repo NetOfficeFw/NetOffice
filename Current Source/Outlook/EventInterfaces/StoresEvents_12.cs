@@ -10,15 +10,15 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14)]
 	[ComImport, Guid("000630F8-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface StoresEvents_12
 	{
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64433)]
 		void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void StoreAdd([In, MarshalAs(UnmanagedType.IDispatch)] object store);
 	}
@@ -69,8 +69,7 @@ namespace NetOffice.OutlookApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeStoreRemove", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -87,8 +86,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);
 		}
 
 		#endregion

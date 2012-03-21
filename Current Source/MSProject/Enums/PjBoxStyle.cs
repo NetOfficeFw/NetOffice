@@ -4,108 +4,108 @@ using LateBindingApi.Core;
 namespace NetOffice.MSProjectApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSProject 12, 14
+	 /// SupportByVersion MSProject 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PjBoxStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCritical = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncritical = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCriticalMilestone = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncriticalMilestone = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCriticalSummary = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncriticalSummary = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCriticalInsertedProject = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncriticalInsertedProject = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCriticalMarked = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncriticalMarked = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxCriticalExternalTask = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxNoncriticalExternalTask = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxProjectSummaryTask = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary MSProject 12, 14
+		 /// SupportByVersion MSProject 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 12,14)]
 		 pjBoxHighlightedTasks = 13
 	}
 }

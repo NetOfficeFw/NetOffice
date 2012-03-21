@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterPreferences 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterPreferences : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,14 +89,14 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfMacroEnabled);
 			object returnItem = Invoker.MethodReturn(this, "HrGetMacroEnabled", paramsArray);
 			pfMacroEnabled = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -104,14 +104,14 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
 			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray);
 			pFormat = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pfLossySave">Int32 pfLossySave</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetLossySave(out Int32 pfLossySave)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfLossySave);
 			object returnItem = Invoker.MethodReturn(this, "HrGetLossySave", paramsArray);
 			pfLossySave = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

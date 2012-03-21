@@ -4,38 +4,38 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 12, 14
+	 /// SupportByVersion Word 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdExportRange
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdExportAllDocument = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdExportSelection = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdExportCurrentPage = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdExportFromTo = 3
 	}
 }

@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface _NumberFormat 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NumberFormat : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,17 +95,17 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string Code
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Code", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -115,102 +115,106 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Value">object Value</param>
-		/// <param name="Count">optional Int32 Count</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
-		public string get_Format(object value, Int32 count)
-		{
+		/// <param name="value">object Value</param>
+		/// <param name="count">optional Int32 Count</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public string get_Format(object value, object count)
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(value, count);
 			object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_Format
 		/// </summary>
-		/// <param name="Value">object Value</param>
-		/// <param name="Count">optional Int32 Count</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
-		public string Format(object value, Int32 count)
+		/// <param name="value">object Value</param>
+		/// <param name="count">optional Int32 Count</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		public string Format(object value, object count)
 		{
 			return get_Format(value, count);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Format(object value)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
 			object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_Format
 		/// </summary>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string Format(object value)
 		{
 			return get_Format(value);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_Width(Int32 hDC, object value)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
 			object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_Width
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Width(Int32 hDC, object value)
 		{
 			return get_Width(hDC, value);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_Height(Int32 hDC, object value)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
 			object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_Height
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="Value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="value">object Value</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Height(Int32 hDC, object value)
 		{
 			return get_Height(hDC, value);
@@ -221,7 +225,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="hDCInfo">Int32 hDCInfo</param>
@@ -236,7 +240,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="horizontalAlignment">Int32 HorizontalAlignment</param>
 		/// <param name="verticalAlignment">Int32 VerticalAlignment</param>
 		/// <param name="value">object Value</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Render(Int32 hDC, Int32 hDCInfo, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 horizontalAlignment, Int32 verticalAlignment, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, hDCInfo, cx1, cy1, cx2, cy2, left, top, width, height, horizontalAlignment, verticalAlignment, value);

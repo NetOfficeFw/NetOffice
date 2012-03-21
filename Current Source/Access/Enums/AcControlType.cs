@@ -4,178 +4,178 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 9, 10, 11, 12, 14
+	 /// SupportByVersion Access 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcControlType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>100</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acLabel = 100,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>101</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acRectangle = 101,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>102</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acLine = 102,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>103</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acImage = 103,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>104</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acCommandButton = 104,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>105</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acOptionButton = 105,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>106</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acCheckBox = 106,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>107</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acOptionGroup = 107,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>108</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acBoundObjectFrame = 108,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>109</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acTextBox = 109,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>110</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acListBox = 110,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>111</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acComboBox = 111,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>112</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acSubform = 112,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>114</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acObjectFrame = 114,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>118</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acPageBreak = 118,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>119</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acCustomControl = 119,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>122</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acToggleButton = 122,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>123</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acTabCtl = 123,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 9, 10, 11, 12, 14
+		 /// SupportByVersion Access 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>124</remarks>
-		 [SupportByLibraryAttribute("Access", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Access", 9,10,11,12,14)]
 		 acPage = 124,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>126</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acAttachment = 126,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 14
+		 /// SupportByVersion Access 14
 		 /// </summary>
 		 /// <remarks>127</remarks>
-		 [SupportByLibraryAttribute("Access", 14)]
+		 [SupportByVersionAttribute("Access", 14)]
 		 acEmptyCell = 127,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 14
+		 /// SupportByVersion Access 14
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("Access", 14)]
+		 [SupportByVersionAttribute("Access", 14)]
 		 acWebBrowser = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 14
+		 /// SupportByVersion Access 14
 		 /// </summary>
 		 /// <remarks>129</remarks>
-		 [SupportByLibraryAttribute("Access", 14)]
+		 [SupportByVersionAttribute("Access", 14)]
 		 acNavigationControl = 129,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 14
+		 /// SupportByVersion Access 14
 		 /// </summary>
 		 /// <remarks>130</remarks>
-		 [SupportByLibraryAttribute("Access", 14)]
+		 [SupportByVersionAttribute("Access", 14)]
 		 acNavigationButton = 130
 	}
 }

@@ -26,11 +26,11 @@ namespace NetOffice.ADODBApi
 
 	///<summary>
 	/// CoClass Recordset 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Recordset : _Recordset, IEventBinding 
+	public class Recordset : _Recordset,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -68,7 +68,7 @@ namespace NetOffice.ADODBApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -103,13 +103,260 @@ namespace NetOffice.ADODBApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_WillChangeFieldEventHandler _WillChangeFieldEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_WillChangeFieldEventHandler WillChangeFieldEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillChangeFieldEvent += value;
+			}
+			remove
+			{
+				_WillChangeFieldEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_FieldChangeCompleteEventHandler _FieldChangeCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_FieldChangeCompleteEventHandler FieldChangeCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FieldChangeCompleteEvent += value;
+			}
+			remove
+			{
+				_FieldChangeCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_WillChangeRecordEventHandler _WillChangeRecordEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_WillChangeRecordEventHandler WillChangeRecordEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillChangeRecordEvent += value;
+			}
+			remove
+			{
+				_WillChangeRecordEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_RecordChangeCompleteEventHandler _RecordChangeCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_RecordChangeCompleteEventHandler RecordChangeCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_RecordChangeCompleteEvent += value;
+			}
+			remove
+			{
+				_RecordChangeCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_WillChangeRecordsetEventHandler _WillChangeRecordsetEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_WillChangeRecordsetEventHandler WillChangeRecordsetEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillChangeRecordsetEvent += value;
+			}
+			remove
+			{
+				_WillChangeRecordsetEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_RecordsetChangeCompleteEventHandler _RecordsetChangeCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_RecordsetChangeCompleteEventHandler RecordsetChangeCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_RecordsetChangeCompleteEvent += value;
+			}
+			remove
+			{
+				_RecordsetChangeCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_WillMoveEventHandler _WillMoveEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_WillMoveEventHandler WillMoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillMoveEvent += value;
+			}
+			remove
+			{
+				_WillMoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_MoveCompleteEventHandler _MoveCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_MoveCompleteEventHandler MoveCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MoveCompleteEvent += value;
+			}
+			remove
+			{
+				_MoveCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_EndOfRecordsetEventHandler _EndOfRecordsetEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_EndOfRecordsetEventHandler EndOfRecordsetEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_EndOfRecordsetEvent += value;
+			}
+			remove
+			{
+				_EndOfRecordsetEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_FetchProgressEventHandler _FetchProgressEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_FetchProgressEventHandler FetchProgressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FetchProgressEvent += value;
+			}
+			remove
+			{
+				_FetchProgressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Recordset_FetchCompleteEventHandler _FetchCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Recordset_FetchCompleteEventHandler FetchCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FetchCompleteEvent += value;
+			}
+			remove
+			{
+				_FetchCompleteEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -127,257 +374,7 @@ namespace NetOffice.ADODBApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_WillChangeFieldEventHandler _WillChangeFieldEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_WillChangeFieldEventHandler WillChangeFieldEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillChangeFieldEvent += value;
-			}
-			remove
-			{
-				_WillChangeFieldEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_FieldChangeCompleteEventHandler _FieldChangeCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_FieldChangeCompleteEventHandler FieldChangeCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FieldChangeCompleteEvent += value;
-			}
-			remove
-			{
-				_FieldChangeCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_WillChangeRecordEventHandler _WillChangeRecordEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_WillChangeRecordEventHandler WillChangeRecordEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillChangeRecordEvent += value;
-			}
-			remove
-			{
-				_WillChangeRecordEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_RecordChangeCompleteEventHandler _RecordChangeCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_RecordChangeCompleteEventHandler RecordChangeCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RecordChangeCompleteEvent += value;
-			}
-			remove
-			{
-				_RecordChangeCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_WillChangeRecordsetEventHandler _WillChangeRecordsetEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_WillChangeRecordsetEventHandler WillChangeRecordsetEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillChangeRecordsetEvent += value;
-			}
-			remove
-			{
-				_WillChangeRecordsetEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_RecordsetChangeCompleteEventHandler _RecordsetChangeCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_RecordsetChangeCompleteEventHandler RecordsetChangeCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RecordsetChangeCompleteEvent += value;
-			}
-			remove
-			{
-				_RecordsetChangeCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_WillMoveEventHandler _WillMoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_WillMoveEventHandler WillMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillMoveEvent += value;
-			}
-			remove
-			{
-				_WillMoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_MoveCompleteEventHandler _MoveCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_MoveCompleteEventHandler MoveCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MoveCompleteEvent += value;
-			}
-			remove
-			{
-				_MoveCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_EndOfRecordsetEventHandler _EndOfRecordsetEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_EndOfRecordsetEventHandler EndOfRecordsetEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_EndOfRecordsetEvent += value;
-			}
-			remove
-			{
-				_EndOfRecordsetEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_FetchProgressEventHandler _FetchProgressEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_FetchProgressEventHandler FetchProgressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FetchProgressEvent += value;
-			}
-			remove
-			{
-				_FetchProgressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Recordset_FetchCompleteEventHandler _FetchCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Recordset_FetchCompleteEventHandler FetchCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FetchCompleteEvent += value;
-			}
-			remove
-			{
-				_FetchCompleteEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -388,25 +385,22 @@ namespace NetOffice.ADODBApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -429,8 +423,59 @@ namespace NetOffice.ADODBApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _recordsetEvents_SinkHelper)
 			{
@@ -442,6 +487,7 @@ namespace NetOffice.ADODBApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

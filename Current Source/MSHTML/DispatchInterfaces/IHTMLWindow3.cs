@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLWindow3 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLWindow3 : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 screenLeft
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 screenTop
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onbeforeprint
 		{
 			get
@@ -133,10 +133,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object onafterprint
 		{
 			get
@@ -161,10 +161,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLDataTransfer clipboardData
 		{
 			get
@@ -181,24 +181,24 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		/// <param name="event">string event</param>
+		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool attachEvent(string _event, object pdisp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
 			object returnItem = Invoker.MethodReturn(this, "attachEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		/// <param name="event">string event</param>
+		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void detachEvent(string _event, object pdisp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
@@ -206,65 +206,65 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 setTimeout(object expression, Int32 msec, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 setTimeout(object expression, Int32 msec)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		/// <param name="language">optional object language</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 setInterval(object expression, Int32 msec, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 setInterval(object expression, Int32 msec)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void print()
 		{
 			object[] paramsArray = null;
@@ -272,13 +272,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		/// <param name="varArgIn">optional object varArgIn</param>
 		/// <param name="options">optional object options</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn, object options)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn, options);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -287,10 +287,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog()
 		{
 			object[] paramsArray = null;
@@ -300,12 +300,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -314,13 +314,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		/// <param name="varArgIn">optional object varArgIn</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);

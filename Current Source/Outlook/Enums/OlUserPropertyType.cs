@@ -4,108 +4,108 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+	 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlUserPropertyType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olNumber = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olDateTime = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olYesNo = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olDuration = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olKeywords = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olPercent = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olCurrency = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olFormula = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olCombination = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olOutlookInternal = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olInteger = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olEnumeration = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 12, 14
+		 /// SupportByVersion Outlook 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibraryAttribute("Outlook", 12,14)]
+		 [SupportByVersionAttribute("Outlook", 12,14)]
 		 olSmartFrom = 22
 	}
 }

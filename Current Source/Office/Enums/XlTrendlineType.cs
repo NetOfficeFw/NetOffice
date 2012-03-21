@@ -4,52 +4,52 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14
+	 /// SupportByVersion Office 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTrendlineType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlExponential = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4132</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLinear = -4132,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4133</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlLogarithmic = -4133,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlMovingAvg = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlPolynomial = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlPower = 4
 	}
 }

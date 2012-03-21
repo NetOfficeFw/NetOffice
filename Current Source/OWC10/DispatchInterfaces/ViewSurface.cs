@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface ViewSurface 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewSurface : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 hDC
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 hDCInfo
 		{
 			get
@@ -105,90 +105,94 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Color">Int32 Color</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="color">Int32 Color</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_AlphaBlend(Int32 color)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(color);
 			object returnItem = Invoker.PropertyGet(this, "AlphaBlend", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_AlphaBlend
 		/// </summary>
-		/// <param name="Color">Int32 Color</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="color">Int32 Color</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 AlphaBlend(Int32 color)
 		{
 			return get_AlphaBlend(color);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
-		/// <param name="Text">object Text</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="textFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="text">object Text</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_TextHeight(NetOffice.OWC10Api.TextFormat textFormat, object text)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(textFormat, text);
 			object returnItem = Invoker.PropertyGet(this, "TextHeight", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_TextHeight
 		/// </summary>
-		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
-		/// <param name="Text">object Text</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="textFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="text">object Text</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 TextHeight(NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			return get_TextHeight(textFormat, text);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
-		/// <param name="Text">object Text</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="textFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="text">object Text</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_TextWidth(NetOffice.OWC10Api.TextFormat textFormat, object text)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(textFormat, text);
 			object returnItem = Invoker.PropertyGet(this, "TextWidth", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_TextWidth
 		/// </summary>
-		/// <param name="TextFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
-		/// <param name="Text">object Text</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="textFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
+		/// <param name="text">object Text</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 TextWidth(NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			return get_TextWidth(textFormat, text);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Picture">stdole.Picture Picture</param>
-		/// <param name="Mask">stdole.Picture Mask</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="picture">stdole.Picture Picture</param>
+		/// <param name="mask">stdole.Picture Mask</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public stdole.Picture get_PictureAlphaBlended(stdole.Picture picture, stdole.Picture mask)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(picture, mask);
 			object returnItem = Invoker.PropertyGet(this, "PictureAlphaBlended", paramsArray);
 			stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
@@ -196,60 +200,62 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_PictureAlphaBlended
 		/// </summary>
-		/// <param name="Picture">stdole.Picture Picture</param>
-		/// <param name="Mask">stdole.Picture Mask</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="picture">stdole.Picture Picture</param>
+		/// <param name="mask">stdole.Picture Mask</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public stdole.Picture PictureAlphaBlended(stdole.Picture picture, stdole.Picture mask)
 		{
 			return get_PictureAlphaBlended(picture, mask);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		/// <param name="x">Int32 x</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ScaleX(Int32 x)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(x);
 			object returnItem = Invoker.PropertyGet(this, "ScaleX", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_ScaleX
 		/// </summary>
 		/// <param name="x">Int32 x</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 ScaleX(Int32 x)
 		{
 			return get_ScaleX(x);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ScaleY(Int32 y)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(y);
 			object returnItem = Invoker.PropertyGet(this, "ScaleY", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_ScaleY
 		/// </summary>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 ScaleY(Int32 y)
 		{
 			return get_ScaleY(y);
@@ -260,7 +266,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -271,7 +277,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		/// <param name="color">Int32 Color</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Rectangle(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, left, top, width, height, color);
@@ -279,7 +285,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -290,7 +296,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="x2">Int32 x2</param>
 		/// <param name="y2">Int32 y2</param>
 		/// <param name="color">Int32 Color</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Line(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 x1, Int32 y1, Int32 x2, Int32 y2, Int32 color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, x1, y1, x2, y2, color);
@@ -298,7 +304,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -310,7 +316,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="height">Int32 Height</param>
 		/// <param name="textFormat">NetOffice.OWC10Api.TextFormat TextFormat</param>
 		/// <param name="text">object Text</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Text(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, NetOffice.OWC10Api.TextFormat textFormat, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, left, top, width, height, textFormat, text);
@@ -318,7 +324,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -329,7 +335,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		/// <param name="picture">stdole.Picture Picture</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Picture(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, stdole.Picture picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, left, top, width, height, picture);
@@ -337,7 +343,7 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="cx1">Int32 cx1</param>
 		/// <param name="cy1">Int32 cy1</param>
@@ -349,7 +355,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="height">Int32 Height</param>
 		/// <param name="picture">stdole.Picture Picture</param>
 		/// <param name="mask">stdole.Picture Mask</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void PictureMasked(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, stdole.Picture picture, stdole.Picture mask)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cx1, cy1, cx2, cy2, left, top, width, height, picture, mask);

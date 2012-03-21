@@ -47,7 +47,7 @@ namespace OWC10Api.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

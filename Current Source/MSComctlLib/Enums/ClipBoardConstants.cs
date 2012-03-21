@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.MSComctlLibApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSComctlLib 2
+	 /// SupportByVersion MSComctlLib 6.0
 	 /// </summary>
-	[SupportByLibraryAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6.0)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ClipBoardConstants
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFText = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFBitmap = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFMetafile = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFDIB = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFPalette = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFEMetafile = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFFiles = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary MSComctlLib 2
+		 /// SupportByVersion MSComctlLib 6.0
 		 /// </summary>
 		 /// <remarks>-16639</remarks>
-		 [SupportByLibraryAttribute("MSComctlLib", 2)]
+		 [SupportByVersionAttribute("MSComctlLib", 6.0)]
 		 ccCFRTF = -16639
 	}
 }

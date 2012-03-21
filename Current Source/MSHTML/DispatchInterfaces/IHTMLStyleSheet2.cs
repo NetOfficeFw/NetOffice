@@ -11,11 +11,11 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLStyleSheet2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLStyleSheet2 : COMObject
+	public class IHTMLStyleSheet2 : IHTMLStyleSheet
 	{
 		#pragma warning disable
 		#region Type Information
@@ -75,10 +75,10 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection pages
 		{
 			get
@@ -95,31 +95,31 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 addPageRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 addPageRule(string bstrSelector, string bstrStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

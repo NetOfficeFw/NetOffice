@@ -11,9 +11,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface Events 
-	/// SupportByLibrary VBIDE, 5.3,11,12
+	/// SupportByVersion VBIDE, 11,12,5.3
 	///</summary>
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Events : COMObject
 	{
@@ -75,13 +75,14 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			object returnItem = Invoker.PropertyGet(this, "ReferencesEvents", paramsArray);
 			NetOffice.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.ReferencesEvents;
@@ -89,24 +90,25 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Alias for get_ReferencesEvents
 		/// </summary>
-		/// <param name="VBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.ReferencesEvents ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			return get_ReferencesEvents(vBProject);
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="CommandBarControl">object CommandBarControl</param>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		/// <param name="commandBarControl">object CommandBarControl</param>
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);
 			object returnItem = Invoker.PropertyGet(this, "CommandBarEvents", paramsArray);
 			NetOffice.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CommandBarEvents;
@@ -114,11 +116,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary VBIDE 5.3, 11, 12
+		/// SupportByVersion VBIDE 11, 12, 5.3
 		/// Alias for get_CommandBarEvents
 		/// </summary>
-		/// <param name="CommandBarControl">object CommandBarControl</param>
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		/// <param name="commandBarControl">object CommandBarControl</param>
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		public NetOffice.VBIDEApi.CommandBarEvents CommandBarEvents(object commandBarControl)
 		{
 			return get_CommandBarEvents(commandBarControl);

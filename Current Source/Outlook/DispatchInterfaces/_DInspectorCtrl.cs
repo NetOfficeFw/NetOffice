@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _DInspectorCtrl 
-	/// SupportByLibrary Outlook, 10
+	/// SupportByVersion Outlook, 10
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DInspectorCtrl : COMObject
 	{
@@ -75,17 +75,17 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public string URL
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "URL", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -95,10 +95,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public COMObject Item
 		{
 			get
@@ -115,10 +115,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public void OnItemChange(object pdispItem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdispItem);

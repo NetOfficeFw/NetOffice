@@ -11,9 +11,9 @@ namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Field 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field : Field20
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public Int32 ActualSize
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public Int32 Attributes
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public Int32 DefinedSize
 		{
 			get
@@ -130,25 +130,25 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public string Name
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public NetOffice.ADODBApi.Enums.DataTypeEnum Type
 		{
 			get
@@ -165,10 +165,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public object Value
 		{
 			get
@@ -193,17 +193,17 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public byte Precision
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Precision", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -213,17 +213,17 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public byte NumericScale
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NumericScale", paramsArray);
-				return (byte)returnItem;
+				return NetRuntimeSystem.Convert.ToByte(returnItem);
 			}
 			set
 			{
@@ -233,10 +233,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public object OriginalValue
 		{
 			get
@@ -256,10 +256,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public object UnderlyingValue
 		{
 			get
@@ -279,10 +279,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public COMObject DataFormat
 		{
 			get
@@ -300,10 +300,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
@@ -316,10 +316,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public Int32 Status
 		{
 			get
@@ -335,10 +335,10 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// </summary>
 		/// <param name="data">object Data</param>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public void AppendChunk(object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data);
@@ -346,10 +346,10 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.1
+		/// SupportByVersion ADODB 2.1
 		/// </summary>
 		/// <param name="length">Int32 Length</param>
-		[SupportByLibraryAttribute("ADODB", 2.1)]
+		[SupportByVersionAttribute("ADODB", 2.1)]
 		public object GetChunk(Int32 length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(length);

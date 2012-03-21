@@ -21,11 +21,11 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Reminders 
-	/// SupportByLibrary Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Reminders : _Reminders, IEventBinding 
+	public class Reminders : _Reminders,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -63,7 +63,7 @@ namespace NetOffice.OutlookApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -98,13 +98,150 @@ namespace NetOffice.OutlookApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_BeforeReminderShowEventHandler _BeforeReminderShowEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_BeforeReminderShowEventHandler BeforeReminderShowEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeReminderShowEvent += value;
+			}
+			remove
+			{
+				_BeforeReminderShowEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_ReminderAddEventHandler _ReminderAddEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_ReminderAddEventHandler ReminderAddEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReminderAddEvent += value;
+			}
+			remove
+			{
+				_ReminderAddEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_ReminderChangeEventHandler _ReminderChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_ReminderChangeEventHandler ReminderChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReminderChangeEvent += value;
+			}
+			remove
+			{
+				_ReminderChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_ReminderFireEventHandler _ReminderFireEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_ReminderFireEventHandler ReminderFireEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReminderFireEvent += value;
+			}
+			remove
+			{
+				_ReminderFireEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_ReminderRemoveEventHandler _ReminderRemoveEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_ReminderRemoveEventHandler ReminderRemoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReminderRemoveEvent += value;
+			}
+			remove
+			{
+				_ReminderRemoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 10,11,12,14
+		/// </summary>
+		private event Reminders_SnoozeEventHandler _SnoozeEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Outlook", 10,11,12,14)]
+		public event Reminders_SnoozeEventHandler SnoozeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SnoozeEvent += value;
+			}
+			remove
+			{
+				_SnoozeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -122,147 +259,7 @@ namespace NetOffice.OutlookApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_BeforeReminderShowEventHandler _BeforeReminderShowEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_BeforeReminderShowEventHandler BeforeReminderShowEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeReminderShowEvent += value;
-			}
-			remove
-			{
-				_BeforeReminderShowEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_ReminderAddEventHandler _ReminderAddEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_ReminderAddEventHandler ReminderAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReminderAddEvent += value;
-			}
-			remove
-			{
-				_ReminderAddEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_ReminderChangeEventHandler _ReminderChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_ReminderChangeEventHandler ReminderChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReminderChangeEvent += value;
-			}
-			remove
-			{
-				_ReminderChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_ReminderFireEventHandler _ReminderFireEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_ReminderFireEventHandler ReminderFireEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReminderFireEvent += value;
-			}
-			remove
-			{
-				_ReminderFireEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_ReminderRemoveEventHandler _ReminderRemoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_ReminderRemoveEventHandler ReminderRemoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ReminderRemoveEvent += value;
-			}
-			remove
-			{
-				_ReminderRemoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Outlook, 10,11,12,14
-		/// </summary>
-		private event Reminders_SnoozeEventHandler _SnoozeEvent;
-
-		/// <summary>
-		/// SupportByLibrary Outlook 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Outlook", 10,11,12,14)]
-		public event Reminders_SnoozeEventHandler SnoozeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SnoozeEvent += value;
-			}
-			remove
-			{
-				_SnoozeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -273,25 +270,22 @@ namespace NetOffice.OutlookApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -314,8 +308,59 @@ namespace NetOffice.OutlookApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _reminderCollectionEvents_SinkHelper)
 			{
@@ -327,6 +372,7 @@ namespace NetOffice.OutlookApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

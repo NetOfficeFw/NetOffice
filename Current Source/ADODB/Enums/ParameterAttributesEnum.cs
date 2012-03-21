@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.1, 2.5
+	 /// SupportByVersion ADODB 2.1, 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum ParameterAttributesEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adParamSigned = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adParamNullable = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adParamLong = 128
 	}
 }

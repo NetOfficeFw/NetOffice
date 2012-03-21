@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface IPivotCopy 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IPivotCopy : COMObject
 	{
@@ -79,23 +79,23 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		/// <param name="output">optional string Output = 0</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
-		public void Render(Int32 format, string output)
+		[SupportByVersionAttribute("OWC10", 1)]
+		public void Render(Int32 format, object output)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, output);
 			Invoker.Method(this, "Render", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public void Render(Int32 format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);

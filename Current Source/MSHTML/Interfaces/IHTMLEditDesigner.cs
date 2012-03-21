@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLEditDesigner 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditDesigner : COMObject
 	{
@@ -78,55 +78,55 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 PreHandleEvent(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
 			object returnItem = Invoker.MethodReturn(this, "PreHandleEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 PostHandleEvent(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
 			object returnItem = Invoker.MethodReturn(this, "PostHandleEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 TranslateAccelerator(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
 			object returnItem = Invoker.MethodReturn(this, "TranslateAccelerator", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 PostEditorEventNotify(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
 			object returnItem = Invoker.MethodReturn(this, "PostEditorEventNotify", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

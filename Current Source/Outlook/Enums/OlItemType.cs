@@ -4,80 +4,80 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+	 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlItemType
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olMailItem = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olAppointmentItem = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olContactItem = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olTaskItem = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olJournalItem = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olNoteItem = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olPostItem = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 9, 10, 11, 12, 14
+		 /// SupportByVersion Outlook 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		 olDistributionListItem = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14
+		 /// SupportByVersion Outlook 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Outlook", 14)]
+		 [SupportByVersionAttribute("Outlook", 14)]
 		 olMobileItemSMS = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14
+		 /// SupportByVersion Outlook 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Outlook", 14)]
+		 [SupportByVersionAttribute("Outlook", 14)]
 		 olMobileItemMMS = 12
 	}
 }

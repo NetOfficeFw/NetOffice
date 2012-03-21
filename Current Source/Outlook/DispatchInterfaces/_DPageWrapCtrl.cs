@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _DPageWrapCtrl 
-	/// SupportByLibrary Outlook, 10
+	/// SupportByVersion Outlook, 10
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DPageWrapCtrl : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public Int32 BackColor
 		{
 			get

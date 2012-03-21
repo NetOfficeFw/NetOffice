@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 10, 11, 12, 14
+	 /// SupportByVersion Outlook 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlDownloadState
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olHeaderOnly = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 10, 11, 12, 14
+		 /// SupportByVersion Outlook 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 10,11,12,14)]
+		 [SupportByVersionAttribute("Outlook", 10,11,12,14)]
 		 olFullItem = 1
 	}
 }

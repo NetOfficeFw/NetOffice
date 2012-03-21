@@ -4,129 +4,129 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO 6, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum PermissionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecNoAccess = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1048575</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecFullAccess = 1048575,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>65536</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDelete = 65536,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>131072</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecReadSec = 131072,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>262144</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecWriteSec = 262144,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>524288</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecWriteOwner = 524288,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDBCreate = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDBOpen = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDBExclusive = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDBAdmin = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecCreate = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecReadDef = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>65548</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecWriteDef = 65548,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecRetrieveData = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecInsertData = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecReplaceData = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSecDeleteData = 128
 	}
 }

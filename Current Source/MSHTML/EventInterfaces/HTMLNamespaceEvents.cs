@@ -10,11 +10,11 @@ namespace NetOffice.MSHTMLApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[ComImport, Guid("3050F6BD-98B5-11CF-BB82-00AA00BDCE0B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface HTMLNamespaceEvents
 	{
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-609)]
 		void onreadystatechange([In, MarshalAs(UnmanagedType.IDispatch)] object pEvtObj);
 	}
@@ -64,8 +64,7 @@ namespace NetOffice.MSHTMLApi
 			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpEvtObj;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		#endregion

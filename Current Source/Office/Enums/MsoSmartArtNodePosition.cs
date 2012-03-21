@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 14
+	 /// SupportByVersion Office 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoSmartArtNodePosition
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 msoSmartArtNodeDefault = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 msoSmartArtNodeAfter = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 msoSmartArtNodeBefore = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 msoSmartArtNodeAbove = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 14
+		 /// SupportByVersion Office 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14)]
 		 msoSmartArtNodeBelow = 5
 	}
 }

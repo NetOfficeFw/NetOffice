@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLEditServices2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditServices2 : IHTMLEditServices
 	{
@@ -78,51 +78,51 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIStartAnchor">NetOffice.MSHTMLApi.IDisplayPointer pIStartAnchor</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionAnchorEx(NetOffice.MSHTMLApi.IDisplayPointer pIStartAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStartAnchor);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSelectionAnchorEx", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIEndAnchor">NetOffice.MSHTMLApi.IDisplayPointer pIEndAnchor</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionEndEx(NetOffice.MSHTMLApi.IDisplayPointer pIEndAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIEndAnchor);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSelectionEndEx", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="fReCompute">Int32 fReCompute</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 FreezeVirtualCaretPos(Int32 fReCompute)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fReCompute);
 			object returnItem = Invoker.MethodReturn(this, "FreezeVirtualCaretPos", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="fReset">Int32 fReset</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 UnFreezeVirtualCaretPos(Int32 fReset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fReset);
 			object returnItem = Invoker.MethodReturn(this, "UnFreezeVirtualCaretPos", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

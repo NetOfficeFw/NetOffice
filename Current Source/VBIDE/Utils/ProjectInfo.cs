@@ -47,7 +47,7 @@ namespace VBIDEApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

@@ -10,15 +10,15 @@ namespace NetOffice.VBIDEApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[ComImport, Guid("CDDE3804-2064-11CF-867F-00AA005FF34A"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _dispReferences_Events
 	{
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}
@@ -68,8 +68,7 @@ namespace NetOffice.VBIDEApi
 			NetOffice.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
 		}
 
 		public void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
@@ -84,8 +83,7 @@ namespace NetOffice.VBIDEApi
 			NetOffice.VBIDEApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);
 		}
 
 		#endregion

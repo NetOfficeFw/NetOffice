@@ -4,73 +4,73 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO 6, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DatabaseTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVersion10 = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbEncrypt = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbDecrypt = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVersion11 = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVersion20 = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVersion30 = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVersion40 = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 12
+		 /// SupportByVersion DAO 12
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("DAO", 12)]
+		 [SupportByVersionAttribute("DAO", 12)]
 		 dbVersion120 = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 12
+		 /// SupportByVersion DAO 12
 		 /// </summary>
 		 /// <remarks>256</remarks>
-		 [SupportByLibraryAttribute("DAO", 12)]
+		 [SupportByVersionAttribute("DAO", 12)]
 		 dbVersion140 = 256
 	}
 }

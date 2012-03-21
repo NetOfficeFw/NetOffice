@@ -11,9 +11,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// DispatchInterface Moniker 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Moniker : COMObject
 	{
@@ -75,38 +75,40 @@ namespace NetOffice.OWC10Api
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="RelativeTo">optional object RelativeTo</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="relativeTo">optional object RelativeTo</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Moniker(object relativeTo)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(relativeTo);
 			object returnItem = Invoker.PropertyGet(this, "Moniker", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public string get_Moniker()
-		{
+		{		
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Moniker", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="Moniker">string Moniker</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="moniker">string Moniker</param>
+		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public COMObject get_Parse(string moniker)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(moniker);
 			object returnItem = Invoker.PropertyGet(this, "Parse", paramsArray);
 			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
@@ -114,11 +116,11 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// Alias for get_Parse
 		/// </summary>
-		/// <param name="Moniker">string Moniker</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		/// <param name="moniker">string Moniker</param>
+		[SupportByVersionAttribute("OWC10", 1)]
 		public COMObject Parse(string moniker)
 		{
 			return get_Parse(moniker);

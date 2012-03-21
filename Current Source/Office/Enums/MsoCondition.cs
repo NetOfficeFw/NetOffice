@@ -4,521 +4,521 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 9, 10, 11, 12, 14
+	 /// SupportByVersion Office 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoCondition
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeAllFiles = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeOfficeFiles = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeWordDocuments = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeExcelWorkbooks = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypePowerPointPresentations = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeBinders = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeDatabases = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionFileTypeTemplates = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIncludes = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIncludesPhrase = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionBeginsWith = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionEndsWith = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIncludesNearEachOther = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIsExactly = 14,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIsNot = 15,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionYesterday = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionToday = 17,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionTomorrow = 18,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionLastWeek = 19,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionThisWeek = 20,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionNextWeek = 21,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionLastMonth = 22,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionThisMonth = 23,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>24</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionNextMonth = 24,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>25</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionAnytime = 25,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>26</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionAnytimeBetween = 26,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>27</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionOn = 27,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>28</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionOnOrAfter = 28,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>29</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionOnOrBefore = 29,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>30</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionInTheNext = 30,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>31</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionInTheLast = 31,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionEquals = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>33</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionDoesNotEqual = 33,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>34</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionAnyNumberBetween = 34,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>35</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionAtMost = 35,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>36</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionAtLeast = 36,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>37</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionMoreThan = 37,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>38</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionLessThan = 38,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>39</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIsYes = 39,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 9, 10, 11, 12, 14
+		 /// SupportByVersion Office 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		 msoConditionIsNo = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>41</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionIncludesFormsOf = 41,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>42</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFreeText = 42,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>43</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeOutlookItems = 43,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>44</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeMailItem = 44,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>45</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeCalendarItem = 45,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>46</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeContactItem = 46,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>47</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeNoteItem = 47,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>48</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeJournalItem = 48,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>49</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeTaskItem = 49,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>50</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypePhotoDrawFiles = 50,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>51</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeDataConnectionFiles = 51,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>52</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypePublisherFiles = 52,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>53</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeProjectFiles = 53,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>54</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeDocumentImagingFiles = 54,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>55</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeVisioFiles = 55,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>56</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeDesignerFiles = 56,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>57</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionFileTypeWebPages = 57,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>58</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsLow = 58,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>59</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsNormal = 59,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>60</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsHigh = 60,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>61</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToLow = 61,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>62</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToNormal = 62,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>63</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToHigh = 63,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsNotStarted = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>65</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsInProgress = 65,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>66</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsCompleted = 66,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>67</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsWaitingForSomeoneElse = 67,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>68</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionEqualsDeferred = 68,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>69</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToNotStarted = 69,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>70</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToInProgress = 70,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>71</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToCompleted = 71,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>72</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToWaitingForSomeoneElse = 72,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 10, 11, 12, 14
+		 /// SupportByVersion Office 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>73</remarks>
-		 [SupportByLibraryAttribute("Office", 10,11,12,14)]
+		 [SupportByVersionAttribute("Office", 10,11,12,14)]
 		 msoConditionNotEqualToDeferred = 73
 	}
 }

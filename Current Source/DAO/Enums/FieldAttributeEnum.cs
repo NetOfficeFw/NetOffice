@@ -4,59 +4,59 @@ using LateBindingApi.Core;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary DAO 6, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum FieldAttributeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbFixedField = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVariableField = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbAutoIncrField = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbUpdatableField = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>8192</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSystemField = 8192,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>32768</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbHyperlinkField = 32768,
 
 		 /// <summary>
-		 /// SupportByLibrary DAO 6, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("DAO", 6,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbDescending = 1
 	}
 }

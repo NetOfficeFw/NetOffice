@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverter 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverter : COMObject
 	{
@@ -78,12 +78,12 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
@@ -91,30 +91,30 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrInitConverter", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrUninitConverter", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false);
@@ -122,11 +122,11 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrImport", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
@@ -142,18 +142,18 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrExport", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[4];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		/// <param name="pbstrClass">string pbstrClass</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetFormat(string bstrPath, out string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true,false);
@@ -163,16 +163,16 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "HrGetFormat", paramsArray);
 			pbstrClass = (string)paramsArray[1];
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">string pbstrErrorMsg</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetErrorString(Int32 hrErr, out string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);
 			object returnItem = Invoker.MethodReturn(this, "HrGetErrorString", paramsArray);
 			pbstrErrorMsg = (string)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

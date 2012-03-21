@@ -10,95 +10,95 @@ namespace NetOffice.OWC10Api
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[ComImport, Guid("F5B39A9B-1480-11D3-8549-00C04FAC67D7"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _DataSourceControlEvent
 	{
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(624)]
 		void Current([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(626)]
 		void BeforeExpand([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(627)]
 		void BeforeCollapse([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(628)]
 		void BeforeFirstPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(629)]
 		void BeforePreviousPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(630)]
 		void BeforeNextPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(631)]
 		void BeforeLastPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(632)]
 		void DataError([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(633)]
 		void DataPageComplete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(634)]
 		void BeforeInitialBind([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(635)]
 		void RecordsetSaveProgress([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(636)]
 		void AfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(637)]
 		void AfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(638)]
 		void AfterUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(639)]
 		void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(640)]
 		void BeforeInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(641)]
 		void BeforeOverwrite([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(642)]
 		void BeforeUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(643)]
 		void Dirty([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(644)]
 		void RecordExit([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(647)]
 		void Undo([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(648)]
 		void Focus([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 	}
@@ -148,8 +148,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Current", ref paramsArray);
 		}
 
 		public void BeforeExpand([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -164,8 +163,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeExpand", ref paramsArray);
 		}
 
 		public void BeforeCollapse([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -180,8 +178,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeCollapse", ref paramsArray);
 		}
 
 		public void BeforeFirstPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -196,8 +193,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeFirstPage", ref paramsArray);
 		}
 
 		public void BeforePreviousPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -212,8 +208,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforePreviousPage", ref paramsArray);
 		}
 
 		public void BeforeNextPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -228,8 +223,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeNextPage", ref paramsArray);
 		}
 
 		public void BeforeLastPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -244,8 +238,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeLastPage", ref paramsArray);
 		}
 
 		public void DataError([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -260,8 +253,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DataError", ref paramsArray);
 		}
 
 		public void DataPageComplete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -276,8 +268,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DataPageComplete", ref paramsArray);
 		}
 
 		public void BeforeInitialBind([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -292,8 +283,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeInitialBind", ref paramsArray);
 		}
 
 		public void RecordsetSaveProgress([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -308,8 +298,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("RecordsetSaveProgress", ref paramsArray);
 		}
 
 		public void AfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -324,8 +313,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterDelete", ref paramsArray);
 		}
 
 		public void AfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -340,8 +328,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
 		}
 
 		public void AfterUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -356,8 +343,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
 		}
 
 		public void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -372,8 +358,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
 		}
 
 		public void BeforeInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -388,8 +373,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
 		}
 
 		public void BeforeOverwrite([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -404,8 +388,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeOverwrite", ref paramsArray);
 		}
 
 		public void BeforeUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -420,8 +403,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
 		}
 
 		public void Dirty([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -436,8 +418,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
 		}
 
 		public void RecordExit([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -452,8 +433,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
 		}
 
 		public void Undo([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -468,8 +448,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Undo", ref paramsArray);
 		}
 
 		public void Focus([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
@@ -484,8 +463,7 @@ namespace NetOffice.OWC10Api
 			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Focus", ref paramsArray);
 		}
 
 		#endregion

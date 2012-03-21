@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface INavUIHost 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class INavUIHost : COMObject
 	{
@@ -78,97 +78,97 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 IsButtonEnabled(Int32 navbtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn);
 			object returnItem = Invoker.MethodReturn(this, "IsButtonEnabled", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
 		/// <param name="cancel">Int32 Cancel</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 BeforeButtonClick(Int32 navbtn, Int32 cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn, cancel);
 			object returnItem = Invoker.MethodReturn(this, "BeforeButtonClick", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 AfterButtonClick(Int32 navbtn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(navbtn);
 			object returnItem = Invoker.MethodReturn(this, "AfterButtonClick", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="displayText">string DisplayText</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetDisplayText(string displayText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayText);
 			object returnItem = Invoker.MethodReturn(this, "GetDisplayText", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 OnNavUIChange()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OnNavUIChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 IsFilterOn()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "IsFilterOn", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 IsContextBiDi()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "IsContextBiDi", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="fontName">string FontName</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 GetFontName(string fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);
 			object returnItem = Invoker.MethodReturn(this, "GetFontName", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

@@ -10,131 +10,131 @@ namespace NetOffice.PowerPointApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 	[ComImport, Guid("914934C2-5A91-11CF-8700-00AA0060263B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface EApplication
 	{
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2001)]
 		void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2002)]
 		void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2003)]
 		void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2004)]
 		void PresentationClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2005)]
 		void PresentationSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2006)]
 		void PresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2007)]
 		void NewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2008)]
 		void PresentationNewSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2009)]
 		void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2010)]
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2011)]
 		void SlideShowBegin([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2012)]
 		void SlideShowNextBuild([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2013)]
 		void SlideShowNextSlide([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2014)]
 		void SlideShowEnd([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2015)]
 		void PresentationPrint([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2016)]
 		void SlideSelectionChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange);
 
-		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2017)]
 		void ColorSchemeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange);
 
-		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2018)]
 		void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
 		void SlideShowNextClick([In, MarshalAs(UnmanagedType.IDispatch)] object wn, [In, MarshalAs(UnmanagedType.IDispatch)] object nEffect);
 
-		[SupportByLibraryAttribute("PowerPoint", 11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2020)]
 		void AfterNewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2021)]
 		void AfterPresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-		[SupportByLibraryAttribute("PowerPoint", 11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2022)]
 		void PresentationSync([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] object syncEventType);
 
-		[SupportByLibraryAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2023)]
 		void SlideShowOnNext([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2024)]
 		void SlideShowOnPrevious([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2025)]
 		void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2026)]
 		void ProtectedViewWindowOpen([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2027)]
 		void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2028)]
 		void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2029)]
 		void ProtectedViewWindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2030)]
 		void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-		[SupportByLibraryAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2031)]
 		void PresentationCloseFinal([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 	}
@@ -184,8 +184,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Selection newSel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
 		}
 
 		public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
@@ -201,8 +200,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WindowBeforeRightClick", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -220,8 +218,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WindowBeforeDoubleClick", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -238,8 +235,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationClose", ref paramsArray);
 		}
 
 		public void PresentationSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -254,8 +250,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationSave", ref paramsArray);
 		}
 
 		public void PresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -270,8 +265,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationOpen", ref paramsArray);
 		}
 
 		public void NewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -286,8 +280,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NewPresentation", ref paramsArray);
 		}
 
 		public void PresentationNewSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld)
@@ -302,8 +295,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Slide newSld = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSld;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationNewSlide", ref paramsArray);
 		}
 
 		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -320,8 +312,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
 		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -338,8 +329,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
 		public void SlideShowBegin([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -354,8 +344,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
 		}
 
 		public void SlideShowNextBuild([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -370,8 +359,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
 		}
 
 		public void SlideShowNextSlide([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -386,8 +374,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
 		}
 
 		public void SlideShowEnd([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -402,8 +389,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowEnd", ref paramsArray);
 		}
 
 		public void PresentationPrint([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -418,8 +404,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationPrint", ref paramsArray);
 		}
 
 		public void SlideSelectionChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange)
@@ -434,8 +419,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideSelectionChanged", ref paramsArray);
 		}
 
 		public void ColorSchemeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange)
@@ -450,8 +434,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideRange newSldRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ColorSchemeChanged", ref paramsArray);
 		}
 
 		public void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
@@ -467,8 +450,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationBeforeSave", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -487,8 +469,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWn;
 			paramsArray[1] = newnEffect;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowNextClick", ref paramsArray);
 		}
 
 		public void AfterNewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -503,8 +484,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterNewPresentation", ref paramsArray);
 		}
 
 		public void AfterPresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -519,8 +499,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("AfterPresentationOpen", ref paramsArray);
 		}
 
 		public void PresentationSync([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] object syncEventType)
@@ -537,8 +516,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newSyncEventType;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationSync", ref paramsArray);
 		}
 
 		public void SlideShowOnNext([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -553,8 +531,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowOnNext", ref paramsArray);
 		}
 
 		public void SlideShowOnPrevious([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
@@ -569,8 +546,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.SlideShowWindow newWn = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("SlideShowOnPrevious", ref paramsArray);
 		}
 
 		public void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
@@ -586,8 +562,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationBeforeClose", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -604,8 +579,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
 		}
 
 		public void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] [Out] ref object cancel)
@@ -621,8 +595,7 @@ namespace NetOffice.PowerPointApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeEdit", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
@@ -642,8 +615,7 @@ namespace NetOffice.PowerPointApi
 			paramsArray[0] = newProtViewWindow;
 			paramsArray[1] = newProtectedViewCloseReason;
 			paramsArray.SetValue(cancel, 2);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeClose", ref paramsArray);
 
 			cancel = (bool)paramsArray[2];
 		}
@@ -660,8 +632,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
 		}
 
 		public void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow)
@@ -676,8 +647,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
 		}
 
 		public void PresentationCloseFinal([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
@@ -692,8 +662,7 @@ namespace NetOffice.PowerPointApi
 			NetOffice.PowerPointApi.Presentation newPres = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PresentationCloseFinal", ref paramsArray);
 		}
 
 		#endregion

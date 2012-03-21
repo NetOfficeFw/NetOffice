@@ -10,11 +10,11 @@ namespace NetOffice.VBIDEApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 	[ComImport, Guid("0002E131-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _dispCommandBarControlEvents
 	{
-		[SupportByLibraryAttribute("VBIDE", 5.3,11,12)]
+		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault);
 	}
@@ -66,8 +66,7 @@ namespace NetOffice.VBIDEApi
 			paramsArray[0] = newCommandBarControl;
 			paramsArray.SetValue(handled, 1);
 			paramsArray.SetValue(cancelDefault, 2);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
 
 			handled = (bool)paramsArray[1];
 			cancelDefault = (bool)paramsArray[2];

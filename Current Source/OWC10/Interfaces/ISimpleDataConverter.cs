@@ -10,9 +10,9 @@ namespace NetOffice.OWC10Api
 {
 	///<summary>
 	/// Interface ISimpleDataConverter 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISimpleDataConverter : COMObject
 	{
@@ -78,31 +78,31 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="varSrc">object varSrc</param>
 		/// <param name="vtDest">Int32 vtDest</param>
 		/// <param name="pUnknownElement">object pUnknownElement</param>
 		/// <param name="pvarDest">object pvarDest</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 ConvertData(object varSrc, Int32 vtDest, object pUnknownElement, object pvarDest)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSrc, vtDest, pUnknownElement, pvarDest);
 			object returnItem = Invoker.MethodReturn(this, "ConvertData", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary OWC10 1
+		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="vt1">Int32 vt1</param>
 		/// <param name="vt2">Int32 vt2</param>
-		[SupportByLibraryAttribute("OWC10", 1)]
+		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 CanConvertData(Int32 vt1, Int32 vt2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vt1, vt2);
 			object returnItem = Invoker.MethodReturn(this, "CanConvertData", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

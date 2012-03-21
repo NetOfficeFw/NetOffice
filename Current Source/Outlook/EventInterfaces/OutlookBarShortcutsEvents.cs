@@ -10,19 +10,19 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("0006307C-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface OutlookBarShortcutsEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void ShortcutAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newShortcut);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void BeforeShortcutAdd([In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel);
 	}
@@ -72,8 +72,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi.OutlookBarShortcut newNewShortcut = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newShortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewShortcut;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("ShortcutAdd", ref paramsArray);
 		}
 
 		public void BeforeShortcutAdd([In] [Out] ref object cancel)
@@ -87,8 +86,7 @@ namespace NetOffice.OutlookApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeShortcutAdd", ref paramsArray);
 
 			cancel = (bool)paramsArray[0];
 		}
@@ -106,8 +104,7 @@ namespace NetOffice.OutlookApi
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("BeforeShortcutRemove", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}

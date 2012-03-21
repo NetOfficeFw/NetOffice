@@ -4,108 +4,108 @@ using LateBindingApi.Core;
 namespace NetOffice.ExcelApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+	 /// SupportByVersion Excel 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlAutoFilterOperator
 	{
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlAnd = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlBottom10Items = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlBottom10Percent = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlOr = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlTop10Items = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 9, 10, 11, 12, 14
+		 /// SupportByVersion Excel 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Excel", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 		 xlTop10Percent = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterValues = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterCellColor = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterFontColor = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterIcon = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterDynamic = 11,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterNoFill = 12,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterAutomaticFontColor = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary Excel 12, 14
+		 /// SupportByVersion Excel 12, 14
 		 /// </summary>
 		 /// <remarks>14</remarks>
-		 [SupportByLibraryAttribute("Excel", 12,14)]
+		 [SupportByVersionAttribute("Excel", 12,14)]
 		 xlFilterNoIcon = 14
 	}
 }

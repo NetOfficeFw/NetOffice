@@ -46,11 +46,11 @@ namespace NetOffice.PowerPointApi
 
 	///<summary>
 	/// CoClass Application 
-	/// SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _Application, IEventBinding 
+	public class Application : _Application,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -86,23 +86,24 @@ namespace NetOffice.PowerPointApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
-			
+			_callQuitInDispose = true;
 		}
 		
 		/// <summary>
@@ -110,7 +111,8 @@ namespace NetOffice.PowerPointApi
         /// </summary>		
 		public Application():base("PowerPoint.Application")
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
 		}
 		
 		/// <summary>
@@ -119,17 +121,726 @@ namespace NetOffice.PowerPointApi
         /// <param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
-			
+			_callQuitInDispose = true;
+		Global.Instance = this;
+		}
+		
+/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		public override void Dispose(bool disposeEventBinding)
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;	
+			base.Dispose(disposeEventBinding);
+		}
+
+		/// <summary>
+		/// NetOffice method: dispose instance and all child instances
+		/// </summary>
+		public override void Dispose()
+		{
+			if(this.Equals(Global.Instance))
+				 Global.Instance = null;
+			base.Dispose();
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowSelectionChangeEvent += value;
+			}
+			remove
+			{
+				_WindowSelectionChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowBeforeRightClickEvent += value;
+			}
+			remove
+			{
+				_WindowBeforeRightClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowBeforeDoubleClickEvent += value;
+			}
+			remove
+			{
+				_WindowBeforeDoubleClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_PresentationCloseEventHandler _PresentationCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_PresentationCloseEventHandler PresentationCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationCloseEvent += value;
+			}
+			remove
+			{
+				_PresentationCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_PresentationSaveEventHandler _PresentationSaveEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_PresentationSaveEventHandler PresentationSaveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationSaveEvent += value;
+			}
+			remove
+			{
+				_PresentationSaveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_PresentationOpenEventHandler _PresentationOpenEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_PresentationOpenEventHandler PresentationOpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationOpenEvent += value;
+			}
+			remove
+			{
+				_PresentationOpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_NewPresentationEventHandler _NewPresentationEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_NewPresentationEventHandler NewPresentationEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NewPresentationEvent += value;
+			}
+			remove
+			{
+				_NewPresentationEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_PresentationNewSlideEventHandler _PresentationNewSlideEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_PresentationNewSlideEventHandler PresentationNewSlideEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationNewSlideEvent += value;
+			}
+			remove
+			{
+				_PresentationNewSlideEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_WindowActivateEventHandler _WindowActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_WindowActivateEventHandler WindowActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowActivateEvent += value;
+			}
+			remove
+			{
+				_WindowActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WindowDeactivateEvent += value;
+			}
+			remove
+			{
+				_WindowDeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_SlideShowBeginEventHandler _SlideShowBeginEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_SlideShowBeginEventHandler SlideShowBeginEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowBeginEvent += value;
+			}
+			remove
+			{
+				_SlideShowBeginEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_SlideShowNextBuildEventHandler _SlideShowNextBuildEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_SlideShowNextBuildEventHandler SlideShowNextBuildEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowNextBuildEvent += value;
+			}
+			remove
+			{
+				_SlideShowNextBuildEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_SlideShowNextSlideEventHandler _SlideShowNextSlideEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_SlideShowNextSlideEventHandler SlideShowNextSlideEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowNextSlideEvent += value;
+			}
+			remove
+			{
+				_SlideShowNextSlideEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_SlideShowEndEventHandler _SlideShowEndEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_SlideShowEndEventHandler SlideShowEndEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowEndEvent += value;
+			}
+			remove
+			{
+				_SlideShowEndEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event Application_PresentationPrintEventHandler _PresentationPrintEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event Application_PresentationPrintEventHandler PresentationPrintEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationPrintEvent += value;
+			}
+			remove
+			{
+				_PresentationPrintEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 10,11,12,14
+		/// </summary>
+		private event Application_SlideSelectionChangedEventHandler _SlideSelectionChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 10,11,12,14)]
+		public event Application_SlideSelectionChangedEventHandler SlideSelectionChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideSelectionChangedEvent += value;
+			}
+			remove
+			{
+				_SlideSelectionChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 10,11,12,14
+		/// </summary>
+		private event Application_ColorSchemeChangedEventHandler _ColorSchemeChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 10,11,12,14)]
+		public event Application_ColorSchemeChangedEventHandler ColorSchemeChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ColorSchemeChangedEvent += value;
+			}
+			remove
+			{
+				_ColorSchemeChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 10,11,12,14
+		/// </summary>
+		private event Application_PresentationBeforeSaveEventHandler _PresentationBeforeSaveEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 10,11,12,14)]
+		public event Application_PresentationBeforeSaveEventHandler PresentationBeforeSaveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationBeforeSaveEvent += value;
+			}
+			remove
+			{
+				_PresentationBeforeSaveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 10,11,12,14
+		/// </summary>
+		private event Application_SlideShowNextClickEventHandler _SlideShowNextClickEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 10,11,12,14)]
+		public event Application_SlideShowNextClickEventHandler SlideShowNextClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowNextClickEvent += value;
+			}
+			remove
+			{
+				_SlideShowNextClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 11,12,14
+		/// </summary>
+		private event Application_AfterNewPresentationEventHandler _AfterNewPresentationEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 11,12,14)]
+		public event Application_AfterNewPresentationEventHandler AfterNewPresentationEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterNewPresentationEvent += value;
+			}
+			remove
+			{
+				_AfterNewPresentationEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 11,12,14
+		/// </summary>
+		private event Application_AfterPresentationOpenEventHandler _AfterPresentationOpenEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 11,12,14)]
+		public event Application_AfterPresentationOpenEventHandler AfterPresentationOpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterPresentationOpenEvent += value;
+			}
+			remove
+			{
+				_AfterPresentationOpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 11,12,14
+		/// </summary>
+		private event Application_PresentationSyncEventHandler _PresentationSyncEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 11,12,14)]
+		public event Application_PresentationSyncEventHandler PresentationSyncEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationSyncEvent += value;
+			}
+			remove
+			{
+				_PresentationSyncEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 12,14
+		/// </summary>
+		private event Application_SlideShowOnNextEventHandler _SlideShowOnNextEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 12,14)]
+		public event Application_SlideShowOnNextEventHandler SlideShowOnNextEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowOnNextEvent += value;
+			}
+			remove
+			{
+				_SlideShowOnNextEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 12,14
+		/// </summary>
+		private event Application_SlideShowOnPreviousEventHandler _SlideShowOnPreviousEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 12,14)]
+		public event Application_SlideShowOnPreviousEventHandler SlideShowOnPreviousEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SlideShowOnPreviousEvent += value;
+			}
+			remove
+			{
+				_SlideShowOnPreviousEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_PresentationBeforeCloseEventHandler _PresentationBeforeCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_PresentationBeforeCloseEventHandler PresentationBeforeCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationBeforeCloseEvent += value;
+			}
+			remove
+			{
+				_PresentationBeforeCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProtectedViewWindowOpenEvent += value;
+			}
+			remove
+			{
+				_ProtectedViewWindowOpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProtectedViewWindowBeforeEditEvent += value;
+			}
+			remove
+			{
+				_ProtectedViewWindowBeforeEditEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProtectedViewWindowBeforeCloseEvent += value;
+			}
+			remove
+			{
+				_ProtectedViewWindowBeforeCloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProtectedViewWindowActivateEvent += value;
+			}
+			remove
+			{
+				_ProtectedViewWindowActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ProtectedViewWindowDeactivateEvent += value;
+			}
+			remove
+			{
+				_ProtectedViewWindowDeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 14
+		/// </summary>
+		private event Application_PresentationCloseFinalEventHandler _PresentationCloseFinalEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 14)]
+		public event Application_PresentationCloseFinalEventHandler PresentationCloseFinalEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PresentationCloseFinalEvent += value;
+			}
+			remove
+			{
+				_PresentationCloseFinalEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -147,697 +858,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowSelectionChangeEvent += value;
-			}
-			remove
-			{
-				_WindowSelectionChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowBeforeRightClickEvent += value;
-			}
-			remove
-			{
-				_WindowBeforeRightClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowBeforeDoubleClickEvent += value;
-			}
-			remove
-			{
-				_WindowBeforeDoubleClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_PresentationCloseEventHandler _PresentationCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_PresentationCloseEventHandler PresentationCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationCloseEvent += value;
-			}
-			remove
-			{
-				_PresentationCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_PresentationSaveEventHandler _PresentationSaveEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_PresentationSaveEventHandler PresentationSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationSaveEvent += value;
-			}
-			remove
-			{
-				_PresentationSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_PresentationOpenEventHandler _PresentationOpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_PresentationOpenEventHandler PresentationOpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationOpenEvent += value;
-			}
-			remove
-			{
-				_PresentationOpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_NewPresentationEventHandler _NewPresentationEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_NewPresentationEventHandler NewPresentationEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NewPresentationEvent += value;
-			}
-			remove
-			{
-				_NewPresentationEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_PresentationNewSlideEventHandler _PresentationNewSlideEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_PresentationNewSlideEventHandler PresentationNewSlideEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationNewSlideEvent += value;
-			}
-			remove
-			{
-				_PresentationNewSlideEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_WindowActivateEventHandler _WindowActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_WindowActivateEventHandler WindowActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowActivateEvent += value;
-			}
-			remove
-			{
-				_WindowActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WindowDeactivateEvent += value;
-			}
-			remove
-			{
-				_WindowDeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_SlideShowBeginEventHandler _SlideShowBeginEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_SlideShowBeginEventHandler SlideShowBeginEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowBeginEvent += value;
-			}
-			remove
-			{
-				_SlideShowBeginEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_SlideShowNextBuildEventHandler _SlideShowNextBuildEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_SlideShowNextBuildEventHandler SlideShowNextBuildEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowNextBuildEvent += value;
-			}
-			remove
-			{
-				_SlideShowNextBuildEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_SlideShowNextSlideEventHandler _SlideShowNextSlideEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_SlideShowNextSlideEventHandler SlideShowNextSlideEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowNextSlideEvent += value;
-			}
-			remove
-			{
-				_SlideShowNextSlideEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_SlideShowEndEventHandler _SlideShowEndEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_SlideShowEndEventHandler SlideShowEndEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowEndEvent += value;
-			}
-			remove
-			{
-				_SlideShowEndEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event Application_PresentationPrintEventHandler _PresentationPrintEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event Application_PresentationPrintEventHandler PresentationPrintEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationPrintEvent += value;
-			}
-			remove
-			{
-				_PresentationPrintEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 10,11,12,14
-		/// </summary>
-		private event Application_SlideSelectionChangedEventHandler _SlideSelectionChangedEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		public event Application_SlideSelectionChangedEventHandler SlideSelectionChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideSelectionChangedEvent += value;
-			}
-			remove
-			{
-				_SlideSelectionChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 10,11,12,14
-		/// </summary>
-		private event Application_ColorSchemeChangedEventHandler _ColorSchemeChangedEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		public event Application_ColorSchemeChangedEventHandler ColorSchemeChangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ColorSchemeChangedEvent += value;
-			}
-			remove
-			{
-				_ColorSchemeChangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 10,11,12,14
-		/// </summary>
-		private event Application_PresentationBeforeSaveEventHandler _PresentationBeforeSaveEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		public event Application_PresentationBeforeSaveEventHandler PresentationBeforeSaveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationBeforeSaveEvent += value;
-			}
-			remove
-			{
-				_PresentationBeforeSaveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 10,11,12,14
-		/// </summary>
-		private event Application_SlideShowNextClickEventHandler _SlideShowNextClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 10,11,12,14)]
-		public event Application_SlideShowNextClickEventHandler SlideShowNextClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowNextClickEvent += value;
-			}
-			remove
-			{
-				_SlideShowNextClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 11,12,14
-		/// </summary>
-		private event Application_AfterNewPresentationEventHandler _AfterNewPresentationEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 11,12,14)]
-		public event Application_AfterNewPresentationEventHandler AfterNewPresentationEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterNewPresentationEvent += value;
-			}
-			remove
-			{
-				_AfterNewPresentationEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 11,12,14
-		/// </summary>
-		private event Application_AfterPresentationOpenEventHandler _AfterPresentationOpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 11,12,14)]
-		public event Application_AfterPresentationOpenEventHandler AfterPresentationOpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterPresentationOpenEvent += value;
-			}
-			remove
-			{
-				_AfterPresentationOpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 11,12,14
-		/// </summary>
-		private event Application_PresentationSyncEventHandler _PresentationSyncEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 11,12,14)]
-		public event Application_PresentationSyncEventHandler PresentationSyncEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationSyncEvent += value;
-			}
-			remove
-			{
-				_PresentationSyncEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 12,14
-		/// </summary>
-		private event Application_SlideShowOnNextEventHandler _SlideShowOnNextEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
-		public event Application_SlideShowOnNextEventHandler SlideShowOnNextEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowOnNextEvent += value;
-			}
-			remove
-			{
-				_SlideShowOnNextEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 12,14
-		/// </summary>
-		private event Application_SlideShowOnPreviousEventHandler _SlideShowOnPreviousEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 12,14)]
-		public event Application_SlideShowOnPreviousEventHandler SlideShowOnPreviousEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SlideShowOnPreviousEvent += value;
-			}
-			remove
-			{
-				_SlideShowOnPreviousEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_PresentationBeforeCloseEventHandler _PresentationBeforeCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_PresentationBeforeCloseEventHandler PresentationBeforeCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationBeforeCloseEvent += value;
-			}
-			remove
-			{
-				_PresentationBeforeCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProtectedViewWindowOpenEvent += value;
-			}
-			remove
-			{
-				_ProtectedViewWindowOpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProtectedViewWindowBeforeEditEvent += value;
-			}
-			remove
-			{
-				_ProtectedViewWindowBeforeEditEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProtectedViewWindowBeforeCloseEvent += value;
-			}
-			remove
-			{
-				_ProtectedViewWindowBeforeCloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProtectedViewWindowActivateEvent += value;
-			}
-			remove
-			{
-				_ProtectedViewWindowActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ProtectedViewWindowDeactivateEvent += value;
-			}
-			remove
-			{
-				_ProtectedViewWindowDeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 14
-		/// </summary>
-		private event Application_PresentationCloseFinalEventHandler _PresentationCloseFinalEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 14)]
-		public event Application_PresentationCloseFinalEventHandler PresentationCloseFinalEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PresentationCloseFinalEvent += value;
-			}
-			remove
-			{
-				_PresentationCloseFinalEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -848,25 +869,22 @@ namespace NetOffice.PowerPointApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -889,8 +907,59 @@ namespace NetOffice.PowerPointApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _eApplication_SinkHelper)
 			{
@@ -902,6 +971,7 @@ namespace NetOffice.PowerPointApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

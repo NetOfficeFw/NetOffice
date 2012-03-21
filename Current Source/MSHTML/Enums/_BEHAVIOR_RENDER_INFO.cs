@@ -4,122 +4,122 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _BEHAVIOR_RENDER_INFO
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_BEFOREBACKGROUND = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_AFTERBACKGROUND = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_BEFORECONTENT = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_AFTERCONTENT = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>32</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_AFTERFOREGROUND = 32,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>40</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_ABOVECONTENT = 40,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>255</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_ALLLAYERS = 255,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>256</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_DISABLEBACKGROUND = 256,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>512</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_DISABLENEGATIVEZ = 512,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1024</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_DISABLECONTENT = 1024,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2048</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_DISABLEPOSITIVEZ = 2048,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>3840</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_DISABLEALLLAYERS = 3840,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4096</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_HITTESTING = 4096,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1048576</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_SURFACE = 1048576,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2097152</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIORRENDERINFO_3DSURFACE = 2097152,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOR_RENDER_INFO_Max = 2147483647
 	}
 }

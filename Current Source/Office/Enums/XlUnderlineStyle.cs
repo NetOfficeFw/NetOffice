@@ -4,45 +4,45 @@ using LateBindingApi.Core;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Office 12, 14
+	 /// SupportByVersion Office 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlUnderlineStyle
 	{
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4119</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlUnderlineStyleDouble = -4119,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlUnderlineStyleDoubleAccounting = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>-4142</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlUnderlineStyleNone = -4142,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlUnderlineStyleSingle = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Office 12, 14
+		 /// SupportByVersion Office 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Office", 12,14)]
+		 [SupportByVersionAttribute("Office", 12,14)]
 		 xlUnderlineStyleSingleAccounting = 4
 	}
 }

@@ -12,11 +12,11 @@ namespace NetOffice.ADODBApi
 {
 	///<summary>
 	/// DispatchInterface Fields20 
-	/// SupportByLibrary ADODB, 2.5
+	/// SupportByVersion ADODB, 2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.5)]
+	[SupportByVersionAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Fields20 : Fields15 ,IEnumerable<object>
+	public class Fields20 : Fields15 ,IEnumerable<COMObject>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -76,10 +76,10 @@ namespace NetOffice.ADODBApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public Int32 Count
 		{
 			get
@@ -95,9 +95,9 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -105,28 +105,28 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByLibraryAttribute("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "_Append", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -134,25 +134,25 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize)
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize);
 			Invoker.Method(this, "_Append", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary ADODB 2.5
+		/// SupportByVersion ADODB 2.5
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -161,43 +161,33 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
-        #region IEnumerable<object> Member
-		
-		/// <summary>
-		/// SupportByLibraryAttribute ADODB, 2.5
-		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
-        public IEnumerator<object> GetEnumerator()  
-        {
-            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-            foreach (object item in innerEnumerator)
-                yield return item;
-        }
-
-        #endregion
-           
-        #region IEnumerable Members
+       #region IEnumerable<COMObject> Member
         
-		/// <summary>
-		/// SupportByLibraryAttribute ADODB, 2.5
+        /// <summary>
+		/// SupportByVersionAttribute ADODB, 2.5
 		/// </summary>
-		[SupportByLibraryAttribute("ADODB", 2.5)]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+       public IEnumerator<COMObject> GetEnumerator()  
+       {
+           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+           foreach (COMObject item in innerEnumerator)
+               yield return item;
+       }
+
+       #endregion
+          
+		#region IEnumerable Members
+       
+		/// <summary>
+		/// SupportByVersionAttribute ADODB, 2.5
+		/// </summary>
+		[SupportByVersionAttribute("ADODB", 2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			object enumProxy = Invoker.MethodReturn(this, "_NewEnum");
-			COMObject enumerator = new COMObject(this, enumProxy, true);
-			Invoker.Method(enumerator, "Reset", null);
-			bool isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-            while (true == isMoveNextTrue)
-            {
-                object itemProxy = Invoker.PropertyGet(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturn(enumerator, "MoveNext", null);
-				yield return returnClass;
-            }
-        }
+			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+		}
 
-        #endregion
+		#endregion
 		#pragma warning restore
 	}
 }

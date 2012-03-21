@@ -11,9 +11,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// DispatchInterface IHTMLTxtRange 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IHTMLTxtRange : COMObject
 	{
@@ -75,32 +75,32 @@ namespace NetOffice.MSHTMLApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string htmlText
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "htmlText", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string text
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "text", paramsArray);
-				return (string)returnItem;
+				return NetRuntimeSystem.Convert.ToString(returnItem);
 			}
 			set
 			{
@@ -114,9 +114,9 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLElement parentElement()
 		{
 			object[] paramsArray = null;
@@ -126,9 +126,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLTxtRange duplicate()
 		{
 			object[] paramsArray = null;
@@ -138,45 +138,45 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="range">NetOffice.MSHTMLApi.IHTMLTxtRange range</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool inRange(NetOffice.MSHTMLApi.IHTMLTxtRange range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "inRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="range">NetOffice.MSHTMLApi.IHTMLTxtRange range</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool isEqual(NetOffice.MSHTMLApi.IHTMLTxtRange range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "isEqual", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="fStart">optional bool fStart = true</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void scrollIntoView(bool fStart)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void scrollIntoView(object fStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fStart);
 			Invoker.Method(this, "scrollIntoView", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void scrollIntoView()
 		{
 			object[] paramsArray = null;
@@ -184,21 +184,21 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="start">optional bool Start = true</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public void collapse(bool start)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void collapse(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			Invoker.Method(this, "collapse", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void collapse()
 		{
 			object[] paramsArray = null;
@@ -206,99 +206,99 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool expand(string unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
 			object returnItem = Invoker.MethodReturn(this, "expand", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 move(string unit, Int32 count)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 move(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 move(string unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
 			object returnItem = Invoker.MethodReturn(this, "move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 moveStart(string unit, Int32 count)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 moveStart(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "moveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 moveStart(string unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
 			object returnItem = Invoker.MethodReturn(this, "moveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public Int32 moveEnd(string unit, Int32 count)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 moveEnd(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "moveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="unit">string Unit</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 moveEnd(string unit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit);
 			object returnItem = Invoker.MethodReturn(this, "moveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void select()
 		{
 			object[] paramsArray = null;
@@ -306,10 +306,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="html">string html</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void pasteHTML(string html)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(html);
@@ -317,10 +317,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="element">NetOffice.MSHTMLApi.IHTMLElement element</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void moveToElementText(NetOffice.MSHTMLApi.IHTMLElement element)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(element);
@@ -328,11 +328,11 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="how">string how</param>
 		/// <param name="sourceRange">NetOffice.MSHTMLApi.IHTMLTxtRange SourceRange</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void setEndPoint(string how, NetOffice.MSHTMLApi.IHTMLTxtRange sourceRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(how, sourceRange);
@@ -340,65 +340,65 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="how">string how</param>
 		/// <param name="sourceRange">NetOffice.MSHTMLApi.IHTMLTxtRange SourceRange</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 compareEndPoints(string how, NetOffice.MSHTMLApi.IHTMLTxtRange sourceRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(how, sourceRange);
 			object returnItem = Invoker.MethodReturn(this, "compareEndPoints", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		/// <param name="string">string String</param>
+		/// <param name="_string">string String</param>
 		/// <param name="count">optional Int32 Count = 1073741823</param>
 		/// <param name="flags">optional Int32 Flags = 0</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public bool findText(string _string, Int32 count, Int32 flags)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool findText(string _string, object count, object flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, count, flags);
 			object returnItem = Invoker.MethodReturn(this, "findText", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		/// <param name="string">string String</param>
+		/// <param name="_string">string String</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool findText(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
 			object returnItem = Invoker.MethodReturn(this, "findText", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		/// <param name="string">string String</param>
+		/// <param name="_string">string String</param>
 		/// <param name="count">optional Int32 Count = 1073741823</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public bool findText(string _string, Int32 count)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool findText(string _string, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, count);
 			object returnItem = Invoker.MethodReturn(this, "findText", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public void moveToPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -406,9 +406,9 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string getBookmark()
 		{
 			object[] paramsArray = null;
@@ -417,70 +417,70 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bookmark">string Bookmark</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool moveToBookmark(string bookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bookmark);
 			object returnItem = Invoker.MethodReturn(this, "moveToBookmark", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool queryCommandSupported(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "queryCommandSupported", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool queryCommandEnabled(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "queryCommandEnabled", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool queryCommandState(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "queryCommandState", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool queryCommandIndeterm(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "queryCommandIndeterm", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string queryCommandText(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -489,10 +489,10 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public object queryCommandValue(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
@@ -509,56 +509,56 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">optional bool showUI = false</param>
 		/// <param name="value">optional object value</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI, object value)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool execCommand(string cmdID, object showUI, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI, value);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool execCommand(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">optional bool showUI = false</param>
 		[CustomMethodAttribute]
-		[SupportByLibraryAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI)
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool execCommand(string cmdID, object showUI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool execCommandShowHelp(string cmdID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID);
 			object returnItem = Invoker.MethodReturn(this, "execCommandShowHelp", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return (bool)returnItem;
 		}
 
 		#endregion

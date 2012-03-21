@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLEditServices 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLEditServices : COMObject
 	{
@@ -78,35 +78,35 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIDesigner">NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 AddDesigner(NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIDesigner);
 			object returnItem = Invoker.MethodReturn(this, "AddDesigner", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIDesigner">NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 RemoveDesigner(NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIDesigner);
 			object returnItem = Invoker.MethodReturn(this, "RemoveDesigner", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIContainer">NetOffice.MSHTMLApi.IMarkupContainer pIContainer</param>
 		/// <param name="ppSelSvc">NetOffice.MSHTMLApi.ISelectionServices ppSelSvc</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetSelectionServices(NetOffice.MSHTMLApi.IMarkupContainer pIContainer, out NetOffice.MSHTMLApi.ISelectionServices ppSelSvc)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -114,45 +114,45 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pIContainer, ppSelSvc);
 			object returnItem = Invoker.MethodReturn(this, "GetSelectionServices", paramsArray);
 			ppSelSvc = (NetOffice.MSHTMLApi.ISelectionServices)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIStartAnchor">NetOffice.MSHTMLApi.IMarkupPointer pIStartAnchor</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionAnchor(NetOffice.MSHTMLApi.IMarkupPointer pIStartAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStartAnchor);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSelectionAnchor", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIEndAnchor">NetOffice.MSHTMLApi.IMarkupPointer pIEndAnchor</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MoveToSelectionEnd(NetOffice.MSHTMLApi.IMarkupPointer pIEndAnchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIEndAnchor);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSelectionEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pStart">NetOffice.MSHTMLApi.IMarkupPointer pStart</param>
 		/// <param name="pEnd">NetOffice.MSHTMLApi.IMarkupPointer pEnd</param>
 		/// <param name="eType">NetOffice.MSHTMLApi.Enums._SELECTION_TYPE eType</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 SelectRange(NetOffice.MSHTMLApi.IMarkupPointer pStart, NetOffice.MSHTMLApi.IMarkupPointer pEnd, NetOffice.MSHTMLApi.Enums._SELECTION_TYPE eType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pStart, pEnd, eType);
 			object returnItem = Invoker.MethodReturn(this, "SelectRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

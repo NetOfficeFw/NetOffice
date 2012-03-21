@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterApplicationPreferences 
-	/// SupportByLibrary Office, 14
+	/// SupportByVersion Office, 14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="plcid">Int32 plcid</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetLcid(out Int32 plcid)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,14 +89,14 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plcid);
 			object returnItem = Invoker.MethodReturn(this, "HrGetLcid", paramsArray);
 			plcid = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="phwnd">Int32 phwnd</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetHwnd(out Int32 phwnd)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -104,14 +104,14 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(phwnd);
 			object returnItem = Invoker.MethodReturn(this, "HrGetHwnd", paramsArray);
 			phwnd = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrGetApplication(out string pbstrApplication)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -119,14 +119,14 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrApplication);
 			object returnItem = Invoker.MethodReturn(this, "HrGetApplication", paramsArray);
 			pbstrApplication = (string)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 14
+		/// SupportByVersion Office 14
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByLibraryAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -134,7 +134,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
 			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray);
 			pFormat = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

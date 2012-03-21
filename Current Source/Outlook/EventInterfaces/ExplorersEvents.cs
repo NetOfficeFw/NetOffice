@@ -10,11 +10,11 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[ComImport, Guid("00063078-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ExplorersEvents
 	{
-		[SupportByLibraryAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void NewExplorer([In, MarshalAs(UnmanagedType.IDispatch)] object explorer);
 	}
@@ -64,8 +64,7 @@ namespace NetOffice.OutlookApi
 			NetOffice.OutlookApi._Explorer newExplorer = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, explorer) as NetOffice.OutlookApi._Explorer;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExplorer;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("NewExplorer", ref paramsArray);
 		}
 
 		#endregion

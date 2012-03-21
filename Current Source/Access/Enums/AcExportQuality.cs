@@ -4,24 +4,24 @@ using LateBindingApi.Core;
 namespace NetOffice.AccessApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Access 12, 14
+	 /// SupportByVersion Access 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum AcExportQuality
 	{
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acExportQualityPrint = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Access 12, 14
+		 /// SupportByVersion Access 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Access", 12,14)]
+		 [SupportByVersionAttribute("Access", 12,14)]
 		 acExportQualityScreen = 1
 	}
 }

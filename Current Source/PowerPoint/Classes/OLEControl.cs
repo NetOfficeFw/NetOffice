@@ -17,11 +17,11 @@ namespace NetOffice.PowerPointApi
 
 	///<summary>
 	/// CoClass OLEControl 
-	/// SupportByLibrary PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OLEControl : OCXExtender, IEventBinding 
+	public class OLEControl : OCXExtender,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -94,13 +94,62 @@ namespace NetOffice.PowerPointApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event OLEControl_GotFocusEventHandler GotFocusEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_GotFocusEvent += value;
+			}
+			remove
+			{
+				_GotFocusEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint, 9,10,11,12,14
+		/// </summary>
+		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14)]
+		public event OLEControl_LostFocusEventHandler LostFocusEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_LostFocusEvent += value;
+			}
+			remove
+			{
+				_LostFocusEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -118,59 +167,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event OLEControl_GotFocusEventHandler GotFocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_GotFocusEvent += value;
-			}
-			remove
-			{
-				_GotFocusEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint, 9,10,11,12,14
-		/// </summary>
-		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
-
-		/// <summary>
-		/// SupportByLibrary PowerPoint 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("PowerPoint", 9,10,11,12,14)]
-		public event OLEControl_LostFocusEventHandler LostFocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_LostFocusEvent += value;
-			}
-			remove
-			{
-				_LostFocusEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -181,25 +178,22 @@ namespace NetOffice.PowerPointApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -222,8 +216,59 @@ namespace NetOffice.PowerPointApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _oCXExtenderEvents_SinkHelper)
 			{
@@ -235,6 +280,7 @@ namespace NetOffice.PowerPointApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

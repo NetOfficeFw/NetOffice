@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _DynaCollection 
-	/// SupportByLibrary DAO, 6,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _DynaCollection : _Collection
 	{
@@ -79,10 +79,10 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
-		/// <param name="object">object Object</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		/// <param name="_object">object Object</param>
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void Append(object _object)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object);
@@ -90,10 +90,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void Delete(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);

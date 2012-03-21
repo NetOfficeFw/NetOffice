@@ -4,87 +4,87 @@ using LateBindingApi.Core;
 namespace NetOffice.WordApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Word 9, 10, 11, 12, 14
+	 /// SupportByVersion Word 9, 10, 11, 12, 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum WdDeletedTextMark
 	{
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdDeletedTextMarkHidden = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdDeletedTextMarkStrikeThrough = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdDeletedTextMarkCaret = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 9, 10, 11, 12, 14
+		 /// SupportByVersion Word 9, 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("Word", 9,10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		 wdDeletedTextMarkPound = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkNone = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkBold = 5,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkItalic = 6,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkUnderline = 7,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkDoubleUnderline = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 10, 11, 12, 14
+		 /// SupportByVersion Word 10, 11, 12, 14
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByLibraryAttribute("Word", 10,11,12,14)]
+		 [SupportByVersionAttribute("Word", 10,11,12,14)]
 		 wdDeletedTextMarkColorOnly = 9,
 
 		 /// <summary>
-		 /// SupportByLibrary Word 12, 14
+		 /// SupportByVersion Word 12, 14
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("Word", 12,14)]
+		 [SupportByVersionAttribute("Word", 12,14)]
 		 wdDeletedTextMarkDoubleStrikeThrough = 10
 	}
 }

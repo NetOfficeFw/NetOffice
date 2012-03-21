@@ -10,43 +10,43 @@ namespace NetOffice.AccessApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14)]
 	[ComImport, Guid("2E70527C-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DispSectionInReportEvents
 	{
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2079)]
 		void Format([In] [Out] ref object cancel, [In] [Out] ref object formatCount);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2080)]
 		void Print([In] [Out] ref object cancel, [In] [Out] ref object printCount);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2081)]
 		void Retreat();
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick([In] [Out] ref object cancel);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByLibraryAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2486)]
 		void Paint();
 	}
@@ -96,8 +96,7 @@ namespace NetOffice.AccessApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(formatCount, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Format", ref paramsArray);
 
 			cancel = (Int16)paramsArray[0];
 			formatCount = (Int16)paramsArray[1];
@@ -115,8 +114,7 @@ namespace NetOffice.AccessApi
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(printCount, 1);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Print", ref paramsArray);
 
 			cancel = (Int16)paramsArray[0];
 			printCount = (Int16)paramsArray[1];
@@ -132,8 +130,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Retreat", ref paramsArray);
 		}
 
 		public void Click()
@@ -146,8 +143,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void DblClick([In] [Out] ref object cancel)
@@ -161,8 +157,7 @@ namespace NetOffice.AccessApi
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 
 			cancel = (Int16)paramsArray[0];
 		}
@@ -181,8 +176,7 @@ namespace NetOffice.AccessApi
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 
 			button = (Int16)paramsArray[0];
 			shift = (Int16)paramsArray[1];
@@ -204,8 +198,7 @@ namespace NetOffice.AccessApi
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 
 			button = (Int16)paramsArray[0];
 			shift = (Int16)paramsArray[1];
@@ -227,8 +220,7 @@ namespace NetOffice.AccessApi
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 
 			button = (Int16)paramsArray[0];
 			shift = (Int16)paramsArray[1];
@@ -246,8 +238,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object[] paramsArray = new object[0];
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("Paint", ref paramsArray);
 		}
 
 		#endregion

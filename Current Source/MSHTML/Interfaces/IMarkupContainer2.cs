@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IMarkupContainer2 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IMarkupContainer2 : IMarkupContainer
 	{
@@ -78,13 +78,13 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pChangeSink">NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink</param>
 		/// <param name="ppChangeLog">NetOffice.MSHTMLApi.IHTMLChangeLog ppChangeLog</param>
 		/// <param name="fForward">Int32 fForward</param>
 		/// <param name="fBackward">Int32 fBackward</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 CreateChangeLog(NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink, out NetOffice.MSHTMLApi.IHTMLChangeLog ppChangeLog, Int32 fForward, Int32 fBackward)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,false);
@@ -92,15 +92,15 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, ppChangeLog, fForward, fBackward);
 			object returnItem = Invoker.MethodReturn(this, "CreateChangeLog", paramsArray);
 			ppChangeLog = (NetOffice.MSHTMLApi.IHTMLChangeLog)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pChangeSink">NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink</param>
 		/// <param name="pdwCookie">Int32 pdwCookie</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 RegisterForDirtyRange(NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink, out Int32 pdwCookie)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -108,51 +108,51 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, pdwCookie);
 			object returnItem = Invoker.MethodReturn(this, "RegisterForDirtyRange", paramsArray);
 			pdwCookie = (Int32)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="dwCookie">Int32 dwCookie</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 UnRegisterForDirtyRange(Int32 dwCookie)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie);
 			object returnItem = Invoker.MethodReturn(this, "UnRegisterForDirtyRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="dwCookie">Int32 dwCookie</param>
 		/// <param name="pIPointerBegin">NetOffice.MSHTMLApi.IMarkupPointer pIPointerBegin</param>
 		/// <param name="pIPointerEnd">NetOffice.MSHTMLApi.IMarkupPointer pIPointerEnd</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetAndClearDirtyRange(Int32 dwCookie, NetOffice.MSHTMLApi.IMarkupPointer pIPointerBegin, NetOffice.MSHTMLApi.IMarkupPointer pIPointerEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie, pIPointerBegin, pIPointerEnd);
 			object returnItem = Invoker.MethodReturn(this, "GetAndClearDirtyRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetVersionNumber()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetVersionNumber", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppElementMaster">NetOffice.MSHTMLApi.IHTMLElement ppElementMaster</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetMasterElement(out NetOffice.MSHTMLApi.IHTMLElement ppElementMaster)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -160,7 +160,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElementMaster);
 			object returnItem = Invoker.MethodReturn(this, "GetMasterElement", paramsArray);
 			ppElementMaster = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

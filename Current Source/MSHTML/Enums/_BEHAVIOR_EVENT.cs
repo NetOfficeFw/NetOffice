@@ -4,66 +4,66 @@ using LateBindingApi.Core;
 namespace NetOffice.MSHTMLApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary MSHTML 4
+	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum _BEHAVIOR_EVENT
 	{
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_FIRST = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_CONTENTREADY = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_DOCUMENTREADY = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_APPLYSTYLE = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_DOCUMENTCONTEXTCHANGE = 3,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_CONTENTSAVE = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOREVENT_LAST = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary MSHTML 4
+		 /// SupportByVersion MSHTML 4
 		 /// </summary>
 		 /// <remarks>2147483647</remarks>
-		 [SupportByLibraryAttribute("MSHTML", 4)]
+		 [SupportByVersionAttribute("MSHTML", 4)]
 		 BEHAVIOR_EVENT_Max = 2147483647
 	}
 }

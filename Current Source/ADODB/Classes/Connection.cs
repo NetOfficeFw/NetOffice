@@ -24,11 +24,11 @@ namespace NetOffice.ADODBApi
 
 	///<summary>
 	/// CoClass Connection 
-	/// SupportByLibrary ADODB, 2.1,2.5
+	/// SupportByVersion ADODB, 2.1,2.5
 	///</summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Connection : _Connection, IEventBinding 
+	public class Connection : _Connection,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -66,7 +66,7 @@ namespace NetOffice.ADODBApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -101,13 +101,216 @@ namespace NetOffice.ADODBApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_InfoMessageEventHandler _InfoMessageEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_InfoMessageEventHandler InfoMessageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_InfoMessageEvent += value;
+			}
+			remove
+			{
+				_InfoMessageEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_BeginTransCompleteEventHandler _BeginTransCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_BeginTransCompleteEventHandler BeginTransCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeginTransCompleteEvent += value;
+			}
+			remove
+			{
+				_BeginTransCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_CommitTransCompleteEventHandler _CommitTransCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_CommitTransCompleteEventHandler CommitTransCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommitTransCompleteEvent += value;
+			}
+			remove
+			{
+				_CommitTransCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_RollbackTransCompleteEventHandler _RollbackTransCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_RollbackTransCompleteEventHandler RollbackTransCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_RollbackTransCompleteEvent += value;
+			}
+			remove
+			{
+				_RollbackTransCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_WillExecuteEventHandler _WillExecuteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_WillExecuteEventHandler WillExecuteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillExecuteEvent += value;
+			}
+			remove
+			{
+				_WillExecuteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_ExecuteCompleteEventHandler _ExecuteCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_ExecuteCompleteEventHandler ExecuteCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ExecuteCompleteEvent += value;
+			}
+			remove
+			{
+				_ExecuteCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_WillConnectEventHandler _WillConnectEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_WillConnectEventHandler WillConnectEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_WillConnectEvent += value;
+			}
+			remove
+			{
+				_WillConnectEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_ConnectCompleteEventHandler _ConnectCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_ConnectCompleteEventHandler ConnectCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ConnectCompleteEvent += value;
+			}
+			remove
+			{
+				_ConnectCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB, 2.1,2.5
+		/// </summary>
+		private event Connection_DisconnectEventHandler _DisconnectEvent;
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1 2.5
+		/// </summary>
+		[SupportByVersion("ADODB", 2.1,2.5)]
+		public event Connection_DisconnectEventHandler DisconnectEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DisconnectEvent += value;
+			}
+			remove
+			{
+				_DisconnectEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -125,213 +328,7 @@ namespace NetOffice.ADODBApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_InfoMessageEventHandler _InfoMessageEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_InfoMessageEventHandler InfoMessageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_InfoMessageEvent += value;
-			}
-			remove
-			{
-				_InfoMessageEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_BeginTransCompleteEventHandler _BeginTransCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_BeginTransCompleteEventHandler BeginTransCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeginTransCompleteEvent += value;
-			}
-			remove
-			{
-				_BeginTransCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_CommitTransCompleteEventHandler _CommitTransCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_CommitTransCompleteEventHandler CommitTransCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommitTransCompleteEvent += value;
-			}
-			remove
-			{
-				_CommitTransCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_RollbackTransCompleteEventHandler _RollbackTransCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_RollbackTransCompleteEventHandler RollbackTransCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_RollbackTransCompleteEvent += value;
-			}
-			remove
-			{
-				_RollbackTransCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_WillExecuteEventHandler _WillExecuteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_WillExecuteEventHandler WillExecuteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillExecuteEvent += value;
-			}
-			remove
-			{
-				_WillExecuteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_ExecuteCompleteEventHandler _ExecuteCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_ExecuteCompleteEventHandler ExecuteCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ExecuteCompleteEvent += value;
-			}
-			remove
-			{
-				_ExecuteCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_WillConnectEventHandler _WillConnectEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_WillConnectEventHandler WillConnectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_WillConnectEvent += value;
-			}
-			remove
-			{
-				_WillConnectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_ConnectCompleteEventHandler _ConnectCompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_ConnectCompleteEventHandler ConnectCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ConnectCompleteEvent += value;
-			}
-			remove
-			{
-				_ConnectCompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary ADODB, 2.1,2.5
-		/// </summary>
-		private event Connection_DisconnectEventHandler _DisconnectEvent;
-
-		/// <summary>
-		/// SupportByLibrary ADODB 2.1 2.5
-		/// </summary>
-		[SupportByLibrary("ADODB", 2.1,2.5)]
-		public event Connection_DisconnectEventHandler DisconnectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DisconnectEvent += value;
-			}
-			remove
-			{
-				_DisconnectEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -342,25 +339,22 @@ namespace NetOffice.ADODBApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -383,8 +377,59 @@ namespace NetOffice.ADODBApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _connectionEvents_SinkHelper)
 			{
@@ -396,6 +441,7 @@ namespace NetOffice.ADODBApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

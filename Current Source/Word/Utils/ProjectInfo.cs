@@ -47,7 +47,7 @@ namespace WordApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

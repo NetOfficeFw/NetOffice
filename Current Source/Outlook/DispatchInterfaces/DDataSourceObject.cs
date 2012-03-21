@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface DDataSourceObject 
-	/// SupportByLibrary Outlook, 10
+	/// SupportByVersion Outlook, 10
 	///</summary>
-	[SupportByLibraryAttribute("Outlook", 10)]
+	[SupportByVersionAttribute("Outlook", 10)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DDataSourceObject : COMObject
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Outlook 10
+		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByLibraryAttribute("Outlook", 10)]
+		[SupportByVersionAttribute("Outlook", 10)]
 		public COMObject OutlookItem
 		{
 			get

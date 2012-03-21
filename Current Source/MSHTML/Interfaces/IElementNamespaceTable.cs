@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IElementNamespaceTable 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IElementNamespaceTable : COMObject
 	{
@@ -78,18 +78,18 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrUrn">string bstrUrn</param>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pvarFactory">object pvarFactory</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 AddNamespace(string bstrNamespace, string bstrUrn, Int32 lFlags, object pvarFactory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNamespace, bstrUrn, lFlags, pvarFactory);
 			object returnItem = Invoker.MethodReturn(this, "AddNamespace", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

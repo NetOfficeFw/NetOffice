@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface LanguageSettings 
-	/// SupportByLibrary Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14
 	///</summary>
-	[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LanguageSettings : _IMsoDispObj
 	{
@@ -75,58 +75,60 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		/// <param name="Id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		/// <param name="id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
 			object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Alias for get_LanguageID
 		/// </summary>
-		/// <param name="Id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		/// <param name="id">NetOffice.OfficeApi.Enums.MsoAppLanguageID Id</param>
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public Int32 LanguageID(NetOffice.OfficeApi.Enums.MsoAppLanguageID id)
 		{
 			return get_LanguageID(id);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool get_LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
-		{
+		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(lid);
 			object returnItem = Invoker.PropertyGet(this, "LanguagePreferredForEditing", paramsArray);
 			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14
 		/// Alias for get_LanguagePreferredForEditing
 		/// </summary>
 		/// <param name="lid">NetOffice.OfficeApi.Enums.MsoLanguageID lid</param>
-		[SupportByLibraryAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		public bool LanguagePreferredForEditing(NetOffice.OfficeApi.Enums.MsoLanguageID lid)
 		{
 			return get_LanguagePreferredForEditing(lid);
 		}
 
 		/// <summary>
-		/// SupportByLibrary Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByLibraryAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14)]
 		public COMObject Parent
 		{
 			get

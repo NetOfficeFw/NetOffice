@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IDisplayServices 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDisplayServices : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppDispPointer">NetOffice.MSHTMLApi.IDisplayPointer ppDispPointer</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 CreateDisplayPointer(out NetOffice.MSHTMLApi.IDisplayPointer ppDispPointer)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -89,44 +89,44 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppDispPointer);
 			object returnItem = Invoker.MethodReturn(this, "CreateDisplayPointer", paramsArray);
 			ppDispPointer = (NetOffice.MSHTMLApi.IDisplayPointer)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pRect">tagRECT pRect</param>
 		/// <param name="eSource">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
 		/// <param name="eDestination">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eDestination</param>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 TransformRect(tagRECT pRect, NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource, NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eDestination, NetOffice.MSHTMLApi.IHTMLElement pIElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pRect, eSource, eDestination, pIElement);
 			object returnItem = Invoker.MethodReturn(this, "TransformRect", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="eSource">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
 		/// <param name="eDestination">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eDestination</param>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 TransformPoint(tagPOINT pPoint, NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource, NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eDestination, NetOffice.MSHTMLApi.IHTMLElement pIElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPoint, eSource, eDestination, pIElement);
 			object returnItem = Invoker.MethodReturn(this, "TransformPoint", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="ppCaret">NetOffice.MSHTMLApi.IHTMLCaret ppCaret</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetCaret(out NetOffice.MSHTMLApi.IHTMLCaret ppCaret)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -134,15 +134,15 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppCaret);
 			object returnItem = Invoker.MethodReturn(this, "GetCaret", paramsArray);
 			ppCaret = (NetOffice.MSHTMLApi.IHTMLCaret)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pPointer">NetOffice.MSHTMLApi.IMarkupPointer pPointer</param>
 		/// <param name="ppComputedStyle">NetOffice.MSHTMLApi.IHTMLComputedStyle ppComputedStyle</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetComputedStyle(NetOffice.MSHTMLApi.IMarkupPointer pPointer, out NetOffice.MSHTMLApi.IHTMLComputedStyle ppComputedStyle)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -150,28 +150,28 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointer, ppComputedStyle);
 			object returnItem = Invoker.MethodReturn(this, "GetComputedStyle", paramsArray);
 			ppComputedStyle = (NetOffice.MSHTMLApi.IHTMLComputedStyle)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="rect">tagRECT rect</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 ScrollRectIntoView(NetOffice.MSHTMLApi.IHTMLElement pIElement, tagRECT rect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, rect);
 			object returnItem = Invoker.MethodReturn(this, "ScrollRectIntoView", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="pfHasFlowLayout">Int32 pfHasFlowLayout</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 HasFlowLayout(NetOffice.MSHTMLApi.IHTMLElement pIElement, out Int32 pfHasFlowLayout)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
@@ -179,7 +179,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, pfHasFlowLayout);
 			object returnItem = Invoker.MethodReturn(this, "HasFlowLayout", paramsArray);
 			pfHasFlowLayout = (Int32)paramsArray[1];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

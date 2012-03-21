@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHighlightRenderingServices 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHighlightRenderingServices : COMObject
 	{
@@ -78,13 +78,13 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pDispPointerStart">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart</param>
 		/// <param name="pDispPointerEnd">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerEnd</param>
 		/// <param name="pIRenderStyle">NetOffice.MSHTMLApi.IHTMLRenderStyle pIRenderStyle</param>
 		/// <param name="ppISegment">NetOffice.MSHTMLApi.IHighlightSegment ppISegment</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 AddSegment(NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart, NetOffice.MSHTMLApi.IDisplayPointer pDispPointerEnd, NetOffice.MSHTMLApi.IHTMLRenderStyle pIRenderStyle, out NetOffice.MSHTMLApi.IHighlightSegment ppISegment)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -92,33 +92,33 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointerStart, pDispPointerEnd, pIRenderStyle, ppISegment);
 			object returnItem = Invoker.MethodReturn(this, "AddSegment", paramsArray);
 			ppISegment = (NetOffice.MSHTMLApi.IHighlightSegment)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pISegment">NetOffice.MSHTMLApi.IHighlightSegment pISegment</param>
 		/// <param name="pDispPointerStart">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart</param>
 		/// <param name="pDispPointerEnd">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerEnd</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 MoveSegmentToPointers(NetOffice.MSHTMLApi.IHighlightSegment pISegment, NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart, NetOffice.MSHTMLApi.IDisplayPointer pDispPointerEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment, pDispPointerStart, pDispPointerEnd);
 			object returnItem = Invoker.MethodReturn(this, "MoveSegmentToPointers", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pISegment">NetOffice.MSHTMLApi.IHighlightSegment pISegment</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 RemoveSegment(NetOffice.MSHTMLApi.IHighlightSegment pISegment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment);
 			object returnItem = Invoker.MethodReturn(this, "RemoveSegment", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

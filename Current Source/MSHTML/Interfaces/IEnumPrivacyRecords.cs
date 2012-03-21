@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IEnumPrivacyRecords 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumPrivacyRecords : COMObject
 	{
@@ -78,21 +78,21 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 reset()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "reset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pSize">Int32 pSize</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetSize(out Int32 pSize)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -100,14 +100,14 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pSize);
 			object returnItem = Invoker.MethodReturn(this, "GetSize", paramsArray);
 			pSize = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pState">Int32 pState</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetPrivacyImpacted(out Int32 pState)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -115,17 +115,17 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pState);
 			object returnItem = Invoker.MethodReturn(this, "GetPrivacyImpacted", paramsArray);
 			pState = (Int32)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pbstrUrl">string pbstrUrl</param>
 		/// <param name="pbstrPolicyRef">string pbstrPolicyRef</param>
 		/// <param name="pdwReserved">Int32 pdwReserved</param>
 		/// <param name="pdwPrivacyFlags">Int32 pdwPrivacyFlags</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Next(out string pbstrUrl, out string pbstrPolicyRef, out Int32 pdwReserved, out Int32 pdwPrivacyFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -139,7 +139,7 @@ namespace NetOffice.MSHTMLApi
 			pbstrPolicyRef = (string)paramsArray[1];
 			pdwReserved = (Int32)paramsArray[2];
 			pdwPrivacyFlags = (Int32)paramsArray[3];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

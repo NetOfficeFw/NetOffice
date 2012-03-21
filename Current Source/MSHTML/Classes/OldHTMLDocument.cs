@@ -53,11 +53,11 @@ namespace NetOffice.MSHTMLApi
 
 	///<summary>
 	/// CoClass OldHTMLDocument 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OldHTMLDocument : DispHTMLDocument, IEventBinding 
+	public class OldHTMLDocument : DispHTMLDocument,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -95,7 +95,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -130,13 +130,854 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onhelpEventHandler _onhelpEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onhelpEventHandler onhelpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onhelpEvent += value;
+			}
+			remove
+			{
+				_onhelpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onclickEventHandler _onclickEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onclickEventHandler onclickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onclickEvent += value;
+			}
+			remove
+			{
+				_onclickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondblclickEventHandler _ondblclickEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondblclickEventHandler ondblclickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondblclickEvent += value;
+			}
+			remove
+			{
+				_ondblclickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onkeydownEventHandler _onkeydownEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onkeydownEventHandler onkeydownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeydownEvent += value;
+			}
+			remove
+			{
+				_onkeydownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onkeyupEventHandler _onkeyupEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onkeyupEventHandler onkeyupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeyupEvent += value;
+			}
+			remove
+			{
+				_onkeyupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onkeypressEventHandler _onkeypressEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onkeypressEventHandler onkeypressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onkeypressEvent += value;
+			}
+			remove
+			{
+				_onkeypressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmousedownEventHandler _onmousedownEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmousedownEventHandler onmousedownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmousedownEvent += value;
+			}
+			remove
+			{
+				_onmousedownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmousemoveEventHandler _onmousemoveEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmousemoveEventHandler onmousemoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmousemoveEvent += value;
+			}
+			remove
+			{
+				_onmousemoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmouseupEventHandler _onmouseupEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmouseupEventHandler onmouseupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmouseupEvent += value;
+			}
+			remove
+			{
+				_onmouseupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmouseoutEventHandler _onmouseoutEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmouseoutEventHandler onmouseoutEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmouseoutEvent += value;
+			}
+			remove
+			{
+				_onmouseoutEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmouseoverEventHandler _onmouseoverEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmouseoverEventHandler onmouseoverEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmouseoverEvent += value;
+			}
+			remove
+			{
+				_onmouseoverEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onreadystatechangeEventHandler _onreadystatechangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onreadystatechangeEventHandler onreadystatechangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onreadystatechangeEvent += value;
+			}
+			remove
+			{
+				_onreadystatechangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onbeforeupdateEventHandler _onbeforeupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onbeforeupdateEventHandler onbeforeupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onbeforeupdateEvent += value;
+			}
+			remove
+			{
+				_onbeforeupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onafterupdateEventHandler _onafterupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onafterupdateEventHandler onafterupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onafterupdateEvent += value;
+			}
+			remove
+			{
+				_onafterupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onrowexitEventHandler _onrowexitEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onrowexitEventHandler onrowexitEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowexitEvent += value;
+			}
+			remove
+			{
+				_onrowexitEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onrowenterEventHandler _onrowenterEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onrowenterEventHandler onrowenterEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowenterEvent += value;
+			}
+			remove
+			{
+				_onrowenterEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondragstartEventHandler _ondragstartEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondragstartEventHandler ondragstartEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondragstartEvent += value;
+			}
+			remove
+			{
+				_ondragstartEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onselectstartEventHandler _onselectstartEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onselectstartEventHandler onselectstartEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onselectstartEvent += value;
+			}
+			remove
+			{
+				_onselectstartEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onerrorupdateEventHandler _onerrorupdateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onerrorupdateEventHandler onerrorupdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onerrorupdateEvent += value;
+			}
+			remove
+			{
+				_onerrorupdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_oncontextmenuEventHandler _oncontextmenuEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_oncontextmenuEventHandler oncontextmenuEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_oncontextmenuEvent += value;
+			}
+			remove
+			{
+				_oncontextmenuEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onstopEventHandler _onstopEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onstopEventHandler onstopEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onstopEvent += value;
+			}
+			remove
+			{
+				_onstopEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onrowsdeleteEventHandler _onrowsdeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onrowsdeleteEventHandler onrowsdeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowsdeleteEvent += value;
+			}
+			remove
+			{
+				_onrowsdeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onrowsinsertedEventHandler _onrowsinsertedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onrowsinsertedEventHandler onrowsinsertedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onrowsinsertedEvent += value;
+			}
+			remove
+			{
+				_onrowsinsertedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_oncellchangeEventHandler _oncellchangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_oncellchangeEventHandler oncellchangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_oncellchangeEvent += value;
+			}
+			remove
+			{
+				_oncellchangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onpropertychangeEventHandler _onpropertychangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onpropertychangeEventHandler onpropertychangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onpropertychangeEvent += value;
+			}
+			remove
+			{
+				_onpropertychangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondatasetchangedEventHandler _ondatasetchangedEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondatasetchangedEventHandler ondatasetchangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondatasetchangedEvent += value;
+			}
+			remove
+			{
+				_ondatasetchangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondataavailableEventHandler _ondataavailableEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondataavailableEventHandler ondataavailableEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondataavailableEvent += value;
+			}
+			remove
+			{
+				_ondataavailableEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondatasetcompleteEventHandler _ondatasetcompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondatasetcompleteEventHandler ondatasetcompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondatasetcompleteEvent += value;
+			}
+			remove
+			{
+				_ondatasetcompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onbeforeeditfocusEventHandler _onbeforeeditfocusEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onbeforeeditfocusEventHandler onbeforeeditfocusEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onbeforeeditfocusEvent += value;
+			}
+			remove
+			{
+				_onbeforeeditfocusEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onselectionchangeEventHandler _onselectionchangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onselectionchangeEventHandler onselectionchangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onselectionchangeEvent += value;
+			}
+			remove
+			{
+				_onselectionchangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_oncontrolselectEventHandler _oncontrolselectEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_oncontrolselectEventHandler oncontrolselectEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_oncontrolselectEvent += value;
+			}
+			remove
+			{
+				_oncontrolselectEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onmousewheelEventHandler _onmousewheelEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onmousewheelEventHandler onmousewheelEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onmousewheelEvent += value;
+			}
+			remove
+			{
+				_onmousewheelEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onfocusinEventHandler _onfocusinEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onfocusinEventHandler onfocusinEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onfocusinEvent += value;
+			}
+			remove
+			{
+				_onfocusinEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onfocusoutEventHandler _onfocusoutEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onfocusoutEventHandler onfocusoutEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onfocusoutEvent += value;
+			}
+			remove
+			{
+				_onfocusoutEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onactivateEventHandler _onactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onactivateEventHandler onactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onactivateEvent += value;
+			}
+			remove
+			{
+				_onactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_ondeactivateEventHandler _ondeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_ondeactivateEventHandler ondeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ondeactivateEvent += value;
+			}
+			remove
+			{
+				_ondeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onbeforeactivateEventHandler _onbeforeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onbeforeactivateEventHandler onbeforeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onbeforeactivateEvent += value;
+			}
+			remove
+			{
+				_onbeforeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event OldHTMLDocument_onbeforedeactivateEventHandler _onbeforedeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event OldHTMLDocument_onbeforedeactivateEventHandler onbeforedeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onbeforedeactivateEvent += value;
+			}
+			remove
+			{
+				_onbeforedeactivateEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -154,851 +995,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onhelpEventHandler _onhelpEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onhelpEventHandler onhelpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onhelpEvent += value;
-			}
-			remove
-			{
-				_onhelpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onclickEventHandler _onclickEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onclickEventHandler onclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onclickEvent += value;
-			}
-			remove
-			{
-				_onclickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondblclickEventHandler _ondblclickEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondblclickEventHandler ondblclickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondblclickEvent += value;
-			}
-			remove
-			{
-				_ondblclickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onkeydownEventHandler _onkeydownEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onkeydownEventHandler onkeydownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeydownEvent += value;
-			}
-			remove
-			{
-				_onkeydownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onkeyupEventHandler _onkeyupEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onkeyupEventHandler onkeyupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeyupEvent += value;
-			}
-			remove
-			{
-				_onkeyupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onkeypressEventHandler _onkeypressEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onkeypressEventHandler onkeypressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onkeypressEvent += value;
-			}
-			remove
-			{
-				_onkeypressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmousedownEventHandler _onmousedownEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmousedownEventHandler onmousedownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousedownEvent += value;
-			}
-			remove
-			{
-				_onmousedownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmousemoveEventHandler _onmousemoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmousemoveEventHandler onmousemoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousemoveEvent += value;
-			}
-			remove
-			{
-				_onmousemoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmouseupEventHandler _onmouseupEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmouseupEventHandler onmouseupEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseupEvent += value;
-			}
-			remove
-			{
-				_onmouseupEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmouseoutEventHandler _onmouseoutEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmouseoutEventHandler onmouseoutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseoutEvent += value;
-			}
-			remove
-			{
-				_onmouseoutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmouseoverEventHandler _onmouseoverEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmouseoverEventHandler onmouseoverEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmouseoverEvent += value;
-			}
-			remove
-			{
-				_onmouseoverEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onreadystatechangeEventHandler _onreadystatechangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onreadystatechangeEventHandler onreadystatechangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onreadystatechangeEvent += value;
-			}
-			remove
-			{
-				_onreadystatechangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onbeforeupdateEventHandler _onbeforeupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onbeforeupdateEventHandler onbeforeupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeupdateEvent += value;
-			}
-			remove
-			{
-				_onbeforeupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onafterupdateEventHandler _onafterupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onafterupdateEventHandler onafterupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onafterupdateEvent += value;
-			}
-			remove
-			{
-				_onafterupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onrowexitEventHandler _onrowexitEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onrowexitEventHandler onrowexitEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowexitEvent += value;
-			}
-			remove
-			{
-				_onrowexitEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onrowenterEventHandler _onrowenterEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onrowenterEventHandler onrowenterEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowenterEvent += value;
-			}
-			remove
-			{
-				_onrowenterEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondragstartEventHandler _ondragstartEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondragstartEventHandler ondragstartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondragstartEvent += value;
-			}
-			remove
-			{
-				_ondragstartEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onselectstartEventHandler _onselectstartEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onselectstartEventHandler onselectstartEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onselectstartEvent += value;
-			}
-			remove
-			{
-				_onselectstartEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onerrorupdateEventHandler _onerrorupdateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onerrorupdateEventHandler onerrorupdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onerrorupdateEvent += value;
-			}
-			remove
-			{
-				_onerrorupdateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_oncontextmenuEventHandler _oncontextmenuEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_oncontextmenuEventHandler oncontextmenuEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncontextmenuEvent += value;
-			}
-			remove
-			{
-				_oncontextmenuEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onstopEventHandler _onstopEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onstopEventHandler onstopEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onstopEvent += value;
-			}
-			remove
-			{
-				_onstopEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onrowsdeleteEventHandler _onrowsdeleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onrowsdeleteEventHandler onrowsdeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsdeleteEvent += value;
-			}
-			remove
-			{
-				_onrowsdeleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onrowsinsertedEventHandler _onrowsinsertedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onrowsinsertedEventHandler onrowsinsertedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onrowsinsertedEvent += value;
-			}
-			remove
-			{
-				_onrowsinsertedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_oncellchangeEventHandler _oncellchangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_oncellchangeEventHandler oncellchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncellchangeEvent += value;
-			}
-			remove
-			{
-				_oncellchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onpropertychangeEventHandler _onpropertychangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onpropertychangeEventHandler onpropertychangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onpropertychangeEvent += value;
-			}
-			remove
-			{
-				_onpropertychangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondatasetchangedEventHandler _ondatasetchangedEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondatasetchangedEventHandler ondatasetchangedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetchangedEvent += value;
-			}
-			remove
-			{
-				_ondatasetchangedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondataavailableEventHandler _ondataavailableEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondataavailableEventHandler ondataavailableEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondataavailableEvent += value;
-			}
-			remove
-			{
-				_ondataavailableEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondatasetcompleteEventHandler _ondatasetcompleteEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondatasetcompleteEventHandler ondatasetcompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondatasetcompleteEvent += value;
-			}
-			remove
-			{
-				_ondatasetcompleteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onbeforeeditfocusEventHandler _onbeforeeditfocusEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onbeforeeditfocusEventHandler onbeforeeditfocusEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeeditfocusEvent += value;
-			}
-			remove
-			{
-				_onbeforeeditfocusEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onselectionchangeEventHandler _onselectionchangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onselectionchangeEventHandler onselectionchangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onselectionchangeEvent += value;
-			}
-			remove
-			{
-				_onselectionchangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_oncontrolselectEventHandler _oncontrolselectEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_oncontrolselectEventHandler oncontrolselectEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_oncontrolselectEvent += value;
-			}
-			remove
-			{
-				_oncontrolselectEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onmousewheelEventHandler _onmousewheelEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onmousewheelEventHandler onmousewheelEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onmousewheelEvent += value;
-			}
-			remove
-			{
-				_onmousewheelEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onfocusinEventHandler _onfocusinEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onfocusinEventHandler onfocusinEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfocusinEvent += value;
-			}
-			remove
-			{
-				_onfocusinEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onfocusoutEventHandler _onfocusoutEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onfocusoutEventHandler onfocusoutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onfocusoutEvent += value;
-			}
-			remove
-			{
-				_onfocusoutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onactivateEventHandler _onactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onactivateEventHandler onactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onactivateEvent += value;
-			}
-			remove
-			{
-				_onactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_ondeactivateEventHandler _ondeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_ondeactivateEventHandler ondeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ondeactivateEvent += value;
-			}
-			remove
-			{
-				_ondeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onbeforeactivateEventHandler _onbeforeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onbeforeactivateEventHandler onbeforeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforeactivateEvent += value;
-			}
-			remove
-			{
-				_onbeforeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary MSHTML, 4
-		/// </summary>
-		private event OldHTMLDocument_onbeforedeactivateEventHandler _onbeforedeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary MSHTML 4
-		/// </summary>
-		[SupportByLibrary("MSHTML", 4)]
-		public event OldHTMLDocument_onbeforedeactivateEventHandler onbeforedeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_onbeforedeactivateEvent += value;
-			}
-			remove
-			{
-				_onbeforedeactivateEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -1009,25 +1006,22 @@ namespace NetOffice.MSHTMLApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1050,8 +1044,59 @@ namespace NetOffice.MSHTMLApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _hTMLDocumentEvents_SinkHelper)
 			{
@@ -1063,6 +1108,7 @@ namespace NetOffice.MSHTMLApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

@@ -4,101 +4,101 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.1, 2.5
+	 /// SupportByVersion ADODB 2.1, 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum CursorOptionEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>256</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adHoldRecords = 256,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>512</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adMovePrevious = 512,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16778240</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adAddNew = 16778240,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16779264</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adDelete = 16779264,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16809984</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adUpdate = 16809984,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>8192</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adBookmark = 8192,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16384</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adApproxPosition = 16384,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>65536</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adUpdateBatch = 65536,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>131072</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adResync = 131072,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>262144</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adNotify = 262144,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>524288</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adFind = 524288,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>4194304</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adSeek = 4194304,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>8388608</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adIndex = 8388608
 	}
 }

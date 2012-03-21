@@ -10,9 +10,9 @@ namespace NetOffice.MSHTMLApi
 {
 	///<summary>
 	/// Interface IHTMLPainter 
-	/// SupportByLibrary MSHTML, 4
+	/// SupportByVersion MSHTML, 4
 	///</summary>
-	[SupportByLibraryAttribute("MSHTML", 4)]
+	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IHTMLPainter : COMObject
 	{
@@ -78,38 +78,38 @@ namespace NetOffice.MSHTMLApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="rcBounds">tagRECT rcBounds</param>
 		/// <param name="rcUpdate">tagRECT rcUpdate</param>
 		/// <param name="lDrawFlags">Int32 lDrawFlags</param>
 		/// <param name="hdc">_RemotableHandle hdc</param>
 		/// <param name="pvDrawObject">object pvDrawObject</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Draw(tagRECT rcBounds, tagRECT rcUpdate, Int32 lDrawFlags, _RemotableHandle hdc, object pvDrawObject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rcBounds, rcUpdate, lDrawFlags, hdc, pvDrawObject);
 			object returnItem = Invoker.MethodReturn(this, "Draw", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="size">tagSIZE size</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 onresize(tagSIZE size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size);
 			object returnItem = Invoker.MethodReturn(this, "onresize", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pInfo">_HTML_PAINTER_INFO pInfo</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetPainterInfo(out _HTML_PAINTER_INFO pInfo)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -117,16 +117,16 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pInfo);
 			object returnItem = Invoker.MethodReturn(this, "GetPainterInfo", paramsArray);
 			pInfo = (_HTML_PAINTER_INFO)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		/// <summary>
-		/// SupportByLibrary MSHTML 4
+		/// SupportByVersion MSHTML 4
 		/// </summary>
 		/// <param name="pt">tagPOINT pt</param>
 		/// <param name="pbHit">Int32 pbHit</param>
 		/// <param name="plPartID">Int32 plPartID</param>
-		[SupportByLibraryAttribute("MSHTML", 4)]
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 HitTestPoint(tagPOINT pt, out Int32 pbHit, out Int32 plPartID)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -136,7 +136,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "HitTestPoint", paramsArray);
 			pbHit = (Int32)paramsArray[1];
 			plPartID = (Int32)paramsArray[2];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (Int32)returnItem;
 		}
 
 		#endregion

@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.5
+	 /// SupportByVersion ADODB 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.5)]
+	[SupportByVersionAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum LineSeparatorEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adLF = 10,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>13</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adCR = 13,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>-1</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adCRLF = -1
 	}
 }

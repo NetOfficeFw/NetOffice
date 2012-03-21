@@ -41,11 +41,11 @@ namespace NetOffice.OWC10Api
 
 	///<summary>
 	/// CoClass ChartSpace 
-	/// SupportByLibrary OWC10, 1
+	/// SupportByVersion OWC10, 1
 	///</summary>
-	[SupportByLibraryAttribute("OWC10", 1)]
+	[SupportByVersionAttribute("OWC10", 1)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ChartSpace : ChChartSpace, IEventBinding 
+	public class ChartSpace : ChChartSpace,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -83,7 +83,7 @@ namespace NetOffice.OWC10Api
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -118,13 +118,590 @@ namespace NetOffice.OWC10Api
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_DataSetChangeEventHandler _DataSetChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_DataSetChangeEventHandler DataSetChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DataSetChangeEvent += value;
+			}
+			remove
+			{
+				_DataSetChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_DblClickEventHandler _DblClickEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_DblClickEventHandler DblClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DblClickEvent += value;
+			}
+			remove
+			{
+				_DblClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_ClickEventHandler _ClickEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_ClickEventHandler ClickEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ClickEvent += value;
+			}
+			remove
+			{
+				_ClickEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_KeyDownEventHandler _KeyDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_KeyDownEventHandler KeyDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyDownEvent += value;
+			}
+			remove
+			{
+				_KeyDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_KeyUpEventHandler _KeyUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_KeyUpEventHandler KeyUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyUpEvent += value;
+			}
+			remove
+			{
+				_KeyUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_KeyPressEventHandler _KeyPressEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_KeyPressEventHandler KeyPressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_KeyPressEvent += value;
+			}
+			remove
+			{
+				_KeyPressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeKeyDownEventHandler BeforeKeyDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyDownEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeKeyUpEventHandler BeforeKeyUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyUpEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeKeyPressEventHandler BeforeKeyPressEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeKeyPressEvent += value;
+			}
+			remove
+			{
+				_BeforeKeyPressEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_MouseDownEventHandler _MouseDownEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_MouseDownEventHandler MouseDownEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseDownEvent += value;
+			}
+			remove
+			{
+				_MouseDownEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_MouseMoveEventHandler _MouseMoveEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_MouseMoveEventHandler MouseMoveEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseMoveEvent += value;
+			}
+			remove
+			{
+				_MouseMoveEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_MouseUpEventHandler _MouseUpEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_MouseUpEventHandler MouseUpEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseUpEvent += value;
+			}
+			remove
+			{
+				_MouseUpEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_MouseWheelEventHandler _MouseWheelEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_MouseWheelEventHandler MouseWheelEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_MouseWheelEvent += value;
+			}
+			remove
+			{
+				_MouseWheelEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_SelectionChangeEventHandler _SelectionChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_SelectionChangeEventHandler SelectionChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectionChangeEvent += value;
+			}
+			remove
+			{
+				_SelectionChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeScreenTipEventHandler BeforeScreenTipEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeScreenTipEvent += value;
+			}
+			remove
+			{
+				_BeforeScreenTipEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_CommandEnabledEventHandler _CommandEnabledEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_CommandEnabledEventHandler CommandEnabledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandEnabledEvent += value;
+			}
+			remove
+			{
+				_CommandEnabledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_CommandCheckedEventHandler _CommandCheckedEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_CommandCheckedEventHandler CommandCheckedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandCheckedEvent += value;
+			}
+			remove
+			{
+				_CommandCheckedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_CommandTipTextEventHandler _CommandTipTextEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_CommandTipTextEventHandler CommandTipTextEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandTipTextEvent += value;
+			}
+			remove
+			{
+				_CommandTipTextEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandBeforeExecuteEvent += value;
+			}
+			remove
+			{
+				_CommandBeforeExecuteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_CommandExecuteEventHandler _CommandExecuteEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_CommandExecuteEventHandler CommandExecuteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CommandExecuteEvent += value;
+			}
+			remove
+			{
+				_CommandExecuteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeContextMenuEventHandler BeforeContextMenuEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeContextMenuEvent += value;
+			}
+			remove
+			{
+				_BeforeContextMenuEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_BeforeRenderEventHandler _BeforeRenderEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_BeforeRenderEventHandler BeforeRenderEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeRenderEvent += value;
+			}
+			remove
+			{
+				_BeforeRenderEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_AfterRenderEventHandler _AfterRenderEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_AfterRenderEventHandler AfterRenderEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterRenderEvent += value;
+			}
+			remove
+			{
+				_AfterRenderEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_AfterFinalRenderEventHandler _AfterFinalRenderEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_AfterFinalRenderEventHandler AfterFinalRenderEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterFinalRenderEvent += value;
+			}
+			remove
+			{
+				_AfterFinalRenderEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_AfterLayoutEventHandler _AfterLayoutEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_AfterLayoutEventHandler AfterLayoutEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterLayoutEvent += value;
+			}
+			remove
+			{
+				_AfterLayoutEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10, 1
+		/// </summary>
+		private event ChartSpace_ViewChangeEventHandler _ViewChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		[SupportByVersion("OWC10", 1)]
+		public event ChartSpace_ViewChangeEventHandler ViewChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ViewChangeEvent += value;
+			}
+			remove
+			{
+				_ViewChangeEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -142,587 +719,7 @@ namespace NetOffice.OWC10Api
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_DataSetChangeEventHandler _DataSetChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_DataSetChangeEventHandler DataSetChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DataSetChangeEvent += value;
-			}
-			remove
-			{
-				_DataSetChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_DblClickEventHandler _DblClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_DblClickEventHandler DblClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DblClickEvent += value;
-			}
-			remove
-			{
-				_DblClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_ClickEventHandler _ClickEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_ClickEventHandler ClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ClickEvent += value;
-			}
-			remove
-			{
-				_ClickEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_KeyDownEventHandler _KeyDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_KeyDownEventHandler KeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyDownEvent += value;
-			}
-			remove
-			{
-				_KeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_KeyUpEventHandler _KeyUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_KeyUpEventHandler KeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyUpEvent += value;
-			}
-			remove
-			{
-				_KeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_KeyPressEventHandler _KeyPressEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_KeyPressEventHandler KeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_KeyPressEvent += value;
-			}
-			remove
-			{
-				_KeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeKeyDownEventHandler _BeforeKeyDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeKeyDownEventHandler BeforeKeyDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyDownEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeKeyUpEventHandler _BeforeKeyUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeKeyUpEventHandler BeforeKeyUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyUpEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeKeyPressEventHandler _BeforeKeyPressEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeKeyPressEventHandler BeforeKeyPressEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeKeyPressEvent += value;
-			}
-			remove
-			{
-				_BeforeKeyPressEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_MouseDownEventHandler _MouseDownEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_MouseDownEventHandler MouseDownEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseDownEvent += value;
-			}
-			remove
-			{
-				_MouseDownEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_MouseMoveEventHandler _MouseMoveEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_MouseMoveEventHandler MouseMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseMoveEvent += value;
-			}
-			remove
-			{
-				_MouseMoveEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_MouseUpEventHandler _MouseUpEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_MouseUpEventHandler MouseUpEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseUpEvent += value;
-			}
-			remove
-			{
-				_MouseUpEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_MouseWheelEventHandler _MouseWheelEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_MouseWheelEventHandler MouseWheelEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_MouseWheelEvent += value;
-			}
-			remove
-			{
-				_MouseWheelEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_SelectionChangeEventHandler _SelectionChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_SelectionChangeEventHandler SelectionChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionChangeEvent += value;
-			}
-			remove
-			{
-				_SelectionChangeEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeScreenTipEventHandler _BeforeScreenTipEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeScreenTipEventHandler BeforeScreenTipEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeScreenTipEvent += value;
-			}
-			remove
-			{
-				_BeforeScreenTipEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_CommandEnabledEventHandler _CommandEnabledEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_CommandEnabledEventHandler CommandEnabledEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandEnabledEvent += value;
-			}
-			remove
-			{
-				_CommandEnabledEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_CommandCheckedEventHandler _CommandCheckedEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_CommandCheckedEventHandler CommandCheckedEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandCheckedEvent += value;
-			}
-			remove
-			{
-				_CommandCheckedEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_CommandTipTextEventHandler _CommandTipTextEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_CommandTipTextEventHandler CommandTipTextEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandTipTextEvent += value;
-			}
-			remove
-			{
-				_CommandTipTextEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_CommandBeforeExecuteEventHandler _CommandBeforeExecuteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_CommandBeforeExecuteEventHandler CommandBeforeExecuteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandBeforeExecuteEvent += value;
-			}
-			remove
-			{
-				_CommandBeforeExecuteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_CommandExecuteEventHandler _CommandExecuteEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_CommandExecuteEventHandler CommandExecuteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CommandExecuteEvent += value;
-			}
-			remove
-			{
-				_CommandExecuteEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeContextMenuEventHandler _BeforeContextMenuEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeContextMenuEventHandler BeforeContextMenuEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeContextMenuEvent += value;
-			}
-			remove
-			{
-				_BeforeContextMenuEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_BeforeRenderEventHandler _BeforeRenderEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_BeforeRenderEventHandler BeforeRenderEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeRenderEvent += value;
-			}
-			remove
-			{
-				_BeforeRenderEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_AfterRenderEventHandler _AfterRenderEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_AfterRenderEventHandler AfterRenderEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterRenderEvent += value;
-			}
-			remove
-			{
-				_AfterRenderEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_AfterFinalRenderEventHandler _AfterFinalRenderEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_AfterFinalRenderEventHandler AfterFinalRenderEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterFinalRenderEvent += value;
-			}
-			remove
-			{
-				_AfterFinalRenderEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_AfterLayoutEventHandler _AfterLayoutEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_AfterLayoutEventHandler AfterLayoutEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_AfterLayoutEvent += value;
-			}
-			remove
-			{
-				_AfterLayoutEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary OWC10, 1
-		/// </summary>
-		private event ChartSpace_ViewChangeEventHandler _ViewChangeEvent;
-
-		/// <summary>
-		/// SupportByLibrary OWC10 1
-		/// </summary>
-		[SupportByLibrary("OWC10", 1)]
-		public event ChartSpace_ViewChangeEventHandler ViewChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ViewChangeEvent += value;
-			}
-			remove
-			{
-				_ViewChangeEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -733,25 +730,22 @@ namespace NetOffice.OWC10Api
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -774,8 +768,59 @@ namespace NetOffice.OWC10Api
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != _iChartEvents_SinkHelper)
 			{
@@ -787,6 +832,7 @@ namespace NetOffice.OWC10Api
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

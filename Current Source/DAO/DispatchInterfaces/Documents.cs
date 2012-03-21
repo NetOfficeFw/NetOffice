@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Documents 
-	/// SupportByLibrary DAO, 6,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByLibraryAttribute("DAO", 6,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Documents : _Collection
 	{
@@ -75,12 +75,11 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByLibrary DAO 6, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		/// <param name="Item">object Item</param>
-		[SupportByLibraryAttribute("DAO", 6,12)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		/// <param name="item">object Item</param>
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.DAOApi.Document this[object item]
 		{

@@ -22,11 +22,11 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass ReportOldV10 
-	/// SupportByLibrary Access, 12,14
+	/// SupportByVersion Access, 12,14
 	///</summary>
-	[SupportByLibraryAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReportOldV10 : _Report2, IEventBinding 
+	public class ReportOldV10 : _Report2,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -64,7 +64,7 @@ namespace NetOffice.AccessApi
 		{
 			
 		}
-		
+
 		/// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -99,13 +99,172 @@ namespace NetOffice.AccessApi
 		}
 
 		#endregion
-		
-		#region Private Methods
-		
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_OpenEventHandler _OpenEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_OpenEventHandler OpenEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_OpenEvent += value;
+			}
+			remove
+			{
+				_OpenEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_CloseEventHandler _CloseEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_CloseEventHandler CloseEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CloseEvent += value;
+			}
+			remove
+			{
+				_CloseEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_ActivateEventHandler _ActivateEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_ActivateEventHandler ActivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ActivateEvent += value;
+			}
+			remove
+			{
+				_ActivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_DeactivateEventHandler _DeactivateEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_DeactivateEventHandler DeactivateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_DeactivateEvent += value;
+			}
+			remove
+			{
+				_DeactivateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_ErrorEventHandler _ErrorEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_ErrorEventHandler ErrorEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ErrorEvent += value;
+			}
+			remove
+			{
+				_ErrorEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_NoDataEventHandler _NoDataEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_NoDataEventHandler NoDataEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_NoDataEvent += value;
+			}
+			remove
+			{
+				_NoDataEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Access, 9,10,11,12,14
+		/// </summary>
+		private event ReportOldV10_PageEventHandler _PageEvent;
+
+		/// <summary>
+		/// SupportByVersion Access 9 10 11 12 14
+		/// </summary>
+		[SupportByVersion("Access", 9,10,11,12,14)]
+		public event ReportOldV10_PageEventHandler PageEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PageEvent += value;
+			}
+			remove
+			{
+				_PageEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
 		/// <summary>
         /// creates active sink helper
         /// </summary>
-		private void CreateEventBridge()
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
         {
 			if(false == LateBindingApi.Core.Settings.EnableEvents)
 				return;
@@ -123,169 +282,7 @@ namespace NetOffice.AccessApi
 				return;
 			} 
         }
-		
-		#endregion
 
-		#region Events
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_OpenEventHandler _OpenEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_OpenEventHandler OpenEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_OpenEvent += value;
-			}
-			remove
-			{
-				_OpenEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_CloseEventHandler _CloseEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_CloseEventHandler CloseEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CloseEvent += value;
-			}
-			remove
-			{
-				_CloseEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_ActivateEventHandler _ActivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_ActivateEventHandler ActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ActivateEvent += value;
-			}
-			remove
-			{
-				_ActivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_DeactivateEventHandler _DeactivateEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_DeactivateEventHandler DeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DeactivateEvent += value;
-			}
-			remove
-			{
-				_DeactivateEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_ErrorEventHandler _ErrorEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_ErrorEventHandler ErrorEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ErrorEvent += value;
-			}
-			remove
-			{
-				_ErrorEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_NoDataEventHandler _NoDataEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_NoDataEventHandler NoDataEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_NoDataEvent += value;
-			}
-			remove
-			{
-				_NoDataEvent -= value;
-			}
-		}
-
-		/// <summary>
-		/// SupportByLibrary Access, 9,10,11,12,14
-		/// </summary>
-		private event ReportOldV10_PageEventHandler _PageEvent;
-
-		/// <summary>
-		/// SupportByLibrary Access 9 10 11 12 14
-		/// </summary>
-		[SupportByLibrary("Access", 9,10,11,12,14)]
-		public event ReportOldV10_PageEventHandler PageEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PageEvent += value;
-			}
-			remove
-			{
-				_PageEvent -= value;
-			}
-		}
-
-		#endregion
-
-        #region IEventBinding Member
-        
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -296,25 +293,22 @@ namespace NetOffice.AccessApi
         }
         
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients       
+        public bool HasEventRecipients()       
         {
-			get
-			{
-				if(null == _thisType)
-					_thisType = this.GetType();
+			if(null == _thisType)
+				_thisType = this.GetType();
 					
-				foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
-				{
-					MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
 																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
 																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
 					
-					if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
-						return false;
-				}
-				
-				return false;
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
 			}
+				
+			return false;
         }
         
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -337,8 +331,59 @@ namespace NetOffice.AccessApi
                 return new Delegate[0];
         }
 
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public void DisposeSinkHelper()
+        public void DisposeEventBridge()
         {
 			if( null != __ReportEvents_SinkHelper)
 			{
@@ -350,6 +395,7 @@ namespace NetOffice.AccessApi
 		}
         
         #endregion
+
 		#pragma warning restore
 	}
 }

@@ -10,19 +10,19 @@ namespace NetOffice.OfficeApi
 	
 	#region SinkPoint Interface
 
-	[SupportByLibraryAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14)]
 	[ComImport, Guid("000CDB0B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _CustomXMLPartsEvents
 	{
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart);
 
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart);
 
-		[SupportByLibraryAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part);
 	}
@@ -72,8 +72,7 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi.CustomXMLPart newNewPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewPart;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
 		}
 
 		public void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart)
@@ -88,8 +87,7 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi.CustomXMLPart newOldPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newOldPart;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
 		}
 
 		public void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part)
@@ -104,8 +102,7 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi.CustomXMLPart newPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPart;
-			foreach(Delegate delItem in recipients)
-				delItem.Method.Invoke(delItem.Target, paramsArray);
+			_eventBinding.RaiseCustomEvent("PartAfterLoad", ref paramsArray);
 		}
 
 		#endregion

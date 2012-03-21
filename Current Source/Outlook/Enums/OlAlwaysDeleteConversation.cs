@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.OutlookApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary Outlook 14
+	 /// SupportByVersion Outlook 14
 	 /// </summary>
-	[SupportByLibraryAttribute("Outlook", 14)]
+	[SupportByVersionAttribute("Outlook", 14)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum OlAlwaysDeleteConversation
 	{
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14
+		 /// SupportByVersion Outlook 14
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("Outlook", 14)]
+		 [SupportByVersionAttribute("Outlook", 14)]
 		 olDoNotDelete = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14
+		 /// SupportByVersion Outlook 14
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("Outlook", 14)]
+		 [SupportByVersionAttribute("Outlook", 14)]
 		 olAlwaysDelete = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary Outlook 14
+		 /// SupportByVersion Outlook 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("Outlook", 14)]
+		 [SupportByVersionAttribute("Outlook", 14)]
 		 olAlwaysDeleteUnsupported = 2
 	}
 }

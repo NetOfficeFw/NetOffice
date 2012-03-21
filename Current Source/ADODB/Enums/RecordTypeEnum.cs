@@ -4,31 +4,31 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.5
+	 /// SupportByVersion ADODB 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.5)]
+	[SupportByVersionAttribute("ADODB", 2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adSimpleRecord = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adCollectionRecord = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.5
+		 /// SupportByVersion ADODB 2.5
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.5)]
 		 adStructDoc = 2
 	}
 }

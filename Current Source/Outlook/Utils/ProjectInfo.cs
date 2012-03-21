@@ -47,7 +47,7 @@ namespace OutlookApi.Utils
 				
 			return false;			
 		}
-
+		
         public string AssemblyNamespace
         {
             get

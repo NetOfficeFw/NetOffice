@@ -4,136 +4,136 @@ using LateBindingApi.Core;
 namespace NetOffice.ADODBApi.Enums
 {
 	 /// <summary>
-	 /// SupportByLibrary ADODB 2.1, 2.5
+	 /// SupportByVersion ADODB 2.1, 2.5
 	 /// </summary>
-	[SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum RecordStatusEnum
 	{
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecOK = 0,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecNew = 1,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecModified = 2,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecDeleted = 4,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecUnmodified = 8,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecInvalid = 16,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecMultipleChanges = 64,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>128</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecPendingChanges = 128,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>256</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecCanceled = 256,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>1024</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecCantRelease = 1024,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>2048</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecConcurrencyViolation = 2048,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>4096</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecIntegrityViolation = 4096,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>8192</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecMaxChangesExceeded = 8192,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>16384</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecObjectOpen = 16384,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>32768</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecOutOfMemory = 32768,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>65536</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecPermissionDenied = 65536,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>131072</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecSchemaViolation = 131072,
 
 		 /// <summary>
-		 /// SupportByLibrary ADODB 2.1, 2.5
+		 /// SupportByVersion ADODB 2.1, 2.5
 		 /// </summary>
 		 /// <remarks>262144</remarks>
-		 [SupportByLibraryAttribute("ADODB", 2.1,2.5)]
+		 [SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		 adRecDBDeleted = 262144
 	}
 }

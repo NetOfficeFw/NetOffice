@@ -34,11 +34,14 @@ namespace LateBindingApi.Core
     {
         #region Fields
 
-        private static List<COMObject> _globalObjectList = new List<COMObject>();
-        private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
+        private static bool                     _assemblyResolveEventConnected;
+        private static List<COMObject>          _globalObjectList = new List<COMObject>();
+        private static List<IFactoryInfo>       _factoryList = new List<IFactoryInfo>();
         private static Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private static Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
-        private static Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
+        private static Dictionary<Guid, Guid>   _hostCache = new Dictionary<Guid, Guid>();
+        private static Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
+        private static Assembly _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
 
         #endregion
 
@@ -83,7 +86,7 @@ namespace LateBindingApi.Core
         public static event ProxyCountChangedHandler ProxyCountChanged;
 
         #endregion
-
+     
         #region Factory Methods
 
         /// <summary>
@@ -95,6 +98,15 @@ namespace LateBindingApi.Core
             try
             {
                 DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize()");
+
+                if (!_assemblyResolveEventConnected)
+                {
+                    AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+                    _assemblyResolveEventConnected = true;
+                }
+
+                // clear entities cache
+                _entitiesListCache.Clear();
 
                 List<string> dependAssemblies = new List<string>();
                 Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
@@ -119,15 +131,15 @@ namespace LateBindingApi.Core
                             dependAssemblies.Add(depend);
                     }
                 }
-                
+
                 // try load non loaded dependent assemblies
                 if (Settings.EnableAdHocLoading)
-                { 
+                {
                     foreach (string itemAssemblyName in dependAssemblies)
                     {
                         DebugConsole.WriteLine(string.Format("Try to load dependent assembly {0}.", itemAssemblyName));
 
-                        string fileName = callingAssembly.CodeBase.Substring(0, callingAssembly.CodeBase.LastIndexOf("/"))+ "/" + itemAssemblyName;
+                        string fileName = callingAssembly.CodeBase.Substring(0, callingAssembly.CodeBase.LastIndexOf("/")) + "/" + itemAssemblyName;
                         fileName = fileName.Replace("/", "\\").Substring(8);
 
                         if (System.IO.File.Exists(fileName))
@@ -148,7 +160,7 @@ namespace LateBindingApi.Core
                         }
                     }
                 }
-
+                 
                 DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize() passed");
             }
             catch (Exception throwedException)
@@ -173,7 +185,16 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         internal static Dictionary<string, string> GetSupportedEntities(object comProxy)
         {
-            Dictionary<string, string> supportList = new Dictionary<string, string>();
+            Guid parentLibraryGuid = GetParentLibraryGuid(comProxy);
+            string className = TypeDescriptor.GetClassName(comProxy);
+            string key = (parentLibraryGuid.ToString() + className).ToLower();
+
+            Dictionary<string, string> supportList =null;
+
+            if(_entitiesListCache.TryGetValue(key, out supportList))
+                return supportList;
+            
+            supportList = new Dictionary<string, string>();
             IDispatch dispatch = comProxy as IDispatch;
             if (null == dispatch)
                 throw new COMException("Unable to cast underlying proxy to IDispatch.");
@@ -224,6 +245,8 @@ namespace LateBindingApi.Core
 
             typeInfo.ReleaseTypeAttr(typeAttrPointer);
             Marshal.ReleaseComObject(typeInfo);
+
+            _entitiesListCache.Add(key, supportList);
 
             return supportList;
         }
@@ -382,7 +405,7 @@ namespace LateBindingApi.Core
                 else
                 {
                     // create new classType
-                    classType = factoryInfo.Assembly.GetType(fullClassName,false,true);
+                    classType = factoryInfo.Assembly.GetType(fullClassName, false, true);
                     if (null == classType)
                         throw new ArgumentException("Class not exists: " + fullClassName);
 
@@ -470,7 +493,7 @@ namespace LateBindingApi.Core
         #endregion
 
         #region Private Methods
-        
+
         /// <summary>
         /// add assembly to list
         /// </summary>
@@ -607,6 +630,29 @@ namespace LateBindingApi.Core
                 message += string.Format("Loaded LateBindingApi Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
 
             throw new LateBindingApiException(message);
+        }
+
+        private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            try
+            {
+                string directoryName = _thisAssembly.CodeBase.Substring(0, _thisAssembly.CodeBase.LastIndexOf("/"));
+                directoryName = directoryName.Replace("/", "\\").Substring(8);
+                string fileName = args.Name.Substring(0, args.Name.IndexOf(","));
+                string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
+                if (System.IO.File.Exists(fullFileName))
+                {
+                    Assembly assembly = System.Reflection.Assembly.Load(args.Name);
+                    return assembly;
+                }
+                else
+                    return null;     
+            }
+            catch
+            {
+                return null;   
+            }
+             
         }
 
         #endregion
