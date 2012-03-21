@@ -198,7 +198,7 @@ Public Class Connect
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnAction." + details, "Unregister " + _addinName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnAction." + details, "OnAction", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 

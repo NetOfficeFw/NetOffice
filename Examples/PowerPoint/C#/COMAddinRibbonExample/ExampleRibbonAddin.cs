@@ -14,7 +14,7 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
-    [GuidAttribute("F09B3141-ADBB-44c1-A6DC-A7F49498AB0F"), ProgId("WPowerPointibbonAddinCSharp.Addin")]
+    [GuidAttribute("F09B3141-ADBB-44c1-A6DC-A7F49498AB0F"), ProgId("PowerPointRibbonAddinCSharp.Addin")]
     public class ExampleRibbonAddin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";

@@ -15,7 +15,7 @@ namespace ExcelAddinCSharp
 {
     [ComVisible(true)]
     [GuidAttribute("EF294277-3DF1-425F-AC90-8687DEAC280D"), ProgId("ExcelAddinCSharp.TestAddin")]
-    public class TestAddin : IDTExtensibility2, IRibbonExtensibility, ICustomTaskPaneConsumer
+    public class TestAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
         private static readonly string _prodId = "ExcelAddinCSharp.TestAddin";
@@ -220,7 +220,7 @@ namespace ExcelAddinCSharp
 
         #region Ribbon Gui Trigger
 
-        public void OnAction(IRibbonControl control)
+        public void OnAction(Office.IRibbonControl control)
         {
             try
             {

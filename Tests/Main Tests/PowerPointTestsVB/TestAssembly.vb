@@ -18,11 +18,11 @@ Public Class TestAssembly
             LateBindingApi.Core.Factory.Initialize()
 
             _listPackages = New List(Of ITestPackage)
-            _listPackages.Add(New Test01())
-            _listPackages.Add(New Test02())
-            _listPackages.Add(New Test03())
-            _listPackages.Add(New Test04())
-            _listPackages.Add(New Test05())
+            '_listPackages.Add(New Test01())
+            '_listPackages.Add(New Test02())
+            '_listPackages.Add(New Test03())
+            '_listPackages.Add(New Test04())
+            '_listPackages.Add(New Test05())
             _listPackages.Add(New Test06())
         End If
 

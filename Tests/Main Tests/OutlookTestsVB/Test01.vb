@@ -58,7 +58,10 @@ Public Class Test01
                     Console.WriteLine(mailItem.SenderName)
                 End If
 
-                item.Dispose()
+                If Not IsNothing(item) Then
+                    item.Dispose()
+                End If
+
                 item = items.GetNext()
                 i += 1
 

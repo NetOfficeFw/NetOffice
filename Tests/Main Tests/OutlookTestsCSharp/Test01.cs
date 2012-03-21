@@ -59,8 +59,10 @@ namespace OutlookTestsCSharp
                     Outlook.MailItem mailItem = item as Outlook.MailItem;
                     if (null != mailItem)
                         Console.WriteLine(mailItem.SenderName);
- 
-                    item.Dispose();
+                    
+                    if(null != item)
+                        item.Dispose();
+
                     item = items.GetNext();
                     i++;
                 } while (null != item);

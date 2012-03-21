@@ -36,11 +36,11 @@ namespace PowerPointTestsCSharp
                 LateBindingApi.Core.Factory.Initialize();
 
                 _listPackages = new List<ITestPackage>();
-                _listPackages.Add(new Test01());
-                _listPackages.Add(new Test02());
-                _listPackages.Add(new Test03());
-                _listPackages.Add(new Test04());
-                _listPackages.Add(new Test05());
+                //_listPackages.Add(new Test01());
+                //_listPackages.Add(new Test02());
+                //_listPackages.Add(new Test03());
+                //_listPackages.Add(new Test04());
+                //_listPackages.Add(new Test05());
                 _listPackages.Add(new Test06());
             }
             return _listPackages.ToArray();

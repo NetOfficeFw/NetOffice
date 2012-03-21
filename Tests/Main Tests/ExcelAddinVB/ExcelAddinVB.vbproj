@@ -91,9 +91,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TestAddin.vb" />
-    <Compile Include="ICustomTaskPaneConsumer.vb" />
     <Compile Include="IDTExtensibility2.vb" />
-    <Compile Include="IRibbonUI.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

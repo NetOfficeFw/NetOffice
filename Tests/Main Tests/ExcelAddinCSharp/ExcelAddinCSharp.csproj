@@ -55,8 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICustomTaskPaneConsumer.cs" />
-    <Compile Include="IRibbonUI.cs" />
     <Compile Include="SampleControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

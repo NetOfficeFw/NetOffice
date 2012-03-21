@@ -13,7 +13,7 @@ Imports NetOffice.OfficeApi.Enums
 
 <GuidAttribute("9779BAB6-021F-4D3A-834F-6E4634CD1EDB"), ProgIdAttribute("ExcelAddinVB.TestAddin")> _
 Public Class TestAddin
-    Implements IDTExtensibility2, IRibbonExtensibility, ICustomTaskPaneConsumer
+    Implements IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
     Private Shared ReadOnly _prodId As String = "ExcelAddinVB.TestAddin"
@@ -42,7 +42,7 @@ Public Class TestAddin
     Private _myPane As Office._CustomTaskPane
     Private _myControl As SampleControl
 
-    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements ICustomTaskPaneConsumer.CTPFactoryAvailable
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements Office.ICustomTaskPaneConsumer.CTPFactoryAvailable
 
         Try
             _myCtpFactory = New NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst)
@@ -184,7 +184,7 @@ Public Class TestAddin
 
 #Region "IRibbonExtensibility Members"
 
-    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements IRibbonExtensibility.GetCustomUI
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
 
         Try
             _ribbonUIPassed = True
@@ -205,7 +205,7 @@ Public Class TestAddin
 
 #Region "Ribbon Gui Trigger"
 
-    Public Sub OnAction(ByVal control As IRibbonControl)
+    Public Sub OnAction(ByVal control As Office.IRibbonControl)
         Try
 
             Select Case control.Id
