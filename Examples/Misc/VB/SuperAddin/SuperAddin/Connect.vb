@@ -16,7 +16,7 @@ Imports Extensibility
 
 <GuidAttribute("76345C06-E899-4762-8F75-C54F49D813B9"), ProgIdAttribute("SuperAddinVB.Connect")> _
 Public Class Connect
-    Implements IDTExtensibility2, IRibbonExtensibility
+    Implements IDTExtensibility2, Office.IRibbonExtensibility
 
     Private Shared ReadOnly _prodId As String = "SuperAddinVB.Connect"
     Private Shared ReadOnly _addinName As String = "SuperAddinVB"
@@ -169,7 +169,7 @@ Public Class Connect
 
 #Region "IRibbonExtensibility Members"
 
-    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements IRibbonExtensibility.GetCustomUI
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
 
         Try
 
@@ -186,7 +186,7 @@ Public Class Connect
 
     End Function
 
-    Public Sub OnAction(ByVal control As IRibbonControl)
+    Public Sub OnAction(ByVal control As Office.IRibbonControl)
 
         Try
 

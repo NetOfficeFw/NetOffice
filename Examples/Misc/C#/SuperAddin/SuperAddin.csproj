@@ -91,7 +91,6 @@
       <DependentUpon>FormShowError.cs</DependentUpon>
     </Compile>
     <Compile Include="HostApplication.cs" />
-    <Compile Include="IRibbonUI.cs" />
     <Compile Include="OfficeRegistry.cs" />
     <Compile Include="TrayIcon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,7 +15,7 @@ namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
     [GuidAttribute("B45E5A48-9A73-4dc5-A574-F56757C4A145"), ProgId("AccessRibbonAddinCSharp.Addin")]
-    public class ExampleRibbonAddin : IDTExtensibility2, IRibbonExtensibility
+    public class ExampleRibbonAddin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Access\\AddIns\\";
         private static readonly string _prodId           = "AccessRibbonAddinCSharp.Addin";
@@ -170,7 +170,7 @@ namespace COMAddinRibbonExample
 
         #region Ribbon Gui Trigger
 
-        public void OnAction(IRibbonControl control)
+        public void OnAction(Office.IRibbonControl control)
         {
             try
             {

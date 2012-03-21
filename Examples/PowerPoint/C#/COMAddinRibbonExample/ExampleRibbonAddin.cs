@@ -15,7 +15,7 @@ namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
     [GuidAttribute("F09B3141-ADBB-44c1-A6DC-A7F49498AB0F"), ProgId("WPowerPointibbonAddinCSharp.Addin")]
-    public class ExampleRibbonAddin : IDTExtensibility2, IRibbonExtensibility
+    public class ExampleRibbonAddin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
         private static readonly string _prodId           = "PowerPointRibbonAddinCSharp.Addin";
@@ -169,7 +169,7 @@ namespace COMAddinRibbonExample
 
         #region Ribbon Gui Trigger
 
-        public void OnAction(IRibbonControl control)
+        public void OnAction(Office.IRibbonControl control)
         {
             try
             {

@@ -15,7 +15,7 @@ namespace COMAddinRibbonExample
 {
     [ComVisible(true)]
     [GuidAttribute("37AED73E-B93D-4a86-A021-DC19BE4782E3"), ProgId("OutlookRibbonAddinCSharp.Addin")]
-    public class ExampleRibbonAddin : IDTExtensibility2, IRibbonExtensibility
+    public class ExampleRibbonAddin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinRegistryKey = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
         private static readonly string _prodId           = "OutlookRibbonAddinCSharp.Addin";
@@ -152,7 +152,7 @@ namespace COMAddinRibbonExample
 
         #region Ribbon Gui Trigger
 
-        public void OnAction(IRibbonControl control)
+        public void OnAction(Office.IRibbonControl control)
         {
             try
             {

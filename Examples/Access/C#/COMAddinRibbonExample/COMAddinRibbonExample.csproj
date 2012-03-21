@@ -72,7 +72,6 @@
     <Compile Include="ExampleRibbonAddin.cs" />
     <Compile Include="IDTExtensibility2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RibbonInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RibbonUI.xml" />

@@ -12,7 +12,7 @@ Imports NetOffice.OfficeApi.Enums
 
 <GuidAttribute("CEED1136-9063-4621-8BEB-A4DA8B35D89B"), ProgIdAttribute("WordRibbonAddinVB.Addin")> _
 Public Class ExampleRibbonAddin
-    Implements IDTExtensibility2, IRibbonExtensibility
+    Implements IDTExtensibility2, Office.IRibbonExtensibility
 
     Private Shared ReadOnly _addinRegistryKey As String = "Software\\Microsoft\\Office\\Word\\AddIns\\"
     Private Shared ReadOnly _prodId As String = "WordRibbonAddinVB.Addin"
@@ -146,7 +146,7 @@ Public Class ExampleRibbonAddin
 
 #Region "IRibbonExtensibility Members"
 
-    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements IRibbonExtensibility.GetCustomUI
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
 
         Try
 
@@ -166,7 +166,7 @@ Public Class ExampleRibbonAddin
 
 #Region "Ribbon Gui Trigger"
 
-    Public Sub OnAction(ByVal control As IRibbonControl)
+    Public Sub OnAction(ByVal control As Office.IRibbonControl)
         Try
 
             Select Case control.Id

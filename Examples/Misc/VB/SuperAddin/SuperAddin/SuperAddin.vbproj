@@ -118,7 +118,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="OfficeRegistry.vb" />
-    <Compile Include="RibbonInterface.vb" />
     <Compile Include="TrayIcon.vb" />
   </ItemGroup>
   <ItemGroup>

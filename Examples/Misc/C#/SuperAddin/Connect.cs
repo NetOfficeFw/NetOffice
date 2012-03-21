@@ -22,7 +22,7 @@ namespace SuperAddinCSharp
     /// </summary>
     [ComVisible(true)]
     [GuidAttribute("8ED7D7E2-D084-4ba7-999E-5657147460DD"), ProgId("SuperAddinCSharp.Connect")]
-    public class Connect : IDTExtensibility2, IRibbonExtensibility
+    public class Connect : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinName = "SuperAddinCSharp";
         private static readonly string _prodId = "SuperAddinCSharp.Connect";
@@ -233,7 +233,7 @@ namespace SuperAddinCSharp
             }
         }
 
-        public void OnAction(IRibbonControl control)
+        public void OnAction(Office.IRibbonControl control)
         {
             try
             {
