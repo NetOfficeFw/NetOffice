@@ -41,9 +41,33 @@
     <ApplicationIcon>NetOffice.Icon.32x32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccessApi">
+      <HintPath>..\..\Current Binaries\AccessApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ExcelApi">
+      <HintPath>..\..\Current Binaries\ExcelApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Cecil, Version=0.6.8.8607, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeApi">
+      <HintPath>..\..\Current Binaries\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OutlookApi">
+      <HintPath>..\..\Current Binaries\OutlookApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PowerPointApi">
+      <HintPath>..\..\Current Binaries\PowerPointApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -55,6 +79,14 @@
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="VBIDEApi">
+      <HintPath>..\..\Current Binaries\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WordApi">
+      <HintPath>..\..\Current Binaries\WordApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +154,26 @@
     <Compile Include="OfficeCompatibility\ReportControl.Designer.cs">
       <DependentUpon>ReportControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfficeUI\ApplicationWrapper.cs" />
+    <Compile Include="OfficeUI\CommandBarsWrapper.cs" />
+    <Compile Include="OfficeUI\OfficeUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeUI\OfficeUIControl.Designer.cs">
+      <DependentUpon>OfficeUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeUI\SelectOfficeAppControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeUI\SelectOfficeAppControl.Designer.cs">
+      <DependentUpon>SelectOfficeAppControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeUI\WaitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeUI\WaitControl.Designer.cs">
+      <DependentUpon>WaitControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutlookSecurity\OutlookSecurityControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +200,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OfficeCompatibility\ReportControl.resx">
       <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeUI\OfficeUIControl.resx">
+      <DependentUpon>OfficeUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeUI\SelectOfficeAppControl.resx">
+      <DependentUpon>SelectOfficeAppControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeUI\WaitControl.resx">
+      <DependentUpon>WaitControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutlookSecurity\OutlookSecurityControl.resx">
       <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
@@ -177,6 +238,8 @@
     <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\OutlookApi.dll.gz" />
     <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\PowerPointApi.dll.gz" />
     <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\WordApi.dll.gz" />
+    <EmbeddedResource Include="OfficeUI\Info1031.rtf" />
+    <EmbeddedResource Include="OfficeUI\Info1033.rtf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -340,6 +403,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NetOffice.Icon.32x32.ico" />
+    <EmbeddedResource Include="OfficeUI\SelectOfficeAppControlTable.txt" />
+    <EmbeddedResource Include="OfficeUI\WaitControlTable.txt" />
+    <EmbeddedResource Include="OfficeUI\MessageTable.txt" />
+    <EmbeddedResource Include="OfficeUI\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,12 @@
+﻿[1031]
+labelInfo = Nutzen Sie das Kontextmenü in der linken Übersicht um Elemente zu entfernen.
+buttonStartApplication = Anwendung auswählen
+buttonCloseOfficeApp = Office Anwendung schliessen
+checkBoxScanForProperties = Eigenschaften abrufen
+[End]
+[1033]
+labelInfo = Use the context menu in the left area to remove an element.
+buttonStartApplication = Choose Application
+buttonCloseOfficeApp = Close Application
+checkBoxScanForProperties = Get Properties
+[End]

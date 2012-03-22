@@ -88,6 +88,15 @@ namespace NetOffice.DeveloperToolbox
                 newControl4.Dock = DockStyle.Fill;
                 _controls.Add(newControl4);
 
+                OfficeUIControl newControl6 = new OfficeUIControl();
+                tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl6.ControlCaption);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].Controls.Add(newControl6);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].Tag = newControl6;
+                imageListTabMain.Images.Add(newControl6.Icon);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
+                newControl6.Dock = DockStyle.Fill;
+                _controls.Add(newControl6);
+
                 OutlookSecurityControl newControl5 = new OutlookSecurityControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl5.ControlCaption);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].Controls.Add(newControl5);
@@ -212,7 +221,7 @@ namespace NetOffice.DeveloperToolbox
                 checkBoxStartAppMinimized.Checked = Convert.ToBoolean(appNode.Attributes.Item(0).Value);
                 checkBoxMinimizeToTray.Checked = Convert.ToBoolean(appNode.Attributes.Item(1).Value);
                 checkBoxStartAppWithWindows.Checked = Convert.ToBoolean(appNode.Attributes.Item(2).Value);
-                comboBoxLanguage.SelectedIndex = LanguageIDToIndex((appNode.Attributes.Item(3).Value));
+                comboBoxLanguage.SelectedIndex = Convert.ToInt32((appNode.Attributes.Item(3).Value));
                  
                 foreach (IToolboxControl item in _controls)
                 { 

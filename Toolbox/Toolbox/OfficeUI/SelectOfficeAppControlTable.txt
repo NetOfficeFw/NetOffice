@@ -1,0 +1,10 @@
+﻿[1031]
+labelInfo = Das Abfragen der UI Elemente kann etwas Zeit in Anspruch nehmen.
+buttonClose = Abbrechen
+buttonSelect = Auswählen
+[End]
+[1033]
+labelInfo = Get all the UI element informations is a long time operation.
+buttonClose = Cancel
+buttonSelect = Choose
+[End]
