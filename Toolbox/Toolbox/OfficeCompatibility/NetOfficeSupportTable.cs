@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Text;
+using System.Reflection;
 using System.IO;
 using System.IO.Compression;
 using Mono.Cecil;
@@ -19,16 +20,58 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         AssemblyDefinition _assOutlook;
         AssemblyDefinition _assPowerPoint;
         AssemblyDefinition _assAccess;
+        Assembly _thisAssembly = Assembly.GetExecutingAssembly();
         
         public NetOfficeSupportTable()
         {
-            _assOffice = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.OfficeApi.dll.gz"));
-            _assExcel = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.ExcelApi.dll.gz"));
-            _assWord = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.WordApi.dll.gz"));
-            _assOutlook = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.OutlookApi.dll.gz"));
-            _assPowerPoint = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.PowerPointApi.dll.gz"));
-            _assAccess = AssemblyDefinition.ReadAssembly(ReadEmbeddedAssembly("ReferenceAssemblies.AccessApi.dll.gz"));
-        }
+            AssemblyName[] referencedAssemblies = _thisAssembly.GetReferencedAssemblies();
+            foreach (AssemblyName item in referencedAssemblies)
+            {
+                {
+                    if (item.Name.StartsWith("OfficeApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assOffice = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("ExcelApi"))                    
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assExcel = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("WordApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assWord = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("OutlookApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assOutlook = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("OutlookApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assOutlook = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("PowerPointApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assPowerPoint = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("AccessApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assAccess = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                }
+            }        }
 
         /// <summary>
         /// returns enum member name for an enum value
@@ -326,6 +369,18 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             for (int i = 0; i < versions.Length; i++)
                 result[i] = Convert.ToString(versions[i].Value);
             return result;
+        }
+
+        private string GetPhysicalPath(AssemblyName assemblyName)
+        {
+
+            string directoryName = _thisAssembly.CodeBase.Substring(0, _thisAssembly.CodeBase.LastIndexOf("/"));
+            directoryName = directoryName.Replace("/", "\\").Substring(8);
+            string fileName = assemblyName.Name;
+            if (fileName.IndexOf(",") > -1)
+                fileName = assemblyName.Name.Substring(0, assemblyName.Name.IndexOf(","));
+            string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
+            return fullFileName;
         }
 
         private static Stream ReadEmbeddedAssembly(string ressourcePath)
