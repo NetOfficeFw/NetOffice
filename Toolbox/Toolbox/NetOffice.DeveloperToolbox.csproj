@@ -232,12 +232,6 @@
     <EmbeddedResource Include="OfficeCompatibility\Info1031.rtf" />
     <EmbeddedResource Include="OfficeCompatibility\Info1033.rtf" />
     <None Include="app.config" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\AccessApi.dll.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\ExcelApi.dll.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\OfficeApi.dll.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\OutlookApi.dll.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\PowerPointApi.dll.gz" />
-    <EmbeddedResource Include="OfficeCompatibility\ReferenceAssemblies\WordApi.dll.gz" />
     <EmbeddedResource Include="OfficeUI\Info1031.rtf" />
     <EmbeddedResource Include="OfficeUI\Info1033.rtf" />
     <None Include="Properties\Settings.settings">
