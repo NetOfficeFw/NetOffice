@@ -223,19 +223,23 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
-                ShowWaitPanel(false);
+                
 
                 if ((e.Node.Nodes.Count == 1) && (e.Node.Nodes[0].Text == "#stub"))
+                {
+                    ShowWaitPanel(false);
+
                     e.Node.Nodes.Clear();
 
-                if (e.Node.Tag is OfficeApi.CommandBar)
-                {
-                    OfficeApi.CommandBar commandBar = e.Node.Tag as OfficeApi.CommandBar;
-                    foreach (OfficeApi.CommandBarControl control in commandBar.Controls)
+                    if (e.Node.Tag is OfficeApi.CommandBar)
                     {
-                        TreeNode subNode = e.Node.Nodes.Add(control.Caption);
-                        subNode.ImageIndex = 1;
-                        subNode.Tag = control;
+                        OfficeApi.CommandBar commandBar = e.Node.Tag as OfficeApi.CommandBar;
+                        foreach (OfficeApi.CommandBarControl control in commandBar.Controls)
+                        {
+                            TreeNode subNode = e.Node.Nodes.Add(control.Caption);
+                            subNode.ImageIndex = 1;
+                            subNode.Tag = control;
+                        }
                     }
                 }
             }
