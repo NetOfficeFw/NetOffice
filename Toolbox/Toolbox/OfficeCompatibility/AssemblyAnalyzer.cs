@@ -127,30 +127,37 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
         private void SetupSupportInfo(SupportInfo[] info, string name)
         {
-            bool found09 = true;
-            bool found10 = true;
-            bool found11 = true;
-            bool found12 = true;
-            bool found14 = true;
+            bool found09 = false;
+            bool found10 = false;
+            bool found11 = false;
+            bool found12 = false;
+            bool found14 = false;
+
+            bool inUse = false;
 
             foreach (XElement item in _report.Element("Document").Element("Assembly").Element("Classes").Elements("Class"))
             {
                 /*
                  var supportNodes = item.Descendants("SupportByLibrary");
                 */
-
+                if (item.Attribute("Name").Value == "ApplicationWrapper")
+                {
+                    Console.WriteLine(item.Attribute("Name").Value);
+                }
+                else
+                {
+                    Console.WriteLine(item.Attribute("Name").Value);
+                }
                 var supportNodes = (from a in item.Descendants("SupportByLibrary")
                                     where a.Attribute("Api").Value.Equals(name, StringComparison.InvariantCultureIgnoreCase)
                                     select a);
+                
                 if ((null == supportNodes) || (supportNodes.Count() == 0))
                 {
-                    info[0] = new SupportInfo(SupportVersion.NotUse, name, 9);
-                    info[1] = new SupportInfo(SupportVersion.NotUse, name, 10);
-                    info[2] = new SupportInfo(SupportVersion.NotUse, name, 11);
-                    info[3] = new SupportInfo(SupportVersion.NotUse, name, 12);
-                    info[4] = new SupportInfo(SupportVersion.NotUse, name, 14);
-                    return;
+                    continue;
                 }
+
+                inUse = true;
 
                 bool has09Support = false;
                 bool has10Support = false;
@@ -166,24 +173,35 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     has12Support = IncludesVersion(typeNodeItem, "12");
                     has14Support = IncludesVersion(typeNodeItem, "14");
 
-                    if (!has09Support)
-                        found09 = false;
-                    if (!has10Support)
-                        found10 = false;
-                    if (!has11Support)
-                        found11 = false;
-                    if (!has12Support)
-                        found12 = false;
-                    if (!has14Support)
-                        found14 = false;
+                    if (has09Support)
+                        found09 = true;
+                    if (has10Support)
+                        found10 = true;
+                    if (has11Support)
+                        found11 = true;
+                    if (has12Support)
+                        found12 = true;
+                    if (has14Support)
+                        found14 = true;
                 }
             }
 
-            info[0] = new SupportInfo(BoolToSupportVersion(found09), name, 9);
-            info[1] = new SupportInfo(BoolToSupportVersion(found10), name, 10);
-            info[2] = new SupportInfo(BoolToSupportVersion(found11), name, 11);
-            info[3] = new SupportInfo(BoolToSupportVersion(found12), name, 12);
-            info[4] = new SupportInfo(BoolToSupportVersion(found14), name, 14);
+            if (inUse)
+            {
+                info[0] = new SupportInfo(BoolToSupportVersion(found09), name, 9);
+                info[1] = new SupportInfo(BoolToSupportVersion(found10), name, 10);
+                info[2] = new SupportInfo(BoolToSupportVersion(found11), name, 11);
+                info[3] = new SupportInfo(BoolToSupportVersion(found12), name, 12);
+                info[4] = new SupportInfo(BoolToSupportVersion(found14), name, 14);
+            }
+            else
+            {
+                info[0] = new SupportInfo(SupportVersion.NotUse, name, 9);
+                info[1] = new SupportInfo(SupportVersion.NotUse, name, 10);
+                info[2] = new SupportInfo(SupportVersion.NotUse, name, 11);
+                info[3] = new SupportInfo(SupportVersion.NotUse, name, 12);
+                info[4] = new SupportInfo(SupportVersion.NotUse, name, 14);
+            }
         }
 
         private void RemoveDelegateTypes()
@@ -403,7 +421,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             foreach (ParameterDefinition paramDefintion in methodDefinition.Parameters)
             {
                 string[] supportByLibrary = _netOfficeSupportTable.GetTypeSupport(paramDefintion.ParameterType.FullName);
-                if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && (null != supportByLibrary))
+                if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && (!paramDefintion.ParameterType.FullName.StartsWith("NetOffice.DeveloperToolbox")) && (null != supportByLibrary))
                 {
                     if (null == parametersNode)
                     {
@@ -433,7 +451,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             }
 
             // returnvalue
-            if (methodDefinition.ReturnType.FullName.StartsWith(_apiName))
+            if ((methodDefinition.ReturnType.FullName.StartsWith(_apiName) && (!methodDefinition.ReturnType.FullName.StartsWith("NetOffice.DeveloperToolbox"))))
             {
                 result = true;
                 string componentName = NetOfficeSupportTable.GetLibrary(methodDefinition.ReturnType.FullName);
@@ -785,7 +803,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         string typeName = GetNameFromNewObjMethodReference(methodReference);
                         string componentName = NetOfficeSupportTable.GetLibrary(typeName);
                         
-                        if (typeName.StartsWith(_apiName))
+                        if ((typeName.StartsWith(_apiName)) && (!typeName.StartsWith("NetOffice.DeveloperToolbox")))
                         {
                             string[] supportByLibrary = _netOfficeSupportTable.GetTypeCallSupport(callName);
                             result = true;

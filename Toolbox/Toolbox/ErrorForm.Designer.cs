@@ -120,6 +120,8 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
+            this.listViewTrace.FullRowSelect = true;
+            this.listViewTrace.GridLines = true;
             this.listViewTrace.Location = new System.Drawing.Point(26, 130);
             this.listViewTrace.Name = "listViewTrace";
             this.listViewTrace.Size = new System.Drawing.Size(374, 164);

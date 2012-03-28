@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OfficeUIControl));
-            this.treeViewOfficeUI = new System.Windows.Forms.TreeView();
             this.contextMenuTreeView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripReset = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListTreeView = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.buttonCloseOfficeApp = new System.Windows.Forms.Button();
+            this.checkBoxScanForProperties = new System.Windows.Forms.CheckBox();
             this.propertyGridItems = new System.Windows.Forms.PropertyGrid();
             this.buttonStartApplication = new System.Windows.Forms.Button();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelInfo = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
-            this.checkBoxScanForProperties = new System.Windows.Forms.CheckBox();
-            this.buttonCloseOfficeApp = new System.Windows.Forms.Button();
+            this.treeViewOfficeUI = new NetOffice.DeveloperToolbox.MultiSelectTreeView();
             this.contextMenuTreeView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -52,20 +52,6 @@
             this.panelInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // treeViewOfficeUI
-            // 
-            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
-            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewOfficeUI.ImageIndex = 0;
-            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
-            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
-            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
-            this.treeViewOfficeUI.SelectedImageIndex = 0;
-            this.treeViewOfficeUI.Size = new System.Drawing.Size(203, 374);
-            this.treeViewOfficeUI.TabIndex = 0;
-            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
-            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
             // 
             // contextMenuTreeView
             // 
@@ -118,6 +104,31 @@
             this.splitContainer1.Size = new System.Drawing.Size(797, 374);
             this.splitContainer1.SplitterDistance = 203;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // buttonCloseOfficeApp
+            // 
+            this.buttonCloseOfficeApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCloseOfficeApp.Enabled = false;
+            this.buttonCloseOfficeApp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCloseOfficeApp.Image")));
+            this.buttonCloseOfficeApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCloseOfficeApp.Location = new System.Drawing.Point(398, 349);
+            this.buttonCloseOfficeApp.Name = "buttonCloseOfficeApp";
+            this.buttonCloseOfficeApp.Size = new System.Drawing.Size(189, 25);
+            this.buttonCloseOfficeApp.TabIndex = 4;
+            this.buttonCloseOfficeApp.Text = "Office Anwendung schliessen";
+            this.buttonCloseOfficeApp.UseVisualStyleBackColor = true;
+            this.buttonCloseOfficeApp.Click += new System.EventHandler(this.buttonCloseOfficeApp_Click);
+            // 
+            // checkBoxScanForProperties
+            // 
+            this.checkBoxScanForProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxScanForProperties.AutoSize = true;
+            this.checkBoxScanForProperties.Location = new System.Drawing.Point(3, 354);
+            this.checkBoxScanForProperties.Name = "checkBoxScanForProperties";
+            this.checkBoxScanForProperties.Size = new System.Drawing.Size(133, 17);
+            this.checkBoxScanForProperties.TabIndex = 1;
+            this.checkBoxScanForProperties.Text = "Eigenschaften abrufen";
+            this.checkBoxScanForProperties.UseVisualStyleBackColor = true;
             // 
             // propertyGridItems
             // 
@@ -188,30 +199,22 @@
             this.buttonInfo.UseVisualStyleBackColor = true;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
-            // checkBoxScanForProperties
+            // treeViewOfficeUI
             // 
-            this.checkBoxScanForProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxScanForProperties.AutoSize = true;
-            this.checkBoxScanForProperties.Location = new System.Drawing.Point(3, 354);
-            this.checkBoxScanForProperties.Name = "checkBoxScanForProperties";
-            this.checkBoxScanForProperties.Size = new System.Drawing.Size(133, 17);
-            this.checkBoxScanForProperties.TabIndex = 1;
-            this.checkBoxScanForProperties.Text = "Eigenschaften abrufen";
-            this.checkBoxScanForProperties.UseVisualStyleBackColor = true;
-            // 
-            // buttonCloseOfficeApp
-            // 
-            this.buttonCloseOfficeApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCloseOfficeApp.Enabled = false;
-            this.buttonCloseOfficeApp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCloseOfficeApp.Image")));
-            this.buttonCloseOfficeApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCloseOfficeApp.Location = new System.Drawing.Point(398, 349);
-            this.buttonCloseOfficeApp.Name = "buttonCloseOfficeApp";
-            this.buttonCloseOfficeApp.Size = new System.Drawing.Size(189, 25);
-            this.buttonCloseOfficeApp.TabIndex = 4;
-            this.buttonCloseOfficeApp.Text = "Office Anwendung schliessen";
-            this.buttonCloseOfficeApp.UseVisualStyleBackColor = true;
-            this.buttonCloseOfficeApp.Click += new System.EventHandler(this.buttonCloseOfficeApp_Click);
+            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
+            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewOfficeUI.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewOfficeUI.HideSelection = false;
+            this.treeViewOfficeUI.ImageIndex = 0;
+            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
+            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
+            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
+            this.treeViewOfficeUI.SelectedImageIndex = 0;
+            this.treeViewOfficeUI.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewOfficeUI.SelectedNodes")));
+            this.treeViewOfficeUI.Size = new System.Drawing.Size(203, 374);
+            this.treeViewOfficeUI.TabIndex = 1;
+            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
+            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
             // 
             // OfficeUIControl
             // 
@@ -238,7 +241,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeViewOfficeUI;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PropertyGrid propertyGridItems;
         private System.Windows.Forms.ContextMenuStrip contextMenuTreeView;
@@ -252,5 +254,6 @@
         private System.Windows.Forms.ImageList imageListTreeView;
         private System.Windows.Forms.CheckBox checkBoxScanForProperties;
         private System.Windows.Forms.Button buttonCloseOfficeApp;
+        private MultiSelectTreeView treeViewOfficeUI;
     }
 }

@@ -141,6 +141,9 @@
     <Compile Include="ApplicationObserver\ApplicationObserverControl.Designer.cs">
       <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultiSelectTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OfficeCompatibility\CustomTableLayoutControl.cs">
       <SubType>Component</SubType>
     </Compile>

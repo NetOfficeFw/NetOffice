@@ -223,8 +223,6 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
-                
-
                 if ((e.Node.Nodes.Count == 1) && (e.Node.Nodes[0].Text == "#stub"))
                 {
                     ShowWaitPanel(false);
@@ -258,17 +256,21 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
-                if (null == treeViewOfficeUI.SelectedNode)
+                if (treeViewOfficeUI.SelectedNodes.Count == 0)
                     return;
-                if (treeViewOfficeUI.SelectedNode.Tag is OfficeApi.CommandBar)
+
+                foreach (TreeNode node in treeViewOfficeUI.SelectedNodes)
                 {
-                    OfficeApi.CommandBar commandBar = treeViewOfficeUI.SelectedNode.Tag as OfficeApi.CommandBar;
-                    commandBar.Reset();
-                }
-                else if (treeViewOfficeUI.SelectedNode.Tag is OfficeApi.CommandBarControl)
-                {
-                    OfficeApi.CommandBarControl control = treeViewOfficeUI.SelectedNode.Tag as OfficeApi.CommandBarControl;
-                    control.Reset();
+                    if (node.Tag is OfficeApi.CommandBar)
+                    {
+                        OfficeApi.CommandBar commandBar = node.Tag as OfficeApi.CommandBar;
+                        commandBar.Reset();
+                    }
+                    else if (node.Tag is OfficeApi.CommandBarControl)
+                    {
+                        OfficeApi.CommandBarControl control = node.Tag as OfficeApi.CommandBarControl;
+                        control.Reset();
+                    }
                 }
             }
             catch (Exception exception)
@@ -282,19 +284,29 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
-                if (null == treeViewOfficeUI.SelectedNode)
+                if (treeViewOfficeUI.SelectedNodes.Count == 0)
                     return;
-                if (treeViewOfficeUI.SelectedNode.Tag is OfficeApi.CommandBar)
+
+                List<TreeNode> listDelete = new List<TreeNode>();
+                foreach (TreeNode node in treeViewOfficeUI.SelectedNodes)
                 {
-                    OfficeApi.CommandBar commandBar = treeViewOfficeUI.SelectedNode.Tag as OfficeApi.CommandBar;
-                    commandBar.Delete();
+                    if (node.Tag is OfficeApi.CommandBar)
+                    {
+                        OfficeApi.CommandBar commandBar = node.Tag as OfficeApi.CommandBar;                       
+                        commandBar.Delete();
+                        listDelete.Add(node);
+                    }
+                    else if (node.Tag is OfficeApi.CommandBarControl)
+                    {
+                        OfficeApi.CommandBarControl control = node.Tag as OfficeApi.CommandBarControl;
+                        control.Delete();
+                        listDelete.Add(node);
+                    }
                 }
-                else if (treeViewOfficeUI.SelectedNode.Tag is OfficeApi.CommandBarControl)
-                {
-                    OfficeApi.CommandBarControl control = treeViewOfficeUI.SelectedNode.Tag as OfficeApi.CommandBarControl;
-                    control.Delete();
-                    treeViewOfficeUI.SelectedNode.Remove();
-                }
+                
+                foreach (TreeNode node in listDelete)
+                    node.Remove();
+
             }
             catch (Exception exception)
             {

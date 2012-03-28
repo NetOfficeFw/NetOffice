@@ -112,12 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -144,16 +144,16 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="contextMenuStripKeys.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="contextMenuStripKeys.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="toolStripKeyCreate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -207,7 +207,7 @@
         DdFD3g9aX0dyEOwAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="imageListRegistry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="imageListRegistry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>352, 17</value>
   </metadata>
   <data name="imageListRegistry.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -242,21 +242,37 @@
         AQEEAAGAAf8BwAF/BAABwQH/AeAB/wQABP8EAAs=
 </value>
   </data>
-  <metadata name="TypeIcon.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="TypeIcon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="regName.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="regName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="regType.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="regType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="regValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="regValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="contextMenuStripEntries.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="contextMenuStripEntries.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>179, 17</value>
   </metadata>
+  <data name="toolStripCreateEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAh9JREFUOE+lkz9M
+        U3EQx68YHDqoOJi6MJAwmZA0XdzRIn+MFmJiiUwmRndTMXEwwVi0j6b/4LWUxPAngbQSF9GhBAQh8mrU
+        2gCDiYRBBiYHB92+fu9hnw8CcfCSS693v/v87nd3zwNA/ksOAjoMCQSfSOlCVNBK1V/+R3tMSl1DEnBf
+        Zue6AZeeynB45ARebdzF9o9n+PI9hfLOfcxt9uHxXAu6k8fQZUihBtkHYHLh5thZ/MQ8rG99MN8KEouC
+        5BtBdkUwUW6CuezHtTQhQzKsEAfQybKvZ7zY/TWL6YoPGSYkljW+J0nCcu8E+bV6RF/7cDUhuByXgAMI
+        DsrClBXG/FY7MjyoGmdSTdQeWROMvid46Thujws6Y7LoBmB1O4JsmQdWmcwKokt/AWqrL01wjpBIkQDD
+        ju+94+KgYOHrLUxUTjm3HmWYHwT9s4KOmAugY3pRDWFy/fS/AZ8OAXACGFs5j+xnQYo3xFlmlOXWRG31
+        pT+yD5XDnjAgVn/xDEyrAaPrArPKBIKcJtJWX35DYLAfd8Y9aHskltMDf1hCIY5m4OVJ5Kp1yG/yNlZT
+        E7XVpxVGih57jP5eCbkXydv6QArdScG953UwdO5MmNny2aq2+jS5J8X15lnukffgKjcGH0pJ6VpipEAY
+        x6Wqtvo09ie5cd8muj6QpnNX5EYbe6Jz1lGpqq0+jfGsnXwUQP1eajNVvzy3qk9jjugTfgO+dwKB364Q
+        HAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="toolStripCreateStringEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -282,22 +298,6 @@
         gCAIhfXmHs2bmS97DH/YoLXY2LLgg2eQSyktBa3nZEkBIGKIn4q+AaCgQDQgpdblDKfpM56fRMgeTsAa
         SIj1vtb6MQAteySws62DyJ9ArFuC1Zkb8N8lWpVcEqDHMnzTzrjpDjhVa/A2db1NDp4A9CKeEg6LekOO
         gMBWyy5cVhhsBP+FxlcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripCreateEntry.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAh9JREFUOE+lkz9M
-        U3EQx68YHDqoOJi6MJAwmZA0XdzRIn+MFmJiiUwmRndTMXEwwVi0j6b/4LWUxPAngbQSF9GhBAQh8mrU
-        2gCDiYRBBiYHB92+fu9hnw8CcfCSS693v/v87nd3zwNA/ksOAjoMCQSfSOlCVNBK1V/+R3tMSl1DEnBf
-        Zue6AZeeynB45ARebdzF9o9n+PI9hfLOfcxt9uHxXAu6k8fQZUihBtkHYHLh5thZ/MQ8rG99MN8KEouC
-        5BtBdkUwUW6CuezHtTQhQzKsEAfQybKvZ7zY/TWL6YoPGSYkljW+J0nCcu8E+bV6RF/7cDUhuByXgAMI
-        DsrClBXG/FY7MjyoGmdSTdQeWROMvid46Thujws6Y7LoBmB1O4JsmQdWmcwKokt/AWqrL01wjpBIkQDD
-        ju+94+KgYOHrLUxUTjm3HmWYHwT9s4KOmAugY3pRDWFy/fS/AZ8OAXACGFs5j+xnQYo3xFlmlOXWRG31
-        pT+yD5XDnjAgVn/xDEyrAaPrArPKBIKcJtJWX35DYLAfd8Y9aHskltMDf1hCIY5m4OVJ5Kp1yG/yNlZT
-        E7XVpxVGih57jP5eCbkXydv6QArdScG953UwdO5MmNny2aq2+jS5J8X15lnukffgKjcGH0pJ6VpipEAY
-        x6Wqtvo09ie5cd8muj6QpnNX5EYbe6Jz1lGpqq0+jfGsnXwUQP1eajNVvzy3qk9jjugTfgO+dwKB364Q
-        HAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripEditEntryValue.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -349,7 +349,18 @@
         DdFD3g9aX0dyEOwAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="imageListValueTypes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="treeViewRegistry.SelectedNodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkEAQAAAJsBU3lz
+        dGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tTeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9k
+        ZSwgU3lzdGVtLldpbmRvd3MuRm9ybXMsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQ
+        dWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQA
+        AB9TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZVtdAgAAAAgICQMAAAAAAAAAAAAAAAcDAAAAAAEA
+        AAAAAAAABB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQIAAAAL
+</value>
+  </data>
+  <metadata name="imageListValueTypes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>491, 17</value>
   </metadata>
   <data name="imageListValueTypes.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -424,7 +435,7 @@
         O/7RWWI/EoMZ4HCn/t9hwR9/0zIDx3iUuwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="contextMenuStripNoAdmin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="contextMenuStripNoAdmin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>647, 17</value>
   </metadata>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

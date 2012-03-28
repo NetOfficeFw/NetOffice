@@ -23,7 +23,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treeViewRegistry = new System.Windows.Forms.TreeView();
             this.contextMenuStripKeys = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripKeyCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripKeyDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -57,6 +57,7 @@
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -120,25 +121,6 @@
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.HeaderText = "Value";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripKeys;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.Size = new System.Drawing.Size(259, 360);
-            this.treeViewRegistry.TabIndex = 32;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
             // 
             // contextMenuStripKeys
             // 
@@ -348,6 +330,26 @@
             this.splitContainer1.SplitterDistance = 263;
             this.splitContainer1.TabIndex = 34;
             // 
+            // treeViewRegistry
+            // 
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(259, 360);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            // 
             // imageListValueTypes
             // 
             this.imageListValueTypes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListValueTypes.ImageStream")));
@@ -449,6 +451,7 @@
             this.contextMenuStripEntries.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoAdminHint)).EndInit();
@@ -478,7 +481,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.TreeView treeViewRegistry;
         private System.Windows.Forms.DataGridView dataGridViewRegistry;
         private System.Windows.Forms.Label labelCurrentPath;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -509,5 +511,6 @@
         private System.Windows.Forms.PictureBox pictureBoxNoAdminHint;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripNoAdmin;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private MultiSelectTreeView treeViewRegistry;
     }
 }
