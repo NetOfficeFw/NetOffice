@@ -1,0 +1,18 @@
+﻿[German]
+this = Assistent für {0}
+finishButton = Fertig
+cancelButton = Abbrechen
+backButton = Zurück
+nextButton = Weiter
+labelSelectLanguageHeader = Sprache
+labelCurrentStep = Schritt {0} von {1}
+[End]
+[English]
+this = {0} Assistant
+finishButton = Finish
+cancelButton = Cancel
+backButton = Back
+nextButton = Foward
+labelSelectLanguageHeader = Language
+labelCurrentStep = Step {0} of {1}
+[End]
