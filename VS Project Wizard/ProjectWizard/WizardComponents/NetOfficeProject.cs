@@ -263,6 +263,22 @@ namespace NetOffice.ProjectWizard
 
         #region Private Helper
 
+        private static void CreateDefaultSettingsFile()
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _settingsFolder + "\\Settings.xml");
+            if (!File.Exists(filePath))
+            {
+                XmlDocument settingsDocument = new XmlDocument();
+                XmlNode settingsNode = settingsDocument.CreateElement("Settings");
+                XmlNode languageNode = settingsNode.AppendChild(settingsDocument.CreateElement("Language"));
+                XmlAttribute attribute = settingsDocument.CreateAttribute("LCID");
+                attribute.Value = "1033";
+                languageNode.Attributes.Append(attribute);
+                settingsDocument.AppendChild(settingsNode);
+                settingsDocument.Save(filePath);
+            }
+        }
+
         private static int _languageID;
 
         public static TargetLanguage TargetLanguage
@@ -271,6 +287,7 @@ namespace NetOffice.ProjectWizard
             {
                 if (0 == _languageID)
                 {
+                    CreateDefaultSettingsFile();
                     string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _settingsFolder +  "\\Settings.xml");
                     XmlDocument settingsDocument = new XmlDocument();
                     settingsDocument.Load(filePath);

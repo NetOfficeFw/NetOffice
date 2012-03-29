@@ -276,7 +276,7 @@
             this.pictureBoxNetOfficeLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNetOfficeLogo.Image")));
             this.pictureBoxNetOfficeLogo.Location = new System.Drawing.Point(23, 11);
             this.pictureBoxNetOfficeLogo.Name = "pictureBoxNetOfficeLogo";
-            this.pictureBoxNetOfficeLogo.Size = new System.Drawing.Size(44, 43);
+            this.pictureBoxNetOfficeLogo.Size = new System.Drawing.Size(50, 43);
             this.pictureBoxNetOfficeLogo.TabIndex = 30;
             this.pictureBoxNetOfficeLogo.TabStop = false;
             // 
@@ -301,7 +301,7 @@
             this.AcceptButton = this.nextButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 327);
+            this.ClientSize = new System.Drawing.Size(556, 319);
             this.ControlBox = false;
             this.Controls.Add(this.labelTopDelimiter);
             this.Controls.Add(this.labelMiddleDelimiter);
