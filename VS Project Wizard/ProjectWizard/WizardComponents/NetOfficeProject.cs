@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml;
+using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -12,9 +13,9 @@ namespace NetOffice.ProjectWizard
     {   
         #region Fields
 
-        protected static string _assemblyFolder = "NetOffice VS Wizard\\NetOffice Assemblies";
-        protected static string _settingsFolder = "NetOffice VS Wizard";
-
+        protected static string _rootPath;
+        protected static string _assemblyFolder = "NetOffice Assemblies";
+      
         protected TargetProgrammingLanguage _targetProgrammingLanguage;
         protected TargetProjectType _targetProjectType;
         protected Dictionary<string, string> _replacementsDictionary;
@@ -33,6 +34,13 @@ namespace NetOffice.ProjectWizard
 
         public NetOfficeProject()
         {
+            if (string.IsNullOrWhiteSpace(_rootPath))
+            { 
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\NetOffice"); ;
+                _rootPath = rk.GetValue("Path", null) as string;
+                rk.Close();
+            }
+
             CurrentProject = this;
         }
 
@@ -218,7 +226,7 @@ namespace NetOffice.ProjectWizard
             if (!Directory.Exists(destinationAssemblyFolder))
                 Directory.CreateDirectory(destinationAssemblyFolder);
 
-            string rootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _assemblyFolder);
+            string rootPath = Path.Combine(_rootPath, _assemblyFolder);
             if (!Directory.Exists(rootPath))
                 throw new DirectoryNotFoundException("NetOffice Assemblies folder not exists or deleted.");
                    
@@ -237,7 +245,7 @@ namespace NetOffice.ProjectWizard
 
         protected internal void CheckAssemblySourceFolder()
         {
-            string rootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _assemblyFolder);
+            string rootPath = Path.Combine(_rootPath, _assemblyFolder);
             if (!Directory.Exists(rootPath))
                 throw new DirectoryNotFoundException("NetOffice Assemblies folder not exists or deleted.");
         }
@@ -265,7 +273,7 @@ namespace NetOffice.ProjectWizard
 
         private static void CreateDefaultSettingsFile()
         {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _settingsFolder + "\\Settings.xml");
+            string filePath = Path.Combine(_rootPath, "\\Settings.xml");
             if (!File.Exists(filePath))
             {
                 XmlDocument settingsDocument = new XmlDocument();
@@ -288,7 +296,7 @@ namespace NetOffice.ProjectWizard
                 if (0 == _languageID)
                 {
                     CreateDefaultSettingsFile();
-                    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _settingsFolder +  "\\Settings.xml");
+                    string filePath = Path.Combine(_rootPath, "\\Settings.xml");
                     XmlDocument settingsDocument = new XmlDocument();
                     settingsDocument.Load(filePath);
                     XmlNode node = settingsDocument.SelectSingleNode("/Settings/Language");
@@ -306,7 +314,7 @@ namespace NetOffice.ProjectWizard
                 if (value == ProjectWizard.TargetLanguage.English)
                     lcid = 1033;
 
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), _settingsFolder + "\\Settings.xml");
+                string filePath = Path.Combine(_rootPath, "\\Settings.xml");
                 XmlDocument settingsDocument = new XmlDocument();
                 settingsDocument.Load(filePath);
                 XmlNode node = settingsDocument.SelectSingleNode("/Settings/Language");

@@ -1,7 +1,7 @@
 ﻿<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>Konsolenanwendung</Name>
-    <Description>NetOffice Projekt Assistent für eine Konsolenanwendung</Description>
+    <Description>NetOffice Wizard for a Console Application Project</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>

@@ -1,7 +1,7 @@
 ﻿<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>Klassenbibliothek</Name>
-    <Description>NetOffice Projekt Assistent für ein Dynamic Link Library Projekt</Description>
+    <Description>NetOffice Wizard for a Dynamic Link Library Project</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>

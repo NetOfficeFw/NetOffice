@@ -1,7 +1,7 @@
 ﻿<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>WindowsForms Anwendung</Name>
-    <Description>NetOffice Projekt Assistent für eine WindowsForms Anwendung</Description>
+    <Description>NetOffice Wizard for a Windows Forms Application Project</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
