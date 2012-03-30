@@ -150,7 +150,10 @@ namespace NetOffice.ProjectWizard
                 {                    
                     string name = box.Name.Substring("textBox".Length);
                     XmlNode node = _settings.FirstChild.SelectSingleNode(name);
-                    node.InnerText = box.Text.Trim();
+                    if (box.Name == "textBoxClassName")
+                        node.InnerText = box.Text.Trim().Replace(" ", "");
+                    else
+                        node.InnerText = box.Text.Trim();
                 }
             }
         }

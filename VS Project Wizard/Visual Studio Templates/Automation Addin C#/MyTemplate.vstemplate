@@ -1,6 +1,6 @@
 ﻿<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Automations Add-In</Name>
+    <Name>Automation Add-In</Name>
     <Description>NetOffice Wizard for an Automation Addin also known as COM Addin or Shared Addin</Description>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>

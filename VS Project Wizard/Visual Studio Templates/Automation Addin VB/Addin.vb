@@ -5,7 +5,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 $usingItems$
 <GuidAttribute("$randomGuid$"), ProgIdAttribute("$safeprojectname$.$safeitemname$")> _
-Public Class ExampleRibbonAddin
+Public Class Addin
     Implements IDTExtensibility2$ribbonImplement$
 
     Public Sub New()
@@ -45,7 +45,7 @@ $ribbonUIImplementMethod$$classicUICreateRemoveMethod$
     Public Shared Sub RegisterFunction(ByVal type As Type)
         Try
             ' add codebase value
-            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(ExampleRibbonAddin))
+            Dim thisAssembly As Assembly = Assembly.GetAssembly(GetType(Addin))
             Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0")
             key.SetValue("CodeBase", thisAssembly.CodeBase)
             key.Close()

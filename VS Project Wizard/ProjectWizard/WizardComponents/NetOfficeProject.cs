@@ -34,7 +34,7 @@ namespace NetOffice.ProjectWizard
 
         public NetOfficeProject()
         {
-            if (string.IsNullOrWhiteSpace(_rootPath))
+            if (string.IsNullOrEmpty(_rootPath))
             { 
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\NetOffice"); ;
                 _rootPath = rk.GetValue("Path", null) as string;

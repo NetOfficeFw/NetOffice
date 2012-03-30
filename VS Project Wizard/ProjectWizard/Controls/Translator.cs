@@ -26,7 +26,7 @@ namespace NetOffice.ProjectWizard
                 if (caption.IndexOf("{0}") > -1)
                 {
                     string replaceValue = control.Tag as string;
-                    if(!string.IsNullOrWhiteSpace(replaceValue))
+                    if (!string.IsNullOrEmpty(replaceValue))
                         caption = caption.Replace("{0}", replaceValue);
                 }
                 
