@@ -22,6 +22,14 @@ namespace NetOffice.ProjectWizard
         string _ribbonRessourceReference;
         string _ribbonHelperMethod;
 
+        string _applicationFieldCode;
+        string _applicationCreateCode;
+        string _applicationDestroyCode;
+
+        string _applicationMultipleFieldCode;
+        string _applicationMultipleCreateCode;
+        string _applicationMultipleDestroyCode;
+
         #endregion
 
         #region Properties
@@ -80,7 +88,97 @@ namespace NetOffice.ProjectWizard
                 return _ribbonImplement;
             }
         }
+         
+        public string ApplicationFieldCode
+        {
+            get
+            {
+                if (null == _applicationFieldCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationFieldCode = ReadString("ApplicationFieldCodeCSharp.txt");
+                    else
+                        _applicationFieldCode = ReadString("ApplicationFieldCodeVisualBasic.txt");
+                }
+                return _applicationFieldCode;
+            }
+        }
 
+        public string ApplicationCreateCode
+        {
+            get
+            {
+                if (null == _applicationCreateCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationCreateCode = ReadString("ApplicationCreateCodeCSharp.txt");
+                    else
+                        _applicationCreateCode = ReadString("ApplicationCreateCodeVisualBasic.txt");
+                }
+                return _applicationCreateCode;
+            }
+        }
+
+        public string ApplicationDestroyCode
+        {
+            get
+            {
+                if (null == _applicationDestroyCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationDestroyCode = ReadString("ApplicationDestroyCodeCSharp.txt");
+                    else
+                        _applicationDestroyCode = ReadString("ApplicationDestroyCodeVisualBasic.txt");
+                }
+                return _applicationDestroyCode;
+            }
+        }
+
+        public string ApplicationMultipleFieldCode
+        {
+            get
+            {
+                if (null == _applicationMultipleFieldCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationMultipleFieldCode = ReadString("ApplicationMultipleFieldCodeCSharp.txt");
+                    else
+                        _applicationMultipleFieldCode = ReadString("ApplicationMultipleFieldCodeVisualBasic.txt");
+                }
+                return _applicationMultipleFieldCode;
+            }
+        }
+
+        public string ApplicationMultipleCreateCode
+        {
+            get
+            {
+                if (null == _applicationMultipleCreateCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationMultipleCreateCode = ReadString("ApplicationMultipleCreateCodeCSharp.txt");
+                    else
+                        _applicationMultipleCreateCode = ReadString("ApplicationMultipleCreateCodeVisualBasic.txt");
+                }
+                return _applicationMultipleCreateCode;
+            }
+        }
+
+        public string ApplicationMultipleDestroyCode
+        {
+            get
+            {
+                if (null == _applicationMultipleDestroyCode)
+                {
+                    if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
+                        _applicationMultipleDestroyCode = ReadString("ApplicationMultipleDestroyCodeCSharp.txt");
+                    else
+                        _applicationMultipleDestroyCode = ReadString("ApplicationMultipleDestroyCodeVisualBasic.txt");
+                }
+                return _applicationMultipleDestroyCode;
+            }
+        }
+         
         public string RibbonImplementCode
         {
             get
@@ -190,6 +288,51 @@ namespace NetOffice.ProjectWizard
         string GetAddinLoadBehavior()
         {
             return (ListControls[2] as IWizardControl).SettingsDocument.FirstChild.ChildNodes[1].InnerText;
+        }
+
+        void SetApplicationInstance()
+        {
+            IWizardControl hostControl = (ListControls[0] as IWizardControl);
+
+            bool isMoreThenOneApplicationSelected = false;
+
+            int counter = 0;
+            foreach (XmlNode item in hostControl.SettingsDocument.FirstChild.ChildNodes)
+	        {
+                string selected = item.Attributes["Selected"].Value;
+                if (selected.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                    counter++;
+	        }
+
+            isMoreThenOneApplicationSelected = counter > 1;
+
+            if (isMoreThenOneApplicationSelected)
+            {
+                _addDictionary.Add("$ApplicationField$", ApplicationMultipleFieldCode);
+                _addDictionary.Add("$ApplicationConstruction$", ApplicationMultipleCreateCode);
+                _addDictionary.Add("$ApplicationDestroy$", ApplicationMultipleDestroyCode);
+            }
+            else
+            {
+                XmlNode selectedApplicationNode = null;
+                foreach (XmlNode item in hostControl.SettingsDocument.FirstChild.ChildNodes)
+                {
+                    string selected = item.Attributes["Selected"].Value;
+                    if (selected.Equals("true", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        selectedApplicationNode = item;
+                        break;
+                    }
+                }
+
+                string appFieldCode = ApplicationFieldCode.Replace("%OfficeApp%", selectedApplicationNode.LocalName);
+                string appCreateCode = ApplicationCreateCode.Replace("%OfficeApp%", selectedApplicationNode.LocalName);
+                string appDestroyCode = ApplicationDestroyCode;
+
+                _addDictionary.Add("$ApplicationField$", appFieldCode);
+                _addDictionary.Add("$ApplicationConstruction$", appCreateCode);
+                _addDictionary.Add("$ApplicationDestroy$", appDestroyCode);
+            }
         }
 
         void SetClassicUI()
@@ -313,6 +456,7 @@ namespace NetOffice.ProjectWizard
            
             SetUglyRibbonUI();
             SetClassicUI();
+            SetApplicationInstance();
             SetAssemblyReferences();
         }
 

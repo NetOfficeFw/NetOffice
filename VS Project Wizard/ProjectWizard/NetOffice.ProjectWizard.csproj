@@ -206,6 +206,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Controls\GuiControl\AddinGuiControl.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationCreateCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationDestroyCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationFieldCodeCSharp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationCreateCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationDestroyCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationFieldCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleCreateCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleCreateCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleDestroyCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleDestroyCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeVisualBasic.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"C:\Programme\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\gacutil.exe" -i $(TargetFileName)</PostBuildEvent>

@@ -1,0 +1,4 @@
+﻿		If Not IsNothing(_application) Then
+			_application.Dispose()
+			_application = Nothing
+		End If

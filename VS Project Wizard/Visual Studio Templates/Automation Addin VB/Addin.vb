@@ -4,9 +4,11 @@ Imports Extensibility
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 $usingItems$
-<GuidAttribute("$randomGuid$"), ProgIdAttribute("$safeprojectname$.$safeitemname$")> _
+<GuidAttribute("$randomGuid$"), ProgIdAttribute("$safeprojectname$.$safeitemname$"), ComVisible(TRUE)> _
 Public Class Addin
     Implements IDTExtensibility2$ribbonImplement$
+
+$ApplicationField$
 
     Public Sub New()
 
@@ -23,10 +25,13 @@ $classicUICreateCall$
 
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
 
+ $ApplicationConstruction$  
+
     End Sub
 
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
 $classicUIRemoveCall$        
+$ApplicationDestroy$
     End Sub
 
     Public Sub OnAddInsUpdate(ByRef custom As System.Array) Implements IDTExtensibility2.OnAddInsUpdate

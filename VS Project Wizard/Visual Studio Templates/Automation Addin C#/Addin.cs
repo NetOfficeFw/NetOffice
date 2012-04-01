@@ -7,10 +7,10 @@ using Extensibility;
 $usingItems$
 namespace $safeprojectname$
 {
-    [ComVisible(true)]
-    [GuidAttribute("$randomGuid$"), ProgId("$safeprojectname$.$safeitemname$")]
+    [GuidAttribute("$randomGuid$"), ProgId("$safeprojectname$.$safeitemname$"), ComVisible(true)]
     public class Addin :IDTExtensibility2$ribbonImplement$
     {
+$ApplicationField$
         public Addin()
         {
             /* Initialize NetOffice */
@@ -26,12 +26,13 @@ $classicUICreateCall$
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-           
+ $ApplicationConstruction$          
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
 $classicUIRemoveCall$
+$ApplicationDestroy$
         }
 
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
