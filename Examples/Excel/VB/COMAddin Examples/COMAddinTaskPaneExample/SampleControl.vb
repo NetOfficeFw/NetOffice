@@ -74,9 +74,28 @@ Public Class SampleControl
 
     End Sub
 
+    Private Function ToRangeAddress(ByVal rowIndex As Integer, ByVal columnIndex As Integer)
+
+        If (columnIndex < 1) Then Throw (New ArgumentOutOfRangeException("Invalid Argument. columnIndex must be > 0"))
+        If (rowIndex < 1) Then Throw (New ArgumentOutOfRangeException("Invalid Argument. rowIndex must be > 0"))
+
+        Dim columnChars() As String = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
+
+        If (columnIndex <= columnChars.Length) Then Return columnChars(columnIndex - 1) + rowIndex.ToString()
+
+        Dim multi As Integer = columnIndex / columnChars.Length
+        Dim pre As String = columnChars(multi - 1)
+        Dim newx As Integer = columnIndex
+        newx -= (multi * columnChars.Length)
+        Return pre + columnChars(newx - 1) + rowIndex.ToString()
+
+    End Function
+
     Private Function CalculateRangeArea(ByVal rowIndex As Integer, ByVal columnIndex As Integer, ByVal countOfProperties As Integer) As String
 
-        Return "A1:B7"
+        Dim startRangeAddress As String = ToRangeAddress(rowIndex, columnIndex)
+        Dim endEndRangeAddress As String = ToRangeAddress(rowIndex + countOfProperties - 1, columnIndex + 1)
+        Return startRangeAddress + ":" + endEndRangeAddress
 
     End Function
 

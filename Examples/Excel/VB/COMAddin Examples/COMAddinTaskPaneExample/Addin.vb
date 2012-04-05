@@ -32,7 +32,7 @@ Public Class Addin
 
         Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_excelApplication, CTPFactoryInst)
         Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP("COMAddinTaskPaneExample.SampleControl", "NetOffice Sample Pane(VB)", Type.Missing)
-        taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight
+        taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
         taskPane.Width = 300
         taskPane.Visible = True
         _sampleControl = taskPane.ContentControl
@@ -56,7 +56,7 @@ Public Class Addin
 
         Try
 
-            ' initialize api
+            ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
             _excelApplication = New Excel.Application(Nothing, Application)
