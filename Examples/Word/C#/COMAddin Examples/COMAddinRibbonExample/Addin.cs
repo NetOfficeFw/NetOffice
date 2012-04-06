@@ -1,38 +1,38 @@
 ﻿using System;
-using System.Reflection;
-using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
 using Extensibility;
+using System.Reflection;
+using System.Windows.Forms; 
+using Microsoft.Win32;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
-using LateBindingApi.Core;
+using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
+using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("182f0e9a-07db-4375-8372-77e1637d4891"), ProgId("ExcelAddinExampleCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("A7EF79B5-BBF0-4cb8-BE3D-3FD64ADB1FC3"), ProgId("WordAddinExampleCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "ExcelAddinExampleCS4.RibbonAddin";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
+        private static readonly string _prodId                  = "WordAddinExampleCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Excel.Application _excelApplication;
+        Word.Application _wordApplication;
 
         #region IDTExtensibility2 Members
          
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
-            {
+            { 
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _wordApplication = new Word.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -45,8 +45,8 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _wordApplication)
+                    _wordApplication.Dispose();
             }
             catch (Exception exception)
             {
@@ -55,19 +55,16 @@ namespace COMAddinRibbonExampleCS4
             }
         }
 
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
-        {
-
-        }
-
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
-
         }
 
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
+        }
 
+        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        {
         }
 
         #endregion
@@ -78,15 +75,20 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                return ReadRessourceFile("RibbonUI.xml");
+                return ReadString("RibbonUI.xml");
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in GetCustomUI: " + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in GetCustomUI." + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
+
         }
+  
+        #endregion
+
+        #region Ribbon Gui Trigger
 
         public void OnAction(Office.IRibbonControl control)
         {
@@ -108,7 +110,7 @@ namespace COMAddinRibbonExampleCS4
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnAction: " + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in OnAction." + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -139,13 +141,14 @@ namespace COMAddinRibbonExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // add excel addin key
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
-                regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
-                regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
-                regKeyExcel.SetValue("Description", _addinDescription);
-                regKeyExcel.Close();
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
+                rk.SetValue("LoadBehavior", Convert.ToInt32(3));
+                rk.SetValue("FriendlyName", _addinFriendlyName);
+                rk.SetValue("Description", _addinDescription);
+                rk.Close();
             }
             catch (Exception ex)
             {
@@ -159,12 +162,8 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                // unregister addin
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-
-                // unregister addin in office
                 Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
-
             }
             catch (Exception throwedException)
             {
@@ -175,14 +174,14 @@ namespace COMAddinRibbonExampleCS4
 
         #endregion
 
-        #region Private Helper Methods
+        #region Private Helper
 
         /// <summary>
-        /// reads text file from ressource
+        /// reads text from ressource
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        protected internal static string ReadRessourceFile(string fileName)
+        private static string ReadString(string fileName)
         {
             Assembly assembly = typeof(Addin).Assembly;
             System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
@@ -193,10 +192,10 @@ namespace COMAddinRibbonExampleCS4
             if (textStreamReader == null)
                 throw (new System.IO.IOException("Error accessing resource File."));
 
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
+             string text = textStreamReader.ReadToEnd();
+             ressourceStream.Close();
+             textStreamReader.Close();
+             return text;
         }
 
         #endregion

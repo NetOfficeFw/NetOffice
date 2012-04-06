@@ -1,36 +1,37 @@
 ﻿using System;
+using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Extensibility;
 
-using LateBindingApi.Core;
+using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
+using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("704e1286-8739-474f-9f77-409cc468016d"), ProgId("ExcelAddinExampleCS4.SimpleAddin"), ComVisible(true)]
+    [GuidAttribute("23C4F5E6-FA99-44e8-8A0D-28EC373D5B50"), ProgId("WordAddinExampleCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
-        private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                 = "ExcelAddinExampleCS4.SimpleAddin";
-        private static readonly string _addinFriendlyName      = "NetOffice Sample Addin in C#";
-        private static readonly string _addinDescription       = "NetOffice Sample Addin with custom classic UI";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
+        private static readonly string _prodId                  = "WordAddinExampleCS4.SimpleAddin";
+        private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
+        private static readonly string _addinDescription        = "NetOffice Sample Addin with custom classic UI";
 
         // gui elements
-        private static readonly string _toolbarName            = "Sample Toolbar CS4";
-        private static readonly string _toolbarButtonName      = "Sample ToolbarButton CS4";
-        private static readonly string _toolbarPopupName       = "Sample ToolbarPopup CS4";
-        private static readonly string _menuName               = "Sample Menu CS4";
-        private static readonly string _menuButtonName         = "Sample Button CS4";
-        private static readonly string _contextName            = "Sample ContextMenu CS4";
-        private static readonly string _contextMenuButtonName  = "Sample ContextButton CS4";
+        private static readonly string _toolbarName             = "Sample Toolbar CS4";
+        private static readonly string _toolbarButtonName       = "Sample ToolbarButton CS4";
+        private static readonly string _toolbarPopupName        = "Sample ToolbarPopup CS4";
+        private static readonly string _menuName                = "Sample Menu CS4";
+        private static readonly string _menuButtonName          = "Sample Button CS4";
+        private static readonly string _contextName             = "Sample ContextMenu CS4";
+        private static readonly string _contextMenuButtonName   = "Sample ContextButton CS4";
 
-        Excel.Application _excelApplication;
+        Word.Application _wordApplication;
+        Word.Template    _normalDotTemplate; 
 
         #region IDTExtensibility2 Members
 
@@ -41,7 +42,7 @@ namespace COMAddinClassicExampleCS4
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _wordApplication = new Word.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -54,7 +55,9 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-                CreateTemporaryUserInterface();
+                GetNormalDotTemplate();
+                RemoveGui();
+                SetupGui();
             }
             catch (Exception exception)
             {
@@ -62,13 +65,18 @@ namespace COMAddinClassicExampleCS4
                 MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _wordApplication)
+                {
+                    // word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot 
+                    RemoveGui();
+                    _wordApplication.Dispose();
+                }
             }
             catch (Exception exception)
             {
@@ -76,15 +84,13 @@ namespace COMAddinClassicExampleCS4
                 MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+  
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
-
         }
 
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
-
         }
 
         #endregion
@@ -114,13 +120,14 @@ namespace COMAddinClassicExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // add excel addin key
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
-                regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
-                regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
-                regKeyExcel.SetValue("Description", _addinDescription);
-                regKeyExcel.Close();
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
+                rk.SetValue("LoadBehavior", Convert.ToInt32(3));
+                rk.SetValue("FriendlyName", _addinFriendlyName);
+                rk.SetValue("Description", _addinDescription);
+                rk.Close();
             }
             catch (Exception ex)
             {
@@ -134,42 +141,85 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-                // unregister addin
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-
-                // unregister addin in office
                 Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
-
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Unregister" + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         #endregion
-      
-        #region UserInterface
 
-        private void CreateTemporaryUserInterface()
+        #region Private Helper Methods
+        
+        /// <summary>
+        /// returns normal.dot template
+        /// </summary>
+        private void GetNormalDotTemplate()
+        {
+            foreach (Word.Template installedTemplate in _wordApplication.Templates)
+            {
+                if(installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    _normalDotTemplate = installedTemplate;
+                    return;
+                }
+                installedTemplate.Dispose();
+            }
+        }
+        
+        #endregion
+
+        #region Create/Remove UI
+
+        /// <summary>
+        /// removes gui elements if exists
+        /// </summary>
+        private void RemoveGui()
+        {
+            _wordApplication.CustomizationContext = _normalDotTemplate;
+
+            Office.CommandBar menuBar = _wordApplication.CommandBars["Menu Bar"];
+            Office.CommandBar contextBar = _wordApplication.CommandBars["Text"];
+
+            Office.CommandBarControl control = menuBar.FindControl(System.Type.Missing, System.Type.Missing, _menuName, System.Type.Missing, false);
+            if (null != control)
+                control.Delete();
+
+            control = contextBar.FindControl(System.Type.Missing, System.Type.Missing, _contextName, System.Type.Missing, false);
+            if (null != control)
+                control.Delete();
+
+            menuBar.Dispose();
+            contextBar.Dispose();
+        }
+
+        /// <summary>
+        /// creates gui elements
+        /// </summary>
+        private void SetupGui()
         {
             /*
-            // How to: Add Commands to Shortcut Menus in Excel
-            // http://msdn.microsoft.com/en-us/library/0batekf4.aspx            
+            // How to: Add Commands to Shortcut Menus in Word
+            // http://msdn.microsoft.com/de-de/library/dd554969.aspx             
             */
 
-            /* create commandbar */
-            Office.CommandBar commandBar = _excelApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);
-            commandBar.Visible = true;
+            _wordApplication.CustomizationContext = _normalDotTemplate;
 
+            /* create commandbar */
+            Office.CommandBar commandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);            
+            commandBar.Visible = true;
+        
             // add popup to commandbar
             Office.CommandBarPopup commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _toolbarPopupName;
             commandBarPop.Tag = _toolbarPopupName;
 
             // add a button to the popup
-            Office.CommandBarButton commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            Office.CommandBarButton  commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.FaceId = 9;
             commandBarBtn.Caption = _toolbarButtonName;
@@ -177,8 +227,8 @@ namespace COMAddinClassicExampleCS4
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
             /* create menu */
-            commandBar = _excelApplication.CommandBars["Worksheet Menu Bar"];
-
+            commandBar = _wordApplication.CommandBars["Menu Bar"];
+            
             // add popup to menu bar
             commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _menuName;
@@ -192,10 +242,10 @@ namespace COMAddinClassicExampleCS4
             commandBarBtn.Tag = _menuButtonName;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
-            /* create context menu */
-            commandBarPop = (Office.CommandBarPopup)_excelApplication.CommandBars["Cell"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            /* create context menu */ 
+            commandBarPop = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _contextName;
-            commandBarPop.Tag = _contextName;
+            commandBarPop.Tag     = _contextName;
 
             // add a button to the popup
             commandBarBtn = (Office.CommandBarButton)commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
@@ -204,6 +254,8 @@ namespace COMAddinClassicExampleCS4
             commandBarBtn.Tag = _contextMenuButtonName;
             commandBarBtn.FaceId = 9;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
+
+            _normalDotTemplate.Saved = true;
         }
 
         #endregion
@@ -211,14 +263,15 @@ namespace COMAddinClassicExampleCS4
         #region UI Trigger
 
         /// <summary>
-        /// Click event trigger from created buttons. incoming call comes from excel application thread.
+        /// Click event trigger from created buttons. incoming call comes from word application thread.
         /// </summary>
         /// <param name="Ctrl"></param>
         /// <param name="CancelDefault"></param>
-        private void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
+        void commandBarBtn_ClickEvent(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             try
             {
+
                 string message = string.Format("Click from Button {0}.", Ctrl.Caption);
                 MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Ctrl.Dispose();
@@ -231,5 +284,6 @@ namespace COMAddinClassicExampleCS4
         }
 
         #endregion
+
     }
 }

@@ -6,4 +6,4 @@ Example05 - Charts
 Example06 - Dialogs
 Example07 - VBA Code
 Example08 - Events
-Example09 - Customize UIs
+Example09 - Customize UI

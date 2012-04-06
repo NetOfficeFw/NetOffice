@@ -1,30 +1,30 @@
 ﻿using System;
+using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Extensibility;
 
-using LateBindingApi.Core;
+using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
+using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinExampleCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("122EA877-9F5B-4B21-81EE-CBE77D596354"), ProgId("WordAddinExampleCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "ExcelAddinExampleCS4.TaskPaneAddin";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
+        private static readonly string _prodId                  = "WordAddinExampleCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
         private static SampleControl _sampleControl;
-        private static Excel.Application _excelApplication;
+        private static Word.Application _wordApplication;
 
-        internal static Excel.Application Application { get { return _excelApplication; } }
+        internal static Word.Application Application { get { return _wordApplication; } }
 
         #region ICustomTaskPaneConsumer Member
 
@@ -32,7 +32,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
+                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_wordApplication, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
@@ -49,6 +49,7 @@ namespace COMAddinTaskPaneExampleCS4
 
         #endregion
 
+
         #region IDTExtensibility2 Members
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
@@ -58,7 +59,7 @@ namespace COMAddinTaskPaneExampleCS4
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _wordApplication = new Word.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -71,8 +72,8 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _wordApplication)
+                    _wordApplication.Dispose();
             }
             catch (Exception exception)
             {

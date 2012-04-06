@@ -1,28 +1,29 @@
-﻿Imports Microsoft.Win32
+﻿Imports System.Reflection
+Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
 Imports LateBindingApi.Core
-Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.Enums
+Imports Word = NetOffice.WordApi
+Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("307D7577-A119-460D-8D3F-4BE7112088DD"), ProgIdAttribute("ExcelAddinExampleVB4.TaskPaneAddin"), ComVisible(True)> _
+<GuidAttribute("7BA07760-FEC8-4ECB-B1F1-C4C5BAFCB470"), ProgIdAttribute("WordAddinExampleVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 
-    Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "ExcelAddinExampleVB4.TaskPaneAddin"
+    Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Word\\AddIns\\"
+    Private Shared ReadOnly _prodId As String = "WordAddinExampleVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
     Shared _sampleControl As SampleControl
-    Shared _excelApplication As Excel.Application
+    Shared _wordApplication As Word.Application
 
-    Public Shared ReadOnly Property Application() As Excel.Application
+    Public Shared ReadOnly Property Application() As Word.Application
         Get
-            Return _excelApplication
+            Return _wordApplication
         End Get
     End Property
 
@@ -32,7 +33,7 @@ Public Class Addin
 
         Try
 
-            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_excelApplication, CTPFactoryInst)
+            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_wordApplication, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
             taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
@@ -52,7 +53,7 @@ Public Class Addin
 #End Region
 
 #Region "IDTExtensibility2 Member"
-     
+
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As Extensibility.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnConnection
 
         Try
@@ -60,7 +61,7 @@ Public Class Addin
             ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
-            _excelApplication = New Excel.Application(Nothing, Application)
+            _wordApplication = New Word.Application(Nothing, Application)
 
         Catch ex As Exception
 
@@ -75,8 +76,8 @@ Public Class Addin
 
         Try
 
-            If (Not IsNothing(_excelApplication)) Then
-                _excelApplication.Dispose()
+            If (Not IsNothing(_wordApplication)) Then
+                _wordApplication.Dispose()
             End If
 
         Catch ex As Exception
@@ -88,15 +89,15 @@ Public Class Addin
 
     End Sub
 
-    Public Sub OnStartupComplete(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnStartupComplete
-
-    End Sub
-
     Public Sub OnAddInsUpdate(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnAddInsUpdate
 
     End Sub
 
     Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnBeginShutdown
+
+    End Sub
+      
+    Public Sub OnStartupComplete(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnStartupComplete
 
     End Sub
 
