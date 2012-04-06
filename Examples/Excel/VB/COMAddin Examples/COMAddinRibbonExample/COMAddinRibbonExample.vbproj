@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5C713DD1-D595-43DD-B543-6850802E9108}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>COMAddinRibbonExample</RootNamespace>
-    <AssemblyName>ExcelRibbonAddinVB</AssemblyName>
+    <RootNamespace>COMAddinRibbonExampleVB4</RootNamespace>
+    <AssemblyName>COMAddinRibbonExampleVB4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

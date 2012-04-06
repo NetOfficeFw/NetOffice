@@ -21,7 +21,7 @@ Public Class SampleControl
 
         _customers = New List(Of Customer)
 
-        Dim embeddedCustomerXmlContent As String = ReadString("COMAddinTaskPaneExample.CustomerData.xml")
+        Dim embeddedCustomerXmlContent As String = ReadString("CustomerData.xml")
         Dim document As New XmlDocument
         document.LoadXml(embeddedCustomerXmlContent)
         For Each customerNode As XmlNode In document.DocumentElement.ChildNodes
@@ -136,7 +136,8 @@ Public Class SampleControl
     ''' <remarks></remarks>
     Private Function ReadString(ByVal fileName As String) As String
 
-        Dim ressourceStream As System.IO.Stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName)
+        Dim thisAssembly As Assembly = GetType(Addin).Assembly
+        Dim ressourceStream As System.IO.Stream = thisAssembly.GetManifestResourceStream(thisAssembly.GetName().Name + "." + fileName)
         If (IsNothing(ressourceStream)) Then
             Throw (New System.IO.IOException("Error accessing resource Stream."))
         End If

@@ -11,13 +11,13 @@ using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
-namespace COMAddinRibbonExample
+namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("182f0e9a-07db-4375-8372-77e1637d4891"), ProgId("COMAddinRibbonExampleCSharp.Addin"), ComVisible(true)]
+    [GuidAttribute("182f0e9a-07db-4375-8372-77e1637d4891"), ProgId("ExcelAddinExampleCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "COMAddinRibbonExampleCSharp.Addin";
+        private static readonly string _prodId                  = "ExcelAddinExampleCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
@@ -42,7 +42,7 @@ namespace COMAddinRibbonExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -55,7 +55,7 @@ namespace COMAddinRibbonExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -82,7 +82,7 @@ namespace COMAddinRibbonExample
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in GetCustomUI: " + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in GetCustomUI: " + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
         }
@@ -94,20 +94,20 @@ namespace COMAddinRibbonExample
                 switch (control.Id)
                 {
                     case "customButton1":
-                        MessageBox.Show("This is the first sample button.");
+                        MessageBox.Show("This is the first sample button.", _prodId);
                         break;
                     case "customButton2":
-                        MessageBox.Show("This is the second sample button.");
+                        MessageBox.Show("This is the second sample button.", _prodId);
                         break;
                     default:
-                        MessageBox.Show("Unkown Control Id: " + control.Id);
+                        MessageBox.Show("Unkown Control Id: " + control.Id, _prodId);
                         break;
                 }
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnAction: " + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in OnAction: " + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -149,7 +149,7 @@ namespace COMAddinRibbonExample
             catch (Exception ex)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Register Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -162,13 +162,13 @@ namespace COMAddinRibbonExample
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
 
                 // unregister addin in office
-                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId);
+                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
 
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Unregister Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,7 +183,7 @@ namespace COMAddinRibbonExample
         /// <returns></returns>
         protected internal static string ReadRessourceFile(string fileName)
         {
-            Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            Assembly assembly = typeof(Addin).Assembly;
             System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
             if (ressourceStream == null)
                 throw (new System.IO.IOException("Error accessing resource Stream."));

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace COMAddinTaskPaneExample
+namespace COMAddinTaskPaneExampleCS4
 {
     class Customer
     {

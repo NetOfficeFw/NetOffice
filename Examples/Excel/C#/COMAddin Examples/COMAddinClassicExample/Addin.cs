@@ -11,24 +11,24 @@ using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
-namespace COMAddinClassicExample
+namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("704e1286-8739-474f-9f77-409cc468016d"), ProgId("COMAddinClassicExampleCSharp.Addin"), ComVisible(true)]
+    [GuidAttribute("704e1286-8739-474f-9f77-409cc468016d"), ProgId("ExcelAddinExampleCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                 = "COMAddinClassicExampleCSharp.Addin";
+        private static readonly string _prodId                 = "ExcelAddinExampleCS4.SimpleAddin";
         private static readonly string _addinFriendlyName      = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription       = "NetOffice Sample Addin with custom classic UI";
 
-        // gui element text
-        private static readonly string _toolbarName           = "C#_COMAddinClassicToolbar";
-        private static readonly string _toolbarButtonName     = "C#_ToolbarButton";        
-        private static readonly string _toolbarPopupName      = "C#_COMAddinClassicPopup";
-        private static readonly string _menuName              = "C#_COMAddinClassicMenu";
-        private static readonly string _menuButtonName        = "C#_MenuButton";
-        private static readonly string _contextName           = "C#_COMAddinClassicContext";
-        private static readonly string _contextMenuButtonName = "C#_ContextButton";
+        // gui elements
+        private static readonly string _toolbarName            = "Sample Toolbar CS4";
+        private static readonly string _toolbarButtonName      = "Sample ToolbarButton CS4";
+        private static readonly string _toolbarPopupName       = "Sample ToolbarPopup CS4";
+        private static readonly string _menuName               = "Sample Menu CS4";
+        private static readonly string _menuButtonName         = "Sample Button CS4";
+        private static readonly string _contextName            = "Sample ContextMenu CS4";
+        private static readonly string _contextMenuButtonName  = "Sample ContextButton CS4";
 
         Excel.Application _excelApplication;
 
@@ -43,7 +43,7 @@ namespace COMAddinClassicExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -59,7 +59,7 @@ namespace COMAddinClassicExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -72,7 +72,7 @@ namespace COMAddinClassicExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -124,7 +124,7 @@ namespace COMAddinClassicExample
             catch (Exception ex)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Register Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -137,12 +137,13 @@ namespace COMAddinClassicExample
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
 
                 // unregister addin in office
-                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId);
+                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
+
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Unregister Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Unregister" + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -218,13 +219,13 @@ namespace COMAddinClassicExample
             try
             {
                 string message = string.Format("Click from Button {0}.", Ctrl.Caption);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Ctrl.Dispose();
             }
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

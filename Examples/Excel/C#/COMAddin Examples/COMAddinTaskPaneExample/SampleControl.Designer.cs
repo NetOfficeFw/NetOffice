@@ -1,4 +1,4 @@
-﻿namespace COMAddinTaskPaneExample
+﻿namespace COMAddinTaskPaneExampleCS4
 {
     partial class SampleControl
     {

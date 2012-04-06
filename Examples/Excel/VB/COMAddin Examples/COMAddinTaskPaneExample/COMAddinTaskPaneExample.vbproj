@@ -9,8 +9,8 @@
     </SchemaVersion>
     <ProjectGuid>{62787C6F-EA2B-4F98-B9D3-7CF67CAEF84B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>COMAddinTaskPaneExample</RootNamespace>
-    <AssemblyName>COMAddinTaskPaneExampleVB</AssemblyName>
+    <RootNamespace>COMAddinTaskPaneExampleVB4</RootNamespace>
+    <AssemblyName>COMAddinTaskPaneExampleVB4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -82,7 +82,6 @@
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Linq" />
     <Import Include="System.Reflection" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Xml" />

@@ -8,23 +8,23 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("COMAddinClassicExampleVB.Addin"), ComVisible(True)> _
+<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExcelAddinExampleVB4.SimpleAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "COMAddinClassicExampleVB.Addin"
+    Private Shared ReadOnly _prodId As String = "ExcelAddinExampleVB4.SimpleAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom classic UI"
 
     ' gui elements
-    Private Shared ReadOnly _toolbarName = "VB_COMAddinClassicToolbar"
-    Private Shared ReadOnly _toolbarButtonName As String = "VB_ToolbarButton"
-    Private Shared ReadOnly _toolbarPopupName As String = "VB_COMAddinClassicPopup"
-    Private Shared ReadOnly _menuName As String = "VB_COMAddinClassicMenu"
-    Private Shared ReadOnly _menuButtonName As String = "VB_MenuButton"
-    Private Shared ReadOnly _contextName As String = "VB_COMAddinClassicContext"
-    Private Shared ReadOnly _contextMenuButtonName As String = "VB_ContextButton"
+    Private Shared ReadOnly _toolbarName = "Sample Toolbar VB4"
+    Private Shared ReadOnly _toolbarButtonName As String = "Sample ToolbarButton VB4"
+    Private Shared ReadOnly _toolbarPopupName As String = "Sample ToolbarPopup VB4"
+    Private Shared ReadOnly _menuName As String = "Sample Menu VB4"
+    Private Shared ReadOnly _menuButtonName As String = "Sample Button VB4"
+    Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
+    Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
     Dim _excelApplication As Excel.Application
 
@@ -50,7 +50,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -67,7 +67,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -82,7 +82,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -127,7 +127,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Register " + _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -137,14 +137,12 @@ Public Class Addin
         Try
 
             Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
-            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId)
+            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, False)
 
-        Catch ex As ArgumentException
-            ' key is missing
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Unregister " + _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -228,13 +226,13 @@ Public Class Addin
         Try
 
             Dim message As String = String.Format("Click from Button {0}.", Ctrl.Caption)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Information)
             Ctrl.Dispose()
 
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 

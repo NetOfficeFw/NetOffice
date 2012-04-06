@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
 <Assembly: AssemblyProduct("NetOffice")> 
-<Assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")> 
+<Assembly: AssemblyCopyright("Copyright © 2012 Sebastian Lange")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(True)> 

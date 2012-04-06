@@ -8,8 +8,8 @@
     <ProjectGuid>{E8CAA9A6-DF1F-4C93-8075-28F705369EA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>COMAddinClassicExample</RootNamespace>
-    <AssemblyName>COMAddinClassicExample</AssemblyName>
+    <RootNamespace>COMAddinClassicExampleCS4</RootNamespace>
+    <AssemblyName>COMAddinClassicExampleCS4</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>

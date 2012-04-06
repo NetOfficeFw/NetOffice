@@ -8,8 +8,8 @@
     <ProjectGuid>{648931C1-6AAD-4483-A33D-D1D4DF79FC16}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>COMAddinTaskPaneExample</RootNamespace>
-    <AssemblyName>COMAddinTaskPaneExample</AssemblyName>
+    <RootNamespace>COMAddinTaskPaneExampleCS4</RootNamespace>
+    <AssemblyName>COMAddinTaskPaneExampleCS4</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

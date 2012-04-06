@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{00DA9107-98EC-49F5-8D76-9C5F04809ABE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>COMAddinClassicExample</RootNamespace>
-    <AssemblyName>ExcelClassicAddinVB</AssemblyName>
+    <RootNamespace>COMAddinClassicExampleVB4</RootNamespace>
+    <AssemblyName>COMAddinClassicExampleVB4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

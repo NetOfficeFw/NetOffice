@@ -8,12 +8,12 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("307D7577-A119-460D-8D3F-4BE7112088DD"), ProgIdAttribute("COMAddinTaskPaneExampleVB.Addin"), ComVisible(True)> _
+<GuidAttribute("307D7577-A119-460D-8D3F-4BE7112088DD"), ProgIdAttribute("ExcelAddinExampleVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "COMAddinTaskPaneExampleVB.Addin"
+    Private Shared ReadOnly _prodId As String = "ExcelAddinExampleVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
@@ -30,13 +30,22 @@ Public Class Addin
 
     Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
 
-        Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_excelApplication, CTPFactoryInst)
-        Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP("COMAddinTaskPaneExample.SampleControl", "NetOffice Sample Pane(VB)", Type.Missing)
-        taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
-        taskPane.Width = 300
-        taskPane.Visible = True
-        _sampleControl = taskPane.ContentControl
-        ctpFactory.Dispose()
+        Try
+
+            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_excelApplication, CTPFactoryInst)
+            Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
+            taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
+            taskPane.Width = 300
+            taskPane.Visible = True
+            _sampleControl = taskPane.ContentControl
+            ctpFactory.Dispose()
+
+        Catch ex As Exception
+
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 
@@ -64,7 +73,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -81,7 +90,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -129,7 +138,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Register " + _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -139,14 +148,12 @@ Public Class Addin
         Try
 
             Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
-            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId)
+            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, False)
 
-        Catch ex As ArgumentException
-            ' key is missing
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Unregister " + _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub

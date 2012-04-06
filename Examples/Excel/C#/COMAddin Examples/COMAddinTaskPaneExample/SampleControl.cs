@@ -13,7 +13,7 @@ using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
-namespace COMAddinTaskPaneExample
+namespace COMAddinTaskPaneExampleCS4
 {
     public partial class SampleControl : UserControl
     {
@@ -32,7 +32,7 @@ namespace COMAddinTaskPaneExample
         {
             _customers = new List<Customer>();
             
-            string embeddedCustomerXmlContent = ReadString("COMAddinTaskPaneExample.SampleData.CustomerData.xml");
+            string embeddedCustomerXmlContent = ReadString("SampleData.CustomerData.xml");
             XmlDocument document = new XmlDocument();
             document.LoadXml(embeddedCustomerXmlContent);
             foreach (XmlNode customerNode in document.DocumentElement.ChildNodes)
@@ -55,7 +55,8 @@ namespace COMAddinTaskPaneExample
             System.IO.StreamReader textStreamReader = null;
             try
             {
-                ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(ressourcePath);
+                Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+                ressourceStream = typeof(Addin).Assembly.GetManifestResourceStream(assembly.GetName().Name + "." + ressourcePath);
                 if (ressourceStream == null)
                     throw (new System.IO.IOException("Error accessing resource Stream."));
 

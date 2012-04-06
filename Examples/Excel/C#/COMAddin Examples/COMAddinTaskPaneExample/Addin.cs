@@ -11,13 +11,13 @@ using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
-namespace COMAddinTaskPaneExample
+namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("COMAddinTaskPaneExampleCSharp.Addin"), ComVisible(true)]
+    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinExampleCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "COMAddinTaskPaneExampleCSharp.Addin";
+        private static readonly string _prodId                  = "ExcelAddinExampleCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
@@ -33,7 +33,7 @@ namespace COMAddinTaskPaneExample
             try
             {
                 Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
-                Office._CustomTaskPane taskPane = ctpFactory.CreateCTP("COMAddinTaskPaneExample.SampleControl", "NetOffice Sample Pane(C#)", Type.Missing);
+                Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
                 taskPane.Visible = true;
@@ -43,7 +43,7 @@ namespace COMAddinTaskPaneExample
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _addinFriendlyName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -58,15 +58,31 @@ namespace COMAddinTaskPaneExample
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
+            try
+            {
+                // Initialize NetOffice
+                LateBindingApi.Core.Factory.Initialize();
 
-            _excelApplication = new Excel.Application(null, Application);
+                _excelApplication = new Excel.Application(null, Application);
+            }
+            catch (Exception exception)
+            {
+                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
-            _excelApplication.Dispose();
+            try
+            {
+                _excelApplication.Dispose();
+            }
+            catch (Exception exception)
+            {
+                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
@@ -117,7 +133,7 @@ namespace COMAddinTaskPaneExample
             catch (Exception ex)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Register Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -130,13 +146,13 @@ namespace COMAddinTaskPaneExample
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
 
                 // unregister addin in office
-                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId);
+                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
 
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured." + details, "Unregister Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
