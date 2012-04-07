@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
-
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -53,6 +52,8 @@ namespace ExcelExamples
     
         #endregion
 
+        #region UI Trigger
+
         private void buttonStartExample_Click(object sender, EventArgs e)
         {           
             // Initialize NetOffice
@@ -61,8 +62,6 @@ namespace ExcelExamples
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
-
-            // dont show dialogs with an invisible excel
             excelApplication.Visible = true;
 
             // add a new workbook
@@ -126,6 +125,8 @@ namespace ExcelExamples
             excelApplication.Quit();
             excelApplication.Dispose();
         }
+        
+        #endregion
 
         #region Helper
 

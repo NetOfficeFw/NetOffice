@@ -53,7 +53,7 @@ Public Class Example08
 
 #End Region
 
-#Region "Trigger"
+#Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
@@ -95,6 +95,10 @@ Public Class Example08
         excelApplication.Dispose()
 
     End Sub
+
+#End Region
+
+#Region "Excel Trigger"
 
     Private Sub excelApplication_SheetDeactivateEvent(ByVal Sh As COMObject)
 

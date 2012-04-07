@@ -56,7 +56,7 @@ Public Class Example09
 
 #End Region
 
-#Region "Trigger"
+#Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
@@ -152,6 +152,10 @@ Public Class Example09
         buttonQuitExample.Enabled = False
 
     End Sub
+
+#End Region
+
+#Region "Excel Trigger"
 
     Private Sub commandBarBtn_Click(ByVal Ctrl As Office.CommandBarButton, ByRef CancelDefault As Boolean)
 

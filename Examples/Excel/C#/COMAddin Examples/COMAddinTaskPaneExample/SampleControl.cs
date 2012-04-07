@@ -166,39 +166,61 @@ namespace COMAddinTaskPaneExampleCS4
 
         private void listViewSearchResults_DoubleClick(object sender, EventArgs e)
         {
-            if (listViewSearchResults.SelectedItems.Count > 0)
+            try
             {
-                Excel.Worksheet activeSheet = Addin.Application.ActiveSheet as Excel.Worksheet;
-                Excel.Range activeCell = Addin.Application.ActiveCell;
-                if (null != activeCell)
+                if (listViewSearchResults.SelectedItems.Count > 0)
                 {
-                    int rowIndex = activeCell.Row;
-                    int columnIndex = activeCell.Column;
-                   
-                    string targetRangeAddress = CalculateRangeArea(rowIndex, columnIndex, 7);
+                    Excel.Worksheet activeSheet = Addin.Application.ActiveSheet as Excel.Worksheet;
+                    Excel.Range activeCell = Addin.Application.ActiveCell;
+                    if (null != activeCell)
+                    {
+                        int rowIndex = activeCell.Row;
+                        int columnIndex = activeCell.Column;
 
-                    Customer selectedCustomer = listViewSearchResults.SelectedItems[0].Tag as Customer;
-                   
-                    Excel.Range targetRange = activeSheet.Range(targetRangeAddress);
-                    targetRange.Value2 = ToStringArray(selectedCustomer);
-                    targetRange.HorizontalAlignment = XlHAlign.xlHAlignLeft;
-                    activeSheet.Columns[targetRange.Column].AutoFit();
+                        string targetRangeAddress = CalculateRangeArea(rowIndex, columnIndex, 7);
 
-                    activeCell.Dispose();
-                    activeSheet.Dispose();
+                        Customer selectedCustomer = listViewSearchResults.SelectedItems[0].Tag as Customer;
+
+                        Excel.Range targetRange = activeSheet.Range(targetRangeAddress);
+                        targetRange.Value2 = ToStringArray(selectedCustomer);
+                        targetRange.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                        activeSheet.Columns[targetRange.Column].AutoFit();
+
+                        activeCell.Dispose();
+                        activeSheet.Dispose();
+                    }
                 }
             }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);    
+            }            
         }
 
         private void listViewSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            UpdateDetails();
+            try
+            {
+                UpdateDetails();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }      
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            UpdateSearchResult();
-            UpdateDetails();
+            try
+            {
+                UpdateSearchResult();
+                UpdateDetails();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+
         }
 
         #endregion

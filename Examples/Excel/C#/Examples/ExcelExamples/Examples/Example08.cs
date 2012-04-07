@@ -6,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -58,6 +57,8 @@ namespace ExcelExamples
  
         #endregion
 
+        #region UI Trigger
+
         private void buttonStartExample_Click(object sender, EventArgs e)
         {            
             // Initialize NetOffice
@@ -68,11 +69,8 @@ namespace ExcelExamples
             excelApplication.DisplayAlerts = false;
             excelApplication.Visible = true;
 
-            /*
-            we register some events. note: the event trigger was called from excel, means another Thread
-            you can get event notifys from various objects: Application or Workbook or Worksheet for example
-            */
-
+            // we register some events. note: the event trigger was called from excel, means another Thread
+            // you can get event notifys from various objects: Application or Workbook or Worksheet for example
             excelApplication.NewWorkbookEvent += new Excel.Application_NewWorkbookEventHandler(excelApplication_NewWorkbook);
             excelApplication.WorkbookBeforeCloseEvent += new Excel.Application_WorkbookBeforeCloseEventHandler(excelApplication_WorkbookBeforeClose);
             excelApplication.WorkbookActivateEvent += new Excel.Application_WorkbookActivateEventHandler(excelApplication_WorkbookActivate);
@@ -88,6 +86,10 @@ namespace ExcelExamples
             excelApplication.Quit();
             excelApplication.Dispose();
         }
+        
+        #endregion
+
+        #region Excel Trigger
 
         void _excelApplication_SheetDeactivateEvent(COMObject Sh)
         {
@@ -129,5 +131,7 @@ namespace ExcelExamples
         {
             textBoxEvents.AppendText(message + "\r\n");
         }
+
+        #endregion
     }
 }

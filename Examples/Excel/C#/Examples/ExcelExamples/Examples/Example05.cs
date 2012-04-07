@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
 using System.Globalization;
-
 using ExampleBase;
 
 using LateBindingApi.Core;

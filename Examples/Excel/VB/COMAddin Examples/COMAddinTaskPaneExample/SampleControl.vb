@@ -128,12 +128,6 @@ Public Class SampleControl
 
     End Function
 
-    ''' <summary>
-    ''' reads text from ressource
-    ''' </summary>
-    ''' <param name="fileName"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
     Private Function ReadString(ByVal fileName As String) As String
 
         Dim thisAssembly As Assembly = GetType(Addin).Assembly
@@ -160,46 +154,70 @@ Public Class SampleControl
 
     Private Sub listViewSearchResults_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles listViewSearchResults.DoubleClick
 
-        If (listViewSearchResults.SelectedItems.Count > 0) Then
+        Try
 
-            Dim activeSheet As Excel.Worksheet = Addin.Application.ActiveSheet
-            Dim activeCell As Excel.Range = Addin.Application.ActiveCell
+            If (listViewSearchResults.SelectedItems.Count > 0) Then
 
-            If Not IsNothing(activeCell) Then
+                Dim activeSheet As Excel.Worksheet = Addin.Application.ActiveSheet
+                Dim activeCell As Excel.Range = Addin.Application.ActiveCell
 
-                Dim rowIndex As Integer = activeCell.Row
-                Dim columnIndex As Integer = activeCell.Column
+                If Not IsNothing(activeCell) Then
 
-                Dim targetRangeAddress As String = CalculateRangeArea(rowIndex, columnIndex, 7)
+                    Dim rowIndex As Integer = activeCell.Row
+                    Dim columnIndex As Integer = activeCell.Column
 
-                Dim selectedCustomer As Customer = listViewSearchResults.SelectedItems(0).Tag
+                    Dim targetRangeAddress As String = CalculateRangeArea(rowIndex, columnIndex, 7)
 
-                Dim targetRange As Excel.Range = activeSheet.Range(targetRangeAddress)
-                targetRange.Value2 = ToStringArray(selectedCustomer)
-                targetRange.HorizontalAlignment = XlHAlign.xlHAlignLeft
+                    Dim selectedCustomer As Customer = listViewSearchResults.SelectedItems(0).Tag
 
-                activeSheet.Columns(targetRange.Column).AutoFit()
+                    Dim targetRange As Excel.Range = activeSheet.Range(targetRangeAddress)
+                    targetRange.Value2 = ToStringArray(selectedCustomer)
+                    targetRange.HorizontalAlignment = XlHAlign.xlHAlignLeft
 
-                activeCell.Dispose()
-                activeSheet.Dispose()
+                    activeSheet.Columns(targetRange.Column).AutoFit()
+
+                    activeCell.Dispose()
+                    activeSheet.Dispose()
+
+                End If
 
             End If
 
-        End If
+        Catch ex As Exception
+
+            MessageBox.Show(Me, ex.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try        
 
     End Sub
 
     Private Sub listViewSearchResults_ItemSelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ListViewItemSelectionChangedEventArgs) Handles listViewSearchResults.ItemSelectionChanged
 
-        UpdateDetails()
+        Try
+
+            UpdateDetails()
+
+        Catch ex As Exception
+
+            MessageBox.Show(Me, ex.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 
     Private Sub textBoxSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles textBoxSearch.TextChanged
 
-        UpdateSearchResult()
-        UpdateDetails()
+        Try
 
+            UpdateSearchResult()
+            UpdateDetails()
+
+        Catch ex As Exception
+
+            MessageBox.Show(Me, ex.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+     
     End Sub
 
 #End Region

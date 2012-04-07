@@ -2,7 +2,7 @@
 Imports LateBindingApi.Core
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
-Imports VBE = NetOffice.VBIDEApi
+Imports VB = NetOffice.VBIDEApi
 Imports NetOffice.VBIDEApi.Enums
 
 Public Class Example07
@@ -32,7 +32,7 @@ Public Class Example07
             Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
 
             ' add new global Code Module
-            Dim globalModule As VBE.VBComponent = workBook.VBProject.VBComponents.Add(vbext_ComponentType.vbext_ct_StdModule)
+            Dim globalModule As VB.VBComponent = workBook.VBProject.VBComponents.Add(vbext_ComponentType.vbext_ct_StdModule)
             globalModule.Name = "MyNewCodeModule"
 
             ' add a new procedure to the modul

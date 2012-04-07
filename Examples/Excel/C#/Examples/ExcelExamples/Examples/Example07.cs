@@ -4,12 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
-
 using ExampleBase;
 
 using LateBindingApi.Core;
 using Excel = NetOffice.ExcelApi;
-using VBE = NetOffice.VBIDEApi;
+using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
 
@@ -40,7 +39,7 @@ namespace ExcelExamples
                 Excel.Workbook workBook = excelApplication.Workbooks.Add();
 
                 // add new global Code Module
-                VBE.VBComponent globalModule = workBook.VBProject.VBComponents.Add(vbext_ComponentType.vbext_ct_StdModule);
+                VB.VBComponent globalModule = workBook.VBProject.VBComponents.Add(vbext_ComponentType.vbext_ct_StdModule);
                 globalModule.Name = "MyNewCodeModule";
 
                 // add a new procedure to the modul

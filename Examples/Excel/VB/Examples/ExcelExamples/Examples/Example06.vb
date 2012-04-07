@@ -44,6 +44,8 @@ Public Class Example06
 
 #End Region
 
+#Region "UI Trigger"
+
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' Initialize NetOffice
@@ -106,6 +108,9 @@ Public Class Example06
         MessageBox.Show(Me, message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub
+
+#End Region
+ 
 
 #Region "Helper"
 

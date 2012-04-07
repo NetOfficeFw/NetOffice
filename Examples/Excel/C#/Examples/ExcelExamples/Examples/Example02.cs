@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
-
 using ExampleBase;
 
 using LateBindingApi.Core;

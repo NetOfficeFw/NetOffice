@@ -24,6 +24,9 @@ Public Class Example07
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
+        ' its an example with an own visual control
+        ' checkout buttonStartExample_Click
+
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption

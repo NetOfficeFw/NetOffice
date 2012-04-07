@@ -49,7 +49,6 @@ namespace COMAddinTaskPaneExampleCS4
 
         #endregion
 
-
         #region IDTExtensibility2 Members
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)

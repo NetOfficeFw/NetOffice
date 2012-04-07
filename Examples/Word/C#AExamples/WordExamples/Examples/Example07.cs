@@ -1,24 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
-using System.Reflection;
-
-using LateBindingApi.Core;
-using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 using ExampleBase;
 
-namespace ExcelExamples
-{
-    partial class Example09 : UserControl , IExample
-    {
-        IHost _hostApplication;
-        Excel.Application _excelApplication;
+using LateBindingApi.Core;
+using Word = NetOffice.WordApi;
+using Office = NetOffice.OfficeApi;
+using NetOffice.WordApi.Enums;
+using NetOffice.OfficeApi.Enums;
 
+namespace WordExamples
+{
+    public partial class Example07 : UserControl, IExample
+    {        
+        IHost _hostApplication;
+        Word.Application _wordApplication;
         private delegate void UpdateEventTextDelegate(string Message);
         UpdateEventTextDelegate _updateDelegate;
 
-        public Example09()
+        public Example07()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
@@ -39,14 +43,14 @@ namespace ExcelExamples
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example09" : "Beispiel09"; }
+            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return _hostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
         }
-     
+
         public UserControl Panel
         {
             get { return this; }
@@ -57,22 +61,25 @@ namespace ExcelExamples
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {        
+        {
             // Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize();
-
+            
             Office.CommandBar commandBar;
             Office.CommandBarButton commandBarBtn;
 
-            // start excel and turn off msg boxes
-            _excelApplication = new Excel.Application();
-            _excelApplication.DisplayAlerts = false;
+            // start word and turn off msg boxes
+            _wordApplication = new Word.Application();
+            _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
-            // add a new workbook
-            Excel.Workbook workBook = _excelApplication.Workbooks.Add();
+            // add a new document
+            _wordApplication.Documents.Add();
+
+            Word.Template normalDotTemplate = GetNormalDotTemplate();
+            _wordApplication.CustomizationContext = normalDotTemplate;
 
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Worksheet Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, System.Type.Missing, 1, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             #region few words, how to access the picture
@@ -94,13 +101,13 @@ namespace ExcelExamples
             Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
-            
+
             #endregion
 
             #region Create a new toolbar
 
             // add a new toolbar
-            commandBar = _excelApplication.CommandBars.Add("MyCommandBar", MsoBarPosition.msoBarTop, false, true);
+            commandBar = _wordApplication.CommandBars.Add("MyCommandBar", MsoBarPosition.msoBarTop, false, true);
             commandBar.Visible = true;
 
             // add a button to the toolbar
@@ -127,11 +134,11 @@ namespace ExcelExamples
             #region Create a new ContextMenu
 
             // add a commandbar popup
-            commandBarPopup = (Office.CommandBarPopup)_excelApplication.CommandBars["Cell"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarPopup = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, MsoBarPosition.msoBarTop, false, 1, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             commandBarBtn.FaceId = 9;
@@ -139,27 +146,18 @@ namespace ExcelExamples
 
             #endregion
 
-            #region Display info
-
-            Excel.Worksheet sheet = (Excel.Worksheet)workBook.Worksheets[1];
-            sheet.Cells[2, 2].Value = "this excel instance contains 3 custom menus";
-            sheet.Cells[3, 2].Value = "the main menu, the toolbar menu and the cell context menu";
-            sheet.Cells[4, 2].Value = "in this case the menus are temporaily created";
-            sheet.Cells[5, 2].Value = "they are not persistant and needs no unload event or something like this";
-            sheet.Cells[6, 2].Value = "you can also create persistant menus if you want";
-
-            #endregion
+            normalDotTemplate.Saved = true;
 
             // make visible & set buttons
-            _excelApplication.Visible = true;
+            _wordApplication.Visible = true;
             buttonStartExample.Enabled = false;
             buttonQuitExample.Enabled = true;
         }
 
         private void buttonQuitExample_Click(object sender, EventArgs e)
         {
-            _excelApplication.Quit();
-            _excelApplication.Dispose();
+            _wordApplication.Quit();
+            _wordApplication.Dispose();
 
             buttonStartExample.Enabled = true;
             buttonQuitExample.Enabled = false;
@@ -167,7 +165,7 @@ namespace ExcelExamples
 
         #endregion
 
-        #region Excel Trigger
+        #region Word Trigger
 
         void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
@@ -178,6 +176,27 @@ namespace ExcelExamples
         private void UpdateTextbox(string Message)
         {
             textBoxEvents.AppendText(Message + "\r\n");
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// returns normal.dot template (normal.dotm in modern word versions)
+        /// </summary>
+        private Word.Template GetNormalDotTemplate()
+        {
+            foreach (Word.Template installedTemplate in _wordApplication.Templates)
+            {
+                if (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return installedTemplate;
+                }
+                installedTemplate.Dispose();
+            }
+
+            throw new IndexOutOfRangeException("Template not found.");
         }
 
         #endregion

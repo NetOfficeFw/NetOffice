@@ -271,7 +271,6 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-
                 string message = string.Format("Click from Button {0}.", Ctrl.Caption);
                 MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Ctrl.Dispose();
@@ -284,6 +283,5 @@ namespace COMAddinClassicExampleCS4
         }
 
         #endregion
-
     }
 }

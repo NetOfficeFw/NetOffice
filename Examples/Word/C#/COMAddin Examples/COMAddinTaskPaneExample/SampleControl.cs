@@ -113,27 +113,48 @@ namespace COMAddinTaskPaneExampleCS4
 
         private void listViewSearchResults_DoubleClick(object sender, EventArgs e)
         {
-            if (listViewSearchResults.SelectedItems.Count > 0)
+            try
             {
-                Word.Document activeDocument = Addin.Application.ActiveDocument;
-                if (null != activeDocument)
+                if (listViewSearchResults.SelectedItems.Count > 0)
                 {
-                    Customer selectedCustomer = listViewSearchResults.SelectedItems[0].Tag as Customer;
-                    Addin.Application.Selection.TypeText(selectedCustomer.ToString());
-                    activeDocument.Dispose();
+                    Word.Document activeDocument = Addin.Application.ActiveDocument;
+                    if (null != activeDocument)
+                    {
+                        Customer selectedCustomer = listViewSearchResults.SelectedItems[0].Tag as Customer;
+                        Addin.Application.Selection.TypeText(selectedCustomer.ToString());
+                        activeDocument.Dispose();
+                    }
                 }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            UpdateSearchResult();
-            UpdateDetails();
+            try
+            {
+                UpdateSearchResult();
+                UpdateDetails();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         private void listViewSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            UpdateDetails();
+            try
+            {
+                UpdateDetails();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         #endregion
