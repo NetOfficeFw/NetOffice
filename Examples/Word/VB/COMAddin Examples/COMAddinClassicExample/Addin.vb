@@ -9,12 +9,12 @@ Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("3475B57F-8085-407e-8774-2F2323CC063D"), ProgIdAttribute("WordAddinExampleVB4.SimpleAddin"), ComVisible(True)> _
+<GuidAttribute("3475B57F-8085-407e-8774-2F2323CC063D"), ProgIdAttribute("WordAddinVB4.SimpleAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Word\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "WordAddinExampleVB4.SimpleAddin"
+    Private Shared ReadOnly _prodId As String = "WordAddinVB4.SimpleAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom classic UI"
 
@@ -58,7 +58,7 @@ Public Class Addin
             RemoveGui()
             SetupGui()
 
-       Catch ex As Exception
+        Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
             MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -122,7 +122,7 @@ Public Class Addin
             End If
             key.Close()
 
-            ' add excel addin key
+            ' add word addin key
             Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, True)
@@ -292,7 +292,7 @@ Public Class Addin
             MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
- 
+
     End Sub
 
 #End Region

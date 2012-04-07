@@ -10,7 +10,7 @@ using LateBindingApi.Core;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 
-namespace WordExamples
+namespace WordExamplesCS4
 {
     class Example01 : IExample
     {

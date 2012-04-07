@@ -12,7 +12,7 @@ using LateBindingApi.Core;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
-namespace ExcelExamples
+namespace ExcelExamplesCS4
 {
     partial class Example08 : UserControl , IExample
     {

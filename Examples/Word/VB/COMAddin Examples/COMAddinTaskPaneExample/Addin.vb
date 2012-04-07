@@ -9,12 +9,12 @@ Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("7BA07760-FEC8-4ECB-B1F1-C4C5BAFCB470"), ProgIdAttribute("WordAddinExampleVB4.TaskPaneAddin"), ComVisible(True)> _
+<GuidAttribute("7BA07760-FEC8-4ECB-B1F1-C4C5BAFCB470"), ProgIdAttribute("WordAddinVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Word\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "WordAddinExampleVB4.TaskPaneAddin"
+    Private Shared ReadOnly _prodId As String = "WordAddinVB4.TaskPaneAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Task Pane"
 
@@ -96,7 +96,7 @@ Public Class Addin
     Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnBeginShutdown
 
     End Sub
-      
+
     Public Sub OnStartupComplete(ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnStartupComplete
 
     End Sub
@@ -127,7 +127,7 @@ Public Class Addin
             End If
             key.Close()
 
-            ' add excel addin key
+            ' add word addin key
             Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, True)

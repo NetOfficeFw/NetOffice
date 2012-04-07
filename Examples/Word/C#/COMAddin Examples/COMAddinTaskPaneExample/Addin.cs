@@ -13,11 +13,11 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("122EA877-9F5B-4B21-81EE-CBE77D596354"), ProgId("WordAddinExampleCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("122EA877-9F5B-4B21-81EE-CBE77D596354"), ProgId("WordAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
-        private static readonly string _prodId                  = "WordAddinExampleCS4.TaskPaneAddin";
+        private static readonly string _prodId                  = "WordAddinCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
@@ -123,7 +123,7 @@ namespace COMAddinTaskPaneExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // add word addin key
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId);
                 RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
                 regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));

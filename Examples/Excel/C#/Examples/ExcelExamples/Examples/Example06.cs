@@ -11,7 +11,7 @@ using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
 
-namespace ExcelExamples
+namespace ExcelExamplesCS4
 {
     partial class Example06 : UserControl , IExample
     {

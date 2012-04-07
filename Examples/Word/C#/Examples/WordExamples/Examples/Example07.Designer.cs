@@ -1,4 +1,4 @@
-﻿namespace WordExamples
+﻿namespace WordExamplesCS4
 {
     partial class Example07
     {
@@ -48,7 +48,7 @@
             this.buttonQuitExample.Name = "buttonQuitExample";
             this.buttonQuitExample.Size = new System.Drawing.Size(680, 28);
             this.buttonQuitExample.TabIndex = 26;
-            this.buttonQuitExample.Text = "Quit Excel";
+            this.buttonQuitExample.Text = "Quit Word";
             this.buttonQuitExample.UseVisualStyleBackColor = true;
             this.buttonQuitExample.Click += new System.EventHandler(this.buttonQuitExample_Click);
             // 
@@ -100,7 +100,7 @@
             this.buttonStartExample.Name = "buttonStartExample";
             this.buttonStartExample.Size = new System.Drawing.Size(680, 28);
             this.buttonStartExample.TabIndex = 22;
-            this.buttonStartExample.Text = "Start Excel";
+            this.buttonStartExample.Text = "Start Word";
             this.buttonStartExample.UseVisualStyleBackColor = true;
             this.buttonStartExample.Click += new System.EventHandler(this.buttonStartExample_Click);
             // 

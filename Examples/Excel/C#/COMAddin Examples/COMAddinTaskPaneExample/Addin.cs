@@ -13,11 +13,11 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinExampleCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "ExcelAddinExampleCS4.TaskPaneAddin";
+        private static readonly string _prodId                  = "ExcelAddinCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 

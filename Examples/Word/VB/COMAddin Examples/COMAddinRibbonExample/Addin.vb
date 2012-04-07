@@ -9,12 +9,12 @@ Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("CEED1136-9063-4621-8BEB-A4DA8B35D89B"), ProgIdAttribute("WordAddinExampleVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("CEED1136-9063-4621-8BEB-A4DA8B35D89B"), ProgIdAttribute("WordAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Word\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "WordAddinExampleVB4.RibbonAddin"
+    Private Shared ReadOnly _prodId As String = "WordAddinVB4.RibbonAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Ribbon UI"
 

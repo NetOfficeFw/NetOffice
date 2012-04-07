@@ -55,8 +55,8 @@ namespace COMAddinTaskPaneExampleCS4
             System.IO.StreamReader textStreamReader = null;
             try
             {
-                Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                ressourceStream = typeof(Addin).Assembly.GetManifestResourceStream(assembly.GetName().Name + "." + ressourcePath);
+                Assembly assembly = typeof(Addin).Assembly;
+                ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + ressourcePath);
                 if (ressourceStream == null)
                     throw (new System.IO.IOException("Error accessing resource Stream."));
 

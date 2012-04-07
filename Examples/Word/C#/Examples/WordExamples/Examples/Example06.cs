@@ -5,14 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
 using ExampleBase;
+
 using LateBindingApi.Core;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
 
-namespace WordExamples
+namespace WordExamplesCS4
 {
     public partial class Example06 : UserControl, IExample
     {

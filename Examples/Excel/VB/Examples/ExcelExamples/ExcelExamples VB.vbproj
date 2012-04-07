@@ -8,9 +8,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{422751FA-2231-46F2-8777-A7AA86525B28}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ExcelExamples.FormMain</StartupObject>
-    <RootNamespace>ExcelExamples</RootNamespace>
-    <AssemblyName>ExcelExamples</AssemblyName>
+    <StartupObject>ExcelExamplesVB4.FormMain</StartupObject>
+    <RootNamespace>ExcelExamplesVB4</RootNamespace>
+    <AssemblyName>ExcelExamplesVB4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

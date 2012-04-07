@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 using ExampleBase;
 
-namespace ExcelExamples
+namespace ExcelExamplesCS4
 {
     public partial class FormMain : FormBase
     {

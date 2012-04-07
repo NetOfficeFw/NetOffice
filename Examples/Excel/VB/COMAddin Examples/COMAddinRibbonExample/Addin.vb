@@ -8,12 +8,12 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExcelAddinExampleVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExcelAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _prodId As String = "ExcelAddinExampleVB4.RibbonAddin"
+    Private Shared ReadOnly _progId As String = "ExcelAddinVB4.RibbonAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Ribbon UI"
 
@@ -33,7 +33,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -50,7 +50,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -96,8 +96,8 @@ Public Class Addin
 
             ' add excel addin key
             Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
-            Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId)
-            Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, True)
+            Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId)
+            Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, True)
             rk.SetValue("LoadBehavior", CInt(3))
             rk.SetValue("FriendlyName", _addinFriendlyName)
             rk.SetValue("Description", _addinDescription)
@@ -106,7 +106,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Register " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Register " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -116,12 +116,12 @@ Public Class Addin
         Try
 
             Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
-            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, False)
+            Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, False)
 
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured." + details, "Unregister " + _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -139,7 +139,7 @@ Public Class Addin
         Catch ex As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in GetCustomUI." + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in GetCustomUI." + details, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return ""
 
         End Try
@@ -156,18 +156,18 @@ Public Class Addin
 
             Select Case control.Id
                 Case "customButton1"
-                    MessageBox.Show("This is the first sample button.", _prodId)
+                    MessageBox.Show("This is the first sample button.", _progId)
                 Case "customButton2"
-                    MessageBox.Show("This is the second sample button.", _prodId)
+                    MessageBox.Show("This is the second sample button.", _progId)
                 Case Else
-                    MessageBox.Show("Unkown Control Id: " + control.Id, _prodId)
+                    MessageBox.Show("Unkown Control Id: " + control.Id, _progId)
 
             End Select
 
         Catch throwedException As Exception
 
             Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnAction." + details, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("An error occured in OnAction." + details, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 

@@ -42,7 +42,7 @@ Partial Class Example07
         Me.buttonQuitExample.Name = "buttonQuitExample"
         Me.buttonQuitExample.Size = New System.Drawing.Size(680, 28)
         Me.buttonQuitExample.TabIndex = 31
-        Me.buttonQuitExample.Text = "Quit Excel"
+        Me.buttonQuitExample.Text = "Quit Word"
         Me.buttonQuitExample.UseVisualStyleBackColor = True
         '
         'labelEventLogHeader
@@ -93,7 +93,7 @@ Partial Class Example07
         Me.buttonStartExample.Name = "buttonStartExample"
         Me.buttonStartExample.Size = New System.Drawing.Size(680, 28)
         Me.buttonStartExample.TabIndex = 27
-        Me.buttonStartExample.Text = "Start Excel"
+        Me.buttonStartExample.Text = "Start Word"
         Me.buttonStartExample.UseVisualStyleBackColor = True
         '
         'Example07

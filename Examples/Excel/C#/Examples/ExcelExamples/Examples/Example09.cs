@@ -8,7 +8,7 @@ using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using ExampleBase;
 
-namespace ExcelExamples
+namespace ExcelExamplesCS4
 {
     partial class Example09 : UserControl , IExample
     {

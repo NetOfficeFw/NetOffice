@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 using ExampleBase;
 
-namespace WordExamples
+namespace WordExamplesCS4
 {
     public partial class FormMain : FormBase
     {

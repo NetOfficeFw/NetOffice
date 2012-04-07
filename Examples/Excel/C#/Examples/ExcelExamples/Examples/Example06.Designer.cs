@@ -1,4 +1,4 @@
-﻿namespace ExcelExamples
+﻿namespace ExcelExamplesCS4
 {
     partial class Example06
     {

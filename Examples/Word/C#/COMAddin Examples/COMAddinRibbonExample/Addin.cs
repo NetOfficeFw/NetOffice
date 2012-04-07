@@ -13,11 +13,11 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("A7EF79B5-BBF0-4cb8-BE3D-3FD64ADB1FC3"), ProgId("WordAddinExampleCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("A7EF79B5-BBF0-4cb8-BE3D-3FD64ADB1FC3"), ProgId("WordAddinCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
-        private static readonly string _prodId                  = "WordAddinExampleCS4.RibbonAddin";
+        private static readonly string _prodId                  = "WordAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
@@ -141,7 +141,7 @@ namespace COMAddinRibbonExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // add excel addin key
+                // add word addin key
                 Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId);
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);

@@ -13,7 +13,7 @@ using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
 using NetOffice.OfficeApi.Enums;
 
-namespace ExcelExamples
+namespace ExcelExamplesCS4
 {
     class Example05 : IExample
     {

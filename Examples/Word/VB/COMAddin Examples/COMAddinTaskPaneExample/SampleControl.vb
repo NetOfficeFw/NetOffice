@@ -160,31 +160,57 @@ Public Class SampleControl
 
     Private Sub listViewSearchResults_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles listViewSearchResults.DoubleClick
 
-        If (listViewSearchResults.SelectedItems.Count > 0) Then
+        Try
+            If (listViewSearchResults.SelectedItems.Count > 0) Then
 
-            Dim activeDocument As Word.Document = Addin.Application.ActiveDocument
-            If Not IsNothing(activeDocument) Then
+                Dim activeDocument As Word.Document = Addin.Application.ActiveDocument
+                If Not IsNothing(activeDocument) Then
 
-                Dim selectedCustomer As Customer = listViewSearchResults.SelectedItems(0).Tag
-                Addin.Application.Selection.TypeText(selectedCustomer.ToString())
-                activeDocument.Dispose()
+                    Dim selectedCustomer As Customer = listViewSearchResults.SelectedItems(0).Tag
+                    Addin.Application.Selection.TypeText(selectedCustomer.ToString())
+                    activeDocument.Dispose()
+
+                End If
 
             End If
 
-        End If
+        Catch ex As Exception
 
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+      
     End Sub
 
     Private Sub listViewSearchResults_ItemSelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ListViewItemSelectionChangedEventArgs) Handles listViewSearchResults.ItemSelectionChanged
 
-        UpdateDetails()
+        Try
+
+            UpdateDetails()
+
+        Catch ex As Exception
+
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 
     Private Sub textBoxSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles textBoxSearch.TextChanged
 
-        UpdateSearchResult()
-        UpdateDetails()
+        Try
+
+            UpdateSearchResult()
+            UpdateDetails()
+
+        Catch ex As Exception
+
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 

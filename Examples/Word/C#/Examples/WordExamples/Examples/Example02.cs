@@ -4,14 +4,13 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
-
 using ExampleBase;
 
 using LateBindingApi.Core;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 
-namespace WordExamples
+namespace WordExamplesCS4
 {
     class Example02 : IExample
     {

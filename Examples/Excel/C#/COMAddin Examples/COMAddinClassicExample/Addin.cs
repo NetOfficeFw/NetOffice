@@ -13,11 +13,11 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("704e1286-8739-474f-9f77-409cc468016d"), ProgId("ExcelAddinExampleCS4.SimpleAddin"), ComVisible(true)]
+    [GuidAttribute("704e1286-8739-474f-9f77-409cc468016d"), ProgId("ExcelAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                 = "ExcelAddinExampleCS4.SimpleAddin";
+        private static readonly string _prodId                 = "ExcelAddinCS4.SimpleAddin";
         private static readonly string _addinFriendlyName      = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription       = "NetOffice Sample Addin with custom classic UI";
 

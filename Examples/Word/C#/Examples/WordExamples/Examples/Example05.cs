@@ -5,7 +5,6 @@ using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
-
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -14,7 +13,7 @@ using NetOffice.WordApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
 
-namespace WordExamples
+namespace WordExamplesCS4
 {
     class Example05 : IExample
     {
