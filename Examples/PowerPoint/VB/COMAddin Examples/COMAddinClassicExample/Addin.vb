@@ -1,19 +1,20 @@
-﻿Imports Microsoft.Win32
+﻿Imports System.Reflection
+Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
 Imports LateBindingApi.Core
-Imports Excel = NetOffice.ExcelApi
-Imports NetOffice.ExcelApi.Enums
+Imports PowerPoint = NetOffice.PowerPointApi
+Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExcelAddinVB4.SimpleAddin"), ComVisible(True)> _
+<GuidAttribute("61F0B22C-20C6-46f9-A1BA-BE294B7FEA4E"), ProgIdAttribute("PPointAddinVB4.SimpleAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2
 
-    Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Excel\\AddIns\\"
-    Private Shared ReadOnly _progId As String = "ExcelAddinVB4.SimpleAddin"
+    Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\"
+    Private Shared ReadOnly _progId As String = "PPointAddinVB4.SimpleAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom classic UI"
 
@@ -26,18 +27,18 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _excelApplication As Excel.Application
+    Dim _powerApplication As PowerPoint.Application
 
 #Region "IDTExtensibility2 Members"
-     
-    Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
 
+  
+    Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
             ' Initialize NetOffice
             LateBindingApi.Core.Factory.Initialize()
 
-            _excelApplication = New Excel.Application(Nothing, Application)
+            _powerApplication = New PowerPoint.Application(Nothing, Application)
 
         Catch ex As Exception
 
@@ -45,15 +46,13 @@ Public Class Addin
             MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
     End Sub
 
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
-
         Try
 
-            If (Not IsNothing(_excelApplication)) Then
-                _excelApplication.Dispose()
+            If (Not IsNothing(_powerApplication)) Then
+                _powerApplication.Dispose()
             End If
 
         Catch ex As Exception
@@ -62,22 +61,19 @@ Public Class Addin
             MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
     End Sub
 
     Public Sub OnStartupComplete(ByRef custom As System.Array) Implements IDTExtensibility2.OnStartupComplete
-
         Try
 
-            CreateTemporaryUserInterface()
+            SetupGui()
 
-        Catch ex As Exception
+       Catch ex As Exception
 
             Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
             MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
     End Sub
 
     Public Sub OnAddInsUpdate(ByRef custom As System.Array) Implements IDTExtensibility2.OnAddInsUpdate
@@ -85,6 +81,88 @@ Public Class Addin
     End Sub
 
     Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements IDTExtensibility2.OnBeginShutdown
+
+    End Sub
+
+#End Region
+
+#Region "UI Methods"
+
+    ''' <summary>
+    ''' creates gui elements
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub SetupGui()
+
+        ' How to: Add Commands to Shortcut Menus in Excel
+        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
+
+        'create commandbar 
+        Dim commandBar As Office.CommandBar = _powerApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
+        commandBar.Visible = True
+
+        ' add popup to commandbar
+        Dim commandBarPop As Office.CommandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop.Caption = _toolbarPopupName
+        commandBarPop.Tag = _toolbarPopupName
+
+        'add a button to the popup
+        Dim commandBarBtn As Office.CommandBarButton = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
+        commandBarBtn.FaceId = 9
+        commandBarBtn.Caption = _toolbarButtonName
+        commandBarBtn.Tag = _toolbarButtonName
+        Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
+        AddHandler commandBarBtn.ClickEvent, clickHandler
+
+        ' create menu 
+        commandBar = _powerApplication.CommandBars("Menu Bar")
+
+        ' add popup to menu bar
+        commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop.Caption = _menuName
+        commandBarPop.Tag = _menuName
+
+        ' add a button to the popup
+        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
+        commandBarBtn.FaceId = 9
+        commandBarBtn.Caption = _menuButtonName
+        commandBarBtn.Tag = _menuButtonName
+        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
+        AddHandler commandBarBtn.ClickEvent, clickHandler
+
+        ' create context menu 
+        commandBarPop = _powerApplication.CommandBars("Frames").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarPop.Caption = _contextName
+        commandBarPop.Tag = _contextName
+
+        ' add a button to the popup
+        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
+        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
+        commandBarBtn.Caption = _contextMenuButtonName
+        commandBarBtn.Tag = _contextMenuButtonName
+        commandBarBtn.FaceId = 9
+        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
+        AddHandler commandBarBtn.ClickEvent, clickHandler
+
+    End Sub
+
+#End Region
+
+#Region "UI Trigger"
+
+    ''' <summary>
+    ''' click event trigger from created buttons. incoming call comes from word application thread.
+    ''' </summary>
+    ''' <param name="Ctrl"></param>
+    ''' <param name="CancelDefault"></param>
+    ''' <remarks></remarks>
+    Private Sub commandBarBtn_ClickEvent(ByVal Ctrl As NetOffice.OfficeApi.CommandBarButton, ByRef CancelDefault As Boolean)
+
+        Dim message As String = String.Format("Click from Button {0}.", Ctrl.Caption)
+        MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Ctrl.Dispose()
 
     End Sub
 
@@ -115,7 +193,7 @@ Public Class Addin
             End If
             key.Close()
 
-            ' add excel addin key
+            ' add powerpoint addin key
             Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, True)
@@ -145,97 +223,6 @@ Public Class Addin
             MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-    End Sub
-
-#End Region
-
-#Region "UI Methods"
-
-    ''' <summary>
-    ''' creates gui elements
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub CreateTemporaryUserInterface()
-
-        ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
-
-        'create commandbar 
-        Dim commandBar As Office.CommandBar = _excelApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
-        commandBar.Visible = True
-
-        ' add popup to commandbar
-        Dim commandBarPop As Office.CommandBarPopup = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = _toolbarPopupName
-        commandBarPop.Tag = _toolbarPopupName
-
-        'add a button to the popup
-        Dim commandBarBtn As Office.CommandBarButton = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = _toolbarButtonName
-        commandBarBtn.Tag = _toolbarButtonName
-        Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
-
-        ' create menu 
-        commandBar = _excelApplication.CommandBars("Worksheet Menu Bar")
-
-        ' add popup to menu bar
-        commandBarPop = commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = _menuName
-        commandBarPop.Tag = _menuName
-
-        ' add a button to the popup
-        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.FaceId = 9
-        commandBarBtn.Caption = _menuButtonName
-        commandBarBtn.Tag = _menuButtonName
-        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
-
-        ' create context menu 
-        commandBarPop = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarPop.Caption = _contextName
-        commandBarPop.Tag = _contextName
-
-        ' add a button to the popup
-        commandBarBtn = commandBarPop.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
-        commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption
-        commandBarBtn.Caption = _contextMenuButtonName
-        commandBarBtn.Tag = _contextMenuButtonName
-        commandBarBtn.FaceId = 9
-        clickHandler = AddressOf Me.commandBarBtn_ClickEvent
-        AddHandler commandBarBtn.ClickEvent, clickHandler
-
-    End Sub
-
-#End Region
-
-#Region "UI Trigger"
-
-    ''' <summary>
-    ''' Click event trigger from created buttons. incoming call comes from word application thread.
-    ''' </summary>
-    ''' <param name="Ctrl"></param>
-    ''' <param name="CancelDefault"></param>
-    ''' <remarks></remarks>
-    Private Sub commandBarBtn_ClickEvent(ByVal Ctrl As NetOffice.OfficeApi.CommandBarButton, ByRef CancelDefault As Boolean)
-
-        Try
-
-            Dim message As String = String.Format("Click from Button {0}.", Ctrl.Caption)
-            MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Ctrl.Dispose()
-
-        Catch ex As Exception
-
-            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
-            MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-        End Try
-
     End Sub
 
 #End Region

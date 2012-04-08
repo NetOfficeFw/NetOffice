@@ -9,7 +9,6 @@ using ExampleBase;
 using LateBindingApi.Core;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.VBIDEApi.Enums;
 
 namespace ExcelExamplesCS4
 {

@@ -91,7 +91,7 @@ namespace ExcelExamplesCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen muss aktiviert sein."; }
+            get { return _hostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
         }
 
         public UserControl Panel

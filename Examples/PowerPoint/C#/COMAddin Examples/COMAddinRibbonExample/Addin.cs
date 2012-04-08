@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Reflection;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 using Microsoft.Win32;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
 
-using LateBindingApi.Core;
+using PowerPoint = NetOffice.PowerPointApi;
 using Office = NetOffice.OfficeApi;
+using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("182f0e9a-07db-4375-8372-77e1637d4891"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("F09B3141-ADBB-44c1-A6DC-A7F49498AB0F"), ProgId("PPointAddinCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _progId                  = "ExcelAddinCS4.RibbonAddin";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
+        private static readonly string _progId                  = "PPointAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Excel.Application _excelApplication;
+        PowerPoint.Application _powerApplication;
 
         #region IDTExtensibility2 Members
          
@@ -32,7 +32,7 @@ namespace COMAddinRibbonExampleCS4
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _powerApplication = new PowerPoint.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -45,8 +45,8 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _powerApplication)
+                    _powerApplication.Dispose();
             }
             catch (Exception exception)
             {
@@ -78,15 +78,19 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                return ReadRessourceFile("RibbonUI.xml");
+                return ReadString("RibbonUI.xml");
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in GetCustomUI: " + details, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured in GetCustomUI." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
         }
+
+        #endregion
+
+        #region Ribbon Gui Trigger
 
         public void OnAction(Office.IRibbonControl control)
         {
@@ -108,7 +112,7 @@ namespace COMAddinRibbonExampleCS4
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnAction: " + details, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occured." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -139,13 +143,14 @@ namespace COMAddinRibbonExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // add powerpoint addin key
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
-                regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
-                regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
-                regKeyExcel.SetValue("Description", _addinDescription);
-                regKeyExcel.Close();
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
+                rk.SetValue("LoadBehavior", Convert.ToInt32(3));
+                rk.SetValue("FriendlyName", _addinFriendlyName);
+                rk.SetValue("Description", _addinDescription);
+                rk.Close();
             }
             catch (Exception ex)
             {
@@ -159,12 +164,8 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                // unregister addin
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-
-                // unregister addin in office
-                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
-
+                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, false);
             }
             catch (Exception throwedException)
             {
@@ -175,14 +176,14 @@ namespace COMAddinRibbonExampleCS4
 
         #endregion
 
-        #region Private Helper Methods
+        #region Private Helper
 
         /// <summary>
-        /// reads text file from ressource
+        /// reads text from ressource
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        protected internal static string ReadRessourceFile(string fileName)
+        private static string ReadString(string fileName)
         {
             Assembly assembly = typeof(Addin).Assembly;
             System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);

@@ -1,0 +1,8 @@
+﻿Example01			- create a presentation with 1 empty slide
+Example02			- create some kind of shapes
+Example03			- create macro
+Example04			- create blend animation 
+Example05			- create ole chart object
+Example06			- using events
+Example07			- customize classic UI
+

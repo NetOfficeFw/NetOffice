@@ -17,7 +17,7 @@ namespace COMAddinTaskPaneExampleCS4
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _prodId                  = "ExcelAddinCS4.TaskPaneAddin";
+        private static readonly string _progId                  = "ExcelAddinCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
