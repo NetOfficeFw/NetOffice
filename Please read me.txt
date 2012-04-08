@@ -1,7 +1,3 @@
-please keep in your mind:
-all examples include COMAddIns which will be registered while compiling
-exclude COMAddIns from solution (in the context menu) if you do not want that
-
 binaries, source, examples, tests is set to NET 4.0
 binaries/examples for NET 2.0, 3.0, 3.5 and 4.0 is available in latest release:
 http://netoffice.codeplex.com/releases
