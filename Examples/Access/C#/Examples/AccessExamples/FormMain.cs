@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 using ExampleBase;
 
-namespace ExcelExamplesCS4
+namespace AccessExamplesCS4
 {
-    public partial class FormMain : FormBase
+    public partial class Form1 : FormBase
     {
-        public FormMain()
+        public Form1()
         {
             InitializeComponent();
-
-            this.Text = "NetOffice Excel Examples in C#";
+            this.Text = "NetOffice Access Examples in C#";
             LoadExamples();
         }
 
@@ -28,10 +26,6 @@ namespace ExcelExamplesCS4
             LoadExample(new Example03());
             LoadExample(new Example04());
             LoadExample(new Example05());
-            LoadExample(new Example06());
-            LoadExample(new Example07());
-            LoadExample(new Example08());
-            LoadExample(new Example09());
         }
     }
 }

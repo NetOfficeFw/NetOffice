@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Die Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("NetOffice Excel Examples in Visual Basic")> 
+<Assembly: AssemblyTitle("COMAddinTaskPaneExample")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
 <Assembly: AssemblyProduct("NetOffice")> 
-<Assembly: AssemblyCopyright("Copyright © 2012 Sebastian Lange")> 
+<Assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)> 
 
 'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-<Assembly: Guid("51821058-b98b-4b71-8e43-48b4ed3a7576")> 
+<Assembly: Guid("cf1a00f0-8ccc-4971-8673-107d4aa33afb")> 
 
 ' Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 '

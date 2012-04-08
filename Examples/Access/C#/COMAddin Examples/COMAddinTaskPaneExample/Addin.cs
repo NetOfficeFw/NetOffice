@@ -8,23 +8,23 @@ using Extensibility;
 using LateBindingApi.Core;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
+using Access = NetOffice.AccessApi;
+using NetOffice.AccessApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("996EFBAE-F872-45A4-B88E-78F286F7B47E"), ProgId("AccessAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _progId                  = "ExcelAddinCS4.TaskPaneAddin";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
+        private static readonly string _progId                  = "AccessAddinCS4.TaskPaneAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
 
         private static SampleControl _sampleControl;
-        private static Excel.Application _excelApplication;
+        private static Access.Application _accessApplication;
 
-        internal static Excel.Application Application { get { return _excelApplication; } }
+        internal static Access.Application Application { get { return _accessApplication; } }
 
         #region ICustomTaskPaneConsumer Member
 
@@ -32,7 +32,7 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
+                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_accessApplication, CTPFactoryInst);
                 Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
                 taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
                 taskPane.Width = 300;
@@ -58,7 +58,7 @@ namespace COMAddinTaskPaneExampleCS4
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _accessApplication = new Access.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -71,8 +71,8 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _accessApplication)
+                    _accessApplication.Dispose();
             }
             catch (Exception exception)
             {
@@ -123,7 +123,7 @@ namespace COMAddinTaskPaneExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // register addin in access
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
                 RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
                 regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
