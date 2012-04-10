@@ -311,7 +311,9 @@
     <EmbeddedResource Include="ApplicationObserver\IconsAndConfig\Running.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DefaultConfiguration.xml" />
+    <EmbeddedResource Include="DefaultConfiguration.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="InfoLayer\InfoControl.resx">

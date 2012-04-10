@@ -35,6 +35,7 @@ namespace NetOffice.DeveloperToolbox
             if (ErrorCategory.Critical == category)
                 labelExitMessage.Visible = true;
             DisplayException(exception);
+            currentLanguageID = ValidateLanguageID(currentLanguageID);
             Translator.TranslateControls(this, "ErrorFormMessageTable.txt", currentLanguageID);
             this.Height = buttonOK.Top + buttonOK.Height + 40;
         }
@@ -46,6 +47,7 @@ namespace NetOffice.DeveloperToolbox
             if (ErrorCategory.Critical == category)
                 labelExitMessage.Visible = true;
             DisplayException(exception);
+            currentLanguageID = ValidateLanguageID(currentLanguageID);
             Translator.TranslateControls(this, "ErrorFormMessageTable.txt", currentLanguageID);
             this.Height = buttonOK.Top + buttonOK.Height + 40;
         }
@@ -99,6 +101,21 @@ namespace NetOffice.DeveloperToolbox
         #endregion
 
         #region Methods
+
+        private int ValidateLanguageID(int currentLanguageID)
+        {
+            switch (currentLanguageID)
+            {
+                case 0:
+                    currentLanguageID = 1033;
+                    break;
+                case 1:
+                    currentLanguageID = 1031;
+                    break;
+            }
+
+            return currentLanguageID;
+        }
 
         private void DisplayException(Exception exception)
         {
