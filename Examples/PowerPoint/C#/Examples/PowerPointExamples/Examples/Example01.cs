@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -73,8 +74,8 @@ namespace PowerPointExamplesCS4
         /// <returns>the extension</returns>
         private static string GetDefaultExtension(PowerPoint.Application application)
         {
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
+            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
+            if (Version >= 12.00)
                 return ".pptx";
             else
                 return ".ppt";

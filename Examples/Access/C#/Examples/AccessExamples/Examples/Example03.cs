@@ -6,7 +6,8 @@ using System.Reflection;
 using System.IO;
 using System.Text;
 using System.Data;
-using System.Data.OleDb; 
+using System.Data.OleDb;
+using System.Globalization;
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -114,8 +115,8 @@ namespace AccessExamplesCS4
             if (!application.EntityIsAvailable("Version"))
                 return ".mdb";
 
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
+            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
+            if (Version >= 12.00)
                 return ".accdb";
             else
                 return ".mdb";

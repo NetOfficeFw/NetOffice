@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -22,7 +23,7 @@ namespace PowerPointExamplesCS4
         public void RunExample()
         {
             bool isFailed = false;
-            string workbookFile = null;
+            string documentFile = null;
             PowerPoint.Application powerApplication = null;
             try
             {
@@ -49,9 +50,8 @@ namespace PowerPointExamplesCS4
                
                 // save the document 
                 string fileExtension = GetDefaultExtension(powerApplication);
-                string documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+                documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
                 presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
-                 
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {
@@ -67,8 +67,8 @@ namespace PowerPointExamplesCS4
                     powerApplication.Dispose();
                 }
 
-                if ((null != workbookFile) && (!isFailed))
-                    _hostApplication.ShowFinishDialog(null, workbookFile);
+                if ((null != documentFile) && (!isFailed))
+                    _hostApplication.ShowFinishDialog(null, documentFile);
             }
         }
 
@@ -97,15 +97,15 @@ namespace PowerPointExamplesCS4
         #region Helper
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptx"
+        /// returns the valid file extension for the instance. for example ".ppt" or ".pptm"
         /// </summary>
         /// <param name="application">the instance</param>
         /// <returns>the extension</returns>
         private static string GetDefaultExtension(PowerPoint.Application application)
         {
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
-                return ".pptx";
+            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
+            if (Version >= 12.00)
+                return ".pptm";
             else
                 return ".ppt";
         }

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
+using System.Globalization;
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -85,8 +86,8 @@ namespace AccessExamplesCS4
             if (!application.EntityIsAvailable("Version"))
                 return ".mdb";
 
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
+            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
+            if (Version >= 12.00)
                 return ".accdb";
             else
                 return ".mdb";

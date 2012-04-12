@@ -48,7 +48,12 @@ Public Class Example01
 
         ' we save the document as .doc for compatibility with all word versions
         Dim documentFile As String = String.Format("{0}\Example01{1}", _hostApplication.RootDirectory, ".doc")
-        newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
+        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
+        If (wordVersion >= 12.0) Then
+            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
+        Else
+            newDocument.SaveAs(documentFile)
+        End If
 
         ' close word and dispose reference
         wordApplication.Quit()

@@ -97,16 +97,16 @@ Public Class Example03
 #Region "Helper"
 
     ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".ppt" or ".pptx"
+    ''' returns the valid file extension for the instance. for example ".ppt" or ".pptm"
     ''' </summary>
     ''' <param name="application">the instance</param>
     ''' <returns>the extension</returns>
     ''' <remarks></remarks>
     Private Function GetDefaultExtension(ByVal application As PowerPoint.Application) As String
 
-        Dim version As Double = application.Version
-        If (version >= 120.0) Then
-            Return ".pptx"
+        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (version >= 12.0) Then
+            Return ".pptm"
         Else
             Return ".ppt"
         End If

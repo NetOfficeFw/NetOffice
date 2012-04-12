@@ -111,8 +111,8 @@ Public Class Example07
     ''' <remarks></remarks>
     Private Function GetDefaultExtension(ByVal application As Excel.Application) As String
 
-        Dim version As Double = application.Version
-        If (version >= 120.0) Then
+        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (version >= 12.0) Then
             Return ".xlsm"
         Else
             Return ".xls"
@@ -122,8 +122,8 @@ Public Class Example07
 
     Private Function GetFileFormat(ByVal application As Excel.Application) As XlFileFormat
 
-        Dim version As Double = application.Version
-        If (version >= 120.0) Then
+        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (version >= 12.0) Then
             Return XlFileFormat.xlOpenXMLWorkbookMacroEnabled
         Else
             Return XlFileFormat.xlExcel7

@@ -43,8 +43,14 @@ Public Class Example05
         wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro")
 
         ' we save the document as .doc for compatibility with all word versions
-        Dim documentFile As String = String.Format("{0}\Example05{1}", _hostApplication.RootDirectory, ".doc")
-        newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
+        Dim fileExtension = GetFileExtension(wordApplication)
+        Dim documentFile As String = String.Format("{0}\Example05{1}", _hostApplication.RootDirectory, fileExtension)
+        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
+        If (wordVersion >= 12.0) Then
+            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
+        Else
+            newDocument.SaveAs(documentFile)
+        End If
 
         ' close word and dispose reference
         wordApplication.Quit()
@@ -78,6 +84,21 @@ Public Class Example05
             Return Nothing
         End Get
     End Property
+
+#End Region
+
+#Region "Helper"
+
+    Private Function GetFileExtension(ByVal application As Word.Application) As String
+
+        Dim wordVersion As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (wordVersion >= 12.0) Then
+            Return ".docm"
+        Else
+            Return ".docm"
+        End If
+
+    End Function
 
 #End Region
 

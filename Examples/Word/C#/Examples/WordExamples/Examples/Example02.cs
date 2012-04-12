@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
+using System.Globalization;
 using ExampleBase;
 
 using LateBindingApi.Core;
@@ -54,7 +55,11 @@ namespace WordExamplesCS4
 
             // we save the document as .doc for compatibility with all word versions
             string documentFile = string.Format("{0}\\Example02{1}", _hostApplication.RootDirectory, ".doc");
-            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
+            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
+            if (wordVersion >= 12.0)
+                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
+            else
+                newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();

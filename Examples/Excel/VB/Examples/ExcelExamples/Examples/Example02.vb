@@ -133,8 +133,8 @@ Public Class Example02
     ''' <remarks></remarks>
     Private Function GetDefaultExtension(ByVal application As Excel.Application) As String
 
-        Dim version As Double = application.Version
-        If (version >= 120.0) Then
+        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (version >= 12.0) Then
             Return ".xlsx"
         Else
             Return ".xls"

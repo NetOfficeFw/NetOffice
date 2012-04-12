@@ -1,0 +1,38 @@
+﻿[1033]
+labelHeader2 = The tutorial code is available in the VS Solution Explorer.
+labelControlsHeader = Visual area for tutorials
+labelQuestions = Questions or Comments?
+labelRessourceHeader = Ressources
+labelOffHint = Online Documentation is turned off. Enable in program options or visit:
+linkLabelTutorialOverview = Tutorial Overview
+linkLabelDocumentation = Documentation
+linklabelFaq = FAQ
+linkLabelTecDocumentation = Technical Documentation
+linkLabelTecFaq = Technical FAQ
+linkLabelDeveloperToolbox = Developer Toolbox
+linkLabelProjectWizard = Visual Studio Project Wizard
+linkLabelExcel = Excel Examples
+linkLabelWord = Word Examples
+linkLabelOutlook = Outlook Examples
+linkLabelPowerPoint = PowerPoint Examples
+linkLabelAccess = Access Examples
+[End]
+[1031]
+labelHeader2 = Der Tutorialcode ist im VS Solution Explorer verfügbar
+labelControlsHeader = Dieser Bereich ist für Tutorials
+labelQuestions = Fragen oder Hinweise?
+labelRessourceHeader = Ressourcen
+labelOffHint = Das abfragen der Online Documentation is nicht aktiviert. Bitte aktivieren Sie diese Option oder besuchen Sie:
+linkLabelTutorialOverview = Tutorial Übersicht
+linkLabelDocumentation = Dokumentation
+linklabelFaq = FAQ
+linkLabelTecDocumentation = Technische Dokumentation
+linkLabelTecFaq = Technischer FAQ
+linkLabelDeveloperToolbox = Developer Toolbox
+linkLabelProjectWizard = Visual Studio Projekt Wizard
+linkLabelExcel = Excel Beispiele
+linkLabelWord = Word Beispiele
+linkLabelOutlook = Outlook Beispiele
+linkLabelPowerPoint = PowerPoint Beispiele
+linkLabelAccess = Access Beispiele
+[End]

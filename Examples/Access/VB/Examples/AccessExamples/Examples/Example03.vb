@@ -112,8 +112,8 @@ Public Class Example03
             Return ".mdb"
         End If
 
-        Dim version As Double = application.Version
-        If (version >= 120.0) Then
+        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
+        If (version >= 12.0) Then
             Return ".accdb"
         Else
             Return ".mdb"

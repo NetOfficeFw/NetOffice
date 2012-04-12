@@ -84,6 +84,7 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Globalization" />
     <Import Include="System.Reflection" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
