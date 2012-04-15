@@ -106,6 +106,16 @@ namespace NetOffice.DeveloperToolbox
                 newControl5.Dock = DockStyle.Fill;
                 _controls.Add(newControl5);
 
+                ProjectWizardControl newControl7 = new ProjectWizardControl();
+                tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl7.ControlCaption);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].Controls.Add(newControl7);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].Tag = newControl7;
+                imageListTabMain.Images.Add(newControl7.Icon);
+                tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
+                newControl7.Dock = DockStyle.Fill;
+                _controls.Add(newControl7);
+
+
                 // load configuration
                 LoadConfiguration();
                 SetupTrayIcon(true);

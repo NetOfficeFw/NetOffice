@@ -102,6 +102,11 @@ namespace NetOffice.DeveloperToolbox
 
         #region Methods
 
+        public static void ShowError(Exception exception)
+        { 
+        
+        }
+
         private int ValidateLanguageID(int currentLanguageID)
         {
             switch (currentLanguageID)

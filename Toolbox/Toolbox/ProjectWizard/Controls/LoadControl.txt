@@ -1,0 +1,14 @@
+﻿[1031]
+labelUserCaption = Für wen soll Ihr Automations Addin verfügbar sein?
+radioButtonCurrentUser = Nur für den angemeldeten Benutzer
+radioButtonLocalMachine = Für alle Benutzer
+labelLoadCaption = Wann soll Ihr Automations Addin geladen werden?
+comboBoxLoadBehavior = 3   = Beim Start der Office Anwendung automatisch laden;2   = Bei Bedarf laden;1   = Nicht automatisch laden;16 = Beim ersten Start automatisch laden, danach bei Bedarf laden
+[End]
+[1033]
+labelUserCaption = Choose addin is available for all users or not
+radioButtonCurrentUser = Current User
+radioButtonLocalMachine = All Users
+labelLoadCaption = Decide when it has to be loaded
+comboBoxLoadBehavior = 3   = Load at startup ;2   = Load on demand;1   = Do not load automatically ;16 = Load first time, then load on demand
+[End]

@@ -118,7 +118,7 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
 
         #endregion
 
-        #region IUtilsControl Member
+        #region IToolboxControl Member
 
         public string ControlName
         {
