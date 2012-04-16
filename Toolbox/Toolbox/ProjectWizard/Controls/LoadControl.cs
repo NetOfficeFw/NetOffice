@@ -21,6 +21,7 @@ namespace NetOffice.DeveloperToolbox
             CreateSettingsDocument();
             comboBoxLoadBehavior.SelectedIndex = 0;
         }
+
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             ChangeSettings();
@@ -34,6 +35,37 @@ namespace NetOffice.DeveloperToolbox
 
             ChangeSettings();
             RaiseChangeEvent();
+        }
+
+        public string LoadBehaviour
+        {
+            get
+            {
+                switch (comboBoxLoadBehavior.SelectedIndex)
+                {
+                    case 0:
+                        return "3";
+                    case 1:
+                        return "2";
+                    case 2:
+                        return "1";
+                    case 3:
+                        return "16";
+                    default:
+                        return "3";
+                }
+            }
+        }
+
+        public string Hivekey
+        {
+            get 
+            {
+                if (radioButtonCurrentUser.Checked)
+                    return "CurrentUser";
+                else
+                    return "LocalMachine";
+            }
         }
 
         #region IWizardControl Member

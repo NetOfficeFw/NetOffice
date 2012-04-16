@@ -188,6 +188,7 @@ namespace NetOffice.DeveloperToolbox
             panelControls.Controls.Add(control5);
             control5.Dock = DockStyle.Fill;
         }
+
         private void LoadControls()
         {
             try
@@ -369,5 +370,21 @@ namespace NetOffice.DeveloperToolbox
             Reset();
         }
 
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string message = CurrentLanguageID == 1031 ? "Das Projekt wurde erstellt." : "The project is complete.";
+                
+                string resultFolder = ProjectConverter.ConvertProjectTemplate(_projectOptions, _listControls);
+                MessageBox.Show(this, message, "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Information);              
+                System.Diagnostics.Process.Start(resultFolder);
+                Reset();
+            }
+            catch (Exception exception)
+            {
+                ErrorForm.ShowError(exception);
+            }
+        }
     }
 }

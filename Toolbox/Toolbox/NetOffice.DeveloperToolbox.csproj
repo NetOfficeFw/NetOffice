@@ -49,6 +49,9 @@
       <HintPath>..\..\Current Binaries\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
@@ -184,6 +187,7 @@
       <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectWizard\CodeTemplates\CodeTemplates.cs" />
     <Compile Include="ProjectWizard\Controls\GuiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +219,7 @@
     <Compile Include="ProjectWizard\Controls\SummaryControl.Designer.cs">
       <DependentUpon>SummaryControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectWizard\ProjectConverter.cs" />
     <Compile Include="ProjectWizard\ProjectOptions.cs" />
     <Compile Include="ProjectWizard\ProjectWizardControl.cs">
       <SubType>UserControl</SubType>
@@ -467,6 +472,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NetOffice.Icon.32x32.ico" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationCreateCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationCreateCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationDestroyCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationDestroyCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationFieldCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationFieldCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RemoveClassicUIMethodCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RemoveClassicUIMethodVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RemoveUICallCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RemoveUICallCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\CreateClassicUIMethodCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\CreateClassicUIMethodVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\CreateUICallCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\CreateUICallCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\HelperCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\HelperCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\UnregisterCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\UnregisterCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RibbonImplementCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RibbonImplementCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RegisterCodeCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RegisterCodeVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RibbonImplementCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RibbonImplementVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\RibbonRessourceReference.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\UsingCSharp.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\UsingVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\AssemblyReference.txt" />
     <EmbeddedResource Include="ProjectWizard\SelectProjectTypeDialog.txt" />
     <EmbeddedResource Include="ProjectWizard\Controls\GuiControl.txt" />
     <EmbeddedResource Include="ProjectWizard\Controls\LoadControl.txt" />

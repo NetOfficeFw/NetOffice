@@ -24,6 +24,17 @@ namespace NetOffice.DeveloperToolbox
             ChangeSettings();
         }
 
+        public string AssemblyName
+        {
+            get { return textBoxClassName.Text; }
+        }
+
+        public string AssemblyDescription
+        {
+            get { return textBoxDescription.Text; }
+        }
+
+
         #region IWizardControl Member
 
         public event ReadyStateChangedHandler ReadyStateChanged;

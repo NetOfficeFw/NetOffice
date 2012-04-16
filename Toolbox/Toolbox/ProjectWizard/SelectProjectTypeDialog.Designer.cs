@@ -64,6 +64,10 @@
             this.radioButtonApplicationData = new System.Windows.Forms.RadioButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelFolder = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,7 +85,7 @@
             this.labelProjectType.AutoSize = true;
             this.labelProjectType.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.labelProjectType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProjectType.Location = new System.Drawing.Point(43, 18);
+            this.labelProjectType.Location = new System.Drawing.Point(26, 4);
             this.labelProjectType.Name = "labelProjectType";
             this.labelProjectType.Size = new System.Drawing.Size(70, 13);
             this.labelProjectType.TabIndex = 89;
@@ -91,7 +95,7 @@
             // 
             this.radioButtonAutomationAddin.AutoSize = true;
             this.radioButtonAutomationAddin.Checked = true;
-            this.radioButtonAutomationAddin.Location = new System.Drawing.Point(49, 43);
+            this.radioButtonAutomationAddin.Location = new System.Drawing.Point(32, 29);
             this.radioButtonAutomationAddin.Name = "radioButtonAutomationAddin";
             this.radioButtonAutomationAddin.Size = new System.Drawing.Size(108, 17);
             this.radioButtonAutomationAddin.TabIndex = 87;
@@ -102,7 +106,7 @@
             // radioButtonConsole
             // 
             this.radioButtonConsole.AutoSize = true;
-            this.radioButtonConsole.Location = new System.Drawing.Point(329, 43);
+            this.radioButtonConsole.Location = new System.Drawing.Point(312, 29);
             this.radioButtonConsole.Name = "radioButtonConsole";
             this.radioButtonConsole.Size = new System.Drawing.Size(99, 17);
             this.radioButtonConsole.TabIndex = 90;
@@ -112,7 +116,7 @@
             // radioButtonWindowsForms
             // 
             this.radioButtonWindowsForms.AutoSize = true;
-            this.radioButtonWindowsForms.Location = new System.Drawing.Point(175, 43);
+            this.radioButtonWindowsForms.Location = new System.Drawing.Point(158, 29);
             this.radioButtonWindowsForms.Name = "radioButtonWindowsForms";
             this.radioButtonWindowsForms.Size = new System.Drawing.Size(136, 17);
             this.radioButtonWindowsForms.TabIndex = 91;
@@ -122,7 +126,7 @@
             // radioButtonClassLibrary
             // 
             this.radioButtonClassLibrary.AutoSize = true;
-            this.radioButtonClassLibrary.Location = new System.Drawing.Point(456, 43);
+            this.radioButtonClassLibrary.Location = new System.Drawing.Point(439, 29);
             this.radioButtonClassLibrary.Name = "radioButtonClassLibrary";
             this.radioButtonClassLibrary.Size = new System.Drawing.Size(84, 17);
             this.radioButtonClassLibrary.TabIndex = 92;
@@ -131,7 +135,7 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.radioButtonClassLibrary);
             this.panel1.Controls.Add(this.radioButtonWindowsForms);
@@ -140,14 +144,14 @@
             this.panel1.Controls.Add(this.radioButtonAutomationAddin);
             this.panel1.Location = new System.Drawing.Point(22, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 81);
+            this.panel1.Size = new System.Drawing.Size(545, 81);
             this.panel1.TabIndex = 93;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 15);
+            this.pictureBox5.Location = new System.Drawing.Point(2, 1);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(18, 17);
             this.pictureBox5.TabIndex = 93;
@@ -155,7 +159,7 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.labelNet4Hint);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.radioButtonVS2010);
@@ -163,7 +167,7 @@
             this.panel2.Controls.Add(this.radioButtonVS2008);
             this.panel2.Location = new System.Drawing.Point(22, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 78);
+            this.panel2.Size = new System.Drawing.Size(545, 78);
             this.panel2.TabIndex = 94;
             // 
             // labelNet4Hint
@@ -171,7 +175,7 @@
             this.labelNet4Hint.AutoSize = true;
             this.labelNet4Hint.BackColor = System.Drawing.Color.DarkKhaki;
             this.labelNet4Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNet4Hint.Location = new System.Drawing.Point(195, 18);
+            this.labelNet4Hint.Location = new System.Drawing.Point(276, 30);
             this.labelNet4Hint.Name = "labelNet4Hint";
             this.labelNet4Hint.Size = new System.Drawing.Size(269, 13);
             this.labelNet4Hint.TabIndex = 97;
@@ -181,7 +185,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(18, 17);
             this.pictureBox1.TabIndex = 94;
@@ -191,7 +195,7 @@
             // 
             this.radioButtonVS2010.AutoSize = true;
             this.radioButtonVS2010.Checked = true;
-            this.radioButtonVS2010.Location = new System.Drawing.Point(175, 41);
+            this.radioButtonVS2010.Location = new System.Drawing.Point(158, 28);
             this.radioButtonVS2010.Name = "radioButtonVS2010";
             this.radioButtonVS2010.Size = new System.Drawing.Size(112, 17);
             this.radioButtonVS2010.TabIndex = 91;
@@ -204,7 +208,7 @@
             this.labelEnvironment.AutoSize = true;
             this.labelEnvironment.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.labelEnvironment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnvironment.Location = new System.Drawing.Point(43, 17);
+            this.labelEnvironment.Location = new System.Drawing.Point(26, 4);
             this.labelEnvironment.Name = "labelEnvironment";
             this.labelEnvironment.Size = new System.Drawing.Size(123, 13);
             this.labelEnvironment.TabIndex = 89;
@@ -213,7 +217,7 @@
             // radioButtonVS2008
             // 
             this.radioButtonVS2008.AutoSize = true;
-            this.radioButtonVS2008.Location = new System.Drawing.Point(46, 41);
+            this.radioButtonVS2008.Location = new System.Drawing.Point(29, 28);
             this.radioButtonVS2008.Name = "radioButtonVS2008";
             this.radioButtonVS2008.Size = new System.Drawing.Size(112, 17);
             this.radioButtonVS2008.TabIndex = 87;
@@ -225,7 +229,7 @@
             this.buttonSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelect.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelect.Image")));
             this.buttonSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelect.Location = new System.Drawing.Point(413, 404);
+            this.buttonSelect.Location = new System.Drawing.Point(295, 404);
             this.buttonSelect.Name = "buttonSelect";
             this.buttonSelect.Size = new System.Drawing.Size(109, 26);
             this.buttonSelect.TabIndex = 96;
@@ -238,7 +242,7 @@
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClose.Location = new System.Drawing.Point(541, 404);
+            this.buttonClose.Location = new System.Drawing.Point(423, 404);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(110, 26);
             this.buttonClose.TabIndex = 95;
@@ -248,14 +252,14 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.labelRuntimeHeader);
             this.panel3.Controls.Add(this.comboBoxNetRuntime);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.labelNetRuntime);
             this.panel3.Location = new System.Drawing.Point(339, 177);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 77);
+            this.panel3.Size = new System.Drawing.Size(228, 77);
             this.panel3.TabIndex = 97;
             // 
             // labelRuntimeHeader
@@ -263,7 +267,7 @@
             this.labelRuntimeHeader.AutoSize = true;
             this.labelRuntimeHeader.BackColor = System.Drawing.SystemColors.Control;
             this.labelRuntimeHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRuntimeHeader.Location = new System.Drawing.Point(53, 49);
+            this.labelRuntimeHeader.Location = new System.Drawing.Point(36, 36);
             this.labelRuntimeHeader.Name = "labelRuntimeHeader";
             this.labelRuntimeHeader.Size = new System.Drawing.Size(42, 13);
             this.labelRuntimeHeader.TabIndex = 96;
@@ -278,7 +282,7 @@
             "3.0",
             "3.5",
             "4.0"});
-            this.comboBoxNetRuntime.Location = new System.Drawing.Point(101, 43);
+            this.comboBoxNetRuntime.Location = new System.Drawing.Point(84, 30);
             this.comboBoxNetRuntime.Name = "comboBoxNetRuntime";
             this.comboBoxNetRuntime.Size = new System.Drawing.Size(65, 21);
             this.comboBoxNetRuntime.TabIndex = 95;
@@ -288,7 +292,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(18, 17);
             this.pictureBox2.TabIndex = 94;
@@ -299,7 +303,7 @@
             this.labelNetRuntime.AutoSize = true;
             this.labelNetRuntime.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.labelNetRuntime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetRuntime.Location = new System.Drawing.Point(43, 17);
+            this.labelNetRuntime.Location = new System.Drawing.Point(26, 4);
             this.labelNetRuntime.Name = "labelNetRuntime";
             this.labelNetRuntime.Size = new System.Drawing.Size(122, 13);
             this.labelNetRuntime.TabIndex = 89;
@@ -307,7 +311,7 @@
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.radioButtonVB);
             this.panel4.Controls.Add(this.labelProgrammingLanguage);
@@ -321,7 +325,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(19, 14);
+            this.pictureBox3.Location = new System.Drawing.Point(2, 1);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(18, 17);
             this.pictureBox3.TabIndex = 94;
@@ -331,7 +335,7 @@
             // 
             this.radioButtonVB.AutoSize = true;
             this.radioButtonVB.Checked = true;
-            this.radioButtonVB.Location = new System.Drawing.Point(175, 46);
+            this.radioButtonVB.Location = new System.Drawing.Point(158, 33);
             this.radioButtonVB.Name = "radioButtonVB";
             this.radioButtonVB.Size = new System.Drawing.Size(64, 17);
             this.radioButtonVB.TabIndex = 91;
@@ -344,7 +348,7 @@
             this.labelProgrammingLanguage.AutoSize = true;
             this.labelProgrammingLanguage.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.labelProgrammingLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProgrammingLanguage.Location = new System.Drawing.Point(43, 17);
+            this.labelProgrammingLanguage.Location = new System.Drawing.Point(26, 4);
             this.labelProgrammingLanguage.Name = "labelProgrammingLanguage";
             this.labelProgrammingLanguage.Size = new System.Drawing.Size(103, 13);
             this.labelProgrammingLanguage.TabIndex = 89;
@@ -353,7 +357,7 @@
             // radioButtonCSharp
             // 
             this.radioButtonCSharp.AutoSize = true;
-            this.radioButtonCSharp.Location = new System.Drawing.Point(46, 46);
+            this.radioButtonCSharp.Location = new System.Drawing.Point(29, 33);
             this.radioButtonCSharp.Name = "radioButtonCSharp";
             this.radioButtonCSharp.Size = new System.Drawing.Size(39, 17);
             this.radioButtonCSharp.TabIndex = 87;
@@ -362,7 +366,6 @@
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.labelNoAdminHint);
             this.panel5.Controls.Add(this.buttonChooseFolder);
             this.panel5.Controls.Add(this.textBoxCustomFolder);
@@ -375,7 +378,7 @@
             this.panel5.Controls.Add(this.labelFolder);
             this.panel5.Location = new System.Drawing.Point(22, 254);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(633, 136);
+            this.panel5.Size = new System.Drawing.Size(545, 136);
             this.panel5.TabIndex = 99;
             // 
             // labelNoAdminHint
@@ -383,7 +386,7 @@
             this.labelNoAdminHint.AutoSize = true;
             this.labelNoAdminHint.BackColor = System.Drawing.Color.DarkKhaki;
             this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoAdminHint.Location = new System.Drawing.Point(199, 18);
+            this.labelNoAdminHint.Location = new System.Drawing.Point(24, 118);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
             this.labelNoAdminHint.Size = new System.Drawing.Size(414, 13);
             this.labelNoAdminHint.TabIndex = 102;
@@ -393,7 +396,7 @@
             // buttonChooseFolder
             // 
             this.buttonChooseFolder.Enabled = false;
-            this.buttonChooseFolder.Location = new System.Drawing.Point(478, 97);
+            this.buttonChooseFolder.Location = new System.Drawing.Point(468, 85);
             this.buttonChooseFolder.Name = "buttonChooseFolder";
             this.buttonChooseFolder.Size = new System.Drawing.Size(42, 20);
             this.buttonChooseFolder.TabIndex = 101;
@@ -404,16 +407,16 @@
             // textBoxCustomFolder
             // 
             this.textBoxCustomFolder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCustomFolder.Location = new System.Drawing.Point(172, 98);
+            this.textBoxCustomFolder.Location = new System.Drawing.Point(155, 85);
             this.textBoxCustomFolder.Name = "textBoxCustomFolder";
             this.textBoxCustomFolder.ReadOnly = true;
-            this.textBoxCustomFolder.Size = new System.Drawing.Size(292, 20);
+            this.textBoxCustomFolder.Size = new System.Drawing.Size(298, 20);
             this.textBoxCustomFolder.TabIndex = 100;
             // 
             // radioButtonCustomFolder
             // 
             this.radioButtonCustomFolder.AutoSize = true;
-            this.radioButtonCustomFolder.Location = new System.Drawing.Point(44, 101);
+            this.radioButtonCustomFolder.Location = new System.Drawing.Point(27, 88);
             this.radioButtonCustomFolder.Name = "radioButtonCustomFolder";
             this.radioButtonCustomFolder.Size = new System.Drawing.Size(104, 17);
             this.radioButtonCustomFolder.TabIndex = 99;
@@ -425,7 +428,7 @@
             // 
             this.radioButtonVSProjectFolder.AutoSize = true;
             this.radioButtonVSProjectFolder.Enabled = false;
-            this.radioButtonVSProjectFolder.Location = new System.Drawing.Point(172, 71);
+            this.radioButtonVSProjectFolder.Location = new System.Drawing.Point(155, 58);
             this.radioButtonVSProjectFolder.Name = "radioButtonVSProjectFolder";
             this.radioButtonVSProjectFolder.Size = new System.Drawing.Size(110, 17);
             this.radioButtonVSProjectFolder.TabIndex = 98;
@@ -436,7 +439,7 @@
             // 
             this.radioButtonDesktop.AutoSize = true;
             this.radioButtonDesktop.Enabled = false;
-            this.radioButtonDesktop.Location = new System.Drawing.Point(173, 43);
+            this.radioButtonDesktop.Location = new System.Drawing.Point(156, 30);
             this.radioButtonDesktop.Name = "radioButtonDesktop";
             this.radioButtonDesktop.Size = new System.Drawing.Size(65, 17);
             this.radioButtonDesktop.TabIndex = 97;
@@ -446,7 +449,7 @@
             // radioButtonUserFolder
             // 
             this.radioButtonUserFolder.AutoSize = true;
-            this.radioButtonUserFolder.Location = new System.Drawing.Point(44, 74);
+            this.radioButtonUserFolder.Location = new System.Drawing.Point(27, 61);
             this.radioButtonUserFolder.Name = "radioButtonUserFolder";
             this.radioButtonUserFolder.Size = new System.Drawing.Size(98, 17);
             this.radioButtonUserFolder.TabIndex = 96;
@@ -457,7 +460,7 @@
             // 
             this.radioButtonApplicationData.AutoSize = true;
             this.radioButtonApplicationData.Checked = true;
-            this.radioButtonApplicationData.Location = new System.Drawing.Point(44, 46);
+            this.radioButtonApplicationData.Location = new System.Drawing.Point(27, 33);
             this.radioButtonApplicationData.Name = "radioButtonApplicationData";
             this.radioButtonApplicationData.Size = new System.Drawing.Size(103, 17);
             this.radioButtonApplicationData.TabIndex = 95;
@@ -469,7 +472,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(19, 14);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 1);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(18, 17);
             this.pictureBox4.TabIndex = 94;
@@ -480,17 +483,49 @@
             this.labelFolder.AutoSize = true;
             this.labelFolder.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.labelFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFolder.Location = new System.Drawing.Point(43, 17);
+            this.labelFolder.Location = new System.Drawing.Point(26, 4);
             this.labelFolder.Name = "labelFolder";
             this.labelFolder.Size = new System.Drawing.Size(150, 13);
             this.labelFolder.TabIndex = 89;
             this.labelFolder.Text = "Speicherordner für das Projekt";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel6.Location = new System.Drawing.Point(1, 77);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(543, 2);
+            this.panel6.TabIndex = 94;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel7.Location = new System.Drawing.Point(1, 73);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(543, 2);
+            this.panel7.TabIndex = 98;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel8.Location = new System.Drawing.Point(2, 72);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(543, 2);
+            this.panel8.TabIndex = 95;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel9.Location = new System.Drawing.Point(2, 72);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(543, 2);
+            this.panel9.TabIndex = 97;
+            // 
             // SelectProjectTypeDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 442);
+            this.ClientSize = new System.Drawing.Size(583, 442);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -564,6 +599,10 @@
         private System.Windows.Forms.Button buttonChooseFolder;
         private System.Windows.Forms.TextBox textBoxCustomFolder;
         private System.Windows.Forms.Label labelNoAdminHint;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
 
     }
 }

@@ -97,7 +97,6 @@ namespace NetOffice.DeveloperToolbox
 
         private void ShowSummary()
         {
-            
 
             labelSummaryCaption.Text = string.Empty;
             string summaryCaption = "";

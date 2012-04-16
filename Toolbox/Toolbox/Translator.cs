@@ -6,7 +6,7 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox
 {
-    class Translator
+    public class Translator
     {
         public static void TranslateControls(Control control, string ressourceFile, int languageId)
         {
@@ -118,7 +118,7 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
-        private static string ReadString(string ressourcePath)
+        public static string ReadString(string ressourcePath)
         {
             System.IO.Stream ressourceStream = null;
             System.IO.StreamReader textStreamReader = null;

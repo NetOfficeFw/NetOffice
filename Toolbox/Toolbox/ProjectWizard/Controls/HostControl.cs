@@ -20,6 +20,25 @@ namespace NetOffice.DeveloperToolbox
             CreateSettingsDocument();
         }
 
+        public List<string> HostApplications
+        {
+            get 
+            {
+                List<string> list = new List<string>();
+                if (checkBoxExcel.Checked)
+                    list.Add("Excel");
+                if (checkBoxWord.Checked)
+                    list.Add("Word");
+                if (checkBoxOutlook.Checked)
+                    list.Add("Outlook");
+                if (checkBoxPowerPoint.Checked)
+                    list.Add("PowerPoint");
+                if (checkBoxAccess.Checked)
+                    list.Add("Access");
+                return list;
+            }
+        }
+
         #region IWizardControl Member
 
         public event ReadyStateChangedHandler ReadyStateChanged;

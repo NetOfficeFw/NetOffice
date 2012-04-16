@@ -27,7 +27,7 @@ namespace NetOffice.DeveloperToolbox
 
     public class ProjectOptions
     {
-        public ProjectOptions(string folder, double netRuntime, ProjectType projectType, ProgrammingLanguage language, IDE ide)
+        public ProjectOptions(string folder, string netRuntime, ProjectType projectType, ProgrammingLanguage language, IDE ide)
         {
             Folder = folder;
             NetRuntime = netRuntime;
@@ -39,7 +39,7 @@ namespace NetOffice.DeveloperToolbox
         public ProjectType ProjectType { get; private set; }
         public ProgrammingLanguage Language { get; private set; }
         public IDE IDE { get; private set; }
-        public  double NetRuntime { get; private set; }
-        public  string Folder { get; private set; }
+        public string  NetRuntime { get; private set; }
+        public string Folder { get; private set; }
     }
 }

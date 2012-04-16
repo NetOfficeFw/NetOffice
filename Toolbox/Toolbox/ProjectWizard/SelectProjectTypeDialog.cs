@@ -36,7 +36,7 @@ namespace NetOffice.DeveloperToolbox
             get
             {
                 ProjectOptions options = new ProjectOptions(GetSelectedFolder(),
-                                                            Convert.ToDouble(comboBoxNetRuntime.Text),
+                                                            comboBoxNetRuntime.Text,
                                                             GetSelectedProjectType(),
                                                             GetSelectedLanguage(),
                                                             GetSelectedIDE()

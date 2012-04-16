@@ -29,6 +29,22 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
+        public bool ClassicUIEnabled
+        {
+            get 
+            {
+                return checkBoxClassicUISupport.Checked;
+            }
+        }
+
+        public bool RibbonUIEnabled
+        {
+            get
+            {
+                return checkBoxRibbonUISupport.Checked;
+            }
+        }
+
         #region IWizardControl Member
 
         public event ReadyStateChangedHandler ReadyStateChanged;
