@@ -16,7 +16,7 @@ namespace NetOffice.DeveloperToolbox
         public SelectProjectTypeDialog()
         {
             InitializeComponent();
-            comboBoxNetRuntime.SelectedIndex = 3;
+            comboBoxNetRuntime.SelectedIndex = 2;
             if (IsAdministrator())
             {
                 labelNoAdminHint.Visible = false;
@@ -74,26 +74,28 @@ namespace NetOffice.DeveloperToolbox
             {
                 if (textBoxCustomFolder.Text == "")
                 {
-                    MessageBox.Show(this, "Bitte wählen Sie einen benutzerdefinierten Speicherordner.", "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                    string message = ProjectWizardControl.CurrentLanguageID == 1031 ? "Bitte wählen Sie einen benutzerdefinierten Speicherordner." : "Choose a custom folder first.";
+                    MessageBox.Show(this, message, "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                     return;
                 }
 
                 if (!IsAdministrator())
                 {
-                    string message1 = "Sie haben einen benutzerdefinierten Ordner ausgewählt und die Developer Toolbox verfügt derzeit nicht über erhöhte Berechtigungen.";
-                    string message2 = "Soll die Developer Toolbox den Schreibzugriff jetzt prüfen um später mögliche Fehler zu vermeiden?";
+                    string message1 =  ProjectWizardControl.CurrentLanguageID == 1031 ? "Sie haben einen benutzerdefinierten Ordner ausgewählt und die Developer Toolbox verfügt derzeit nicht über erhöhte Berechtigungen." : "You have a custom folder selected and the Toolbox missed Administratr Privileges.";
+                    string message2 =  ProjectWizardControl.CurrentLanguageID == 1031 ?"Soll die Developer Toolbox den Schreibzugriff jetzt prüfen um später mögliche Fehler zu vermeiden?" : "The Developer Toolbox want to do a test access to avoid any problems. Its okay?";
                     if (DialogResult.Yes == MessageBox.Show(this, string.Format("{0}{2}{2}{1}", message1, message2, Environment.NewLine), "Developer Toolbox", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         if (DoCustomTestWrite())
-                            MessageBox.Show(this, "Die Schreibprüfung verlief erfolgreich.", "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(this,  ProjectWizardControl.CurrentLanguageID == 1031 ? "Die Schreibprüfung verlief erfolgreich." : "Already was okay", "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
                         {
-                            MessageBox.Show(this, "Die Schreibprüfung ist geschlagen." + Environment.NewLine + Environment.NewLine +"Bitte wählen Sie einen anderen Speicherordner", "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            string message = ProjectWizardControl.CurrentLanguageID == 1031 ? "Die Schreibprüfung ist geschlagen." + Environment.NewLine + Environment.NewLine + "Bitte wählen Sie einen anderen Speicherordner" :
+                                "The test failed." + Environment.NewLine + Environment.NewLine + "Please choose a different folder or run Developer Toolbox with Administrator Privileges.";
+                            MessageBox.Show(this, message, "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
                 }
-
             }
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;

@@ -1,4 +1,5 @@
-﻿#Region "IRibbonExtensibility Members"
+﻿
+#Region "IRibbonExtensibility Members"
 
     Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
 
@@ -26,7 +27,6 @@
                     MessageBox.Show("This is the second sample button.")
                 Case Else
                     MessageBox.Show("Unkown Control Id: " + control.Id)
-
             End Select
 
         Catch throwedException As Exception

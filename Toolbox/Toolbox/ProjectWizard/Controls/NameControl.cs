@@ -17,16 +17,16 @@ namespace NetOffice.DeveloperToolbox
         public NameControl()
         {
             InitializeComponent();
+            CreateSettingsDocument();
             Translate();
             textBoxClassName.Text = "MyAssembly";
             textBoxDescription.Text = "No Description available";
-            CreateSettingsDocument();
             ChangeSettings();
         }
 
         public string AssemblyName
         {
-            get { return textBoxClassName.Text; }
+            get { return textBoxClassName.Text.Trim(); }
         }
 
         public string AssemblyDescription
@@ -144,7 +144,8 @@ namespace NetOffice.DeveloperToolbox
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-
+            ChangeSettings();
+            RaiseChangeEvent();
         }
 
         private void ChangeSettings()

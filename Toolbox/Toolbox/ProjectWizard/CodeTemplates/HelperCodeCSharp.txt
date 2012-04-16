@@ -8,7 +8,7 @@
         /// <returns></returns>
         protected internal static string ReadRessourceFile(string fileName)
         {
-            Assembly assembly = typeof(Addin).Assembly.GetExecutingAssembly();
+            Assembly assembly = typeof(Addin).Assembly;
             System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
             if (ressourceStream == null)
                 throw (new System.IO.IOException("Error accessing resource Stream."));

@@ -1,1 +1,1 @@
-﻿	Registry.%HiveKey%.DeleteSubKey("%OfficAddinKey%", false)
+﻿			Registry.%HiveKey%.DeleteSubKey("%OfficAddinKey%", false)

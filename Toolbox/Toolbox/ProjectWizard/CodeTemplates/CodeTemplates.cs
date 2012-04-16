@@ -48,6 +48,46 @@ namespace NetOffice.DeveloperToolbox
         static string _appCreateCodeCSharp;
         static string _appCreateCodeVB;
 
+        static string _solutionFile2008CS;
+        static string _solutionFile2008VB;
+
+        static string _solutionFile2010CS;
+        static string _solutionFile2010VB;
+
+        public static string SolutionFile(ProgrammingLanguage language, bool Is2010)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (Is2010)
+                {
+                    if (null == _solutionFile2010CS)
+                        _solutionFile2010CS = Translator.ReadString("ProjectWizard.CodeTemplates.Solution2010CS.txt");
+                    return _solutionFile2010CS;
+                }
+                else
+                {
+                    if (null == _solutionFile2008CS)
+                        _solutionFile2008CS = Translator.ReadString("ProjectWizard.CodeTemplates.Solution2008CS.txt");
+                    return _solutionFile2008CS;
+                }
+            }
+            else
+            {
+                if (Is2010)
+                {
+                    if (null == _solutionFile2010VB)
+                        _solutionFile2010VB = Translator.ReadString("ProjectWizard.CodeTemplates.Solution2010VB.txt");
+                    return _solutionFile2010VB;
+                }
+                else
+                {
+                    if (null == _solutionFile2008VB)
+                        _solutionFile2008VB = Translator.ReadString("ProjectWizard.CodeTemplates.Solution2008VB.txt");
+                    return _solutionFile2008VB;
+                }
+            }
+        }
+
         public static string AssemblyReference
         {
             get 

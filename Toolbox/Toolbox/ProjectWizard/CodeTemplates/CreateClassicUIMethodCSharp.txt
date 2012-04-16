@@ -1,4 +1,8 @@
-﻿			private void CreateUserInterface()
-			{
-				// TODO: create UI items
-			}
+﻿		
+		#region Classic UI
+
+		private void CreateUserInterface()
+		{
+			// TODO: create UI items
+		}
+

@@ -34,8 +34,10 @@
             this.radioButtonWindowsForms = new System.Windows.Forms.RadioButton();
             this.radioButtonClassLibrary = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.labelNet4Hint = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButtonVS2010 = new System.Windows.Forms.RadioButton();
@@ -44,11 +46,13 @@
             this.buttonSelect = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.labelRuntimeHeader = new System.Windows.Forms.Label();
             this.comboBoxNetRuntime = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelNetRuntime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.radioButtonVB = new System.Windows.Forms.RadioButton();
             this.labelProgrammingLanguage = new System.Windows.Forms.Label();
@@ -64,10 +68,6 @@
             this.radioButtonApplicationData = new System.Windows.Forms.RadioButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelFolder = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -147,6 +147,14 @@
             this.panel1.Size = new System.Drawing.Size(545, 81);
             this.panel1.TabIndex = 93;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel6.Location = new System.Drawing.Point(1, 77);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(543, 2);
+            this.panel6.TabIndex = 94;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
@@ -169,6 +177,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(545, 78);
             this.panel2.TabIndex = 94;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel7.Location = new System.Drawing.Point(1, 73);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(543, 2);
+            this.panel7.TabIndex = 98;
             // 
             // labelNet4Hint
             // 
@@ -194,12 +210,10 @@
             // radioButtonVS2010
             // 
             this.radioButtonVS2010.AutoSize = true;
-            this.radioButtonVS2010.Checked = true;
             this.radioButtonVS2010.Location = new System.Drawing.Point(158, 28);
             this.radioButtonVS2010.Name = "radioButtonVS2010";
             this.radioButtonVS2010.Size = new System.Drawing.Size(112, 17);
             this.radioButtonVS2010.TabIndex = 91;
-            this.radioButtonVS2010.TabStop = true;
             this.radioButtonVS2010.Text = "VS 2010 (Express)";
             this.radioButtonVS2010.UseVisualStyleBackColor = true;
             // 
@@ -217,10 +231,12 @@
             // radioButtonVS2008
             // 
             this.radioButtonVS2008.AutoSize = true;
+            this.radioButtonVS2008.Checked = true;
             this.radioButtonVS2008.Location = new System.Drawing.Point(29, 28);
             this.radioButtonVS2008.Name = "radioButtonVS2008";
             this.radioButtonVS2008.Size = new System.Drawing.Size(112, 17);
             this.radioButtonVS2008.TabIndex = 87;
+            this.radioButtonVS2008.TabStop = true;
             this.radioButtonVS2008.Text = "VS 2008 (Express)";
             this.radioButtonVS2008.UseVisualStyleBackColor = true;
             // 
@@ -261,6 +277,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(228, 77);
             this.panel3.TabIndex = 97;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel9.Location = new System.Drawing.Point(2, 72);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(543, 2);
+            this.panel9.TabIndex = 97;
             // 
             // labelRuntimeHeader
             // 
@@ -321,6 +345,14 @@
             this.panel4.Size = new System.Drawing.Size(317, 77);
             this.panel4.TabIndex = 98;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel8.Location = new System.Drawing.Point(2, 72);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(543, 2);
+            this.panel8.TabIndex = 95;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -335,7 +367,7 @@
             // 
             this.radioButtonVB.AutoSize = true;
             this.radioButtonVB.Checked = true;
-            this.radioButtonVB.Location = new System.Drawing.Point(158, 33);
+            this.radioButtonVB.Location = new System.Drawing.Point(32, 34);
             this.radioButtonVB.Name = "radioButtonVB";
             this.radioButtonVB.Size = new System.Drawing.Size(64, 17);
             this.radioButtonVB.TabIndex = 91;
@@ -357,7 +389,7 @@
             // radioButtonCSharp
             // 
             this.radioButtonCSharp.AutoSize = true;
-            this.radioButtonCSharp.Location = new System.Drawing.Point(29, 33);
+            this.radioButtonCSharp.Location = new System.Drawing.Point(158, 34);
             this.radioButtonCSharp.Name = "radioButtonCSharp";
             this.radioButtonCSharp.Size = new System.Drawing.Size(39, 17);
             this.radioButtonCSharp.TabIndex = 87;
@@ -449,6 +481,7 @@
             // radioButtonUserFolder
             // 
             this.radioButtonUserFolder.AutoSize = true;
+            this.radioButtonUserFolder.Enabled = false;
             this.radioButtonUserFolder.Location = new System.Drawing.Point(27, 61);
             this.radioButtonUserFolder.Name = "radioButtonUserFolder";
             this.radioButtonUserFolder.Size = new System.Drawing.Size(98, 17);
@@ -488,38 +521,6 @@
             this.labelFolder.Size = new System.Drawing.Size(150, 13);
             this.labelFolder.TabIndex = 89;
             this.labelFolder.Text = "Speicherordner für das Projekt";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel6.Location = new System.Drawing.Point(1, 77);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(543, 2);
-            this.panel6.TabIndex = 94;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel7.Location = new System.Drawing.Point(1, 73);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(543, 2);
-            this.panel7.TabIndex = 98;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel8.Location = new System.Drawing.Point(2, 72);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(543, 2);
-            this.panel8.TabIndex = 95;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel9.Location = new System.Drawing.Point(2, 72);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(543, 2);
-            this.panel9.TabIndex = 97;
             // 
             // SelectProjectTypeDialog
             // 

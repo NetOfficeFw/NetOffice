@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Text;
+using System.Linq;
 using System.Xml.Linq;
 using ICSharpCode.SharpZipLib.Zip;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
@@ -23,12 +24,18 @@ namespace NetOffice.DeveloperToolbox
                     Directory.CreateDirectory(projectOptions.Folder);
             string templateFolder = Path.Combine(Application.StartupPath, "Project Wizard\\Templates");
             string assemblyFolder = Path.Combine(Application.StartupPath, "Project Wizard\\NetOffice Assemblies");
-
+              
             string fullTemplatePath = Path.Combine(templateFolder, GetTargetTemplate(projectOptions));
             if (!File.Exists(fullTemplatePath))
                 throw new System.IO.FileNotFoundException(string.Format("File not found:{0}", fullTemplatePath));
 
             string targetFolder = Path.Combine(projectOptions.Folder, GetProjectName());
+            targetFolder = Path.Combine(targetFolder, GetProjectName());
+
+            if (Directory.Exists(Path.Combine(projectOptions.Folder, GetProjectName())))
+                Directory.Delete(Path.Combine(projectOptions.Folder, GetProjectName()), true);
+            Directory.CreateDirectory(Path.Combine(projectOptions.Folder, GetProjectName()));
+            
             if (Directory.Exists(targetFolder))
                 Directory.Delete(targetFolder, true);
             Directory.CreateDirectory(targetFolder);
@@ -39,8 +46,46 @@ namespace NetOffice.DeveloperToolbox
             RenameProjectFile(targetFolder);
             DoReplace(targetFolder);
             CopyAssemblies(GetAssemblies(), targetFolder, assemblyFolder);
-            ValidateProjectFile(targetFolder);
-            return targetFolder;
+            string projectGuid = ValidateProjectFile(targetFolder);
+            CreateSolutionFile(Path.Combine(projectOptions.Folder, GetProjectName()), projectGuid);
+            return Path.Combine(projectOptions.Folder, GetProjectName());
+        }
+
+        static void CreateSolutionFile(string targetFolder, string projectGuid)
+        {
+            string solutionContent = CodeTemplates.SolutionFile(_projectOptions.Language, (_projectOptions.IDE == IDE.VS2010));
+            solutionContent = solutionContent.Replace("%ProjectName%", GetProjectName());
+            solutionContent = solutionContent.Replace("%ProjectGUID%", projectGuid);
+            string filePath = Path.Combine(targetFolder, GetProjectName() + ".sln");
+            File.AppendAllText(filePath, solutionContent, Encoding.UTF8);
+        }
+
+        private static string ValidateProjectFile(string targetFolder)
+        {
+            string guid = Guid.NewGuid().ToString().ToUpper();
+            string extension = _projectOptions.Language == ProgrammingLanguage.CSharp ? ".csproj" : ".vbproj";
+
+            string[] files = Directory.GetFiles(targetFolder, "*" + extension, SearchOption.AllDirectories);
+            foreach (string file in files)
+            {
+                XDocument document = XDocument.Load(file);
+                XElement rootNode = (document.FirstNode as XElement);
+                rootNode.Attribute("ToolsVersion").Value = _projectOptions.NetRuntime == "4.0" ? "4.0" : "3.5";
+                var properties = (from a in rootNode.Elements() select a);
+
+                foreach (var property in properties)
+                {
+                    foreach (XElement item in property.Elements())
+                    {
+                        if (item.Name.LocalName == "ProjectGuid")
+                            item.Value = "{" + guid + "}";
+                    }
+                }
+               
+                document.Save(file);
+            }
+
+            return guid;
         }
 
         public static void RenameProjectFile(string targetFolder)
@@ -110,7 +155,8 @@ namespace NetOffice.DeveloperToolbox
                     {
                         fileContent = fileContent.Replace("$ribbonFileReference$", CodeTemplates.RibbonReference);
                         fileContent = fileContent.Replace("$ribbonImplement$", CodeTemplates.RibbonImplement(_projectOptions.Language));
-                        fileContent = fileContent.Replace("$ribbonUIImplementMethod$", CodeTemplates.RibbonImplementCode(_projectOptions.Language));
+                        string ribbonImplement = CodeTemplates.RibbonImplementCode(_projectOptions.Language)+ "\r\n";
+                        fileContent = fileContent.Replace("$ribbonUIImplementMethod$", ribbonImplement);
                         fileContent = fileContent.Replace("$helperCode$", CodeTemplates.HelperCode(_projectOptions.Language));
                     }
                     else
@@ -125,7 +171,7 @@ namespace NetOffice.DeveloperToolbox
                     {
                         fileContent = fileContent.Replace("$classicUICreateCall$", CodeTemplates.ClassicUICall(_projectOptions.Language));
                         fileContent = fileContent.Replace("$classicUIRemoveCall$", CodeTemplates.ClassicUIRemoveCall(_projectOptions.Language));
-                        fileContent = fileContent.Replace("$classicUICreateRemoveMethod$", CodeTemplates.ClassicUIMethod(_projectOptions.Language) + CodeTemplates.ClassicUIRemoveMethod(_projectOptions.Language));
+                        fileContent = fileContent.Replace("$classicUICreateRemoveMethod$",  CodeTemplates.ClassicUIMethod(_projectOptions.Language) + CodeTemplates.ClassicUIRemoveMethod(_projectOptions.Language));
                     }
                     else
                     {
@@ -142,9 +188,9 @@ namespace NetOffice.DeveloperToolbox
                     else
                     {
                         if (_projectOptions.Language == ProgrammingLanguage.CSharp)
-                            fileContent = fileContent.Replace("$ApplicationField$", "\t\tCOMObject _application;");
+                            fileContent = fileContent.Replace("$ApplicationField$", "\t\tCOMObject _application;\r\n");
                         else
-                            fileContent = fileContent.Replace("$ApplicationField$", "\tDim _application As COMObject");
+                            fileContent = fileContent.Replace("$ApplicationField$", "\tDim _application As COMObject\r\n");
                     }
 
                     if (GetSimpleAssemblies().Length == 1)
@@ -152,30 +198,18 @@ namespace NetOffice.DeveloperToolbox
                     else
                     {
                         if (_projectOptions.Language == ProgrammingLanguage.CSharp)
-                            fileContent = fileContent.Replace("$ApplicationConstruction$", "\t\t_application = Factory.CreateObjectFromComProxy(null, Application);");
+                            fileContent = fileContent.Replace("$ApplicationConstruction$", "\t\t\t_application = Factory.CreateObjectFromComProxy(null, Application);");
                         else
-                            fileContent = fileContent.Replace("$ApplicationConstruction$", "\t_application = Factory.CreateObjectFromComProxy(Nothing, Application)");
+                            fileContent = fileContent.Replace("$ApplicationConstruction$", "\t\t_application = Factory.CreateObjectFromComProxy(Nothing, Application)");
                     }
                     fileContent = fileContent.Replace("$ApplicationDestroy$", CodeTemplates.AppDestroyCode(_projectOptions.Language));
                    
+                    if(_projectOptions.Language == ProgrammingLanguage.CSharp)
+                        fileContent = fileContent.Replace("void IDTExtensibility2.OnStartupComplete(ref Array custom)","\tvoid IDTExtensibility2.OnStartupComplete(ref Array custom)");
                 }
 
                 File.Delete(file);
                 File.AppendAllText(file, fileContent, Encoding.UTF8);
-            }
-        }
-
-        private static void ValidateProjectFile(string targetFolder)
-        { 
-            string extension = _projectOptions.Language == ProgrammingLanguage.CSharp ? ".csproj" : ".vbproj";
-
-            string[] files = Directory.GetFiles(targetFolder, "*" + extension, SearchOption.AllDirectories);
-            foreach (string file in files)
-            {
-                XDocument document = XDocument.Load(file);
-                XElement rootNode = (document.FirstNode as XElement);
-                rootNode.Attribute("ToolsVersion").Value = _projectOptions.NetRuntime == "4.0" ? "4.0" : "3.5";               
-                document.Save(file);
             }
         }
 

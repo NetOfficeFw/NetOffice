@@ -1,3 +1,6 @@
-﻿			Private Sub RemoveUserInterface()
+﻿		
+	Private Sub RemoveUserInterface()
 			
-			End Sub
+	End Sub
+
+#End Region

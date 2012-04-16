@@ -33,7 +33,6 @@
             this.imageListTabMain = new System.Windows.Forms.ImageList(this.components);
             this.tabPageApplication = new System.Windows.Forms.TabPage();
             this.labelVersionHint = new System.Windows.Forms.Label();
-            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.panelMainLeft = new System.Windows.Forms.Panel();
             this.labelBeginTitle = new System.Windows.Forms.Label();
             this.labelBeginBottom = new System.Windows.Forms.Label();
@@ -97,6 +96,7 @@
             this.labelStallmanSays = new System.Windows.Forms.Label();
             this.labelNetOfficeIsFree = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.colorLabelTitle = new NetOffice.DeveloperToolbox.ColorLabel();
             this.tabPageApplication.SuspendLayout();
             this.panelMainLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -158,15 +158,6 @@
             this.labelVersionHint.Size = new System.Drawing.Size(123, 16);
             this.labelVersionHint.TabIndex = 91;
             this.labelVersionHint.Text = "labelVersionHint";
-            // 
-            // colorLabelTitle
-            // 
-            this.colorLabelTitle.ColorBackShiftFactor = -5;
-            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
-            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
-            this.colorLabelTitle.Name = "colorLabelTitle";
-            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
-            this.colorLabelTitle.TabIndex = 75;
             // 
             // panelMainLeft
             // 
@@ -478,7 +469,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelHexBox);
             this.panel1.Controls.Add(this.linkLabelHexBox);
-            this.panel1.Location = new System.Drawing.Point(3, 402);
+            this.panel1.Location = new System.Drawing.Point(3, 366);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 89);
             this.panel1.TabIndex = 88;
@@ -486,7 +477,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 32);
+            this.label2.Location = new System.Drawing.Point(457, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 100;
@@ -495,7 +486,7 @@
             // linkLabelMono
             // 
             this.linkLabelMono.AutoSize = true;
-            this.linkLabelMono.Location = new System.Drawing.Point(30, 27);
+            this.linkLabelMono.Location = new System.Drawing.Point(190, 36);
             this.linkLabelMono.Name = "linkLabelMono";
             this.linkLabelMono.Size = new System.Drawing.Size(122, 13);
             this.linkLabelMono.TabIndex = 99;
@@ -506,7 +497,7 @@
             // labelHotKey
             // 
             this.labelHotKey.AutoSize = true;
-            this.labelHotKey.Location = new System.Drawing.Point(297, 67);
+            this.labelHotKey.Location = new System.Drawing.Point(457, 76);
             this.labelHotKey.Name = "labelHotKey";
             this.labelHotKey.Size = new System.Drawing.Size(137, 13);
             this.labelHotKey.TabIndex = 98;
@@ -516,7 +507,7 @@
             // 
             this.labelContainsExistingWorks.AutoSize = true;
             this.labelContainsExistingWorks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContainsExistingWorks.Location = new System.Drawing.Point(31, 1);
+            this.labelContainsExistingWorks.Location = new System.Drawing.Point(117, 11);
             this.labelContainsExistingWorks.Name = "labelContainsExistingWorks";
             this.labelContainsExistingWorks.Size = new System.Drawing.Size(477, 16);
             this.labelContainsExistingWorks.TabIndex = 83;
@@ -525,7 +516,7 @@
             // linkLabelHotKey
             // 
             this.linkLabelHotKey.AutoSize = true;
-            this.linkLabelHotKey.Location = new System.Drawing.Point(29, 66);
+            this.linkLabelHotKey.Location = new System.Drawing.Point(189, 75);
             this.linkLabelHotKey.Name = "linkLabelHotKey";
             this.linkLabelHotKey.Size = new System.Drawing.Size(265, 13);
             this.linkLabelHotKey.TabIndex = 97;
@@ -537,7 +528,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.TabIndex = 80;
@@ -546,7 +537,7 @@
             // labelHexBox
             // 
             this.labelHexBox.AutoSize = true;
-            this.labelHexBox.Location = new System.Drawing.Point(297, 50);
+            this.labelHexBox.Location = new System.Drawing.Point(457, 59);
             this.labelHexBox.Name = "labelHexBox";
             this.labelHexBox.Size = new System.Drawing.Size(198, 13);
             this.labelHexBox.TabIndex = 96;
@@ -555,7 +546,7 @@
             // linkLabelHexBox
             // 
             this.linkLabelHexBox.AutoSize = true;
-            this.linkLabelHexBox.Location = new System.Drawing.Point(30, 46);
+            this.linkLabelHexBox.Location = new System.Drawing.Point(190, 55);
             this.linkLabelHexBox.Name = "linkLabelHexBox";
             this.linkLabelHexBox.Size = new System.Drawing.Size(198, 13);
             this.linkLabelHexBox.TabIndex = 95;
@@ -575,15 +566,15 @@
             this.panelYouLike.Controls.Add(this.linkLabelExcelDna);
             this.panelYouLike.Controls.Add(this.labelYouLike);
             this.panelYouLike.Controls.Add(this.pictureBox8);
-            this.panelYouLike.Location = new System.Drawing.Point(249, 296);
+            this.panelYouLike.Location = new System.Drawing.Point(392, 258);
             this.panelYouLike.Name = "panelYouLike";
-            this.panelYouLike.Size = new System.Drawing.Size(672, 93);
+            this.panelYouLike.Size = new System.Drawing.Size(529, 93);
             this.panelYouLike.TabIndex = 87;
             // 
             // labelZyan
             // 
             this.labelZyan.AutoSize = true;
-            this.labelZyan.Location = new System.Drawing.Point(180, 76);
+            this.labelZyan.Location = new System.Drawing.Point(186, 78);
             this.labelZyan.Name = "labelZyan";
             this.labelZyan.Size = new System.Drawing.Size(267, 13);
             this.labelZyan.TabIndex = 98;
@@ -592,7 +583,7 @@
             // labelClosedXml
             // 
             this.labelClosedXml.AutoSize = true;
-            this.labelClosedXml.Location = new System.Drawing.Point(179, 55);
+            this.labelClosedXml.Location = new System.Drawing.Point(185, 57);
             this.labelClosedXml.Name = "labelClosedXml";
             this.labelClosedXml.Size = new System.Drawing.Size(229, 13);
             this.labelClosedXml.TabIndex = 97;
@@ -601,7 +592,7 @@
             // labelExcelDna
             // 
             this.labelExcelDna.AutoSize = true;
-            this.labelExcelDna.Location = new System.Drawing.Point(179, 32);
+            this.labelExcelDna.Location = new System.Drawing.Point(185, 34);
             this.labelExcelDna.Name = "labelExcelDna";
             this.labelExcelDna.Size = new System.Drawing.Size(327, 13);
             this.labelExcelDna.TabIndex = 95;
@@ -610,7 +601,7 @@
             // linkLabelZyan
             // 
             this.linkLabelZyan.AutoSize = true;
-            this.linkLabelZyan.Location = new System.Drawing.Point(26, 75);
+            this.linkLabelZyan.Location = new System.Drawing.Point(32, 77);
             this.linkLabelZyan.Name = "linkLabelZyan";
             this.linkLabelZyan.Size = new System.Drawing.Size(129, 13);
             this.linkLabelZyan.TabIndex = 96;
@@ -621,7 +612,7 @@
             // linkLabelClosedXml
             // 
             this.linkLabelClosedXml.AutoSize = true;
-            this.linkLabelClosedXml.Location = new System.Drawing.Point(26, 54);
+            this.linkLabelClosedXml.Location = new System.Drawing.Point(32, 56);
             this.linkLabelClosedXml.Name = "linkLabelClosedXml";
             this.linkLabelClosedXml.Size = new System.Drawing.Size(153, 13);
             this.linkLabelClosedXml.TabIndex = 95;
@@ -632,7 +623,7 @@
             // linkLabelExcelDna
             // 
             this.linkLabelExcelDna.AutoSize = true;
-            this.linkLabelExcelDna.Location = new System.Drawing.Point(26, 32);
+            this.linkLabelExcelDna.Location = new System.Drawing.Point(32, 34);
             this.linkLabelExcelDna.Name = "linkLabelExcelDna";
             this.linkLabelExcelDna.Size = new System.Drawing.Size(150, 13);
             this.linkLabelExcelDna.TabIndex = 94;
@@ -644,7 +635,7 @@
             // 
             this.labelYouLike.AutoSize = true;
             this.labelYouLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYouLike.Location = new System.Drawing.Point(26, 1);
+            this.labelYouLike.Location = new System.Drawing.Point(32, 3);
             this.labelYouLike.Name = "labelYouLike";
             this.labelYouLike.Size = new System.Drawing.Size(408, 16);
             this.labelYouLike.TabIndex = 83;
@@ -654,7 +645,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox8.Location = new System.Drawing.Point(9, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(16, 16);
             this.pictureBox8.TabIndex = 80;
@@ -669,15 +660,15 @@
             this.panelAboutDetails.Controls.Add(this.labelVersionText);
             this.panelAboutDetails.Controls.Add(this.labelTechnicalDetails);
             this.panelAboutDetails.Controls.Add(this.pictureBox7);
-            this.panelAboutDetails.Location = new System.Drawing.Point(3, 296);
+            this.panelAboutDetails.Location = new System.Drawing.Point(3, 258);
             this.panelAboutDetails.Name = "panelAboutDetails";
-            this.panelAboutDetails.Size = new System.Drawing.Size(243, 93);
+            this.panelAboutDetails.Size = new System.Drawing.Size(388, 93);
             this.panelAboutDetails.TabIndex = 86;
             // 
             // linkLabelCompany
             // 
             this.linkLabelCompany.AutoSize = true;
-            this.linkLabelCompany.Location = new System.Drawing.Point(31, 75);
+            this.linkLabelCompany.Location = new System.Drawing.Point(187, 78);
             this.linkLabelCompany.Name = "linkLabelCompany";
             this.linkLabelCompany.Size = new System.Drawing.Size(93, 13);
             this.linkLabelCompany.TabIndex = 94;
@@ -688,7 +679,7 @@
             // labelCopyrightText
             // 
             this.labelCopyrightText.AutoSize = true;
-            this.labelCopyrightText.Location = new System.Drawing.Point(31, 52);
+            this.labelCopyrightText.Location = new System.Drawing.Point(187, 55);
             this.labelCopyrightText.Name = "labelCopyrightText";
             this.labelCopyrightText.Size = new System.Drawing.Size(94, 13);
             this.labelCopyrightText.TabIndex = 91;
@@ -697,7 +688,7 @@
             // labelVersionText
             // 
             this.labelVersionText.AutoSize = true;
-            this.labelVersionText.Location = new System.Drawing.Point(31, 30);
+            this.labelVersionText.Location = new System.Drawing.Point(187, 33);
             this.labelVersionText.Name = "labelVersionText";
             this.labelVersionText.Size = new System.Drawing.Size(85, 13);
             this.labelVersionText.TabIndex = 90;
@@ -707,7 +698,7 @@
             // 
             this.labelTechnicalDetails.AutoSize = true;
             this.labelTechnicalDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTechnicalDetails.Location = new System.Drawing.Point(31, 1);
+            this.labelTechnicalDetails.Location = new System.Drawing.Point(117, 2);
             this.labelTechnicalDetails.Name = "labelTechnicalDetails";
             this.labelTechnicalDetails.Size = new System.Drawing.Size(141, 16);
             this.labelTechnicalDetails.TabIndex = 83;
@@ -717,7 +708,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(94, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(16, 16);
             this.pictureBox7.TabIndex = 80;
@@ -732,7 +723,7 @@
             this.panelAboutWarranty.Controls.Add(this.labelWarranty1);
             this.panelAboutWarranty.Controls.Add(this.labelAboutWarranty);
             this.panelAboutWarranty.Controls.Add(this.pictureBox5);
-            this.panelAboutWarranty.Location = new System.Drawing.Point(3, 173);
+            this.panelAboutWarranty.Location = new System.Drawing.Point(3, 143);
             this.panelAboutWarranty.Name = "panelAboutWarranty";
             this.panelAboutWarranty.Size = new System.Drawing.Size(918, 112);
             this.panelAboutWarranty.TabIndex = 85;
@@ -741,7 +732,7 @@
             // 
             this.labelWarranty3.AutoSize = true;
             this.labelWarranty3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWarranty3.Location = new System.Drawing.Point(35, 62);
+            this.labelWarranty3.Location = new System.Drawing.Point(187, 82);
             this.labelWarranty3.Name = "labelWarranty3";
             this.labelWarranty3.Size = new System.Drawing.Size(471, 15);
             this.labelWarranty3.TabIndex = 85;
@@ -752,7 +743,7 @@
             // 
             this.labelWarranty2.AutoSize = true;
             this.labelWarranty2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWarranty2.Location = new System.Drawing.Point(35, 43);
+            this.labelWarranty2.Location = new System.Drawing.Point(187, 63);
             this.labelWarranty2.Name = "labelWarranty2";
             this.labelWarranty2.Size = new System.Drawing.Size(663, 15);
             this.labelWarranty2.TabIndex = 84;
@@ -763,7 +754,7 @@
             // 
             this.labelWarranty1.AutoSize = true;
             this.labelWarranty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWarranty1.Location = new System.Drawing.Point(35, 25);
+            this.labelWarranty1.Location = new System.Drawing.Point(187, 45);
             this.labelWarranty1.Name = "labelWarranty1";
             this.labelWarranty1.Size = new System.Drawing.Size(687, 15);
             this.labelWarranty1.TabIndex = 81;
@@ -774,7 +765,7 @@
             // 
             this.labelAboutWarranty.AutoSize = true;
             this.labelAboutWarranty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAboutWarranty.Location = new System.Drawing.Point(31, 1);
+            this.labelAboutWarranty.Location = new System.Drawing.Point(117, 12);
             this.labelAboutWarranty.Name = "labelAboutWarranty";
             this.labelAboutWarranty.Size = new System.Drawing.Size(171, 16);
             this.labelAboutWarranty.TabIndex = 83;
@@ -784,7 +775,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(94, 13);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(16, 16);
             this.pictureBox5.TabIndex = 80;
@@ -803,14 +794,14 @@
             this.panelAboutTop.Controls.Add(this.label11);
             this.panelAboutTop.Location = new System.Drawing.Point(3, 0);
             this.panelAboutTop.Name = "panelAboutTop";
-            this.panelAboutTop.Size = new System.Drawing.Size(918, 167);
+            this.panelAboutTop.Size = new System.Drawing.Size(918, 141);
             this.panelAboutTop.TabIndex = 84;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(94, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
             this.pictureBox3.TabIndex = 86;
@@ -820,7 +811,7 @@
             // 
             this.labelAboutNetOffice.AutoSize = true;
             this.labelAboutNetOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAboutNetOffice.Location = new System.Drawing.Point(28, 10);
+            this.labelAboutNetOffice.Location = new System.Drawing.Point(114, 23);
             this.labelAboutNetOffice.Name = "labelAboutNetOffice";
             this.labelAboutNetOffice.Size = new System.Drawing.Size(244, 16);
             this.labelAboutNetOffice.TabIndex = 85;
@@ -830,7 +821,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(186, 10);
+            this.pictureBox6.Location = new System.Drawing.Point(272, 23);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(16, 16);
             this.pictureBox6.TabIndex = 84;
@@ -842,7 +833,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStallmanSays.AutoSize = true;
             this.labelStallmanSays.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStallmanSays.Location = new System.Drawing.Point(69, 52);
+            this.labelStallmanSays.Location = new System.Drawing.Point(187, 72);
             this.labelStallmanSays.Name = "labelStallmanSays";
             this.labelStallmanSays.Size = new System.Drawing.Size(725, 16);
             this.labelStallmanSays.TabIndex = 81;
@@ -854,7 +845,7 @@
             this.labelNetOfficeIsFree.AutoSize = true;
             this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNetOfficeIsFree.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(308, 100);
+            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(426, 120);
             this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
             this.labelNetOfficeIsFree.Size = new System.Drawing.Size(232, 20);
             this.labelNetOfficeIsFree.TabIndex = 83;
@@ -864,11 +855,20 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(623, 82);
+            this.label11.Location = new System.Drawing.Point(741, 102);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 15);
             this.label11.TabIndex = 82;
             this.label11.Text = "- Richard Stallman";
+            // 
+            // colorLabelTitle
+            // 
+            this.colorLabelTitle.ColorBackShiftFactor = -5;
+            this.colorLabelTitle.ColorShift = NetOffice.DeveloperToolbox.ColorShift.Red;
+            this.colorLabelTitle.Location = new System.Drawing.Point(142, 30);
+            this.colorLabelTitle.Name = "colorLabelTitle";
+            this.colorLabelTitle.Size = new System.Drawing.Size(495, 30);
+            this.colorLabelTitle.TabIndex = 75;
             // 
             // MainForm
             // 

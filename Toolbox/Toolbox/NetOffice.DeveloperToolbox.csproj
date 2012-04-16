@@ -472,6 +472,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NetOffice.Icon.32x32.ico" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2008CS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2008VB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2010CS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2010VB.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationCreateCodeCSharp.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationCreateCodeVB.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\ApplicationDestroyCodeCSharp.txt" />
