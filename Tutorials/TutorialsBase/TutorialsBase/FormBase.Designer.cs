@@ -310,8 +310,7 @@
             this.linkLabelAccess.Size = new System.Drawing.Size(90, 13);
             this.linkLabelAccess.TabIndex = 21;
             this.linkLabelAccess.TabStop = true;
-            this.linkLabelAccess.Tag = "/wikipage?title=Access_ExampleOverview_English#/wikipage?title=Access_ExampleOver" +
-                "view_German";
+            this.linkLabelAccess.Tag = "/wikipage?title=Access_Examples_EN#/wikipage?title=Access_Examples_DE";
             this.linkLabelAccess.Text = "Access Examples";
             this.linkLabelAccess.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 
@@ -335,7 +334,7 @@
             this.linkLabelTutorialOverview.Size = new System.Drawing.Size(90, 13);
             this.linkLabelTutorialOverview.TabIndex = 19;
             this.linkLabelTutorialOverview.TabStop = true;
-            this.linkLabelTutorialOverview.Tag = "/wikipage?title=TutorialGuide_EN#/wikipage?title=TutorialGuide_DE";
+            this.linkLabelTutorialOverview.Tag = "/wikipage?title=TutorialOverview_EN#/wikipage?title=TutorialOverview_DE";
             this.linkLabelTutorialOverview.Text = "Tutorial Overview";
             this.linkLabelTutorialOverview.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 
@@ -347,8 +346,7 @@
             this.linkLabelPowerPoint.Size = new System.Drawing.Size(109, 13);
             this.linkLabelPowerPoint.TabIndex = 14;
             this.linkLabelPowerPoint.TabStop = true;
-            this.linkLabelPowerPoint.Tag = "/wikipage?title=PPoint_ExampleOverview_English#/wikipage?title=PPoint_ExampleOver" +
-                "view_German";
+            this.linkLabelPowerPoint.Tag = "/wikipage?title=PPoint_Examples_EN#/wikipage?title=PPoint_Examples_DE";
             this.linkLabelPowerPoint.Text = "PowerPoint Examples";
             this.linkLabelPowerPoint.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 
@@ -382,8 +380,7 @@
             this.linkLabelOutlook.Size = new System.Drawing.Size(92, 13);
             this.linkLabelOutlook.TabIndex = 13;
             this.linkLabelOutlook.TabStop = true;
-            this.linkLabelOutlook.Tag = "/wikipage?title=Outlook_ExampleOverview_English#/wikipage?title=Outlook_ExampleOv" +
-                "erview_German";
+            this.linkLabelOutlook.Tag = "/wikipage?title=Outlook_Examples_EN#/wikipage?title=Outlook_Examples_DE";
             this.linkLabelOutlook.Text = "Outlook Examples";
             this.linkLabelOutlook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 
@@ -408,8 +405,7 @@
             this.linkLabelExcel.Size = new System.Drawing.Size(81, 13);
             this.linkLabelExcel.TabIndex = 15;
             this.linkLabelExcel.TabStop = true;
-            this.linkLabelExcel.Tag = "/wikipage?title=Excel_ExampleOverview_English#/wikipage?title=Excel_ExampleOvervi" +
-                "ew_German";
+            this.linkLabelExcel.Tag = "/wikipage?title=Excel_Examples_EN#/wikipage?title=Excel_Examples_DE";
             this.linkLabelExcel.Text = "Excel Examples";
             this.linkLabelExcel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 
@@ -421,8 +417,7 @@
             this.linkLabelWord.Size = new System.Drawing.Size(81, 13);
             this.linkLabelWord.TabIndex = 16;
             this.linkLabelWord.TabStop = true;
-            this.linkLabelWord.Tag = "/wikipage?title=Word_ExampleOverview_English#/wikipage?title=Word_ExampleOverview" +
-                "_German";
+            this.linkLabelWord.Tag = "/wikipage?title=Word_Examples_EN#/wikipage?title=Word_Examples_DE";
             this.linkLabelWord.Text = "Word Examples";
             this.linkLabelWord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
             // 

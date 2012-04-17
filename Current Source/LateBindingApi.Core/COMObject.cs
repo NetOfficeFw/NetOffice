@@ -192,7 +192,6 @@ namespace LateBindingApi.Core
         /// <summary>
         /// NetOffice property: returns the native wrapped proxy
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object UnderlyingObject
         {
             get
@@ -210,6 +209,18 @@ namespace LateBindingApi.Core
             get
             {
                 return TypeDescriptor.GetClassName(_underlyingObject);
+            }
+        }
+
+        /// <summary>
+        /// NetOffice property: returns component name of native wrapped proxy
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public string UnderlyingComponentName
+        {
+            get
+            {
+                return TypeDescriptor.GetComponentName(_underlyingObject);
             }
         }
 

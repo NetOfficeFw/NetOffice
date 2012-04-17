@@ -67,9 +67,10 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
-		public static COMObject Parent
+		public static object Parent
 		{
 			get
 			{
@@ -178,9 +179,10 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
-		public static COMObject WordBasic
+		public static object WordBasic
 		{
 			get
 			{
@@ -454,9 +456,10 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
-		public static COMObject MacroContainer
+		public static object MacroContainer
 		{
 			get
 			{
@@ -608,9 +611,10 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14
 		/// Get/Set
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
-		public static COMObject CustomizationContext
+		public static object CustomizationContext
 		{
 			get
 			{

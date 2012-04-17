@@ -60,7 +60,8 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Creator", paramsArray);
-				return (NetOffice.ExcelApi.Enums.XlCreator)returnItem;
+				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
 			}
 		}
 
@@ -169,9 +170,10 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public static COMObject ActiveSheet
+		public static object ActiveSheet
 		{
 			get
 			{
@@ -468,9 +470,10 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public static COMObject Selection
+		public static object Selection
 		{
 			get
 			{

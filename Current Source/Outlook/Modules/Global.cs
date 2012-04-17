@@ -60,7 +60,8 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Class", paramsArray);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)returnItem;
+				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
 			}
 		}
 
@@ -83,9 +84,10 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// Get
+		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject Parent
+		public static object Parent
 		{
 			get
 			{
@@ -249,7 +251,8 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "FeatureInstall", paramsArray);
-				return (NetOffice.OfficeApi.Enums.MsoFeatureInstall)returnItem;
+				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return (NetOffice.OfficeApi.Enums.MsoFeatureInstall)intReturnItem;
 			}
 			set
 			{
@@ -385,11 +388,11 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="itemType">NetOffice.OutlookApi.Enums.OlItemType ItemType</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject CreateItem(NetOffice.OutlookApi.Enums.OlItemType itemType)
+		public static object CreateItem(NetOffice.OutlookApi.Enums.OlItemType itemType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemType);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItem", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -399,11 +402,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="templatePath">string TemplatePath</param>
 		/// <param name="inFolder">optional object InFolder</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject CreateItemFromTemplate(string templatePath, object inFolder)
+		public static object CreateItemFromTemplate(string templatePath, object inFolder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath, inFolder);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -413,11 +416,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="templatePath">string TemplatePath</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject CreateItemFromTemplate(string templatePath)
+		public static object CreateItemFromTemplate(string templatePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -426,11 +429,11 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="objectName">string ObjectName</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject CreateObject(string objectName)
+		public static object CreateObject(string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateObject", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -461,11 +464,11 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
-		public static COMObject ActiveWindow()
+		public static object ActiveWindow()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "ActiveWindow", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -475,11 +478,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="filePath">string FilePath</param>
 		/// <param name="destFolderPath">string DestFolderPath</param>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
-		public static COMObject CopyFile(string filePath, string destFolderPath)
+		public static object CopyFile(string filePath, string destFolderPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filePath, destFolderPath);
 			object returnItem = Invoker.MethodReturn(_instance, "CopyFile", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -574,11 +577,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="item">object Item</param>
 		/// <param name="referenceType">NetOffice.OutlookApi.Enums.OlReferenceType ReferenceType</param>
 		[SupportByVersionAttribute("Outlook", 12,14)]
-		public static COMObject GetObjectReference(object item, NetOffice.OutlookApi.Enums.OlReferenceType referenceType)
+		public static object GetObjectReference(object item, NetOffice.OutlookApi.Enums.OlReferenceType referenceType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, referenceType);
 			object returnItem = Invoker.MethodReturn(_instance, "GetObjectReference", paramsArray);
-			COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 

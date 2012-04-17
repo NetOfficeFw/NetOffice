@@ -1,0 +1,10 @@
+[DEFAULT]
+BASEURL=http://excel.codeplex.com/
+[InternetShortcut]
+URL=http://netoffice.codeplex.com/wikipage?title=ExampleOverview_EN
+IDList=
+IconFile=http://netoffice.codeplex.com/favicon.ico
+IconIndex=1
+HotKey=0
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
