@@ -53,7 +53,7 @@ namespace OutlookTestsCSharp
                 do
                 {
                     if (null == item)
-                        item = items.GetFirst();
+                        item = items.GetFirst() as COMObject;
 
                     // not every item is a mail item
                     Outlook.MailItem mailItem = item as Outlook.MailItem;
@@ -63,7 +63,7 @@ namespace OutlookTestsCSharp
                     if(null != item)
                         item.Dispose();
 
-                    item = items.GetNext();
+                    item = items.GetNext() as COMObject;
                     i++;
                 } while (null != item);
               

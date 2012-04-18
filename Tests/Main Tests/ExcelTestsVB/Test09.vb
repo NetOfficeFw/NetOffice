@@ -63,7 +63,7 @@ Public Class Test09
             If ribbonIsOkay = True And taskPaneIsOkay = True Then
                 Return New TestResult(True, DateTime.Now.Subtract(startTime), "", Nothing, "")
             Else
-                Return New TestResult(True, DateTime.Now.Subtract(startTime), String.Format("Ribbon:{0} TaskPane:{1}", ribbonIsOkay, taskPaneIsOkay), Nothing, "")
+                Return New TestResult(False, DateTime.Now.Subtract(startTime), String.Format("Ribbon:{0} TaskPane:{1}", ribbonIsOkay, taskPaneIsOkay), Nothing, "")
             End If
 
         Catch ex As Exception

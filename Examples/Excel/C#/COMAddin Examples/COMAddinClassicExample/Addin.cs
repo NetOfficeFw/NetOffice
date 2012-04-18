@@ -220,13 +220,13 @@ namespace COMAddinClassicExampleCS4
             try
             {
                 string message = string.Format("Click from Button {0}.", Ctrl.Caption);
-                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Ctrl.Dispose();
             }
             catch (Exception exception)
             {
                 string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -163,7 +163,7 @@ namespace COMAddinRibbonExampleCS4
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
 
                 // unregister addin in office
-                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _prodId, false);
+                Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, false);
 
             }
             catch (Exception throwedException)
