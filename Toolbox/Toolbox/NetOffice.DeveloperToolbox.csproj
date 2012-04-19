@@ -307,6 +307,8 @@
     <None Include="app.config" />
     <EmbeddedResource Include="OfficeUI\Info1031.rtf" />
     <EmbeddedResource Include="OfficeUI\Info1033.rtf" />
+    <EmbeddedResource Include="ProjectWizard\ProjectWizard.Info.1031.rtf" />
+    <EmbeddedResource Include="ProjectWizard\ProjectWizard.Info.1033.rtf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Text;
+using System.Timers;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
 namespace NetOffice.OutlookSecurity
 {
+    /// <summary>
+    /// Outlook Security Suspressor
+    /// </summary>
     public class Supress
     {
         #region Events
@@ -56,7 +60,7 @@ namespace NetOffice.OutlookSecurity
 
         static Supress       _singleton;
         bool                 _enabled = false;
-        BackgroundWorker     _worker;
+        System.Timers.Timer  _timer;
         StringBuilder        _strbClassName = new StringBuilder(255);
         StringBuilder        _strbCaption = new StringBuilder(255);
         List<SecurityDialog> _listDialogs = new List<SecurityDialog>();
@@ -67,15 +71,19 @@ namespace NetOffice.OutlookSecurity
 
         private Supress()
         {
-            _worker = new BackgroundWorker();
-            _worker.WorkerSupportsCancellation = true;
-            _worker.DoWork += new DoWorkEventHandler(_worker_DoWork);
+            _singleton = this;
+            _timer = new System.Timers.Timer(500);
+            _timer.Elapsed += new ElapsedEventHandler(_timer_Elapsed);
+
         }
-  
+         
         #endregion
 
         #region Properties
 
+        /// <summary>
+        /// Get or Set enabled state
+        /// </summary>
         public static bool Enabled 
         {
             get 
@@ -105,63 +113,60 @@ namespace NetOffice.OutlookSecurity
                     return;
 
                 _enabled = value;
-                if (_enabled)
-                {
-                     if(!_worker.IsBusy)
-                         _worker.RunWorkerAsync();
-                }
+                if (_enabled && !_timer.Enabled)
+                    _timer.Enabled = true;
             }
         }
 
         #endregion
 
-        #region Thread
+        #region Timer
 
-        void _worker_DoWork(object sender, DoWorkEventArgs e)
+        void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
+            if (!_enabled)
+                return;
+
             try
             {
-                while (_enabled)
+                TryGetOutlookSecurityDialogHandles();
+
+                foreach (SecurityDialog item in _listDialogs)
                 {
-                    TryGetOutlookSecurityDialogHandles();
+                    List<IntPtr> childWindows = User32.GetChildWindows(item.Handle);
+                    if (!IncludeOneComboBox(childWindows))
+                        continue;
 
-                    foreach (SecurityDialog item in _listDialogs)
+                    IntPtr checkBox = GetCheckBox(childWindows, item.Handle);
+                    string checkBoxText = User32.GetWindowText(checkBox);
+                    if ((IntPtr.Zero != checkBox) && (!string.IsNullOrEmpty(checkBoxText)))
+                        PostSendClick(checkBox);
+
+                    IntPtr leftButton = GetLeftButton(childWindows, item.Handle);
+                    string buttonText = User32.GetWindowText(leftButton);
+                    if ((IntPtr.Zero != leftButton) && (!string.IsNullOrEmpty(buttonText)))
+                        PostSendClick(leftButton);
+
+                    if ((null != Action) && (null != checkBox) && (null != leftButton) && (checkBox != leftButton))
                     {
-                        List<IntPtr> childWindows = User32.GetChildWindows(item.Handle);
-                        if (!IncludeOneComboBox(childWindows))
-                            continue;
-
-                        IntPtr checkBox = GetCheckBox(childWindows, item.Handle);
-                        string checkBoxText = User32.GetWindowText(checkBox);
-                        if ((IntPtr.Zero != checkBox) && (!string.IsNullOrEmpty(checkBoxText)))
-                            PostSendClick(checkBox);
-
-                        IntPtr leftButton = GetLeftButton(childWindows, item.Handle);
-                        string buttonText = User32.GetWindowText(leftButton);
-                        if ((IntPtr.Zero != leftButton) && (!string.IsNullOrEmpty(buttonText)))
-                            PostSendClick(leftButton);
-
-                        if ((null != Action) && (null != checkBox) && (null != leftButton) && (checkBox != leftButton))
+                        SecurityDialogCheckBox securityCheckbox = null;
+                        SecurityDialogLeftButton securityButton = null;
+                        if (null != checkBox)
                         {
-                            SecurityDialogCheckBox securityCheckbox = null;
-                            SecurityDialogLeftButton securityButton = null;
-                            if (null != checkBox)
-                            {
-                                User32.RECT rect = new User32.RECT();
-                                User32.GetWindowRect(checkBox, out rect);
-                                securityCheckbox = new SecurityDialogCheckBox(checkBox, User32.GetWindowText(checkBox), new Rect(rect));
-                            }
-
-                            if (null != leftButton)
-                            {
-                                User32.RECT rect = new User32.RECT();
-                                User32.GetWindowRect(checkBox, out rect);
-                                securityButton = new SecurityDialogLeftButton(leftButton, User32.GetWindowText(leftButton),new Rect(rect));
-                            }
-
-                            if ((!string.IsNullOrEmpty(checkBoxText)) && (!string.IsNullOrEmpty(buttonText)))
-                                Action(item, securityCheckbox, securityButton);
+                            User32.RECT rect = new User32.RECT();
+                            User32.GetWindowRect(checkBox, out rect);
+                            securityCheckbox = new SecurityDialogCheckBox(checkBox, User32.GetWindowText(checkBox), new Rect(rect));
                         }
+
+                        if (null != leftButton)
+                        {
+                            User32.RECT rect = new User32.RECT();
+                            User32.GetWindowRect(checkBox, out rect);
+                            securityButton = new SecurityDialogLeftButton(leftButton, User32.GetWindowText(leftButton), new Rect(rect));
+                        }
+
+                        if ((!string.IsNullOrEmpty(checkBoxText)) && (!string.IsNullOrEmpty(buttonText)))
+                            Action(item, securityCheckbox, securityButton);
                     }
                 }
             }
@@ -183,7 +188,6 @@ namespace NetOffice.OutlookSecurity
             User32.GetWindowRect(handle, out rect);
             User32.MouseClick(rect.Left + 15, rect.Top + 15);
             return;
-          
         }
 
         private bool IncludeOneComboBox(List<IntPtr> childs)

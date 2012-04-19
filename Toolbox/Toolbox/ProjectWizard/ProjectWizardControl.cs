@@ -96,7 +96,7 @@ namespace NetOffice.DeveloperToolbox
          {
              try
              {
-                 InfoControl infoBox = new InfoControl("ProjectWizard.Info" + _currentLanguageID.ToString() + ".rtf", true);
+                 InfoControl infoBox = new InfoControl("ProjectWizard.ProjectWizard.Info." + _currentLanguageID.ToString() + ".rtf", true);
                  this.Controls.Add(infoBox);
                  infoBox.BringToFront();
                  infoBox.Show();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Text;
+using System.Timers;
 using Microsoft.Win32;
 using NetOffice.DeveloperToolbox.RegistryEditor;
 
@@ -10,17 +11,18 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
 {
     class WatchController : INotifyPropertyChanged, IDisposable
     {
+       
+
         #region Fields
 
         bool _readOnlyModeForMachineKeys;
-        DateTime _lastCheck;
         bool _isDisposed;
         bool _enabled;
         bool _firstRun;
         bool _stopFlag;
         bool _stopFlagAgreed;
         bool _restoreLastLoadBehavior;
-        BackgroundWorker _worker;
+        System.Timers.Timer _timer; 
         WatchNotify _notify;
         NotificationType _notifyType;
         int _activeLanguageID = 1031;
@@ -143,15 +145,7 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
                 _stopFlagAgreed = value;
             }
         }
-
-        internal BackgroundWorker Worker
-        {
-            get
-            {
-                return _worker;
-            }
-        }
-
+    
         #endregion
 
         #region Construction
@@ -161,9 +155,9 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _notify = new WatchNotify(this);
             _addinItems = new AddinItems(this);
             _disabledItems = new DisabledItems(this);
-            _worker = new BackgroundWorker();
-            _worker.WorkerSupportsCancellation = true;
-            _worker.DoWork += new DoWorkEventHandler(_worker_DoWork);
+
+            _timer = new System.Timers.Timer(2000);
+            _timer.Elapsed += new ElapsedEventHandler(_timer_Elapsed);
 
              // 32 Bit
             _addinItems.Add("Excel", Registry.LocalMachine, "Software\\Microsoft\\Office\\Excel\\Addins");
@@ -278,53 +272,49 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
 
         #region Worker Trigger
 
-        void _worker_DoWork(object sender, DoWorkEventArgs e)
+        void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            while (!_isDisposed)
-            {
-                try
-                {
-                    if (_enabled)
-                    {
-                        while (_stopFlag)
-                            _stopFlagAgreed = true;
-                        _stopFlagAgreed = false;
+            if (_isDisposed)
+                return;
 
-                        while ((DateTime.Now - _lastCheck).TotalSeconds < 1)
-                            System.Threading.Thread.Sleep(1000);
+             try
+             {
+                 if (_enabled)
+                 {
+                     while (_stopFlag)
+                         _stopFlagAgreed = true;
+                     _stopFlagAgreed = false;
 
-                        foreach (DisabledKey item in _disabledItems)
-                        {
-                            RegistryChangeInfo changeInfo = null;
-                            NotifyKind kind = item.CheckChangedValueCount(ref changeInfo);
-                            if (kind != NotifyKind.Nothing)
-                                _notify.ShowNotification(item, kind, changeInfo);
-                        }
+                     foreach (DisabledKey item in _disabledItems)
+                     {
+                         RegistryChangeInfo changeInfo = null;
+                         NotifyKind kind = item.CheckChangedValueCount(ref changeInfo);
+                         if (kind != NotifyKind.Nothing)
+                             _notify.ShowNotification(item, kind, changeInfo);
+                     }
 
-                        foreach (AddinsKey addins in _addinItems)
-                        {
-                            RegistryChangeInfo changeInfo = null;
-                            NotifyKind kind = addins.CheckChangedSubKeys(ref changeInfo);
-                            if (kind != NotifyKind.Nothing)
-                                _notify.ShowNotification(addins, kind, changeInfo);
+                     foreach (AddinsKey addins in _addinItems)
+                     {
+                         RegistryChangeInfo changeInfo = null;
+                         NotifyKind kind = addins.CheckChangedSubKeys(ref changeInfo);
+                         if (kind != NotifyKind.Nothing)
+                             _notify.ShowNotification(addins, kind, changeInfo);
 
-                            foreach (AddinKey addin in addins.Addins)
-                            {
-                                kind = addin.CheckChangedValues(ref changeInfo);
-                                if (kind != NotifyKind.Nothing)
-                                    _notify.ShowNotification(addin, kind, changeInfo);
-                            }
-                        }
+                         foreach (AddinKey addin in addins.Addins)
+                         {
+                             kind = addin.CheckChangedValues(ref changeInfo);
+                             if (kind != NotifyKind.Nothing)
+                                 _notify.ShowNotification(addin, kind, changeInfo);
+                         }
+                     }
 
-                        _lastCheck = DateTime.Now;
-                        _firstRun = false;
-                    }
-                }
-                catch (Exception exception)
-                {
-                    RaiseError(exception);
-                }
-            }              
+                     _firstRun = false;
+                 }
+             }
+             catch (Exception exception)
+             {
+                 RaiseError(exception);
+             }                          
         }
 
         #endregion
@@ -333,18 +323,12 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
 
         public void StartWatch()
         {
-            if (!_worker.IsBusy)
-            {
-                _lastCheck = DateTime.Now;
+            if (!_timer.Enabled)
+            { 
                 _firstRun = true;
-                _worker.RunWorkerAsync();
+                _timer.Enabled = true;
             }
         }
-
-        #endregion
-
-        #region Private Step Methods
-
 
         #endregion
 
@@ -390,7 +374,7 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
         public void Dispose()
         {
             _isDisposed = true;
-            _worker.CancelAsync();
+            _timer.Enabled = false;
         }
 
         #endregion

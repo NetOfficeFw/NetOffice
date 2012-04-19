@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Reflection;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -98,6 +99,18 @@ namespace NetOffice.DeveloperToolbox
                 }
             }
 
+            if (radioButtonVSProjectFolder.Checked)
+            {
+                if (GetVisualStudioExpressProjectFolder() == null)
+                {
+                    string target = (radioButtonCSharp.Checked ? "VCS" : "VB") + "Express " + (radioButtonVS2008.Checked ? "2008" : "2010");
+                    string messageDE = string.Format("Developer Toolbox konnte den Projektordner für {0} nicht ermitteln.\r\n\r\nBitte wählen Sie einen anderen Ordner.", target);
+                    string messageEN = string.Format("Developer Toolbox failed to detect the {0} project folder.\r\n\r\nPlease choose a different folder.", target);
+                    MessageBox.Show(this, ProjectWizardControl.CurrentLanguageID == 1031 ? messageDE : messageEN, "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }
@@ -163,18 +176,97 @@ namespace NetOffice.DeveloperToolbox
 
             if (radioButtonVSProjectFolder.Checked)
             {
-                string visualStudio = "";
-                if(radioButtonVS2008.Checked)
-                    visualStudio = "VisualStudio\\Projects";
-                else 
-                    visualStudio = "VisualStudio\\Projects";
-
-                return System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), visualStudio);
+                string visualStudioProjects = GetVisualStudioExpressProjectFolder();
+                return visualStudioProjects;
             }
 
             return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
         }
+
+        private string GetVisualStudioInstallFolder()
+        {
+            string result = null;
+            if (radioButtonCSharp.Checked)
+            {
+                string path = "-1";
+                string folderExpress = "Software\\Microsoft\\VCSExpress\\" + (radioButtonVS2008.Checked == true ? "9.0_Config" : "10.0_Config");
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(folderExpress, false);
+                if (null != key)
+                {
+                    path = key.GetValue("InstallDir", "-1") as string;
+                    key.Close();
+                }
+
+                if ("-1" != path)
+                {
+                    result = path;
+                }
+            }
+            else
+            {
+                string path = "-1";
+                string folderExpress = "Software\\Microsoft\\VBExpress\\" + (radioButtonVS2008.Checked == true ? "9.0_Config" : "10.0_Config");
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(folderExpress, false);
+                if (null != key)
+                {
+                    path = key.GetValue("InstallDir", "-1") as string;
+                    key.Close();
+                }
+
+                if ("-1" != path)
+                {
+                    result = path;
+                }
+            }
+
+            return result;
+        }
+
+        private string GetVisualStudioExpressProjectFolder()
+        {
+            string result = null;
+            if (radioButtonCSharp.Checked)
+            {
+                string path = "-1";
+                string folderExpress = "Software\\Microsoft\\VCSExpress\\" + (radioButtonVS2008.Checked == true ? "9.0" : "10.0");
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(folderExpress, false);
+                if (null != key)
+                {
+                    path = key.GetValue("VisualStudioProjectsLocation", "-1") as string;
+                    key.Close();
+                }
+
+                if ("-1" != path)
+                {
+                    path = path.Replace("%USERPROFILE%", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+                    path = path.Replace("%VsInstallDir%", GetVisualStudioInstallFolder());
+                    result = path;
+                }
+               
+            }
+            else
+            {
+                string path = "-1";
+                string folderExpress = "Software\\Microsoft\\VBExpress\\" + (radioButtonVS2008.Checked == true ? "9.0" : "10.0");
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(folderExpress, false);
+                if (null != key)
+                {
+                    path = key.GetValue("VisualStudioProjectsLocation", "-1") as string;
+                    key.Close();
+                }
+
+                if ("-1" != path)
+                {
+                    path = path.Replace("%USERPROFILE%", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+                    path = path.Replace("%VsInstallDir%", GetVisualStudioInstallFolder());
+                    result = path;
+                }
+            }
+
+            return result;
+        }
+
         private bool DoCustomTestWrite()
         {
             string folderPath = textBoxCustomFolder.Text;

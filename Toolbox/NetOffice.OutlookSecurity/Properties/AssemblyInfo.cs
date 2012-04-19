@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NetOffice.OutlookSecurity")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ministerium für Staatssicherheit")]
-[assembly: AssemblyProduct("NetOffice.OutlookSecurity")]
-[assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")]
+[assembly: AssemblyCompany("netoffice.codeplex.com")]
+[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyCopyright("Copyright © 2011 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
