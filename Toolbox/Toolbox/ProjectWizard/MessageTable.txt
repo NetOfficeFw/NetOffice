@@ -1,6 +1,6 @@
 ﻿[1031]
 labelHint = Klicken Sie die Schaltfläche 'Ein neues Projekt' erstellen.
-buttonCreateProject = Ein neues Projekt erstellen
+buttonCreateProject = Neues Projekt
 cancelButton = Abbrechen
 backButton = Zurück
 nextButton = Weiter

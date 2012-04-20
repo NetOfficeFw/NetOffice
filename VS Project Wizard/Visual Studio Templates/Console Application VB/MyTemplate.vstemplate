@@ -28,7 +28,7 @@
     </Project>
   </TemplateContent>
  <WizardExtension>
-    <Assembly>NetOffice.ProjectWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a4937b1ff5c6415b</Assembly>
+    <Assembly>NetOffice.ProjectWizard, Version=1.0.0.2, Culture=neutral, PublicKeyToken=a4937b1ff5c6415b</Assembly>
     <FullClassName>NetOffice.ProjectWizard.ConsoleProjectVisualBasic</FullClassName>
   </WizardExtension>
 </VSTemplate>

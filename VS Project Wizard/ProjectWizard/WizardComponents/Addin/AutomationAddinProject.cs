@@ -11,6 +11,8 @@ namespace NetOffice.ProjectWizard
     {
         #region Fields
 
+        string _projectName;
+
         string _registerCode;
         string _createClassicUIMethodCode;
         string _removeClassicUIMethodCode;
@@ -405,6 +407,15 @@ namespace NetOffice.ProjectWizard
                 string fileName = Path.Combine(_projectFolder, "RibbonUI.xml");
                 File.Delete(fileName);
             }
+            else
+            {
+                string destinationAssemblyFolder = _projectFolder;
+                string fileName = Path.Combine(_projectFolder, "RibbonUI.xml");
+                string fileContent = File.ReadAllText(fileName);
+                fileContent = fileContent.Replace("$safeprojectname$", _projectName);
+                File.Delete(fileName);
+                File.AppendAllText(fileName, fileContent, Encoding.UTF8);
+            }
         }
 
         #endregion
@@ -462,6 +473,8 @@ namespace NetOffice.ProjectWizard
 
         protected internal void RunStarted(Dictionary<string, string> replacementsDictionary, TargetProgrammingLanguage targetProgrammingLanguage, TargetProjectType projectType)
         {
+            _projectName = replacementsDictionary["$safeprojectname$"];
+
             _targetProgrammingLanguage = targetProgrammingLanguage;
             _targetProjectType = projectType;
             _replacementsDictionary = replacementsDictionary;
@@ -494,7 +507,7 @@ namespace NetOffice.ProjectWizard
         {
             get
             {
-                return "Automations Addin";
+                return "Automation Add-In";
             }
         }
 

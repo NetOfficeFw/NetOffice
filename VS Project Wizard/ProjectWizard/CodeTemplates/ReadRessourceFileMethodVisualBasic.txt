@@ -9,7 +9,7 @@
     ''' <remarks></remarks>
     Private Shared Function ReadRessourceFile(ByVal fileName As String) As String 
 
-		Dim assembly As Assembly = System.Reflection.Assembly.GetExecutingAssembly()
+		Dim assembly As Assembly = GetType(Addin).Assembly
         Dim ressourceStream As System.IO.Stream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName)
         If (IsNothing(ressourceStream)) Then
             Throw (New System.IO.IOException("Error accessing resource Stream."))

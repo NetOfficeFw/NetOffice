@@ -240,10 +240,12 @@ namespace NetOffice.DeveloperToolbox
                 if ("-1" != path)
                 {
                     path = path.Replace("%USERPROFILE%", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+                    path = path.Replace("%APPDATA%", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+                    path = path.Replace("%PROGRAMFILES%", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
+                    path = path.Replace("%COMMONPROGRAMFILES%", Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles));
                     path = path.Replace("%VsInstallDir%", GetVisualStudioInstallFolder());
                     result = path;
                 }
-               
             }
             else
             {
@@ -259,6 +261,9 @@ namespace NetOffice.DeveloperToolbox
                 if ("-1" != path)
                 {
                     path = path.Replace("%USERPROFILE%", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+                    path = path.Replace("%APPDATA%", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+                    path = path.Replace("%PROGRAMFILES%", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
+                    path = path.Replace("%COMMONPROGRAMFILES%", Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles));
                     path = path.Replace("%VsInstallDir%", GetVisualStudioInstallFolder());
                     result = path;
                 }

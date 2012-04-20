@@ -117,9 +117,6 @@
     <Compile Include="WizardComponents\WinForms\WindowsFormsProjectVisualBasic.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NetOffice.ProjectWizard.pfx" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Dialogs\ErrorDialog.resx">
       <DependentUpon>ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +220,9 @@
     <EmbeddedResource Include="CodeTemplates\ApplicationMultipleDestroyCodeVisualBasic.txt" />
     <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeCSharp.txt" />
     <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetOffice.ProjectWizard.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

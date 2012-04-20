@@ -34,9 +34,14 @@
             this.buttonCreateProject = new System.Windows.Forms.Button();
             this.panelControls = new System.Windows.Forms.Panel();
             this.panelLeftHeader = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxNetOfficeLogo = new System.Windows.Forms.PictureBox();
             this.labelCurrentStep = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.labelCaption = new System.Windows.Forms.Label();
             this.imageBox = new System.Windows.Forms.PictureBox();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -45,18 +50,17 @@
             this.backButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.panelWizardHost = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelHint = new System.Windows.Forms.Label();
             this.panelHint = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelLeftHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNetOfficeLogo)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).BeginInit();
@@ -64,10 +68,6 @@
             this.panelHint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonInfo
@@ -89,9 +89,9 @@
             this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCreateProject.Location = new System.Drawing.Point(26, 14);
             this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(191, 25);
+            this.buttonCreateProject.Size = new System.Drawing.Size(133, 25);
             this.buttonCreateProject.TabIndex = 78;
-            this.buttonCreateProject.Text = "Ein neues Projekt erstellen";
+            this.buttonCreateProject.Text = "Neues Projekt";
             this.buttonCreateProject.UseVisualStyleBackColor = true;
             this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
@@ -103,7 +103,7 @@
             this.panelControls.BackColor = System.Drawing.SystemColors.Control;
             this.panelControls.Location = new System.Drawing.Point(134, 67);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(741, 279);
+            this.panelControls.Size = new System.Drawing.Size(744, 279);
             this.panelControls.TabIndex = 79;
             // 
             // panelLeftHeader
@@ -122,6 +122,46 @@
             this.panelLeftHeader.Name = "panelLeftHeader";
             this.panelLeftHeader.Size = new System.Drawing.Size(133, 346);
             this.panelLeftHeader.TabIndex = 39;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(47, 177);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(48, 134);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(47, 90);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 33);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(47, 220);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBoxNetOfficeLogo
             // 
@@ -154,8 +194,15 @@
             this.panel3.Controls.Add(this.labelDescription);
             this.panel3.Location = new System.Drawing.Point(134, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(741, 60);
+            this.panel3.Size = new System.Drawing.Size(744, 60);
             this.panel3.TabIndex = 81;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(737, 15);
+            this.panel1.TabIndex = 86;
             // 
             // labelCaption
             // 
@@ -173,7 +220,7 @@
             this.imageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imageBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.imageBox.Image = ((System.Drawing.Image)(resources.GetObject("imageBox.Image")));
-            this.imageBox.Location = new System.Drawing.Point(669, 13);
+            this.imageBox.Location = new System.Drawing.Point(672, 13);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(34, 33);
             this.imageBox.TabIndex = 30;
@@ -194,7 +241,7 @@
             this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
             this.cancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelButton.Location = new System.Drawing.Point(541, 364);
+            this.cancelButton.Location = new System.Drawing.Point(542, 364);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(92, 25);
             this.cancelButton.TabIndex = 85;
@@ -206,7 +253,7 @@
             this.finishButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.finishButton.Image = ((System.Drawing.Image)(resources.GetObject("finishButton.Image")));
             this.finishButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.finishButton.Location = new System.Drawing.Point(434, 364);
+            this.finishButton.Location = new System.Drawing.Point(435, 364);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(92, 25);
             this.finishButton.TabIndex = 84;
@@ -220,7 +267,7 @@
             this.backButton.Enabled = false;
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.backButton.Location = new System.Drawing.Point(643, 364);
+            this.backButton.Location = new System.Drawing.Point(646, 364);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(92, 25);
             this.backButton.TabIndex = 83;
@@ -233,7 +280,7 @@
             this.nextButton.Enabled = false;
             this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
             this.nextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nextButton.Location = new System.Drawing.Point(745, 364);
+            this.nextButton.Location = new System.Drawing.Point(748, 364);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(92, 25);
             this.nextButton.TabIndex = 82;
@@ -252,9 +299,19 @@
             this.panelWizardHost.Controls.Add(this.panelControls);
             this.panelWizardHost.Location = new System.Drawing.Point(26, 55);
             this.panelWizardHost.Name = "panelWizardHost";
-            this.panelWizardHost.Size = new System.Drawing.Size(878, 406);
+            this.panelWizardHost.Size = new System.Drawing.Size(881, 406);
             this.panelWizardHost.TabIndex = 89;
             this.panelWizardHost.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(134, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(744, 6);
+            this.panel2.TabIndex = 86;
             // 
             // labelHint
             // 
@@ -274,7 +331,7 @@
             this.panelHint.Controls.Add(this.labelHint);
             this.panelHint.Location = new System.Drawing.Point(27, 50);
             this.panelHint.Name = "panelHint";
-            this.panelHint.Size = new System.Drawing.Size(877, 411);
+            this.panelHint.Size = new System.Drawing.Size(878, 411);
             this.panelHint.TabIndex = 93;
             // 
             // pictureBoxLogo
@@ -285,7 +342,7 @@
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(229, 35);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(400, 330);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(401, 330);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 94;
             this.pictureBoxLogo.TabStop = false;
@@ -307,63 +364,6 @@
             this.imageListIcons.Images.SetKeyName(0, "question.png");
             this.imageListIcons.Images.SetKeyName(1, "information.png");
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 220);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 90);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 33);
-            this.pictureBox2.TabIndex = 32;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(48, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(47, 177);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(737, 15);
-            this.panel1.TabIndex = 86;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(134, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 6);
-            this.panel2.TabIndex = 86;
-            // 
             // ProjectWizardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +375,10 @@
             this.Name = "ProjectWizardControl";
             this.Size = new System.Drawing.Size(924, 496);
             this.panelLeftHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNetOfficeLogo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -384,10 +388,6 @@
             this.panelHint.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

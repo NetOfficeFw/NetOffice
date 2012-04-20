@@ -113,9 +113,28 @@ namespace NetOffice.DeveloperToolbox
             int selIndex = comboBoxLoadBehavior.SelectedIndex;
 
             Translator.TranslateControls(this, "ProjectWizard.Controls.LoadControl.txt", ProjectWizardControl.CurrentLanguageID);
-
+            TranslateComboBox();
             comboBoxLoadBehavior.SelectedIndex = selIndex;
             noChangeEventFlag = false;
+        }
+
+        private void TranslateComboBox()
+        {
+            comboBoxLoadBehavior.Items.Clear(); 
+            if (ProjectWizardControl.CurrentLanguageID == 1031)
+            {
+                comboBoxLoadBehavior.Items.Add("3   = Beim Start der Office Anwendung automatisch laden");
+                comboBoxLoadBehavior.Items.Add("2   = Bei Bedarf laden");
+                comboBoxLoadBehavior.Items.Add("1   = Nicht automatisch laden");
+                comboBoxLoadBehavior.Items.Add("16  = Beim ersten Start automatisch laden, danach bei Bedarf laden");
+            }
+            else
+            {
+                comboBoxLoadBehavior.Items.Add("3   = Load at startup");
+                comboBoxLoadBehavior.Items.Add("2   = On demand");
+                comboBoxLoadBehavior.Items.Add("1   = Not automatically");
+                comboBoxLoadBehavior.Items.Add("16  = Load first time, then load on demand");
+            }
         }
 
         public void Activate()
@@ -158,7 +177,7 @@ namespace NetOffice.DeveloperToolbox
         #endregion
 
         #region Methods
-
+         
         private string LocalizedLoadBehavior
         {
             get
