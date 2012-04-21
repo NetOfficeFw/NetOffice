@@ -31,19 +31,20 @@ namespace LateBindingApi.Core
 
         private static CultureInfo _cultureInfo;
         private static bool        _eventsEnabled = true;
-        private static bool        _messageFilterEnabled;
+        private static bool        _enableMessageFilter;
         private static IntPtr      _messageFilter;
         private static bool        _enableAutomaticQuit;
         private static bool        _enableAdHocLoading = true;
         private static bool        _enableDebugOutput = true;
-        private static bool        _enableSafeMode = false;
+        private static bool        _enableSafeMode;
+        private static bool        _enableThreadSafe = true;
 
         #endregion
 
         #region Properties
 
         /// <summary>
-        /// Used Thread Culture given in the Invoke Calls, default is en-US
+        /// Used Thread Culture given in the Invoke Calls. en-US by default
         /// </summary>
         public static CultureInfo ThreadCulture
         {
@@ -73,7 +74,7 @@ namespace LateBindingApi.Core
         }
         
         /// <summary>
-        /// Get or set the Event support, default is true 
+        /// Get or set the Event support. true by default
         /// </summary>
         public static bool EnableEvents
         {
@@ -88,15 +89,13 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// Get or set the Message Filter enabled.
-        /// The MessageFilter suspress any exceptional dialog messages, specialy the "Application ist waiting for another OLE Task" dialog
-        /// default is true
+        /// Get or set the Message Filter is enabled. false by default
         /// </summary>
         public static bool EnableMessageFilter
         {
             get
             {
-                return _messageFilterEnabled;
+                return _enableMessageFilter;
             }
             set
             {
@@ -109,12 +108,12 @@ namespace LateBindingApi.Core
                     IntPtr filter = IntPtr.Zero;
                     CoRegisterMessageFilter(_messageFilter, ref filter);
                 }
-                _messageFilterEnabled = value;
+                _enableMessageFilter = value;
             }
         }
 
         /// <summary>
-        /// Get or set the Quit() method for an application object was automaticly called while Dispose()
+        /// Get or set the Quit method for an application object was automaticly called while Dispose. false by default
         /// </summary>
         public static bool EnableAutomaticQuit
         {
@@ -129,7 +128,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesnt a EntityNotSupportedException is thrown
+        /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesnt a EntityNotSupportedException is thrown. false by default
         /// </summary>
         public static bool EnableSafeMode
         {
@@ -144,7 +143,22 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations
+        /// Get or set the core api performs all operations thread safe. false by default
+        /// </summary>
+        public static bool EnableThreadSafe
+        {
+            get
+            {
+                return _enableThreadSafe;
+            }
+            set
+            {
+                _enableThreadSafe = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static bool EnableAdHocLoading
@@ -160,7 +174,7 @@ namespace LateBindingApi.Core
         }
 
         /// <summary>
-        /// Get or set additonal debug output is enabled for trouble shooting 
+        /// Get or set NetOffice logs essential system steps in the DebugConsole(if enabled). true by default
         /// </summary>
         public static bool EnableDebugOutput
         {

@@ -14,7 +14,7 @@ namespace LateBindingApi.Core
     {
         #region Fields
 
-        private static readonly string _exceptionMessage = "See inner exception for details.";
+        private static readonly string _exceptionMessage = "See inner exception(s) for details.";
 
         #endregion
 

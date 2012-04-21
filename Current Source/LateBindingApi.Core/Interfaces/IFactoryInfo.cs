@@ -7,7 +7,7 @@ using System.Text;
 namespace LateBindingApi.Core
 {
     /// <summary>
-    /// info about a lateBinding assembly
+    /// info about a late binding assembly
     /// </summary>
     public interface IFactoryInfo
     {

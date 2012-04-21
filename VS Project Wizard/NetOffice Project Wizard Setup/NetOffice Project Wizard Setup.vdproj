@@ -2687,7 +2687,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=89c3bee3540d2d4c, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=89c3bee3540d2d4c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_1FB492A6C9A74387A31A2D479BB2B413"
@@ -2842,7 +2842,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=0939138a4a188afd, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=0939138a4a188afd, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_32181035036E447DB0B58E21B531EEC8"
@@ -3161,7 +3161,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=d2396b9b54dac9d4, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=d2396b9b54dac9d4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_3960507FF57B4459A4C289D6861110AA"
@@ -3376,7 +3376,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=0939138a4a188afd, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=0939138a4a188afd, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_4564351C6254E6F81C5EAA7861944D1F"
@@ -3458,7 +3458,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_4B62367016A6407BA59253C7D3312FA8"
@@ -4178,7 +4178,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_73CBE4B761E5B70FF28CC1DAA789AA9B"
@@ -5607,7 +5607,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=89c3bee3540d2d4c, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=89c3bee3540d2d4c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_D0880B1D6CEF2E130490E31C4809754F"
@@ -5831,7 +5831,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.4.0.1, Culture=neutral, PublicKeyToken=d2396b9b54dac9d4, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:LateBindingApi.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=d2396b9b54dac9d4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_E9C2D651EB6390B6F6BAC52A0B032212"

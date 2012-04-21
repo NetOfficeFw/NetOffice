@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Reflection;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -42,6 +43,10 @@ namespace LateBindingApi.Core
         private static Dictionary<Guid, Guid>   _hostCache = new Dictionary<Guid, Guid>();
         private static Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private static Assembly _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
+       
+        private static object _factoryListLock      = new object();
+        private static object _comObjectLock        = new object();
+        private static object _globalObjectListLock = new object();
 
         #endregion
 
@@ -86,17 +91,59 @@ namespace LateBindingApi.Core
         public static event ProxyCountChangedHandler ProxyCountChanged;
 
         #endregion
-     
+
         #region Factory Methods
 
         /// <summary>
         /// Must be called from client assembly for COMObject Support
-        /// Recieve FactoryInfos from all loaded LateBindingApi based Assemblies
+        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
+        /// </summary>
+        /// <param name="threadCulture">given value for Settings.ThreadCulture</param>
+        /// <param name="enableThreadSafe">given value for Settings.EnableThreadSafe</param>
+        public static void Initialize(System.Globalization.CultureInfo threadCulture, bool enableThreadSafe)
+        {
+            Settings.ThreadCulture = threadCulture;
+            Settings.EnableThreadSafe = enableThreadSafe;
+            Initialize();
+        }
+
+        /// <summary>
+        /// Must be called from client assembly for COMObject Support
+        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
+        /// </summary>
+        /// <param name="threadCulture">given value for Settings.ThreadCulture</param>
+        public static void Initialize(System.Globalization.CultureInfo threadCulture)
+        {
+            Settings.ThreadCulture = threadCulture;
+            Initialize();
+        }
+
+        /// <summary>
+        /// Must be called from client assembly for COMObject Support
+        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
+        /// </summary>
+        /// <param name="enableThreadSafe">given value for Settings.EnableThreadSafe</param>
+        public static void Initialize(bool enableThreadSafe)
+        {
+            Settings.EnableThreadSafe = enableThreadSafe;
+            Initialize();
+        }
+
+        /// <summary>
+        /// Must be called from client assembly for COMObject Support
+        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
         /// </summary>
         public static void Initialize()
         {
+            bool isLocked = false;
             try
             {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_factoryListLock);
+                    isLocked = true;
+                }
+
                 DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize()");
 
                 if (!_assemblyResolveEventConnected)
@@ -160,7 +207,7 @@ namespace LateBindingApi.Core
                         }
                     }
                 }
-                 
+
                 DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize() passed");
             }
             catch (Exception throwedException)
@@ -168,14 +215,45 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw (throwedException);
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_factoryListLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
         /// clears factory informations List
         /// </summary>
-        public static void Clear()
+        public static void ClearFactoryInformations()
         {
-            _factoryList.Clear();
+            bool isLocked = false;
+            try
+            {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_factoryListLock);
+                    isLocked = true;
+                }
+
+                _factoryList.Clear();
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw (throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_factoryListLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -264,10 +342,17 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject CreateKnownObjectFromComProxy(COMObject caller, object comProxy, Type wrapperClassType)
         {
+            bool isLocked = false;
             try
             {
                 if (null == comProxy)
                     return null;
+
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
 
                 // create new proxyType
                 Type comProxyType = null;
@@ -285,6 +370,14 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -296,10 +389,17 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject[] CreateKnownObjectArrayFromComProxy(COMObject caller, object[] comProxyArray, Type wrapperClassType)
         {
+            bool isLocked = false;
             try
             {
                 if (null == comProxyArray)
                     return null;
+
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
 
                 Type comVariantType = null;
                 COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
@@ -313,6 +413,14 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -323,10 +431,17 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy)
         {
+            bool isLocked = false;
             try
             {
                 if (null == comProxy)
                     return null;
+
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
 
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
 
@@ -349,6 +464,14 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -360,10 +483,17 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy, Type comProxyType)
         {
+            bool isLocked = false;
             try
             {
                 if (null == comProxy)
                     return null;
+
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
 
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
 
@@ -379,6 +509,14 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -393,8 +531,15 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
+            bool isLocked = false;
             try
             {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
+
                 Type classType = null;
                 if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
                 {
@@ -419,6 +564,14 @@ namespace LateBindingApi.Core
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
             }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -429,10 +582,17 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
         public static COMObject[] CreateObjectArrayFromComProxy(COMObject caller, object[] comProxyArray)
         {
+            bool isLocked = false;
             try
             {
                 if (null == comProxyArray)
                     return null;
+                
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_comObjectLock);
+                    isLocked = true;
+                }
 
                 Type comVariantType = null;
                 COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
@@ -450,6 +610,14 @@ namespace LateBindingApi.Core
             {
                 DebugConsole.WriteException(throwedException);
                 throw throwedException;
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_comObjectLock);
+                    isLocked = false;
+                }
             }
         }
 
@@ -472,10 +640,32 @@ namespace LateBindingApi.Core
         /// <param name="proxy"></param>
         internal static void AddObjectToList(COMObject proxy)
         {
-            _globalObjectList.Add(proxy);
+            bool isLocked = false;
+            try
+            {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_globalObjectList);
+                    isLocked = true;
+                }
+                
+                _globalObjectList.Add(proxy);
 
-            if (null != ProxyCountChanged)
-                ProxyCountChanged(_globalObjectList.Count);
+                if (null != ProxyCountChanged)
+                    ProxyCountChanged(_globalObjectList.Count);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_globalObjectList);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -484,10 +674,32 @@ namespace LateBindingApi.Core
         /// <param name="proxy"></param>
         internal static void RemoveObjectFromList(COMObject proxy)
         {
-            _globalObjectList.Remove(proxy);
+            bool isLocked = false;
+            try
+            {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_globalObjectList);
+                    isLocked = true;
+                }
 
-            if (null != ProxyCountChanged)
-                ProxyCountChanged(_globalObjectList.Count);
+                _globalObjectList.Remove(proxy);
+
+                if (null != ProxyCountChanged)
+                    ProxyCountChanged(_globalObjectList.Count);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_globalObjectList);
+                    isLocked = false;
+                }
+            }
         }
 
         #endregion

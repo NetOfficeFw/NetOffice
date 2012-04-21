@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Collections.Generic;
@@ -57,7 +58,12 @@ namespace LateBindingApi.Core
         /// <summary>
         /// list of runtime supported entities
         /// </summary>
-        Dictionary<string, string> _listSupportedEntities;
+        private Dictionary<string, string> _listSupportedEntities;
+
+        /// <summary>
+        /// monitor lock object for accessing the child list
+        /// </summary>
+        private object _childListLock = new object();
 
         #endregion
 
@@ -408,7 +414,30 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void AddChildObject(COMObject childObject)
         {
-            _listChildObjects.Add(childObject);
+            bool isLocked = false;
+            try
+            {
+                if (Settings.EnableThreadSafe)
+                {
+                    Monitor.Enter(_childListLock);
+                    isLocked = true;
+                }
+
+                _listChildObjects.Add(childObject);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw (throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_childListLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -418,7 +447,24 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void RemoveChildObject(COMObject childObject)
         {
-            _listChildObjects.Remove(childObject);
+            bool isLocked = false;
+            try
+            {
+                _listChildObjects.Remove(childObject);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw (throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_childListLock);
+                    isLocked = false;
+                }
+            }
         }
 
         /// <summary>
