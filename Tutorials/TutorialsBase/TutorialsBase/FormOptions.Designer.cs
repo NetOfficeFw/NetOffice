@@ -80,7 +80,7 @@
             this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
             this.buttonDone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDone.Location = new System.Drawing.Point(180, 312);
+            this.buttonDone.Location = new System.Drawing.Point(180, 339);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(125, 29);
             this.buttonDone.TabIndex = 4;
@@ -95,7 +95,7 @@
             this.groupBoxOnlineMode.Controls.Add(this.radioButtonShowLink);
             this.groupBoxOnlineMode.Location = new System.Drawing.Point(23, 134);
             this.groupBoxOnlineMode.Name = "groupBoxOnlineMode";
-            this.groupBoxOnlineMode.Size = new System.Drawing.Size(282, 162);
+            this.groupBoxOnlineMode.Size = new System.Drawing.Size(282, 185);
             this.groupBoxOnlineMode.TabIndex = 5;
             this.groupBoxOnlineMode.TabStop = false;
             this.groupBoxOnlineMode.Text = "Tutorial Content";
@@ -107,7 +107,7 @@
             this.labelDocumentationHint.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDocumentationHint.Location = new System.Drawing.Point(19, 84);
             this.labelDocumentationHint.Name = "labelDocumentationHint";
-            this.labelDocumentationHint.Size = new System.Drawing.Size(246, 61);
+            this.labelDocumentationHint.Size = new System.Drawing.Size(246, 83);
             this.labelDocumentationHint.TabIndex = 4;
             this.labelDocumentationHint.Text = "The Tutorial application performs a connect to the NetOffice Documentation page o" +
                 "ur shows you the link to tutorial documentation.";
@@ -140,7 +140,7 @@
             this.checkBoxSaveSettings.AutoSize = true;
             this.checkBoxSaveSettings.Checked = true;
             this.checkBoxSaveSettings.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSaveSettings.Location = new System.Drawing.Point(42, 318);
+            this.checkBoxSaveSettings.Location = new System.Drawing.Point(42, 345);
             this.checkBoxSaveSettings.Name = "checkBoxSaveSettings";
             this.checkBoxSaveSettings.Size = new System.Drawing.Size(109, 17);
             this.checkBoxSaveSettings.TabIndex = 6;
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 370);
+            this.ClientSize = new System.Drawing.Size(333, 389);
             this.Controls.Add(this.checkBoxSaveSettings);
             this.Controls.Add(this.groupBoxOnlineMode);
             this.Controls.Add(this.buttonDone);

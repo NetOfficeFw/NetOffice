@@ -282,6 +282,20 @@ namespace TutorialsBase
             FormOptions.SaveConfigurationToXMLFile();
         }
 
+        private void FormBase_Resize(object sender, EventArgs e)
+        {
+            try
+            {
+                buttonRunTutorial.Left = buttonRunTutorial.Parent.Width / 2 - buttonRunTutorial.Width / 2;
+                buttonRunTutorial.Top = buttonRunTutorial.Parent.Height / 2 - buttonRunTutorial.Height / 2;
+            }
+            catch (Exception exception)
+            {
+                FormError.Show(this, null, exception.Message, exception);
+            }
+        }
+
         #endregion       
+      
     }
 }

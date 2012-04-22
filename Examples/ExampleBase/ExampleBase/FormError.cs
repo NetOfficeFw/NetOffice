@@ -13,6 +13,9 @@ namespace ExampleBase
         public FormError(string title, string message, Exception exception)
         {
             InitializeComponent();
+            if (null == message)
+                message = FormOptions.LCID == 1033 ? "An error is occured." : "Ein Fehler ist aufgetreten.";
+
             this.Text = title;
             labelErrorMessage.Text = message;
             DisplayException(exception);
@@ -38,6 +41,12 @@ namespace ExampleBase
                 exception = exception.InnerException;
                 i++;
             }
+        }
+
+        public static void Show(Control parentDialog, Exception exception)
+        {
+            FormError form = new FormError(FormOptions.LCID == 1033 ? "Error." : "Fehler.", null, exception);
+            form.ShowDialog(parentDialog);
         }
 
         public static void Show(Control parentDialog, string title, string message, Exception exception)

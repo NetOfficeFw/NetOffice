@@ -19,8 +19,7 @@ namespace ExampleBase
 
         List<IExample> _listExamples = new List<IExample>();
         string _rootDirectory = FormOptions.DefaultRootDirectory;
-        int _lcid = FormOptions.DefaultLCID;
-
+  
         #endregion
 
         #region .ctor
@@ -43,13 +42,13 @@ namespace ExampleBase
             }
             catch(Exception exception)
             {
-                FormError.Show(this, _lcid == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.", exception.Message, exception);               
+                FormError.Show(this, exception);           
             }
         }
 
         public void ShowErrorDialog(string message, Exception exception)
         {
-            FormError.Show(this, _lcid == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.", message, exception);
+            FormError.Show(this, exception);  
         }
 
         public Icon DisplayIcon
@@ -64,7 +63,7 @@ namespace ExampleBase
         {
             get
             {
-                return _lcid;
+                return FormOptions.LCID;
             }
         }
 
@@ -104,9 +103,9 @@ namespace ExampleBase
                 UserControl control = panelExamples.Controls[0] as UserControl;
                 panelExamples.Controls.Clear();
             }
-            catch(Exception exception)
+            catch(Exception exception)         
             {
-                FormError.Show(this, _lcid == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.", exception.Message, exception);               
+                FormError.Show(this, exception);           
             }
         }
 
@@ -132,7 +131,7 @@ namespace ExampleBase
             }
             catch (Exception exception)
             {
-                FormError.Show(this, _lcid == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.", exception.Message, exception);  
+                FormError.Show(this, exception);
             }
             finally
             {
@@ -150,11 +149,11 @@ namespace ExampleBase
         {
             try
             {
-                FormOptions dialog = new FormOptions(_lcid, _rootDirectory);
+                FormOptions dialog = new FormOptions(_rootDirectory);
                 if (DialogResult.OK == dialog.ShowDialog(this))
                 {
                     _rootDirectory = dialog.RootDirectory;
-                    _lcid = dialog.LCID;
+
 
                     foreach (ListViewItem item in listViewExamples.Items)
                     {
@@ -163,12 +162,32 @@ namespace ExampleBase
                         item.SubItems[1].Text = example.Description;
                     }
 
-                    Translator.TranslateControls(this, "FormBase.txt", _lcid);
+                    Translator.TranslateControls(this, "FormBase.txt", FormOptions.LCID);
                 }
             }
             catch(Exception exception)
             {
-                FormError.Show(this, _lcid == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.", exception.Message, exception);  
+                FormError.Show(this, exception);  
+            }
+        }
+
+        private void linkLabelRessouce_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                LinkLabel label = sender as LinkLabel;
+                string link = label.Tag as string;
+                string[] array = link.Split(new string[] { "#" }, StringSplitOptions.RemoveEmptyEntries);
+                string root = "http://netoffice.codeplex.com";
+                if (FormOptions.LCID == 1033)
+                    link = root + array[0];
+                else
+                    link = root + array[1];
+                System.Diagnostics.Process.Start(link);
+            }
+            catch (Exception exception)
+            {
+                FormError.Show(this, null, exception.Message, exception);
             }
         }
 
@@ -183,7 +202,6 @@ namespace ExampleBase
             {
                 FormError.Show(this, null, exception.Message, exception);
             }
-
         }
 
         private void linkLabelEmployeWanted_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -198,6 +216,7 @@ namespace ExampleBase
                 FormError.Show(this, null, exception.Message, exception);
             }
         }
+
         #endregion
         
         internal IContainer Components

@@ -60,7 +60,7 @@ namespace TutorialsCS4
 
         public string Caption
         {
-            get { return "Tutorial04"; }
+            get { return "Tutorial03"; }
         }
 
 

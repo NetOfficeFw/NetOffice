@@ -6,9 +6,9 @@ labelWeWantYou = NetOffice is looking for developers/editors/office experts.
 labelQuestions = Questions or Comments?
 [End]
 [1031]
-labelHeader1 = Starten Sie ein Beispiel via Doppelklick oder dem rechten oberen Button
+labelHeader1 = Starten Sie ein Beispiel via Doppelklick oder via Klick auf Schaltfläche "Start Example"
 labelHeader2 = Der Beispielcode ist im VS Solution Explorer verfügbar
-labelControlsHeader = "Dieser Bereicht ist für Beispiele mit eigener Oberfläche"
+labelControlsHeader = Dieser Bereich ist für Beispiele mit eigener Oberfläche
 labelWeWantYou = NetOffice sucht Programmierer/Editor und Office Experten
-labelQuestions = Auf jede Frage gibt es eine Antwort
+labelQuestions = Fragen oder Anregungen?
 [End]

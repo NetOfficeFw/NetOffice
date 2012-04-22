@@ -10,11 +10,13 @@ namespace ExampleBase
 {
     partial class FormOptions : Form
     {
-        public FormOptions(int currentLCID, string rootDirectory)
+        private static int _lcid = FormOptions.DefaultLCID;
+
+        public FormOptions(string rootDirectory)
         {
             InitializeComponent();
 
-            if (1031 == currentLCID)
+            if (1031 == _lcid)
                 radioButtonLanguage1031.Checked = true;
 
             if (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) != rootDirectory)
@@ -27,11 +29,11 @@ namespace ExampleBase
             this.Close();
         }
         
-        public int LCID
+        public static int LCID
         {
             get 
             {
-                return radioButtonLanguage1031.Checked ? 1031 : 1033;
+                return _lcid;
             }
         }
 
@@ -58,6 +60,11 @@ namespace ExampleBase
             {
                 return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             }
+        }
+
+        private void radioButtonLanguage1033_CheckedChanged(object sender, EventArgs e)
+        {
+            _lcid = radioButtonLanguage1031.Checked ? 1031 : 1033;
         }
     }
 }

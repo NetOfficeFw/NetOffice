@@ -15,7 +15,8 @@ namespace TutorialsBase
             InitializeComponent();
             this.Text = title;
             if (null == message)
-                message = "An Error occured";
+                message = FormOptions.LCID == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.";
+              
             labelErrorMessage.Text = message;
             DisplayException(exception);
         }
@@ -45,7 +46,7 @@ namespace TutorialsBase
         public static void Show(Control parentDialog, string title, string message, Exception exception)
         {
             if (title == null)
-                title = FormOptions.LCID == 1031 ? "An error is occured." : "Ein Fehler ist aufgetreten.";
+                title = FormOptions.LCID == 1031 ? "Error is occured." : "Fehler";
 
             FormError form = new FormError(title, message, exception);
             form.ShowDialog(parentDialog);

@@ -115,6 +115,7 @@
             this.radioButtonLanguage1033.TabStop = true;
             this.radioButtonLanguage1033.Text = "English (US)";
             this.radioButtonLanguage1033.UseVisualStyleBackColor = true;
+            this.radioButtonLanguage1033.CheckedChanged += new System.EventHandler(this.radioButtonLanguage1033_CheckedChanged);
             // 
             // buttonDone
             // 

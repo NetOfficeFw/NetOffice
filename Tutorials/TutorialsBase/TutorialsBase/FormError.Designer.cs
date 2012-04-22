@@ -87,11 +87,11 @@
             this.labelErrorMessage.Size = new System.Drawing.Size(366, 30);
             this.labelErrorMessage.TabIndex = 28;
             this.labelErrorMessage.Text = "<Leer>";
-            this.labelErrorMessage.Visible = false;
             // 
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOK.Location = new System.Drawing.Point(373, 73);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(74, 22);
