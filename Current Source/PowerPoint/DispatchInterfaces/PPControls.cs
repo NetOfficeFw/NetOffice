@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -126,7 +126,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.PPControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPControl;
+				NetOffice.PowerPointApi.PPControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.PowerPointApi.PPControl;
 				return newObject;
 			}
 		}
@@ -143,7 +143,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPushButton", paramsArray);
-			NetOffice.PowerPointApi.PPPushButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPPushButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPPushButton;
+			NetOffice.PowerPointApi.PPPushButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPPushButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPPushButton;
 			return newObject;
 		}
 
@@ -159,7 +159,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddToggleButton", paramsArray);
-			NetOffice.PowerPointApi.PPToggleButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPToggleButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPToggleButton;
+			NetOffice.PowerPointApi.PPToggleButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPToggleButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPToggleButton;
 			return newObject;
 		}
 
@@ -175,7 +175,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddBitmapButton", paramsArray);
-			NetOffice.PowerPointApi.PPBitmapButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPBitmapButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPBitmapButton;
+			NetOffice.PowerPointApi.PPBitmapButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPBitmapButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPBitmapButton;
 			return newObject;
 		}
 
@@ -191,7 +191,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddListBox", paramsArray);
-			NetOffice.PowerPointApi.PPListBox newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPListBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPListBox;
+			NetOffice.PowerPointApi.PPListBox newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPListBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPListBox;
 			return newObject;
 		}
 
@@ -207,7 +207,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddCheckBox", paramsArray);
-			NetOffice.PowerPointApi.PPCheckBox newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPCheckBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPCheckBox;
+			NetOffice.PowerPointApi.PPCheckBox newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPCheckBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPCheckBox;
 			return newObject;
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddRadioCluster", paramsArray);
-			NetOffice.PowerPointApi.PPRadioCluster newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioCluster.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioCluster;
+			NetOffice.PowerPointApi.PPRadioCluster newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioCluster.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioCluster;
 			return newObject;
 		}
 
@@ -239,7 +239,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddStaticText", paramsArray);
-			NetOffice.PowerPointApi.PPStaticText newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPStaticText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPStaticText;
+			NetOffice.PowerPointApi.PPStaticText newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPStaticText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPStaticText;
 			return newObject;
 		}
 
@@ -256,7 +256,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, verticalScrollBar);
 			object returnItem = Invoker.MethodReturn(this, "AddEditText", paramsArray);
-			NetOffice.PowerPointApi.PPEditText newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPEditText;
+			NetOffice.PowerPointApi.PPEditText newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPEditText;
 			return newObject;
 		}
 
@@ -273,7 +273,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddEditText", paramsArray);
-			NetOffice.PowerPointApi.PPEditText newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPEditText;
+			NetOffice.PowerPointApi.PPEditText newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPEditText;
 			return newObject;
 		}
 
@@ -289,7 +289,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddIcon", paramsArray);
-			NetOffice.PowerPointApi.PPIcon newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPIcon.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPIcon;
+			NetOffice.PowerPointApi.PPIcon newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPIcon.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPIcon;
 			return newObject;
 		}
 
@@ -305,7 +305,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddBitmap", paramsArray);
-			NetOffice.PowerPointApi.PPBitmap newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPBitmap.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPBitmap;
+			NetOffice.PowerPointApi.PPBitmap newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPBitmap.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPBitmap;
 			return newObject;
 		}
 
@@ -321,7 +321,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddSpinner", paramsArray);
-			NetOffice.PowerPointApi.PPSpinner newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPSpinner.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPSpinner;
+			NetOffice.PowerPointApi.PPSpinner newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPSpinner.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPSpinner;
 			return newObject;
 		}
 
@@ -338,7 +338,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddScrollBar", paramsArray);
-			NetOffice.PowerPointApi.PPScrollBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPScrollBar.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPScrollBar;
+			NetOffice.PowerPointApi.PPScrollBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPScrollBar.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPScrollBar;
 			return newObject;
 		}
 
@@ -354,7 +354,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddGroupBox", paramsArray);
-			NetOffice.PowerPointApi.PPGroupBox newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPGroupBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPGroupBox;
+			NetOffice.PowerPointApi.PPGroupBox newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPGroupBox.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPGroupBox;
 			return newObject;
 		}
 
@@ -370,7 +370,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddDropDown", paramsArray);
-			NetOffice.PowerPointApi.PPDropDown newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDropDown.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDropDown;
+			NetOffice.PowerPointApi.PPDropDown newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDropDown.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDropDown;
 			return newObject;
 		}
 
@@ -386,7 +386,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddDropDownEdit", paramsArray);
-			NetOffice.PowerPointApi.PPDropDownEdit newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDropDownEdit.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDropDownEdit;
+			NetOffice.PowerPointApi.PPDropDownEdit newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDropDownEdit.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDropDownEdit;
 			return newObject;
 		}
 
@@ -402,7 +402,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddMiniature", paramsArray);
-			NetOffice.PowerPointApi.PPSlideMiniature newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPSlideMiniature.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPSlideMiniature;
+			NetOffice.PowerPointApi.PPSlideMiniature newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPSlideMiniature.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPSlideMiniature;
 			return newObject;
 		}
 
@@ -418,7 +418,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddFrame", paramsArray);
-			NetOffice.PowerPointApi.PPFrame newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPFrame.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPFrame;
+			NetOffice.PowerPointApi.PPFrame newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPFrame.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPFrame;
 			return newObject;
 		}
 

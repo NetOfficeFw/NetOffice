@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -139,7 +139,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "parentElement", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
+				NetOffice.MSHTMLApi.IHTMLElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
 				return newObject;
 			}
 		}
@@ -156,7 +156,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "style", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyle;
+				NetOffice.MSHTMLApi.IHTMLStyle newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyle;
 				return newObject;
 			}
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onhelp", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -202,7 +202,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onclick", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -230,7 +230,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "ondblclick", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -258,7 +258,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onkeydown", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -286,7 +286,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onkeyup", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -314,7 +314,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onkeypress", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -342,7 +342,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onmouseout", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -370,7 +370,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onmouseover", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -398,7 +398,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onmousemove", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -426,7 +426,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onmousedown", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -454,7 +454,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onmouseup", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -481,7 +481,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "document", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -539,7 +539,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onselectstart", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -582,7 +582,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "recordNumber", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -683,7 +683,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "offsetParent", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
+				NetOffice.MSHTMLApi.IHTMLElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
 				return newObject;
 			}
 		}
@@ -779,7 +779,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "parentTextEdit", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
+				NetOffice.MSHTMLApi.IHTMLElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
 				return newObject;
 			}
 		}
@@ -810,7 +810,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "filters", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFiltersCollection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSHTMLApi.IHTMLFiltersCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFiltersCollection;
+				NetOffice.MSHTMLApi.IHTMLFiltersCollection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSHTMLApi.IHTMLFiltersCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFiltersCollection;
 				return newObject;
 			}
 		}
@@ -828,7 +828,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "ondragstart", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -856,7 +856,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onbeforeupdate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -884,7 +884,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onafterupdate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -912,7 +912,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onerrorupdate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -940,7 +940,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onrowexit", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -968,7 +968,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onrowenter", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -996,7 +996,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "ondatasetchanged", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1024,7 +1024,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "ondataavailable", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1052,7 +1052,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "ondatasetcomplete", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1080,7 +1080,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onfilterchange", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1107,7 +1107,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "children", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -1124,7 +1124,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "all", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -1182,7 +1182,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onblur", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1210,7 +1210,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onfocus", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1238,7 +1238,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onresize", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1361,7 +1361,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "status", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1407,7 +1407,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "form", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFormElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
+				NetOffice.MSHTMLApi.IHTMLFormElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
 				return newObject;
 			}
 		}
@@ -1465,7 +1465,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onchange", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1493,7 +1493,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onselect", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1570,7 +1570,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1591,7 +1591,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

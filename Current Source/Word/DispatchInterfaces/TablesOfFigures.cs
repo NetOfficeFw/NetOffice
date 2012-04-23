@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+				NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 				return newObject;
 			}
 		}
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -214,7 +214,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -247,7 +247,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -265,7 +265,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -304,7 +304,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -325,7 +325,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -394,7 +394,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers);
 			object returnItem = Invoker.MethodReturn(this, "AddOld", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -411,7 +411,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, tableID, level);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -425,7 +425,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -440,7 +440,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -456,7 +456,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -473,7 +473,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, tableID);
 			object returnItem = Invoker.MethodReturn(this, "MarkEntry", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -498,7 +498,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -512,7 +512,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -527,7 +527,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -543,7 +543,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -560,7 +560,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -578,7 +578,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -597,7 +597,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -617,7 +617,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -638,7 +638,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -660,7 +660,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -683,7 +683,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -707,7 +707,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -732,7 +732,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfFigures newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
+			NetOffice.WordApi.TableOfFigures newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfFigures;
 			return newObject;
 		}
 
@@ -761,7 +761,7 @@ namespace NetOffice.WordApi
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

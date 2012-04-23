@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using ComTypes = System.Runtime.InteropServices.ComTypes;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Sink Helper Base Class for an Event Interface Sink helper class

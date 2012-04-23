@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftHeader", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterHeader", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightHeader", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -131,7 +131,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftFooter", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterFooter", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightFooter", paramsArray);
-				NetOffice.ExcelApi.HeaderFooter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
+				NetOffice.ExcelApi.HeaderFooter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.HeaderFooter.LateBindingApiWrapperType) as NetOffice.ExcelApi.HeaderFooter;
 				return newObject;
 			}
 		}

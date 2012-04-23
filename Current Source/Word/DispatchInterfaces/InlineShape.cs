@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				NetOffice.WordApi.Borders newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Borders.LateBindingApiWrapperType) as NetOffice.WordApi.Borders;
+				NetOffice.WordApi.Borders newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Borders.LateBindingApiWrapperType) as NetOffice.WordApi.Borders;
 				return newObject;
 			}
 			set
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				NetOffice.WordApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
+				NetOffice.WordApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
 				return newObject;
 			}
 		}
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkFormat", paramsArray);
-				NetOffice.WordApi.LinkFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.LinkFormat.LateBindingApiWrapperType) as NetOffice.WordApi.LinkFormat;
+				NetOffice.WordApi.LinkFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.LinkFormat.LateBindingApiWrapperType) as NetOffice.WordApi.LinkFormat;
 				return newObject;
 			}
 		}
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Field", paramsArray);
-				NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+				NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 				return newObject;
 			}
 		}
@@ -201,7 +201,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEFormat", paramsArray);
-				NetOffice.WordApi.OLEFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OLEFormat.LateBindingApiWrapperType) as NetOffice.WordApi.OLEFormat;
+				NetOffice.WordApi.OLEFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OLEFormat.LateBindingApiWrapperType) as NetOffice.WordApi.OLEFormat;
 				return newObject;
 			}
 		}
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hyperlink", paramsArray);
-				NetOffice.WordApi.Hyperlink newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
+				NetOffice.WordApi.Hyperlink newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlink;
 				return newObject;
 			}
 		}
@@ -350,7 +350,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				NetOffice.WordApi.LineFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.LineFormat.LateBindingApiWrapperType) as NetOffice.WordApi.LineFormat;
+				NetOffice.WordApi.LineFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.LineFormat.LateBindingApiWrapperType) as NetOffice.WordApi.LineFormat;
 				return newObject;
 			}
 		}
@@ -366,7 +366,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.WordApi.FillFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FillFormat.LateBindingApiWrapperType) as NetOffice.WordApi.FillFormat;
+				NetOffice.WordApi.FillFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FillFormat.LateBindingApiWrapperType) as NetOffice.WordApi.FillFormat;
 				return newObject;
 			}
 		}
@@ -382,7 +382,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PictureFormat", paramsArray);
-				NetOffice.WordApi.PictureFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.PictureFormat.LateBindingApiWrapperType) as NetOffice.WordApi.PictureFormat;
+				NetOffice.WordApi.PictureFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.PictureFormat.LateBindingApiWrapperType) as NetOffice.WordApi.PictureFormat;
 				return newObject;
 			}
 			set
@@ -403,7 +403,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HorizontalLineFormat", paramsArray);
-				NetOffice.WordApi.HorizontalLineFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HorizontalLineFormat.LateBindingApiWrapperType) as NetOffice.WordApi.HorizontalLineFormat;
+				NetOffice.WordApi.HorizontalLineFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HorizontalLineFormat.LateBindingApiWrapperType) as NetOffice.WordApi.HorizontalLineFormat;
 				return newObject;
 			}
 		}
@@ -419,7 +419,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Script", paramsArray);
-				NetOffice.OfficeApi.Script newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Script.LateBindingApiWrapperType) as NetOffice.OfficeApi.Script;
+				NetOffice.OfficeApi.Script newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Script.LateBindingApiWrapperType) as NetOffice.OfficeApi.Script;
 				return newObject;
 			}
 		}
@@ -451,7 +451,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextEffect", paramsArray);
-				NetOffice.WordApi.TextEffectFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TextEffectFormat.LateBindingApiWrapperType) as NetOffice.WordApi.TextEffectFormat;
+				NetOffice.WordApi.TextEffectFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TextEffectFormat.LateBindingApiWrapperType) as NetOffice.WordApi.TextEffectFormat;
 				return newObject;
 			}
 			set
@@ -507,7 +507,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GroupItems", paramsArray);
-				NetOffice.WordApi.GroupShapes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.GroupShapes.LateBindingApiWrapperType) as NetOffice.WordApi.GroupShapes;
+				NetOffice.WordApi.GroupShapes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.GroupShapes.LateBindingApiWrapperType) as NetOffice.WordApi.GroupShapes;
 				return newObject;
 			}
 		}
@@ -555,7 +555,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SoftEdge", paramsArray);
-				NetOffice.WordApi.SoftEdgeFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SoftEdgeFormat.LateBindingApiWrapperType) as NetOffice.WordApi.SoftEdgeFormat;
+				NetOffice.WordApi.SoftEdgeFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SoftEdgeFormat.LateBindingApiWrapperType) as NetOffice.WordApi.SoftEdgeFormat;
 				return newObject;
 			}
 		}
@@ -571,7 +571,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Glow", paramsArray);
-				NetOffice.WordApi.GlowFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.GlowFormat.LateBindingApiWrapperType) as NetOffice.WordApi.GlowFormat;
+				NetOffice.WordApi.GlowFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.GlowFormat.LateBindingApiWrapperType) as NetOffice.WordApi.GlowFormat;
 				return newObject;
 			}
 		}
@@ -587,7 +587,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Reflection", paramsArray);
-				NetOffice.WordApi.ReflectionFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ReflectionFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ReflectionFormat;
+				NetOffice.WordApi.ReflectionFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ReflectionFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ReflectionFormat;
 				return newObject;
 			}
 		}
@@ -603,7 +603,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shadow", paramsArray);
-				NetOffice.WordApi.ShadowFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ShadowFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ShadowFormat;
+				NetOffice.WordApi.ShadowFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ShadowFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ShadowFormat;
 				return newObject;
 			}
 		}
@@ -619,7 +619,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Chart", paramsArray);
-				NetOffice.WordApi.Chart newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Chart.LateBindingApiWrapperType) as NetOffice.WordApi.Chart;
+				NetOffice.WordApi.Chart newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Chart.LateBindingApiWrapperType) as NetOffice.WordApi.Chart;
 				return newObject;
 			}
 		}
@@ -651,7 +651,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartArt", paramsArray);
-				NetOffice.OfficeApi.SmartArt newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArt.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArt;
+				NetOffice.OfficeApi.SmartArt newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArt.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArt;
 				return newObject;
 			}
 		}
@@ -760,7 +760,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ConvertToShape", paramsArray);
-			NetOffice.WordApi.Shape newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Shape.LateBindingApiWrapperType) as NetOffice.WordApi.Shape;
+			NetOffice.WordApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Shape.LateBindingApiWrapperType) as NetOffice.WordApi.Shape;
 			return newObject;
 		}
 

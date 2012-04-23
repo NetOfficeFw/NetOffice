@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChLegendEntry newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLegendEntry.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLegendEntry;
+			NetOffice.OWC10Api.ChLegendEntry newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLegendEntry.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLegendEntry;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChLegend newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLegend.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLegend;
+				NetOffice.OWC10Api.ChLegend newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLegend.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLegend;
 				return newObject;
 			}
 		}
@@ -152,7 +152,7 @@ namespace NetOffice.OWC10Api
 		[SupportByVersionAttribute("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// info about a late binding assembly

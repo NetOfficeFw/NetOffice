@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.PowerPointApi.ChartBorder newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartBorder;
+				NetOffice.PowerPointApi.ChartBorder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartBorder;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataLabel", paramsArray);
-				NetOffice.PowerPointApi.DataLabel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DataLabel.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DataLabel;
+				NetOffice.PowerPointApi.DataLabel newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DataLabel.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DataLabel;
 				return newObject;
 			}
 		}
@@ -329,7 +329,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.PowerPointApi.ChartFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartFormat;
+				NetOffice.PowerPointApi.ChartFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartFormat;
 				return newObject;
 			}
 		}
@@ -400,7 +400,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -461,7 +461,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "ClearFormats", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -480,7 +480,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -499,7 +499,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// some helper methods (also for visual basic)
@@ -34,7 +34,7 @@ namespace LateBindingApi.Core
             while (true == isMoveNextTrue)
             {
                 object itemProxy = Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                COMObject returnClass = Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                 isMoveNextTrue = (bool)Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 yield return returnClass;
             }
@@ -54,7 +54,7 @@ namespace LateBindingApi.Core
             while (true == isMoveNextTrue)
             {
                 object itemProxy = Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                COMObject returnClass = LateBindingApi.Core.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                COMObject returnClass = Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                 isMoveNextTrue = (bool)Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 yield return returnClass;
             }

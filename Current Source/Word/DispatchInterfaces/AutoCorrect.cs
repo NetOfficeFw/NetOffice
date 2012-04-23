@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Entries", paramsArray);
-				NetOffice.WordApi.AutoCorrectEntries newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.AutoCorrectEntries.LateBindingApiWrapperType) as NetOffice.WordApi.AutoCorrectEntries;
+				NetOffice.WordApi.AutoCorrectEntries newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.AutoCorrectEntries.LateBindingApiWrapperType) as NetOffice.WordApi.AutoCorrectEntries;
 				return newObject;
 			}
 		}
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstLetterExceptions", paramsArray);
-				NetOffice.WordApi.FirstLetterExceptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FirstLetterExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.FirstLetterExceptions;
+				NetOffice.WordApi.FirstLetterExceptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FirstLetterExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.FirstLetterExceptions;
 				return newObject;
 			}
 		}
@@ -264,7 +264,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TwoInitialCapsExceptions", paramsArray);
-				NetOffice.WordApi.TwoInitialCapsExceptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TwoInitialCapsExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.TwoInitialCapsExceptions;
+				NetOffice.WordApi.TwoInitialCapsExceptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TwoInitialCapsExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.TwoInitialCapsExceptions;
 				return newObject;
 			}
 		}
@@ -340,7 +340,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HangulAndAlphabetExceptions", paramsArray);
-				NetOffice.WordApi.HangulAndAlphabetExceptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HangulAndAlphabetExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.HangulAndAlphabetExceptions;
+				NetOffice.WordApi.HangulAndAlphabetExceptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HangulAndAlphabetExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.HangulAndAlphabetExceptions;
 				return newObject;
 			}
 		}
@@ -416,7 +416,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OtherCorrectionsExceptions", paramsArray);
-				NetOffice.WordApi.OtherCorrectionsExceptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OtherCorrectionsExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.OtherCorrectionsExceptions;
+				NetOffice.WordApi.OtherCorrectionsExceptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OtherCorrectionsExceptions.LateBindingApiWrapperType) as NetOffice.WordApi.OtherCorrectionsExceptions;
 				return newObject;
 			}
 		}

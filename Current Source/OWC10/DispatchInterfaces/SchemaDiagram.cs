@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -99,7 +99,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRowsources", paramsArray);
-				NetOffice.OWC10Api.SchemaRowsources newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsources;
+				NetOffice.OWC10Api.SchemaRowsources newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsources;
 				return newObject;
 			}
 		}

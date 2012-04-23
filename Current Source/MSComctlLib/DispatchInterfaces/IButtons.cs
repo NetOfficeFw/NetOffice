@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSComctlLibApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -145,7 +145,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 			}
 			set
@@ -193,7 +193,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style, image);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -206,7 +206,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -220,7 +220,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -235,7 +235,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -251,7 +251,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -268,7 +268,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IButton newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
+			NetOffice.MSComctlLibApi.IButton newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IButton;
 			return newObject;
 		}
 
@@ -297,7 +297,7 @@ namespace NetOffice.MSComctlLibApi
 		[SupportByVersionAttribute("MSComctlLib", 6.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

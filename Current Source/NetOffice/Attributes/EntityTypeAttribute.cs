@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Indicates original type of entity

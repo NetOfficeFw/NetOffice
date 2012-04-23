@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// this enumerator is not supported by the instance, its a custom service by NetOffice

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Core Settings

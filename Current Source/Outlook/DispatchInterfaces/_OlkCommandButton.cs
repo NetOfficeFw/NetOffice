@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
@@ -164,7 +164,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
+				stdole.Font newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
 				return newObject;
 			}
 		}
@@ -180,7 +180,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 			set
@@ -263,7 +263,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 			set

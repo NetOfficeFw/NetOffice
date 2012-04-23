@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -83,7 +83,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTable", paramsArray);
-				NetOffice.ExcelApi.PivotTable newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotTable;
+				NetOffice.ExcelApi.PivotTable newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotTable;
 				return newObject;
 			}
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataField", paramsArray);
-				NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
+				NetOffice.ExcelApi.PivotField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
 				return newObject;
 			}
 		}
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotField", paramsArray);
-				NetOffice.ExcelApi.PivotField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
+				NetOffice.ExcelApi.PivotField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
 				return newObject;
 			}
 		}
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotItem", paramsArray);
-				NetOffice.ExcelApi.PivotItem newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItem.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItem;
+				NetOffice.ExcelApi.PivotItem newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItem.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItem;
 				return newObject;
 			}
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RowItems", paramsArray);
-				NetOffice.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItemList.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItemList;
+				NetOffice.ExcelApi.PivotItemList newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItemList.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItemList;
 				return newObject;
 			}
 		}
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnItems", paramsArray);
-				NetOffice.ExcelApi.PivotItemList newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItemList.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItemList;
+				NetOffice.ExcelApi.PivotItemList newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotItemList.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotItemList;
 				return newObject;
 			}
 		}
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				NetOffice.ExcelApi.Range newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotRowLine", paramsArray);
-				NetOffice.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotLine.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotLine;
+				NetOffice.ExcelApi.PivotLine newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotLine.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotLine;
 				return newObject;
 			}
 		}
@@ -308,7 +308,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotColumnLine", paramsArray);
-				NetOffice.ExcelApi.PivotLine newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotLine.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotLine;
+				NetOffice.ExcelApi.PivotLine newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotLine.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotLine;
 				return newObject;
 			}
 		}
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "DataSourceValue", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else

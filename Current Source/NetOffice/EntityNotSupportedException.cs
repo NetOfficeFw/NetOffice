@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Signals the target method or property is not supported from the COM proxy in the current version

@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSComctlLibApi
 {	
@@ -109,7 +109,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Panel newPanel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
+			NetOffice.MSComctlLibApi.Panel newPanel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPanel;
 			_eventBinding.RaiseCustomEvent("PanelClick", ref paramsArray);
@@ -124,7 +124,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Panel newPanel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
+			NetOffice.MSComctlLibApi.Panel newPanel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPanel;
 			_eventBinding.RaiseCustomEvent("PanelDblClick", ref paramsArray);

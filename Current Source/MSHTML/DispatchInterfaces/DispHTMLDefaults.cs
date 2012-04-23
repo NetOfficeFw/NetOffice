@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "style", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyle;
+				NetOffice.MSHTMLApi.IHTMLStyle newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyle;
 				return newObject;
 			}
 		}
@@ -261,7 +261,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "viewLink", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLDocument newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument;
+				NetOffice.MSHTMLApi.IHTMLDocument newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument;
 				return newObject;
 			}
 			set

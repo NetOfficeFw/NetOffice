@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PropertyTest newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTest;
+			NetOffice.OfficeApi.PropertyTest newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTest;
 			return newObject;
 			}
 		}
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

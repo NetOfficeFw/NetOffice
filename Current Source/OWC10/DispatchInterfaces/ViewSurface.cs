@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -194,7 +194,7 @@ namespace NetOffice.OWC10Api
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(picture, mask);
 			object returnItem = Invoker.PropertyGet(this, "PictureAlphaBlended", paramsArray);
-			stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+			stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 			return newObject;
 		}
 

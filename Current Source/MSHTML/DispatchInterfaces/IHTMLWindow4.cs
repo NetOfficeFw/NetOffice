@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "frameElement", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFrameBase newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFrameBase;
+				NetOffice.MSHTMLApi.IHTMLFrameBase newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFrameBase;
 				return newObject;
 			}
 		}
@@ -102,7 +102,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varArgIn);
 			object returnItem = Invoker.MethodReturn(this, "createPopup", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -115,7 +115,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "createPopup", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 

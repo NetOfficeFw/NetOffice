@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.MSProjectApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.Group newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Group.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Group;
+				NetOffice.MSProjectApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Group.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Group;
 				return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn, startAt, groupInterval);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -178,7 +178,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -193,7 +193,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -209,7 +209,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -226,7 +226,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -244,7 +244,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -263,7 +263,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -283,7 +283,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -304,7 +304,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -326,7 +326,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -349,7 +349,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -373,7 +373,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -398,7 +398,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn, startAt);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.GroupCriterion newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
+			NetOffice.MSProjectApi.GroupCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.GroupCriterion.LateBindingApiWrapperType) as NetOffice.MSProjectApi.GroupCriterion;
 			return newObject;
 		}
 
@@ -427,7 +427,7 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersionAttribute("MSProject", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

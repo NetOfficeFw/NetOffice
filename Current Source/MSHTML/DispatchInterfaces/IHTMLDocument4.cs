@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onselectionchange", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -113,7 +113,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "namespaces", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "oncontrolselect", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -216,7 +216,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl, bstrOptions);
 			object returnItem = Invoker.MethodReturn(this, "createDocumentFromUrl", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDocument2 newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument2;
+			NetOffice.MSHTMLApi.IHTMLDocument2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument2;
 			return newObject;
 		}
 
@@ -229,7 +229,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarEventObject);
 			object returnItem = Invoker.MethodReturn(this, "CreateEventObject", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLEventObj newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLEventObj;
+			NetOffice.MSHTMLApi.IHTMLEventObj newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLEventObj;
 			return newObject;
 		}
 
@@ -242,7 +242,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateEventObject", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLEventObj newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLEventObj;
+			NetOffice.MSHTMLApi.IHTMLEventObj newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLEventObj;
 			return newObject;
 		}
 
@@ -281,7 +281,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(v);
 			object returnItem = Invoker.MethodReturn(this, "createRenderStyle", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLRenderStyle newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLRenderStyle;
+			NetOffice.MSHTMLApi.IHTMLRenderStyle newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLRenderStyle;
 			return newObject;
 		}
 

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -149,7 +149,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Actions", paramsArray);
-				NetOffice.OutlookApi.Actions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Actions.LateBindingApiWrapperType) as NetOffice.OutlookApi.Actions;
+				NetOffice.OutlookApi.Actions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Actions.LateBindingApiWrapperType) as NetOffice.OutlookApi.Actions;
 				return newObject;
 			}
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Attachments", paramsArray);
-				NetOffice.OutlookApi.Attachments newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Attachments.LateBindingApiWrapperType) as NetOffice.OutlookApi.Attachments;
+				NetOffice.OutlookApi.Attachments newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Attachments.LateBindingApiWrapperType) as NetOffice.OutlookApi.Attachments;
 				return newObject;
 			}
 		}
@@ -321,7 +321,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormDescription", paramsArray);
-				NetOffice.OutlookApi.FormDescription newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.FormDescription.LateBindingApiWrapperType) as NetOffice.OutlookApi.FormDescription;
+				NetOffice.OutlookApi.FormDescription newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.FormDescription.LateBindingApiWrapperType) as NetOffice.OutlookApi.FormDescription;
 				return newObject;
 			}
 		}
@@ -337,7 +337,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GetInspector", paramsArray);
-				NetOffice.OutlookApi._Inspector newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Inspector;
+				NetOffice.OutlookApi._Inspector newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Inspector;
 				return newObject;
 			}
 		}
@@ -391,7 +391,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MAPIOBJECT", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -588,7 +588,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UserProperties", paramsArray);
-				NetOffice.OutlookApi.UserProperties newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.UserProperties.LateBindingApiWrapperType) as NetOffice.OutlookApi.UserProperties;
+				NetOffice.OutlookApi.UserProperties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.UserProperties.LateBindingApiWrapperType) as NetOffice.OutlookApi.UserProperties;
 				return newObject;
 			}
 		}
@@ -660,7 +660,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Recipients", paramsArray);
-				NetOffice.OutlookApi.Recipients newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType) as NetOffice.OutlookApi.Recipients;
+				NetOffice.OutlookApi.Recipients newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType) as NetOffice.OutlookApi.Recipients;
 				return newObject;
 			}
 		}
@@ -711,7 +711,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ReplyRecipients", paramsArray);
-				NetOffice.OutlookApi.Recipients newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType) as NetOffice.OutlookApi.Recipients;
+				NetOffice.OutlookApi.Recipients newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType) as NetOffice.OutlookApi.Recipients;
 				return newObject;
 			}
 		}
@@ -757,7 +757,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ItemProperties", paramsArray);
-				NetOffice.OutlookApi.ItemProperties newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ItemProperties.LateBindingApiWrapperType) as NetOffice.OutlookApi.ItemProperties;
+				NetOffice.OutlookApi.ItemProperties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ItemProperties.LateBindingApiWrapperType) as NetOffice.OutlookApi.ItemProperties;
 				return newObject;
 			}
 		}
@@ -788,7 +788,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SendUsingAccount", paramsArray);
-				NetOffice.OutlookApi.Account newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Account.LateBindingApiWrapperType) as NetOffice.OutlookApi.Account;
+				NetOffice.OutlookApi.Account newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.Account.LateBindingApiWrapperType) as NetOffice.OutlookApi.Account;
 				return newObject;
 			}
 			set
@@ -839,7 +839,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyAccessor", paramsArray);
-				NetOffice.OutlookApi.PropertyAccessor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType) as NetOffice.OutlookApi.PropertyAccessor;
+				NetOffice.OutlookApi.PropertyAccessor newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType) as NetOffice.OutlookApi.PropertyAccessor;
 				return newObject;
 			}
 		}
@@ -942,7 +942,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -987,7 +987,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destFldr);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -1043,7 +1043,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Reply", paramsArray);
-			NetOffice.OutlookApi.MobileItem newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
+			NetOffice.OutlookApi.MobileItem newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
 			return newObject;
 		}
 
@@ -1055,7 +1055,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ReplyAll", paramsArray);
-			NetOffice.OutlookApi.MobileItem newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
+			NetOffice.OutlookApi.MobileItem newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
 			return newObject;
 		}
 
@@ -1078,7 +1078,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Forward", paramsArray);
-			NetOffice.OutlookApi.MobileItem newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
+			NetOffice.OutlookApi.MobileItem newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType) as NetOffice.OutlookApi.MobileItem;
 			return newObject;
 		}
 

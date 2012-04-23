@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Inspector newInspector = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, inspector) as NetOffice.OutlookApi._Inspector;
+			NetOffice.OutlookApi._Inspector newInspector = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, inspector) as NetOffice.OutlookApi._Inspector;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newInspector;
 			_eventBinding.RaiseCustomEvent("NewInspector", ref paramsArray);

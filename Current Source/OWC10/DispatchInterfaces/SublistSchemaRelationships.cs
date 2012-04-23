@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.SchemaRelationship newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.OWC10Api
 		[SupportByVersionAttribute("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

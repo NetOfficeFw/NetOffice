@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -119,7 +119,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RecordsetDef", paramsArray);
-				NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.RecordsetDef.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDef;
+				NetOffice.OWC10Api.RecordsetDef newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.RecordsetDef.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDef;
 				return newObject;
 			}
 		}
@@ -135,7 +135,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageFields", paramsArray);
-				NetOffice.OWC10Api.PageFields newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
+				NetOffice.OWC10Api.PageFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LookupRelationships", paramsArray);
-				NetOffice.OWC10Api.LookupRelationships newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.LookupRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.LookupRelationships;
+				NetOffice.OWC10Api.LookupRelationships newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.LookupRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.LookupRelationships;
 				return newObject;
 			}
 		}
@@ -169,7 +169,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Promote", paramsArray);
-			NetOffice.OWC10Api.RecordsetDef newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.RecordsetDef.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDef;
+			NetOffice.OWC10Api.RecordsetDef newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.RecordsetDef.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDef;
 			return newObject;
 		}
 

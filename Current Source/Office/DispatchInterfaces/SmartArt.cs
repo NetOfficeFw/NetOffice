@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllNodes", paramsArray);
-				NetOffice.OfficeApi.SmartArtNodes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtNodes;
+				NetOffice.OfficeApi.SmartArtNodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtNodes;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Nodes", paramsArray);
-				NetOffice.OfficeApi.SmartArtNodes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtNodes;
+				NetOffice.OfficeApi.SmartArtNodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtNodes;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				NetOffice.OfficeApi.SmartArtLayout newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtLayout.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtLayout;
+				NetOffice.OfficeApi.SmartArtLayout newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtLayout.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtLayout;
 				return newObject;
 			}
 			set
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "QuickStyle", paramsArray);
-				NetOffice.OfficeApi.SmartArtQuickStyle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtQuickStyle.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtQuickStyle;
+				NetOffice.OfficeApi.SmartArtQuickStyle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtQuickStyle.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtQuickStyle;
 				return newObject;
 			}
 			set
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Color", paramsArray);
-				NetOffice.OfficeApi.SmartArtColor newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtColor.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtColor;
+				NetOffice.OfficeApi.SmartArtColor newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtColor.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtColor;
 				return newObject;
 			}
 			set

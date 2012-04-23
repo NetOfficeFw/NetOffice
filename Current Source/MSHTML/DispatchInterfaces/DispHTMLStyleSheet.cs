@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -104,7 +104,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "parentStyleSheet", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyleSheet newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheet;
+				NetOffice.MSHTMLApi.IHTMLStyleSheet newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheet;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "owningElement", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
+				NetOffice.MSHTMLApi.IHTMLElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
 				return newObject;
 			}
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "imports", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyleSheetsCollection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetsCollection;
+				NetOffice.MSHTMLApi.IHTMLStyleSheetsCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetsCollection;
 				return newObject;
 			}
 		}
@@ -277,7 +277,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "rules", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyleSheetRulesCollection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetRulesCollection;
+				NetOffice.MSHTMLApi.IHTMLStyleSheetRulesCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetRulesCollection;
 				return newObject;
 			}
 		}
@@ -293,7 +293,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "pages", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection;
+				NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection;
 				return newObject;
 			}
 		}

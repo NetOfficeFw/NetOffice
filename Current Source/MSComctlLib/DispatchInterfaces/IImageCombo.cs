@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
@@ -144,7 +144,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
+				stdole.Font newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
 				return newObject;
 			}
 			set
@@ -207,7 +207,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ImageList", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 			set
@@ -248,7 +248,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ComboItems", paramsArray);
-				NetOffice.MSComctlLibApi.IComboItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItems;
+				NetOffice.MSComctlLibApi.IComboItems newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItems;
 				return newObject;
 			}
 			set
@@ -289,7 +289,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 			set
@@ -373,7 +373,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedItem", paramsArray);
-				NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
+				NetOffice.MSComctlLibApi.IComboItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
 				return newObject;
 			}
 			set
@@ -512,7 +512,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetFirstVisible", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
+			NetOffice.MSComctlLibApi.IComboItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
 			return newObject;
 		}
 

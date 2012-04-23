@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActualStartDrivers", paramsArray);
-				NetOffice.MSProjectApi.ActualStartDrivers newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ActualStartDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ActualStartDrivers;
+				NetOffice.MSProjectApi.ActualStartDrivers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ActualStartDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ActualStartDrivers;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PredecessorDrivers", paramsArray);
-				NetOffice.MSProjectApi.PredecessorDrivers newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PredecessorDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PredecessorDrivers;
+				NetOffice.MSProjectApi.PredecessorDrivers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PredecessorDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PredecessorDrivers;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ChildTaskDrivers", paramsArray);
-				NetOffice.MSProjectApi.ChildDrivers newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ChildDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ChildDrivers;
+				NetOffice.MSProjectApi.ChildDrivers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ChildDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ChildDrivers;
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CalendarDrivers", paramsArray);
-				NetOffice.MSProjectApi.CalendarDrivers newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.CalendarDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.CalendarDrivers;
+				NetOffice.MSProjectApi.CalendarDrivers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.CalendarDrivers.LateBindingApiWrapperType) as NetOffice.MSProjectApi.CalendarDrivers;
 				return newObject;
 			}
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.Task newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Task.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Task;
+				NetOffice.MSProjectApi.Task newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Task.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Task;
 				return newObject;
 			}
 		}
@@ -164,7 +164,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -210,7 +210,7 @@ namespace NetOffice.MSProjectApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(overallocationType);
 			object returnItem = Invoker.PropertyGet(this, "OverAllocatedAssignments", paramsArray);
-			NetOffice.MSProjectApi.OverAllocatedAssignments newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OverAllocatedAssignments.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OverAllocatedAssignments;
+			NetOffice.MSProjectApi.OverAllocatedAssignments newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OverAllocatedAssignments.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OverAllocatedAssignments;
 			return newObject;
 		}
 
@@ -239,7 +239,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.PropertyGet(this, "EffectiveDateDifference", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -274,7 +274,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.PropertyGet(this, "EffectiveDateAdd", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -309,7 +309,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.PropertyGet(this, "EffectiveDateSubtract", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

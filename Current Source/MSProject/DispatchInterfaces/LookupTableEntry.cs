@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.OutlineCode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCode.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCode;
+				NetOffice.MSProjectApi.OutlineCode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCode.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCode;
 				return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentEntry", paramsArray);
-				NetOffice.MSProjectApi.LookupTableEntry newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.LookupTableEntry.LateBindingApiWrapperType) as NetOffice.MSProjectApi.LookupTableEntry;
+				NetOffice.MSProjectApi.LookupTableEntry newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.LookupTableEntry.LateBindingApiWrapperType) as NetOffice.MSProjectApi.LookupTableEntry;
 				return newObject;
 			}
 		}

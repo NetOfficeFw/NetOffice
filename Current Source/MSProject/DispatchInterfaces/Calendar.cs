@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -121,7 +121,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -137,7 +137,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Years", paramsArray);
-				NetOffice.MSProjectApi.Years newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Years.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Years;
+				NetOffice.MSProjectApi.Years newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Years.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Years;
 				return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WeekDays", paramsArray);
-				NetOffice.MSProjectApi.WeekDays newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.WeekDays.LateBindingApiWrapperType) as NetOffice.MSProjectApi.WeekDays;
+				NetOffice.MSProjectApi.WeekDays newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.WeekDays.LateBindingApiWrapperType) as NetOffice.MSProjectApi.WeekDays;
 				return newObject;
 			}
 		}
@@ -169,7 +169,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BaseCalendar", paramsArray);
-				NetOffice.MSProjectApi.Calendar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
+				NetOffice.MSProjectApi.Calendar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
 				return newObject;
 			}
 		}
@@ -202,7 +202,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Enterprise", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -253,7 +253,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Exceptions", paramsArray);
-				NetOffice.MSProjectApi.Exceptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Exceptions.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Exceptions;
+				NetOffice.MSProjectApi.Exceptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Exceptions.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Exceptions;
 				return newObject;
 			}
 		}
@@ -269,7 +269,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorkWeeks", paramsArray);
-				NetOffice.MSProjectApi.WorkWeeks newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.WorkWeeks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.WorkWeeks;
+				NetOffice.MSProjectApi.WorkWeeks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.WorkWeeks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.WorkWeeks;
 				return newObject;
 			}
 		}
@@ -288,7 +288,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, finish);
 			object returnItem = Invoker.MethodReturn(this, "Period", paramsArray);
-			NetOffice.MSProjectApi.Period newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Period.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Period;
+			NetOffice.MSProjectApi.Period newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Period.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Period;
 			return newObject;
 		}
 
@@ -302,7 +302,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Period", paramsArray);
-			NetOffice.MSProjectApi.Period newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Period.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Period;
+			NetOffice.MSProjectApi.Period newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Period.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Period;
 			return newObject;
 		}
 

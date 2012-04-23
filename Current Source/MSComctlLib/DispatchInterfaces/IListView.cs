@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnHeaders", paramsArray);
-				NetOffice.MSComctlLibApi.IColumnHeaders newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeaders;
+				NetOffice.MSComctlLibApi.IColumnHeaders newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeaders;
 				return newObject;
 			}
 			set
@@ -127,7 +127,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DropHighlight", paramsArray);
-				NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+				NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 				return newObject;
 			}
 			set
@@ -189,7 +189,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Icons", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 			set
@@ -211,7 +211,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListItems", paramsArray);
-				NetOffice.MSComctlLibApi.IListItems newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItems;
+				NetOffice.MSComctlLibApi.IListItems newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItems;
 				return newObject;
 			}
 			set
@@ -273,7 +273,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 			set
@@ -336,7 +336,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedItem", paramsArray);
-				NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+				NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 				return newObject;
 			}
 			set
@@ -358,7 +358,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmallIcons", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 			set
@@ -585,7 +585,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.Font newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
+				stdole.Font newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
 				return newObject;
 			}
 			set
@@ -787,7 +787,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 			set
@@ -830,7 +830,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ColumnHeaderIcons", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 			set
@@ -877,7 +877,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sz, where, index, fPartial);
 			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 
@@ -891,7 +891,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sz);
 			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 
@@ -906,7 +906,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sz, where);
 			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 
@@ -922,7 +922,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sz, where, index);
 			object returnItem = Invoker.MethodReturn(this, "FindItem", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 
@@ -934,7 +934,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetFirstVisible", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 
@@ -949,7 +949,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
 			object returnItem = Invoker.MethodReturn(this, "HitTest", paramsArray);
-			NetOffice.MSComctlLibApi.IListItem newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
+			NetOffice.MSComctlLibApi.IListItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListItem;
 			return newObject;
 		}
 

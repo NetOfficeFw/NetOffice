@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Begin", paramsArray);
-				NetOffice.OWC10Api.ChSegmentBoundary newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegmentBoundary.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegmentBoundary;
+				NetOffice.OWC10Api.ChSegmentBoundary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegmentBoundary.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegmentBoundary;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "End", paramsArray);
-				NetOffice.OWC10Api.ChSegmentBoundary newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegmentBoundary.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegmentBoundary;
+				NetOffice.OWC10Api.ChSegmentBoundary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegmentBoundary.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegmentBoundary;
 				return newObject;
 			}
 		}

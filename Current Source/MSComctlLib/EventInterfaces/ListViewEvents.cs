@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSComctlLibApi
 {	
@@ -167,7 +167,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ColumnHeader newColumnHeader = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as NetOffice.MSComctlLibApi.ColumnHeader;
+			NetOffice.MSComctlLibApi.ColumnHeader newColumnHeader = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as NetOffice.MSComctlLibApi.ColumnHeader;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newColumnHeader;
 			_eventBinding.RaiseCustomEvent("ColumnClick", ref paramsArray);
@@ -182,7 +182,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemClick", ref paramsArray);
@@ -462,7 +462,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ListItem newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemCheck", ref paramsArray);

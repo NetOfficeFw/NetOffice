@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -161,7 +161,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "MaxUnits", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -209,7 +209,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "StandardRate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -237,7 +237,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "OvertimeRate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -325,7 +325,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -348,7 +348,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -371,7 +371,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -394,7 +394,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -417,7 +417,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BaselineWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -445,7 +445,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "OvertimeWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -468,7 +468,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BaselineCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -496,7 +496,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "CostPerUse", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -524,7 +524,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "AccrueAt", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -572,7 +572,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "RemainingCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -595,7 +595,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "RemainingWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -618,7 +618,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "WorkVariance", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -641,7 +641,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "CostVariance", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -664,7 +664,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Overallocated", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -687,7 +687,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "PeakUnits", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -725,7 +725,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "PercentWorkComplete", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -823,7 +823,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "LinkedFields", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -866,7 +866,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "RegularWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -889,7 +889,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualOvertimeWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -912,7 +912,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "RemainingOvertimeWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -935,7 +935,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "OvertimeCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -958,7 +958,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualOvertimeCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -981,7 +981,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "RemainingOvertimeCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1004,7 +1004,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BCWS", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1027,7 +1027,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BCWP", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1050,7 +1050,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ACWP", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1073,7 +1073,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "SV", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1094,7 +1094,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assignments", paramsArray);
-				NetOffice.MSProjectApi.Assignments newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Assignments.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Assignments;
+				NetOffice.MSProjectApi.Assignments newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Assignments.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Assignments;
 				return newObject;
 			}
 		}
@@ -1112,7 +1112,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "AvailableFrom", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1140,7 +1140,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "AvailableTo", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1167,7 +1167,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -1183,7 +1183,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -1301,7 +1301,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1329,7 +1329,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1357,7 +1357,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1385,7 +1385,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1413,7 +1413,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1441,7 +1441,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1469,7 +1469,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1497,7 +1497,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1525,7 +1525,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1553,7 +1553,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1681,7 +1681,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1709,7 +1709,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1737,7 +1737,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1765,7 +1765,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1793,7 +1793,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1821,7 +1821,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1849,7 +1849,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1877,7 +1877,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1905,7 +1905,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1933,7 +1933,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1961,7 +1961,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1989,7 +1989,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2017,7 +2017,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2045,7 +2045,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2073,7 +2073,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2101,7 +2101,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2207,7 +2207,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Calendar", paramsArray);
-				NetOffice.MSProjectApi.Calendar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
+				NetOffice.MSProjectApi.Calendar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
 				return newObject;
 			}
 		}
@@ -2223,7 +2223,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CostRateTables", paramsArray);
-				NetOffice.MSProjectApi.CostRateTables newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.CostRateTables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.CostRateTables;
+				NetOffice.MSProjectApi.CostRateTables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.CostRateTables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.CostRateTables;
 				return newObject;
 			}
 		}
@@ -2239,7 +2239,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PayRates", paramsArray);
-				NetOffice.MSProjectApi.PayRates newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PayRates.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRates;
+				NetOffice.MSProjectApi.PayRates newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PayRates.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRates;
 				return newObject;
 			}
 		}
@@ -2257,7 +2257,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "CanLevel", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2285,7 +2285,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2313,7 +2313,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2341,7 +2341,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2369,7 +2369,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2397,7 +2397,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2425,7 +2425,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2453,7 +2453,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Cost10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2481,7 +2481,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2509,7 +2509,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2537,7 +2537,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2565,7 +2565,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2593,7 +2593,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2621,7 +2621,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2649,7 +2649,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2677,7 +2677,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2705,7 +2705,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2733,7 +2733,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Date10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2761,7 +2761,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2789,7 +2789,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2817,7 +2817,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2845,7 +2845,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2873,7 +2873,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2901,7 +2901,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2929,7 +2929,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Duration10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2957,7 +2957,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2985,7 +2985,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3013,7 +3013,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3041,7 +3041,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3069,7 +3069,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Finish10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3097,7 +3097,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag11", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3125,7 +3125,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag12", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3153,7 +3153,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag13", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3181,7 +3181,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag14", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3209,7 +3209,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag15", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3237,7 +3237,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag16", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3265,7 +3265,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag17", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3293,7 +3293,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag18", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3321,7 +3321,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag19", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3349,7 +3349,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Flag20", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3677,7 +3677,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3705,7 +3705,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3733,7 +3733,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3761,7 +3761,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -3789,7 +3789,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Start10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4252,7 +4252,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Confirmed", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4275,7 +4275,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ResponsePending", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4298,7 +4298,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "TeamStatusPending", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4321,7 +4321,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "UpdateNeeded", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4344,7 +4344,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "CV", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4401,7 +4401,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Availabilities", paramsArray);
-				NetOffice.MSProjectApi.Availabilities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Availabilities.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Availabilities;
+				NetOffice.MSProjectApi.Availabilities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Availabilities.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Availabilities;
 				return newObject;
 			}
 		}
@@ -4660,7 +4660,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "VAC", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4683,7 +4683,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "GroupBySummary", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4746,7 +4746,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline1Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4774,7 +4774,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline1Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4802,7 +4802,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline2Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4830,7 +4830,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline2Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4858,7 +4858,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline3Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4886,7 +4886,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline3Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4914,7 +4914,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline4Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4942,7 +4942,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline4Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4970,7 +4970,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline5Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -4998,7 +4998,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline5Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5026,7 +5026,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline6Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5054,7 +5054,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline6Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5082,7 +5082,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline7Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5110,7 +5110,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline7Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5138,7 +5138,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline8Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5166,7 +5166,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline8Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5194,7 +5194,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline9Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5222,7 +5222,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline9Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5250,7 +5250,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline10Work", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5278,7 +5278,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline10Cost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5322,7 +5322,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5351,7 +5351,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5380,7 +5380,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5409,7 +5409,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5438,7 +5438,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5467,7 +5467,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5496,7 +5496,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5525,7 +5525,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5554,7 +5554,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5583,7 +5583,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseCost10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5612,7 +5612,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5641,7 +5641,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5670,7 +5670,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5699,7 +5699,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5728,7 +5728,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5757,7 +5757,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5786,7 +5786,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5815,7 +5815,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5844,7 +5844,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5873,7 +5873,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5902,7 +5902,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate11", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5931,7 +5931,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate12", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5960,7 +5960,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate13", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -5989,7 +5989,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate14", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6018,7 +6018,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate15", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6047,7 +6047,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate16", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6076,7 +6076,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate17", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6105,7 +6105,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate18", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6134,7 +6134,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate19", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6163,7 +6163,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate20", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6192,7 +6192,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate21", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6221,7 +6221,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate22", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6250,7 +6250,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate23", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6279,7 +6279,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate24", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6308,7 +6308,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate25", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6337,7 +6337,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate26", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6366,7 +6366,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate27", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6395,7 +6395,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate28", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6424,7 +6424,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate29", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6453,7 +6453,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDate30", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6482,7 +6482,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6511,7 +6511,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6540,7 +6540,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6569,7 +6569,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6598,7 +6598,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6627,7 +6627,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6656,7 +6656,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6685,7 +6685,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6714,7 +6714,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6743,7 +6743,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseDuration10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6772,7 +6772,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag1", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6801,7 +6801,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag2", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6830,7 +6830,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag3", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6859,7 +6859,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag4", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6888,7 +6888,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag5", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6917,7 +6917,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag6", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6946,7 +6946,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag7", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -6975,7 +6975,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag8", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7004,7 +7004,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag9", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7033,7 +7033,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag10", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7062,7 +7062,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag11", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7091,7 +7091,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag12", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7120,7 +7120,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag13", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7149,7 +7149,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag14", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7178,7 +7178,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag15", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7207,7 +7207,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag16", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7236,7 +7236,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag17", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7265,7 +7265,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag18", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7294,7 +7294,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag19", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -7323,7 +7323,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseFlag20", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9661,7 +9661,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseGeneric", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9689,7 +9689,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseBaseCalendar", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9712,7 +9712,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseRequiredValues", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9735,7 +9735,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseNameUsed", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9758,7 +9758,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Enterprise", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9781,7 +9781,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseIsCheckedOut", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9819,7 +9819,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseLastModifiedDate", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -9842,7 +9842,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseInactive", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10101,7 +10101,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualWorkProtected", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10129,7 +10129,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "ActualOvertimeWorkProtected", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10157,7 +10157,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Created", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10250,7 +10250,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Budget", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10278,7 +10278,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10306,7 +10306,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10334,7 +10334,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Import", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10362,7 +10362,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BaselineBudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10390,7 +10390,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "BaselineBudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10418,7 +10418,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline1BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10446,7 +10446,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline1BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10474,7 +10474,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline2BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10502,7 +10502,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline2BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10530,7 +10530,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline3BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10558,7 +10558,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline3BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10586,7 +10586,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline4BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10614,7 +10614,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline4BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10642,7 +10642,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline5BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10670,7 +10670,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline5BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10698,7 +10698,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline6BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10726,7 +10726,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline6BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10754,7 +10754,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline7BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10782,7 +10782,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline7BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10810,7 +10810,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline8BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10838,7 +10838,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline8BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10866,7 +10866,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline9BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10894,7 +10894,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline9BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10922,7 +10922,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline10BudgetWork", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10950,7 +10950,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "Baseline10BudgetCost", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -10978,7 +10978,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "IsTeam", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -11075,7 +11075,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit, count);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
-			NetOffice.MSProjectApi.TimeScaleValues newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
+			NetOffice.MSProjectApi.TimeScaleValues newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
 			return newObject;
 		}
 
@@ -11090,7 +11090,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
-			NetOffice.MSProjectApi.TimeScaleValues newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
+			NetOffice.MSProjectApi.TimeScaleValues newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
 			return newObject;
 		}
 
@@ -11106,7 +11106,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
-			NetOffice.MSProjectApi.TimeScaleValues newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
+			NetOffice.MSProjectApi.TimeScaleValues newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
 			return newObject;
 		}
 
@@ -11123,7 +11123,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
-			NetOffice.MSProjectApi.TimeScaleValues newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
+			NetOffice.MSProjectApi.TimeScaleValues newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.TimeScaleValues.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TimeScaleValues;
 			return newObject;
 		}
 

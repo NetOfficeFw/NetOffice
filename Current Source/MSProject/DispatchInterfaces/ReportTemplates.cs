@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.MSProjectApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSProjectApi.ReportTemplate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplate;
+			NetOffice.MSProjectApi.ReportTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplate;
 			return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersionAttribute("MSProject", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

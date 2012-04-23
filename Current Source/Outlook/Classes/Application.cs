@@ -1,7 +1,7 @@
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OutlookApi
 {
 
@@ -567,7 +567,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == LateBindingApi.Core.Settings.EnableEvents)
+			if(false == NetOffice.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)

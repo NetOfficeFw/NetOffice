@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -121,7 +121,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ExtrusionColor", paramsArray);
-				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 		}
@@ -554,7 +554,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContourColor", paramsArray);
-				NetOffice.ExcelApi.ColorFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
+				NetOffice.ExcelApi.ColorFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorFormat;
 				return newObject;
 			}
 		}

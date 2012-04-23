@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -81,7 +81,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newItem;
 			paramsArray.SetValue(cancel, 1);
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("Reminder", ref paramsArray);
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.PropertyPages newPages = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
+			NetOffice.OutlookApi.PropertyPages newPages = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPages;
 			_eventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);

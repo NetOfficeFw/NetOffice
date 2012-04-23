@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -104,7 +104,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.ResampleMediaTask newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
+				NetOffice.PowerPointApi.ResampleMediaTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
 				return newObject;
 			}
 		}

@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using LateBindingApi.Core;
+using NetOffice;
 
 /*
     Contains the following Type Libraries:

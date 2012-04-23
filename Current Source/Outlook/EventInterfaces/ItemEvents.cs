@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -133,8 +133,8 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newAction = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, action) as object;
-			object newResponse = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newAction = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, action) as object;
+			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newAction;
 			paramsArray[1] = newResponse;
@@ -168,7 +168,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newForward = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, forward) as object;
+			object newForward = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, forward) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newForward;
 			paramsArray.SetValue(cancel, 1);
@@ -230,7 +230,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newResponse = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
@@ -248,7 +248,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newResponse = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
@@ -314,7 +314,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			_eventBinding.RaiseCustomEvent("AttachmentAdd", ref paramsArray);
@@ -329,7 +329,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			_eventBinding.RaiseCustomEvent("AttachmentRead", ref paramsArray);
@@ -344,7 +344,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);

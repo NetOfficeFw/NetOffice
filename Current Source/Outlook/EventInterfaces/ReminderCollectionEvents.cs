@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -97,7 +97,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			_eventBinding.RaiseCustomEvent("ReminderAdd", ref paramsArray);
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			_eventBinding.RaiseCustomEvent("ReminderChange", ref paramsArray);
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			_eventBinding.RaiseCustomEvent("ReminderFire", ref paramsArray);
@@ -155,7 +155,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Reminder newReminderObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
 			_eventBinding.RaiseCustomEvent("Snooze", ref paramsArray);

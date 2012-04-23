@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Operation mode for DebugConsole

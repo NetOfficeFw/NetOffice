@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowEditRanges", paramsArray);
-				NetOffice.ExcelApi.AllowEditRanges newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRanges;
+				NetOffice.ExcelApi.AllowEditRanges newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRanges;
 				return newObject;
 			}
 		}

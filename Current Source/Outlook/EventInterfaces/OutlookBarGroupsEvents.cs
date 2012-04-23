@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -69,7 +69,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewGroup;
 			_eventBinding.RaiseCustomEvent("GroupAdd", ref paramsArray);
@@ -100,7 +100,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarGroup newGroup = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newGroup = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newGroup;
 			paramsArray.SetValue(cancel, 1);

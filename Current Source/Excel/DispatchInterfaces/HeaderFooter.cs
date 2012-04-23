@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -100,7 +100,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Selected", paramsArray);
-				NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
+				NetOffice.PowerPointApi.PPRadioButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
 				return newObject;
 			}
 		}
@@ -141,7 +141,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
+				NetOffice.PowerPointApi.PPRadioButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
 				return newObject;
 			}
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.PPRadioButton newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
+			NetOffice.PowerPointApi.PPRadioButton newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPRadioButton;
 			return newObject;
 		}
 

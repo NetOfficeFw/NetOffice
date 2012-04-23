@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.AccessApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.AccessApi._SmartTagProperties newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagProperties;
+				NetOffice.AccessApi._SmartTagProperties newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagProperties;
 				return newObject;
 			}
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartTagActions", paramsArray);
-				NetOffice.AccessApi._SmartTagActions newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagActions;
+				NetOffice.AccessApi._SmartTagActions newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._SmartTagActions;
 				return newObject;
 			}
 		}

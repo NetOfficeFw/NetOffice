@@ -1,5 +1,5 @@
 using System;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi.Enums
 {
 	 /// <summary>

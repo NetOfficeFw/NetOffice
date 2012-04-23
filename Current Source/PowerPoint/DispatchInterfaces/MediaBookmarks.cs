@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -89,7 +89,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
+				NetOffice.PowerPointApi.MediaBookmark newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
 				return newObject;
 			}
 		}
@@ -104,7 +104,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.MediaBookmark newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
+			NetOffice.PowerPointApi.MediaBookmark newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.MediaBookmark.LateBindingApiWrapperType) as NetOffice.PowerPointApi.MediaBookmark;
 			return newObject;
 		}
 

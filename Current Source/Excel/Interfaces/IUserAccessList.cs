@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.UserAccess.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccess;
+			NetOffice.ExcelApi.UserAccess newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.UserAccess.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccess;
 			return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, allowEdit);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.UserAccess newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.UserAccess.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccess;
+			NetOffice.ExcelApi.UserAccess newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.UserAccess.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccess;
 			return newObject;
 		}
 
@@ -160,7 +160,7 @@ namespace NetOffice.ExcelApi
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

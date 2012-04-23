@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -140,7 +140,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaFields", paramsArray);
-				NetOffice.OWC10Api.SchemaFields newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaFields;
+				NetOffice.OWC10Api.SchemaFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaFields;
 				return newObject;
 			}
 		}
@@ -156,7 +156,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LookupSchemaRelationships", paramsArray);
-				NetOffice.OWC10Api.LookupSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.LookupSchemaRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.LookupSchemaRelationships;
+				NetOffice.OWC10Api.LookupSchemaRelationships newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.LookupSchemaRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.LookupSchemaRelationships;
 				return newObject;
 			}
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SublistSchemaRelationships", paramsArray);
-				NetOffice.OWC10Api.SublistSchemaRelationships newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SublistSchemaRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.SublistSchemaRelationships;
+				NetOffice.OWC10Api.SublistSchemaRelationships newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SublistSchemaRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.SublistSchemaRelationships;
 				return newObject;
 			}
 		}
@@ -188,7 +188,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaParameters", paramsArray);
-				NetOffice.OWC10Api.SchemaParameters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaParameters.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameters;
+				NetOffice.OWC10Api.SchemaParameters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaParameters.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameters;
 				return newObject;
 			}
 		}
@@ -204,7 +204,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.OWC10Api.SchemaProperties newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaProperties.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaProperties;
+				NetOffice.OWC10Api.SchemaProperties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaProperties.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaProperties;
 				return newObject;
 			}
 		}

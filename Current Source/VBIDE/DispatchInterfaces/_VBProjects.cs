@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrPath);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
+			NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
 			return newObject;
 		}
 

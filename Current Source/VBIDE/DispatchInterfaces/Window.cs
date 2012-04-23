@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				NetOffice.VBIDEApi.Windows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Windows.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Windows;
+				NetOffice.VBIDEApi.Windows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Windows.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Windows;
 				return newObject;
 			}
 		}
@@ -268,7 +268,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkedWindows", paramsArray);
-				NetOffice.VBIDEApi.LinkedWindows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.LinkedWindows.LateBindingApiWrapperType) as NetOffice.VBIDEApi.LinkedWindows;
+				NetOffice.VBIDEApi.LinkedWindows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.LinkedWindows.LateBindingApiWrapperType) as NetOffice.VBIDEApi.LinkedWindows;
 				return newObject;
 			}
 		}
@@ -284,7 +284,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LinkedWindowFrame", paramsArray);
-				NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
+				NetOffice.VBIDEApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
 				return newObject;
 			}
 		}

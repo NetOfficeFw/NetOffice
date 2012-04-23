@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.DAOApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.DAOApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.DAOApi.Parameter newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Parameter.LateBindingApiWrapperType) as NetOffice.DAOApi.Parameter;
+			NetOffice.DAOApi.Parameter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Parameter.LateBindingApiWrapperType) as NetOffice.DAOApi.Parameter;
 			return newObject;
 			}
 		}

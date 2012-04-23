@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSProjectApi
 {	
@@ -89,7 +89,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
@@ -104,7 +104,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("BeforeClose", ref paramsArray);
@@ -119,7 +119,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("BeforeSave", ref paramsArray);
@@ -134,7 +134,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("BeforePrint", ref paramsArray);
@@ -149,7 +149,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
@@ -164,7 +164,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
@@ -179,7 +179,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
@@ -194,7 +194,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lDirection, pchCategory);
 			object returnItem = Invoker.MethodReturn(this, "GetRelatedBehaviors", paramsArray);
-			NetOffice.MSHTMLApi.IEnumUnknown newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IEnumUnknown.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IEnumUnknown;
+			NetOffice.MSHTMLApi.IEnumUnknown newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IEnumUnknown.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IEnumUnknown;
 			return newObject;
 		}
 

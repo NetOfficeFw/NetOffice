@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Explorer newExplorer = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, explorer) as NetOffice.OutlookApi._Explorer;
+			NetOffice.OutlookApi._Explorer newExplorer = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, explorer) as NetOffice.OutlookApi._Explorer;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExplorer;
 			_eventBinding.RaiseCustomEvent("NewExplorer", ref paramsArray);

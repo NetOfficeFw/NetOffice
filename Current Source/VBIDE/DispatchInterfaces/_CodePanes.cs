@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Current", paramsArray);
-				NetOffice.VBIDEApi.CodePane newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodePane;
+				NetOffice.VBIDEApi.CodePane newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodePane;
 				return newObject;
 			}
 			set
@@ -159,7 +159,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.VBIDEApi.CodePane newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodePane;
+				NetOffice.VBIDEApi.CodePane newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodePane;
 				return newObject;
 			}
 		}
@@ -189,7 +189,7 @@ namespace NetOffice.VBIDEApi
 		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

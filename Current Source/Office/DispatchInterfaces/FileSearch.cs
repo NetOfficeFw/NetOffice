@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FoundFiles", paramsArray);
-				NetOffice.OfficeApi.FoundFiles newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FoundFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.FoundFiles;
+				NetOffice.OfficeApi.FoundFiles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FoundFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.FoundFiles;
 				return newObject;
 			}
 		}
@@ -262,7 +262,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PropertyTests", paramsArray);
-				NetOffice.OfficeApi.PropertyTests newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTests.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTests;
+				NetOffice.OfficeApi.PropertyTests newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTests.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTests;
 				return newObject;
 			}
 		}
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SearchScopes", paramsArray);
-				NetOffice.OfficeApi.SearchScopes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchScopes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchScopes;
+				NetOffice.OfficeApi.SearchScopes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchScopes.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchScopes;
 				return newObject;
 			}
 		}
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SearchFolders", paramsArray);
-				NetOffice.OfficeApi.SearchFolders newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchFolders;
+				NetOffice.OfficeApi.SearchFolders newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchFolders;
 				return newObject;
 			}
 		}
@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileTypes", paramsArray);
-				NetOffice.OfficeApi.FileTypes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileTypes.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileTypes;
+				NetOffice.OfficeApi.FileTypes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileTypes.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileTypes;
 				return newObject;
 			}
 		}

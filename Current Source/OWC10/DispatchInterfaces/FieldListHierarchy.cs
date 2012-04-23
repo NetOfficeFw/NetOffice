@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+				NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Selection", paramsArray);
-				NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+				NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 				return newObject;
 			}
 		}
@@ -194,7 +194,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pflnParent, fInsertFirst, nID, bstrName, bstrData, nType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+			NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 			return newObject;
 		}
 
@@ -207,7 +207,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nID);
 			object returnItem = Invoker.MethodReturn(this, "GetNode", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+			NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 			return newObject;
 		}
 
@@ -231,7 +231,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nType);
 			object returnItem = Invoker.MethodReturn(this, "AddType", paramsArray);
-			NetOffice.OWC10Api.FieldListType newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
+			NetOffice.OWC10Api.FieldListType newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
 			return newObject;
 		}
 
@@ -244,7 +244,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nTypeId);
 			object returnItem = Invoker.MethodReturn(this, "GetType", paramsArray);
-			NetOffice.OWC10Api.FieldListType newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
+			NetOffice.OWC10Api.FieldListType newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
 			return newObject;
 		}
 
@@ -258,7 +258,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
 			object returnItem = Invoker.MethodReturn(this, "GetNextSelected", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+			NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 			return newObject;
 		}
 

@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel;
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// EventBinding Interface

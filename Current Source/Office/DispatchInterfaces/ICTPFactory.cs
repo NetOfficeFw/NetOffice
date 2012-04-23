@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 

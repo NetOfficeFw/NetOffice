@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -69,7 +69,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemAdd", ref paramsArray);
@@ -84,7 +84,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemChange", ref paramsArray);

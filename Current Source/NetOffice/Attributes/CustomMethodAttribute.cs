@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// this method is a custom overload from NetOffice

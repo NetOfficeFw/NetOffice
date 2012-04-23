@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -125,7 +125,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CrossingAxis", paramsArray);
-				NetOffice.OWC10Api.ChAxis newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
+				NetOffice.OWC10Api.ChAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
 				return newObject;
 			}
 			set
@@ -146,7 +146,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.OWC10Api.ChFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChFont.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChFont;
+				NetOffice.OWC10Api.ChFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChFont.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChFont;
 				return newObject;
 			}
 		}
@@ -262,7 +262,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				NetOffice.OWC10Api.ChLine newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLine.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLine;
+				NetOffice.OWC10Api.ChLine newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLine.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLine;
 				return newObject;
 			}
 		}
@@ -278,7 +278,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorGridlines", paramsArray);
-				NetOffice.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChGridlines.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChGridlines;
+				NetOffice.OWC10Api.ChGridlines newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChGridlines.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChGridlines;
 				return newObject;
 			}
 		}
@@ -335,7 +335,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorGridlines", paramsArray);
-				NetOffice.OWC10Api.ChGridlines newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChGridlines.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChGridlines;
+				NetOffice.OWC10Api.ChGridlines newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChGridlines.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChGridlines;
 				return newObject;
 			}
 		}
@@ -412,7 +412,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChChart newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChart.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChart;
+				NetOffice.OWC10Api.ChChart newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChart.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChart;
 				return newObject;
 			}
 		}
@@ -449,7 +449,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Scaling", paramsArray);
-				NetOffice.OWC10Api.ChScaling newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChScaling.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChScaling;
+				NetOffice.OWC10Api.ChScaling newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChScaling.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChScaling;
 				return newObject;
 			}
 		}
@@ -525,7 +525,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Title", paramsArray);
-				NetOffice.OWC10Api.ChTitle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChTitle.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChTitle;
+				NetOffice.OWC10Api.ChTitle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChTitle.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChTitle;
 				return newObject;
 			}
 		}
@@ -807,7 +807,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CategoryLabels", paramsArray);
-				NetOffice.OWC10Api.ChCategoryLabels newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabels.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabels;
+				NetOffice.OWC10Api.ChCategoryLabels newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabels.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabels;
 				return newObject;
 			}
 		}
@@ -851,7 +851,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
 			object returnItem = Invoker.MethodReturn(this, "ValueToPoint", paramsArray);
-			NetOffice.OWC10Api.Coordinate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.Coordinate.LateBindingApiWrapperType) as NetOffice.OWC10Api.Coordinate;
+			NetOffice.OWC10Api.Coordinate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.Coordinate.LateBindingApiWrapperType) as NetOffice.OWC10Api.Coordinate;
 			return newObject;
 		}
 

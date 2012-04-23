@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using stdole;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using VBIDE = NetOffice.VBIDEApi;
@@ -35,8 +35,8 @@ namespace ClientApplication
         {
             InitializeComponent();
 
-            /*Initialize Api COMObject Support*/
-            LateBindingApi.Core.Factory.Initialize();
+            // not necessary any longer
+            // LateBindingApi.Core.Factory.Initialize();
 
             
             /*>> your testcode here <<*/

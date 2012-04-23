@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSHTMLApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			}
 
-			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
+			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpEvtObj;
 			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);

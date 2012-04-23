@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Data", paramsArray);
-				NetOffice.OWC10Api.PivotData newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotData.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotData;
+				NetOffice.OWC10Api.PivotData newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotData.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotData;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SourceAxis", paramsArray);
-				NetOffice.OWC10Api.PivotAxis newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotAxis;
+				NetOffice.OWC10Api.PivotAxis newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotAxis;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Label", paramsArray);
-				NetOffice.OWC10Api.PivotResultLabel newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotResultLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotResultLabel;
+				NetOffice.OWC10Api.PivotResultLabel newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotResultLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotResultLabel;
 				return newObject;
 			}
 		}

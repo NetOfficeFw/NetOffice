@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSheet", paramsArray);
-				NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
+				NetOffice.PowerPointApi.PPTabSheet newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
 				return newObject;
 			}
 		}
@@ -125,7 +125,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
+				NetOffice.PowerPointApi.PPTabSheet newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
 				return newObject;
 			}
 		}
@@ -139,7 +139,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.PPTabSheet newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
+			NetOffice.PowerPointApi.PPTabSheet newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
 			return newObject;
 		}
 

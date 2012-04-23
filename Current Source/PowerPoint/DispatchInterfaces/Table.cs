@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Columns", paramsArray);
-				NetOffice.PowerPointApi.Columns newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Columns.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Columns;
+				NetOffice.PowerPointApi.Columns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Columns.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Columns;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Rows", paramsArray);
-				NetOffice.PowerPointApi.Rows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Rows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Rows;
+				NetOffice.PowerPointApi.Rows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Rows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Rows;
 				return newObject;
 			}
 		}
@@ -290,7 +290,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				NetOffice.PowerPointApi.TableStyle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.TableStyle.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TableStyle;
+				NetOffice.PowerPointApi.TableStyle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.TableStyle.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TableStyle;
 				return newObject;
 			}
 		}
@@ -306,7 +306,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Background", paramsArray);
-				NetOffice.PowerPointApi.TableBackground newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.TableBackground.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TableBackground;
+				NetOffice.PowerPointApi.TableBackground newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.TableBackground.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TableBackground;
 				return newObject;
 			}
 		}
@@ -365,7 +365,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(row, column);
 			object returnItem = Invoker.MethodReturn(this, "Cell", paramsArray);
-			NetOffice.PowerPointApi.Cell newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Cell.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Cell;
+			NetOffice.PowerPointApi.Cell newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Cell.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Cell;
 			return newObject;
 		}
 

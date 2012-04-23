@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationModule newCurrentModule = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, currentModule) as NetOffice.OutlookApi.NavigationModule;
+			NetOffice.OutlookApi.NavigationModule newCurrentModule = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, currentModule) as NetOffice.OutlookApi.NavigationModule;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCurrentModule;
 			_eventBinding.RaiseCustomEvent("ModuleSwitch", ref paramsArray);

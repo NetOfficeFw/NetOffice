@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -418,7 +418,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DayWeekTimeFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
+				NetOffice.OutlookApi.ViewFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
 				return newObject;
 			}
 		}
@@ -434,7 +434,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DayWeekFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
+				NetOffice.OutlookApi.ViewFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
 				return newObject;
 			}
 		}
@@ -450,7 +450,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MonthFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
+				NetOffice.OutlookApi.ViewFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
 				return newObject;
 			}
 		}
@@ -466,7 +466,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoFormatRules", paramsArray);
-				NetOffice.OutlookApi.AutoFormatRules newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.AutoFormatRules.LateBindingApiWrapperType) as NetOffice.OutlookApi.AutoFormatRules;
+				NetOffice.OutlookApi.AutoFormatRules newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.AutoFormatRules.LateBindingApiWrapperType) as NetOffice.OutlookApi.AutoFormatRules;
 				return newObject;
 			}
 		}
@@ -504,7 +504,7 @@ namespace NetOffice.OutlookApi
 				object returnItem = Invoker.PropertyGet(this, "DisplayedDates", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -588,7 +588,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, saveOption);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			NetOffice.OutlookApi.View newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.View.LateBindingApiWrapperType) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.View.LateBindingApiWrapperType) as NetOffice.OutlookApi.View;
 			return newObject;
 		}
 

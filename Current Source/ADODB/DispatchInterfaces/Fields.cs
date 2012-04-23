@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
@@ -102,7 +102,7 @@ namespace NetOffice.ADODBApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ADODBApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Field.LateBindingApiWrapperType) as NetOffice.ADODBApi.Field;
+			NetOffice.ADODBApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Field.LateBindingApiWrapperType) as NetOffice.ADODBApi.Field;
 			return newObject;
 			}
 		}
@@ -255,7 +255,7 @@ namespace NetOffice.ADODBApi
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MinorFont", paramsArray);
-				NetOffice.OfficeApi.ThemeFonts newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeFonts;
+				NetOffice.OfficeApi.ThemeFonts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeFonts;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MajorFont", paramsArray);
-				NetOffice.OfficeApi.ThemeFonts newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeFonts;
+				NetOffice.OfficeApi.ThemeFonts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ThemeFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeFonts;
 				return newObject;
 			}
 		}

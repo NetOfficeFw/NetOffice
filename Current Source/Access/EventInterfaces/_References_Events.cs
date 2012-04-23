@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.AccessApi
 {	
@@ -65,7 +65,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newReference = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			_eventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
@@ -80,7 +80,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			NetOffice.AccessApi.Reference newReference = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newReference = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			_eventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     #region IDispatch
 
@@ -34,7 +34,7 @@ namespace LateBindingApi.Core
     public static class Factory
     {
         #region Fields
-
+        private static bool                     _initalized;
         private static bool                     _assemblyResolveEventConnected;
         private static List<COMObject>          _globalObjectList = new List<COMObject>();
         private static List<IFactoryInfo>       _factoryList = new List<IFactoryInfo>();
@@ -135,6 +135,7 @@ namespace LateBindingApi.Core
         /// </summary>
         public static void Initialize()
         {
+            _initalized = true;
             bool isLocked = false;
             try
             {
@@ -144,7 +145,7 @@ namespace LateBindingApi.Core
                     isLocked = true;
                 }
 
-                DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize()");
+                DebugConsole.WriteLine("NetOffice.Factory.Initialize()");
 
                 if (!_assemblyResolveEventConnected)
                 {
@@ -157,12 +158,13 @@ namespace LateBindingApi.Core
 
                 List<string> dependAssemblies = new List<string>();
                 Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
-                foreach (AssemblyName item in callingAssembly.GetReferencedAssemblies())
-                {
-                    DebugConsole.WriteLine(string.Format("Load assembly {0}.", item.Name));
 
-                    Assembly itemAssembly = Assembly.Load(item);
-                    string[] depends = AddAssembly(item.Name, itemAssembly);
+                Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                foreach (Assembly itemAssembly in assemblies)
+                {
+                    string assemblyName = itemAssembly.GetName().Name;
+                    DebugConsole.WriteLine(string.Format("Load assembly {0}.", assemblyName));
+                    string[] depends = AddAssembly(assemblyName, itemAssembly);
                     foreach (string depend in depends)
                     {
                         bool found = false;
@@ -178,7 +180,7 @@ namespace LateBindingApi.Core
                             dependAssemblies.Add(depend);
                     }
                 }
-
+                 
                 // try load non loaded dependent assemblies
                 if (Settings.EnableAdHocLoading)
                 {
@@ -208,7 +210,7 @@ namespace LateBindingApi.Core
                     }
                 }
 
-                DebugConsole.WriteLine("LateBindingApi.Core.Factory.Initialize() passed");
+                DebugConsole.WriteLine("NetOffice.Factory.Initialize() passed");
             }
             catch (Exception throwedException)
             {
@@ -223,6 +225,15 @@ namespace LateBindingApi.Core
                     isLocked = false;
                 }
             }
+        }
+
+        /// <summary>
+        /// Check for inialize state and call Initialze if its necessary
+        /// </summary>
+        internal static void CheckInitialize()
+        {
+            if (!_initalized)
+                Initialize();
         }
 
         /// <summary>
@@ -342,6 +353,7 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject CreateKnownObjectFromComProxy(COMObject caller, object comProxy, Type wrapperClassType)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -389,6 +401,7 @@ namespace LateBindingApi.Core
         /// <returns></returns>
         public static COMObject[] CreateKnownObjectArrayFromComProxy(COMObject caller, object[] comProxyArray, Type wrapperClassType)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -431,6 +444,7 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -483,6 +497,7 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(COMObject caller, object comProxy, Type comProxyType)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -531,6 +546,7 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
         public static COMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, COMObject caller, object comProxy, Type comProxyType, string className, string fullClassName)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -582,6 +598,7 @@ namespace LateBindingApi.Core
         /// <returns>corresponding Wrapper class Instance array or plain COMObject array</returns>
         public static COMObject[] CreateObjectArrayFromComProxy(COMObject caller, object[] comProxyArray)
         {
+            CheckInitialize();
             bool isLocked = false;
             try
             {
@@ -719,7 +736,7 @@ namespace LateBindingApi.Core
             foreach (object itemAttribute in attributes)
             {
                 string fullnameAttribute = itemAttribute.GetType().FullName;
-                if (fullnameAttribute == "LateBindingApi.Core.LateBindingAttribute")
+                if (fullnameAttribute == "NetOffice.LateBindingAttribute")
                 {
                     Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
                     IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
@@ -816,7 +833,7 @@ namespace LateBindingApi.Core
             if (_factoryList.Count == 0)
             {
                 string notInitMessage = "Factory are not initialized with LateBindingApi assemblies." + Environment.NewLine;
-                notInitMessage = "Please call LateBindingApi.Core.Factory.Initialize()";
+                notInitMessage = "Please call NetOffice.Factory.Initialize()";
                 throw new LateBindingApiException(notInitMessage);
             }
 
@@ -879,6 +896,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type GetObjectType(object comProxy)
         {
+            CheckInitialize();
+
             if (null == comProxy)
                 return null;
             else

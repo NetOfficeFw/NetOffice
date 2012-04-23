@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -65,7 +65,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
 			_eventBinding.RaiseCustomEvent("ViewAdd", ref paramsArray);
@@ -80,7 +80,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.View newView = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
 			_eventBinding.RaiseCustomEvent("ViewRemove", ref paramsArray);

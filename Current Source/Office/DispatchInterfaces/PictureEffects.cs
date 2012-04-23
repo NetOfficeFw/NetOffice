@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
+			NetOffice.OfficeApi.PictureEffect newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
 			return newObject;
 			}
 		}
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectType, position);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
+			NetOffice.OfficeApi.PictureEffect newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
 			return newObject;
 		}
 
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectType);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.OfficeApi.PictureEffect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
+			NetOffice.OfficeApi.PictureEffect newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PictureEffect.LateBindingApiWrapperType) as NetOffice.OfficeApi.PictureEffect;
 			return newObject;
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersionAttribute("Office", 14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

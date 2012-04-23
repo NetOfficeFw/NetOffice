@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Presentations", paramsArray);
-				NetOffice.PowerPointApi.Presentations newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Presentations.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Presentations;
+				NetOffice.PowerPointApi.Presentations newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Presentations.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Presentations;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Windows", paramsArray);
-				NetOffice.PowerPointApi.DocumentWindows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DocumentWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DocumentWindows;
+				NetOffice.PowerPointApi.DocumentWindows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DocumentWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DocumentWindows;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Dialogs", paramsArray);
-				NetOffice.PowerPointApi.PPDialogs newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPDialogs.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialogs;
+				NetOffice.PowerPointApi.PPDialogs newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPDialogs.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialogs;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveWindow", paramsArray);
-				NetOffice.PowerPointApi.DocumentWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DocumentWindow;
+				NetOffice.PowerPointApi.DocumentWindow newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DocumentWindow;
 				return newObject;
 			}
 		}
@@ -149,7 +149,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActivePresentation", paramsArray);
-				NetOffice.PowerPointApi.Presentation newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Presentation;
+				NetOffice.PowerPointApi.Presentation newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Presentation;
 				return newObject;
 			}
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlideShowWindows", paramsArray);
-				NetOffice.PowerPointApi.SlideShowWindows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.SlideShowWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.SlideShowWindows;
+				NetOffice.PowerPointApi.SlideShowWindows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.SlideShowWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.SlideShowWindows;
 				return newObject;
 			}
 		}
@@ -181,7 +181,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
-				NetOffice.OfficeApi.CommandBars newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
+				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
 				return newObject;
 			}
 		}
@@ -247,7 +247,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assistant", paramsArray);
-				NetOffice.OfficeApi.Assistant newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
+				NetOffice.OfficeApi.Assistant newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
 				return newObject;
 			}
 		}
@@ -263,7 +263,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileSearch", paramsArray);
-				NetOffice.OfficeApi.FileSearch newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileSearch;
+				NetOffice.OfficeApi.FileSearch newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileSearch;
 				return newObject;
 			}
 		}
@@ -279,7 +279,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileFind", paramsArray);
-				NetOffice.OfficeApi.IFind newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IFind.LateBindingApiWrapperType) as NetOffice.OfficeApi.IFind;
+				NetOffice.OfficeApi.IFind newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IFind.LateBindingApiWrapperType) as NetOffice.OfficeApi.IFind;
 				return newObject;
 			}
 		}
@@ -370,7 +370,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AddIns", paramsArray);
-				NetOffice.PowerPointApi.AddIns newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AddIns.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AddIns;
+				NetOffice.PowerPointApi.AddIns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AddIns.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AddIns;
 				return newObject;
 			}
 		}
@@ -386,7 +386,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -555,7 +555,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AnswerWizard", paramsArray);
-				NetOffice.OfficeApi.AnswerWizard newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
+				NetOffice.OfficeApi.AnswerWizard newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
 				return newObject;
 			}
 		}
@@ -571,7 +571,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "COMAddIns", paramsArray);
-				NetOffice.OfficeApi.COMAddIns newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
+				NetOffice.OfficeApi.COMAddIns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
 				return newObject;
 			}
 		}
@@ -602,7 +602,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultWebOptions", paramsArray);
-				NetOffice.PowerPointApi.DefaultWebOptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DefaultWebOptions.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DefaultWebOptions;
+				NetOffice.PowerPointApi.DefaultWebOptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DefaultWebOptions.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DefaultWebOptions;
 				return newObject;
 			}
 		}
@@ -618,7 +618,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LanguageSettings", paramsArray);
-				NetOffice.OfficeApi.LanguageSettings newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType) as NetOffice.OfficeApi.LanguageSettings;
+				NetOffice.OfficeApi.LanguageSettings newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType) as NetOffice.OfficeApi.LanguageSettings;
 				return newObject;
 			}
 		}
@@ -635,7 +635,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MsoDebugOptions", paramsArray);
-				NetOffice.OfficeApi.MsoDebugOptions newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MsoDebugOptions.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions;
+				NetOffice.OfficeApi.MsoDebugOptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MsoDebugOptions.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions;
 				return newObject;
 			}
 		}
@@ -673,7 +673,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Marker", paramsArray);
-				NetOffice.PowerPointApi.Marker newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Marker.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Marker;
+				NetOffice.PowerPointApi.Marker newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Marker.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Marker;
 				return newObject;
 			}
 		}
@@ -710,7 +710,7 @@ namespace NetOffice.PowerPointApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.PropertyGet(this, "FileDialog", paramsArray);
-			NetOffice.OfficeApi.FileDialog newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialog;
+			NetOffice.OfficeApi.FileDialog newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileDialog.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialog;
 			return newObject;
 		}
 
@@ -778,7 +778,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NewPresentation", paramsArray);
-				NetOffice.OfficeApi.NewFile newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.NewFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.NewFile;
+				NetOffice.OfficeApi.NewFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.NewFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.NewFile;
 				return newObject;
 			}
 		}
@@ -836,7 +836,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AutoCorrect", paramsArray);
-				NetOffice.PowerPointApi.AutoCorrect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AutoCorrect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AutoCorrect;
+				NetOffice.PowerPointApi.AutoCorrect newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AutoCorrect.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AutoCorrect;
 				return newObject;
 			}
 		}
@@ -852,7 +852,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Options", paramsArray);
-				NetOffice.PowerPointApi.Options newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Options.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Options;
+				NetOffice.PowerPointApi.Options newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Options.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Options;
 				return newObject;
 			}
 		}
@@ -888,7 +888,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assistance", paramsArray);
-				NetOffice.OfficeApi.IAssistance newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
+				NetOffice.OfficeApi.IAssistance newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
 				return newObject;
 			}
 		}
@@ -919,7 +919,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileConverters", paramsArray);
-				NetOffice.PowerPointApi.FileConverters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverters;
+				NetOffice.PowerPointApi.FileConverters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverters;
 				return newObject;
 			}
 		}
@@ -935,7 +935,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartArtLayouts", paramsArray);
-				NetOffice.OfficeApi.SmartArtLayouts newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtLayouts.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtLayouts;
+				NetOffice.OfficeApi.SmartArtLayouts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtLayouts.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtLayouts;
 				return newObject;
 			}
 		}
@@ -951,7 +951,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartArtQuickStyles", paramsArray);
-				NetOffice.OfficeApi.SmartArtQuickStyles newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtQuickStyles.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtQuickStyles;
+				NetOffice.OfficeApi.SmartArtQuickStyles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtQuickStyles.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtQuickStyles;
 				return newObject;
 			}
 		}
@@ -967,7 +967,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartArtColors", paramsArray);
-				NetOffice.OfficeApi.SmartArtColors newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtColors.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtColors;
+				NetOffice.OfficeApi.SmartArtColors newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartArtColors.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartArtColors;
 				return newObject;
 			}
 		}
@@ -983,7 +983,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ProtectedViewWindows", paramsArray);
-				NetOffice.PowerPointApi.ProtectedViewWindows newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ProtectedViewWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ProtectedViewWindows;
+				NetOffice.PowerPointApi.ProtectedViewWindows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ProtectedViewWindows.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ProtectedViewWindows;
 				return newObject;
 			}
 		}
@@ -999,7 +999,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveProtectedViewWindow", paramsArray);
-				NetOffice.PowerPointApi.ProtectedViewWindow newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ProtectedViewWindow;
+				NetOffice.PowerPointApi.ProtectedViewWindow newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ProtectedViewWindow;
 				return newObject;
 			}
 		}
@@ -1031,7 +1031,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ResampleMediaTasks", paramsArray);
-				NetOffice.PowerPointApi.ResampleMediaTasks newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ResampleMediaTasks.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTasks;
+				NetOffice.PowerPointApi.ResampleMediaTasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ResampleMediaTasks.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTasks;
 				return newObject;
 			}
 		}
@@ -1118,7 +1118,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1139,7 +1139,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1158,7 +1158,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "FileDialog", paramsArray);
-			NetOffice.PowerPointApi.FileDialog newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.FileDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialog;
+			NetOffice.PowerPointApi.FileDialog newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.FileDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialog;
 			return newObject;
 		}
 
@@ -1249,7 +1249,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "PPFileDialog", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 

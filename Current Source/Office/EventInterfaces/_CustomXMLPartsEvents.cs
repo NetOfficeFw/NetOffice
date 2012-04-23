@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OfficeApi
 {	
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newNewPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newNewPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewPart;
 			_eventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newOldPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newOldPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newOldPart;
 			_eventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newPart = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPart;
 			_eventBinding.RaiseCustomEvent("PartAfterLoad", ref paramsArray);

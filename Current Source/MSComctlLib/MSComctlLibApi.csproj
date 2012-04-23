@@ -168,9 +168,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LateBindingApi.Core\LateBindingApi.Core.csproj">
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
-      <Name>LateBindingApi.Core</Name>
+      <Name>NetOffice</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

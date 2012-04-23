@@ -1,5 +1,5 @@
 using System;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>

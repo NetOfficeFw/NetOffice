@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// represents a managed COM proxy 
@@ -77,6 +77,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject replacedObject)
         {
+            Factory.CheckInitialize();
+
             // copy proxy
             _underlyingObject = replacedObject.UnderlyingObject;
             _parentObject = replacedObject.ParentObject;
@@ -107,6 +109,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(object comProxy)
         {
+            Factory.CheckInitialize();
+
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
@@ -121,6 +125,8 @@ namespace LateBindingApi.Core
         //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy)
         {
+            Factory.CheckInitialize();
+
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
@@ -140,6 +146,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy, bool isEnumerator)
         {
+            Factory.CheckInitialize();
+
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _isEnumerator = isEnumerator;
@@ -161,6 +169,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy, Type comProxyType)
         {
+            Factory.CheckInitialize();
+
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _instanceType = comProxyType;
@@ -178,6 +188,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(string progId)
         {
+            Factory.CheckInitialize();
+
             CreateFromProgId(progId);
             Factory.AddObjectToList(this);
         }
@@ -188,6 +200,8 @@ namespace LateBindingApi.Core
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
+            Factory.CheckInitialize();
+
             Factory.AddObjectToList(this);
         }
 
@@ -363,23 +377,23 @@ namespace LateBindingApi.Core
             switch (searchType)
             {
                 case SupportEntityType.Method:
-                    {
+                {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
                         string outValue = null;
                         return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                    }
+                }
                 case SupportEntityType.Property:
-                    {
+                {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
                         string outValue = null;
                         return _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
-                    }
+                }
                 default:
-                    {
+                {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
@@ -389,7 +403,7 @@ namespace LateBindingApi.Core
                             return true;
 
                         return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                    }
+                }
             }
         }
 

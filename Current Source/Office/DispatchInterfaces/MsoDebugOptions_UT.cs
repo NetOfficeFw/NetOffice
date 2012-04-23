@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			NetOffice.OfficeApi.MsoDebugOptions_UTRunResult newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTRunResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTRunResult;
+			NetOffice.OfficeApi.MsoDebugOptions_UTRunResult newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTRunResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTRunResult;
 			return newObject;
 		}
 

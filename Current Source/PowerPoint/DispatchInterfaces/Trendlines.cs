@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -158,7 +158,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -171,7 +171,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -200,7 +200,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -216,7 +216,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -233,7 +233,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -251,7 +251,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -270,7 +270,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -290,7 +290,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -311,7 +311,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+			NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 			return newObject;
 		}
 
@@ -327,7 +327,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.PowerPointApi.Trendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
+				NetOffice.PowerPointApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Trendline.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Trendline;
 				return newObject;
 			}
 		}
@@ -357,7 +357,7 @@ namespace NetOffice.PowerPointApi
 		[SupportByVersionAttribute("PowerPoint", 14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.AccessApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllForms", paramsArray);
-				NetOffice.AccessApi.AllForms newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllForms.LateBindingApiWrapperType) as NetOffice.AccessApi.AllForms;
+				NetOffice.AccessApi.AllForms newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllForms.LateBindingApiWrapperType) as NetOffice.AccessApi.AllForms;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllReports", paramsArray);
-				NetOffice.AccessApi.AllReports newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllReports.LateBindingApiWrapperType) as NetOffice.AccessApi.AllReports;
+				NetOffice.AccessApi.AllReports newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllReports.LateBindingApiWrapperType) as NetOffice.AccessApi.AllReports;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllMacros", paramsArray);
-				NetOffice.AccessApi.AllMacros newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllMacros.LateBindingApiWrapperType) as NetOffice.AccessApi.AllMacros;
+				NetOffice.AccessApi.AllMacros newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllMacros.LateBindingApiWrapperType) as NetOffice.AccessApi.AllMacros;
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllModules", paramsArray);
-				NetOffice.AccessApi.AllModules newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllModules.LateBindingApiWrapperType) as NetOffice.AccessApi.AllModules;
+				NetOffice.AccessApi.AllModules newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllModules.LateBindingApiWrapperType) as NetOffice.AccessApi.AllModules;
 				return newObject;
 			}
 		}
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllDataAccessPages", paramsArray);
-				NetOffice.AccessApi.AllDataAccessPages newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllDataAccessPages.LateBindingApiWrapperType) as NetOffice.AccessApi.AllDataAccessPages;
+				NetOffice.AccessApi.AllDataAccessPages newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AllDataAccessPages.LateBindingApiWrapperType) as NetOffice.AccessApi.AllDataAccessPages;
 				return newObject;
 			}
 		}
@@ -255,7 +255,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 		}
@@ -271,7 +271,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.AccessApi.AccessObjectProperties newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AccessObjectProperties.LateBindingApiWrapperType) as NetOffice.AccessApi.AccessObjectProperties;
+				NetOffice.AccessApi.AccessObjectProperties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.AccessObjectProperties.LateBindingApiWrapperType) as NetOffice.AccessApi.AccessObjectProperties;
 				return newObject;
 			}
 		}
@@ -287,7 +287,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.AccessApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
+				NetOffice.AccessApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
 				return newObject;
 			}
 		}
@@ -304,7 +304,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -356,7 +356,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AccessConnection", paramsArray);
-				NetOffice.ADODBApi.Connection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi.Connection;
+				NetOffice.ADODBApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi.Connection;
 				return newObject;
 			}
 		}
@@ -372,7 +372,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ImportExportSpecifications", paramsArray);
-				NetOffice.AccessApi.ImportExportSpecifications newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.ImportExportSpecifications.LateBindingApiWrapperType) as NetOffice.AccessApi.ImportExportSpecifications;
+				NetOffice.AccessApi.ImportExportSpecifications newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.ImportExportSpecifications.LateBindingApiWrapperType) as NetOffice.AccessApi.ImportExportSpecifications;
 				return newObject;
 			}
 		}
@@ -433,7 +433,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Resources", paramsArray);
-				NetOffice.AccessApi.SharedResources newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.SharedResources.LateBindingApiWrapperType) as NetOffice.AccessApi.SharedResources;
+				NetOffice.AccessApi.SharedResources newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.SharedResources.LateBindingApiWrapperType) as NetOffice.AccessApi.SharedResources;
 				return newObject;
 			}
 		}

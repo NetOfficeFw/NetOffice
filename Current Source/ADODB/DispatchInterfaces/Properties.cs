@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
@@ -86,7 +86,7 @@ namespace NetOffice.ADODBApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ADODBApi.Property newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Property.LateBindingApiWrapperType) as NetOffice.ADODBApi.Property;
+			NetOffice.ADODBApi.Property newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Property.LateBindingApiWrapperType) as NetOffice.ADODBApi.Property;
 			return newObject;
 			}
 		}

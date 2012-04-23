@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "getClientRects", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLRectCollection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLRectCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLRectCollection;
+			NetOffice.MSHTMLApi.IHTMLRectCollection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLRectCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLRectCollection;
 			return newObject;
 		}
 
@@ -97,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "getBoundingClientRect", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLRect newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLRect.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLRect;
+			NetOffice.MSHTMLApi.IHTMLRect newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLRect.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLRect;
 			return newObject;
 		}
 

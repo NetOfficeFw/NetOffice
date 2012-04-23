@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ADODBApi
 {
 	///<summary>
@@ -159,7 +159,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Errors", paramsArray);
-				NetOffice.ADODBApi.Errors newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Errors.LateBindingApiWrapperType) as NetOffice.ADODBApi.Errors;
+				NetOffice.ADODBApi.Errors newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Errors.LateBindingApiWrapperType) as NetOffice.ADODBApi.Errors;
 				return newObject;
 			}
 		}
@@ -327,7 +327,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -342,7 +342,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -452,7 +452,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions, schemaID);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -466,7 +466,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -481,7 +481,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions);
 			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 

@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.AccessApi
 {	
@@ -991,8 +991,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			object newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
@@ -1008,8 +1008,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			object newChecked = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
+			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
@@ -1025,8 +1025,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
-			object newEnabled = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
+			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
@@ -1042,7 +1042,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCommand;
 			_eventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
@@ -1070,8 +1070,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newScreenTipText = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, screenTipText) as object;
-			object newSourceObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, sourceObject) as object;
+			object newScreenTipText = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, screenTipText) as object;
+			object newSourceObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sourceObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newScreenTipText;
 			paramsArray[1] = newSourceObject;
@@ -1087,9 +1087,9 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			object newCancel = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			object newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -1106,8 +1106,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -1123,7 +1123,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
@@ -1138,7 +1138,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);

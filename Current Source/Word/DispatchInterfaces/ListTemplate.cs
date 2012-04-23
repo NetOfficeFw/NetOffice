@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListLevels", paramsArray);
-				NetOffice.WordApi.ListLevels newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListLevels.LateBindingApiWrapperType) as NetOffice.WordApi.ListLevels;
+				NetOffice.WordApi.ListLevels newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListLevels.LateBindingApiWrapperType) as NetOffice.WordApi.ListLevels;
 				return newObject;
 			}
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray);
-			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
+			NetOffice.WordApi.ListTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
 			return newObject;
 		}
 
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray);
-			NetOffice.WordApi.ListTemplate newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
+			NetOffice.WordApi.ListTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
 			return newObject;
 		}
 

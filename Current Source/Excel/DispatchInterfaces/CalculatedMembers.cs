@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.ExcelApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 			}
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

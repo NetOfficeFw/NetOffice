@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			NetOffice.OfficeApi.IMsoCharacters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
+			NetOffice.OfficeApi.IMsoCharacters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
 			return newObject;
 		}
 
@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			NetOffice.OfficeApi.IMsoCharacters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
+			NetOffice.OfficeApi.IMsoCharacters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
 			return newObject;
 		}
 
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				NetOffice.OfficeApi.IMsoCharacters newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
+				NetOffice.OfficeApi.IMsoCharacters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCharacters.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCharacters;
 				return newObject;
 			}
 		}
@@ -226,7 +226,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.OfficeApi.ChartFont newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartFont.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartFont;
+				NetOffice.OfficeApi.ChartFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartFont.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartFont;
 				return newObject;
 			}
 		}
@@ -244,7 +244,7 @@ namespace NetOffice.OfficeApi
 				object returnItem = Invoker.PropertyGet(this, "HorizontalAlignment", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -292,7 +292,7 @@ namespace NetOffice.OfficeApi
 				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -380,7 +380,7 @@ namespace NetOffice.OfficeApi
 				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -428,7 +428,7 @@ namespace NetOffice.OfficeApi
 				object returnItem = Invoker.PropertyGet(this, "AutoScaleFont", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.OfficeApi.IMsoInterior newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoInterior.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoInterior;
+				NetOffice.OfficeApi.IMsoInterior newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoInterior.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoInterior;
 				return newObject;
 			}
 		}
@@ -470,7 +470,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.OfficeApi.ChartFillFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartFillFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartFillFormat;
+				NetOffice.OfficeApi.ChartFillFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ChartFillFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.ChartFillFormat;
 				return newObject;
 			}
 		}
@@ -486,7 +486,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.OfficeApi.IMsoBorder newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoBorder.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoBorder;
+				NetOffice.OfficeApi.IMsoBorder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoBorder.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoBorder;
 				return newObject;
 			}
 		}
@@ -518,7 +518,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -575,7 +575,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.OfficeApi.IMsoChartFormat newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartFormat;
+				NetOffice.OfficeApi.IMsoChartFormat newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartFormat;
 				return newObject;
 			}
 		}
@@ -607,7 +607,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -736,7 +736,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -755,7 +755,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

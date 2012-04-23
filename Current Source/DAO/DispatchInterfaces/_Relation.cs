@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.DAOApi
 {
 	///<summary>
@@ -164,7 +164,7 @@ namespace NetOffice.DAOApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.DAOApi.Fields newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Fields.LateBindingApiWrapperType) as NetOffice.DAOApi.Fields;
+				NetOffice.DAOApi.Fields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Fields.LateBindingApiWrapperType) as NetOffice.DAOApi.Fields;
 				return newObject;
 			}
 		}
@@ -204,7 +204,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -217,7 +217,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -231,7 +231,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 
@@ -246,7 +246,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
+			NetOffice.DAOApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
 			return newObject;
 		}
 

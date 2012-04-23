@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TopView", paramsArray);
-				NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+				NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 				return newObject;
 			}
 			set
@@ -105,7 +105,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BottomView", paramsArray);
-				NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+				NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 				return newObject;
 			}
 			set

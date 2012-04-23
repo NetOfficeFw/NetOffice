@@ -82,7 +82,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSProjectApi", "MSProject\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSHTMLApi", "MSHTML\MSHTMLApi.csproj", "{6FA55F42-D1BA-431C-B5C2-3EBB899230CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApi.Core", "LateBindingApi.Core\LateBindingApi.Core.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

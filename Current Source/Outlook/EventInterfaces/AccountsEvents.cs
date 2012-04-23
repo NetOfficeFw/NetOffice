@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Account newAccount = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, account) as NetOffice.OutlookApi.Account;
+			NetOffice.OutlookApi.Account newAccount = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, account) as NetOffice.OutlookApi.Account;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAccount;
 			_eventBinding.RaiseCustomEvent("AutoDiscoverComplete", ref paramsArray);

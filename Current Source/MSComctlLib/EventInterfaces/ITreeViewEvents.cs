@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSComctlLibApi
 {	
@@ -171,7 +171,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
+			NetOffice.MSComctlLibApi.Node newNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
 			_eventBinding.RaiseCustomEvent("Collapse", ref paramsArray);
@@ -186,7 +186,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
+			NetOffice.MSComctlLibApi.Node newNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
 			_eventBinding.RaiseCustomEvent("Expand", ref paramsArray);
@@ -201,7 +201,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
+			NetOffice.MSComctlLibApi.Node newNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
 			_eventBinding.RaiseCustomEvent("NodeClick", ref paramsArray);
@@ -357,7 +357,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Node newNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
+			NetOffice.MSComctlLibApi.Node newNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, node) as NetOffice.MSComctlLibApi.Node;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNode;
 			_eventBinding.RaiseCustomEvent("NodeCheck", ref paramsArray);

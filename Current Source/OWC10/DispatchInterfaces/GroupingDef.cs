@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageFields", paramsArray);
-				NetOffice.OWC10Api.PageFields newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
+				NetOffice.OWC10Api.PageFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
 				return newObject;
 			}
 		}

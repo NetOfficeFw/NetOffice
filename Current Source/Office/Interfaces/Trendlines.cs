@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 			}
 		}
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -257,7 +257,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -272,7 +272,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -342,7 +342,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -362,7 +362,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
+			NetOffice.OfficeApi.IMsoTrendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
 			return newObject;
 		}
 
@@ -412,7 +412,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersionAttribute("Office", 12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

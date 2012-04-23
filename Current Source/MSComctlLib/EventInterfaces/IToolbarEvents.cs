@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSComctlLibApi
 {	
@@ -117,7 +117,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Button newButton = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
 			_eventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
@@ -358,7 +358,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, buttonMenu) as NetOffice.MSComctlLibApi.ButtonMenu;
+			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, buttonMenu) as NetOffice.MSComctlLibApi.ButtonMenu;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButtonMenu;
 			_eventBinding.RaiseCustomEvent("ButtonMenuClick", ref paramsArray);
@@ -373,7 +373,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Button newButton = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
 			_eventBinding.RaiseCustomEvent("ButtonDropDown", ref paramsArray);

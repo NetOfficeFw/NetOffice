@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OfficeApi
 {	
@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			_eventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			_eventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);

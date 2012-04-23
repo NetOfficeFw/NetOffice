@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VBIDEApi.Application newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
+				NetOffice.VBIDEApi.Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.VBProject newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
+				NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
 				return newObject;
 			}
 		}
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.VBIDEApi.Component newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Component.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Component;
+				NetOffice.VBIDEApi.Component newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Component.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Component;
 				return newObject;
 			}
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.VBIDEApi
 		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsMethod(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

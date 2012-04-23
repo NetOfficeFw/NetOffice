@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -69,7 +69,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			_eventBinding.RaiseCustomEvent("SelectedChange", ref paramsArray);
@@ -84,7 +84,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			_eventBinding.RaiseCustomEvent("NavigationFolderAdd", ref paramsArray);

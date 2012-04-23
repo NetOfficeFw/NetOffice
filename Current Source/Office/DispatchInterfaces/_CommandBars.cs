@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActionControl", paramsArray);
-				NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+				NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveMenuBar", paramsArray);
-				NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+				NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 				return newObject;
 			}
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 			}
 		}
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -393,7 +393,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, position, menuBar, temporary);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -406,7 +406,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -420,7 +420,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -435,7 +435,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -451,7 +451,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, position, menuBar);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -480,7 +480,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -494,7 +494,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -509,7 +509,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -525,7 +525,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag);
 			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
+			NetOffice.OfficeApi.CommandBarControl newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
 			return newObject;
 		}
 
@@ -551,7 +551,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
+			NetOffice.OfficeApi.CommandBarControls newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
 			return newObject;
 		}
 
@@ -564,7 +564,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
+			NetOffice.OfficeApi.CommandBarControls newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
 			return newObject;
 		}
 
@@ -578,7 +578,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
+			NetOffice.OfficeApi.CommandBarControls newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
 			return newObject;
 		}
 
@@ -593,7 +593,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
+			NetOffice.OfficeApi.CommandBarControls newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
 			return newObject;
 		}
 
@@ -609,7 +609,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag);
 			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
+			NetOffice.OfficeApi.CommandBarControls newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
 			return newObject;
 		}
 
@@ -627,7 +627,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar, temporary, tbtrProtection);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -641,7 +641,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -656,7 +656,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -672,7 +672,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -689,7 +689,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -707,7 +707,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar, temporary);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
+			NetOffice.OfficeApi.CommandBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
 			return newObject;
 		}
 
@@ -805,7 +805,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso, width, height);
 			object returnItem = Invoker.MethodReturn(this, "GetImageMso", paramsArray);
-			stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
+			stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
 			return newObject;
 		}
 
@@ -845,7 +845,7 @@ namespace NetOffice.OfficeApi
 		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

@@ -324,6 +324,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Office\OfficeApi.csproj">
       <Project>{3046F1E7-134C-411D-8932-942F96D33CF3}</Project>
       <Name>OfficeApi</Name>
@@ -335,10 +339,6 @@
     <ProjectReference Include="..\MSHTML\MSHTMLApi.csproj">
       <Project>{6FA55F42-D1BA-431C-B5C2-3EBB899230CE}</Project>
       <Name>MSHTMLApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LateBindingApi.Core\LateBindingApi.Core.csproj">
-      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
-      <Name>LateBindingApi.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

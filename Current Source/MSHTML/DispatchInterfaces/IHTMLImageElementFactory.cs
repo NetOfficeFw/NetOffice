@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, height);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 
@@ -100,7 +100,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 
@@ -114,7 +114,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 

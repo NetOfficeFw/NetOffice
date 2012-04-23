@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// signals an exception occured in LateBindingApi, not in corresond latebinded assembly

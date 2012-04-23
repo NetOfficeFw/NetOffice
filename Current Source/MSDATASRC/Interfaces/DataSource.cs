@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM, riid);
 			object returnItem = Invoker.MethodReturn(this, "getDataMember", paramsArray);
-			object newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 

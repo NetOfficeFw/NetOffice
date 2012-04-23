@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSHTMLApi
 {
 	///<summary>
@@ -87,7 +87,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBehavior, bstrBehaviorUrl, pSite);
 			object returnItem = Invoker.MethodReturn(this, "FindBehavior", paramsArray);
-			NetOffice.MSHTMLApi.IElementBehavior newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IElementBehavior.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IElementBehavior;
+			NetOffice.MSHTMLApi.IElementBehavior newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IElementBehavior.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IElementBehavior;
 			return newObject;
 		}
 

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.PowerPointApi
 {
 	///<summary>
@@ -357,7 +357,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fonts", paramsArray);
-				NetOffice.OfficeApi.WebPageFonts newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFonts;
+				NetOffice.OfficeApi.WebPageFonts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFonts;
 				return newObject;
 			}
 		}

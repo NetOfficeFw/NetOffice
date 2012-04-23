@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSProjectApi
 {
 	///<summary>
@@ -92,7 +92,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group, highlightFilt);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+			NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 			return newObject;
 		}
 
@@ -109,7 +109,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+			NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 			return newObject;
 		}
 
@@ -127,7 +127,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+			NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 			return newObject;
 		}
 
@@ -146,7 +146,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
+			NetOffice.MSProjectApi.ViewSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
 			return newObject;
 		}
 

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DocumentElement", paramsArray);
-				NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNode;
+				NetOffice.OfficeApi.CustomXMLNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNode;
 				return newObject;
 			}
 		}
@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaCollection", paramsArray);
-				NetOffice.OfficeApi.CustomXMLSchemaCollection newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLSchemaCollection.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchemaCollection;
+				NetOffice.OfficeApi.CustomXMLSchemaCollection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLSchemaCollection.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchemaCollection;
 				return newObject;
 			}
 			set
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "NamespaceManager", paramsArray);
-				NetOffice.OfficeApi.CustomXMLPrefixMappings newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLPrefixMappings.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLPrefixMappings;
+				NetOffice.OfficeApi.CustomXMLPrefixMappings newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLPrefixMappings.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLPrefixMappings;
 				return newObject;
 			}
 		}
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Errors", paramsArray);
-				NetOffice.OfficeApi.CustomXMLValidationErrors newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLValidationErrors.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLValidationErrors;
+				NetOffice.OfficeApi.CustomXMLValidationErrors newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLValidationErrors.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLValidationErrors;
 				return newObject;
 			}
 		}
@@ -352,7 +352,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
-			NetOffice.OfficeApi.CustomXMLNodes newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNodes;
+			NetOffice.OfficeApi.CustomXMLNodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLNodes.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNodes;
 			return newObject;
 		}
 
@@ -365,7 +365,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
-			NetOffice.OfficeApi.CustomXMLNode newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNode;
+			NetOffice.OfficeApi.CustomXMLNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLNode;
 			return newObject;
 		}
 

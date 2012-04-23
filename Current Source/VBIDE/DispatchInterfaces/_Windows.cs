@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -90,7 +90,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(addInInst, progId, caption, guidPosition, docObj);
 			object returnItem = Invoker.MethodReturn(this, "CreateToolWindow", paramsArray);
-			NetOffice.VBIDEApi.Window newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
+			NetOffice.VBIDEApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
 			return newObject;
 		}
 

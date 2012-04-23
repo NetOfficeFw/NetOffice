@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Indicates assembly is a latebinding api assembly

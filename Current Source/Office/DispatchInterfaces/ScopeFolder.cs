@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OfficeApi
 {
 	///<summary>
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScopeFolders", paramsArray);
-				NetOffice.OfficeApi.ScopeFolders newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ScopeFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.ScopeFolders;
+				NetOffice.OfficeApi.ScopeFolders newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ScopeFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.ScopeFolders;
 				return newObject;
 			}
 		}

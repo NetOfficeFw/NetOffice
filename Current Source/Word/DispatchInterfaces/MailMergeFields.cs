@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+				NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 				return newObject;
 			}
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt, defaultAskText, askOnce);
 			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
 			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt);
 			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt, defaultAskText);
 			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt, defaultFillInText, askOnce);
 			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -263,7 +263,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt);
 			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -294,7 +294,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt, defaultFillInText);
 			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText, falseText);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -330,7 +330,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -365,7 +365,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -384,7 +384,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -404,7 +404,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText);
 			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -417,7 +417,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddMergeRec", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -430,7 +430,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddMergeSeq", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -443,7 +443,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "AddNext", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
 			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -475,7 +475,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
 			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -491,7 +491,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, valueText, valueAutoText);
 			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -506,7 +506,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
 			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, name, valueText);
 			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -538,7 +538,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
 			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -554,7 +554,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
 			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
+			NetOffice.WordApi.MailMergeField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
 			return newObject;
 		}
 
@@ -583,7 +583,7 @@ namespace NetOffice.WordApi
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

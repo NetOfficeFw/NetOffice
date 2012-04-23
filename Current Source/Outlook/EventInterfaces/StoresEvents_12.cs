@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.OutlookApi
 {	
@@ -65,7 +65,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
@@ -83,7 +83,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Store newStore = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
 			_eventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);

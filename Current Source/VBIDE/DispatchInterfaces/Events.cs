@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.VBIDEApi
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
 			object returnItem = Invoker.PropertyGet(this, "ReferencesEvents", paramsArray);
-			NetOffice.VBIDEApi.ReferencesEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.ReferencesEvents;
+			NetOffice.VBIDEApi.ReferencesEvents newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.ReferencesEvents;
 			return newObject;
 		}
 
@@ -110,7 +110,7 @@ namespace NetOffice.VBIDEApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);
 			object returnItem = Invoker.PropertyGet(this, "CommandBarEvents", paramsArray);
-			NetOffice.VBIDEApi.CommandBarEvents newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CommandBarEvents;
+			NetOffice.VBIDEApi.CommandBarEvents newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CommandBarEvents;
 			return newObject;
 		}
 

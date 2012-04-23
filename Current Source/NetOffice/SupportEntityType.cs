@@ -1,4 +1,4 @@
-﻿namespace LateBindingApi.Core
+﻿namespace NetOffice
 {
     /// <summary>
     /// search parameter for the EntityIsAvailable Method

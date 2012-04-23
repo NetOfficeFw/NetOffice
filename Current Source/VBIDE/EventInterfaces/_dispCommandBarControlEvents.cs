@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.VBIDEApi
 {	
@@ -61,7 +61,7 @@ namespace NetOffice.VBIDEApi
 				return;
 			}
 
-			object newCommandBarControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, commandBarControl) as object;
+			object newCommandBarControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, commandBarControl) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newCommandBarControl;
 			paramsArray.SetValue(handled, 1);

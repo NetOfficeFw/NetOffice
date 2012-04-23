@@ -2,13 +2,13 @@
 using System.Reflection;
 using System.ComponentModel;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace AccessApi.Utils
 {
 	#pragma warning disable
     /// <summary>
-    /// necessary factory info, used from LateBindingApi.Core.Factory while Initialize()
+    /// necessary factory info, used from NetOffice.Factory while Initialize()
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {

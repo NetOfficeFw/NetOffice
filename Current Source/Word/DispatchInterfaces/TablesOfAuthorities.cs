@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Collections;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.WordApi
 {
 	///<summary>
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+				NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 				return newObject;
 			}
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -297,7 +297,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -317,7 +317,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -338,7 +338,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -360,7 +360,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -383,7 +383,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
+			NetOffice.WordApi.TableOfAuthorities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
 			return newObject;
 		}
 
@@ -411,7 +411,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText, category);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -426,7 +426,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -442,7 +442,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText);
 			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
+			NetOffice.WordApi.Field newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
 			return newObject;
 		}
 
@@ -541,7 +541,7 @@ namespace NetOffice.WordApi
 		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return LateBindingApi.Core.Utils.GetProxyEnumeratorAsProperty(this);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

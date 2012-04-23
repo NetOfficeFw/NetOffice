@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.MSHTMLApi
 {	
@@ -98,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			string newname = (string)name;
-			object neweventData = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, eventData) as object;
+			object neweventData = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, eventData) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;
 			paramsArray[1] = neweventData;

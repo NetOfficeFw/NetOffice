@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRelatedFields", paramsArray);
-				NetOffice.OWC10Api.SchemaRelatedFields newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelatedFields;
+				NetOffice.OWC10Api.SchemaRelatedFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelatedFields;
 				return newObject;
 			}
 		}

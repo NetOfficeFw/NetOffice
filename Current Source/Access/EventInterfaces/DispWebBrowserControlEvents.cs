@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.AccessApi
 {	
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[7];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);
@@ -445,7 +445,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);
@@ -480,7 +480,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);

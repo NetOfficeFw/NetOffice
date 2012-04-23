@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
@@ -164,7 +164,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListImages", paramsArray);
-				NetOffice.MSComctlLibApi.IImages newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImages;
+				NetOffice.MSComctlLibApi.IImages newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImages;
 				return newObject;
 			}
 			set
@@ -229,7 +229,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, key2);
 			object returnItem = Invoker.MethodReturn(this, "Overlay", paramsArray);
-			stdole.Picture newObject = LateBindingApi.Core.Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
+			stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
 			return newObject;
 		}
 

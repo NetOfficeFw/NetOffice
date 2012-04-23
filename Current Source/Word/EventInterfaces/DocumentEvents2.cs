@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using LateBindingApi.Core;
+using NetOffice;
 
 namespace NetOffice.WordApi
 {	
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.XMLNode newNewXMLNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newNewXMLNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
 			bool newInUndoRedo = (bool)inUndoRedo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewXMLNode;
@@ -180,8 +180,8 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.Range newDeletedRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, deletedRange) as NetOffice.WordApi.Range;
-			NetOffice.WordApi.XMLNode newOldXMLNode = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.Range newDeletedRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, deletedRange) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.XMLNode newOldXMLNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
 			bool newInUndoRedo = (bool)inUndoRedo;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newDeletedRange;
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newNewContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, newContentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newNewContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newContentControl) as NetOffice.WordApi.ContentControl;
 			bool newInUndoRedo = (bool)inUndoRedo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewContentControl;
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newOldContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, oldContentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newOldContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldContentControl) as NetOffice.WordApi.ContentControl;
 			bool newInUndoRedo = (bool)inUndoRedo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newOldContentControl;
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(cancel, 1);
@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newContentControl;
 			_eventBinding.RaiseCustomEvent("ContentControlOnEnter", ref paramsArray);
@@ -266,7 +266,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.ContentControl newContentControl = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
@@ -302,7 +302,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-			NetOffice.WordApi.Range newRange = LateBindingApi.Core.Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.WordApi.Range;
 			string newName = (string)name;
 			string newCategory = (string)category;
 			string newBlockType = (string)blockType;

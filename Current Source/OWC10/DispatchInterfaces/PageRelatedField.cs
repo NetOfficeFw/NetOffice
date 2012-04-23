@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
-using LateBindingApi.Core;
+using NetOffice;
 namespace NetOffice.OWC10Api
 {
 	///<summary>
@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ManySide", paramsArray);
-				NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+				NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OneSide", paramsArray);
-				NetOffice.OWC10Api.PageField newObject = LateBindingApi.Core.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+				NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
 				return newObject;
 			}
 		}

@@ -1,5 +1,5 @@
 using System;
-namespace LateBindingApi.Core
+namespace NetOffice
 {
     /// <summary>
     /// Indicates which COM Type Library Version supports the entity
