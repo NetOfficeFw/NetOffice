@@ -3,7 +3,7 @@ Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
@@ -26,7 +26,7 @@ Public Class Addin
         Try
 
             ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
+            NetOffice.Factory.Initialize()
 
             _accessApplication = New Access.Application(Nothing, Application)
 

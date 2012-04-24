@@ -148,9 +148,6 @@ namespace ExcelAddinCSharp
         {
             try
             {
-                // initialize api
-                LateBindingApi.Core.Factory.Initialize();
-
                 _excelApplication = new Excel.Application(null, Application);
 
                 Office.COMAddIn addin = new Office.COMAddIn(null, AddInInst);

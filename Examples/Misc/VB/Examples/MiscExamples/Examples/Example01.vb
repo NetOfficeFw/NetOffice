@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -29,9 +29,6 @@ Public Class Example01
         Dim application As Excel.Application = Nothing
         Try
 
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
-
             ' create excel instance
             application = New Excel.Application()
 
@@ -39,7 +36,7 @@ Public Class Example01
             DebugConsole.Mode = ConsoleMode.MemoryList
 
             ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
+            NetOffice.Factory.Initialize()
 
             ' create excel instance
             application = New NetOffice.ExcelApi.Application()

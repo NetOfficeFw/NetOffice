@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
@@ -35,9 +35,6 @@ namespace MiscExamplesCS4
 
         public void RunExample()
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             Excel.Application application = null;
             try
             {
@@ -45,7 +42,7 @@ namespace MiscExamplesCS4
                 DebugConsole.Mode = ConsoleMode.MemoryList;
 
                 // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
+                NetOffice.Factory.Initialize();
 
                 // create excel instance
                 application = new NetOffice.ExcelApi.Application();

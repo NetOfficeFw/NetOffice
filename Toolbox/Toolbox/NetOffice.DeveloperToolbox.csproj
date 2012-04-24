@@ -60,6 +60,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\Current Binaries\NetOffice.dll</HintPath>
+    </Reference>
     <Reference Include="OfficeApi">
       <HintPath>..\..\Current Binaries\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>

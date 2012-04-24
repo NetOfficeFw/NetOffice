@@ -127,8 +127,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 return null;
 
             CustomAttribute typeDefAttribute = (from a in fieldDef.CustomAttributes
-                                                where a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
-                                                    || a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -191,8 +191,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             if (null == typeDef)
                 return null;
             CustomAttribute typeDefAttribute = (from a in typeDef.CustomAttributes
-                                                where a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
-                                                    || a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                where a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -312,8 +312,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 return null;
 
             CustomAttribute typeDefAttribute = (from a in targetProperty.CustomAttributes
-                                                where a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
-                                                    || a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -332,8 +332,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 return null;
 
             CustomAttribute typeDefAttribute = (from a in targetMethod.CustomAttributes
-                                                where a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
-                                                    || a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;
@@ -358,8 +358,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 return null;
 
             CustomAttribute typeDefAttribute = (from a in targetEvent.CustomAttributes
-                                                where a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
-                                                    || a.AttributeType.FullName.Equals("LateBindingApi.Core.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                where a.AttributeType.FullName.Equals("NetOffice.SupportByLibraryAttribute", StringComparison.InvariantCultureIgnoreCase)
+                                                    || a.AttributeType.FullName.Equals("NetOffice.SupportByVersionAttribute", StringComparison.InvariantCultureIgnoreCase)
                                                 select a).FirstOrDefault();
             if (null == typeDefAttribute)
                 return null;

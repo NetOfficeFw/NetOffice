@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.WordApi.Enums
@@ -59,15 +59,12 @@ Public Class Example07
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
-
-        Dim commandBar As Office.CommandBar = Nothing
-        Dim commandBarBtn As Office.CommandBarButton = Nothing
-
         ' start word and turn off msg boxes
         _wordApplication = New Word.Application()
         _wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
+
+        Dim commandBar As Office.CommandBar = Nothing
+        Dim commandBarBtn As Office.CommandBarButton = Nothing
 
         ' add a new document
         _wordApplication.Documents.Add()

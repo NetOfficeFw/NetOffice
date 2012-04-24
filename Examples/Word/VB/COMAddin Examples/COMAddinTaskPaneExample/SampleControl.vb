@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi

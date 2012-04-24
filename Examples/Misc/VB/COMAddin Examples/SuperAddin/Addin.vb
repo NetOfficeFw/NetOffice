@@ -5,7 +5,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 Imports Extensibility
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Office = NetOffice.OfficeApi
 Imports Excel = NetOffice.ExcelApi
 Imports Word = NetOffice.WordApi
@@ -30,9 +30,6 @@ Public Class Addin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As Extensibility.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnConnection
 
         Try
-
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
 
             _application = Factory.CreateObjectFromComProxy(Nothing, Application)
 

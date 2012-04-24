@@ -3,7 +3,7 @@ Imports Tests.Core
 Imports System.Windows.Forms
 Imports System.Drawing
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports System.Data.OleDb
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums

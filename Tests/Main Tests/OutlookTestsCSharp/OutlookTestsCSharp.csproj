@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LateBindingApi.Core">
-      <HintPath>..\..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\..\Current Binaries\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="NetOffice.OutlookSecurity">
       <HintPath>.\NetOffice.OutlookSecurity.dll</HintPath>

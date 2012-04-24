@@ -12,9 +12,6 @@ Public Class Tutorial09
         ' In some situations you want use NetOffice with an existing proxy, its typical for COM Addins.
         ' this examples show you how its possible
 
-        ' Initialize Netoffice
-        LateBindingApi.Core.Factory.Initialize()
-
         ' we create a native Excel proxy
         Dim excelType As Type = Type.GetTypeFromProgID("Excel.Application")
         Dim excelProxy As Object = Activator.CreateInstance(excelType)

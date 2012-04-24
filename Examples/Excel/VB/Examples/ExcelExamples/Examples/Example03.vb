@@ -1,6 +1,6 @@
 ﻿Imports System.Globalization
 Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -13,9 +13,6 @@ Public Class Example03
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
-
         ' start excel and turn off msg boxes
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
@@ -24,9 +21,9 @@ Public Class Example03
         Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
         Dim workSheet As Excel.Worksheet = workBook.Worksheets(1)
 
-        '  the given thread culture in all latebinding calls are stored in LateBindingApi.Core.Settings.
+        '  the given thread culture in all latebinding calls are stored in NetOffice.Settings.
         '  you can change the culture. default is en-us.
-        Dim cultureInfo As CultureInfo = LateBindingApi.Core.Settings.ThreadCulture
+        Dim cultureInfo As CultureInfo = NetOffice.Settings.ThreadCulture
         Dim Pattern1 As String = String.Format("0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator)
         Dim Pattern2 As String = String.Format("#{1}##0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator, cultureInfo.NumberFormat.CurrencyGroupSeparator)
 

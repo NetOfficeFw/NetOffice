@@ -9,9 +9,6 @@ Public Class Tutorial02
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
-
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False

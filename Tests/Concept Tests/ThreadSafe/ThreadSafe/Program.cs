@@ -16,7 +16,6 @@ namespace ThreadSafe
             try
             {
                 Console.WriteLine("--- EnableThreadSafe Test --- ");
-                LateBindingApi.Core.Factory.Initialize();
 
                 for (int i = 0; i < 100; i++)
                 {

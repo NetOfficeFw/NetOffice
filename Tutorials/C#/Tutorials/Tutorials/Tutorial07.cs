@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
@@ -20,9 +20,6 @@ namespace TutorialsCS4
 
         public void Run()
         {
-            // Initialize NetOffices
-            LateBindingApi.Core.Factory.Initialize();
-
             // create new instance
             Excel.Application application = new Excel.Application();
 

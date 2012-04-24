@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
-using Core = LateBindingApi.Core;
+using Core = NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;

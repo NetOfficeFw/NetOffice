@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.OleDb;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
@@ -61,9 +61,6 @@ namespace AccessExamplesCS4
 
         private void ShowDatabaseInfo(string filePath)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start access 
             Access.Application accessApplication = new Access.Application();
 

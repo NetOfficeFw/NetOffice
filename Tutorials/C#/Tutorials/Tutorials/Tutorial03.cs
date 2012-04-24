@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
@@ -21,9 +21,8 @@ namespace TutorialsCS4
         {
             InitializeComponent();
 
-            // Initialize NetOffice and add event trigger to ProxyCountChanged event
-            LateBindingApi.Core.Factory.Initialize();
-            LateBindingApi.Core.Factory.ProxyCountChanged += new Factory.ProxyCountChangedHandler(ProxyCountChanged);
+            // add event trigger to ProxyCountChanged event
+            NetOffice.Factory.ProxyCountChanged += new Factory.ProxyCountChangedHandler(ProxyCountChanged);
         }
 
         #region ITutorial Member
@@ -126,17 +125,17 @@ namespace TutorialsCS4
             // creates 4 new proxies
             // the open proxy count is the same as before
 
-            int proxyCount = LateBindingApi.Core.Factory.ProxyCount;
+            int proxyCount = NetOffice.Factory.ProxyCount;
 
             Excel.Workbook book = _application.Workbooks.Add();
             book.Worksheets.Add();
 
-            int proxyCountAfterCreate = LateBindingApi.Core.Factory.ProxyCount;
+            int proxyCountAfterCreate = NetOffice.Factory.ProxyCount;
 
             // dispose all child instances from application
             _application.DisposeChildInstances();
 
-            int proxyCountAfterDispose = LateBindingApi.Core.Factory.ProxyCount;
+            int proxyCountAfterDispose = NetOffice.Factory.ProxyCount;
 
             string message = string.Format(
                                            "ProxyCount before create is {0}\r\n" +

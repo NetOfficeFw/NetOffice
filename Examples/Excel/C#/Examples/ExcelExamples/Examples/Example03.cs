@@ -7,7 +7,7 @@ using System.Text;
 using System.Globalization;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
@@ -22,9 +22,6 @@ namespace ExcelExamplesCS4
 
         public void RunExample()
         {         
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start excel and turn Application msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
@@ -33,9 +30,9 @@ namespace ExcelExamplesCS4
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
             Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
              
-            // the given thread culture in all NetOffice calls are stored in LateBindingApi.Core.Settings.
+            // the given thread culture in all NetOffice calls are stored in NetOffice.Settings.
             // you can change the culture of course. Default is en-us.
-            CultureInfo cultureInfo = LateBindingApi.Core.Settings.ThreadCulture;
+            CultureInfo cultureInfo = NetOffice.Settings.ThreadCulture;
             string Pattern1 = string.Format("0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator);
             string Pattern2 = string.Format("#{1}##0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator, cultureInfo.NumberFormat.CurrencyGroupSeparator);
 
@@ -77,28 +74,28 @@ namespace ExcelExamplesCS4
             workSheet.Range("D6").NumberFormat = Pattern2;
 
             workSheet.Range("A9").Value = "DateTime";
-            workSheet.Range("B10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
-            workSheet.Range("C10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
-            workSheet.Range("D10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
-            workSheet.Range("E10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
-            workSheet.Range("F10").Value = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
+            workSheet.Range("B10").Value = NetOffice.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
+            workSheet.Range("C10").Value = NetOffice.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
+            workSheet.Range("D10").Value = NetOffice.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
+            workSheet.Range("E10").Value = NetOffice.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
+            workSheet.Range("F10").Value = NetOffice.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
 
             // DateTime
             DateTime dateTimeValue = DateTime.Now;
             workSheet.Range("B11").Value = dateTimeValue;
-            workSheet.Range("B11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
+            workSheet.Range("B11").NumberFormat = NetOffice.Settings.ThreadCulture.DateTimeFormat.FullDateTimePattern;
 
             workSheet.Range("C11").Value = dateTimeValue;
-            workSheet.Range("C11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
+            workSheet.Range("C11").NumberFormat = NetOffice.Settings.ThreadCulture.DateTimeFormat.LongDatePattern;
 
             workSheet.Range("D11").Value = dateTimeValue;
-            workSheet.Range("D11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
+            workSheet.Range("D11").NumberFormat = NetOffice.Settings.ThreadCulture.DateTimeFormat.ShortDatePattern;
 
             workSheet.Range("E11").Value = dateTimeValue;
-            workSheet.Range("E11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
+            workSheet.Range("E11").NumberFormat = NetOffice.Settings.ThreadCulture.DateTimeFormat.LongTimePattern;
 
             workSheet.Range("F11").Value = dateTimeValue;
-            workSheet.Range("F11").NumberFormat = LateBindingApi.Core.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
+            workSheet.Range("F11").NumberFormat = NetOffice.Settings.ThreadCulture.DateTimeFormat.ShortTimePattern;
 
             // string
             workSheet.Range("A14").Value = "String";

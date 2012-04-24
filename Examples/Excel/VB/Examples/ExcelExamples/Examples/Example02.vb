@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -11,9 +11,6 @@ Public Class Example02
 #Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
         Dim excelApplication As New Excel.Application()

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
-using LateBindingApi.Core;
-using Core = LateBindingApi.Core;
+using NetOffice;
+using Core = NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 

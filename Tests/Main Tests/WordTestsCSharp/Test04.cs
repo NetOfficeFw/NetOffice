@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Tests.Core;
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
@@ -44,7 +44,7 @@ namespace WordTestsCSharp
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
                 // Initialize Api COMObject Support
-                LateBindingApi.Core.Factory.Initialize();
+                NetOffice.Factory.Initialize();
 
                 // create simple a csv-file as datasource
                 string fileName = string.Format("{0}\\DataSource.csv", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));

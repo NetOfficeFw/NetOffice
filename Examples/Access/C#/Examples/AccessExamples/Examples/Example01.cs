@@ -7,7 +7,7 @@ using System.Text;
 using System.Globalization;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using NetOffice.AccessApi.Constants;
@@ -25,9 +25,6 @@ namespace AccessExamplesCS4
 
         public void RunExample()
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start access 
             Access.Application accessApplication = new Access.Application();
              

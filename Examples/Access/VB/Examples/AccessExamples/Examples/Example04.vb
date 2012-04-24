@@ -69,7 +69,7 @@ Public Class Example04
     Private Sub ShowDatabaseInfo(ByVal filePath As String)
 
         'Initialize Api COMObject Support
-        LateBindingApi.Core.Factory.Initialize()
+        NetOffice.Factory.Initialize()
 
         ' start access 
         Dim accessApplication As New Access.Application()

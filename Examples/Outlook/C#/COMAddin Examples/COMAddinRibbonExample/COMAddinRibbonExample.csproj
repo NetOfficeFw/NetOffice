@@ -40,8 +40,8 @@
     <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="LateBindingApi.Core">
-      <HintPath>..\..\..\..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\..\..\..\Current Binaries\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi">
       <HintPath>..\..\..\..\..\Current Binaries\OfficeApi.dll</HintPath>

@@ -59,9 +59,6 @@ namespace MiscExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             try
             {
                 Outlook.Application application = null;

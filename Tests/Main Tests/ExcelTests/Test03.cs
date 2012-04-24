@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 using Tests.Core;
-using Core = LateBindingApi.Core;
+using Core = NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 
@@ -52,9 +52,9 @@ namespace ExcelTestsCSharp
 
                 /* some kind of numerics */
 
-                // the given thread culture in all latebinding calls are stored in LateBindingApi.Core.Settings.
+                // the given thread culture in all latebinding calls are stored in NetOffice.Settings.
                 // you can change the culture. default is en-us.
-                CultureInfo cultureInfo = LateBindingApi.Core.Settings.ThreadCulture;
+                CultureInfo cultureInfo = NetOffice.Settings.ThreadCulture;
                 string Pattern1 = string.Format("0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator);
                 string Pattern2 = string.Format("#{1}##0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator, cultureInfo.NumberFormat.CurrencyGroupSeparator);
 

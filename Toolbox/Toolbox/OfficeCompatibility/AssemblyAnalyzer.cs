@@ -14,7 +14,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
     {
         NotUse = 0,
         Support = 1,
-        NotSupport
+        NotSupport = 2
     }
 
     public class SupportInfo
@@ -127,72 +127,54 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
         private void SetupSupportInfo(SupportInfo[] info, string name)
         {
-            bool found09 = false;
-            bool found10 = false;
-            bool found11 = false;
-            bool found12 = false;
-            bool found14 = false;
-
             bool inUse = false;
+
+            bool has09Support = true;
+            bool has10Support = true;
+            bool has11Support = true;
+            bool has12Support = true;
+            bool has14Support = true;
 
             foreach (XElement item in _report.Element("Document").Element("Assembly").Element("Classes").Elements("Class"))
             {
-                /*
-                 var supportNodes = item.Descendants("SupportByLibrary");
-                */
-                if (item.Attribute("Name").Value == "ApplicationWrapper")
-                {
-                    Console.WriteLine(item.Attribute("Name").Value);
-                }
-                else
-                {
-                    Console.WriteLine(item.Attribute("Name").Value);
-                }
+
                 var supportNodes = (from a in item.Descendants("SupportByLibrary")
                                     where a.Attribute("Api").Value.Equals(name, StringComparison.InvariantCultureIgnoreCase)
                                     select a);
                 
                 if ((null == supportNodes) || (supportNodes.Count() == 0))
-                {
                     continue;
-                }
 
                 inUse = true;
 
-                bool has09Support = false;
-                bool has10Support = false;
-                bool has11Support = false;
-                bool has12Support = false;
-                bool has14Support = false;
-
                 foreach (XElement typeNodeItem in supportNodes)
                 {
-                    has09Support = IncludesVersion(typeNodeItem, "9");
-                    has10Support = IncludesVersion(typeNodeItem, "10");
-                    has11Support = IncludesVersion(typeNodeItem, "11");
-                    has12Support = IncludesVersion(typeNodeItem, "12");
-                    has14Support = IncludesVersion(typeNodeItem, "14");
+                    bool find09Support = IncludesVersion(typeNodeItem, "9");
+                    bool find10Support = IncludesVersion(typeNodeItem, "10");
+                    bool find11Support = IncludesVersion(typeNodeItem, "11");
+                    bool find12Support = IncludesVersion(typeNodeItem, "12");
+                    bool find14Support = IncludesVersion(typeNodeItem, "14");
 
-                    if (has09Support)
-                        found09 = true;
-                    if (has10Support)
-                        found10 = true;
-                    if (has11Support)
-                        found11 = true;
-                    if (has12Support)
-                        found12 = true;
-                    if (has14Support)
-                        found14 = true;
+                    if (!find09Support)
+                        has09Support = false;
+                    if (!find10Support)
+                        has10Support = false;
+                    if (!find11Support)
+                        has11Support = false;
+                    if (!find12Support)
+                        has12Support = false;
+                    if (!find14Support)
+                        has14Support = false;
                 }
             }
 
             if (inUse)
             {
-                info[0] = new SupportInfo(BoolToSupportVersion(found09), name, 9);
-                info[1] = new SupportInfo(BoolToSupportVersion(found10), name, 10);
-                info[2] = new SupportInfo(BoolToSupportVersion(found11), name, 11);
-                info[3] = new SupportInfo(BoolToSupportVersion(found12), name, 12);
-                info[4] = new SupportInfo(BoolToSupportVersion(found14), name, 14);
+                info[0] = new SupportInfo(BoolToSupportVersion(has09Support), name, 9);
+                info[1] = new SupportInfo(BoolToSupportVersion(has10Support), name, 10);
+                info[2] = new SupportInfo(BoolToSupportVersion(has11Support), name, 11);
+                info[3] = new SupportInfo(BoolToSupportVersion(has12Support), name, 12);
+                info[4] = new SupportInfo(BoolToSupportVersion(has14Support), name, 14);
             }
             else
             {
@@ -382,7 +364,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         {
             bool result = false;
             string[] supportByLibrary = _netOfficeSupportTable.GetTypeSupport(fieldDefinition.FieldType.FullName);
-            if (fieldDefinition.FieldType.FullName.StartsWith(_apiName, StringComparison.InvariantCultureIgnoreCase) && (null != supportByLibrary))
+            if (fieldDefinition.FieldType.FullName.StartsWith(_apiName, StringComparison.InvariantCultureIgnoreCase) &&
+                !fieldDefinition.FieldType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase)  && CountOf(fieldDefinition.FieldType.FullName, ".") > 1 && (null != supportByLibrary))
             {
                 result = true;
                 string typeName = NetOfficeSupportTable.GetName(fieldDefinition.FieldType.FullName);
@@ -412,6 +395,10 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         {   
             bool result = false;
 
+            if (methodDefinition.FullName.StartsWith("System.Void WordExamplesCS4.Example01"))
+            {
+                Console.WriteLine("");
+            }
             bool isProperty = methodDefinition.IsGetter || methodDefinition.IsSetter;
 
             XElement newMethodNode = new XElement("Method", new XAttribute("Name", methodDefinition.Name), new XAttribute("IsProperty", isProperty.ToString()), new XAttribute("IsPublic", methodDefinition.IsPublic.ToString()), new XElement("FieldSets"), new XElement("LocalFieldSets"));
@@ -421,7 +408,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             foreach (ParameterDefinition paramDefintion in methodDefinition.Parameters)
             {
                 string[] supportByLibrary = _netOfficeSupportTable.GetTypeSupport(paramDefintion.ParameterType.FullName);
-                if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && (!paramDefintion.ParameterType.FullName.StartsWith("NetOffice.DeveloperToolbox")) && (null != supportByLibrary))
+                if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && (!paramDefintion.ParameterType.FullName.StartsWith("NetOffice.DeveloperToolbox")) &&
+                    !paramDefintion.ParameterType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase) && CountOf(paramDefintion.ParameterType.FullName, ".") > 1 && (null != supportByLibrary))
                 {
                     if (null == parametersNode)
                     {
@@ -451,7 +439,10 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             }
 
             // returnvalue
-            if ((methodDefinition.ReturnType.FullName.StartsWith(_apiName) && (!methodDefinition.ReturnType.FullName.StartsWith("NetOffice.DeveloperToolbox"))))
+            if ((methodDefinition.ReturnType.FullName.StartsWith(_apiName) &&
+                !methodDefinition.ReturnType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase) &&
+                CountOf(methodDefinition.ReturnType.FullName, ".") > 1 && 
+                (!methodDefinition.ReturnType.FullName.StartsWith("NetOffice.DeveloperToolbox"))))
             {
                 result = true;
                 string componentName = NetOfficeSupportTable.GetLibrary(methodDefinition.ReturnType.FullName);
@@ -615,7 +606,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
             Mono.Cecil.Cil.MethodBody body = methodDefinition.Body;
             VariableDefinition definiton = body.Variables[varIndex];
-            if (definiton.VariableType.FullName.StartsWith(_apiName))
+            if (definiton.VariableType.FullName.StartsWith(_apiName) && CountOf(definiton.VariableType.FullName, ".") > 1 && !definiton.VariableType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase))
                 return definiton;
             else 
                 return null;
@@ -632,7 +623,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                  // local variables
                  foreach (VariableDefinition itemVariable in body.Variables)
                  {
-                     if (itemVariable.VariableType.FullName.StartsWith(_apiName))
+                     if (itemVariable.VariableType.FullName.StartsWith(_apiName) && CountOf(itemVariable.VariableType.FullName, ".") > 1 && !itemVariable.VariableType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase))
                      {
                          string componentName = NetOfficeSupportTable.GetLibrary(itemVariable.VariableType.FullName);
                          string typeName = NetOfficeSupportTable.GetName(itemVariable.VariableType.FullName);
@@ -685,7 +676,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         string typeName = GetNameFromNewObjMethodReference(methodReference);
                         string componentName = NetOfficeSupportTable.GetLibrary(typeName);
                         string[] supportByLibrary = _netOfficeSupportTable.GetTypeSupport(typeName);
-                        if (typeName.StartsWith(_apiName) && (null != supportByLibrary) )
+                        if (typeName.StartsWith(_apiName) && !typeName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase)  &&
+                             CountOf(typeName, ".") > 1 && (null != supportByLibrary))
                         {
                             result = true;
                             if (null == createNode)
@@ -719,7 +711,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         private static string[] GetParameter(ParameterDefinition paramDefintion)
         {
             string[] supportByLibrary = _netOfficeSupportTable.GetTypeSupport(paramDefintion.ParameterType.FullName);
-            if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && (null != supportByLibrary))
+            if (paramDefintion.ParameterType.FullName.StartsWith(_apiName) && !paramDefintion.ParameterType.FullName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase) &&
+                CountOf(paramDefintion.ParameterType.FullName, ".") > 1 && (null != supportByLibrary))
                 return supportByLibrary;
             else
                 return null;
@@ -783,7 +776,7 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     return Convert.ToInt32(parameterInstruction.Operand);
             }
         }
-
+         
         private static bool AnalyzeMethodCalls(MethodDefinition methodDefinition, XElement entity, XElement newMethodNode)
         {
             XElement callsNode = null;
@@ -802,8 +795,9 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         string callName = GetCallNameFromAnalyzeMethodCalls(methodReference);
                         string typeName = GetNameFromNewObjMethodReference(methodReference);
                         string componentName = NetOfficeSupportTable.GetLibrary(typeName);
-                        
-                        if ((typeName.StartsWith(_apiName)) && (!typeName.StartsWith("NetOffice.DeveloperToolbox")))
+
+                        if ((typeName.StartsWith(_apiName)) && !typeName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase) &&
+                            CountOf(typeName, ".") > 1 && (!typeName.StartsWith("NetOffice.DeveloperToolbox")))
                         {
                             string[] supportByLibrary = _netOfficeSupportTable.GetTypeCallSupport(callName);
                             result = true;
@@ -851,11 +845,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             foreach (ParameterDefinition itemParameter in methodReference.Parameters)
             {
                 string paramType = itemParameter.ParameterType.FullName;
-                if (paramType.StartsWith(_apiName))
+                if (paramType.StartsWith(_apiName) && CountOf(paramType, ".") > 1 && !paramType.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase))
                 {
                     result = true;
                     Mono.Cecil.Cil.Instruction parameterInstruction = GetParameterInstruction(itemInstruction, i);
-                    if (itemParameter.ParameterType.IsValueType)    
+                    if (itemParameter.ParameterType.IsValueType)
                     {
                         string[] supportByLibrary = _netOfficeSupportTable.GetEnumMemberSupport(itemParameter.ParameterType.FullName, GetOperatorValue(parameterInstruction));
                         if (null != supportByLibrary)
@@ -865,10 +859,10 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                             XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
 
                             string enumMemberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(itemParameter.ParameterType.FullName, GetOperatorValue(parameterInstruction));
-                            if(null != enumMemberName)
+                            if (null != enumMemberName)
                                 supportByNode.Add(new XAttribute("Name", paramType + "." + enumMemberName));
                             else
-                                supportByNode.Add(new XAttribute("Name", paramType + "." +   GetOperatorValue(parameterInstruction).ToString()));
+                                supportByNode.Add(new XAttribute("Name", paramType + "." + GetOperatorValue(parameterInstruction).ToString()));
 
                             foreach (string item in supportByLibrary)
                                 supportByNode.Add(new XElement("Version", item));
@@ -891,6 +885,44 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                             newParameter.Add(supportByNode);
                             newMethodCallNode.Element("Parameters").Add(newParameter);
                         }
+                    }
+                }
+                else
+                {
+                    Instruction prevInstruction = methodInstruction.Previous;
+                    while (prevInstruction.OpCode.Name.StartsWith("ld") || prevInstruction.OpCode.Name.StartsWith("box"))
+                    {
+                        if (null != prevInstruction.Operand)
+                        { 
+                            string targetName = prevInstruction.Operand.ToString();
+                            string[] dumyByLibrary = _netOfficeSupportTable.GetTypeSupport(targetName);
+                            if (null != dumyByLibrary)
+                            {
+                                if (targetName == "NetOffice.WordApi.Enums.WdSaveFormat")
+                                {
+                                    int opValue = Convert.ToInt32(prevInstruction.Previous.Operand);
+                                    string enumMemberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(targetName, opValue);
+                                    if (null != enumMemberName)
+                                    {
+                                        string[] supportByLibrary = _netOfficeSupportTable.GetEnumMemberSupport(targetName, opValue);
+                                        if (null != supportByLibrary)
+                                        {
+                                            XElement newParameter = new XElement("Parameter");
+                                            string componentName = NetOfficeSupportTable.GetLibrary(targetName);
+                                            XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
+                                            supportByNode.Add(new XAttribute("Name", targetName + "." + enumMemberName));
+
+                                            foreach (string item in supportByLibrary)
+                                                supportByNode.Add(new XElement("Version", item));
+                                            newParameter.Add(supportByNode);
+                                            newMethodCallNode.Element("Parameters").Add(newParameter);
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                        prevInstruction = prevInstruction.Previous;
                     }
                 }
                 i++;
@@ -1020,5 +1052,10 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 
         #endregion
 
+        private static int CountOf(string value, string targetExpression)
+        {
+            string[] splitArray = value.Split(new string[] { targetExpression }, StringSplitOptions.RemoveEmptyEntries);
+            return splitArray.Length-1;
+        }
     }
 }

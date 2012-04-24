@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -20,12 +20,8 @@ Public Class Example02
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
-
         ' create excel instance
         Dim application As New Excel.Application()
-
 
         ' ask the application object for Quit method support
         Dim supportQuitMethod As Boolean = application.EntityIsAvailable("Quit")

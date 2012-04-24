@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ref Parameters in Events")]
+[assembly: AssemblyTitle("NetOffice Concept Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ministerium für Staatssicherheit")]
-[assembly: AssemblyProduct("Ref Parameters in Events")]
-[assembly: AssemblyCopyright("Copyright © Ministerium für Staatssicherheit 2011")]
+[assembly: AssemblyCompany("http://netoffice.codeplex.com")]
+[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyCopyright("Copyright ©  2011 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

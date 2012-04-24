@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 
 Public Class Tutorial06
@@ -9,9 +9,6 @@ Public Class Tutorial06
 #Region "ITutorial Member"
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start application
         Dim application As New Excel.Application()

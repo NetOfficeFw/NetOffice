@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Extensibility;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using Word = NetOffice.WordApi;
@@ -42,9 +42,6 @@ namespace SuperAddinCSharp
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-                
                 _application = Factory.CreateObjectFromComProxy(null, Application);
 
                 /*

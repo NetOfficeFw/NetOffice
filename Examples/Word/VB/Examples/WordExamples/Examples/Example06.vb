@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
 Imports NetOffice.OfficeApi.Enums
@@ -59,9 +59,6 @@ Public Class Example06
 #Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start word and turn off msg boxes
         Dim wordApplication As New Word.Application()

@@ -1,6 +1,6 @@
 ﻿Imports System.Reflection
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 
@@ -58,9 +58,6 @@ Public Class Example06
 #Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start outlook
         Dim outlookApplication As New Outlook.Application()

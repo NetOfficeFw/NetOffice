@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using Tests.Core;
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using Outlook = NetOffice.OutlookApi;

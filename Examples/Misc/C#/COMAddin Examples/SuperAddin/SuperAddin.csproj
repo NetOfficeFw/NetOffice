@@ -53,8 +53,8 @@
       <HintPath>..\..\..\..\..\Programme\Gemeinsame Dateien\Microsoft Shared\MSEnv\PublicAssemblies\extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LateBindingApi.Core">
-      <HintPath>..\..\..\..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\..\..\..\Current Binaries\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="MSComctlLibApi">
       <HintPath>..\..\..\..\..\Current Binaries\MSComctlLibApi.dll</HintPath>

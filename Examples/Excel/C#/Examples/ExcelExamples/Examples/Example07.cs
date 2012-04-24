@@ -7,7 +7,7 @@ using System.Text;
 using System.Globalization;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
@@ -28,9 +28,6 @@ namespace ExcelExamplesCS4
             Excel.Application excelApplication = null;
             try
             {           
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 // start excel and turn off msg boxes
                 excelApplication = new Excel.Application();
                 excelApplication.DisplayAlerts = false;

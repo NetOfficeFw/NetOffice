@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -56,9 +56,6 @@ Public Class Example08
 #Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start excel and turn off msg boxes
         Dim excelApplication As New Excel.Application()

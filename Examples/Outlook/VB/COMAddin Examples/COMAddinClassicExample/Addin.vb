@@ -3,7 +3,7 @@ Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 Imports Office = NetOffice.OfficeApi
@@ -32,9 +32,6 @@ Public Class Addin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
 
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
-
             _outlookApplication = New Outlook.Application(Nothing, Application)
 
         Catch ex As Exception
@@ -43,7 +40,6 @@ Public Class Addin
             MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
     End Sub
 
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
@@ -59,7 +55,6 @@ Public Class Addin
             MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
     End Sub
 
     Public Sub OnStartupComplete(ByRef custom As System.Array) Implements IDTExtensibility2.OnStartupComplete

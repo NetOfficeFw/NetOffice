@@ -4,7 +4,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 Imports System.Windows.Forms
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -72,9 +72,6 @@ Public Class TestAddin
 
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
         Try
-
-            ' initialize api
-            LateBindingApi.Core.Factory.Initialize()
 
             _excelApplication = New Excel.Application(Nothing, Application)
 

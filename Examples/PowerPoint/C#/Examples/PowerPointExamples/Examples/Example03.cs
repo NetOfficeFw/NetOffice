@@ -5,7 +5,7 @@ using System.Text;
 using System.Globalization;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
@@ -27,9 +27,6 @@ namespace PowerPointExamplesCS4
             PowerPoint.Application powerApplication = null;
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 // start powerpoint
                 powerApplication = new PowerPoint.Application();
 

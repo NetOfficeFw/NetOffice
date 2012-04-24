@@ -366,7 +366,7 @@ namespace NetOffice.DeveloperToolbox
                     AddDependenciesToList(hostApps);
                     for (int i = 0; i < hostApps.Count; i++)
                         hostApps[i] = hostApps[i] + "Api";
-                    hostApps.Add("LateBindingApi.Core");
+                    hostApps.Add("NetOffice");
                     return hostApps.ToArray();
                 }
             }
@@ -385,9 +385,9 @@ namespace NetOffice.DeveloperToolbox
                     AddDependenciesToList(hostApps);
 
                     if (_projectOptions.Language == ProgrammingLanguage.CSharp)
-                        result += "using LateBindingApi.Core;" + Environment.NewLine;
+                        result += "using NetOffice;" + Environment.NewLine;
                     else
-                        result += "Imports LateBindingApi.Core" + Environment.NewLine;
+                        result += "Imports NetOffice" + Environment.NewLine;
 
                     foreach (string app in hostApps)
                         result += CodeTemplates.Using(_projectOptions.Language).Replace("%Alias%", app).Replace("%Name%", app) + Environment.NewLine;
@@ -412,7 +412,7 @@ namespace NetOffice.DeveloperToolbox
                     {
                         result += CodeTemplates.AssemblyReference.Replace("%Name%", app).Replace("%RealName%", app + "Api") + Environment.NewLine;
                     }
-                    result += CodeTemplates.AssemblyReference.Replace("%Name%", "LateBindingApi").Replace("%RealName%", "LateBindingApi.Core") + Environment.NewLine;
+                    result += CodeTemplates.AssemblyReference.Replace("%Name%", "NetOffice").Replace("%RealName%", "NetOffice") + Environment.NewLine;
 
                     return result;
                 }

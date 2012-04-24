@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi

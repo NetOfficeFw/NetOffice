@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using LateBindingApi.Core;
+using NetOffice;
 using Word = NetOffice.WordApi;
 
 namespace Ref_Parameters_in_Events
@@ -18,7 +18,6 @@ namespace Ref_Parameters_in_Events
         public Form1()
         {
             InitializeComponent();
-            LateBindingApi.Core.Factory.Initialize();
         }
 
         private void button1_Click(object sender, EventArgs e)

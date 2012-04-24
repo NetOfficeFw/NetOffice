@@ -56,9 +56,6 @@ Public Class Addin
 
         Try
 
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
-
             _outlookApplication = New Outlook.Application(Nothing, Application)
 
         Catch ex As Exception

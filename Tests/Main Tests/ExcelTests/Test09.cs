@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Tests.Core;
 using System.Linq;
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 

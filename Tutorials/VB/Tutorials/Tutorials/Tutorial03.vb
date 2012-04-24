@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 
@@ -11,9 +11,6 @@ Public Class Tutorial03
     Public Sub New()
 
         InitializeComponent()
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         Dim changeHandler As Factory.ProxyCountChangedHandler = AddressOf Me.Factory_ProxyCountChanged
         AddHandler Factory.ProxyCountChanged, changeHandler
@@ -127,17 +124,17 @@ Public Class Tutorial03
         ' creates 4 new proxies
         ' the open proxy count is the same as before
 
-        Dim proxyCount As Integer = LateBindingApi.Core.Factory.ProxyCount
+        Dim proxyCount As Integer = NetOffice.Factory.ProxyCount
 
         Dim book As Excel.Workbook = _application.Workbooks.Add()
         book.Worksheets.Add()
 
-        Dim proxyCountAfterCreate As Integer = LateBindingApi.Core.Factory.ProxyCount
+        Dim proxyCountAfterCreate As Integer = NetOffice.Factory.ProxyCount
 
         'dispose all child instances from application
         _application.DisposeChildInstances()
 
-        Dim proxyCountAfterDispose As Integer = LateBindingApi.Core.Factory.ProxyCount
+        Dim proxyCountAfterDispose As Integer = NetOffice.Factory.ProxyCount
 
         Dim message As String = String.Format(
                                        "ProxyCount before create is {0}{3}" +

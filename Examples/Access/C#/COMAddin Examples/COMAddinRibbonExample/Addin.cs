@@ -29,9 +29,6 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 _accessApplication = new Access.Application(null, Application);
             }
             catch (Exception exception)
@@ -177,7 +174,6 @@ namespace COMAddinRibbonExampleCS4
         }
 
         #endregion
-
 
         #region Private Helper
 

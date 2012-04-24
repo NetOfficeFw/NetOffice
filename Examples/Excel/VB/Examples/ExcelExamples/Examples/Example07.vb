@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports VB = NetOffice.VBIDEApi
@@ -13,9 +13,6 @@ Public Class Example07
 #Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         Dim isFailed = False
         Dim workbookFile As String = ""

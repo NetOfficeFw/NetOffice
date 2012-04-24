@@ -8,8 +8,7 @@ namespace $safeprojectname$
     {
         static void Main(string[] args)
         {
-		// Initialize NetOffice
-		LateBindingApi.Core.Factory.Initialize();
+
         }
     }
 }

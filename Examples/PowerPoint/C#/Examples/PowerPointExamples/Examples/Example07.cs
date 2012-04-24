@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using Office = NetOffice.OfficeApi;
@@ -64,14 +64,11 @@ namespace PowerPointExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {        
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
- 
-            Office.CommandBar commandBar;
-            Office.CommandBarButton commandBarBtn;
-
             // start powerpoint
             _powerApplication = new PowerPoint.Application();
+
+            Office.CommandBar commandBar = null;
+            Office.CommandBarButton commandBarBtn = null;
 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = _powerApplication.Presentations.Add(MsoTriState.msoTrue);

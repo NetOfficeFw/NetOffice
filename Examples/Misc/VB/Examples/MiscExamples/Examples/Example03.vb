@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 
 '  in some situations you want check for a running office application instance.
@@ -54,9 +54,6 @@ Public Class Example03
 #Region "UI Trigger"
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         Try
 

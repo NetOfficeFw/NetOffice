@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 Imports Tests.Core

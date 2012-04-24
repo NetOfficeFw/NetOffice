@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
@@ -61,9 +61,6 @@ namespace ExcelExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {            
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;

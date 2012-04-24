@@ -8,7 +8,7 @@ using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;

@@ -930,9 +930,9 @@
             this.labelNetOfficeVersion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelNetOfficeVersion.Location = new System.Drawing.Point(77, 399);
             this.labelNetOfficeVersion.Name = "labelNetOfficeVersion";
-            this.labelNetOfficeVersion.Size = new System.Drawing.Size(224, 13);
+            this.labelNetOfficeVersion.Size = new System.Drawing.Size(190, 13);
             this.labelNetOfficeVersion.TabIndex = 92;
-            this.labelNetOfficeVersion.Text = "Reference Assemblies: NetOffice 1.5.0 / 1.4.x";
+            this.labelNetOfficeVersion.Text = "Reference Assemblies: NetOffice 1.5.1";
             // 
             // OfficeCompatibilityControl
             // 

@@ -10,9 +10,6 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            // init api
-            LateBindingApi.Core.Factory.Initialize();
-
             Console.WriteLine("Write 1 million cells in excel.");
 
             Excel.Application application = new NetOffice.ExcelApi.Application();

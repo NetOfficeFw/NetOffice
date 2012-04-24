@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
@@ -61,9 +61,6 @@ namespace WordExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.Visible = true;            

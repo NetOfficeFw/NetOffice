@@ -13,9 +13,6 @@ namespace $safeprojectname$
         public Form1()
         {
             InitializeComponent();
-
-            /* Initialize NetOffice */
-            LateBindingApi.Core.Factory.Initialize();
         }
     }
 }

@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 Imports System.Reflection
 Imports Extensibility
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
@@ -58,9 +58,6 @@ Public Class Addin
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As Extensibility.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnConnection
 
         Try
-
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
 
             _powerApplication = New PowerPoint.Application(Nothing, Application)
 

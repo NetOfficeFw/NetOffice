@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
 
@@ -60,9 +60,6 @@ namespace OutlookExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start outlook
             Outlook.Application outlookApplication = new Outlook.Application();
 

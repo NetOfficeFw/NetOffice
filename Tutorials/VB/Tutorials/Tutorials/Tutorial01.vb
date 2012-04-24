@@ -12,9 +12,6 @@ Public Class Tutorial01
         '  NetOffice manages COM Proxies for you to avoid any kind of memory leaks
         '  and make sure your application instance removes from process list if you want.
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
-
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False

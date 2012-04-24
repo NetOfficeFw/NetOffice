@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports Word = NetOffice.WordApi

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Reflection;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
@@ -58,15 +58,12 @@ namespace ExcelExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {        
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
-            Office.CommandBar commandBar;
-            Office.CommandBarButton commandBarBtn;
-
             // start excel and turn off msg boxes
             _excelApplication = new Excel.Application();
             _excelApplication.DisplayAlerts = false;
+
+            Office.CommandBar commandBar = null;
+            Office.CommandBarButton commandBarBtn = null;
 
             // add a new workbook
             Excel.Workbook workBook = _excelApplication.Workbooks.Add();

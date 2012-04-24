@@ -36,9 +36,6 @@ namespace COMAddinClassicExampleCS4
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 _accessApplication = new Access.Application(null, Application);
             }
             catch (Exception exception)

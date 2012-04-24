@@ -29,9 +29,6 @@ namespace COMAddinRibbonExampleCS4
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 _powerApplication = new PowerPoint.Application(null, Application);
             }
             catch (Exception exception)

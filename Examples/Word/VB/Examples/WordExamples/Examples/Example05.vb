@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
 Imports VB = NetOffice.VBIDEApi
@@ -13,9 +13,6 @@ Public Class Example05
 #Region "IExample Member"
 
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
-
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
 
         ' start word and turn off msg boxes
         Dim wordApplication As New Word.Application

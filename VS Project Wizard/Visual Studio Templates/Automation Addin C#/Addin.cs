@@ -13,8 +13,6 @@ namespace $safeprojectname$
 $ApplicationField$
         public Addin()
         {
-            /* Initialize NetOffice */
-            LateBindingApi.Core.Factory.Initialize();
         }
         
         #region IDTExtensibility2 Members

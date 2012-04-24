@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
@@ -22,9 +22,6 @@ namespace TutorialsCS4
         {
             // In some situations you want use NetOffice with an existing proxy, its typical for COM Addins.
             // this examples show you how its possible
-
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
 
             // we create a native Excel proxy
             Type excelType = Type.GetTypeFromProgID("Excel.Application");

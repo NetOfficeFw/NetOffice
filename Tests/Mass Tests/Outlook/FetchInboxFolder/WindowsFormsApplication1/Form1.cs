@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums; 
 
@@ -19,9 +19,6 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-
-            // Initialize Api COMObject Support
-            LateBindingApi.Core.Factory.Initialize();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +60,7 @@ namespace WindowsFormsApplication1
             {
                 if (null == item)
                 { 
-                    item = items.GetFirst();
+                    item = items.GetFirst() as COMObject;
                     if (null == item)
                         break;
                 }
@@ -77,7 +74,7 @@ namespace WindowsFormsApplication1
                 }
             
                 item.Dispose();
-                item = items.GetNext();
+                item = items.GetNext() as COMObject;
                 i++;
             } while (null != item);
 

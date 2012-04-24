@@ -15,7 +15,6 @@ Public Class TestAssembly
 
         If IsNothing(_listPackages) Then
 
-            LateBindingApi.Core.Factory.Initialize()
             _listPackages = New List(Of ITestPackage)
             _listPackages.Add(New Test01())
             _listPackages.Add(New Test02())
@@ -26,6 +25,7 @@ Public Class TestAssembly
             _listPackages.Add(New Test07())
             _listPackages.Add(New Test08())
             _listPackages.Add(New Test09())
+
         End If
 
         Return _listPackages.ToArray()

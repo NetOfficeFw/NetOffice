@@ -182,7 +182,7 @@ namespace NetOffice.ProjectWizard
         protected internal void SetAssemblyReferences()
         {
             namesList.Clear();
-            namesList.Add("LateBindingApi.Core");
+            namesList.Add("NetOffice");
 
             foreach (XmlNode item in (_listControls[0] as IWizardControl).SettingsDocument.FirstChild.ChildNodes)
             {
@@ -199,7 +199,6 @@ namespace NetOffice.ProjectWizard
 
             _addDictionary.Add("$assemblyReferences$", references);
             namesList.ToArray();
-
         }
  
         protected internal string GetDefaultUsings()
@@ -207,13 +206,13 @@ namespace NetOffice.ProjectWizard
             string usingItems = "";
             if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
             {
-                usingItems = string.Format("using LateBindingApi.Core;{0}", Environment.NewLine);
+                usingItems = string.Format("using NetOffice;{0}", Environment.NewLine);
                 usingItems += string.Format("using {0} = NetOffice.{0}Api;{1}", "Office", Environment.NewLine);
                 usingItems += string.Format("using NetOffice.{0}Api.Enums;{1}", "Office", Environment.NewLine);
             }
             else
             {
-                usingItems = string.Format("Imports LateBindingApi.Core{0}", Environment.NewLine);
+                usingItems = string.Format("Imports NetOffice{0}", Environment.NewLine);
                 usingItems += string.Format("Imports {0} = NetOffice.{0}Api{1}", "Office", Environment.NewLine);
                 usingItems += string.Format("Imports NetOffice.{0}Api.Enums{1}", "Office", Environment.NewLine);
             }

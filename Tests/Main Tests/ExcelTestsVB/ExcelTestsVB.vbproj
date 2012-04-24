@@ -50,9 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Current Binaries\ExcelApi.dll</HintPath>
     </Reference>
-    <Reference Include="LateBindingApi.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NetOffice, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Current Binaries\LateBindingApi.Core.dll</HintPath>
+      <HintPath>..\..\..\Current Binaries\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

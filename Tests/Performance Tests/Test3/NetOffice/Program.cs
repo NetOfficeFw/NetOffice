@@ -60,7 +60,7 @@ namespace NetOffice
         /// <returns></returns>
         static Excel.Application CreateExcelApplication()
         {
-            LateBindingApi.Core.Factory.Initialize();
+            NetOffice.Factory.Initialize();
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
             excelApplication.Interactive = false;

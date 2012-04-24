@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
@@ -61,9 +61,6 @@ namespace PowerPointExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // start powerpoint and turn off msg boxes
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 	        powerApplication.Visible = MsoTriState.msoTrue;

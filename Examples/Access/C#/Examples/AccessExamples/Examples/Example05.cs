@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.OleDb;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using Office = NetOffice.OfficeApi;
@@ -67,13 +67,10 @@ namespace AccessExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize Api COMObject Support
-            LateBindingApi.Core.Factory.Initialize();
-
-            Office.CommandBarButton commandBarBtn;
-
             // start access
             _accessApplication = new Access.Application();
+
+            Office.CommandBarButton commandBarBtn = null;
 
             // create database name 
             string fileExtension = GetDefaultExtension(_accessApplication);

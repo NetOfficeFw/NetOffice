@@ -5,7 +5,7 @@ using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
@@ -55,9 +55,6 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 _excelApplication = new Excel.Application(null, Application);
             }
             catch (Exception exception)

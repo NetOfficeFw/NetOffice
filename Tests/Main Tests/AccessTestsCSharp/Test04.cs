@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.IO;
 using Tests.Core;
-using LateBindingApi.Core;
+using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using Access = NetOffice.AccessApi;

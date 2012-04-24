@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
@@ -59,14 +59,11 @@ Public Class Example07
 
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
-        ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
+        ' start powerpoint
+        _powerApplication = New PowerPoint.Application()
 
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing
-
-        ' start powerpoint
-        _powerApplication = New PowerPoint.Application()
 
         ' add a new presentation with one new slide
         Dim presentation As PowerPoint.Presentation = _powerApplication.Presentations.Add(MsoTriState.msoTrue)

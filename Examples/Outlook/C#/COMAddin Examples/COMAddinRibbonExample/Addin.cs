@@ -29,9 +29,6 @@ namespace COMAddinRibbonExample
         {
             try
             {
-                // Initialize NetOffice
-                LateBindingApi.Core.Factory.Initialize();
-
                 _outlookApplication = new Outlook.Application(null, Application);
             }
             catch (Exception exception)

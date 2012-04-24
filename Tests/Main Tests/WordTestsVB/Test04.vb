@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports System.Reflection
 Imports System.IO
 Imports Word = NetOffice.WordApi

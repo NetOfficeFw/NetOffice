@@ -63,7 +63,7 @@ Public Class Example05
     Private Sub buttonStartExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles buttonStartExample.Click
 
         ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
+        NetOffice.Factory.Initialize()
 
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing

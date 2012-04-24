@@ -1,4 +1,4 @@
-﻿Imports LateBindingApi.Core
+﻿Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports Tests.Core
 

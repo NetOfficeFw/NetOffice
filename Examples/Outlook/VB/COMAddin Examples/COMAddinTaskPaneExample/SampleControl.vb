@@ -1,7 +1,7 @@
 ﻿Imports System.Reflection
 Imports System.Xml
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Outlook = NetOffice.OutlookApi
 Imports NetOffice.OutlookApi.Enums
 Imports Office = NetOffice.OfficeApi

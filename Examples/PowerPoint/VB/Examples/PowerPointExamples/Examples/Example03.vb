@@ -1,5 +1,5 @@
 ﻿Imports ExampleBase
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
@@ -20,9 +20,6 @@ Public Class Example03
         Dim isFailed = False
 
         Try
-
-            ' Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize()
 
             ' start powerpoint
             powerApplication = New PowerPoint.Application()

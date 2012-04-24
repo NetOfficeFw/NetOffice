@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 
-Imports LateBindingApi.Core
+Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Tests.Core

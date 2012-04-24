@@ -18,7 +18,7 @@ Public Class Example03
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
         ' Initialize NetOffice
-        LateBindingApi.Core.Factory.Initialize()
+        NetOffice.Factory.Initialize()
 
         ' start access 
         Dim accessApplication As New Access.Application()

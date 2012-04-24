@@ -8,7 +8,7 @@ using System.Text;
 using System.Globalization;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 
@@ -22,9 +22,6 @@ namespace WordExamplesCS4
 
         public void RunExample()
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // create simple a csv-file as datasource
             string fileName = string.Format("{0}\\DataSource.csv", _hostApplication.RootDirectory);
              

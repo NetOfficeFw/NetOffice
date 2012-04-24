@@ -8,17 +8,17 @@
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
         'this property allows you to disable any events from Office applications
-        Dim enableEvents As Boolean = LateBindingApi.Core.Settings.EnableEvents
+        Dim enableEvents As Boolean = NetOffice.Settings.EnableEvents
 
 
         ' this property is the common threadculture for accessing Office.
         ' default is en-us(1033)
-        Dim threadCulture As System.Globalization.CultureInfo = LateBindingApi.Core.Settings.ThreadCulture
+        Dim threadCulture As System.Globalization.CultureInfo = NetOffice.Settings.ThreadCulture
 
 
         ' this property allows you to enable NetOffice call Quit() for Application objects automaticly while Dispose()
         ' false by default
-        Dim automaticQuit As Boolean = LateBindingApi.Core.Settings.EnableAutomaticQuit
+        Dim automaticQuit As Boolean = NetOffice.Settings.EnableAutomaticQuit
 
 
         ' this property allows to enable a COM Message filter
@@ -26,17 +26,17 @@
         ' shows a MessageBox("Office Application is waiting for an OLE Task" 
         ' the enabled message filter suspress this dialog, as negativ side effect you cant use
         ' the SendKeys feature to signals an office application any user input
-        Dim messageFilter As Boolean = LateBindingApi.Core.Settings.EnableMessageFilter
+        Dim messageFilter As Boolean = NetOffice.Settings.EnableMessageFilter
 
 
         ' the safemode is a feature that checks automaticly at runtime the methods oder properties you use are
         ' available in current office version. if it doesnt an EntityNotSupportedException was thrown
         ' false by default
-        Dim safeMode As Boolean = LateBindingApi.Core.Settings.EnableSafeMode
+        Dim safeMode As Boolean = NetOffice.Settings.EnableSafeMode
 
 
         'get or set NetOffice logs essential system steps in the NetOffice DebugConsole
-        Dim debugOutput As Boolean = LateBindingApi.Core.Settings.EnableDebugOutput
+        Dim debugOutput As Boolean = NetOffice.Settings.EnableDebugOutput
 
 
         Dim message As String = String.Format("Events enabled:{0}{6}Thread:{1}{6}AutomaticQuit enabled:{2}{6}MessageFilter enabled:{3}{6}SafeMode enabled:{4}{6}DebugOutput enabled:{5}{6}", enableEvents, threadCulture.LCID, automaticQuit, messageFilter, safeMode, debugOutput, Environment.NewLine)

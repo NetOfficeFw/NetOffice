@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
@@ -30,12 +30,8 @@ namespace MiscExamplesCS4
 
         public void RunExample()
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
             // create excel instance
             Excel.Application application = new NetOffice.ExcelApi.Application();
-
 
             // ask the application object for Quit method support
             bool supportQuitMethod = application.EntityIsAvailable("Quit");

@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
 using Office = NetOffice.OfficeApi;
@@ -64,14 +64,11 @@ namespace OutlookExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // Initialize NetOffice
-            LateBindingApi.Core.Factory.Initialize();
-
-            Office.CommandBar commandBar;
-            Office.CommandBarButton commandBarBtn;
-
             // start outlook
             _outlookApplication = new Outlook.Application();
+
+            Office.CommandBar commandBar = null;
+            Office.CommandBarButton commandBarBtn = null;
 
             Outlook._NameSpace outlookNS = _outlookApplication.GetNamespace("MAPI");
             Outlook.MAPIFolder inboxFolder = outlookNS.GetDefaultFolder(OlDefaultFolders.olFolderInbox);

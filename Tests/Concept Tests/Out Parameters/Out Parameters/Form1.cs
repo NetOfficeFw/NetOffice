@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using LateBindingApi.Core;
+using NetOffice;
 using Word = NetOffice.WordApi;
 
 namespace Out_Parameters
@@ -16,8 +16,6 @@ namespace Out_Parameters
         public Form1()
         {
             InitializeComponent();
-
-            LateBindingApi.Core.Factory.Initialize();
 
             Word.Application application = new Word.Application();
             application.Visible = true;
@@ -35,7 +33,6 @@ namespace Out_Parameters
 
             application.Quit();
             application.Dispose();
-
         }
     }
 }

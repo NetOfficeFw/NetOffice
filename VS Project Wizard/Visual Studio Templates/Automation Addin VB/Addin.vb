@@ -11,9 +11,6 @@ Public Class Addin
 $ApplicationField$
 
     Public Sub New()
-
-    ' Initialize NetOffice
-    LateBindingApi.Core.Factory.Initialize()
     
     End Sub
 
