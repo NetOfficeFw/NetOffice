@@ -1,8 +1,0 @@
-﻿[1031]
-labelClassName = Name
-labelDescription = Beschreibung
-[End]
-[1033]
-labelClassName = Name
-labelDescription = Description
-[End]
