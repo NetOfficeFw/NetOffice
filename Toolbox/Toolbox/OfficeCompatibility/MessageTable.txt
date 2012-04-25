@@ -8,6 +8,8 @@ labelVersionOk = Version ist kompatibel
 labelVersionNotOk = Version ist nicht kompatibel
 buttonRefresh = Wiederholen
 buttonReport = Bericht
+labelDebugHint = Prüfen Sie Ihr Assembly immer in der Debug Konfiguration da Optimierungen zu Informationsverlust führen können
+labelNetOfficeVersion = Diese Version von OfficeCompatibility ist kompatibel mit dem NetOffice Release:
 [End]
 [1033]
 buttonSelectAssembly = Choose
@@ -19,4 +21,6 @@ labelVersionOk = Version is compatible
 labelVersionNotOk = Version is not compatible
 buttonRefresh = Refresh
 buttonReport = Report
+labelDebugHint = Check your assembly alywas in the debug version. an optimized release assembly lost some informations.
+labelNetOfficeVersion = This version of OfficeCompatibility is full compatible with the NetOffice Release:
 [End]
