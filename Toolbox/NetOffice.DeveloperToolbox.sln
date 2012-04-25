@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.DeveloperToolbox", "Toolbox\NetOffice.DeveloperToolbox.csproj", "{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.OutlookSecurity", "NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj", "{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

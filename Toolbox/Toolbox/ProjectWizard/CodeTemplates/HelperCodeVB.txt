@@ -1,0 +1,30 @@
+﻿
+#Region "Private Helper Methods"
+
+    ''' <summary>
+    ''' reads text file from ressource
+    ''' </summary>
+    ''' <param name="fileName"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Private Shared Function ReadRessourceFile(ByVal fileName As String) As String 
+
+		Dim assembly As Assembly = GetType(Addin).Assembly
+        Dim ressourceStream As System.IO.Stream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName)
+        If (IsNothing(ressourceStream)) Then
+            Throw (New System.IO.IOException("Error accessing resource Stream."))
+        End If
+
+        Dim textStreamReader As System.IO.StreamReader = New System.IO.StreamReader(ressourceStream)
+        If (IsNothing(textStreamReader)) Then
+            Throw (New System.IO.IOException("Error accessing resource File."))
+        End If
+
+        Dim text As String = textStreamReader.ReadToEnd()
+        ressourceStream.Close()
+        textStreamReader.Close()
+        Return text
+
+    End Function
+
+#End Region

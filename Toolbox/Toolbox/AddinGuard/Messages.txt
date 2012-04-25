@@ -1,0 +1,26 @@
+﻿[1031]
+AddinSubKeysIncrement ={0}\{1}{3}{3} Ein neuer Addin Schlüssel <{2}> wurde erstellt.
+AddinSubKeysDecrement ={0}\{1}{3}{3} Der Addin Schlüssel <{2}> wurde gelöscht.
+AddinSubKeyNameChanged ={0}\{1}{4}{4} Der Addin Schlüssel <{2}> wurde umbenannt zu <{3}>.
+AddinValuesIncrement ={0}\{1}{3}{3}Ein neuer Wert <{2}> wurde hinzugefügt.
+AddinValuesDecrement ={0}\{1}{3}{3}Der Wert <{2}> wurde gelöscht.
+AddinValueNameIsChanged ={0}\{1}{4}{4}Der Name von Wert "{2}" wurde zu "{3}" geändert.
+AddinValueKindIsChanged ={0}\{1}{5}{5}Der WertTyp für den Wert"{2}" wurde von <{3}> zu <{4}> geändert.
+AddinValueIsChanged ={0}\{1}{5}{5}Der Wert "{2}" wurde von <{3}> zu <{4}> geändert.
+AddinLoadBehaviorRestored ={0}\{1}{5}{5}Der Wert "{2}" wurde von <{4}> zu <{3}> zurück gesetzt.
+DisabledItemNew ={0}{2}{2}Das Element {1} wurde deaktiviert.
+DisabledItemDelete ={0}{2}{2}Die Deaktivierung für das Element {1} wurde aufgehoben.
+[End]
+[1033]
+AddinSubKeysIncrement ={0}\{1}{3}{3} A new Addin Key <{2}> has been created.
+AddinSubKeysDecrement ={0}\{1}{3}{3} The Addin Key <{2}> has been deleted.
+AddinSubKeyNameChanged ={0}\{1}{4}{4} The Addin Key <{2}> has been renamed to <{3}>.
+AddinValuesIncrement ={0}\{1}{3}{3}A new Value <{2}> has been created.
+AddinValuesDecrement ={0}\{1}{3}{3}The Value <{2}> has been deleted.
+AddinValueNameIsChanged ={0}\{1}{4}{4}The Name of Value "{2}" has been changed to "{3}".
+AddinValueKindIsChanged ={0}\{1}{5}{5}The ValueType for the Value"{2}" has been changed from <{3}> to <{4}>.
+AddinValueIsChanged ={0}\{1}{5}{5}The Value "{2}" has been changed from <{3}> to <{4}>.
+AddinLoadBehaviorRestored ={0}\{1}{5}{5}The Value "{2}" has been restored from <{4}> to <{3}>.
+DisabledItemNew ={0}{2}{2}The Element {1} has been deactivated.
+DisabledItemDelete ={0}{2}{2}The deactivation for the Elemente {1} has been deleted.
+[End]

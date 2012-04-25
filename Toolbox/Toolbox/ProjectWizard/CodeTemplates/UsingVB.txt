@@ -1,0 +1,2 @@
+﻿Imports %Alias% = NetOffice.%Name%Api
+Imports NetOffice.%Name%Api.Enums

@@ -1,0 +1,6 @@
+﻿[1031]
+labelHeader = Einen Moment bitte...
+[End]
+[1033]
+labelHeader = One moment please...
+[End]
