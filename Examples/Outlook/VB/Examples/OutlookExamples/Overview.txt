@@ -1,0 +1,7 @@
+﻿Example01			- inbox folder 
+Example02			- create task item
+Example03			- send mail
+Example04			- send and recieve
+Example05			- list all contacts
+Example06			- events
+Example07			- customize classic ui

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" >
+  <ribbon>
+    <tabs>
+      <tab id="RibbonAddinSampleTabVB4" label="RibbonAddinSampleTabVB4">
+        <group id="group1" label="Example">
+          <button id="customButton1" label="Button1" imageMso="HappyFace" size="large" onAction="OnAction" />
+          <button id="customButton2" label="Button2" imageMso="HappyFace" size="large" onAction="OnAction" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
