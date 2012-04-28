@@ -20,6 +20,7 @@
         LoadTutorial(New Tutorial08())
         LoadTutorial(New Tutorial09())
         LoadTutorial(New Tutorial10())
+        LoadTutorial(New Tutorial11())
         NavigateToTutorial(0)
 
     End Sub

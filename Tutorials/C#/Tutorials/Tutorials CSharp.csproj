@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tutorials\Tutorial11.cs" />
     <Compile Include="Tutorials\Tutorial10.cs" />
     <Compile Include="Tutorials\Tutorial09.cs" />
     <Compile Include="Tutorials\Tutorial03.cs">

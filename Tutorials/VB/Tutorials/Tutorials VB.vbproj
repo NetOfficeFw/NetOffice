@@ -137,6 +137,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Tutorials\Tutorial11.vb" />
     <Compile Include="Tutorials\Tutorial01.vb" />
     <Compile Include="Tutorials\Tutorial02.vb" />
     <Compile Include="Tutorials\Tutorial03.Designer.vb">
