@@ -17,30 +17,37 @@ $ApplicationField$
         
         #region IDTExtensibility2 Members
 
- 	void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        public void OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        {
+$ApplicationConstruction$
+
+ 		// If the addin not connected during startup, we call OnStartupComplete at hand
+    		if (ConnectMode != ext_ConnectMode.ext_cm_Startup)
+        		OnStartupComplete(ref custom);
+        }
+
+ 	public void OnStartupComplete(ref Array custom)
         {
 $classicUICreateCall$            
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        public void OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
- $ApplicationConstruction$          
-        }
+ 		// If this is not because of host shutdown(removed by user for example) we call OnBeginShutdown at hand
+    		if (RemoveMode != ext_DisconnectMode.ext_dm_HostShutdown)
+        		OnBeginShutdown(ref custom);
 
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
-        {
-$classicUIRemoveCall$
 $ApplicationDestroy$
         }
 
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        public void OnBeginShutdown(ref Array custom)
         {
-           
+$classicUIRemoveCall$             
         }
 
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        public void OnAddInsUpdate(ref Array custom)
         {
-             
+           
         }
 
         #endregion

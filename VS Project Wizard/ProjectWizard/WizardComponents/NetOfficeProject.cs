@@ -197,7 +197,7 @@ namespace NetOffice.ProjectWizard
             foreach (string item in namesList)
                 references += AssemblyReference.Replace("%Name%", item);
 
-            _addDictionary.Add("$assemblyReferences$", references);
+            _addDictionary.Add("$assemblyReferences$", Environment.NewLine + references);
             namesList.ToArray();
         }
  

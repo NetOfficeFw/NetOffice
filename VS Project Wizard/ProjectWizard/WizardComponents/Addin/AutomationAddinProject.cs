@@ -385,7 +385,7 @@ namespace NetOffice.ProjectWizard
                     ribbonImplementCode += Environment.NewLine;
                 _addDictionary.Add("$ribbonImplement$", RibbonImplement);
                 _addDictionary.Add("$ribbonUIImplementMethod$", ribbonImplementCode);
-                _addDictionary.Add("$ribbonFileReference$", RibbonRessourceReference);
+                _addDictionary.Add("$ribbonFileReference$", Environment.NewLine + RibbonRessourceReference);
                 _addDictionary.Add("$helperCode$", RibbonHelperMethod);
             }
             else
@@ -425,8 +425,8 @@ namespace NetOffice.ProjectWizard
         internal override void FinishAction()
         {
             _addDictionary.Clear();
-            _addDictionary.Add("$randomGuid$", Guid.NewGuid().ToString());
-            _addDictionary.Add("$assemblyGuid$", Guid.NewGuid().ToString());
+            _addDictionary.Add("$randomGuid$", Guid.NewGuid().ToString().ToUpper());
+            _addDictionary.Add("$assemblyGuid$", Guid.NewGuid().ToString().ToUpper());
 
             string usingItems = GetDefaultUsings();
 

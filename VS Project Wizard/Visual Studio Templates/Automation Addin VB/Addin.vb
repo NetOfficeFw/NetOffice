@@ -22,12 +22,21 @@ $classicUICreateCall$
 
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
 
- $ApplicationConstruction$  
+ $ApplicationConstruction$
 
+	' If the addin not connected during startup, we call OnStartupComplete at hand
+    	If Not ConnectMode = ext_ConnectMode.ext_cm_Startup Then
+        	OnStartupComplete(custom)
+	End If
     End Sub
 
-    Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
-$classicUIRemoveCall$        
+    Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection        
+ 		
+	'If this is not because of host shutdown(removed by user for example) we call OnBeginShutdown at hand
+    	If Not RemoveMode != ext_DisconnectMode.ext_dm_HostShutdown Then
+        	OnBeginShutdown(ref custom)
+	End If
+
 $ApplicationDestroy$
     End Sub
 
@@ -36,7 +45,7 @@ $ApplicationDestroy$
     End Sub
 
     Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements IDTExtensibility2.OnBeginShutdown
-
+$classicUIRemoveCall$
     End Sub
 
 #End Region

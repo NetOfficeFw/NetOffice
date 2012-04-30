@@ -36,8 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>
-  <ItemGroup> 
-$assemblyReferences$
+  <ItemGroup>$assemblyReferences$
     <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -47,8 +46,7 @@ $assemblyReferences$
   <ItemGroup>
     <Compile Include="Addin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-$ribbonFileReference$
+  </ItemGroup>$ribbonFileReference$
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
