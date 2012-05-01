@@ -131,8 +131,8 @@ namespace NetOffice.ProjectWizard
             EnvDTE.Properties properties = project.Properties;
             EnvDTE.Property property = properties.Item("Copyright");
             property.Value = "© " + DateTime.Now.Year.ToString();
-            Marshal.ReleaseComObject(property);
-            Marshal.ReleaseComObject(properties);
+            //Marshal.ReleaseComObject(property);
+            //Marshal.ReleaseComObject(properties);
         }
 
         private void SetDependencyAssemblyReferences(List<string> list, string name)

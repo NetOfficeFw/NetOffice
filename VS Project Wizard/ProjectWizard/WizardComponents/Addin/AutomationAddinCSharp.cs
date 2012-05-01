@@ -30,7 +30,7 @@ namespace NetOffice.ProjectWizard
             {
                 RemoveRibbonRessourceFile();
                 CopyAssemblies();
-                RefreshProject(project);
+                //RefreshProject(project);
             }
             catch (Exception exception)
             {
