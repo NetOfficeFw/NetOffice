@@ -1,0 +1,2 @@
+﻿using %Name% = NetOffice.%Name%Api;
+using NetOffice. %Name%Api.Enums;

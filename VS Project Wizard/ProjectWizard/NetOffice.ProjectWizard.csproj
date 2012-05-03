@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66D28247-E898-459B-9FEF-74A8BF585E92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.ProjectWizard</RootNamespace>
+    <AssemblyName>NetOffice.ProjectWizard</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>NetOffice.ProjectWizard.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Settings\ImageType.cs" />
+    <Compile Include="Settings\TargetLanguage.cs" />
+    <Compile Include="Settings\TargetProjectType.cs" />
+    <Compile Include="Controls\Translator.cs" />
+    <Compile Include="WizardComponents\Addin\AutomationAddinProject.cs" />
+    <Compile Include="WizardComponents\Console\ConsoleProject.cs" />
+    <Compile Include="WizardComponents\Console\ConsoleProjectCSharp.cs" />
+    <Compile Include="WizardComponents\Console\ConsoleProjectVisualBasic.cs" />
+    <Compile Include="WizardComponents\Library\LibraryProject.cs" />
+    <Compile Include="WizardComponents\Library\LibraryProjectCSharp.cs" />
+    <Compile Include="WizardComponents\Library\LibraryProjectVisualBasic.cs" />
+    <Compile Include="WizardComponents\NetOfficeProject.cs" />
+    <Compile Include="WizardComponents\Addin\AutomationAddinCSharp.cs" />
+    <Compile Include="WizardComponents\Addin\AutomationAddinVisualBasic.cs" />
+    <Compile Include="Dialogs\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IWizardControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HostControl\HostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HostControl\HostControl.Designer.cs">
+      <DependentUpon>HostControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NameControl\NameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NameControl\NameControl.Designer.cs">
+      <DependentUpon>NameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadControl\AddinLoadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadControl\AddinLoadControl.Designer.cs">
+      <DependentUpon>AddinLoadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GuiControl\AddinGuiControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GuiControl\AddinGuiControl.Designer.cs">
+      <DependentUpon>AddinGuiControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SummaryControl\SummaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SummaryControl\SummaryControl.Designer.cs">
+      <DependentUpon>SummaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\TargetProgrammingLanguage.cs" />
+    <Compile Include="Dialogs\WizardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardDialog.Designer.cs">
+      <DependentUpon>WizardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardComponents\WinForms\WindowsFormsProject.cs" />
+    <Compile Include="WizardComponents\WinForms\WindowsFormsProjectCSharp.cs" />
+    <Compile Include="WizardComponents\WinForms\WindowsFormsProjectVisualBasic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HostControl\HostControl.resx">
+      <DependentUpon>HostControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NameControl\NameControl.resx">
+      <DependentUpon>NameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoadControl\AddinLoadControl.resx">
+      <DependentUpon>AddinLoadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GuiControl\AddinGuiControl.resx">
+      <DependentUpon>AddinGuiControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SummaryControl\SummaryControl.resx">
+      <DependentUpon>SummaryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardDialog.resx">
+      <DependentUpon>WizardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RegisterCodeCSharp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\AssemblyReference.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RegisterCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\UsingCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\UsingVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\CreateClassicUIMethodCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\CreateClassicUIMethodVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\RemoveClassicUIMethodCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\RemoveClassicUIMethodVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\CreateUICallCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\CreateUICallCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\RemoveUICallCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\RemoveUICallCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RibbonImplementCodeCSharp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RibbonUISampleFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RibbonImplementCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RibbonImplementCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\RibbonImplementVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\RibbonRessourceReference.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ReadRessourceFileMethodCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ReadRessourceFileMethodVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\WizardDialog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ErrorDialog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LoadControl\AddinLoadControl.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\NameControl\NameControl.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\GuiControl\AddinGuiControl.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationCreateCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationDestroyCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationFieldCodeCSharp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationCreateCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationDestroyCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationFieldCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleCreateCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleCreateCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleDestroyCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleDestroyCodeVisualBasic.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeCSharp.txt" />
+    <EmbeddedResource Include="CodeTemplates\ApplicationMultipleFieldCodeVisualBasic.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetOffice.ProjectWizard.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Programme\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\gacutil.exe" -i $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿[1033]
+labelHeader1 = Click on the button "Start Example" or double click in the list view to run an example
+labelHeader2 = The example code is available in the VS Solution Explorer.
+labelControlsHeader = This area is for examples with an own visual control
+labelWeWantYou = NetOffice is looking for developers/editors/office experts.
+labelQuestions = Questions or Comments?
+[End]
+[1031]
+labelHeader1 = Starten Sie ein Beispiel via Doppelklick oder via Klick auf Schaltfläche "Start Example"
+labelHeader2 = Der Beispielcode ist im VS Solution Explorer verfügbar
+labelControlsHeader = Dieser Bereich ist für Beispiele mit eigener Oberfläche
+labelWeWantYou = NetOffice sucht Programmierer/Editor und Office Experten
+labelQuestions = Fragen oder Anregungen?
+[End]

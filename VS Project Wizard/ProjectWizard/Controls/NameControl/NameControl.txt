@@ -1,0 +1,8 @@
+﻿[German]
+labelClassName = Name
+labelDescription = Beschreibung
+[End]
+[English]
+labelClassName = Name
+labelDescription = Description
+[End]

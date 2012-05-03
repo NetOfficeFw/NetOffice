@@ -1,0 +1,5 @@
+﻿			if(null != _application)
+			{
+				_application.Dispose();
+				_application = null;
+			}

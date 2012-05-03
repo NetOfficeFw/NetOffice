@@ -1,0 +1,3 @@
+﻿  <ItemGroup>
+    <EmbeddedResource Include="RibbonUI.xml" />
+  </ItemGroup>

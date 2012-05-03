@@ -1,0 +1,7 @@
+﻿			' register addin in %OfficeApp%
+			Registry.%HiveKey%.CreateSubKey("%OfficAddinKey%")
+			Dim regKey%OfficeApp% As RegistryKey = Registry.%HiveKey%.OpenSubKey("%OfficAddinKey%", true)
+			regKey%OfficeApp%.SetValue("LoadBehavior", Convert.ToInt32(%LoadBehavior%))
+			regKey%OfficeApp%.SetValue("FriendlyName", "%Name%")
+			regKey%OfficeApp%.SetValue("Description", "%Description%")
+			regKey%OfficeApp%.Close()
