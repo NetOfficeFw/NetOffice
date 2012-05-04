@@ -43,9 +43,6 @@ namespace WordTestsCSharp
                 application = new Word.Application();
                 application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
-                // Initialize Api COMObject Support
-                NetOffice.Factory.Initialize();
-
                 // create simple a csv-file as datasource
                 string fileName = string.Format("{0}\\DataSource.csv", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
                 

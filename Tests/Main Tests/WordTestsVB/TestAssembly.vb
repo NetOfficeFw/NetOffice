@@ -15,6 +15,8 @@ Public Class TestAssembly
 
         If IsNothing(_listPackages) Then
 
+            NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console
+
             _listPackages = New List(Of ITestPackage)
             _listPackages.Add(New Test01())
             _listPackages.Add(New Test02())

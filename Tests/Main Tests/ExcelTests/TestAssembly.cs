@@ -33,6 +33,8 @@ namespace ExcelTestsCSharp
         {
             if (null == _listPackages)
             {
+                NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console;
+
                 _listPackages = new List<ITestPackage>();
                 _listPackages.Add(new Test01());
                 _listPackages.Add(new Test02());

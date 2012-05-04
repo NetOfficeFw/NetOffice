@@ -48,11 +48,16 @@ namespace ExcelTestsCSharp
                 Office.COMAddIn addin = (from a in application.COMAddIns where a.ProgId == "ExcelAddinCSharp.TestAddin" select a).FirstOrDefault();
                 if(null == addin)
                     return new TestResult(false, DateTime.Now.Subtract(startTime), "COMAddin ExcelAddinCSharp.TestAddin not found.", null, "");
-      
-                COMObject addinProxy = new COMObject(null, addin.Object);
-                bool ribbonIsOkay = (bool)Invoker.PropertyGet(addinProxy, "RibbonUIPassed");
-                bool taskPaneIsOkay = (bool)Invoker.PropertyGet(addinProxy, "TaskPanePassed");
-                addinProxy.Dispose();
+
+                bool ribbonIsOkay = false;
+                bool taskPaneIsOkay = false;
+                if (null != addin.Object)
+                { 
+                    COMObject addinProxy = new COMObject(null, addin.Object);
+                    ribbonIsOkay = (bool)Invoker.PropertyGet(addinProxy, "RibbonUIPassed");
+                    taskPaneIsOkay = (bool)Invoker.PropertyGet(addinProxy, "TaskPanePassed");
+                    addinProxy.Dispose();
+                }
 
                 if( ribbonIsOkay && taskPaneIsOkay)
                     return new TestResult(true, DateTime.Now.Subtract(startTime), "", null, "");
