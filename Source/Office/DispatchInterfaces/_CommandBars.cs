@@ -731,7 +731,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetEnabledMso", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -743,7 +743,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetVisibleMso", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -755,7 +755,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetPressedMso", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -767,7 +767,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetLabelMso", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -779,7 +779,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetScreentipMso", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -791,7 +791,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
 			object returnItem = Invoker.MethodReturn(this, "GetSupertipMso", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>

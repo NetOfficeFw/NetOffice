@@ -101,7 +101,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContext);
 			object returnItem = Invoker.MethodReturn(this, "GetPageInfo", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Apply", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

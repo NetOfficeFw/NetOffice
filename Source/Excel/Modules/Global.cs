@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
-namespace NetOffice.ExcelApi
+namespace NetOffice.ExcelApi.GlobalHelperModules
 {
 	///<summary>
-	/// Module Global
+	/// Module GlobalModule
 	///</summary>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsModule)]
-	public static class Global
+	public static class GlobalModule
 	{
 
 		#region Fields
@@ -691,7 +691,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(app, topic);
 			object returnItem = Invoker.MethodReturn(_instance, "DDEInitiate", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>

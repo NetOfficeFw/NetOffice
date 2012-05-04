@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML, purge);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, speakAsync, speakXML);
 			object returnItem = Invoker.MethodReturn(this, "Speak", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

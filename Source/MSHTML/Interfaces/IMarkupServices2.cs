@@ -93,7 +93,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hglobalHTML, dwFlags, pContext, ppContainerResult, pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "ParseGlobalEx", paramsArray);
 			ppContainerResult = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "ValidateElements", paramsArray);
 			ppElemFailBottom = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[4];
 			ppElemFailTop = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[5];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pSegmentList, dwFlags);
 			object returnItem = Invoker.MethodReturn(this, "SaveSegmentsToClipboard", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -120,7 +120,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSO, pSession);
 			object returnItem = Invoker.MethodReturn(this, "WrapDSOandSession", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

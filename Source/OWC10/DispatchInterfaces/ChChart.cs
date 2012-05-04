@@ -952,7 +952,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension);
 			object returnItem = Invoker.MethodReturn(this, "GetDataReference", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -964,7 +964,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension);
 			object returnItem = Invoker.MethodReturn(this, "GetDataSourceIndex", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -991,7 +991,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dataReference">string DataReference</param>
 		/// <param name="seriesByRows">optional bool SeriesByRows = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetSpreadsheetData(string dataReference, bool seriesByRows)
+		public void SetSpreadsheetData(string dataReference, object seriesByRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataReference, seriesByRows);
 			Invoker.Method(this, "SetSpreadsheetData", paramsArray);

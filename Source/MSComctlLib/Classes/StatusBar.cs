@@ -27,9 +27,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass StatusBar 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StatusBar : IStatusBar,IEventBinding
 	{
@@ -108,14 +108,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_PanelClickEventHandler _PanelClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_PanelClickEventHandler PanelClickEvent
 		{
 			add
@@ -130,14 +130,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_PanelDblClickEventHandler _PanelDblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_PanelDblClickEventHandler PanelDblClickEvent
 		{
 			add
@@ -152,14 +152,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -174,14 +174,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -196,14 +196,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -218,14 +218,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_ClickEventHandler ClickEvent
 		{
 			add
@@ -240,14 +240,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -262,14 +262,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -284,14 +284,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -306,14 +306,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -328,14 +328,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -350,14 +350,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -372,14 +372,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event StatusBar_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event StatusBar_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

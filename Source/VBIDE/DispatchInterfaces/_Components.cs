@@ -11,9 +11,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _Components 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Components : COMObject ,IEnumerable<NetOffice.VBIDEApi.Component>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBProject Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public Int32 Count
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VBIDEApi.Component this[object index]
 		{
@@ -159,10 +159,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="component">NetOffice.VBIDEApi.Component Component</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void Remove(NetOffice.VBIDEApi.Component component)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(component);
@@ -170,10 +170,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="componentType">NetOffice.VBIDEApi.Enums.vbext_ComponentType ComponentType</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Component Add(NetOffice.VBIDEApi.Enums.vbext_ComponentType componentType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(componentType);
@@ -183,10 +183,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Component Import(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -200,9 +200,9 @@ namespace NetOffice.VBIDEApi
        #region IEnumerable<NetOffice.VBIDEApi.Component> Member
         
         /// <summary>
-		/// SupportByVersionAttribute VBIDE, 11,12,5.3
+		/// SupportByVersionAttribute VBIDE, 12,14,5.3
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
        public IEnumerator<NetOffice.VBIDEApi.Component> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -215,9 +215,9 @@ namespace NetOffice.VBIDEApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute VBIDE, 11,12,5.3
+		/// SupportByVersionAttribute VBIDE, 12,14,5.3
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

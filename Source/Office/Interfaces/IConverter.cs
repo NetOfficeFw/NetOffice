@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrInitConverter", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrUninitConverter", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrImport", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
 			object returnItem = Invoker.MethodReturn(this, "HrExport", paramsArray);
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "HrGetFormat", paramsArray);
 			pbstrClass = (string)paramsArray[1];
 			ppcp = (NetOffice.OfficeApi.IConverterPreferences)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);
 			object returnItem = Invoker.MethodReturn(this, "HrGetErrorString", paramsArray);
 			pbstrErrorMsg = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

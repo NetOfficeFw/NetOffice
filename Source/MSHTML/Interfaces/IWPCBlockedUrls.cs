@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwCount);
 			object returnItem = Invoker.MethodReturn(this, "GetCount", paramsArray);
 			pdwCount = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -104,7 +104,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(dwIdx, pbstrUrl);
 			object returnItem = Invoker.MethodReturn(this, "GetUrl", paramsArray);
 			pbstrUrl = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -122,7 +122,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				return (Int32)returnItem;
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
 			}
 		}
 

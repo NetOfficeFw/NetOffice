@@ -29,9 +29,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass Slider 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Slider : ISlider,IEventBinding
 	{
@@ -110,14 +110,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_ClickEventHandler ClickEvent
 		{
 			add
@@ -132,14 +132,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -154,14 +154,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -176,14 +176,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -198,14 +198,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -220,14 +220,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -242,14 +242,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -264,14 +264,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_ScrollEventHandler _ScrollEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_ScrollEventHandler ScrollEvent
 		{
 			add
@@ -286,14 +286,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -308,14 +308,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -330,14 +330,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -352,14 +352,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -374,14 +374,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -396,14 +396,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -418,14 +418,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Slider_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Slider_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

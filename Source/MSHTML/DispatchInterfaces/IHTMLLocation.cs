@@ -14,7 +14,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLLocation : COMObject
+	public class IHTMLLocation : DispHTMLLocation
 	{
 		#pragma warning disable
 		#region Type Information
@@ -242,7 +242,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="flag">optional bool flag = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void reload(bool flag)
+		public void reload(object flag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flag);
 			Invoker.Method(this, "reload", paramsArray);
@@ -289,7 +289,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "toString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		#endregion

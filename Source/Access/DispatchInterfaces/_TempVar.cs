@@ -159,7 +159,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
 			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		#endregion

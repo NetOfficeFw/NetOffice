@@ -10,9 +10,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBComponent_Old 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _VBComponent_Old : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public bool Saved
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public string Name
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object Designer
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.CodeModule CodeModule
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Enums.vbext_ComponentType Type
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponents Collection
 		{
 			get
@@ -190,10 +190,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public bool HasOpenDesigner
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Properties Properties
 		{
 			get
@@ -225,10 +225,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void Export(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -236,9 +236,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Window DesignerWindow()
 		{
 			object[] paramsArray = null;
@@ -248,9 +248,9 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void Activate()
 		{
 			object[] paramsArray = null;

@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
 			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		#endregion

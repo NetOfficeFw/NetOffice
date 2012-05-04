@@ -10,9 +10,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface _VBComponents 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _VBComponents : _VBComponents_Old
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="progId">string ProgId</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(progId);
@@ -91,12 +91,12 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		/// <param name="index">optional Int32 index = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
-		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(Int32 index)
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);
@@ -105,11 +105,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent AddMTDesigner()
 		{
 			object[] paramsArray = null;

@@ -189,7 +189,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
 			object returnItem = Invoker.MethodReturn(this, "attachEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -243,7 +243,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -277,7 +277,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		/// <param name="options">optional object options</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn, object options)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn, options);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -304,7 +304,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -319,7 +319,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);

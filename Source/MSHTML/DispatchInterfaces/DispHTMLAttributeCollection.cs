@@ -106,6 +106,39 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 ie8_length
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_length", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
@@ -171,6 +204,58 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
 			object returnItem = Invoker.MethodReturn(this, "removeNamedItem", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="bstrName">string bstrName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_getNamedItem(string bstrName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
+			object returnItem = Invoker.MethodReturn(this, "ie8_getNamedItem", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="pNodeIn">NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pNodeIn);
+			object returnItem = Invoker.MethodReturn(this, "ie8_setNamedItem", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="bstrName">string bstrName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_removeNamedItem(string bstrName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
+			object returnItem = Invoker.MethodReturn(this, "ie8_removeNamedItem", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="index">Int32 index</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute ie8_item(Int32 index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			object returnItem = Invoker.MethodReturn(this, "ie8_item", paramsArray);
 			NetOffice.MSHTMLApi.IHTMLDOMAttribute newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute;
 			return newObject;
 		}

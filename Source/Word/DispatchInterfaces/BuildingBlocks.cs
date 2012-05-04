@@ -166,7 +166,7 @@ namespace NetOffice.WordApi
 		/// <param name="description">object Description</param>
 		/// <param name="insertOptions">optional NetOffice.WordApi.Enums.WdDocPartInsertOptions InsertOptions = 0</param>
 		[SupportByVersionAttribute("Word", 12,14)]
-		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description, NetOffice.WordApi.Enums.WdDocPartInsertOptions insertOptions)
+		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description, object insertOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, description, insertOptions);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

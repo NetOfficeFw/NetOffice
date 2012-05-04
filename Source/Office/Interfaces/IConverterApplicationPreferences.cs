@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plcid);
 			object returnItem = Invoker.MethodReturn(this, "HrGetLcid", paramsArray);
 			plcid = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(phwnd);
 			object returnItem = Invoker.MethodReturn(this, "HrGetHwnd", paramsArray);
 			phwnd = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrApplication);
 			object returnItem = Invoker.MethodReturn(this, "HrGetApplication", paramsArray);
 			pbstrApplication = (string)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
 			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray);
 			pFormat = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

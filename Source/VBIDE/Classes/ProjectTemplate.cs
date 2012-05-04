@@ -14,9 +14,9 @@ namespace NetOffice.VBIDEApi
 
 	///<summary>
 	/// CoClass ProjectTemplate 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ProjectTemplate : _ProjectTemplate
 	{

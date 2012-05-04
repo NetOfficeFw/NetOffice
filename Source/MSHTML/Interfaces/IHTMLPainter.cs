@@ -89,7 +89,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rcBounds, rcUpdate, lDrawFlags, hdc, pvDrawObject);
 			object returnItem = Invoker.MethodReturn(this, "Draw", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size);
 			object returnItem = Invoker.MethodReturn(this, "onresize", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pInfo);
 			object returnItem = Invoker.MethodReturn(this, "GetPainterInfo", paramsArray);
 			pInfo = (_HTML_PAINTER_INFO)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "HitTestPoint", paramsArray);
 			pbHit = (Int32)paramsArray[1];
 			plPartID = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

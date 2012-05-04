@@ -298,6 +298,74 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ie8_href
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_href", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ie8_href", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool isAlternate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "isAlternate", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool isPrefAlternate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "isPrefAlternate", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
@@ -308,11 +376,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addImport(string bstrUrl, Int32 lIndex)
+		public Int32 addImport(string bstrUrl, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addImport", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -325,7 +393,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl);
 			object returnItem = Invoker.MethodReturn(this, "addImport", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -335,11 +403,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		public Int32 addRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addRule", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -353,7 +421,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle);
 			object returnItem = Invoker.MethodReturn(this, "addRule", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -385,11 +453,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		public Int32 addPageRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -403,7 +471,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

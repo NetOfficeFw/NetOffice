@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BC61CBC2-B1B8-4E07-AE99-CE49B06C2792}</ProjectGuid>
+    <ProjectGuid>{45AAEFB9-9582-46D4-8196-EB5EBDBC1B9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.MSComctlLibApi</RootNamespace>
     <AssemblyName>MSComctlLibApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>MSComctlLibApi_v4.0.snk</AssemblyOriginatorKeyFile>

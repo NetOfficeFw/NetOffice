@@ -1059,7 +1059,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
 		/// <param name="fetchType">optional NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType = 2</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption, NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
+		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption, object fetchType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -1088,7 +1088,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption)
+		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -1248,7 +1248,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
 			object returnItem = Invoker.MethodReturn(this, "HyperlinkPart", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1296,7 +1296,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.MethodReturn(this, "getDataMemberName", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1308,7 +1308,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "getDataMemberCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1391,7 +1391,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="eEncoding">optional NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportXML(NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding)
+		public void ExportXML(object eEncoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eEncoding);
 			Invoker.Method(this, "ExportXML", paramsArray);
@@ -1449,7 +1449,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="refreshType">optional NetOffice.OWC10Api.Enums.RefreshType RefreshType = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Refresh(NetOffice.OWC10Api.Enums.RefreshType refreshType)
+		public void Refresh(object refreshType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refreshType);
 			Invoker.Method(this, "Refresh", paramsArray);
@@ -1529,7 +1529,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString);
 			object returnItem = Invoker.MethodReturn(this, "IsValidDAPProvider", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1545,7 +1545,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
 			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1560,7 +1560,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency);
 			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1576,7 +1576,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision);
 			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>

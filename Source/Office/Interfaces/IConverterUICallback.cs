@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uPercentComplete);
 			object returnItem = Invoker.MethodReturn(this, "HrReportProgress", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, uType, pidResult);
 			object returnItem = Invoker.MethodReturn(this, "HrMessageBox", paramsArray);
 			pidResult = (Int32)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, pbstrInput, fPassword);
 			object returnItem = Invoker.MethodReturn(this, "HrInputBox", paramsArray);
 			pbstrInput = (string)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

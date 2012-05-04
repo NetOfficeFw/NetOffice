@@ -326,11 +326,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortOrder">optional NetOffice.OfficeApi.Enums.MsoSortOrder SortOrder = 1</param>
 		/// <param name="alwaysAccurate">optional bool AlwaysAccurate = true</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy, NetOffice.OfficeApi.Enums.MsoSortOrder sortOrder, bool alwaysAccurate)
+		public Int32 Execute(object sortBy, object sortOrder, object alwaysAccurate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy, sortOrder, alwaysAccurate);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -342,7 +342,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -351,11 +351,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortBy">optional NetOffice.OfficeApi.Enums.MsoSortBy SortBy = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy)
+		public Int32 Execute(object sortBy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -365,11 +365,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortOrder">optional NetOffice.OfficeApi.Enums.MsoSortOrder SortOrder = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy, NetOffice.OfficeApi.Enums.MsoSortOrder sortOrder)
+		public Int32 Execute(object sortBy, object sortOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy, sortOrder);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>

@@ -2208,7 +2208,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2228,7 +2228,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2251,7 +2251,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type)
+		public void ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2264,7 +2264,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="legendKey">optional object LegendKey</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey)
+		public void ApplyDataLabels(object type, object legendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2278,7 +2278,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		public void ApplyDataLabels(object type, object legendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2294,7 +2294,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2311,7 +2311,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2329,7 +2329,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showValue">optional object ShowValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2348,7 +2348,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2368,7 +2368,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2460,7 +2460,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">object Type</param>
 		/// <param name="axisGroup">optional NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public object Axes(object type, NetOffice.ExcelApi.Enums.XlAxisGroup axisGroup)
+		public object Axes(object type, object axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
@@ -2921,7 +2921,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		/// <param name="size">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Size = 2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlCopyPictureFormat format, NetOffice.ExcelApi.Enums.XlPictureAppearance size)
+		public void CopyPicture(object appearance, object format, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2944,7 +2944,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
+		public void CopyPicture(object appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2957,7 +2957,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlCopyPictureFormat format)
+		public void CopyPicture(object appearance, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2974,7 +2974,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsRTF">optional object ContainsRTF</param>
 		/// <param name="containsVALU">optional object ContainsVALU</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance size, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
+		public void CreatePublisher(object edition, object appearance, object size, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, size, containsPICT, containsBIFF, containsRTF, containsVALU);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -2999,7 +2999,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
+		public void CreatePublisher(object edition, object appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -3013,7 +3013,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="size">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Size = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance size)
+		public void CreatePublisher(object edition, object appearance, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, size);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -3028,7 +3028,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsPICT">optional object ContainsPICT</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance size, object containsPICT)
+		public void CreatePublisher(object edition, object appearance, object size, object containsPICT)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, size, containsPICT);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -3044,7 +3044,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsBIFF">optional object ContainsBIFF</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance size, object containsPICT, object containsBIFF)
+		public void CreatePublisher(object edition, object appearance, object size, object containsPICT, object containsBIFF)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, size, containsPICT, containsBIFF);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -3061,7 +3061,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsRTF">optional object ContainsRTF</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance size, object containsPICT, object containsBIFF, object containsRTF)
+		public void CreatePublisher(object edition, object appearance, object size, object containsPICT, object containsBIFF, object containsRTF)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, size, containsPICT, containsBIFF, containsRTF);
 			Invoker.Method(this, "CreatePublisher", paramsArray);
@@ -3855,7 +3855,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName, interactive);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3868,7 +3868,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3882,7 +3882,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName);
 			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -4276,7 +4276,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void _ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
+		public void _ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -4301,7 +4301,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void _ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type)
+		public void _ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -4315,7 +4315,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void _ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey)
+		public void _ApplyDataLabels(object type, object legendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -4330,7 +4330,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14)]
-		public void _ApplyDataLabels(NetOffice.ExcelApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		public void _ApplyDataLabels(object type, object legendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);

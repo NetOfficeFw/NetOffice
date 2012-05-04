@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
-namespace NetOffice.PowerPointApi
+namespace NetOffice.PowerPointApi.GlobalHelperModules
 {
 	///<summary>
-	/// Module Global
+	/// Module GlobalModule
 	///</summary>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsModule)]
-	public static class Global
+	public static class GlobalModule
 	{
 
 		#region Fields

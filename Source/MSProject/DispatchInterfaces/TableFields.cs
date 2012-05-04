@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface TableFields 
-	/// SupportByVersion MSProject, 12,14
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableFields : COMObject ,IEnumerable<NetOffice.MSProjectApi.TableField>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.TableField this[object index]
 		{
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -144,7 +144,7 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
@@ -153,8 +153,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="alignTitle">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignTitle = 1</param>
 		/// <param name="before">optional Int32 Before = -1</param>
 		/// <param name="autoWrap">optional bool AutoWrap = true</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle, Int32 before, bool autoWrap)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle, object before, object autoWrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle, before, autoWrap);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -163,11 +163,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
@@ -177,13 +177,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -192,14 +192,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
 		/// <param name="width">optional Int32 Width = 10</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -208,15 +208,15 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
 		/// <param name="width">optional Int32 Width = 10</param>
 		/// <param name="title">optional string Title = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -225,7 +225,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
@@ -233,8 +233,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="title">optional string Title = </param>
 		/// <param name="alignTitle">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignTitle = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -243,7 +243,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
@@ -252,8 +252,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="alignTitle">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignTitle = 1</param>
 		/// <param name="before">optional Int32 Before = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle, Int32 before)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle, before);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -266,9 +266,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.TableField> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
        public IEnumerator<NetOffice.MSProjectApi.TableField> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -281,9 +281,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -194,7 +194,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iWidth, iHeight, pip, crMask);
 			object returnItem = Invoker.MethodReturn(this, "AddBitmap", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>

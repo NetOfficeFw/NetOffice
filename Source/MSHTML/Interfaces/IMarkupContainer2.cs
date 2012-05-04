@@ -91,7 +91,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, ppChangeLog, fForward, fBackward);
 			object returnItem = Invoker.MethodReturn(this, "CreateChangeLog", paramsArray);
 			ppChangeLog = (NetOffice.MSHTMLApi.IHTMLChangeLog)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -107,7 +107,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pChangeSink, pdwCookie);
 			object returnItem = Invoker.MethodReturn(this, "RegisterForDirtyRange", paramsArray);
 			pdwCookie = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie);
 			object returnItem = Invoker.MethodReturn(this, "UnRegisterForDirtyRange", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dwCookie, pIPointerBegin, pIPointerEnd);
 			object returnItem = Invoker.MethodReturn(this, "GetAndClearDirtyRange", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -144,7 +144,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetVersionNumber", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElementMaster);
 			object returnItem = Invoker.MethodReturn(this, "GetMasterElement", paramsArray);
 			ppElementMaster = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

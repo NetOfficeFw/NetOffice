@@ -327,6 +327,103 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public object ie8_nodeValue
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_nodeValue", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ie8_nodeValue", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ie8_value
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_value", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ie8_value", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool ie8_specified
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_specified", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLElement2 ownerElement
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ownerElement", paramsArray);
+				NetOffice.MSHTMLApi.IHTMLElement2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement2;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
@@ -407,7 +504,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "hasChildNodes", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

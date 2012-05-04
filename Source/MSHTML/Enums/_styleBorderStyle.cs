@@ -89,6 +89,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
+		 /// <remarks>11</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleBorderStyleHidden = 11,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleBorderStyle_Max = 2147483647

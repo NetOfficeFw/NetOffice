@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNamespace, bstrUrn, lFlags, pvarFactory);
 			object returnItem = Invoker.MethodReturn(this, "AddNamespace", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -148,7 +148,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.ChSeries Add(Int32 index)
+		public NetOffice.OWC10Api.ChSeries Add(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

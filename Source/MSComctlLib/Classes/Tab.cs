@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass Tab 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Tab : ITab
 	{

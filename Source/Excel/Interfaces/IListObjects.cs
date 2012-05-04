@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
 		/// <param name="destination">optional object Destination</param>
 		[SupportByVersionAttribute("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
+		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="destination">optional object Destination</param>
 		/// <param name="tableStyleName">optional object TableStyleName</param>
 		[SupportByVersionAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination, object tableStyleName)
+		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination, object tableStyleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 11)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source)
+		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="linkSource">object LinkSource</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource)
+		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 11,12,14)]
-		public NetOffice.ExcelApi.ListObject Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
+		public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="destination">optional object Destination</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders, object destination)
+		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders, destination);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source)
+		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
@@ -285,7 +285,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource)
+		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 12,14)]
-		public NetOffice.ExcelApi.ListObject _Add(NetOffice.ExcelApi.Enums.XlListObjectSourceType sourceType, object source, object linkSource, NetOffice.ExcelApi.Enums.XlYesNoGuess xlListObjectHasHeaders)
+		public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, source, linkSource, xlListObjectHasHeaders);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);

@@ -28,9 +28,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass TabStrip 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TabStrip : ITabStrip,IEventBinding
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_ClickEventHandler ClickEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_BeforeClickEventHandler _BeforeClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_BeforeClickEventHandler BeforeClickEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event TabStrip_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event TabStrip_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

@@ -60,7 +60,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_Location(bool allUsers)
+		public string get_Location(object allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
@@ -73,7 +73,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void set_Location(bool allUsers, string value)
+		public void set_Location(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Location", paramsArray, value);
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string Location(bool allUsers)
+		public string Location(object allUsers)
 		{
 			return get_Location(allUsers);
 		}
@@ -96,7 +96,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_Alias(bool allUsers)
+		public string get_Alias(object allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
@@ -109,7 +109,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void set_Alias(bool allUsers, string value)
+		public void set_Alias(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Alias", paramsArray, value);
@@ -121,7 +121,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string Alias(bool allUsers)
+		public string Alias(object allUsers)
 		{
 			return get_Alias(allUsers);
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
+		public NetOffice.WordApi.XSLTransform get_DefaultTransform(object allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void set_DefaultTransform(bool allUsers, NetOffice.WordApi.XSLTransform value)
+		public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "DefaultTransform", paramsArray, value);
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XSLTransform DefaultTransform(bool allUsers)
+		public NetOffice.WordApi.XSLTransform DefaultTransform(object allUsers)
 		{
 			return get_DefaultTransform(allUsers);
 		}

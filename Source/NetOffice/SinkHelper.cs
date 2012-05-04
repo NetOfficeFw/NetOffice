@@ -134,27 +134,27 @@ namespace NetOffice
 
             IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
 
-            if (Settings.EnableDebugOutput)
+            if (Settings.EnableEventDebugOutput)
                 DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".GetConnectionPoint");
 
-            if (Settings.EnableDebugOutput)
+            if (Settings.EnableEventDebugOutput)
                 DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".FindConnectionPoint");
 
             string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
 
-            if (Settings.EnableDebugOutput)
+            if (Settings.EnableEventDebugOutput)
                 DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".FindConnectionPoint sucseed");
 
             if (null == id)
             {
-                if (Settings.EnableDebugOutput)
+                if (Settings.EnableEventDebugOutput)
                     DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".EnumConnectionPoint");
                 id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
-                if (Settings.EnableDebugOutput)
+                if (Settings.EnableEventDebugOutput)
                     DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".EnumConnectionPoint sucseed");
             }
 
-            if (Settings.EnableDebugOutput)
+            if (Settings.EnableEventDebugOutput)
                 DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".GetConnectionPoint passed.");
 
             if (null != id)

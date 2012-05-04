@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plEventInfoFlags);
 			object returnItem = Invoker.MethodReturn(this, "GetEventInfoFlags", paramsArray);
 			plEventInfoFlags = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -100,7 +100,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ppElement);
 			object returnItem = Invoker.MethodReturn(this, "GetEventTarget", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID);
 			object returnItem = Invoker.MethodReturn(this, "SetCursor", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID, pbstrPart);
 			object returnItem = Invoker.MethodReturn(this, "StringFromPartID", paramsArray);
 			pbstrPart = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

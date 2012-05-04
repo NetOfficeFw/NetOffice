@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfAtBreak);
 			object returnItem = Invoker.MethodReturn(this, "IsAtWordBreak", paramsArray);
 			pfAtBreak = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plMP);
 			object returnItem = Invoker.MethodReturn(this, "GetMarkupPosition", paramsArray);
 			plMP = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pContainer, lMP);
 			object returnItem = Invoker.MethodReturn(this, "MoveToMarkupPosition", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(muAction, pIBoundary);
 			object returnItem = Invoker.MethodReturn(this, "MoveUnitBounded", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -145,7 +145,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pRight, pfResult);
 			object returnItem = Invoker.MethodReturn(this, "IsInsideURL", paramsArray);
 			pfResult = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -158,7 +158,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, fAtStart);
 			object returnItem = Invoker.MethodReturn(this, "MoveToContent", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -10,9 +10,9 @@ namespace NetOffice.VBIDEApi
 {
 	///<summary>
 	/// DispatchInterface Property 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Property : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VBIDEApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object Value
 		{
 			get
@@ -102,14 +102,14 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
 		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2, object index3, object index4)
 		{		
@@ -127,14 +127,14 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
 		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
@@ -142,25 +142,25 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
 		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object IndexedValue(object index1, object index2, object index3, object index4)
 		{
 			return get_IndexedValue(index1, index2, index3, index4);
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1)
 		{		
@@ -178,11 +178,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void set_IndexedValue(object index1, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -190,23 +190,23 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
 		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object IndexedValue(object index1)
 		{
 			return get_IndexedValue(index1);
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2)
 		{		
@@ -224,12 +224,12 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void set_IndexedValue(object index1, object index2, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -237,25 +237,25 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object IndexedValue(object index1, object index2)
 		{
 			return get_IndexedValue(index1, index2);
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2, object index3)
 		{		
@@ -273,13 +273,13 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void set_IndexedValue(object index1, object index2, object index3, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3);
@@ -287,23 +287,23 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
 		/// <param name="index1">object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object IndexedValue(object index1, object index2, object index3)
 		{
 			return get_IndexedValue(index1, index2, index3);
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public Int16 NumIndices
 		{
 			get
@@ -315,10 +315,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Application
 		{
@@ -332,10 +332,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Properties Parent
 		{
@@ -349,10 +349,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public string Name
 		{
 			get
@@ -364,10 +364,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -380,10 +380,10 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Properties Collection
 		{
 			get
@@ -396,11 +396,11 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11, 12, 5.3
+		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public object Object
 		{
 			get

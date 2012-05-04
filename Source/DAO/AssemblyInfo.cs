@@ -6,7 +6,7 @@ using NetOffice;
 /*
     Contains the following Type Libraries:
 	Name - Description - SupportByVersion
-	DAO - Microsoft DAO 3.6 Object Library - 3.6
+	DAO - Microsoft DAO 3.6 Object Library - 5
 	DAO - <NoDescription> - 12
 
 */
@@ -19,8 +19,8 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.0")]
-[assembly: AssemblyFileVersion("1.5.1.0")]
+[assembly: AssemblyVersion("1.5.0.1")]
+[assembly: AssemblyFileVersion("1.5.0.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("DAO")]
 [assembly: Guid("00025E01-0000-0000-C000-000000000046")]

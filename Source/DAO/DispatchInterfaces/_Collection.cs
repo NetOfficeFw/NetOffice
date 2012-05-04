@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _Collection 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 5,12
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 5,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Collection : COMObject ,IEnumerable<object>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 5, 12
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 5,12)]
 		public Int16 Count
 		{
 			get
@@ -94,9 +94,9 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 5, 12
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 5,12)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -108,9 +108,9 @@ namespace NetOffice.DAOApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute DAO, 12,3.6
+		/// SupportByVersionAttribute DAO, 5,12
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 5,12)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -123,9 +123,9 @@ namespace NetOffice.DAOApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute DAO, 12,3.6
+		/// SupportByVersionAttribute DAO, 5,12
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 5,12)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

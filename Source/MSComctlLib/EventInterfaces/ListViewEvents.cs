@@ -10,83 +10,83 @@ namespace NetOffice.MSComctlLibApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[ComImport, Guid("BDD1F04A-858B-11D1-B16A-00C0F0283628"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ListViewEvents
 	{
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void BeforeLabelEdit([In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void AfterLabelEdit([In] [Out] ref object cancel, [In] [Out] ref object newString);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void ItemClick([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] object shift);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] object shift);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick();
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void ItemCheck([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 	}

@@ -18,7 +18,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLStyleSheetPage : IHTMLStyleSheetPage
+	public class HTMLStyleSheetPage : DispHTMLStyleSheetPage
 	{
 		#pragma warning disable
 		#region Fields

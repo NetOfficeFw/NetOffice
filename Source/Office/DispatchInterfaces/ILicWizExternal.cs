@@ -258,11 +258,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="date">DateTime date</param>
 		/// <param name="pFormat">optional string pFormat = </param>
 		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public string FormatDate(DateTime date, string pFormat)
+		public string FormatDate(DateTime date, object pFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, pFormat);
 			object returnItem = Invoker.MethodReturn(this, "FormatDate", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date);
 			object returnItem = Invoker.MethodReturn(this, "FormatDate", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -330,7 +330,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrReceipt);
 			object returnItem = Invoker.MethodReturn(this, "SaveReceipt", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -355,7 +355,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrButtons, bstrIcon);
 			object returnItem = Invoker.MethodReturn(this, "MsoAlert", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -368,7 +368,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrKey, fMORW);
 			object returnItem = Invoker.MethodReturn(this, "DepositPidKey", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -424,7 +424,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lMode);
 			object returnItem = Invoker.MethodReturn(this, "VerifyClock", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetConnectedState", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -525,7 +525,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetTextFrame);
 			object returnItem = Invoker.MethodReturn(this, "ValidLinkTarget", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

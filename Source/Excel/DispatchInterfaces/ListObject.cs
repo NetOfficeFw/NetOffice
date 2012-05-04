@@ -666,7 +666,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "Publish", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -704,7 +704,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="iConflictType">optional NetOffice.ExcelApi.Enums.XlListConflict iConflictType = 0</param>
 		[SupportByVersionAttribute("Excel", 11,12,14)]
-		public void UpdateChanges(NetOffice.ExcelApi.Enums.XlListConflict iConflictType)
+		public void UpdateChanges(object iConflictType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iConflictType);
 			Invoker.Method(this, "UpdateChanges", paramsArray);

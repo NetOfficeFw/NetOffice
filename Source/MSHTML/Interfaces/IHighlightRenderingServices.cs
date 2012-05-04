@@ -91,7 +91,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointerStart, pDispPointerEnd, pIRenderStyle, ppISegment);
 			object returnItem = Invoker.MethodReturn(this, "AddSegment", paramsArray);
 			ppISegment = (NetOffice.MSHTMLApi.IHighlightSegment)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment, pDispPointerStart, pDispPointerEnd);
 			object returnItem = Invoker.MethodReturn(this, "MoveSegmentToPointers", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment);
 			object returnItem = Invoker.MethodReturn(this, "RemoveSegment", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

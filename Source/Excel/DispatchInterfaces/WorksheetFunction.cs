@@ -1279,7 +1279,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1292,7 +1292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1306,7 +1306,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1321,7 +1321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1337,7 +1337,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1354,7 +1354,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1372,7 +1372,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1391,7 +1391,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1411,7 +1411,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1432,7 +1432,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1454,7 +1454,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1477,7 +1477,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1501,7 +1501,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1526,7 +1526,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1552,7 +1552,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1579,7 +1579,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1607,7 +1607,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1636,7 +1636,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1666,7 +1666,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1697,7 +1697,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1729,7 +1729,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1762,7 +1762,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1796,7 +1796,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1831,7 +1831,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1867,7 +1867,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1904,7 +1904,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1942,7 +1942,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -1981,7 +1981,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2021,7 +2021,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2062,7 +2062,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Count", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2074,7 +2074,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsNA", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -2086,7 +2086,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsError", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -2127,7 +2127,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2140,7 +2140,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2154,7 +2154,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2169,7 +2169,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2185,7 +2185,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2202,7 +2202,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2220,7 +2220,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2239,7 +2239,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2259,7 +2259,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2280,7 +2280,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2302,7 +2302,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2325,7 +2325,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2349,7 +2349,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2374,7 +2374,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2400,7 +2400,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2427,7 +2427,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2455,7 +2455,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2484,7 +2484,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2514,7 +2514,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2545,7 +2545,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2577,7 +2577,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2610,7 +2610,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2644,7 +2644,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2679,7 +2679,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2715,7 +2715,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2752,7 +2752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2790,7 +2790,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2829,7 +2829,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2869,7 +2869,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2910,7 +2910,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Sum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2951,7 +2951,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2964,7 +2964,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2978,7 +2978,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -2993,7 +2993,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3009,7 +3009,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3026,7 +3026,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3044,7 +3044,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3063,7 +3063,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3083,7 +3083,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3104,7 +3104,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3126,7 +3126,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3149,7 +3149,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3173,7 +3173,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3198,7 +3198,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3224,7 +3224,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3251,7 +3251,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3279,7 +3279,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3308,7 +3308,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3338,7 +3338,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3369,7 +3369,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3401,7 +3401,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3434,7 +3434,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3468,7 +3468,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3503,7 +3503,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3539,7 +3539,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3576,7 +3576,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3614,7 +3614,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3653,7 +3653,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3693,7 +3693,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3734,7 +3734,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Average", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3775,7 +3775,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3788,7 +3788,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3802,7 +3802,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3817,7 +3817,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3833,7 +3833,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3850,7 +3850,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3868,7 +3868,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3887,7 +3887,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3907,7 +3907,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3928,7 +3928,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3950,7 +3950,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3973,7 +3973,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -3997,7 +3997,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4022,7 +4022,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4048,7 +4048,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4075,7 +4075,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4103,7 +4103,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4132,7 +4132,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4162,7 +4162,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4193,7 +4193,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4225,7 +4225,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4258,7 +4258,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4292,7 +4292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4327,7 +4327,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4363,7 +4363,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4400,7 +4400,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4438,7 +4438,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4477,7 +4477,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4517,7 +4517,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4558,7 +4558,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Min", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4599,7 +4599,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4612,7 +4612,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4626,7 +4626,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4641,7 +4641,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4657,7 +4657,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4674,7 +4674,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4692,7 +4692,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4711,7 +4711,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4731,7 +4731,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4752,7 +4752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4774,7 +4774,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4797,7 +4797,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4821,7 +4821,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4846,7 +4846,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4872,7 +4872,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4899,7 +4899,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4927,7 +4927,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4956,7 +4956,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -4986,7 +4986,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5017,7 +5017,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5049,7 +5049,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5082,7 +5082,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5116,7 +5116,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5151,7 +5151,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5187,7 +5187,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5224,7 +5224,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5262,7 +5262,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5301,7 +5301,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5341,7 +5341,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5382,7 +5382,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Max", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5423,7 +5423,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5437,7 +5437,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5452,7 +5452,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5468,7 +5468,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5485,7 +5485,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5503,7 +5503,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5522,7 +5522,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5542,7 +5542,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5563,7 +5563,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5585,7 +5585,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5608,7 +5608,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5632,7 +5632,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5657,7 +5657,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5683,7 +5683,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5710,7 +5710,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5738,7 +5738,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5767,7 +5767,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5797,7 +5797,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5828,7 +5828,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5860,7 +5860,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5893,7 +5893,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5927,7 +5927,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5962,7 +5962,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -5998,7 +5998,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6035,7 +6035,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6073,7 +6073,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6112,7 +6112,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6152,7 +6152,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6193,7 +6193,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Npv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6234,7 +6234,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6247,7 +6247,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6261,7 +6261,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6276,7 +6276,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6292,7 +6292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6309,7 +6309,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6327,7 +6327,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6346,7 +6346,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6366,7 +6366,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6387,7 +6387,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6409,7 +6409,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6432,7 +6432,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6456,7 +6456,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6481,7 +6481,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6507,7 +6507,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6534,7 +6534,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6562,7 +6562,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6591,7 +6591,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6621,7 +6621,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6652,7 +6652,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6684,7 +6684,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6717,7 +6717,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6751,7 +6751,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6786,7 +6786,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6822,7 +6822,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6859,7 +6859,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6897,7 +6897,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6936,7 +6936,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -6976,7 +6976,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7017,7 +7017,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "StDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7030,7 +7030,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Dollar", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7043,7 +7043,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dollar", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7057,7 +7057,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Fixed", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7070,7 +7070,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Fixed", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7084,7 +7084,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Fixed", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7095,7 +7095,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Pi", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7107,7 +7107,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Ln", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7119,7 +7119,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Log10", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7132,7 +7132,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Round", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -7257,7 +7257,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rept", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -7298,7 +7298,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7311,7 +7311,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7325,7 +7325,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7340,7 +7340,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7356,7 +7356,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7373,7 +7373,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7391,7 +7391,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7410,7 +7410,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7430,7 +7430,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7451,7 +7451,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7473,7 +7473,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7496,7 +7496,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7520,7 +7520,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7545,7 +7545,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7571,7 +7571,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7598,7 +7598,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7626,7 +7626,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7655,7 +7655,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7685,7 +7685,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7716,7 +7716,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7748,7 +7748,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7781,7 +7781,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7815,7 +7815,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7850,7 +7850,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7886,7 +7886,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7923,7 +7923,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -7961,7 +7961,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8000,7 +8000,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8040,7 +8040,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8081,7 +8081,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "And", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8122,7 +8122,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8135,7 +8135,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8149,7 +8149,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8164,7 +8164,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8180,7 +8180,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8197,7 +8197,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8215,7 +8215,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8234,7 +8234,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8254,7 +8254,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8275,7 +8275,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8297,7 +8297,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8320,7 +8320,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8344,7 +8344,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8369,7 +8369,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8395,7 +8395,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8422,7 +8422,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8450,7 +8450,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8479,7 +8479,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8509,7 +8509,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8540,7 +8540,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8572,7 +8572,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8605,7 +8605,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8639,7 +8639,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8674,7 +8674,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8710,7 +8710,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8747,7 +8747,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8785,7 +8785,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8824,7 +8824,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8864,7 +8864,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8905,7 +8905,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Or", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -8919,7 +8919,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DCount", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -8933,7 +8933,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DSum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -8947,7 +8947,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DAverage", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -8961,7 +8961,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DMin", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -8975,7 +8975,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DMax", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -8989,7 +8989,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DStDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9030,7 +9030,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9043,7 +9043,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9057,7 +9057,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9072,7 +9072,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9088,7 +9088,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9105,7 +9105,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9123,7 +9123,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9142,7 +9142,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9162,7 +9162,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9183,7 +9183,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9205,7 +9205,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9228,7 +9228,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9252,7 +9252,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9277,7 +9277,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9303,7 +9303,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9330,7 +9330,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9358,7 +9358,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9387,7 +9387,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9417,7 +9417,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9448,7 +9448,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9480,7 +9480,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9513,7 +9513,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9547,7 +9547,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9582,7 +9582,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9618,7 +9618,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9655,7 +9655,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9693,7 +9693,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9732,7 +9732,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9772,7 +9772,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9813,7 +9813,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Var", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9827,7 +9827,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DVar", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -9840,7 +9840,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Text", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -10212,7 +10212,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Pv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10227,7 +10227,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Pv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10243,7 +10243,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Pv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10259,7 +10259,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Fv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10274,7 +10274,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Fv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10290,7 +10290,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Fv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10306,7 +10306,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "NPer", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10321,7 +10321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "NPer", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10337,7 +10337,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "NPer", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10353,7 +10353,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Pmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10368,7 +10368,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Pmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10384,7 +10384,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Pmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10401,7 +10401,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Rate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10416,7 +10416,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10432,7 +10432,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Rate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10449,7 +10449,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Rate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10463,7 +10463,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "MIrr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10476,7 +10476,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Irr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10489,7 +10489,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Irr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10503,7 +10503,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Match", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10517,7 +10517,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Match", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10530,7 +10530,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Weekday", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10543,7 +10543,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Weekday", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10557,7 +10557,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Search", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10571,7 +10571,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Search", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10604,7 +10604,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Atan2", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10616,7 +10616,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Asin", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -10628,7 +10628,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Acos", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11776,7 +11776,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Log", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11789,7 +11789,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Log", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11801,7 +11801,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Proper", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -11813,7 +11813,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Trim", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -11828,7 +11828,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -11843,7 +11843,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Substitute", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -11858,7 +11858,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Substitute", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -11872,7 +11872,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11886,7 +11886,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11898,7 +11898,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsErr", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -11910,7 +11910,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsText", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -11922,7 +11922,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsNumber", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -11936,7 +11936,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Sln", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11951,7 +11951,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Syd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11967,7 +11967,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Ddb", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11983,7 +11983,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Ddb", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -11995,7 +11995,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Clean", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -12007,7 +12007,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "MDeterm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12065,7 +12065,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Ipmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12081,7 +12081,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Ipmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12098,7 +12098,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Ipmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12115,7 +12115,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Ppmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12131,7 +12131,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Ppmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12148,7 +12148,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Ppmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12189,7 +12189,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12202,7 +12202,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12216,7 +12216,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12231,7 +12231,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12247,7 +12247,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12264,7 +12264,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12282,7 +12282,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12301,7 +12301,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12321,7 +12321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12342,7 +12342,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12364,7 +12364,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12387,7 +12387,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12411,7 +12411,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12436,7 +12436,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12462,7 +12462,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12489,7 +12489,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12517,7 +12517,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12546,7 +12546,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12576,7 +12576,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12607,7 +12607,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12639,7 +12639,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12672,7 +12672,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12706,7 +12706,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12741,7 +12741,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12777,7 +12777,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12814,7 +12814,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12852,7 +12852,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12891,7 +12891,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12931,7 +12931,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -12972,7 +12972,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "CountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13013,7 +13013,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13026,7 +13026,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13040,7 +13040,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13055,7 +13055,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13071,7 +13071,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13088,7 +13088,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13106,7 +13106,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13125,7 +13125,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13145,7 +13145,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13166,7 +13166,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13188,7 +13188,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13211,7 +13211,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13235,7 +13235,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13260,7 +13260,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13286,7 +13286,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13313,7 +13313,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13341,7 +13341,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13370,7 +13370,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13400,7 +13400,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13431,7 +13431,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13463,7 +13463,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13496,7 +13496,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13530,7 +13530,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13565,7 +13565,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13601,7 +13601,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13638,7 +13638,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13676,7 +13676,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13715,7 +13715,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13755,7 +13755,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13796,7 +13796,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Product", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13808,7 +13808,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Fact", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13822,7 +13822,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13834,7 +13834,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsNonText", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -13875,7 +13875,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13888,7 +13888,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13902,7 +13902,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13917,7 +13917,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13933,7 +13933,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13950,7 +13950,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13968,7 +13968,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -13987,7 +13987,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14007,7 +14007,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14028,7 +14028,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14050,7 +14050,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14073,7 +14073,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14097,7 +14097,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14122,7 +14122,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14148,7 +14148,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14175,7 +14175,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14203,7 +14203,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14232,7 +14232,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14262,7 +14262,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14293,7 +14293,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14325,7 +14325,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14358,7 +14358,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14392,7 +14392,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14427,7 +14427,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14463,7 +14463,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14500,7 +14500,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14538,7 +14538,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14577,7 +14577,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14617,7 +14617,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14658,7 +14658,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "StDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14699,7 +14699,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14712,7 +14712,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14726,7 +14726,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14741,7 +14741,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14757,7 +14757,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14774,7 +14774,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14792,7 +14792,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14811,7 +14811,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14831,7 +14831,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14852,7 +14852,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14874,7 +14874,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14897,7 +14897,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14921,7 +14921,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14946,7 +14946,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14972,7 +14972,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -14999,7 +14999,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15027,7 +15027,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15056,7 +15056,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15086,7 +15086,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15117,7 +15117,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15149,7 +15149,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15182,7 +15182,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15216,7 +15216,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15251,7 +15251,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15287,7 +15287,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15324,7 +15324,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15362,7 +15362,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15401,7 +15401,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15441,7 +15441,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15482,7 +15482,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "VarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15496,7 +15496,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DStDevP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15510,7 +15510,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DVarP", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15522,7 +15522,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsLogical", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -15536,7 +15536,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DCountA", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15549,7 +15549,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "USDollar", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -15563,7 +15563,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "FindB", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15577,7 +15577,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "FindB", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15591,7 +15591,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SearchB", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15605,7 +15605,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SearchB", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15620,7 +15620,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "ReplaceB", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -15633,7 +15633,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "RoundUp", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15646,7 +15646,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "RoundDown", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15660,7 +15660,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15674,7 +15674,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15688,7 +15688,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Days360", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15702,7 +15702,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Days360", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15720,7 +15720,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Vdb", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15737,7 +15737,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Vdb", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15755,7 +15755,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Vdb", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15796,7 +15796,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15809,7 +15809,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15823,7 +15823,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15838,7 +15838,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15854,7 +15854,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15871,7 +15871,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15889,7 +15889,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15908,7 +15908,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15928,7 +15928,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15949,7 +15949,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15971,7 +15971,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -15994,7 +15994,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16018,7 +16018,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16043,7 +16043,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16069,7 +16069,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16096,7 +16096,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16124,7 +16124,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16153,7 +16153,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16183,7 +16183,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16214,7 +16214,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16246,7 +16246,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16279,7 +16279,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16313,7 +16313,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16348,7 +16348,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16384,7 +16384,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16421,7 +16421,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16459,7 +16459,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16498,7 +16498,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16538,7 +16538,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16579,7 +16579,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Median", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16620,7 +16620,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16633,7 +16633,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16647,7 +16647,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16662,7 +16662,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16678,7 +16678,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16695,7 +16695,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16713,7 +16713,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16732,7 +16732,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16752,7 +16752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16773,7 +16773,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16795,7 +16795,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16818,7 +16818,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16842,7 +16842,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16867,7 +16867,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16893,7 +16893,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16920,7 +16920,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16948,7 +16948,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -16977,7 +16977,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17007,7 +17007,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17038,7 +17038,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17070,7 +17070,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17103,7 +17103,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17137,7 +17137,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17172,7 +17172,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17208,7 +17208,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17245,7 +17245,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17283,7 +17283,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17322,7 +17322,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17362,7 +17362,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17403,7 +17403,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "SumProduct", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17415,7 +17415,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Sinh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17427,7 +17427,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Cosh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17439,7 +17439,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Tanh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17451,7 +17451,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Asinh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17463,7 +17463,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Acosh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17475,7 +17475,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Atanh", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17513,7 +17513,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Db", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17529,7 +17529,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Db", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17591,7 +17591,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17604,7 +17604,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17618,7 +17618,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17633,7 +17633,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17649,7 +17649,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17666,7 +17666,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17684,7 +17684,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17703,7 +17703,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17723,7 +17723,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17744,7 +17744,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17766,7 +17766,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17789,7 +17789,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17813,7 +17813,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17838,7 +17838,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17864,7 +17864,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17891,7 +17891,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17919,7 +17919,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17948,7 +17948,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -17978,7 +17978,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18009,7 +18009,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18041,7 +18041,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18074,7 +18074,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18108,7 +18108,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18143,7 +18143,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18179,7 +18179,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18216,7 +18216,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18254,7 +18254,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18293,7 +18293,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18333,7 +18333,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18374,7 +18374,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "AveDev", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18390,7 +18390,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "BetaDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18405,7 +18405,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "BetaDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18421,7 +18421,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BetaDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18433,7 +18433,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "GammaLn", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18449,7 +18449,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "BetaInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18464,7 +18464,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "BetaInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18480,7 +18480,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BetaInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18495,7 +18495,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "BinomDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18508,7 +18508,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18521,7 +18521,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18534,7 +18534,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Combin", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18548,7 +18548,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Confidence", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18562,7 +18562,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CritBinom", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18574,7 +18574,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Even", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18588,7 +18588,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "ExponDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18602,7 +18602,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "FDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18616,7 +18616,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "FInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18628,7 +18628,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Fisher", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18640,7 +18640,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "FisherInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18653,7 +18653,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Floor", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18668,7 +18668,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "GammaDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18682,7 +18682,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "GammaInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18695,7 +18695,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Ceiling", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18710,7 +18710,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "HypGeomDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18724,7 +18724,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "LogNormDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18738,7 +18738,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "LogInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18752,7 +18752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "NegBinomDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18767,7 +18767,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "NormDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18779,7 +18779,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "NormSDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18793,7 +18793,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "NormInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18805,7 +18805,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "NormSInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18819,7 +18819,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Standardize", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18831,7 +18831,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Odd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18844,7 +18844,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Permut", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18858,7 +18858,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Poisson", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18872,7 +18872,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "TDist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18887,7 +18887,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Weibull", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18900,7 +18900,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumXMY2", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18913,7 +18913,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumX2MY2", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18926,7 +18926,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumX2PY2", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18939,7 +18939,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiTest", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18952,7 +18952,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Correl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18965,7 +18965,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Covar", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18979,7 +18979,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Forecast", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -18992,7 +18992,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "FTest", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19005,7 +19005,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Intercept", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19018,7 +19018,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Pearson", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19031,7 +19031,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "RSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19044,7 +19044,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "StEyx", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19057,7 +19057,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Slope", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19072,7 +19072,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "TTest", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19087,7 +19087,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Prob", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19102,7 +19102,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Prob", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19143,7 +19143,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19156,7 +19156,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19170,7 +19170,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19185,7 +19185,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19201,7 +19201,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19218,7 +19218,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19236,7 +19236,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19255,7 +19255,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19275,7 +19275,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19296,7 +19296,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19318,7 +19318,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19341,7 +19341,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19365,7 +19365,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19390,7 +19390,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19416,7 +19416,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19443,7 +19443,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19471,7 +19471,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19500,7 +19500,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19530,7 +19530,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19561,7 +19561,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19593,7 +19593,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19626,7 +19626,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19660,7 +19660,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19695,7 +19695,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19731,7 +19731,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19768,7 +19768,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19806,7 +19806,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19845,7 +19845,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19885,7 +19885,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19926,7 +19926,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "DevSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19967,7 +19967,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19980,7 +19980,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -19994,7 +19994,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20009,7 +20009,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20025,7 +20025,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20042,7 +20042,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20060,7 +20060,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20079,7 +20079,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20099,7 +20099,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20120,7 +20120,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20142,7 +20142,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20165,7 +20165,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20189,7 +20189,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20214,7 +20214,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20240,7 +20240,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20267,7 +20267,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20295,7 +20295,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20324,7 +20324,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20354,7 +20354,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20385,7 +20385,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20417,7 +20417,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20450,7 +20450,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20484,7 +20484,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20519,7 +20519,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20555,7 +20555,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20592,7 +20592,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20630,7 +20630,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20669,7 +20669,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20709,7 +20709,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20750,7 +20750,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "GeoMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20791,7 +20791,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20804,7 +20804,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20818,7 +20818,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20833,7 +20833,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20849,7 +20849,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20866,7 +20866,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20884,7 +20884,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20903,7 +20903,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20923,7 +20923,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20944,7 +20944,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20966,7 +20966,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -20989,7 +20989,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21013,7 +21013,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21038,7 +21038,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21064,7 +21064,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21091,7 +21091,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21119,7 +21119,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21148,7 +21148,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21178,7 +21178,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21209,7 +21209,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21241,7 +21241,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21274,7 +21274,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21308,7 +21308,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21343,7 +21343,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21379,7 +21379,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21416,7 +21416,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21454,7 +21454,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21493,7 +21493,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21533,7 +21533,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21574,7 +21574,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "HarMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21615,7 +21615,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21628,7 +21628,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21642,7 +21642,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21657,7 +21657,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21673,7 +21673,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21690,7 +21690,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21708,7 +21708,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21727,7 +21727,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21747,7 +21747,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21768,7 +21768,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21790,7 +21790,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21813,7 +21813,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21837,7 +21837,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21862,7 +21862,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21888,7 +21888,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21915,7 +21915,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21943,7 +21943,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -21972,7 +21972,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22002,7 +22002,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22033,7 +22033,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22065,7 +22065,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22098,7 +22098,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22132,7 +22132,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22167,7 +22167,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22203,7 +22203,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22240,7 +22240,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22278,7 +22278,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22317,7 +22317,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22357,7 +22357,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22398,7 +22398,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "SumSq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22439,7 +22439,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22452,7 +22452,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22466,7 +22466,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22481,7 +22481,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22497,7 +22497,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22514,7 +22514,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22532,7 +22532,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22551,7 +22551,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22571,7 +22571,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22592,7 +22592,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22614,7 +22614,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22637,7 +22637,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22661,7 +22661,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22686,7 +22686,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22712,7 +22712,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22739,7 +22739,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22767,7 +22767,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22796,7 +22796,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22826,7 +22826,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22857,7 +22857,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22889,7 +22889,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22922,7 +22922,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22956,7 +22956,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -22991,7 +22991,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23027,7 +23027,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23064,7 +23064,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23102,7 +23102,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23141,7 +23141,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23181,7 +23181,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23222,7 +23222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Kurt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23263,7 +23263,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23276,7 +23276,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23290,7 +23290,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23305,7 +23305,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23321,7 +23321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23338,7 +23338,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23356,7 +23356,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23375,7 +23375,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23395,7 +23395,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23416,7 +23416,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23438,7 +23438,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23461,7 +23461,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23485,7 +23485,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23510,7 +23510,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23536,7 +23536,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23563,7 +23563,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23591,7 +23591,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23620,7 +23620,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23650,7 +23650,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23681,7 +23681,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23713,7 +23713,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23746,7 +23746,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23780,7 +23780,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23815,7 +23815,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23851,7 +23851,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23888,7 +23888,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23926,7 +23926,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -23965,7 +23965,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24005,7 +24005,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24046,7 +24046,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Skew", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24060,7 +24060,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "ZTest", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24074,7 +24074,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ZTest", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24087,7 +24087,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Large", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24100,7 +24100,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Small", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24113,7 +24113,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Quartile", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24126,7 +24126,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Percentile", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24140,7 +24140,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24154,7 +24154,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24195,7 +24195,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24208,7 +24208,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24222,7 +24222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24237,7 +24237,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24253,7 +24253,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24270,7 +24270,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24288,7 +24288,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24307,7 +24307,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24327,7 +24327,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24348,7 +24348,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24370,7 +24370,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24393,7 +24393,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24417,7 +24417,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24442,7 +24442,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24468,7 +24468,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24495,7 +24495,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24523,7 +24523,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24552,7 +24552,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24582,7 +24582,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24613,7 +24613,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24645,7 +24645,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24678,7 +24678,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24712,7 +24712,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24747,7 +24747,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24783,7 +24783,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24820,7 +24820,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24858,7 +24858,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24897,7 +24897,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24937,7 +24937,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24978,7 +24978,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Mode", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -24991,7 +24991,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "TrimMean", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25004,7 +25004,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "TInv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25017,7 +25017,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Power", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25029,7 +25029,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Radians", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25041,7 +25041,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Degrees", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25082,7 +25082,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25096,7 +25096,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25111,7 +25111,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25127,7 +25127,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25144,7 +25144,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25162,7 +25162,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25181,7 +25181,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25201,7 +25201,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25222,7 +25222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25244,7 +25244,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25267,7 +25267,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25291,7 +25291,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25316,7 +25316,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25342,7 +25342,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25369,7 +25369,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25397,7 +25397,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25426,7 +25426,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25456,7 +25456,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25487,7 +25487,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25519,7 +25519,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25552,7 +25552,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25586,7 +25586,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25621,7 +25621,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25657,7 +25657,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25694,7 +25694,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25732,7 +25732,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25771,7 +25771,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25811,7 +25811,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25852,7 +25852,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25866,7 +25866,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumIf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25880,7 +25880,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "SumIf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25893,7 +25893,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "CountIf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25905,7 +25905,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "CountBlank", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25920,7 +25920,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Ispmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -25933,7 +25933,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Roman", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -25946,7 +25946,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Roman", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -25958,7 +25958,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Asc", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -25970,7 +25970,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dbcs", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -25982,7 +25982,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Phonetic", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -25994,7 +25994,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "BahtText", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26007,7 +26007,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiDayOfWeek", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26020,7 +26020,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiDigit", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26033,7 +26033,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiMonthOfYear", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26046,7 +26046,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiNumSound", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26059,7 +26059,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiNumString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -26072,7 +26072,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiStringLength", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -26085,7 +26085,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsThaiDigit", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -26098,7 +26098,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "RoundBahtDown", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -26111,7 +26111,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "RoundBahtUp", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -26124,7 +26124,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ThaiYear", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -27158,7 +27158,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Hex2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27171,7 +27171,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Hex2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27183,7 +27183,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Hex2Dec", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27196,7 +27196,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Hex2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27209,7 +27209,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Hex2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27222,7 +27222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27235,7 +27235,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27248,7 +27248,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27261,7 +27261,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27274,7 +27274,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27287,7 +27287,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Dec2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27300,7 +27300,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Oct2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27313,7 +27313,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Oct2Bin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27326,7 +27326,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Oct2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27339,7 +27339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Oct2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27351,7 +27351,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Oct2Dec", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27363,7 +27363,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Bin2Dec", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27376,7 +27376,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Bin2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27389,7 +27389,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Bin2Oct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27402,7 +27402,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Bin2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27415,7 +27415,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Bin2Hex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27428,7 +27428,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ImSub", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27441,7 +27441,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ImDiv", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27454,7 +27454,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ImPower", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27466,7 +27466,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImAbs", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27478,7 +27478,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImSqrt", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27490,7 +27490,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImLn", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27502,7 +27502,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImLog2", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27514,7 +27514,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImLog10", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27526,7 +27526,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImSin", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27538,7 +27538,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImCos", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27550,7 +27550,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImExp", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27562,7 +27562,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImArgument", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27574,7 +27574,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImConjugate", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27586,7 +27586,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Imaginary", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -27598,7 +27598,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImReal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -27612,7 +27612,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Complex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27626,7 +27626,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Complex", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27667,7 +27667,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27680,7 +27680,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27694,7 +27694,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27709,7 +27709,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27725,7 +27725,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27742,7 +27742,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27760,7 +27760,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27779,7 +27779,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27799,7 +27799,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27820,7 +27820,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27842,7 +27842,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27865,7 +27865,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27889,7 +27889,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27914,7 +27914,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27940,7 +27940,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27967,7 +27967,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -27995,7 +27995,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28024,7 +28024,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28054,7 +28054,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28085,7 +28085,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28117,7 +28117,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28150,7 +28150,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28184,7 +28184,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28219,7 +28219,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28255,7 +28255,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28292,7 +28292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28330,7 +28330,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28369,7 +28369,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28409,7 +28409,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28450,7 +28450,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "ImSum", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28491,7 +28491,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28504,7 +28504,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28518,7 +28518,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28533,7 +28533,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28549,7 +28549,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28566,7 +28566,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28584,7 +28584,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28603,7 +28603,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28623,7 +28623,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28644,7 +28644,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28666,7 +28666,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28689,7 +28689,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28713,7 +28713,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28738,7 +28738,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28764,7 +28764,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28791,7 +28791,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28819,7 +28819,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28848,7 +28848,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28878,7 +28878,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28909,7 +28909,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28941,7 +28941,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -28974,7 +28974,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29008,7 +29008,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29043,7 +29043,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29079,7 +29079,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29116,7 +29116,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29154,7 +29154,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29193,7 +29193,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29233,7 +29233,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29274,7 +29274,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "ImProduct", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -29289,7 +29289,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "SeriesSum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29301,7 +29301,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "FactDouble", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29313,7 +29313,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "SqrtPi", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29326,7 +29326,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Quotient", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29339,7 +29339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Delta", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29352,7 +29352,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Delta", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29365,7 +29365,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "GeStep", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29378,7 +29378,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "GeStep", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29390,7 +29390,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsEven", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -29402,7 +29402,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "IsOdd", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -29415,7 +29415,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "MRound", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29428,7 +29428,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Erf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29441,7 +29441,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Erf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29453,7 +29453,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ErfC", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29466,7 +29466,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "BesselJ", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29479,7 +29479,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "BesselK", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29492,7 +29492,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "BesselY", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29505,7 +29505,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "BesselI", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29519,7 +29519,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Xirr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29533,7 +29533,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Xirr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29546,7 +29546,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Xnpv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29563,7 +29563,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "PriceMat", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29580,7 +29580,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "PriceMat", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29597,7 +29597,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "YieldMat", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29614,7 +29614,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "YieldMat", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29630,7 +29630,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "IntRate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29646,7 +29646,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "IntRate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29662,7 +29662,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Received", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29678,7 +29678,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Received", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29694,7 +29694,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Disc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29710,7 +29710,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Disc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29726,7 +29726,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "PriceDisc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29742,7 +29742,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "PriceDisc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29758,7 +29758,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "YieldDisc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29774,7 +29774,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "YieldDisc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29788,7 +29788,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "TBillEq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29802,7 +29802,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "TBillEq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29816,7 +29816,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "TBillPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29830,7 +29830,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "TBillPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29844,7 +29844,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "TBillYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29858,7 +29858,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "TBillYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29876,7 +29876,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Price", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29894,7 +29894,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Price", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29907,7 +29907,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "DollarDe", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29920,7 +29920,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "DollarFr", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29933,7 +29933,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Nominal", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29946,7 +29946,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Effect", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29963,7 +29963,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "CumPrinc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29980,7 +29980,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "CumIPmt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -29993,7 +29993,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "EDate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30006,7 +30006,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "EoMonth", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30020,7 +30020,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "YearFrac", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30034,7 +30034,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "YearFrac", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30049,7 +30049,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupDayBs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30064,7 +30064,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupDayBs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30079,7 +30079,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupDays", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30094,7 +30094,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupDays", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30109,7 +30109,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupDaysNc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30124,7 +30124,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupDaysNc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30139,7 +30139,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupNcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30154,7 +30154,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupNcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30169,7 +30169,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupNum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30184,7 +30184,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupNum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30199,7 +30199,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CoupPcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30214,7 +30214,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CoupPcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30231,7 +30231,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Duration", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30248,7 +30248,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Duration", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30265,7 +30265,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "MDuration", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30282,7 +30282,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "MDuration", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30301,7 +30301,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "OddLPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30320,7 +30320,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "OddLPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30339,7 +30339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "OddLYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30358,7 +30358,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "OddLYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30378,7 +30378,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "OddFPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30398,7 +30398,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "OddFPrice", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30418,7 +30418,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "OddFYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30438,7 +30438,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "OddFYield", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30451,7 +30451,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "RandBetween", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30464,7 +30464,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "WeekNum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30477,7 +30477,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "WeekNum", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30495,7 +30495,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "AmorDegrc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30513,7 +30513,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "AmorDegrc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30531,7 +30531,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "AmorLinc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30549,7 +30549,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "AmorLinc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30563,7 +30563,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Convert", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30581,7 +30581,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "AccrInt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30599,7 +30599,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "AccrInt", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30615,7 +30615,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "AccrIntM", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30631,7 +30631,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "AccrIntM", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30645,7 +30645,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "WorkDay", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30659,7 +30659,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "WorkDay", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30673,7 +30673,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "NetworkDays", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30687,7 +30687,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "NetworkDays", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30728,7 +30728,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30741,7 +30741,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30755,7 +30755,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30770,7 +30770,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30786,7 +30786,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30803,7 +30803,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30821,7 +30821,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30840,7 +30840,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30860,7 +30860,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30881,7 +30881,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30903,7 +30903,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30926,7 +30926,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30950,7 +30950,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -30975,7 +30975,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31001,7 +31001,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31028,7 +31028,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31056,7 +31056,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31085,7 +31085,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31115,7 +31115,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31146,7 +31146,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31178,7 +31178,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31211,7 +31211,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31245,7 +31245,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31280,7 +31280,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31316,7 +31316,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31353,7 +31353,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31391,7 +31391,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31430,7 +31430,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31470,7 +31470,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31511,7 +31511,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Gcd", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31552,7 +31552,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31565,7 +31565,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31579,7 +31579,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31594,7 +31594,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31610,7 +31610,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31627,7 +31627,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31645,7 +31645,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31664,7 +31664,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31684,7 +31684,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31705,7 +31705,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31727,7 +31727,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31750,7 +31750,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31774,7 +31774,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31799,7 +31799,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31825,7 +31825,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31852,7 +31852,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31880,7 +31880,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31909,7 +31909,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31939,7 +31939,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -31970,7 +31970,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32002,7 +32002,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32035,7 +32035,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32069,7 +32069,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32104,7 +32104,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32140,7 +32140,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32177,7 +32177,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32215,7 +32215,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32254,7 +32254,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32294,7 +32294,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32335,7 +32335,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "MultiNomial", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32376,7 +32376,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32389,7 +32389,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32403,7 +32403,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32418,7 +32418,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32434,7 +32434,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32451,7 +32451,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32469,7 +32469,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32488,7 +32488,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32508,7 +32508,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32529,7 +32529,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32551,7 +32551,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32574,7 +32574,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32598,7 +32598,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32623,7 +32623,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32649,7 +32649,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32676,7 +32676,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32704,7 +32704,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32733,7 +32733,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32763,7 +32763,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32794,7 +32794,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32826,7 +32826,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32859,7 +32859,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32893,7 +32893,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32928,7 +32928,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -32964,7 +32964,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33001,7 +33001,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33039,7 +33039,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33078,7 +33078,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33118,7 +33118,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33159,7 +33159,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Lcm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33172,7 +33172,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "FVSchedule", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33212,7 +33212,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33227,7 +33227,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33243,7 +33243,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33260,7 +33260,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33278,7 +33278,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33297,7 +33297,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33317,7 +33317,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33338,7 +33338,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33360,7 +33360,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33383,7 +33383,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33407,7 +33407,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33432,7 +33432,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33458,7 +33458,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33485,7 +33485,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33513,7 +33513,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33542,7 +33542,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33572,7 +33572,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33603,7 +33603,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33635,7 +33635,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33668,7 +33668,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33702,7 +33702,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33737,7 +33737,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33773,7 +33773,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33810,7 +33810,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33848,7 +33848,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33887,7 +33887,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33927,7 +33927,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "SumIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33968,7 +33968,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33982,7 +33982,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -33997,7 +33997,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34013,7 +34013,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34030,7 +34030,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34048,7 +34048,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34067,7 +34067,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34087,7 +34087,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34108,7 +34108,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34130,7 +34130,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34153,7 +34153,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34177,7 +34177,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34202,7 +34202,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34228,7 +34228,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34255,7 +34255,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34283,7 +34283,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34312,7 +34312,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34342,7 +34342,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34373,7 +34373,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34405,7 +34405,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34438,7 +34438,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34472,7 +34472,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34507,7 +34507,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34543,7 +34543,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34580,7 +34580,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34618,7 +34618,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34657,7 +34657,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34697,7 +34697,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34738,7 +34738,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "CountIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34752,7 +34752,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "AverageIf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34766,7 +34766,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "AverageIf", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34806,7 +34806,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34821,7 +34821,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34837,7 +34837,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34854,7 +34854,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34872,7 +34872,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34891,7 +34891,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34911,7 +34911,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34932,7 +34932,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34954,7 +34954,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -34977,7 +34977,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35001,7 +35001,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35026,7 +35026,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35052,7 +35052,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35079,7 +35079,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35107,7 +35107,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35136,7 +35136,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35166,7 +35166,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35197,7 +35197,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35229,7 +35229,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35262,7 +35262,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35296,7 +35296,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35331,7 +35331,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35367,7 +35367,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35404,7 +35404,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35442,7 +35442,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35481,7 +35481,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35521,7 +35521,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "AverageIfs", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35583,7 +35583,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35598,7 +35598,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35614,7 +35614,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35631,7 +35631,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35649,7 +35649,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35668,7 +35668,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35688,7 +35688,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35709,7 +35709,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35731,7 +35731,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35754,7 +35754,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35778,7 +35778,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35803,7 +35803,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35829,7 +35829,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35856,7 +35856,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35884,7 +35884,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35913,7 +35913,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35943,7 +35943,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -35974,7 +35974,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36006,7 +36006,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36039,7 +36039,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36073,7 +36073,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36108,7 +36108,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36144,7 +36144,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36181,7 +36181,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36219,7 +36219,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36258,7 +36258,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36298,7 +36298,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36339,7 +36339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Aggregate", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36353,7 +36353,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Confidence_Norm", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36367,7 +36367,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Confidence_T", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36380,7 +36380,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiSq_Test", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36393,7 +36393,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "F_Test", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36406,7 +36406,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Covariance_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36419,7 +36419,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Covariance_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36433,7 +36433,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Expon_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36448,7 +36448,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Gamma_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -36462,7 +36462,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Gamma_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37567,7 +37567,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37580,7 +37580,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37594,7 +37594,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37609,7 +37609,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37625,7 +37625,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37642,7 +37642,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37660,7 +37660,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37679,7 +37679,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37699,7 +37699,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37720,7 +37720,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37742,7 +37742,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37765,7 +37765,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37789,7 +37789,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37814,7 +37814,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37840,7 +37840,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37867,7 +37867,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37895,7 +37895,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37924,7 +37924,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37954,7 +37954,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -37985,7 +37985,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38017,7 +38017,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38050,7 +38050,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38084,7 +38084,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38119,7 +38119,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38155,7 +38155,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38192,7 +38192,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38230,7 +38230,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38269,7 +38269,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38309,7 +38309,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38350,7 +38350,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Mode_Sngl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38365,7 +38365,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Norm_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38379,7 +38379,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Norm_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38392,7 +38392,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Percentile_Exc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38405,7 +38405,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Percentile_Inc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38419,7 +38419,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank_Exc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38433,7 +38433,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank_Exc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38447,7 +38447,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank_Inc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38461,7 +38461,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "PercentRank_Inc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38475,7 +38475,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Poisson_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38488,7 +38488,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Quartile_Exc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38501,7 +38501,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Quartile_Inc", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38515,7 +38515,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Avg", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38529,7 +38529,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Avg", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38543,7 +38543,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Eq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38557,7 +38557,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Rank_Eq", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38598,7 +38598,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38611,7 +38611,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38625,7 +38625,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38640,7 +38640,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38656,7 +38656,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38673,7 +38673,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38691,7 +38691,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38710,7 +38710,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38730,7 +38730,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38751,7 +38751,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38773,7 +38773,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38796,7 +38796,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38820,7 +38820,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38845,7 +38845,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38871,7 +38871,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38898,7 +38898,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38926,7 +38926,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38955,7 +38955,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -38985,7 +38985,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39016,7 +39016,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39048,7 +39048,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39081,7 +39081,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39115,7 +39115,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39150,7 +39150,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39186,7 +39186,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39223,7 +39223,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39261,7 +39261,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39300,7 +39300,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39340,7 +39340,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39381,7 +39381,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "StDev_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39422,7 +39422,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39435,7 +39435,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39449,7 +39449,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39464,7 +39464,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39480,7 +39480,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39497,7 +39497,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39515,7 +39515,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39534,7 +39534,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39554,7 +39554,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39575,7 +39575,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39597,7 +39597,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39620,7 +39620,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39644,7 +39644,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39669,7 +39669,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39695,7 +39695,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39722,7 +39722,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39750,7 +39750,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39779,7 +39779,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39809,7 +39809,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39840,7 +39840,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39872,7 +39872,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39905,7 +39905,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39939,7 +39939,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -39974,7 +39974,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40010,7 +40010,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40047,7 +40047,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40085,7 +40085,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40124,7 +40124,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40164,7 +40164,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40205,7 +40205,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "StDev_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40219,7 +40219,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "T_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40232,7 +40232,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "T_Dist_2T", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40245,7 +40245,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "T_Dist_RT", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40258,7 +40258,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "T_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40271,7 +40271,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "T_Inv_2T", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40312,7 +40312,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40325,7 +40325,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40339,7 +40339,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40354,7 +40354,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40370,7 +40370,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40387,7 +40387,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40405,7 +40405,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40424,7 +40424,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40444,7 +40444,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40465,7 +40465,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40487,7 +40487,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40510,7 +40510,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40534,7 +40534,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40559,7 +40559,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40585,7 +40585,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40612,7 +40612,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40640,7 +40640,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40669,7 +40669,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40699,7 +40699,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40730,7 +40730,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40762,7 +40762,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40795,7 +40795,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40829,7 +40829,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40864,7 +40864,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40900,7 +40900,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40937,7 +40937,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -40975,7 +40975,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41014,7 +41014,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41054,7 +41054,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41095,7 +41095,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Var_S", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41136,7 +41136,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41149,7 +41149,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41163,7 +41163,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41178,7 +41178,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41194,7 +41194,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41211,7 +41211,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41229,7 +41229,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41248,7 +41248,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41268,7 +41268,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41289,7 +41289,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41311,7 +41311,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41334,7 +41334,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41358,7 +41358,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41383,7 +41383,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41409,7 +41409,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41436,7 +41436,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41464,7 +41464,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41493,7 +41493,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41523,7 +41523,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41554,7 +41554,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41586,7 +41586,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41619,7 +41619,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41653,7 +41653,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41688,7 +41688,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41724,7 +41724,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41761,7 +41761,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41799,7 +41799,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41838,7 +41838,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41878,7 +41878,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41919,7 +41919,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(this, "Var_P", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41934,7 +41934,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Weibull_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41949,7 +41949,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "NetworkDays_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41963,7 +41963,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "NetworkDays_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41978,7 +41978,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "NetworkDays_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -41993,7 +41993,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "WorkDay_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -42007,7 +42007,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "WorkDay_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -42022,7 +42022,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "WorkDay_Intl", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -42035,7 +42035,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ISO_Ceiling", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -42048,7 +42048,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ISO_Ceiling", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -42062,7 +42062,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Dummy21", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43173,7 +43173,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43189,7 +43189,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43206,7 +43206,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43222,7 +43222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43237,7 +43237,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43253,7 +43253,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Beta_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43267,7 +43267,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "ChiSq_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43280,7 +43280,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiSq_Dist_RT", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43293,7 +43293,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiSq_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43306,7 +43306,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "ChiSq_Inv_RT", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43321,7 +43321,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "F_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43335,7 +43335,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "F_Dist_RT", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43349,7 +43349,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "F_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43363,7 +43363,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "F_Inv_RT", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43379,7 +43379,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(this, "HypGeom_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43394,7 +43394,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "LogNorm_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43408,7 +43408,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "LogNorm_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43423,7 +43423,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "NegBinom_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43436,7 +43436,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Norm_S_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43448,7 +43448,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Norm_S_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43463,7 +43463,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "T_Test", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43477,7 +43477,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Z_Test", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43491,7 +43491,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Z_Test", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43506,7 +43506,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(this, "Binom_Dist", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43520,7 +43520,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(this, "Binom_Inv", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43532,7 +43532,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Erf_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43544,7 +43544,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "ErfC_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43556,7 +43556,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "GammaLn_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43569,7 +43569,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Ceiling_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43582,7 +43582,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Ceiling_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43595,7 +43595,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(this, "Floor_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		/// <summary>
@@ -43608,7 +43608,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(this, "Floor_Precise", paramsArray);
-			return (Double)returnItem;
+			return NetRuntimeSystem.Convert.ToDouble(returnItem);
 		}
 
 		#endregion

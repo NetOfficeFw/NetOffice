@@ -202,7 +202,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceDateTime, sourceTimeZone, destinationTimeZone);
 			object returnItem = Invoker.MethodReturn(this, "ConvertTime", paramsArray);
-			return (DateTime)returnItem;
+			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
 		}
 
 		#endregion

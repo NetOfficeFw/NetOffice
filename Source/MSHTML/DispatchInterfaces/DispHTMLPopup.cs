@@ -104,6 +104,24 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods

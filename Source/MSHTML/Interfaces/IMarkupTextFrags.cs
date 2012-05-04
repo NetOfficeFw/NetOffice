@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pcFrags);
 			object returnItem = Invoker.MethodReturn(this, "GetTextFragCount", paramsArray);
 			pcFrags = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag, pbstrFrag, pPointerFrag);
 			object returnItem = Invoker.MethodReturn(this, "GetTextFrag", paramsArray);
 			pbstrFrag = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag);
 			object returnItem = Invoker.MethodReturn(this, "RemoveTextFrag", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -131,7 +131,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iFrag, bstrInsert, pPointerInsert);
 			object returnItem = Invoker.MethodReturn(this, "InsertTextFrag", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "FindTextFragFromMarkupPointer", paramsArray);
 			piFrag = (Int32)paramsArray[1];
 			pfFragFound = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

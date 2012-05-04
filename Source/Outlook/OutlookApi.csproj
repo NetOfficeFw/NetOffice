@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8E8DAF74-6CFD-4FA7-AA26-C7113C5A6141}</ProjectGuid>
+    <ProjectGuid>{6BACBE04-E2AF-4082-95E2-4A98D6D4BD7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.OutlookApi</RootNamespace>
     <AssemblyName>OutlookApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>OutlookApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -545,13 +546,13 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{EF3D5B39-D8F7-4E5F-92BF-3B70DBE06540}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{3046F1E7-134C-411D-8932-942F96D33CF3}</Project>
-      <Name>OfficeApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -69,9 +69,9 @@ namespace NetOffice.MSProjectApi
 
 	///<summary>
 	/// CoClass Application 
-	/// SupportByVersion MSProject, 12,14
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _MSProject,IEventBinding
 	{
@@ -109,8 +109,8 @@ namespace NetOffice.MSProjectApi
         /// <param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
-			_callQuitInDispose = true;
-		Global.Instance = this;
+			
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -119,14 +119,14 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
-			_callQuitInDispose = true;
+			
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
-			_callQuitInDispose = true;
+			
 		}
 		
 		/// <summary>
@@ -134,8 +134,8 @@ namespace NetOffice.MSProjectApi
         /// </summary>		
 		public Application():base("MSProject.Application")
 		{
-			_callQuitInDispose = true;
-		Global.Instance = this;
+			
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
 		/// <summary>
@@ -144,8 +144,8 @@ namespace NetOffice.MSProjectApi
         /// <param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
-			_callQuitInDispose = true;
-		Global.Instance = this;
+			
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
 /// <summary>
@@ -154,8 +154,8 @@ namespace NetOffice.MSProjectApi
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
 		public override void Dispose(bool disposeEventBinding)
 		{
-			if(this.Equals(Global.Instance))
-				 Global.Instance = null;	
+			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+				 GlobalHelperModules.GlobalModule.Instance = null;	
 			base.Dispose(disposeEventBinding);
 		}
 
@@ -164,8 +164,8 @@ namespace NetOffice.MSProjectApi
 		/// </summary>
 		public override void Dispose()
 		{
-			if(this.Equals(Global.Instance))
-				 Global.Instance = null;
+			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose();
 		}
 
@@ -174,14 +174,14 @@ namespace NetOffice.MSProjectApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_NewProjectEventHandler _NewProjectEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_NewProjectEventHandler NewProjectEvent
 		{
 			add
@@ -196,14 +196,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskDeleteEventHandler _ProjectBeforeTaskDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskDeleteEventHandler ProjectBeforeTaskDeleteEvent
 		{
 			add
@@ -218,14 +218,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceDeleteEventHandler _ProjectBeforeResourceDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceDeleteEventHandler ProjectBeforeResourceDeleteEvent
 		{
 			add
@@ -240,14 +240,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentDeleteEventHandler _ProjectBeforeAssignmentDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentDeleteEventHandler ProjectBeforeAssignmentDeleteEvent
 		{
 			add
@@ -262,14 +262,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskChangeEventHandler _ProjectBeforeTaskChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskChangeEventHandler ProjectBeforeTaskChangeEvent
 		{
 			add
@@ -284,14 +284,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceChangeEventHandler _ProjectBeforeResourceChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceChangeEventHandler ProjectBeforeResourceChangeEvent
 		{
 			add
@@ -306,14 +306,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentChangeEventHandler _ProjectBeforeAssignmentChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentChangeEventHandler ProjectBeforeAssignmentChangeEvent
 		{
 			add
@@ -328,14 +328,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskNewEventHandler _ProjectBeforeTaskNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskNewEventHandler ProjectBeforeTaskNewEvent
 		{
 			add
@@ -350,14 +350,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceNewEventHandler _ProjectBeforeResourceNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceNewEventHandler ProjectBeforeResourceNewEvent
 		{
 			add
@@ -372,14 +372,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentNewEventHandler _ProjectBeforeAssignmentNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentNewEventHandler ProjectBeforeAssignmentNewEvent
 		{
 			add
@@ -394,14 +394,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeCloseEventHandler _ProjectBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeCloseEventHandler ProjectBeforeCloseEvent
 		{
 			add
@@ -416,14 +416,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforePrintEventHandler _ProjectBeforePrintEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforePrintEventHandler ProjectBeforePrintEvent
 		{
 			add
@@ -438,14 +438,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeSaveEventHandler _ProjectBeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeSaveEventHandler ProjectBeforeSaveEvent
 		{
 			add
@@ -460,14 +460,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectCalculateEventHandler _ProjectCalculateEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectCalculateEventHandler ProjectCalculateEvent
 		{
 			add
@@ -482,14 +482,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowGoalAreaChangeEventHandler _WindowGoalAreaChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowGoalAreaChangeEventHandler WindowGoalAreaChangeEvent
 		{
 			add
@@ -504,14 +504,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
 			add
@@ -526,14 +526,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowBeforeViewChangeEventHandler _WindowBeforeViewChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowBeforeViewChangeEventHandler WindowBeforeViewChangeEvent
 		{
 			add
@@ -548,14 +548,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowViewChangeEventHandler _WindowViewChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowViewChangeEventHandler WindowViewChangeEvent
 		{
 			add
@@ -570,14 +570,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -592,14 +592,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -614,14 +614,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowSidepaneDisplayChangeEventHandler _WindowSidepaneDisplayChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowSidepaneDisplayChangeEventHandler WindowSidepaneDisplayChangeEvent
 		{
 			add
@@ -636,14 +636,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WindowSidepaneTaskChangeEventHandler _WindowSidepaneTaskChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WindowSidepaneTaskChangeEventHandler WindowSidepaneTaskChangeEvent
 		{
 			add
@@ -658,14 +658,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_WorkpaneDisplayChangeEventHandler _WorkpaneDisplayChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_WorkpaneDisplayChangeEventHandler WorkpaneDisplayChangeEvent
 		{
 			add
@@ -680,14 +680,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_LoadWebPageEventHandler _LoadWebPageEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_LoadWebPageEventHandler LoadWebPageEvent
 		{
 			add
@@ -702,14 +702,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectAfterSaveEventHandler _ProjectAfterSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectAfterSaveEventHandler ProjectAfterSaveEvent
 		{
 			add
@@ -724,14 +724,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectTaskNewEventHandler _ProjectTaskNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectTaskNewEventHandler ProjectTaskNewEvent
 		{
 			add
@@ -746,14 +746,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectResourceNewEventHandler _ProjectResourceNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectResourceNewEventHandler ProjectResourceNewEvent
 		{
 			add
@@ -768,14 +768,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectAssignmentNewEventHandler _ProjectAssignmentNewEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectAssignmentNewEventHandler ProjectAssignmentNewEvent
 		{
 			add
@@ -790,14 +790,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeSaveBaselineEventHandler _ProjectBeforeSaveBaselineEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeSaveBaselineEventHandler ProjectBeforeSaveBaselineEvent
 		{
 			add
@@ -812,14 +812,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeClearBaselineEventHandler _ProjectBeforeClearBaselineEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeClearBaselineEventHandler ProjectBeforeClearBaselineEvent
 		{
 			add
@@ -834,14 +834,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeClose2EventHandler _ProjectBeforeClose2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeClose2EventHandler ProjectBeforeClose2Event
 		{
 			add
@@ -856,14 +856,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforePrint2EventHandler _ProjectBeforePrint2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforePrint2EventHandler ProjectBeforePrint2Event
 		{
 			add
@@ -878,14 +878,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeSave2EventHandler _ProjectBeforeSave2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeSave2EventHandler ProjectBeforeSave2Event
 		{
 			add
@@ -900,14 +900,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskDelete2EventHandler _ProjectBeforeTaskDelete2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskDelete2EventHandler ProjectBeforeTaskDelete2Event
 		{
 			add
@@ -922,14 +922,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceDelete2EventHandler _ProjectBeforeResourceDelete2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceDelete2EventHandler ProjectBeforeResourceDelete2Event
 		{
 			add
@@ -944,14 +944,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentDelete2EventHandler _ProjectBeforeAssignmentDelete2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentDelete2EventHandler ProjectBeforeAssignmentDelete2Event
 		{
 			add
@@ -966,14 +966,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskChange2EventHandler _ProjectBeforeTaskChange2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskChange2EventHandler ProjectBeforeTaskChange2Event
 		{
 			add
@@ -988,14 +988,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceChange2EventHandler _ProjectBeforeResourceChange2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceChange2EventHandler ProjectBeforeResourceChange2Event
 		{
 			add
@@ -1010,14 +1010,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentChange2EventHandler _ProjectBeforeAssignmentChange2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentChange2EventHandler ProjectBeforeAssignmentChange2Event
 		{
 			add
@@ -1032,14 +1032,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeTaskNew2EventHandler _ProjectBeforeTaskNew2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeTaskNew2EventHandler ProjectBeforeTaskNew2Event
 		{
 			add
@@ -1054,14 +1054,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeResourceNew2EventHandler _ProjectBeforeResourceNew2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeResourceNew2EventHandler ProjectBeforeResourceNew2Event
 		{
 			add
@@ -1076,14 +1076,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforeAssignmentNew2EventHandler _ProjectBeforeAssignmentNew2Event;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforeAssignmentNew2EventHandler ProjectBeforeAssignmentNew2Event
 		{
 			add
@@ -1098,14 +1098,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ApplicationBeforeCloseEventHandler _ApplicationBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ApplicationBeforeCloseEventHandler ApplicationBeforeCloseEvent
 		{
 			add

@@ -624,7 +624,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension);
 			object returnItem = Invoker.MethodReturn(this, "GetDataReference", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -637,7 +637,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dimension);
 			object returnItem = Invoker.MethodReturn(this, "GetDataSourceIndex", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -673,7 +673,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="useNewScaling">optional bool UseNewScaling = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Ungroup(bool useNewScaling)
+		public void Ungroup(object useNewScaling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(useNewScaling);
 			Invoker.Method(this, "Ungroup", paramsArray);

@@ -86,7 +86,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eType, pIListener);
 			object returnItem = Invoker.MethodReturn(this, "SetSelectionType", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIContainer);
 			object returnItem = Invoker.MethodReturn(this, "GetMarkupContainer", paramsArray);
 			ppIContainer = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -118,7 +118,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pIStart, pIEnd, ppISegmentAdded);
 			object returnItem = Invoker.MethodReturn(this, "AddSegment", paramsArray);
 			ppISegmentAdded = (NetOffice.MSHTMLApi.ISegment)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -134,7 +134,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pIElement, ppISegmentAdded);
 			object returnItem = Invoker.MethodReturn(this, "AddElementSegment", paramsArray);
 			ppISegmentAdded = (NetOffice.MSHTMLApi.IElementSegment)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -146,7 +146,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pISegment);
 			object returnItem = Invoker.MethodReturn(this, "RemoveSegment", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -161,7 +161,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppISelectionServicesListener);
 			object returnItem = Invoker.MethodReturn(this, "GetSelectionServicesListener", paramsArray);
 			ppISelectionServicesListener = (NetOffice.MSHTMLApi.ISelectionServicesListener)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

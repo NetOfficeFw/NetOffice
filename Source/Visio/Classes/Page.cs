@@ -1,0 +1,975 @@
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice;
+namespace NetOffice.VisioApi
+{
+
+	#region Delegates
+
+	#pragma warning disable
+	public delegate void Page_PageChangedEventHandler(NetOffice.VisioApi.IVPage Page);
+	public delegate void Page_BeforePageDeleteEventHandler(NetOffice.VisioApi.IVPage Page);
+	public delegate void Page_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_TextChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Page_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Page_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects Connects);
+	public delegate void Page_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects Connects);
+	public delegate void Page_QueryCancelPageDeleteEventHandler(NetOffice.VisioApi.IVPage Page);
+	public delegate void Page_PageDeleteCanceledEventHandler(NetOffice.VisioApi.IVPage Page);
+	public delegate void Page_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
+	public delegate void Page_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Page_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
+	public delegate void Page_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
+	public delegate void Page_ContainerRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
+	public delegate void Page_ContainerRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
+	public delegate void Page_CalloutRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
+	public delegate void Page_CalloutRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
+	#pragma warning restore
+
+	#endregion
+
+	///<summary>
+	/// CoClass Page 
+	/// SupportByVersion Visio, 11,12,14
+	///</summary>
+	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[EntityTypeAttribute(EntityType.IsCoClass)]
+	public class Page : IVPage,IEventBinding
+	{
+		#pragma warning disable
+		#region Fields
+		
+		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+		private string _activeSinkId;
+		private NetRuntimeSystem.Type _thisType;
+		EPage_SinkHelper _ePage_SinkHelper;
+	
+		#endregion
+
+		#region Type Information
+
+        private static Type _type;
+		
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(Page);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        		
+		#region Construction
+
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="comProxy">inner wrapped COM proxy</param>
+		public Page(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
+		{
+			
+		}
+
+		/// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="comProxy">inner wrapped COM proxy</param>
+        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Page(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+		{
+			
+		}
+		
+		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Page(COMObject replacedObject) : base(replacedObject)
+		{
+			
+		}
+		
+		/// <summary>
+        /// creates a new instance of Page 
+        /// </summary>		
+		public Page():base("Visio.Page")
+		{
+			
+		}
+		
+		/// <summary>
+        /// creates a new instance of Page
+        /// </summary>
+        /// <param name="progId">registered ProgID</param>
+		public Page(string progId):base(progId)
+		{
+			
+		}
+
+		#endregion
+
+		#region Events
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_PageChangedEventHandler _PageChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_PageChangedEventHandler PageChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PageChangedEvent += value;
+			}
+			remove
+			{
+				_PageChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_BeforePageDeleteEventHandler _BeforePageDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_BeforePageDeleteEventHandler BeforePageDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforePageDeleteEvent += value;
+			}
+			remove
+			{
+				_BeforePageDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ShapeAddedEventHandler _ShapeAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ShapeAddedEventHandler ShapeAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeAddedEvent += value;
+			}
+			remove
+			{
+				_ShapeAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_BeforeSelectionDeleteEventHandler _BeforeSelectionDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeSelectionDeleteEvent += value;
+			}
+			remove
+			{
+				_BeforeSelectionDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ShapeChangedEventHandler _ShapeChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ShapeChangedEventHandler ShapeChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeChangedEvent += value;
+			}
+			remove
+			{
+				_ShapeChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_SelectionAddedEventHandler _SelectionAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_SelectionAddedEventHandler SelectionAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectionAddedEvent += value;
+			}
+			remove
+			{
+				_SelectionAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_BeforeShapeDeleteEventHandler _BeforeShapeDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeShapeDeleteEvent += value;
+			}
+			remove
+			{
+				_BeforeShapeDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_TextChangedEventHandler _TextChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_TextChangedEventHandler TextChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_TextChangedEvent += value;
+			}
+			remove
+			{
+				_TextChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_CellChangedEventHandler _CellChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_CellChangedEventHandler CellChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CellChangedEvent += value;
+			}
+			remove
+			{
+				_CellChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_FormulaChangedEventHandler _FormulaChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_FormulaChangedEventHandler FormulaChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_FormulaChangedEvent += value;
+			}
+			remove
+			{
+				_FormulaChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ConnectionsAddedEventHandler _ConnectionsAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ConnectionsAddedEventHandler ConnectionsAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ConnectionsAddedEvent += value;
+			}
+			remove
+			{
+				_ConnectionsAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ConnectionsDeletedEventHandler _ConnectionsDeletedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ConnectionsDeletedEventHandler ConnectionsDeletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ConnectionsDeletedEvent += value;
+			}
+			remove
+			{
+				_ConnectionsDeletedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_QueryCancelPageDeleteEventHandler _QueryCancelPageDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_QueryCancelPageDeleteEventHandler QueryCancelPageDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QueryCancelPageDeleteEvent += value;
+			}
+			remove
+			{
+				_QueryCancelPageDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_PageDeleteCanceledEventHandler _PageDeleteCanceledEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_PageDeleteCanceledEventHandler PageDeleteCanceledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_PageDeleteCanceledEvent += value;
+			}
+			remove
+			{
+				_PageDeleteCanceledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ShapeParentChangedEventHandler _ShapeParentChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ShapeParentChangedEventHandler ShapeParentChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeParentChangedEvent += value;
+			}
+			remove
+			{
+				_ShapeParentChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_BeforeShapeTextEditEventHandler _BeforeShapeTextEditEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_BeforeShapeTextEditEvent += value;
+			}
+			remove
+			{
+				_BeforeShapeTextEditEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ShapeExitedTextEditEventHandler _ShapeExitedTextEditEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeExitedTextEditEvent += value;
+			}
+			remove
+			{
+				_ShapeExitedTextEditEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_QueryCancelSelectionDeleteEventHandler _QueryCancelSelectionDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QueryCancelSelectionDeleteEvent += value;
+			}
+			remove
+			{
+				_QueryCancelSelectionDeleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_SelectionDeleteCanceledEventHandler _SelectionDeleteCanceledEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SelectionDeleteCanceledEvent += value;
+			}
+			remove
+			{
+				_SelectionDeleteCanceledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_QueryCancelUngroupEventHandler _QueryCancelUngroupEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_QueryCancelUngroupEventHandler QueryCancelUngroupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QueryCancelUngroupEvent += value;
+			}
+			remove
+			{
+				_QueryCancelUngroupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_UngroupCanceledEventHandler _UngroupCanceledEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_UngroupCanceledEventHandler UngroupCanceledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_UngroupCanceledEvent += value;
+			}
+			remove
+			{
+				_UngroupCanceledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_QueryCancelConvertToGroupEventHandler _QueryCancelConvertToGroupEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QueryCancelConvertToGroupEvent += value;
+			}
+			remove
+			{
+				_QueryCancelConvertToGroupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 11,12,14
+		/// </summary>
+		private event Page_ConvertToGroupCanceledEventHandler _ConvertToGroupCanceledEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 11 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 11,12,14)]
+		public event Page_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ConvertToGroupCanceledEvent += value;
+			}
+			remove
+			{
+				_ConvertToGroupCanceledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 12,14
+		/// </summary>
+		private event Page_QueryCancelGroupEventHandler _QueryCancelGroupEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 12,14)]
+		public event Page_QueryCancelGroupEventHandler QueryCancelGroupEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_QueryCancelGroupEvent += value;
+			}
+			remove
+			{
+				_QueryCancelGroupEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 12,14
+		/// </summary>
+		private event Page_GroupCanceledEventHandler _GroupCanceledEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 12,14)]
+		public event Page_GroupCanceledEventHandler GroupCanceledEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_GroupCanceledEvent += value;
+			}
+			remove
+			{
+				_GroupCanceledEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 12,14
+		/// </summary>
+		private event Page_ShapeDataGraphicChangedEventHandler _ShapeDataGraphicChangedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 12,14)]
+		public event Page_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeDataGraphicChangedEvent += value;
+			}
+			remove
+			{
+				_ShapeDataGraphicChangedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 12,14
+		/// </summary>
+		private event Page_ShapeLinkAddedEventHandler _ShapeLinkAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 12,14)]
+		public event Page_ShapeLinkAddedEventHandler ShapeLinkAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeLinkAddedEvent += value;
+			}
+			remove
+			{
+				_ShapeLinkAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 12,14
+		/// </summary>
+		private event Page_ShapeLinkDeletedEventHandler _ShapeLinkDeletedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 12 14
+		/// </summary>
+		[SupportByVersion("Visio", 12,14)]
+		public event Page_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ShapeLinkDeletedEvent += value;
+			}
+			remove
+			{
+				_ShapeLinkDeletedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 14
+		/// </summary>
+		private event Page_ContainerRelationshipAddedEventHandler _ContainerRelationshipAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[SupportByVersion("Visio", 14)]
+		public event Page_ContainerRelationshipAddedEventHandler ContainerRelationshipAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContainerRelationshipAddedEvent += value;
+			}
+			remove
+			{
+				_ContainerRelationshipAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 14
+		/// </summary>
+		private event Page_ContainerRelationshipDeletedEventHandler _ContainerRelationshipDeletedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[SupportByVersion("Visio", 14)]
+		public event Page_ContainerRelationshipDeletedEventHandler ContainerRelationshipDeletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ContainerRelationshipDeletedEvent += value;
+			}
+			remove
+			{
+				_ContainerRelationshipDeletedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 14
+		/// </summary>
+		private event Page_CalloutRelationshipAddedEventHandler _CalloutRelationshipAddedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[SupportByVersion("Visio", 14)]
+		public event Page_CalloutRelationshipAddedEventHandler CalloutRelationshipAddedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CalloutRelationshipAddedEvent += value;
+			}
+			remove
+			{
+				_CalloutRelationshipAddedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 14
+		/// </summary>
+		private event Page_CalloutRelationshipDeletedEventHandler _CalloutRelationshipDeletedEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[SupportByVersion("Visio", 14)]
+		public event Page_CalloutRelationshipDeletedEventHandler CalloutRelationshipDeletedEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_CalloutRelationshipDeletedEvent += value;
+			}
+			remove
+			{
+				_CalloutRelationshipDeletedEvent -= value;
+			}
+		}
+
+		#endregion
+       
+	    #region IEventBinding Member
+        
+		/// <summary>
+        /// creates active sink helper
+        /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public void CreateEventBridge()
+        {
+			if(false == NetOffice.Settings.EnableEvents)
+				return;
+	
+			if (null != _connectPoint)
+				return;
+	
+            if (null == _activeSinkId)
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EPage_SinkHelper.Id);
+
+
+			if(EPage_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			{
+				_ePage_SinkHelper = new EPage_SinkHelper(this, _connectPoint);
+				return;
+			} 
+        }
+
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool EventBridgeInitialized
+        {
+            get 
+            {
+                return (null != _connectPoint);
+            }
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool HasEventRecipients()       
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+					
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				MulticastDelegate eventDelegate = (MulticastDelegate) _thisType.GetType().GetField(item.Name, 
+																			NetRuntimeSystem.Reflection.BindingFlags.NonPublic |
+																			NetRuntimeSystem.Reflection.BindingFlags.Instance).GetValue(this);
+					
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
+			}
+				
+			return false;
+        }
+        
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Delegate[] GetEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates;
+            }
+            else
+                return new Delegate[0];
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int GetCountOfEventRecipients(string eventName)
+        {
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                return delegates.Length;
+            }
+            else
+                return 0;
+        }
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+            MulticastDelegate eventDelegate = (MulticastDelegate)_thisType.GetField(
+                                                "_" + eventName + "Event",
+                                                NetRuntimeSystem.Reflection.BindingFlags.Instance |
+                                                NetRuntimeSystem.Reflection.BindingFlags.NonPublic).GetValue(this);
+
+            if (null != eventDelegate)
+            {
+                Delegate[] delegates = eventDelegate.GetInvocationList();
+                foreach (var item in delegates)
+                {
+                    try
+                    {
+                        item.Method.Invoke(item.Target, paramsArray);
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        DebugConsole.WriteException(exception);
+                    }
+                }
+                return delegates.Length;
+            }
+            else
+                return 0;
+		}
+
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void DisposeEventBridge()
+        {
+			if( null != _ePage_SinkHelper)
+			{
+				_ePage_SinkHelper.Dispose();
+				_ePage_SinkHelper = null;
+			}
+
+			_connectPoint = null;
+		}
+        
+        #endregion
+
+		#pragma warning restore
+	}
+}

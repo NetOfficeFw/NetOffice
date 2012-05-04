@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
-namespace NetOffice.OutlookApi
+namespace NetOffice.OutlookApi.GlobalHelperModules
 {
 	///<summary>
-	/// Module Global
+	/// Module GlobalModule
 	///</summary>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsModule)]
-	public static class Global
+	public static class GlobalModule
 	{
 
 		#region Fields
@@ -556,7 +556,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lookInFolders);
 			object returnItem = Invoker.MethodReturn(_instance, "IsSearchSynchronous", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

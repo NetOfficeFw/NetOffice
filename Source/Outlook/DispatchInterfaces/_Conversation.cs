@@ -216,7 +216,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
 			object returnItem = Invoker.MethodReturn(this, "GetAlwaysAssignCategories", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>

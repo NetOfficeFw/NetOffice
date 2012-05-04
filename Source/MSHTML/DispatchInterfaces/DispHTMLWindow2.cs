@@ -149,22 +149,6 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLImageElementFactory Image
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Image", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLImageElementFactory newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImageElementFactory;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLLocation location
 		{
 			get
@@ -640,22 +624,6 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLOptionElementFactory Option
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Option", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLOptionElementFactory newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElementFactory;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool closed
 		{
 			get
@@ -847,15 +815,47 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// Get/Set
+		/// Get
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object XMLHttpRequest
+		public NetOffice.MSHTMLApi.IHTMLStorage sessionStorage
 		{
 			get
 			{
 				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLHttpRequest", paramsArray);
+				object returnItem = Invoker.PropertyGet(this, "sessionStorage", paramsArray);
+				NetOffice.MSHTMLApi.IHTMLStorage newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStorage;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLStorage localStorage
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "localStorage", paramsArray);
+				NetOffice.MSHTMLApi.IHTMLStorage newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStorage;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public object onhashchange
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "onhashchange", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
 					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
@@ -869,7 +869,68 @@ namespace NetOffice.MSHTMLApi
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "XMLHttpRequest", paramsArray);
+				Invoker.PropertySet(this, "onhashchange", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int32 maxConnectionsPerServer
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "maxConnectionsPerServer", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public object onmessage
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "onmessage", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "onmessage", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
 			}
 		}
 
@@ -913,7 +974,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="message">optional string message = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void alert(string message)
+		public void alert(object message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			Invoker.Method(this, "alert", paramsArray);
@@ -935,11 +996,11 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="message">optional string message = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool confirm(string message)
+		public bool confirm(object message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			object returnItem = Invoker.MethodReturn(this, "confirm", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -951,7 +1012,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "confirm", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -960,7 +1021,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="message">optional string message = </param>
 		/// <param name="defstr">optional string defstr = undefined</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object prompt(string message, string defstr)
+		public object prompt(object message, object defstr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message, defstr);
 			object returnItem = Invoker.MethodReturn(this, "prompt", paramsArray);
@@ -1001,7 +1062,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="message">optional string message = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object prompt(string message)
+		public object prompt(object message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			object returnItem = Invoker.MethodReturn(this, "prompt", paramsArray);
@@ -1034,7 +1095,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional string features = </param>
 		/// <param name="replace">optional bool replace = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name, string features, bool replace)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name, object features, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features, replace);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1061,7 +1122,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1076,7 +1137,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1092,7 +1153,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional string features = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name, string features)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name, object features)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1183,7 +1244,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="helpArg">object helpArg</param>
 		/// <param name="features">optional string features = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void showHelp(string helpURL, object helpArg, string features)
+		public void showHelp(string helpURL, object helpArg, object features)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpURL, helpArg, features);
 			Invoker.Method(this, "showHelp", paramsArray);
@@ -1251,7 +1312,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="code">string code</param>
 		/// <param name="language">optional string language = JScript</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object execScript(string code, string language)
+		public object execScript(string code, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(code, language);
 			object returnItem = Invoker.MethodReturn(this, "execScript", paramsArray);
@@ -1295,7 +1356,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "toString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1380,7 +1441,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
 			object returnItem = Invoker.MethodReturn(this, "attachEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1406,7 +1467,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1420,7 +1481,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setTimeout", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1434,7 +1495,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec, language);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1448,7 +1509,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expression, msec);
 			object returnItem = Invoker.MethodReturn(this, "setInterval", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1468,7 +1529,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		/// <param name="options">optional object options</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn, object options)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn, options);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -1495,7 +1556,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -1510,7 +1571,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="varArgIn">optional object varArgIn</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(string url, object varArgIn)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 showModelessDialog(object url, object varArgIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, varArgIn);
 			object returnItem = Invoker.MethodReturn(this, "showModelessDialog", paramsArray);
@@ -1542,6 +1603,53 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "createPopup", paramsArray);
 			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="msg">string msg</param>
+		/// <param name="targetOrigin">optional object targetOrigin</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void postMessage(string msg, object targetOrigin)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(msg, targetOrigin);
+			Invoker.Method(this, "postMessage", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="msg">string msg</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void postMessage(string msg)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(msg);
+			Invoker.Method(this, "postMessage", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="bstrHTML">string bstrHTML</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string toStaticHTML(string bstrHTML)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrHTML);
+			object returnItem = Invoker.MethodReturn(this, "toStaticHTML", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="bstrProfilerMarkName">string bstrProfilerMarkName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void msWriteProfilerMark(string bstrProfilerMarkName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrProfilerMarkName);
+			Invoker.Method(this, "msWriteProfilerMark", paramsArray);
 		}
 
 		#endregion

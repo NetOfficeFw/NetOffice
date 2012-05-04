@@ -10,9 +10,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IListItem 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IListItem : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Default
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Text
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public bool Ghosted
 		{
 			get
@@ -134,10 +134,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Height
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public object Icon
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int32 Index
 		{
 			get
@@ -202,10 +202,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Key
 		{
 			get
@@ -222,10 +222,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Left
 		{
 			get
@@ -242,10 +242,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public bool Selected
 		{
 			get
@@ -262,10 +262,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public object SmallIcon
 		{
 			get
@@ -290,10 +290,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public object Tag
 		{
 			get
@@ -318,10 +318,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Top
 		{
 			get
@@ -338,10 +338,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Width
 		{
 			get
@@ -358,11 +358,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_SubItems(Int16 index)
 		{		
@@ -372,11 +372,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public void set_SubItems(Int16 index, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -384,21 +384,21 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Alias for get_SubItems
 		/// </summary>
 		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string SubItems(Int16 index)
 		{
 			return get_SubItems(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IListSubItems ListSubItems
 		{
 			get
@@ -416,10 +416,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public bool Checked
 		{
 			get
@@ -436,10 +436,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int32 ForeColor
 		{
 			get
@@ -456,10 +456,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string ToolTipText
 		{
 			get
@@ -476,10 +476,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public bool Bold
 		{
 			get
@@ -500,9 +500,9 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public stdole.Picture CreateDragImage()
 		{
 			object[] paramsArray = null;
@@ -512,14 +512,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public bool EnsureVisible()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "EnsureVisible", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		#endregion

@@ -16,9 +16,9 @@ namespace NetOffice.VBIDEApi
 
 	///<summary>
 	/// CoClass ReferencesEvents 
-	/// SupportByVersion VBIDE, 11,12,5.3
+	/// SupportByVersion VBIDE, 12,14,5.3
 	///</summary>
-	[SupportByVersionAttribute("VBIDE", 11,12,5.3)]
+	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReferencesEvents : _ReferencesEvents,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.VBIDEApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion VBIDE, 11,12,5.3
+		/// SupportByVersion VBIDE, 12,14,5.3
 		/// </summary>
 		private event ReferencesEvents_ItemAddedEventHandler _ItemAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11 12 5.3
+		/// SupportByVersion VBIDE 12 14 5.3
 		/// </summary>
-		[SupportByVersion("VBIDE", 11,12,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public event ReferencesEvents_ItemAddedEventHandler ItemAddedEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.VBIDEApi
 		}
 
 		/// <summary>
-		/// SupportByVersion VBIDE, 11,12,5.3
+		/// SupportByVersion VBIDE, 12,14,5.3
 		/// </summary>
 		private event ReferencesEvents_ItemRemovedEventHandler _ItemRemovedEvent;
 
 		/// <summary>
-		/// SupportByVersion VBIDE 11 12 5.3
+		/// SupportByVersion VBIDE 12 14 5.3
 		/// </summary>
-		[SupportByVersion("VBIDE", 11,12,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public event ReferencesEvents_ItemRemovedEventHandler ItemRemovedEvent
 		{
 			add

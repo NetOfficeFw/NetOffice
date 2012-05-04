@@ -10,9 +10,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IColumnHeader 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IColumnHeader : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Default
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Text
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants Alignment
 		{
 			get
@@ -135,10 +135,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int32 Index
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public string Key
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Left
 		{
 			get
@@ -195,10 +195,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int16 SubItemIndex
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public object Tag
 		{
 			get
@@ -243,10 +243,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Single Width
 		{
 			get
@@ -263,10 +263,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public object Icon
 		{
 			get
@@ -291,10 +291,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int16 Position
 		{
 			get

@@ -29,15 +29,17 @@ namespace NetOffice
 
         #region Fields
 
-        private static CultureInfo _cultureInfo;
-        private static bool        _eventsEnabled = true;
-        private static bool        _enableMessageFilter;
-        private static IntPtr      _messageFilter;
-        private static bool        _enableAutomaticQuit;
-        private static bool        _enableAdHocLoading = true;
-        private static bool        _enableDebugOutput = true;
-        private static bool        _enableSafeMode;
-        private static bool        _enableThreadSafe = true;
+        private static CultureInfo  _cultureInfo;
+        private static bool         _eventsEnabled = true;
+        private static bool         _enableMessageFilter;
+        private static IntPtr       _messageFilter;
+        private static bool         _enableAutomaticQuit;
+        private static bool         _enableAdHocLoading = true;
+        private static bool         _enableDebugOutput = true;
+        private static bool         _enableEventDebugOutput;
+        private static bool         _enableSafeMode;
+        private static bool         _enableThreadSafe = true;
+        private static CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
 
         #endregion
 
@@ -187,7 +189,39 @@ namespace NetOffice
                 _enableDebugOutput = value;
             }
         }
-      
+
+        /// <summary>
+        /// Get or set NetOffice logs essential system steps for event operations in the DebugConsole(if enabled). false by default
+        /// </summary>
+        public static bool EnableEventDebugOutput
+        {
+            get
+            {
+                return _enableEventDebugOutput;
+            }
+            set
+            {
+                _enableEventDebugOutput = value;
+            }
+        }
+
+
+        /// <summary>
+        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static CacheOptions CacheOptions
+        {
+            get
+            {
+                return _cacheOptions;
+            }
+            set
+            {
+                _cacheOptions = value;
+            }
+        }
+
         #endregion
     }
 }

@@ -92,7 +92,7 @@ namespace NetOffice.WordApi
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			_callQuitInDispose = true;
-		Global.Instance = this;
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
 		/// <param name="parentObject">object there has created the proxy</param>
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
 		public Application():base("Word.Application")
 		{
 			_callQuitInDispose = true;
-		Global.Instance = this;
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
 		/// <summary>
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
 		public Application(string progId):base(progId)
 		{
 			_callQuitInDispose = true;
-		Global.Instance = this;
+			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
 /// <summary>
@@ -136,8 +136,8 @@ namespace NetOffice.WordApi
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
 		public override void Dispose(bool disposeEventBinding)
 		{
-			if(this.Equals(Global.Instance))
-				 Global.Instance = null;	
+			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+				 GlobalHelperModules.GlobalModule.Instance = null;	
 			base.Dispose(disposeEventBinding);
 		}
 
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// </summary>
 		public override void Dispose()
 		{
-			if(this.Equals(Global.Instance))
-				 Global.Instance = null;
+			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose();
 		}
 

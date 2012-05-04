@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IButtons 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IButtons : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IButton>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public Int16 Count
 		{
 			get
@@ -95,11 +95,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IButton get_ControlDefault(object index)
 		{		
@@ -110,11 +110,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IButton value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -122,22 +122,22 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Alias for get_ControlDefault
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IButton this[object index]
 		{
@@ -160,10 +160,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -171,9 +171,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -181,14 +181,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="caption">optional object Caption</param>
 		/// <param name="style">optional object Style</param>
 		/// <param name="image">optional object Image</param>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add(object index, object key, object caption, object style, object image)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style, image);
@@ -198,10 +198,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add()
 		{
 			object[] paramsArray = null;
@@ -211,11 +211,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -225,12 +225,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add(object index, object key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
@@ -240,13 +240,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="caption">optional object Caption</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add(object index, object key, object caption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption);
@@ -256,14 +256,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="caption">optional object Caption</param>
 		/// <param name="style">optional object Style</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		public NetOffice.MSComctlLibApi.IButton Add(object index, object key, object caption, object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, caption, style);
@@ -277,9 +277,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IButton> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6.0
+		/// SupportByVersionAttribute MSComctlLib, 2
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
        public IEnumerator<NetOffice.MSComctlLibApi.IButton> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -292,9 +292,9 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6.0
+		/// SupportByVersionAttribute MSComctlLib, 2
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6.0)]
+		[SupportByVersionAttribute("MSComctlLib", 2)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

@@ -162,11 +162,11 @@ namespace NetOffice.PowerPointApi
 		/// <param name="slideStart">optional Int32 SlideStart = 1</param>
 		/// <param name="slideEnd">optional Int32 SlideEnd = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public Int32 InsertFromFile(string fileName, Int32 index, Int32 slideStart, Int32 slideEnd)
+		public Int32 InsertFromFile(string fileName, Int32 index, object slideStart, object slideEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, index, slideStart, slideEnd);
 			object returnItem = Invoker.MethodReturn(this, "InsertFromFile", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -180,7 +180,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, index);
 			object returnItem = Invoker.MethodReturn(this, "InsertFromFile", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -191,11 +191,11 @@ namespace NetOffice.PowerPointApi
 		/// <param name="slideStart">optional Int32 SlideStart = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public Int32 InsertFromFile(string fileName, Int32 index, Int32 slideStart)
+		public Int32 InsertFromFile(string fileName, Int32 index, object slideStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, index, slideStart);
 			object returnItem = Invoker.MethodReturn(this, "InsertFromFile", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">optional Int32 index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.SlideRange Paste(Int32 index)
+		public NetOffice.PowerPointApi.SlideRange Paste(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);

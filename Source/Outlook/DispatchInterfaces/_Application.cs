@@ -596,7 +596,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lookInFolders);
 			object returnItem = Invoker.MethodReturn(this, "IsSearchSynchronous", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

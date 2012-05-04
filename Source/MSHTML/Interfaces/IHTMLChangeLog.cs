@@ -90,7 +90,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pbBuffer, nBufferSize, pnRecordLength);
 			object returnItem = Invoker.MethodReturn(this, "GetNextChange", paramsArray);
 			pnRecordLength = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

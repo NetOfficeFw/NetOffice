@@ -28,7 +28,12 @@ namespace NetOffice
         /// <summary>
         /// hold all debug and exceptions logs in a internal string list
         /// </summary>
-        MemoryList = 3
+        MemoryList = 3,
+
+        /// <summary>
+        /// debug log was redirected to System.Diagnostics.Trace
+        /// </summary>
+        Trace = 4
     }
 
     /// <summary>
@@ -73,6 +78,10 @@ namespace NetOffice
         public static void WriteLine(string message)
         {
             string output = message;
+
+            if (ConsoleMode.Console == Mode || ConsoleMode.Trace == Mode)
+                output = "NetOffice: " + output;
+
             if (AppendTimeInfoEnabled)
                 output = DateTime.Now.ToLongTimeString() + " - " + message;
 
@@ -80,6 +89,9 @@ namespace NetOffice
             {
                 case ConsoleMode.Console:
                     Console.WriteLine(output);
+                    break;
+                case ConsoleMode.Trace:
+                    System.Diagnostics.Trace.WriteLine(output);
                     break;
                 case ConsoleMode.LogFile:
                     AppendToLogFile(output);

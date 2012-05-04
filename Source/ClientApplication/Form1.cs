@@ -21,6 +21,7 @@ using MSDATASRC = NetOffice.MSDATASRCApi;
 using MSComctlLib = NetOffice.MSComctlLibApi;
 using MSProject = NetOffice.MSProjectApi;
 using MSHTML = NetOffice.MSHTMLApi;
+using Visio = NetOffice.VisioApi;
 
 namespace ClientApplication
 {
@@ -35,8 +36,8 @@ namespace ClientApplication
         {
             InitializeComponent();
 
-            // not necessary any longer
-            // LateBindingApi.Core.Factory.Initialize();
+            /*Initialize Api COMObject Support*/
+            NetOffice.Factory.Initialize();
 
             
             /*>> your testcode here <<*/

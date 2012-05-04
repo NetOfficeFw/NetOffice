@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppIIter);
 			object returnItem = Invoker.MethodReturn(this, "CreateIterator", paramsArray);
 			ppIIter = (NetOffice.MSHTMLApi.ISegmentListIterator)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(peType);
 			object returnItem = Invoker.MethodReturn(this, "GetType", paramsArray);
 			peType = (NetOffice.MSHTMLApi.Enums._SELECTION_TYPE)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -118,7 +118,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfEmpty);
 			object returnItem = Invoker.MethodReturn(this, "IsEmpty", paramsArray);
 			pfEmpty = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

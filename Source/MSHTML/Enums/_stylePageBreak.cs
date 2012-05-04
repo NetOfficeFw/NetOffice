@@ -47,6 +47,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
+		 /// <remarks>5</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 stylePageBreakAvoid = 5,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersionAttribute("MSHTML", 4)]
 		 stylePageBreak_Max = 2147483647

@@ -88,7 +88,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varSrc, vtDest, pUnknownElement, pvarDest);
 			object returnItem = Invoker.MethodReturn(this, "ConvertData", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vt1, vt2);
 			object returnItem = Invoker.MethodReturn(this, "CanConvertData", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

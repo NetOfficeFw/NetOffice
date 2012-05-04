@@ -3,14 +3,14 @@ using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
-namespace NetOffice.WordApi
+namespace NetOffice.WordApi.GlobalHelperModules
 {
 	///<summary>
-	/// Module Global
+	/// Module GlobalModule
 	///</summary>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
 	[EntityTypeAttribute(EntityType.IsModule)]
-	public static class Global
+	public static class GlobalModule
 	{
 
 		#region Fields
@@ -979,7 +979,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
 			object returnItem = Invoker.MethodReturn(_instance, "Repeat", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -991,7 +991,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "Repeat", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1016,7 +1016,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(app, topic);
 			object returnItem = Invoker.MethodReturn(_instance, "DDEInitiate", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1042,7 +1042,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, item);
 			object returnItem = Invoker.MethodReturn(_instance, "DDERequest", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1078,7 +1078,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(_instance, "BuildKeyCode", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1091,7 +1091,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
 			object returnItem = Invoker.MethodReturn(_instance, "BuildKeyCode", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1105,7 +1105,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(_instance, "BuildKeyCode", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1120,7 +1120,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(_instance, "BuildKeyCode", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1133,7 +1133,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
 			object returnItem = Invoker.MethodReturn(_instance, "KeyString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1146,7 +1146,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode);
 			object returnItem = Invoker.MethodReturn(_instance, "KeyString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1170,7 +1170,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1183,7 +1183,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1197,7 +1197,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1212,7 +1212,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1228,7 +1228,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1245,7 +1245,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1263,7 +1263,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1282,7 +1282,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1302,7 +1302,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1323,7 +1323,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1345,7 +1345,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1368,7 +1368,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1392,7 +1392,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
 			object returnItem = Invoker.MethodReturn(_instance, "CheckSpelling", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1713,7 +1713,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
 			object returnItem = Invoker.MethodReturn(_instance, "CleanString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -1736,7 +1736,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inches);
 			object returnItem = Invoker.MethodReturn(_instance, "InchesToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1748,7 +1748,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(centimeters);
 			object returnItem = Invoker.MethodReturn(_instance, "CentimetersToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1760,7 +1760,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(millimeters);
 			object returnItem = Invoker.MethodReturn(_instance, "MillimetersToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1772,7 +1772,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(picas);
 			object returnItem = Invoker.MethodReturn(_instance, "PicasToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1784,7 +1784,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lines);
 			object returnItem = Invoker.MethodReturn(_instance, "LinesToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1796,7 +1796,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToInches", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1808,7 +1808,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToCentimeters", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1820,7 +1820,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToMillimeters", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1832,7 +1832,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToPicas", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1844,7 +1844,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToLines", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1857,7 +1857,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToPixels", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1870,7 +1870,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
 			object returnItem = Invoker.MethodReturn(_instance, "PointsToPixels", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1883,7 +1883,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
 			object returnItem = Invoker.MethodReturn(_instance, "PixelsToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -1896,7 +1896,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels);
 			object returnItem = Invoker.MethodReturn(_instance, "PixelsToPoints", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		#endregion

@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E89FCDA0-BD75-46D3-8B74-7B106740E763}</ProjectGuid>
+    <ProjectGuid>{F5E53D98-E101-4AC0-A6F7-962227710C19}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.DAOApi</RootNamespace>
     <AssemblyName>DAOApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>DAOApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -133,10 +134,6 @@
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{3046F1E7-134C-411D-8932-942F96D33CF3}</Project>
-      <Name>OfficeApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

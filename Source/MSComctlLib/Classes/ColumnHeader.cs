@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass ColumnHeader 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ColumnHeader : IColumnHeader
 	{

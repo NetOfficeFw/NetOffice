@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
 			object returnItem = Invoker.MethodReturn(this, "PutServerFilter", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
 			object returnItem = Invoker.MethodReturn(this, "GetServerFilter", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pfSubscribed);
 			object returnItem = Invoker.MethodReturn(this, "GetIsPageSubscribed", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrPath);
 			object returnItem = Invoker.MethodReturn(this, "GetOfflineXMLFileLocation", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

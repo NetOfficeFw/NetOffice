@@ -92,7 +92,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ptPoint, eCoordSystem, pElementContext, dwHitTestOptions, pdwHitTestResults);
 			object returnItem = Invoker.MethodReturn(this, "moveToPoint", paramsArray);
 			pdwHitTestResults = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eMoveUnit, lXPos);
 			object returnItem = Invoker.MethodReturn(this, "MoveUnit", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pMarkupPointer);
 			object returnItem = Invoker.MethodReturn(this, "PositionMarkupPointer", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer);
 			object returnItem = Invoker.MethodReturn(this, "MoveToPointer", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -141,7 +141,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eGravity);
 			object returnItem = Invoker.MethodReturn(this, "SetPointerGravity", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(peGravity);
 			object returnItem = Invoker.MethodReturn(this, "GetPointerGravity", paramsArray);
 			peGravity = (NetOffice.MSHTMLApi.Enums._POINTER_GRAVITY)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eGravity);
 			object returnItem = Invoker.MethodReturn(this, "SetDisplayGravity", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(peGravity);
 			object returnItem = Invoker.MethodReturn(this, "GetDisplayGravity", paramsArray);
 			peGravity = (NetOffice.MSHTMLApi.Enums._DISPLAY_GRAVITY)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfPositioned);
 			object returnItem = Invoker.MethodReturn(this, "IsPositioned", paramsArray);
 			pfPositioned = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Unposition", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -225,7 +225,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsEqual);
 			object returnItem = Invoker.MethodReturn(this, "IsEqualTo", paramsArray);
 			pfIsEqual = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsLeftOf);
 			object returnItem = Invoker.MethodReturn(this, "IsLeftOf", paramsArray);
 			pfIsLeftOf = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pDispPointer, pfIsRightOf);
 			object returnItem = Invoker.MethodReturn(this, "IsRightOf", paramsArray);
 			pfIsRightOf = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -272,7 +272,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfBOL);
 			object returnItem = Invoker.MethodReturn(this, "IsAtBOL", paramsArray);
 			pfBOL = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -285,7 +285,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointer, pDispLineContext);
 			object returnItem = Invoker.MethodReturn(this, "MoveToMarkupPointer", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -296,7 +296,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "scrollIntoView", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -311,7 +311,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppLineInfo);
 			object returnItem = Invoker.MethodReturn(this, "GetLineInfo", paramsArray);
 			ppLineInfo = (NetOffice.MSHTMLApi.ILineInfo)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -326,7 +326,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppLayoutElement);
 			object returnItem = Invoker.MethodReturn(this, "GetFlowElement", paramsArray);
 			ppLayoutElement = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -341,7 +341,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwBreaks);
 			object returnItem = Invoker.MethodReturn(this, "QueryBreaks", paramsArray);
 			pdwBreaks = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -188,7 +188,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
 		[SupportByVersionAttribute("ADODB", 2.1)]
-		public void Save(string fileName, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
+		public void Save(string fileName, object persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, persistFormat);
 			Invoker.Method(this, "Save", paramsArray);
@@ -215,11 +215,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="rowDelimeter">string RowDelimeter</param>
 		/// <param name="nullExpr">string NullExpr</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
+		public string GetString(object stringFormat, object numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter, rowDelimeter, nullExpr);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -230,11 +230,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="columnDelimeter">string ColumnDelimeter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter)
+		public string GetString(object stringFormat, object numRows, string columnDelimeter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -246,11 +246,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="rowDelimeter">string RowDelimeter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter)
+		public string GetString(object stringFormat, object numRows, string columnDelimeter, string rowDelimeter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter, rowDelimeter);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -272,7 +272,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset Clone(NetOffice.ADODBApi.Enums.LockTypeEnum lockType)
+		public NetOffice.ADODBApi._Recordset Clone(object lockType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lockType);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Resync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords, NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
+		public void Resync(object affectRecords, object resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords, resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);
@@ -322,7 +322,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Resync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
+		public void Resync(object affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "Resync", paramsArray);
@@ -335,7 +335,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void _xSave(string fileName, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
+		public void _xSave(string fileName, object persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, persistFormat);
 			Invoker.Method(this, "_xSave", paramsArray);

@@ -18,7 +18,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLNavigator : IOmNavigator
+	public class HTMLNavigator : DispHTMLNavigator
 	{
 		#pragma warning disable
 		#region Fields

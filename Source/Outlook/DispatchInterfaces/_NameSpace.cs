@@ -846,7 +846,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(firstEntryID, secondEntryID);
 			object returnItem = Invoker.MethodReturn(this, "CompareEntryIDs", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

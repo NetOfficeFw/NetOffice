@@ -83,7 +83,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="format">Int32 Format</param>
 		/// <param name="output">optional string Output = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Render(Int32 format, string output)
+		public void Render(Int32 format, object output)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, output);
 			Invoker.Method(this, "Render", paramsArray);

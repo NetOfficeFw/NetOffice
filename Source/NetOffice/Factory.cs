@@ -34,18 +34,18 @@ namespace NetOffice
     public static class Factory
     {
         #region Fields
-        private static bool                     _initalized;
-        private static bool                     _assemblyResolveEventConnected;
-        private static List<COMObject>          _globalObjectList = new List<COMObject>();
-        private static List<IFactoryInfo>       _factoryList = new List<IFactoryInfo>();
+        private static bool _initalized;
+        private static bool _assemblyResolveEventConnected;
+        private static List<COMObject> _globalObjectList = new List<COMObject>();
+        private static List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private static Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private static Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
-        private static Dictionary<Guid, Guid>   _hostCache = new Dictionary<Guid, Guid>();
+        private static Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
         private static Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private static Assembly _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
-       
-        private static object _factoryListLock      = new object();
-        private static object _comObjectLock        = new object();
+
+        private static object _factoryListLock = new object();
+        private static object _comObjectLock = new object();
         private static object _globalObjectListLock = new object();
 
         #endregion
@@ -133,6 +133,17 @@ namespace NetOffice
         /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
         /// </summary>
+        /// <param name="cacheOptions">settings what NetOffice does with a previous existing cache(if exists)</param>
+        public static void Initialize(CacheOptions cacheOptions)
+        {
+            Settings.CacheOptions = cacheOptions;
+            Initialize();
+        }
+
+        /// <summary>
+        /// Must be called from client assembly for COMObject Support
+        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
+        /// </summary>
         public static void Initialize()
         {
             _initalized = true;
@@ -154,60 +165,77 @@ namespace NetOffice
                 }
 
                 // clear entities cache
-                _entitiesListCache.Clear();
+                if (CacheOptions.ClearExistingCache == Settings.CacheOptions)
+                {
+                    _wrapperTypeCache.Clear();
+                    _entitiesListCache.Clear();
+                    _hostCache.Clear();
+                    _proxyTypeCache.Clear();
+                    _factoryList.Clear();
+                }
 
                 List<string> dependAssemblies = new List<string>();
-                Assembly callingAssembly = System.Reflection.Assembly.GetCallingAssembly();
-
+               
                 Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
-                foreach (Assembly itemAssembly in assemblies)
+                foreach (Assembly domainAssembly in assemblies)
                 {
-                    string assemblyName = itemAssembly.GetName().Name;
-                    DebugConsole.WriteLine(string.Format("Load assembly {0}.", assemblyName));
-                    string[] depends = AddAssembly(assemblyName, itemAssembly);
-                    foreach (string depend in depends)
+                    foreach (AssemblyName itemName in domainAssembly.GetReferencedAssemblies())
                     {
-                        bool found = false;
-                        foreach (string itemExistingDependency in dependAssemblies)
-                        {
-                            if (depend == itemExistingDependency)
-                            {
-                                found = true;
-                                break;
-                            }
-                        }
-                        if (!found)
-                            dependAssemblies.Add(depend);
-                    }
-                }
-                 
-                // try load non loaded dependent assemblies
-                if (Settings.EnableAdHocLoading)
-                {
-                    foreach (string itemAssemblyName in dependAssemblies)
-                    {
-                        DebugConsole.WriteLine(string.Format("Try to load dependent assembly {0}.", itemAssemblyName));
+                        Assembly itemAssembly = Assembly.Load(itemName);
 
-                        string fileName = callingAssembly.CodeBase.Substring(0, callingAssembly.CodeBase.LastIndexOf("/")) + "/" + itemAssemblyName;
-                        fileName = fileName.Replace("/", "\\").Substring(8);
+                        string assemblyName = itemName.Name;
+                        if (ContainsNetOfficeAttribute(itemAssembly))
+                            DebugConsole.WriteLine(string.Format("Load assembly {0}.", assemblyName));
 
-                        if (System.IO.File.Exists(fileName))
+                        string[] depends = AddAssembly(assemblyName, itemAssembly);
+                        foreach (string depend in depends)
                         {
-                            try
+                            bool found = false;
+                            foreach (string itemExistingDependency in dependAssemblies)
                             {
-                                Assembly dependAssembly = Assembly.LoadFile(fileName);
-                                AddAssembly(dependAssembly.GetName().Name, dependAssembly);
+                                if (depend == itemExistingDependency)
+                                {
+                                    found = true;
+                                    break;
+                                }
                             }
-                            catch (Exception exception)
+                            if (!found)
+                                dependAssemblies.Add(depend);
+                        }
+
+                        // try load non loaded dependent assemblies
+                        if (Settings.EnableAdHocLoading)
+                        {
+                            foreach (string itemAssemblyName in dependAssemblies)
                             {
-                                DebugConsole.WriteException(exception);
+                                if (!AssemblyExistsInFactoryList(itemAssemblyName))
+                                {
+                                    DebugConsole.WriteLine(string.Format("Try to load dependent assembly {0}.", itemAssemblyName));
+
+                                    string fileName = domainAssembly.CodeBase.Substring(0, domainAssembly.CodeBase.LastIndexOf("/")) + "/" + itemAssemblyName;
+                                    fileName = fileName.Replace("/", "\\").Substring(8);
+
+                                    if (System.IO.File.Exists(fileName))
+                                    {
+                                        try
+                                        {
+                                            Assembly dependAssembly = Assembly.LoadFile(fileName);
+                                            AddAssembly(dependAssembly.GetName().Name, dependAssembly);
+                                        }
+                                        catch (Exception exception)
+                                        {
+                                            DebugConsole.WriteException(exception);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        DebugConsole.WriteLine(string.Format("Assembly {0} not found.", itemAssemblyName));
+                                    }
+                                }                                
                             }
                         }
-                        else
-                        {
-                            DebugConsole.WriteLine(string.Format("Assembly {0} not found.", itemAssemblyName));
-                        }
-                    }
+                    }                    
+                   
                 }
 
                 DebugConsole.WriteLine("NetOffice.Factory.Initialize() passed");
@@ -278,11 +306,11 @@ namespace NetOffice
             string className = TypeDescriptor.GetClassName(comProxy);
             string key = (parentLibraryGuid.ToString() + className).ToLower();
 
-            Dictionary<string, string> supportList =null;
+            Dictionary<string, string> supportList = null;
 
-            if(_entitiesListCache.TryGetValue(key, out supportList))
+            if (_entitiesListCache.TryGetValue(key, out supportList))
                 return supportList;
-            
+
             supportList = new Dictionary<string, string>();
             IDispatch dispatch = comProxy as IDispatch;
             if (null == dispatch)
@@ -310,23 +338,23 @@ namespace NetOffice
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYGET:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
-                        {
+                    {
                             typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
                             string outValue = "";
                             bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
                             if (!exists)
                                 supportList.Add("Property-" + strName, strDocString);
                             break;
-                        }
+                    }
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_FUNC:
-                        {
+                    {
                             typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
                             string outValue = "";
                             bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
                             if (!exists)
                                 supportList.Add("Method-" + strName, strDocString);
                             break;
-                        }
+                    }
                 }
 
                 typeInfo.ReleaseFuncDesc(funcDescPointer);
@@ -604,7 +632,7 @@ namespace NetOffice
             {
                 if (null == comProxyArray)
                     return null;
-                
+
                 if (Settings.EnableThreadSafe)
                 {
                     Monitor.Enter(_comObjectLock);
@@ -665,7 +693,7 @@ namespace NetOffice
                     Monitor.Enter(_globalObjectList);
                     isLocked = true;
                 }
-                
+
                 _globalObjectList.Add(proxy);
 
                 if (null != ProxyCountChanged)
@@ -722,6 +750,70 @@ namespace NetOffice
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// returns info the assembly is a NetOffice Api Assembly
+        /// </summary>
+        /// <param name="itemAssembly"></param>
+        /// <returns></returns>
+        private static bool ContainsNetOfficeAttribute(Assembly itemAssembly)
+        { 
+            List<string> dependAssemblies = new List<string>();
+            object[] attributes = itemAssembly.GetCustomAttributes(true);
+            foreach (object itemAttribute in attributes)
+            {
+                string fullnameAttribute = itemAttribute.GetType().FullName;
+                if (fullnameAttribute == "NetOffice.LateBindingAttribute")
+                    return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// checks the target is assembly is currently loaded
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="itemAssembly"></param>
+        /// <returns></returns>
+        private static bool NetOfficeAssemblyIsAlreadyLoaded(string name, Assembly itemAssembly)
+        {
+            List<string> dependAssemblies = new List<string>();
+            object[] attributes = itemAssembly.GetCustomAttributes(true);
+            foreach (object itemAttribute in attributes)
+            {
+                string fullnameAttribute = itemAttribute.GetType().FullName;
+                if (fullnameAttribute == "NetOffice.LateBindingAttribute")
+                {
+                    Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
+                    IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+
+                    foreach (IFactoryInfo itemFactory in _factoryList)
+                    {
+                        if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                            return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// check for loaded assembly in factory list
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        private static bool AssemblyExistsInFactoryList(string name)
+        {
+            if (name.EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase))
+                name = name.Substring(0, name.Length - 4);
+
+            foreach (IFactoryInfo item in _factoryList)
+            {
+                if (item.Assembly.GetName().Name.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))
+                    return true;
+            }
+            return false;
+        }
 
         /// <summary>
         /// add assembly to list
@@ -832,7 +924,7 @@ namespace NetOffice
         {
             if (_factoryList.Count == 0)
             {
-                string notInitMessage = "Factory are not initialized with LateBindingApi assemblies." + Environment.NewLine;
+                string notInitMessage = "Factory is initialized with NetOffice assemblies." + Environment.NewLine;
                 notInitMessage = "Please call NetOffice.Factory.Initialize()";
                 throw new LateBindingApiException(notInitMessage);
             }
@@ -871,17 +963,18 @@ namespace NetOffice
                 string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
                 if (System.IO.File.Exists(fullFileName))
                 {
+                    DebugConsole.WriteLine(string.Format("Try to resolve Assembly", args.Name));
                     Assembly assembly = System.Reflection.Assembly.Load(args.Name);
                     return assembly;
                 }
                 else
-                    return null;     
+                    return null;
             }
-            catch
+            catch(Exception exception)
             {
-                return null;   
+                DebugConsole.WriteException(exception);
+                return null;
             }
-             
         }
 
         #endregion

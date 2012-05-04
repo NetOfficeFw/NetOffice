@@ -91,7 +91,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "GetInfo", paramsArray);
 			name = (string)paramsArray[0];
 			desc = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
 			status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[1];
 			result = (string)paramsArray[2];
 			action = (string)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "Fix", paramsArray);
 			status = (NetOffice.OfficeApi.Enums.MsoDocInspectorStatus)paramsArray[2];
 			result = (string)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

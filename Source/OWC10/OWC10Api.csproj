@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DF2B4A16-48E4-448E-B0D5-52CF07D8934C}</ProjectGuid>
+    <ProjectGuid>{05954ED3-D0FB-47BF-813B-41E934853077}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.OWC10Api</RootNamespace>
     <AssemblyName>OWC10Api</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>OWC10Api_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -424,24 +425,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj">
-      <Project>{84C03862-CE6A-4C54-90AE-31CCD2C05A17}</Project>
+      <Project>{FAE34075-FACB-408E-828F-11BAD4FBFDAB}</Project>
       <Name>MSDATASRCApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj">
-      <Project>{BC61CBC2-B1B8-4E07-AE99-CE49B06C2792}</Project>
+      <Project>{45AAEFB9-9582-46D4-8196-EB5EBDBC1B9E}</Project>
       <Name>MSComctlLibApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\ADODB\ADODBApi.csproj">
-      <Project>{C26A69EF-1D63-4C08-BAB3-6DA7B3607F7B}</Project>
+      <Project>{FA4352D2-0E28-4E53-9157-41C70D3A7694}</Project>
       <Name>ADODBApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{3046F1E7-134C-411D-8932-942F96D33CF3}</Project>
-      <Name>OfficeApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

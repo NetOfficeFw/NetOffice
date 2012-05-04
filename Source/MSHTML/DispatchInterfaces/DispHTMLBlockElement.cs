@@ -2990,6 +2990,600 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
+		public string role
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "role", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "role", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaBusy
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaBusy", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaBusy", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaChecked
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaChecked", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaChecked", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaDisabled
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaDisabled", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaDisabled", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaExpanded
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaExpanded", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaExpanded", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaHaspopup
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaHaspopup", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaHaspopup", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaHidden
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaHidden", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaHidden", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaInvalid
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaInvalid", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaInvalid", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaMultiselectable
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaMultiselectable", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaMultiselectable", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaPressed
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaPressed", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaPressed", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaReadonly
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaReadonly", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaReadonly", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaRequired
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaRequired", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaRequired", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaSecret
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaSecret", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaSecret", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaSelected
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaSelected", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaSelected", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLAttributeCollection3 ie8_attributes
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_attributes", paramsArray);
+				NetOffice.MSHTMLApi.IHTMLAttributeCollection3 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLAttributeCollection3;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaValuenow
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaValuenow", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaValuenow", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int16 ariaPosinset
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaPosinset", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaPosinset", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int16 ariaSetsize
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaSetsize", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaSetsize", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public Int16 ariaLevel
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaLevel", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaLevel", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaValuemin
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaValuemin", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaValuemin", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaValuemax
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaValuemax", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaValuemax", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaControls
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaControls", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaControls", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaDescribedby
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaDescribedby", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaDescribedby", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaFlowto
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaFlowto", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaFlowto", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaLabelledby
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaLabelledby", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaLabelledby", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaActivedescendant
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaActivedescendant", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaActivedescendant", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaOwns
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaOwns", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaOwns", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaLive
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaLive", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaLive", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ariaRelevant
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ariaRelevant", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ariaRelevant", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object constructor
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
 		public string clear
 		{
 			get
@@ -3045,6 +3639,26 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public string ie8_cite
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ie8_cite", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ie8_cite", paramsArray);
+			}
+		}
+
 		#endregion
 
 		#region Methods
@@ -3056,7 +3670,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="attributeValue">object AttributeValue</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setAttribute(string strAttributeName, object attributeValue, Int32 lFlags)
+		public void setAttribute(string strAttributeName, object attributeValue, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, attributeValue, lFlags);
 			Invoker.Method(this, "setAttribute", paramsArray);
@@ -3081,7 +3695,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object getAttribute(string strAttributeName, Int32 lFlags)
+		public object getAttribute(string strAttributeName, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
@@ -3123,11 +3737,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool removeAttribute(string strAttributeName, Int32 lFlags)
+		public bool removeAttribute(string strAttributeName, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
 			object returnItem = Invoker.MethodReturn(this, "removeAttribute", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3140,7 +3754,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName);
 			object returnItem = Invoker.MethodReturn(this, "removeAttribute", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3174,7 +3788,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pChild);
 			object returnItem = Invoker.MethodReturn(this, "contains", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3219,7 +3833,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "toString", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -3227,7 +3841,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="containerCapture">optional bool containerCapture = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setCapture(bool containerCapture)
+		public void setCapture(object containerCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(containerCapture);
 			Invoker.Method(this, "setCapture", paramsArray);
@@ -3264,7 +3878,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
 			object returnItem = Invoker.MethodReturn(this, "componentFromPoint", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -3320,7 +3934,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="expression">string expression</param>
 		/// <param name="language">optional string language = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setExpression(string propname, string expression, string language)
+		public void setExpression(string propname, string expression, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, expression, language);
 			Invoker.Method(this, "setExpression", paramsArray);
@@ -3368,7 +3982,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname);
 			object returnItem = Invoker.MethodReturn(this, "removeExpression", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3423,7 +4037,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
 			object returnItem = Invoker.MethodReturn(this, "attachEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3497,7 +4111,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where);
 			object returnItem = Invoker.MethodReturn(this, "getAdjacentText", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -3510,7 +4124,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(where, newText);
 			object returnItem = Invoker.MethodReturn(this, "replaceAdjacentText", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -3523,7 +4137,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl, pvarFactory);
 			object returnItem = Invoker.MethodReturn(this, "addBehavior", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -3536,7 +4150,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl);
 			object returnItem = Invoker.MethodReturn(this, "addBehavior", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -3548,7 +4162,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cookie);
 			object returnItem = Invoker.MethodReturn(this, "removeBehavior", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3608,7 +4222,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrEventName, pvarEventObject);
 			object returnItem = Invoker.MethodReturn(this, "FireEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3621,7 +4235,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrEventName);
 			object returnItem = Invoker.MethodReturn(this, "FireEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3632,7 +4246,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "dragDrop", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3692,7 +4306,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "hasChildNodes", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -3768,7 +4382,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="fDeep">optional bool fDeep = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode removeNode(bool fDeep)
+		public NetOffice.MSHTMLApi.IHTMLDOMNode removeNode(object fDeep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fDeep);
 			object returnItem = Invoker.MethodReturn(this, "removeNode", paramsArray);
@@ -3826,6 +4440,112 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "appendChild", paramsArray);
 			NetOffice.MSHTMLApi.IHTMLDOMNode newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMNode;
 			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="bstrName">string bstrName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute2 ie8_getAttributeNode(string bstrName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
+			object returnItem = Invoker.MethodReturn(this, "ie8_getAttributeNode", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute2 ie8_setAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pattr);
+			object returnItem = Invoker.MethodReturn(this, "ie8_setAttributeNode", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public NetOffice.MSHTMLApi.IHTMLDOMAttribute2 ie8_removeAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(pattr);
+			object returnItem = Invoker.MethodReturn(this, "ie8_removeAttributeNode", paramsArray);
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="name">string name</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool hasAttribute(string name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(this, "hasAttribute", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="strAttributeName">string strAttributeName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public object ie8_getAttribute(string strAttributeName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName);
+			object returnItem = Invoker.MethodReturn(this, "ie8_getAttribute", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="strAttributeName">string strAttributeName</param>
+		/// <param name="attributeValue">object AttributeValue</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public void ie8_setAttribute(string strAttributeName, object attributeValue)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, attributeValue);
+			Invoker.Method(this, "ie8_setAttribute", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		/// <param name="strAttributeName">string strAttributeName</param>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool ie8_removeAttribute(string strAttributeName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName);
+			object returnItem = Invoker.MethodReturn(this, "ie8_removeAttribute", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersionAttribute("MSHTML", 4)]
+		public bool hasAttributes()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "hasAttributes", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		#endregion

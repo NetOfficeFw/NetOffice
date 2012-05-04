@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6FA55F42-D1BA-431C-B5C2-3EBB899230CE}</ProjectGuid>
+    <ProjectGuid>{1211CBB3-9C9E-41AD-AB40-AF9A7E7435F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.MSHTMLApi</RootNamespace>
     <AssemblyName>MSHTMLApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>MSHTMLApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -49,11 +50,14 @@
     <Compile Include="Enums\_htmlReadyState.cs" />
     <Compile Include="Enums\_htmlLoop.cs" />
     <Compile Include="Enums\_mediaType.cs" />
+    <Compile Include="Enums\_DomConstructor.cs" />
     <Compile Include="Enums\_styleTextTransform.cs" />
     <Compile Include="Enums\_styleDataRepeat.cs" />
     <Compile Include="Enums\_styleOverflow.cs" />
     <Compile Include="Enums\_styleTableLayout.cs" />
     <Compile Include="Enums\_styleBorderCollapse.cs" />
+    <Compile Include="Enums\_styleCaptionSide.cs" />
+    <Compile Include="Enums\_styleEmptyCells.cs" />
     <Compile Include="Enums\_styleFontStyle.cs" />
     <Compile Include="Enums\_styleFontVariant.cs" />
     <Compile Include="Enums\_styleBackgroundRepeat.cs" />
@@ -63,6 +67,8 @@
     <Compile Include="Enums\_styleBackgroundPositionX.cs" />
     <Compile Include="Enums\_styleBackgroundPositionY.cs" />
     <Compile Include="Enums\_styleFontSize.cs" />
+    <Compile Include="Enums\_styleZIndex.cs" />
+    <Compile Include="Enums\_styleWidowsOrphans.cs" />
     <Compile Include="Enums\_styleAuto.cs" />
     <Compile Include="Enums\_styleNone.cs" />
     <Compile Include="Enums\_styleNormal.cs" />
@@ -76,6 +82,7 @@
     <Compile Include="Enums\_styleListStylePosition.cs" />
     <Compile Include="Enums\_styleWhiteSpace.cs" />
     <Compile Include="Enums\_stylePageBreak.cs" />
+    <Compile Include="Enums\_stylePageBreakInside.cs" />
     <Compile Include="Enums\_styleCursor.cs" />
     <Compile Include="Enums\_styleDir.cs" />
     <Compile Include="Enums\_styleBidi.cs" />
@@ -95,11 +102,13 @@
     <Compile Include="Enums\_styleTextJustifyTrim.cs" />
     <Compile Include="Enums\_styleAccelerator.cs" />
     <Compile Include="Enums\_styleLayoutFlow.cs" />
+    <Compile Include="Enums\_styleBlockProgression.cs" />
     <Compile Include="Enums\_styleWritingMode.cs" />
     <Compile Include="Enums\_styleBool.cs" />
     <Compile Include="Enums\_styleTextUnderlinePosition.cs" />
     <Compile Include="Enums\_styleTextOverflow.cs" />
     <Compile Include="Enums\_styleInterpolation.cs" />
+    <Compile Include="Enums\_styleBoxSizing.cs" />
     <Compile Include="Enums\_styleTextLineThroughStyle.cs" />
     <Compile Include="Enums\_styleTextUnderlineStyle.cs" />
     <Compile Include="Enums\_styleTextEffect.cs" />
@@ -259,15 +268,18 @@
     <Compile Include="DispatchInterfaces\IHTMLElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyle.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFiltersCollection.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDOMConstructor.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyle2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyle3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyle4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyle5.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLStyle6.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRuleStyle.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRuleStyle2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRuleStyle3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRuleStyle4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRuleStyle5.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLRuleStyle6.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLStyle.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLRuleStyle.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRenderStyle.cs" />
@@ -276,13 +288,18 @@
     <Compile Include="DispatchInterfaces\IHTMLCurrentStyle2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLCurrentStyle3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLCurrentStyle4.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLCurrentStyle5.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLCurrentStyle.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRect.cs" />
     <Compile Include="DispatchInterfaces\IHTMLRectCollection.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLElementCollection.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLAttributeCollection3.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDOMAttribute.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMNode.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMNode2.cs" />
-    <Compile Include="DispatchInterfaces\IHTMLDOMAttribute.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMAttribute2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDOMAttribute3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMTextNode.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMTextNode2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMImplementation.cs" />
@@ -293,13 +310,15 @@
     <Compile Include="DispatchInterfaces\IHTMLAttributeCollection2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDOMChildrenCollection.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLAttributeCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispStaticNodeList.cs" />
     <Compile Include="DispatchInterfaces\DispDOMChildrenCollection.cs" />
+    <Compile Include="DispatchInterfaces\HTMLElementEvents3.cs" />
     <Compile Include="DispatchInterfaces\HTMLElementEvents2.cs" />
-    <Compile Include="DispatchInterfaces\IHTMLElementCollection.cs" />
-    <Compile Include="DispatchInterfaces\IHTMLElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLElement4.cs" />
+    <Compile Include="DispatchInterfaces\IElementSelector.cs" />
     <Compile Include="DispatchInterfaces\IHTMLUniqueName.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLElement5.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDatabinding.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDocument.cs" />
     <Compile Include="DispatchInterfaces\IHTMLElementDefaults.cs" />
@@ -318,20 +337,28 @@
     <Compile Include="DispatchInterfaces\DispHTCAttachBehavior.cs" />
     <Compile Include="DispatchInterfaces\DispHTCDescBehavior.cs" />
     <Compile Include="DispatchInterfaces\IHTMLUrnCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLUrnCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLGenericElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLGenericElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheetRule.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheetRulesCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStyleSheetRule.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStyleSheetRulesCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheetPage.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheetPagesCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStyleSheetPage.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStyleSheetPagesCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheetsCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheet.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleSheet2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLStyleSheet3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLStyleSheet.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStyleSheetsCollection.cs" />
     <Compile Include="DispatchInterfaces\HTMLLinkElementEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLLinkElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLLinkElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLLinkElement3.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLLinkElement4.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLLinkElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLTxtRange.cs" />
     <Compile Include="DispatchInterfaces\IHTMLTextRangeMetrics.cs" />
@@ -342,6 +369,7 @@
     <Compile Include="DispatchInterfaces\IHTMLFormElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFormElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSubmitData.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLFormElement4.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLFormElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLControlElementEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLControlElement.cs" />
@@ -354,19 +382,23 @@
     <Compile Include="DispatchInterfaces\HTMLImgEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLImgElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLImgElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLImgElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLImageElementFactory.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLImg.cs" />
     <Compile Include="DispatchInterfaces\IHTMLXMLHttpRequest.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLXMLHttpRequest2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLXMLHttpRequestFactory.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLXMLHttpRequest.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBodyElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBodyElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLBodyElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLBody.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFontElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLFontElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLAnchorEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAnchorElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAnchorElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLAnchorElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLAnchorElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLLabelEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLLabelElement.cs" />
@@ -383,6 +415,7 @@
     <Compile Include="DispatchInterfaces\DispHTMLLIElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBlockElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBlockElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLBlockElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLBlockElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDivElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLDivElement.cs" />
@@ -400,18 +433,20 @@
     <Compile Include="DispatchInterfaces\DispHTMLParaElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLElementCollection2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLElementCollection3.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLElementCollection4.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLElementCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLHeaderElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLHeaderElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLSelectElementEvents2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLOptionElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSelectElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSelectElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSelectElement4.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLSelectElement5.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLSelectElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLWndSelectElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSelectionObject.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSelectionObject2.cs" />
-    <Compile Include="DispatchInterfaces\IHTMLOptionElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLOptionElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLOptionElementFactory.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLOptionElement.cs" />
@@ -423,6 +458,7 @@
     <Compile Include="DispatchInterfaces\HTMLInputImageEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLInputElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLInputElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLInputElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLInputButtonElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLInputHiddenElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLInputTextElement.cs" />
@@ -440,10 +476,13 @@
     <Compile Include="DispatchInterfaces\DispHTMLMarqueeElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLHtmlElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLHeadElement.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLHeadElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLTitleElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLMetaElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLMetaElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLMetaElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBaseElement.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLBaseElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLIsIndexElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLIsIndexElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLNextIdElement.cs" />
@@ -464,12 +503,18 @@
     <Compile Include="DispatchInterfaces\IHTMLOpsProfile.cs" />
     <Compile Include="DispatchInterfaces\IOmNavigator.cs" />
     <Compile Include="DispatchInterfaces\IHTMLLocation.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLHistory.cs" />
+    <Compile Include="DispatchInterfaces\DispCPlugins.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLNavigator.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLLocation.cs" />
     <Compile Include="DispatchInterfaces\IHTMLBookmarkCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDataTransfer.cs" />
     <Compile Include="DispatchInterfaces\IHTMLEventObj2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLEventObj3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLEventObj4.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLEventObj5.cs" />
     <Compile Include="DispatchInterfaces\DispCEventObj.cs" />
+    <Compile Include="DispatchInterfaces\HTMLWindowEvents3.cs" />
     <Compile Include="DispatchInterfaces\HTMLWindowEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDocument2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFramesCollection2.cs" />
@@ -477,30 +522,43 @@
     <Compile Include="DispatchInterfaces\IHTMLScreen.cs" />
     <Compile Include="DispatchInterfaces\IHTMLWindow3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFrameBase.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLStorage.cs" />
     <Compile Include="DispatchInterfaces\IHTMLScreen2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLScreen3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLWindow4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLWindow5.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLWindow6.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLScreen.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLWindow2.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLWindowProxy.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDocumentCompatibleInfo.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDocumentCompatibleInfoCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLDocumentCompatibleInfo.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLDocumentCompatibleInfoCollection.cs" />
+    <Compile Include="DispatchInterfaces\HTMLDocumentEvents3.cs" />
     <Compile Include="DispatchInterfaces\HTMLDocumentEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDocument3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDocument4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDocument5.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDocument6.cs" />
+    <Compile Include="DispatchInterfaces\IDocumentSelector.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLDocument.cs" />
     <Compile Include="DispatchInterfaces\IWebBridge.cs" />
     <Compile Include="DispatchInterfaces\IWBScriptControl.cs" />
     <Compile Include="DispatchInterfaces\IHTMLEmbedElement.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLEmbedElement2.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLEmbed.cs" />
     <Compile Include="DispatchInterfaces\HTMLMapEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAreasCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAreasCollection2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAreasCollection3.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLAreasCollection4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLMapElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLAreasCollection.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLMapElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLAreaEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLAreaElement.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLAreaElement2.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLAreaElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLTableCaption.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLTableCaption.cs" />
@@ -509,6 +567,7 @@
     <Compile Include="DispatchInterfaces\DispHTMLCommentElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLPhraseElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLPhraseElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLPhraseElement3.cs" />
     <Compile Include="DispatchInterfaces\IHTMLSpanElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLPhraseElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLSpanElement.cs" />
@@ -535,6 +594,7 @@
     <Compile Include="DispatchInterfaces\HTMLScriptEvents2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLScriptElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLScriptElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLScriptElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLScriptElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLNoShowElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLNoShowElement.cs" />
@@ -542,7 +602,9 @@
     <Compile Include="DispatchInterfaces\IHTMLObjectElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLObjectElement2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLObjectElement3.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLObjectElement4.cs" />
     <Compile Include="DispatchInterfaces\IHTMLParamElement.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLParamElement2.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLObjectElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLParamElement.cs" />
     <Compile Include="DispatchInterfaces\HTMLFrameSiteEvents2.cs" />
@@ -552,9 +614,11 @@
     <Compile Include="DispatchInterfaces\DispHTMLFrameBase.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFrameElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFrameElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLFrameElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLFrameElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLIFrameElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLIFrameElement2.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLIFrameElement3.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLIFrame.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDivPosition.cs" />
     <Compile Include="DispatchInterfaces\IHTMLFieldSetElement.cs" />
@@ -578,9 +642,16 @@
     <Compile Include="DispatchInterfaces\IHTMLStyleElement.cs" />
     <Compile Include="DispatchInterfaces\DispHTMLStyleElement.cs" />
     <Compile Include="DispatchInterfaces\IHTMLStyleFontFace.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLXDomainRequest.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLXDomainRequestFactory.cs" />
+    <Compile Include="DispatchInterfaces\DispXDomainRequest.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLStorage.cs" />
     <Compile Include="DispatchInterfaces\IHTMLNamespace.cs" />
     <Compile Include="DispatchInterfaces\IHTMLNamespaceCollection.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLNamespace.cs" />
+    <Compile Include="DispatchInterfaces\DispHTMLNamespaceCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLIPrintCollection.cs" />
+    <Compile Include="DispatchInterfaces\IHTMLDOMConstructorCollection.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDialog.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDialog2.cs" />
     <Compile Include="DispatchInterfaces\IHTMLDialog3.cs" />
@@ -604,6 +675,7 @@
     <Compile Include="Classes\HTMLDOMTextNode.cs" />
     <Compile Include="Classes\HTMLDOMImplementation.cs" />
     <Compile Include="Classes\HTMLAttributeCollection.cs" />
+    <Compile Include="Classes\StaticNodeList.cs" />
     <Compile Include="Classes\DOMChildrenCollection.cs" />
     <Compile Include="Classes\HTMLDefaults.cs" />
     <Compile Include="Classes\HTCDefaultDispatch.cs" />
@@ -675,6 +747,8 @@
     <Compile Include="Classes\HTMLScreen.cs" />
     <Compile Include="Classes\HTMLWindow2.cs" />
     <Compile Include="Classes\HTMLWindowProxy.cs" />
+    <Compile Include="Classes\HTMLDocumentCompatibleInfo.cs" />
+    <Compile Include="Classes\HTMLDocumentCompatibleInfoCollection.cs" />
     <Compile Include="Classes\HTMLDocument.cs" />
     <Compile Include="Classes\Scriptlet.cs" />
     <Compile Include="Classes\HTMLEmbed.cs" />
@@ -705,6 +779,9 @@
     <Compile Include="Classes\HTMLBGsound.cs" />
     <Compile Include="Classes\HTMLStyleElement.cs" />
     <Compile Include="Classes\HTMLStyleFontFace.cs" />
+    <Compile Include="Classes\XDomainRequest.cs" />
+    <Compile Include="Classes\XDomainRequestFactory.cs" />
+    <Compile Include="Classes\HTMLStorage.cs" />
     <Compile Include="Classes\HtmlDlgSafeHelper.cs" />
     <Compile Include="Classes\BlockFormats.cs" />
     <Compile Include="Classes\FontNames.cs" />
@@ -727,6 +804,7 @@
     <Compile Include="EventInterfaces\HTMLControlElementEvents.cs" />
     <Compile Include="EventInterfaces\HTMLTextContainerEvents.cs" />
     <Compile Include="EventInterfaces\HTMLImgEvents.cs" />
+    <Compile Include="EventInterfaces\HTMLXMLHttpRequestEvents.cs" />
     <Compile Include="EventInterfaces\HTMLAnchorEvents.cs" />
     <Compile Include="EventInterfaces\HTMLLabelEvents.cs" />
     <Compile Include="EventInterfaces\HTMLSelectElementEvents.cs" />
@@ -774,17 +852,6 @@
     <Compile Include="Records\wireHRGN.cs" />
     <Compile Include="Records\tagSIZE.cs" />
     <Compile Include="Records\tagLOGFONTW.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0001.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0002.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0007.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0005.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0003.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0004.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0006.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0008.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0009.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0010.cs" />
-    <Compile Include="Records\__MIDL___MIDL_itf_mshtml_0256_0011.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

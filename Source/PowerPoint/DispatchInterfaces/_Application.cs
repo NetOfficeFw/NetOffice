@@ -1067,7 +1067,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		/// <param name="contextID">optional Int32 ContextID = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void Help(string helpFile, Int32 contextID)
+		public void Help(object helpFile, object contextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, contextID);
 			Invoker.Method(this, "Help", paramsArray);
@@ -1090,7 +1090,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void Help(string helpFile)
+		public void Help(object helpFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile);
 			Invoker.Method(this, "Help", paramsArray);
@@ -1190,11 +1190,11 @@ namespace NetOffice.PowerPointApi
 		/// <param name="persist">optional bool Persist = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public bool GetOptionFlag(Int32 option, bool persist)
+		public bool GetOptionFlag(Int32 option, object persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, persist);
 			object returnItem = Invoker.MethodReturn(this, "GetOptionFlag", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1208,7 +1208,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
 			object returnItem = Invoker.MethodReturn(this, "GetOptionFlag", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1219,7 +1219,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="persist">optional bool Persist = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SetOptionFlag(Int32 option, bool state, bool persist)
+		public void SetOptionFlag(Int32 option, bool state, object persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, state, persist);
 			Invoker.Method(this, "SetOptionFlag", paramsArray);

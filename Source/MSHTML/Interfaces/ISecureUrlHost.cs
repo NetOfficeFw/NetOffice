@@ -90,7 +90,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pfAllow, pchUrlInQuestion, dwFlags);
 			object returnItem = Invoker.MethodReturn(this, "ValidateSecureUrl", paramsArray);
 			pfAllow = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

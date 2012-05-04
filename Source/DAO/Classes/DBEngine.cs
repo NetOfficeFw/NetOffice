@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 
 	///<summary>
 	/// CoClass DBEngine 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 5,12
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 5,12)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DBEngine : _DBEngine
 	{

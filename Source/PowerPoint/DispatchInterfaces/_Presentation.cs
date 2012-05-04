@@ -1386,7 +1386,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, string extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
+		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method, headerInfo);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1411,7 +1411,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="subAddress">optional string SubAddress = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress)
+		public void FollowHyperlink(string address, object subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1425,7 +1425,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress, bool newWindow)
+		public void FollowHyperlink(string address, object subAddress, object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1440,7 +1440,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory)
+		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1456,7 +1456,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="extraInfo">optional string ExtraInfo = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, string extraInfo)
+		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1473,7 +1473,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, string extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method)
+		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method);
 			Invoker.Method(this, "FollowHyperlink", paramsArray);
@@ -1508,7 +1508,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		/// <param name="collate">optional NetOffice.OfficeApi.Enums.MsoTriState Collate = -99</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies, NetOffice.OfficeApi.Enums.MsoTriState collate)
+		public void PrintOut(object from, object to, object printToFile, object copies, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies, collate);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1531,7 +1531,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="from">optional Int32 From = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void PrintOut(Int32 from)
+		public void PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1544,7 +1544,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="to">optional Int32 To = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void PrintOut(Int32 from, Int32 to)
+		public void PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1558,7 +1558,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile)
+		public void PrintOut(object from, object to, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1573,7 +1573,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies)
+		public void PrintOut(object from, object to, object printToFile, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -1596,7 +1596,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 1</param>
 		/// <param name="embedTrueTypeFonts">optional NetOffice.OfficeApi.Enums.MsoTriState EmbedTrueTypeFonts = -2</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SaveAs(string fileName, NetOffice.PowerPointApi.Enums.PpSaveAsFileType fileFormat, NetOffice.OfficeApi.Enums.MsoTriState embedTrueTypeFonts)
+		public void SaveAs(string fileName, object fileFormat, object embedTrueTypeFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat, embedTrueTypeFonts);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -1621,7 +1621,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SaveAs(string fileName, NetOffice.PowerPointApi.Enums.PpSaveAsFileType fileFormat)
+		public void SaveAs(string fileName, object fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -1634,7 +1634,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 11</param>
 		/// <param name="embedTrueTypeFonts">optional NetOffice.OfficeApi.Enums.MsoTriState EmbedTrueTypeFonts = -2</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SaveCopyAs(string fileName, NetOffice.PowerPointApi.Enums.PpSaveAsFileType fileFormat, NetOffice.OfficeApi.Enums.MsoTriState embedTrueTypeFonts)
+		public void SaveCopyAs(string fileName, object fileFormat, object embedTrueTypeFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat, embedTrueTypeFonts);
 			Invoker.Method(this, "SaveCopyAs", paramsArray);
@@ -1659,7 +1659,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 11</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void SaveCopyAs(string fileName, NetOffice.PowerPointApi.Enums.PpSaveAsFileType fileFormat)
+		public void SaveCopyAs(string fileName, object fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat);
 			Invoker.Method(this, "SaveCopyAs", paramsArray);
@@ -1673,7 +1673,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		/// <param name="scaleHeight">optional Int32 ScaleHeight = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void Export(string path, string filterName, Int32 scaleWidth, Int32 scaleHeight)
+		public void Export(string path, string filterName, object scaleWidth, object scaleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, filterName, scaleWidth, scaleHeight);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1700,7 +1700,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public void Export(string path, string filterName, Int32 scaleWidth)
+		public void Export(string path, string filterName, object scaleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, filterName, scaleWidth);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1801,7 +1801,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="comments">optional object Comments</param>
 		/// <param name="makePublic">optional object MakePublic</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void CheckIn(bool saveChanges, object comments, object makePublic)
+		public void CheckIn(object saveChanges, object comments, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic);
 			Invoker.Method(this, "CheckIn", paramsArray);
@@ -1824,7 +1824,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void CheckIn(bool saveChanges)
+		public void CheckIn(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
 			Invoker.Method(this, "CheckIn", paramsArray);
@@ -1837,7 +1837,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="comments">optional object Comments</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void CheckIn(bool saveChanges, object comments)
+		public void CheckIn(object saveChanges, object comments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments);
 			Invoker.Method(this, "CheckIn", paramsArray);
@@ -1851,7 +1851,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CanCheckIn", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1862,7 +1862,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
 		/// <param name="includeAttachment">optional object IncludeAttachment</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void SendForReview(string recipients, string subject, bool showMessage, object includeAttachment)
+		public void SendForReview(object recipients, object subject, object showMessage, object includeAttachment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage, includeAttachment);
 			Invoker.Method(this, "SendForReview", paramsArray);
@@ -1885,7 +1885,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="recipients">optional string Recipients = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void SendForReview(string recipients)
+		public void SendForReview(object recipients)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients);
 			Invoker.Method(this, "SendForReview", paramsArray);
@@ -1898,7 +1898,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="subject">optional string Subject = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void SendForReview(string recipients, string subject)
+		public void SendForReview(object recipients, object subject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject);
 			Invoker.Method(this, "SendForReview", paramsArray);
@@ -1912,7 +1912,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void SendForReview(string recipients, string subject, bool showMessage)
+		public void SendForReview(object recipients, object subject, object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage);
 			Invoker.Method(this, "SendForReview", paramsArray);
@@ -1923,7 +1923,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void ReplyWithChanges(bool showMessage)
+		public void ReplyWithChanges(object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showMessage);
 			Invoker.Method(this, "ReplyWithChanges", paramsArray);
@@ -1955,7 +1955,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="fileName">optional string FileName = </param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void AddBaseline(string fileName)
+		public void AddBaseline(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			Invoker.Method(this, "AddBaseline", paramsArray);
@@ -2003,7 +2003,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="subject">optional string Subject = </param>
 		/// <param name="showMessage">optional bool ShowMessage = false</param>
 		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
-		public void SendFaxOverInternet(string recipients, string subject, bool showMessage)
+		public void SendFaxOverInternet(object recipients, object subject, object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage);
 			Invoker.Method(this, "SendFaxOverInternet", paramsArray);
@@ -2026,7 +2026,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="recipients">optional string Recipients = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
-		public void SendFaxOverInternet(string recipients)
+		public void SendFaxOverInternet(object recipients)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients);
 			Invoker.Method(this, "SendFaxOverInternet", paramsArray);
@@ -2039,7 +2039,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="subject">optional string Subject = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 11,12,14)]
-		public void SendFaxOverInternet(string recipients, string subject)
+		public void SendFaxOverInternet(object recipients, object subject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject);
 			Invoker.Method(this, "SendFaxOverInternet", paramsArray);
@@ -2092,7 +2092,7 @@ namespace NetOffice.PowerPointApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "sectionTitle", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -2114,7 +2114,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="makePublic">optional object MakePublic</param>
 		/// <param name="versionType">optional object VersionType</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void CheckInWithVersion(bool saveChanges, object comments, object makePublic, object versionType)
+		public void CheckInWithVersion(object saveChanges, object comments, object makePublic, object versionType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic, versionType);
 			Invoker.Method(this, "CheckInWithVersion", paramsArray);
@@ -2137,7 +2137,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void CheckInWithVersion(bool saveChanges)
+		public void CheckInWithVersion(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
 			Invoker.Method(this, "CheckInWithVersion", paramsArray);
@@ -2150,7 +2150,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="comments">optional object Comments</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void CheckInWithVersion(bool saveChanges, object comments)
+		public void CheckInWithVersion(object saveChanges, object comments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments);
 			Invoker.Method(this, "CheckInWithVersion", paramsArray);
@@ -2164,7 +2164,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="makePublic">optional object MakePublic</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void CheckInWithVersion(bool saveChanges, object comments, object makePublic)
+		public void CheckInWithVersion(object saveChanges, object comments, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic);
 			Invoker.Method(this, "CheckInWithVersion", paramsArray);
@@ -2190,7 +2190,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="externalExporter">optional object ExternalExporter</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties, bool keepIRMSettings, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1, object externalExporter)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object externalExporter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1, externalExporter);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2217,7 +2217,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="intent">optional NetOffice.PowerPointApi.Enums.PpFixedFormatIntent Intent = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2232,7 +2232,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="frameSlides">optional NetOffice.OfficeApi.Enums.MsoTriState FrameSlides = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2248,7 +2248,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="handoutOrder">optional NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2265,7 +2265,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="outputType">optional NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2283,7 +2283,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printHiddenSlides">optional NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2302,7 +2302,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printRange">optional NetOffice.PowerPointApi.PrintRange PrintRange = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2322,7 +2322,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="rangeType">optional NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2343,7 +2343,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="slideShowName">optional string SlideShowName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2365,7 +2365,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="includeDocProperties">optional bool IncludeDocProperties = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2388,7 +2388,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="keepIRMSettings">optional bool KeepIRMSettings = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties, bool keepIRMSettings)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2412,7 +2412,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties, bool keepIRMSettings, bool docStructureTags)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2437,7 +2437,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties, bool keepIRMSettings, bool docStructureTags, bool bitmapMissingFonts)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2463,7 +2463,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, NetOffice.PowerPointApi.Enums.PpFixedFormatIntent intent, NetOffice.OfficeApi.Enums.MsoTriState frameSlides, NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder handoutOrder, NetOffice.PowerPointApi.Enums.PpPrintOutputType outputType, NetOffice.OfficeApi.Enums.MsoTriState printHiddenSlides, NetOffice.PowerPointApi.PrintRange printRange, NetOffice.PowerPointApi.Enums.PpPrintRangeType rangeType, string slideShowName, bool includeDocProperties, bool keepIRMSettings, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1)
+		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -2521,7 +2521,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		/// <param name="useSlideOrder">optional bool UseSlideOrder = false</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void PublishSlides(string slideLibraryUrl, bool overwrite, bool useSlideOrder)
+		public void PublishSlides(string slideLibraryUrl, object overwrite, object useSlideOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite, useSlideOrder);
 			Invoker.Method(this, "PublishSlides", paramsArray);
@@ -2546,7 +2546,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void PublishSlides(string slideLibraryUrl, bool overwrite)
+		public void PublishSlides(string slideLibraryUrl, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite);
 			Invoker.Method(this, "PublishSlides", paramsArray);
@@ -2625,7 +2625,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="framesPerSecond">optional Int32 FramesPerSecond = 30</param>
 		/// <param name="quality">optional Int32 Quality = 85</param>
 		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void CreateVideo(string fileName, bool useTimingsAndNarrations, Int32 defaultSlideDuration, Int32 vertResolution, Int32 framesPerSecond, Int32 quality)
+		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution, object framesPerSecond, object quality)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution, framesPerSecond, quality);
 			Invoker.Method(this, "CreateVideo", paramsArray);
@@ -2650,7 +2650,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useTimingsAndNarrations">optional bool UseTimingsAndNarrations = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void CreateVideo(string fileName, bool useTimingsAndNarrations)
+		public void CreateVideo(string fileName, object useTimingsAndNarrations)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations);
 			Invoker.Method(this, "CreateVideo", paramsArray);
@@ -2664,7 +2664,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="defaultSlideDuration">optional Int32 DefaultSlideDuration = 5</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void CreateVideo(string fileName, bool useTimingsAndNarrations, Int32 defaultSlideDuration)
+		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration);
 			Invoker.Method(this, "CreateVideo", paramsArray);
@@ -2679,7 +2679,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="vertResolution">optional Int32 VertResolution = 720</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void CreateVideo(string fileName, bool useTimingsAndNarrations, Int32 defaultSlideDuration, Int32 vertResolution)
+		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution);
 			Invoker.Method(this, "CreateVideo", paramsArray);
@@ -2695,7 +2695,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="framesPerSecond">optional Int32 FramesPerSecond = 30</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void CreateVideo(string fileName, bool useTimingsAndNarrations, Int32 defaultSlideDuration, Int32 vertResolution, Int32 framesPerSecond)
+		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution, object framesPerSecond)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution, framesPerSecond);
 			Invoker.Method(this, "CreateVideo", paramsArray);

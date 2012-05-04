@@ -40,6 +40,13 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
+		 /// <remarks>4</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleVisibilityCollapse = 4,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleVisibility_Max = 2147483647

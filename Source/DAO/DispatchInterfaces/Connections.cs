@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Connections 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 5,12
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 5,12)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Connections : _Collection
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 5, 12
 		/// Get
 		/// </summary>
 		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 5,12)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.DAOApi.Connection this[object item]
 		{

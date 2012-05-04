@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppDoc);
 			object returnItem = Invoker.MethodReturn(this, "OwningDoc", paramsArray);
 			ppDoc = (NetOffice.MSHTMLApi.IHTMLDocument2)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

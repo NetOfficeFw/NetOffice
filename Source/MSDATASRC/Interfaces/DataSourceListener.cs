@@ -86,7 +86,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberChanged", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -99,7 +99,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberAdded", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
 			object returnItem = Invoker.MethodReturn(this, "dataMemberRemoved", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

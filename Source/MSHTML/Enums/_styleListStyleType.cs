@@ -82,6 +82,55 @@ namespace NetOffice.MSHTMLApi.Enums
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
+		 /// <remarks>10</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeDecimalLeadingZero = 10,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>11</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeGeorgian = 11,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>12</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeArmenian = 12,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>13</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeUpperLatin = 13,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>14</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeLowerLatin = 14,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>15</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeUpperGreek = 15,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
+		 /// <remarks>16</remarks>
+		 [SupportByVersionAttribute("MSHTML", 4)]
+		 styleListStyleTypeLowerGreek = 16,
+
+		 /// <summary>
+		 /// SupportByVersion MSHTML 4
+		 /// </summary>
 		 /// <remarks>2147483647</remarks>
 		 [SupportByVersionAttribute("MSHTML", 4)]
 		 styleListStyleType_Max = 2147483647

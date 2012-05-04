@@ -1160,7 +1160,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "CanCheckOut", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -1843,7 +1843,7 @@ namespace NetOffice.WordApi
 		/// <param name="blogName">string BlogName</param>
 		/// <param name="postID">optional string PostID = </param>
 		[SupportByVersionAttribute("Word", 12,14)]
-		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, string postID)
+		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, object postID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName, postID);
 			object returnItem = Invoker.MethodReturn(this, "AddBlogDocument", paramsArray);

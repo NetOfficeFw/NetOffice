@@ -29,9 +29,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass Toolbar 
-	/// SupportByVersion MSComctlLib, 6.0
+	/// SupportByVersion MSComctlLib, 2
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6.0)]
+	[SupportByVersionAttribute("MSComctlLib", 2)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Toolbar : IToolbar,IEventBinding
 	{
@@ -110,14 +110,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_ButtonClickEventHandler _ButtonClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_ButtonClickEventHandler ButtonClickEvent
 		{
 			add
@@ -132,14 +132,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -154,14 +154,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_ClickEventHandler ClickEvent
 		{
 			add
@@ -176,14 +176,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -198,14 +198,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -220,14 +220,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -242,14 +242,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -264,14 +264,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -286,14 +286,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -308,14 +308,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -330,14 +330,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -352,14 +352,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -374,14 +374,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add
@@ -396,14 +396,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_ButtonMenuClickEventHandler _ButtonMenuClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_ButtonMenuClickEventHandler ButtonMenuClickEvent
 		{
 			add
@@ -418,14 +418,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 6.0
+		/// SupportByVersion MSComctlLib, 2
 		/// </summary>
 		private event Toolbar_ButtonDropDownEventHandler _ButtonDropDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 6.0
+		/// SupportByVersion MSComctlLib 2
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6.0)]
+		[SupportByVersion("MSComctlLib", 2)]
 		public event Toolbar_ButtonDropDownEventHandler ButtonDropDownEvent
 		{
 			add

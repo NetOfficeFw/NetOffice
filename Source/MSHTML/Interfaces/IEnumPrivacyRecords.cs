@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "reset", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -99,7 +99,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pSize);
 			object returnItem = Invoker.MethodReturn(this, "GetSize", paramsArray);
 			pSize = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pState);
 			object returnItem = Invoker.MethodReturn(this, "GetPrivacyImpacted", paramsArray);
 			pState = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -138,7 +138,7 @@ namespace NetOffice.MSHTMLApi
 			pbstrPolicyRef = (string)paramsArray[1];
 			pdwReserved = (Int32)paramsArray[2];
 			pdwPrivacyFlags = (Int32)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

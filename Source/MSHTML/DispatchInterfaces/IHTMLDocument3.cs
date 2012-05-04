@@ -521,7 +521,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="fForce">optional bool fForce = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void recalc(bool fForce)
+		public void recalc(object fForce)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fForce);
 			Invoker.Method(this, "recalc", paramsArray);
@@ -561,7 +561,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_event, pdisp);
 			object returnItem = Invoker.MethodReturn(this, "attachEvent", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>

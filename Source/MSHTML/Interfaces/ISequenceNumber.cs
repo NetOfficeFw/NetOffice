@@ -89,7 +89,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(nCurrent, pnNew);
 			object returnItem = Invoker.MethodReturn(this, "GetSequenceNumber", paramsArray);
 			pnNew = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

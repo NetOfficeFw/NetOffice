@@ -14,7 +14,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLLabelElement : IHTMLDatabinding
+	public class IHTMLLabelElement : COMObject
 	{
 		#pragma warning disable
 		#region Type Information

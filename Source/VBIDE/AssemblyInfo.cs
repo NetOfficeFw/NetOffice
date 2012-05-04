@@ -7,8 +7,8 @@ using NetOffice;
     Contains the following Type Libraries:
 	Name - Description - SupportByVersion
 	VBIDE - Microsoft Visual Basic for Applications Extensibility 5.3 - 5.3
-	VBIDE - Microsoft.Vbe.Interop, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
 	VBIDE - Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+	VBIDE - Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 14
 
 */
 
@@ -20,8 +20,8 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.0")]
-[assembly: AssemblyFileVersion("1.5.1.0")]
+[assembly: AssemblyVersion("1.5.0.1")]
+[assembly: AssemblyFileVersion("1.5.0.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("VBIDE")]
 [assembly: Guid("0002E157-0000-0000-C000-000000000046")]

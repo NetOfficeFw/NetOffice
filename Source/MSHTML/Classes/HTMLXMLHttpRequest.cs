@@ -8,6 +8,8 @@ namespace NetOffice.MSHTMLApi
 	#region Delegates
 
 	#pragma warning disable
+	public delegate void HTMLXMLHttpRequest_ontimeoutEventHandler();
+	public delegate void HTMLXMLHttpRequest_onreadystatechangeEventHandler();
 	#pragma warning restore
 
 	#endregion
@@ -18,7 +20,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLXMLHttpRequest : IHTMLXMLHttpRequest
+	public class HTMLXMLHttpRequest : DispHTMLXMLHttpRequest,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields
@@ -26,6 +28,7 @@ namespace NetOffice.MSHTMLApi
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
+		HTMLXMLHttpRequestEvents_SinkHelper _hTMLXMLHttpRequestEvents_SinkHelper;
 	
 		#endregion
 
@@ -93,6 +96,50 @@ namespace NetOffice.MSHTMLApi
 
 		#region Events
 
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLXMLHttpRequest_ontimeoutEventHandler _ontimeoutEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLXMLHttpRequest_ontimeoutEventHandler ontimeoutEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ontimeoutEvent += value;
+			}
+			remove
+			{
+				_ontimeoutEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSHTML, 4
+		/// </summary>
+		private event HTMLXMLHttpRequest_onreadystatechangeEventHandler _onreadystatechangeEvent;
+
+		/// <summary>
+		/// SupportByVersion MSHTML 4
+		/// </summary>
+		[SupportByVersion("MSHTML", 4)]
+		public event HTMLXMLHttpRequest_onreadystatechangeEventHandler onreadystatechangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_onreadystatechangeEvent += value;
+			}
+			remove
+			{
+				_onreadystatechangeEvent -= value;
+			}
+		}
+
 		#endregion
        
 	    #region IEventBinding Member
@@ -110,9 +157,14 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, null);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLXMLHttpRequestEvents_SinkHelper.Id);
 
- 
+
+			if(HTMLXMLHttpRequestEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			{
+				_hTMLXMLHttpRequestEvents_SinkHelper = new HTMLXMLHttpRequestEvents_SinkHelper(this, _connectPoint);
+				return;
+			} 
         }
 
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -217,6 +269,11 @@ namespace NetOffice.MSHTMLApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
+			if( null != _hTMLXMLHttpRequestEvents_SinkHelper)
+			{
+				_hTMLXMLHttpRequestEvents_SinkHelper.Dispose();
+				_hTMLXMLHttpRequestEvents_SinkHelper = null;
+			}
 
 			_connectPoint = null;
 		}

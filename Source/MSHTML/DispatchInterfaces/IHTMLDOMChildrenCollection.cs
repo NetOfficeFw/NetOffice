@@ -14,7 +14,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLDOMChildrenCollection : DispDOMChildrenCollection
+	public class IHTMLDOMChildrenCollection : DispStaticNodeList
 	{
 		#pragma warning disable
 		#region Type Information

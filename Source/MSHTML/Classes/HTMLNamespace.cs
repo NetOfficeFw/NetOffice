@@ -19,7 +19,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLNamespace : IHTMLNamespace,IEventBinding
+	public class HTMLNamespace : DispHTMLNamespace,IEventBinding
 	{
 		#pragma warning disable
 		#region Fields

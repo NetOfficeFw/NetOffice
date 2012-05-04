@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "InvalidatePainterInfo", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -96,7 +96,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(prcInvalid);
 			object returnItem = Invoker.MethodReturn(this, "InvalidateRect", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -108,7 +108,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rgnInvalid);
 			object returnItem = Invoker.MethodReturn(this, "InvalidateRegion", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -124,7 +124,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(lFlags, pDrawInfo);
 			object returnItem = Invoker.MethodReturn(this, "GetDrawInfo", paramsArray);
 			pDrawInfo = (_HTML_PAINT_DRAW_INFO)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -140,7 +140,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ptGlobal, pptLocal);
 			object returnItem = Invoker.MethodReturn(this, "TransformGlobalToLocal", paramsArray);
 			pptLocal = (tagPOINT)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -156,7 +156,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ptLocal, pptGlobal);
 			object returnItem = Invoker.MethodReturn(this, "TransformLocalToGlobal", paramsArray);
 			pptGlobal = (tagPOINT)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -171,7 +171,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plCookie);
 			object returnItem = Invoker.MethodReturn(this, "GetHitTestCookie", paramsArray);
 			plCookie = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppPointer);
 			object returnItem = Invoker.MethodReturn(this, "CreateMarkupPointer", paramsArray);
 			ppPointer = (NetOffice.MSHTMLApi.IMarkupPointer)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(ppMarkupContainer);
 			object returnItem = Invoker.MethodReturn(this, "CreateMarkupContainer", paramsArray);
 			ppMarkupContainer = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(tagID, pchAttributes, ppElement);
 			object returnItem = Invoker.MethodReturn(this, "createElement", paramsArray);
 			ppElement = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pElemCloneThis, ppElementTheClone);
 			object returnItem = Invoker.MethodReturn(this, "CloneElement", paramsArray);
 			ppElementTheClone = (NetOffice.MSHTMLApi.IHTMLElement)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -150,7 +150,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pElementInsert, pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "InsertElement", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pElementRemove);
 			object returnItem = Invoker.MethodReturn(this, "RemoveElement", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -175,7 +175,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "remove", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerSourceStart, pPointerSourceFinish, pPointerTarget);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -203,7 +203,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerSourceStart, pPointerSourceFinish, pPointerTarget);
 			object returnItem = Invoker.MethodReturn(this, "move", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchText, cch, pPointerTarget);
 			object returnItem = Invoker.MethodReturn(this, "InsertText", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -236,7 +236,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pchHTML, dwFlags, ppContainerResult, ppPointerStart, ppPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "ParseString", paramsArray);
 			ppContainerResult = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -255,7 +255,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hglobalHTML, dwFlags, ppContainerResult, pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "ParseGlobal", paramsArray);
 			ppContainerResult = (NetOffice.MSHTMLApi.IMarkupContainer)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pElement, pfScoped);
 			object returnItem = Invoker.MethodReturn(this, "IsScopedElement", paramsArray);
 			pfScoped = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -287,7 +287,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pElement, ptagId);
 			object returnItem = Invoker.MethodReturn(this, "GetElementTagId", paramsArray);
 			ptagId = (NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -303,7 +303,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, ptagId);
 			object returnItem = Invoker.MethodReturn(this, "GetTagIDForName", paramsArray);
 			ptagId = (NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -319,7 +319,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(tagID, pbstrName);
 			object returnItem = Invoker.MethodReturn(this, "GetNameForTagID", paramsArray);
 			pbstrName = (string)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -333,7 +333,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pIRange, pPointerStart, pPointerFinish);
 			object returnItem = Invoker.MethodReturn(this, "MovePointersToRange", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -347,7 +347,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pPointerStart, pPointerFinish, pIRange);
 			object returnItem = Invoker.MethodReturn(this, "MoveRangeToPointers", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -359,7 +359,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pchTitle);
 			object returnItem = Invoker.MethodReturn(this, "BeginUndoUnit", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -370,7 +370,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "EndUndoUnit", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

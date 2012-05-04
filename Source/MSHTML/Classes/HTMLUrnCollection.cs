@@ -18,7 +18,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLUrnCollection : IHTMLUrnCollection
+	public class HTMLUrnCollection : DispHTMLUrnCollection
 	{
 		#pragma warning disable
 		#region Fields

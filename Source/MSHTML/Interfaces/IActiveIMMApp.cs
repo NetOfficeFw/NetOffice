@@ -90,7 +90,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIME, phPrev);
 			object returnItem = Invoker.MethodReturn(this, "AssociateContext", paramsArray);
 			phPrev = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -105,7 +105,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hWnd, dwMode, pData);
 			object returnItem = Invoker.MethodReturn(this, "ConfigureIMEA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hWnd, dwMode, pData);
 			object returnItem = Invoker.MethodReturn(this, "ConfigureIMEW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(phIMC);
 			object returnItem = Invoker.MethodReturn(this, "CreateContext", paramsArray);
 			phIMC = (Int32)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -147,7 +147,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIME);
 			object returnItem = Invoker.MethodReturn(this, "DestroyContext", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -167,7 +167,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister, pData, pEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumRegisterWordA", paramsArray);
 			pEnum = (NetOffice.MSHTMLApi.IEnumRegisterWordA)paramsArray[5];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -187,7 +187,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister, pData, pEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumRegisterWordW", paramsArray);
 			pEnum = (NetOffice.MSHTMLApi.IEnumRegisterWordW)paramsArray[5];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -206,7 +206,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, uEscape, pData, plResult);
 			object returnItem = Invoker.MethodReturn(this, "EscapeA", paramsArray);
 			plResult = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -225,7 +225,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, hIMC, uEscape, pData, plResult);
 			object returnItem = Invoker.MethodReturn(this, "EscapeW", paramsArray);
 			plResult = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -246,7 +246,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCandidateListA", paramsArray);
 			pCandList = (__MIDL___MIDL_itf_mshtml_0001_0042_0007)paramsArray[3];
 			puCopied = (UIntPtr)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -267,7 +267,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCandidateListW", paramsArray);
 			pCandList = (__MIDL___MIDL_itf_mshtml_0001_0042_0007)paramsArray[3];
 			puCopied = (UIntPtr)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCandidateListCountA", paramsArray);
 			pdwListSize = (Int32)paramsArray[1];
 			pdwBufLen = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -305,7 +305,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCandidateListCountW", paramsArray);
 			pdwListSize = (Int32)paramsArray[1];
 			pdwBufLen = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -322,7 +322,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pCandidate);
 			object returnItem = Invoker.MethodReturn(this, "GetCandidateWindow", paramsArray);
 			pCandidate = (__MIDL___MIDL_itf_mshtml_0001_0042_0005)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -338,7 +338,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
 			object returnItem = Invoker.MethodReturn(this, "GetCompositionFontA", paramsArray);
 			plf = (__MIDL___MIDL_itf_mshtml_0001_0042_0003)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
 			object returnItem = Invoker.MethodReturn(this, "GetCompositionFontW", paramsArray);
 			plf = (__MIDL___MIDL_itf_mshtml_0001_0042_0004)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -375,7 +375,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCompositionStringA", paramsArray);
 			plCopied = (Int32)paramsArray[3];
 			pBuf = (object)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -396,7 +396,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetCompositionStringW", paramsArray);
 			plCopied = (Int32)paramsArray[3];
 			pBuf = (object)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -412,7 +412,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCompForm);
 			object returnItem = Invoker.MethodReturn(this, "GetCompositionWindow", paramsArray);
 			pCompForm = (__MIDL___MIDL_itf_mshtml_0001_0042_0006)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -428,7 +428,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, phIMC);
 			object returnItem = Invoker.MethodReturn(this, "GetContext", paramsArray);
 			phIMC = (Int32)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -451,7 +451,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetConversionListA", paramsArray);
 			pDst = (__MIDL___MIDL_itf_mshtml_0001_0042_0007)paramsArray[5];
 			puCopied = (UIntPtr)paramsArray[6];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -474,7 +474,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetConversionListW", paramsArray);
 			pDst = (__MIDL___MIDL_itf_mshtml_0001_0042_0007)paramsArray[5];
 			puCopied = (UIntPtr)paramsArray[6];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -493,7 +493,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetConversionStatus", paramsArray);
 			pfdwConversion = (Int32)paramsArray[1];
 			pfdwSentence = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -509,7 +509,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, phDefWnd);
 			object returnItem = Invoker.MethodReturn(this, "GetDefaultIMEWnd", paramsArray);
 			phDefWnd = (_RemotableHandle)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -529,7 +529,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetDescriptionA", paramsArray);
 			szDescription = (string)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -549,7 +549,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetDescriptionW", paramsArray);
 			szDescription = (string)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -570,7 +570,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetGuideLineA", paramsArray);
 			pBuf = (string)paramsArray[3];
 			pdwResult = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -591,7 +591,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetGuideLineW", paramsArray);
 			pBuf = (string)paramsArray[3];
 			pdwResult = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -611,7 +611,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetIMEFileNameA", paramsArray);
 			szFileName = (string)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -631,7 +631,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetIMEFileNameW", paramsArray);
 			szFileName = (string)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -643,7 +643,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC);
 			object returnItem = Invoker.MethodReturn(this, "GetOpenStatus", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -660,7 +660,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, fdwIndex, pdwProperty);
 			object returnItem = Invoker.MethodReturn(this, "GetProperty", paramsArray);
 			pdwProperty = (Int32)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -680,7 +680,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetRegisterWordStyleA", paramsArray);
 			pStyleBuf = (__MIDL___MIDL_itf_mshtml_0001_0042_0008)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -700,7 +700,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetRegisterWordStyleW", paramsArray);
 			pStyleBuf = (__MIDL___MIDL_itf_mshtml_0001_0042_0009)paramsArray[2];
 			puCopied = (UIntPtr)paramsArray[3];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -716,7 +716,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pptPos);
 			object returnItem = Invoker.MethodReturn(this, "GetStatusWindowPos", paramsArray);
 			pptPos = (tagPOINT)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -732,7 +732,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, puVirtualKey);
 			object returnItem = Invoker.MethodReturn(this, "GetVirtualKey", paramsArray);
 			puVirtualKey = (UIntPtr)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -749,7 +749,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(szIMEFileName, szLayoutText, phKL);
 			object returnItem = Invoker.MethodReturn(this, "InstallIMEA", paramsArray);
 			phKL = (object)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -766,7 +766,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(szIMEFileName, szLayoutText, phKL);
 			object returnItem = Invoker.MethodReturn(this, "InstallIMEW", paramsArray);
 			phKL = (object)paramsArray[2];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -778,7 +778,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL);
 			object returnItem = Invoker.MethodReturn(this, "IsIME", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -793,7 +793,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWndIME, msg, wParam, lParam);
 			object returnItem = Invoker.MethodReturn(this, "IsUIMessageA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -808,7 +808,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWndIME, msg, wParam, lParam);
 			object returnItem = Invoker.MethodReturn(this, "IsUIMessageW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -823,7 +823,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwAction, dwIndex, dwValue);
 			object returnItem = Invoker.MethodReturn(this, "NotifyIME", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -838,7 +838,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister);
 			object returnItem = Invoker.MethodReturn(this, "RegisterWordA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -853,7 +853,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szRegister);
 			object returnItem = Invoker.MethodReturn(this, "RegisterWordW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -866,7 +866,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIMC);
 			object returnItem = Invoker.MethodReturn(this, "ReleaseContext", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -879,7 +879,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCandidate);
 			object returnItem = Invoker.MethodReturn(this, "SetCandidateWindow", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -892,7 +892,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
 			object returnItem = Invoker.MethodReturn(this, "SetCompositionFontA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -905,7 +905,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, plf);
 			object returnItem = Invoker.MethodReturn(this, "SetCompositionFontW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -922,7 +922,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pComp, dwCompLen, pRead, dwReadLen);
 			object returnItem = Invoker.MethodReturn(this, "SetCompositionStringA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -939,7 +939,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, dwIndex, pComp, dwCompLen, pRead, dwReadLen);
 			object returnItem = Invoker.MethodReturn(this, "SetCompositionStringW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -952,7 +952,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pCompForm);
 			object returnItem = Invoker.MethodReturn(this, "SetCompositionWindow", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -966,7 +966,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, fdwConversion, fdwSentence);
 			object returnItem = Invoker.MethodReturn(this, "SetConversionStatus", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -979,7 +979,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, fOpen);
 			object returnItem = Invoker.MethodReturn(this, "SetOpenStatus", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -992,7 +992,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hIMC, pptPos);
 			object returnItem = Invoker.MethodReturn(this, "SetStatusWindowPos", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1005,7 +1005,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, dwHotKeyID);
 			object returnItem = Invoker.MethodReturn(this, "SimulateHotKey", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1020,7 +1020,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szUnregister);
 			object returnItem = Invoker.MethodReturn(this, "UnregisterWordA", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1035,7 +1035,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, szReading, dwStyle, szUnregister);
 			object returnItem = Invoker.MethodReturn(this, "UnregisterWordW", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1047,7 +1047,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fRestoreLayout);
 			object returnItem = Invoker.MethodReturn(this, "Activate", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1058,7 +1058,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Deactivate", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1077,7 +1077,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, msg, wParam, lParam, plResult);
 			object returnItem = Invoker.MethodReturn(this, "OnDefWindowProc", paramsArray);
 			plResult = (Int32)paramsArray[4];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1090,7 +1090,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(aaClassList, uSize);
 			object returnItem = Invoker.MethodReturn(this, "FilterClientWindows", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1106,7 +1106,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, uCodePage);
 			object returnItem = Invoker.MethodReturn(this, "GetCodePageA", paramsArray);
 			uCodePage = (UIntPtr)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1122,7 +1122,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(hKL, plid);
 			object returnItem = Invoker.MethodReturn(this, "GetLangId", paramsArray);
 			plid = (Int16)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1136,7 +1136,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hWnd, hIMC, dwFlags);
 			object returnItem = Invoker.MethodReturn(this, "AssociateContextEx", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1148,7 +1148,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idThread);
 			object returnItem = Invoker.MethodReturn(this, "DisableIME", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1171,7 +1171,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetImeMenuItemsA", paramsArray);
 			pImeMenu = (__MIDL___MIDL_itf_mshtml_0001_0042_0010)paramsArray[4];
 			pdwResult = (Int32)paramsArray[6];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1194,7 +1194,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "GetImeMenuItemsW", paramsArray);
 			pImeMenu = (__MIDL___MIDL_itf_mshtml_0001_0042_0011)paramsArray[4];
 			pdwResult = (Int32)paramsArray[6];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -1210,7 +1210,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(idThread, ppEnum);
 			object returnItem = Invoker.MethodReturn(this, "EnumInputContext", paramsArray);
 			ppEnum = (NetOffice.MSHTMLApi.IEnumInputContext)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

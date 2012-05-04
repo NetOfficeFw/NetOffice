@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface _IProjectDoc 
-	/// SupportByVersion MSProject, 12,14
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IProjectDoc : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Manager
 		{
@@ -103,10 +103,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Company
 		{
@@ -132,10 +132,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Author
 		{
@@ -161,10 +161,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Keywords
 		{
@@ -190,10 +190,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ProjectNotes
 		{
 			get
@@ -210,10 +210,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object ProjectStart
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object ProjectFinish
 		{
 			get
@@ -266,10 +266,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object CurrentDate
 		{
 			get
@@ -294,10 +294,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object StatusDate
 		{
 			get
@@ -322,10 +322,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ScheduleFromStart
 		{
 			get
@@ -342,10 +342,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Comments
 		{
@@ -371,10 +371,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Title
 		{
@@ -400,10 +400,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Subject
 		{
@@ -429,10 +429,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Windows Windows
 		{
 			get
@@ -450,10 +450,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 MinuteLabelDisplay
 		{
 			get
@@ -470,10 +470,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 HourLabelDisplay
 		{
 			get
@@ -490,10 +490,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 DayLabelDisplay
 		{
 			get
@@ -510,10 +510,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 WeekLabelDisplay
 		{
 			get
@@ -530,10 +530,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 YearLabelDisplay
 		{
 			get
@@ -550,10 +550,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 MonthLabelDisplay
 		{
 			get
@@ -570,10 +570,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool SpaceBeforeTimeLabels
 		{
 			get
@@ -590,10 +590,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjTaskFixedType DefaultTaskType
 		{
 			get
@@ -611,10 +611,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DefaultEffortDriven
 		{
 			get
@@ -631,10 +631,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool UseFYStartYear
 		{
 			get
@@ -651,10 +651,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoFilter
 		{
 			get
@@ -671,10 +671,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool HonorConstraints
 		{
 			get
@@ -691,10 +691,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool MultipleCriticalPaths
 		{
 			get
@@ -711,10 +711,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object LevelFromDate
 		{
 			get
@@ -739,10 +739,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object LevelToDate
 		{
 			get
@@ -767,10 +767,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool LevelEntireProject
 		{
 			get
@@ -787,10 +787,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjAccrueAt DefaultFixedCostAccrual
 		{
 			get
@@ -808,10 +808,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool SpreadCostsToStatusDate
 		{
 			get
@@ -828,10 +828,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool SpreadPercentCompleteToStatusDate
 		{
 			get
@@ -848,10 +848,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoCalcCosts
 		{
 			get
@@ -868,10 +868,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ShowExternalSuccessors
 		{
 			get
@@ -888,10 +888,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ShowExternalPredecessors
 		{
 			get
@@ -908,10 +908,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ShowCrossProjectLinksInfo
 		{
 			get
@@ -928,10 +928,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AcceptNewExternalData
 		{
 			get
@@ -948,10 +948,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjPhoneticType PhoneticType
 		{
 			get
@@ -969,10 +969,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjWorkgroupMessages WorkgroupMessages
 		{
 			get
@@ -990,10 +990,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ServerURL
 		{
 			get
@@ -1010,10 +1010,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ServerPath
 		{
@@ -1031,10 +1031,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ReceiveNotifications
 		{
 			get
@@ -1051,10 +1051,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool SendHyperlinkNote
 		{
 			get
@@ -1071,10 +1071,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor HyperlinkColor
 		{
 			get
@@ -1092,10 +1092,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor FollowedHyperlinkColor
 		{
 			get
@@ -1113,10 +1113,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool UnderlineHyperlinks
 		{
 			get
@@ -1133,10 +1133,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjTeamStatusCompletedWork AskForCompletedWork
 		{
 			get
@@ -1154,10 +1154,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool TrackOvertimeWork
 		{
 			get
@@ -1174,10 +1174,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool TeamMembersCanDeclineTasks
 		{
 			get
@@ -1194,10 +1194,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ShowEstimatedDuration
 		{
 			get
@@ -1214,10 +1214,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool NewTasksEstimated
 		{
 			get
@@ -1234,10 +1234,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool WBSCodeGenerate
 		{
 			get
@@ -1254,10 +1254,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool WBSVerifyUniqueness
 		{
 			get
@@ -1274,10 +1274,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool UpdateProjOnSave
 		{
 			get
@@ -1294,10 +1294,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjAuthentication ServerIdentification
 		{
 			get
@@ -1315,10 +1315,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool VBASigned
 		{
 			get
@@ -1335,10 +1335,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ExpandDatabaseTimephasedData
 		{
 			get
@@ -1355,10 +1355,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DatabaseProjectUniqueID
 		{
 			get
@@ -1383,10 +1383,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object ActualWork
 		{
@@ -1412,10 +1412,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Cost1
 		{
@@ -1441,10 +1441,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Cost2
 		{
@@ -1470,10 +1470,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Cost3
 		{
@@ -1499,10 +1499,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object BaselineWork
 		{
@@ -1528,10 +1528,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object BaselineCost
 		{
@@ -1557,10 +1557,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object FixedCost
 		{
@@ -1586,10 +1586,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string WBS
 		{
@@ -1607,10 +1607,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Delay
 		{
@@ -1636,10 +1636,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Priority
 		{
@@ -1665,10 +1665,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Duration1
 		{
@@ -1694,10 +1694,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Duration2
 		{
@@ -1723,10 +1723,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Duration3
 		{
@@ -1752,10 +1752,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PercentWorkComplete
 		{
@@ -1781,10 +1781,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object FixedDuration
 		{
@@ -1810,10 +1810,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object BaselineStart
 		{
@@ -1839,10 +1839,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object BaselineFinish
 		{
@@ -1868,10 +1868,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text1
 		{
@@ -1889,10 +1889,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Start1
 		{
@@ -1918,10 +1918,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Finish1
 		{
@@ -1947,10 +1947,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text2
 		{
@@ -1968,10 +1968,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Start2
 		{
@@ -1997,10 +1997,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Finish2
 		{
@@ -2026,10 +2026,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text3
 		{
@@ -2047,10 +2047,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Start3
 		{
@@ -2076,10 +2076,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Finish3
 		{
@@ -2105,10 +2105,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text4
 		{
@@ -2126,10 +2126,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Start4
 		{
@@ -2155,10 +2155,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Finish4
 		{
@@ -2184,10 +2184,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text5
 		{
@@ -2205,10 +2205,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Start5
 		{
@@ -2234,10 +2234,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Finish5
 		{
@@ -2263,10 +2263,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text6
 		{
@@ -2284,10 +2284,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text7
 		{
@@ -2305,10 +2305,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text8
 		{
@@ -2326,10 +2326,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text9
 		{
@@ -2347,10 +2347,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Text10
 		{
@@ -2368,10 +2368,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Marked
 		{
@@ -2397,10 +2397,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag1
 		{
@@ -2426,10 +2426,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag2
 		{
@@ -2455,10 +2455,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag3
 		{
@@ -2484,10 +2484,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag4
 		{
@@ -2513,10 +2513,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag5
 		{
@@ -2542,10 +2542,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag6
 		{
@@ -2571,10 +2571,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag7
 		{
@@ -2600,10 +2600,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag8
 		{
@@ -2629,10 +2629,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag9
 		{
@@ -2658,10 +2658,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Flag10
 		{
@@ -2687,10 +2687,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Rollup
 		{
@@ -2716,10 +2716,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Number1
 		{
@@ -2737,10 +2737,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Number2
 		{
@@ -2758,10 +2758,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Number3
 		{
@@ -2779,10 +2779,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Number4
 		{
@@ -2800,10 +2800,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Number5
 		{
@@ -2821,10 +2821,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Notes
 		{
@@ -2842,10 +2842,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Contact
 		{
@@ -2863,10 +2863,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object HideBar
 		{
@@ -2892,10 +2892,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string CurrencySymbol
 		{
 			get
@@ -2912,10 +2912,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjPlacement CurrencySymbolPosition
 		{
 			get
@@ -2933,10 +2933,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int16 CurrencyDigits
 		{
 			get
@@ -2953,10 +2953,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ShowCriticalSlack
 		{
 			get
@@ -2973,10 +2973,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjUnit DefaultDurationUnits
 		{
 			get
@@ -2994,10 +2994,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjUnit DefaultWorkUnits
 		{
 			get
@@ -3015,10 +3015,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool StartOnCurrentDate
 		{
 			get
@@ -3035,10 +3035,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoTrack
 		{
 			get
@@ -3055,10 +3055,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoSplitTasks
 		{
 			get
@@ -3075,10 +3075,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoLinkTasks
 		{
 			get
@@ -3095,10 +3095,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DefaultStartTime
 		{
 			get
@@ -3123,10 +3123,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DefaultFinishTime
 		{
 			get
@@ -3151,10 +3151,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Double HoursPerDay
 		{
 			get
@@ -3171,10 +3171,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Double HoursPerWeek
 		{
 			get
@@ -3191,10 +3191,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Double DaysPerMonth
 		{
 			get
@@ -3211,10 +3211,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DefaultResourceStandardRate
 		{
 			get
@@ -3239,10 +3239,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DefaultResourceOvertimeRate
 		{
 			get
@@ -3267,10 +3267,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DisplayProjectSummaryTask
 		{
 			get
@@ -3287,10 +3287,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AutoAddResources
 		{
 			get
@@ -3307,10 +3307,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjWeekday StartWeekOn
 		{
 			get
@@ -3328,10 +3328,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjMonth StartYearIn
 		{
 			get
@@ -3349,10 +3349,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AllowTaskDelegation
 		{
 			get
@@ -3369,10 +3369,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string Name
 		{
 			get
@@ -3389,11 +3389,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjPublishInformationOnSave PublishInformationOnSave
 		{
 			get
@@ -3411,10 +3410,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ProjectGuideFunctionalLayoutPage
 		{
 			get
@@ -3431,10 +3430,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ProjectGuideSaveBuffer
 		{
 			get
@@ -3451,10 +3450,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ProjectGuideContent
 		{
 			get
@@ -3471,10 +3470,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ProjectServerUsedForTracking
 		{
 			get
@@ -3491,10 +3490,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjProjectServerTrackingMethod TrackingMethod
 		{
 			get
@@ -3512,10 +3511,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool MoveCompleted
 		{
 			get
@@ -3532,10 +3531,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AndMoveRemaining
 		{
 			get
@@ -3552,10 +3551,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool MoveRemaining
 		{
 			get
@@ -3572,10 +3571,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AndMoveCompleted
 		{
 			get
@@ -3592,10 +3591,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjEarnedValueMethod DefaultEarnedValueMethod
 		{
 			get
@@ -3613,10 +3612,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjBaselines EarnedValueBaseline
 		{
 			get
@@ -3634,10 +3633,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ProjectGuideUseDefaultFunctionalLayoutPage
 		{
 			get
@@ -3654,10 +3653,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool ProjectGuideUseDefaultContent
 		{
 			get
@@ -3674,10 +3673,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool EnterpriseActualsSynched
 		{
 			get
@@ -3694,10 +3693,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool RemoveFileProperties
 		{
 			get
@@ -3714,10 +3713,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool AdministrativeProject
 		{
 			get
@@ -3734,10 +3733,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Windows2 Windows2
 		{
 			get
@@ -3751,6 +3750,2272 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "Windows2", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string _CodeName
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_CodeName", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "_CodeName", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string CodeName
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CodeName", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Tasks OutlineChildren
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "OutlineChildren", paramsArray);
+				NetOffice.MSProjectApi.Tasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tasks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tasks;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object CostVariance
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CostVariance", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Task ProjectSummaryTask
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ProjectSummaryTask", paramsArray);
+				NetOffice.MSProjectApi.Task newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Task.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Task;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object RemainingCost
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "RemainingCost", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object BCWP
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "BCWP", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object BCWS
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "BCWS", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object SV
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "SV", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object CV
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CV", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public string OutlineNumber
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "OutlineNumber", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Critical
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Critical", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object FreeSlack
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "FreeSlack", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object TotalSlack
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TotalSlack", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public Int32 UniqueID
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "UniqueID", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Int32 OutlineLevel
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "OutlineLevel", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object BaselineDuration
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "BaselineDuration", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object DurationVariance
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "DurationVariance", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object EarlyStart
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "EarlyStart", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object EarlyFinish
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "EarlyFinish", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object LateStart
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LateStart", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object StartVariance
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "StartVariance", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object FinishVariance
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "FinishVariance", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Project
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Project", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Milestone
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Milestone", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object RemainingDuration
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "RemainingDuration", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object PercentComplete
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "PercentComplete", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Start
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Finish
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Finish", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ResourceNames
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceNames", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ResourceInitials
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceInitials", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Resume
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Resume", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Stop
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Stop", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ResumeNoEarlierThan
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResumeNoEarlierThan", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ConstraintType
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ConstraintType", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ConstraintDate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ConstraintDate", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ActualCost
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ActualCost", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Cost
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Cost", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Created
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Created", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ActualDuration
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ActualDuration", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Duration
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Duration", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object LateFinish
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LateFinish", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ActualFinish
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ActualFinish", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Int32 Objects
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Objects", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object RemainingWork
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "RemainingWork", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ResourceGroup
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceGroup", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object ActualStart
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ActualStart", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Summary
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Summary", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string Template
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Template", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object UpdateNeeded
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "UpdateNeeded", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Work
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Work", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object WorkVariance
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "WorkVariance", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object LinkedFields
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LinkedFields", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object Confirmed
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Confirmed", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool ReadOnly
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ReadOnly", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool HasPassword
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "HasPassword", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool WriteReserved
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "WriteReserved", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Application Application
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
+				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object Parent
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object Index
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List MapList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "MapList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Tasks Tasks
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Tasks", paramsArray);
+				NetOffice.MSProjectApi.Tasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tasks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tasks;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Resources Resources
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Resources", paramsArray);
+				NetOffice.MSProjectApi.Resources newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Resources.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Resources;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Calendars BaseCalendars
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "BaseCalendars", paramsArray);
+				NetOffice.MSProjectApi.Calendars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendars.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendars;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object BuiltinDocumentProperties
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "BuiltinDocumentProperties", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object CustomDocumentProperties
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CustomDocumentProperties", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object Container
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Container", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Calendar Calendar
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Calendar", paramsArray);
+				NetOffice.MSProjectApi.Calendar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public Int32 NumberOfTasks
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "NumberOfTasks", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public Int32 NumberOfResources
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "NumberOfResources", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string FullName
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "FullName", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string Path
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Path", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string ResourcePoolName
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourcePoolName", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool Saved
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Saved", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object CreationDate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CreationDate", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object LastPrintedDate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LastPrintedDate", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object LastSaveDate
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LastSaveDate", paramsArray);
+				if((null != returnItem) && (returnItem is MarshalByRefObject))
+				{
+					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					return newObject;
+				}
+				else
+				{
+					return  returnItem;
+				}
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string LastSavedBy
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "LastSavedBy", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string RevisionNumber
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "RevisionNumber", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ViewList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ViewList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List TaskViewList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskViewList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ResourceViewList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceViewList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool ReadOnlyRecommended
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ReadOnlyRecommended", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ReportList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ReportList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List TaskFilterList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskFilterList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ResourceFilterList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceFilterList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List TaskTableList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskTableList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ResourceTableList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceTableList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string CurrentView
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CurrentView", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string CurrentTable
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CurrentTable", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string CurrentFilter
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CurrentFilter", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public Int32 ID
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ID", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.OfficeApi.CommandBars CommandBars
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
+				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool UserControl
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "UserControl", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.VBIDEApi.VBProject VBProject
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "VBProject", paramsArray);
+				NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Subprojects Subprojects
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Subprojects", paramsArray);
+				NetOffice.MSProjectApi.Subprojects newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Subprojects.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Subprojects;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string CurrentGroup
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CurrentGroup", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List TaskGroupList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskGroupList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.List ResourceGroupList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceGroupList", paramsArray);
+				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.TaskGroups TaskGroups
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskGroups", paramsArray);
+				NetOffice.MSProjectApi.TaskGroups newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.TaskGroups.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TaskGroups;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.ResourceGroups ResourceGroups
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceGroups", paramsArray);
+				NetOffice.MSProjectApi.ResourceGroups newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ResourceGroups.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ResourceGroups;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Enums.PjProjectType Type
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
+				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return (NetOffice.MSProjectApi.Enums.PjProjectType)intReturnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Views Views
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Views", paramsArray);
+				NetOffice.MSProjectApi.Views newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSProjectApi.Views;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Tables TaskTables
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskTables", paramsArray);
+				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Tables ResourceTables
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceTables", paramsArray);
+				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Filters TaskFilters
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TaskFilters", paramsArray);
+				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.Filters ResourceFilters
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ResourceFilters", paramsArray);
+				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.ViewsSingle ViewsSingle
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ViewsSingle", paramsArray);
+				NetOffice.MSProjectApi.ViewsSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsSingle;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.ViewsCombination ViewsCombination
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ViewsCombination", paramsArray);
+				NetOffice.MSProjectApi.ViewsCombination newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsCombination;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		/// <param name="baseline">NetOffice.MSProjectApi.Enums.PjBaselines Baseline</param>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public object get_BaselineSavedDate(NetOffice.MSProjectApi.Enums.PjBaselines baseline)
+		{		
+			object[] paramsArray = Invoker.ValidateParamsArray(baseline);
+			object returnItem = Invoker.PropertyGet(this, "BaselineSavedDate", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Alias for get_BaselineSavedDate
+		/// </summary>
+		/// <param name="baseline">NetOffice.MSProjectApi.Enums.PjBaselines Baseline</param>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public object BaselineSavedDate(NetOffice.MSProjectApi.Enums.PjBaselines baseline)
+		{
+			return get_BaselineSavedDate(baseline);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string ProjectNamePrefix
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ProjectNamePrefix", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public string VersionName
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "VersionName", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Int32 TempToDoList
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TempToDoList", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "TempToDoList", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.MSProjectApi.OutlineCodes OutlineCodes
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "OutlineCodes", paramsArray);
+				NetOffice.MSProjectApi.OutlineCodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCodes.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCodes;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.OfficeApi.SharedWorkspace SharedWorkspace
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "SharedWorkspace", paramsArray);
+				NetOffice.OfficeApi.SharedWorkspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspace.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspace;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public NetOffice.OfficeApi.DocumentLibraryVersions DocumentLibraryVersions
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "DocumentLibraryVersions", paramsArray);
+				NetOffice.OfficeApi.DocumentLibraryVersions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentLibraryVersions.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentLibraryVersions;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11, 12, 14
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public bool CanCheckIn
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "CanCheckIn", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 			}
 		}
 
@@ -3811,2272 +6076,6 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "IsTemplate", paramsArray);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get/Set
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string _CodeName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_CodeName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "_CodeName", paramsArray);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string CodeName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CodeName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Tasks OutlineChildren
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutlineChildren", paramsArray);
-				NetOffice.MSProjectApi.Tasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tasks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tasks;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object CostVariance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CostVariance", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Task ProjectSummaryTask
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProjectSummaryTask", paramsArray);
-				NetOffice.MSProjectApi.Task newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Task.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Task;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object RemainingCost
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RemainingCost", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object BCWP
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BCWP", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object BCWS
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BCWS", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object SV
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SV", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object CV
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CV", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string OutlineNumber
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutlineNumber", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Critical
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Critical", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object FreeSlack
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FreeSlack", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object TotalSlack
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TotalSlack", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public Int32 UniqueID
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UniqueID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 OutlineLevel
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutlineLevel", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object BaselineDuration
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BaselineDuration", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object DurationVariance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DurationVariance", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object EarlyStart
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EarlyStart", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object EarlyFinish
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EarlyFinish", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object LateStart
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LateStart", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object StartVariance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StartVariance", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object FinishVariance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FinishVariance", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Project
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Project", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Milestone
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Milestone", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object RemainingDuration
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RemainingDuration", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object PercentComplete
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PercentComplete", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Start
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Finish
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Finish", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ResourceNames
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceNames", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ResourceInitials
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceInitials", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Resume
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Resume", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Stop
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stop", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ResumeNoEarlierThan
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResumeNoEarlierThan", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ConstraintType
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConstraintType", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ConstraintDate
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConstraintDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ActualCost
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActualCost", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Cost
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Cost", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Created
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Created", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ActualDuration
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActualDuration", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Duration
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Duration", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object LateFinish
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LateFinish", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ActualFinish
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActualFinish", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 Objects
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Objects", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object RemainingWork
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RemainingWork", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ResourceGroup
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceGroup", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object ActualStart
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActualStart", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Summary
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Summary", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string Template
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Template", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object UpdateNeeded
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UpdateNeeded", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Work
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Work", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object WorkVariance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WorkVariance", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object LinkedFields
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LinkedFields", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object Confirmed
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Confirmed", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool ReadOnly
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReadOnly", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool HasPassword
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasPassword", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool WriteReserved
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WriteReserved", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Application Application
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object Parent
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object Index
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List MapList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MapList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Tasks Tasks
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tasks", paramsArray);
-				NetOffice.MSProjectApi.Tasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tasks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tasks;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Resources Resources
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Resources", paramsArray);
-				NetOffice.MSProjectApi.Resources newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Resources.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Resources;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Calendars BaseCalendars
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BaseCalendars", paramsArray);
-				NetOffice.MSProjectApi.Calendars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendars.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendars;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object BuiltinDocumentProperties
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BuiltinDocumentProperties", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object CustomDocumentProperties
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CustomDocumentProperties", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object Container
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Container", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Calendar Calendar
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Calendar", paramsArray);
-				NetOffice.MSProjectApi.Calendar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendar.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendar;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public Int32 NumberOfTasks
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumberOfTasks", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public Int32 NumberOfResources
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumberOfResources", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string FullName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FullName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string Path
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Path", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string ResourcePoolName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourcePoolName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool Saved
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Saved", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object CreationDate
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CreationDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object LastPrintedDate
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastPrintedDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object LastSaveDate
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastSaveDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string LastSavedBy
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastSavedBy", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string RevisionNumber
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RevisionNumber", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ViewList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List TaskViewList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskViewList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ResourceViewList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceViewList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool ReadOnlyRecommended
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReadOnlyRecommended", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ReportList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReportList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List TaskFilterList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskFilterList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ResourceFilterList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceFilterList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List TaskTableList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskTableList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ResourceTableList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceTableList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string CurrentView
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentView", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string CurrentTable
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentTable", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string CurrentFilter
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentFilter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public Int32 ID
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.OfficeApi.CommandBars CommandBars
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
-				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool UserControl
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UserControl", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.VBIDEApi.VBProject VBProject
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VBProject", paramsArray);
-				NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Subprojects Subprojects
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Subprojects", paramsArray);
-				NetOffice.MSProjectApi.Subprojects newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Subprojects.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Subprojects;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string CurrentGroup
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentGroup", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List TaskGroupList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskGroupList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.List ResourceGroupList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceGroupList", paramsArray);
-				NetOffice.MSProjectApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.List.LateBindingApiWrapperType) as NetOffice.MSProjectApi.List;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.TaskGroups TaskGroups
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskGroups", paramsArray);
-				NetOffice.MSProjectApi.TaskGroups newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.TaskGroups.LateBindingApiWrapperType) as NetOffice.MSProjectApi.TaskGroups;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ResourceGroups ResourceGroups
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceGroups", paramsArray);
-				NetOffice.MSProjectApi.ResourceGroups newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ResourceGroups.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ResourceGroups;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Enums.PjProjectType Type
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSProjectApi.Enums.PjProjectType)intReturnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Views Views
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Views", paramsArray);
-				NetOffice.MSProjectApi.Views newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSProjectApi.Views;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Tables TaskTables
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskTables", paramsArray);
-				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Tables ResourceTables
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceTables", paramsArray);
-				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Filters TaskFilters
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TaskFilters", paramsArray);
-				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.Filters ResourceFilters
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceFilters", paramsArray);
-				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewsSingle ViewsSingle
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewsSingle", paramsArray);
-				NetOffice.MSProjectApi.ViewsSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsSingle;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.ViewsCombination ViewsCombination
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewsCombination", paramsArray);
-				NetOffice.MSProjectApi.ViewsCombination newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsCombination;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		/// <param name="baseline">NetOffice.MSProjectApi.Enums.PjBaselines Baseline</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object get_BaselineSavedDate(NetOffice.MSProjectApi.Enums.PjBaselines baseline)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(baseline);
-			object returnItem = Invoker.PropertyGet(this, "BaselineSavedDate", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Alias for get_BaselineSavedDate
-		/// </summary>
-		/// <param name="baseline">NetOffice.MSProjectApi.Enums.PjBaselines Baseline</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public object BaselineSavedDate(NetOffice.MSProjectApi.Enums.PjBaselines baseline)
-		{
-			return get_BaselineSavedDate(baseline);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string ProjectNamePrefix
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProjectNamePrefix", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public string VersionName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VersionName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get/Set
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 TempToDoList
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TempToDoList", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TempToDoList", paramsArray);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.MSProjectApi.OutlineCodes OutlineCodes
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutlineCodes", paramsArray);
-				NetOffice.MSProjectApi.OutlineCodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCodes.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCodes;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.OfficeApi.SharedWorkspace SharedWorkspace
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SharedWorkspace", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspace.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspace;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public NetOffice.OfficeApi.DocumentLibraryVersions DocumentLibraryVersions
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DocumentLibraryVersions", paramsArray);
-				NetOffice.OfficeApi.DocumentLibraryVersions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentLibraryVersions.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentLibraryVersions;
-				return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSProject 12, 14
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public bool CanCheckIn
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CanCheckIn", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 			}
 		}
 
@@ -6273,7 +6272,7 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6290,19 +6289,19 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearActuals">optional object ClearActuals</param>
 		/// <param name="clearResourceRates">optional object ClearResourceRates</param>
 		/// <param name="clearFixedCosts">optional object ClearFixedCosts</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void SaveAs(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -6310,49 +6309,49 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
 		/// <param name="backup">optional object Backup</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
 		/// <param name="backup">optional object Backup</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6360,15 +6359,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="taskInformation">optional object TaskInformation</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6377,15 +6376,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="taskInformation">optional object TaskInformation</param>
 		/// <param name="filtered">optional object Filtered</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6395,15 +6394,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filtered">optional object Filtered</param>
 		/// <param name="table">optional object Table</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6414,15 +6413,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="table">optional object Table</param>
 		/// <param name="userID">optional object UserID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6434,15 +6433,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="userID">optional object UserID</param>
 		/// <param name="databasePassWord">optional object DatabasePassWord</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6455,15 +6454,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="databasePassWord">optional object DatabasePassWord</param>
 		/// <param name="formatID">optional object FormatID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6477,15 +6476,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="formatID">optional object FormatID</param>
 		/// <param name="map">optional object Map</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6500,15 +6499,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="map">optional object Map</param>
 		/// <param name="clearBaseline">optional object ClearBaseline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6524,15 +6523,15 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearBaseline">optional object ClearBaseline</param>
 		/// <param name="clearActuals">optional object ClearActuals</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6549,17 +6548,17 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearActuals">optional object ClearActuals</param>
 		/// <param name="clearResourceRates">optional object ClearResourceRates</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates)
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates);
 			Invoker.Method(this, "SaveAs", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -6567,9 +6566,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void LevelClearDates()
 		{
 			object[] paramsArray = null;
@@ -6577,10 +6576,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="value">string Value</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void AppendNotes(string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -6588,9 +6587,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void MakeServerURLTrusted()
 		{
 			object[] paramsArray = null;
@@ -6598,12 +6597,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="comment">optional object Comment</param>
 		/// <param name="makePublic">optional object MakePublic</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void CheckIn(object saveChanges, object comment, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comment, makePublic);
@@ -6611,10 +6610,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void CheckIn()
 		{
 			object[] paramsArray = null;
@@ -6622,11 +6621,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void CheckIn(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
@@ -6634,12 +6633,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="comment">optional object Comment</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void CheckIn(object saveChanges, object comment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comment);
@@ -6656,7 +6655,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
 			object returnItem = Invoker.MethodReturn(this, "GetObjectMatchingID", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -6682,7 +6681,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, matchingID);
 			object returnItem = Invoker.MethodReturn(this, "GetDisplayNameFromObjectMatchingID", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -6697,7 +6696,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableName, deliverableStartDate, deliverableFinishDate, taskGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableCreate", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -6712,7 +6711,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, deliverableName, deliverableStartDate, deliverableFinishDate);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableUpdate", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6724,7 +6723,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableDelete", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6737,7 +6736,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableDependencyCreate", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6749,7 +6748,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableDependencyDelete", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6761,7 +6760,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableRefreshServerCache", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6773,7 +6772,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DeliverableRefreshServerCache", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6808,7 +6807,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetServerProjectGuid", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -6821,7 +6820,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableLinkToTask", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6833,7 +6832,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableLinkToProject", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6844,7 +6843,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DeliverablesClearAll", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6856,7 +6855,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
 			object returnItem = Invoker.MethodReturn(this, "DeliverableAcceptChanges", paramsArray);
-			return (bool)returnItem;
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 
 		/// <summary>
@@ -6867,7 +6866,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DeliverablesGetProviderProjects", paramsArray);
-			return (string)returnItem;
+			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
 		/// <summary>
@@ -6892,7 +6891,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskGuid);
 			object returnItem = Invoker.MethodReturn(this, "GetTaskIndexByGuid", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -6942,7 +6941,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "LocalResourceErrorCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -6953,7 +6952,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ImportResourceErrorCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -6964,7 +6963,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ResourceErrorCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -6975,7 +6974,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "LocalResourceCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -6986,7 +6985,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "ResourceCount", paramsArray);
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
@@ -7053,7 +7052,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="toDate">optional object ToDate</param>
 		/// <param name="fixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate, fixedFormatExtClassPtr);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7078,7 +7077,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType)
+		public void ExportAsFixedFormat(string filename, object fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7092,7 +7091,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="includeDocumentProperties">optional bool IncludeDocumentProperties = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7107,7 +7106,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="includeDocumentMarkup">optional bool IncludeDocumentMarkup = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7123,7 +7122,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="archiveFormat">optional bool ArchiveFormat = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7140,7 +7139,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7158,7 +7157,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="toDate">optional object ToDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);

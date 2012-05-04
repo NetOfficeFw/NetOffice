@@ -18,7 +18,7 @@ namespace NetOffice.MSHTMLApi
 	///</summary>
 	[SupportByVersionAttribute("MSHTML", 4)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLLocation : IHTMLLocation
+	public class HTMLLocation : DispHTMLLocation
 	{
 		#pragma warning disable
 		#region Fields

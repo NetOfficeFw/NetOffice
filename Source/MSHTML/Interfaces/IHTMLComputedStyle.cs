@@ -359,7 +359,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(pComputedStyle, pfEqual);
 			object returnItem = Invoker.MethodReturn(this, "isEqual", paramsArray);
 			pfEqual = (bool)paramsArray[1];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

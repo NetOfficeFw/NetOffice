@@ -2600,7 +2600,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr);
 			object returnItem = Invoker.MethodReturn(this, "TextWidth", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>
@@ -2612,7 +2612,7 @@ namespace NetOffice.AccessApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr);
 			object returnItem = Invoker.MethodReturn(this, "TextHeight", paramsArray);
-			return (Single)returnItem;
+			return NetRuntimeSystem.Convert.ToSingle(returnItem);
 		}
 
 		/// <summary>

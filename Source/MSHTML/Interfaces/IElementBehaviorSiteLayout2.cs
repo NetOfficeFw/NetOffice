@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 			object[] paramsArray = Invoker.ValidateParamsArray(plf);
 			object returnItem = Invoker.MethodReturn(this, "GetFontInfo", paramsArray);
 			plf = (tagLOGFONTW)paramsArray[0];
-			return (Int32)returnItem;
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
