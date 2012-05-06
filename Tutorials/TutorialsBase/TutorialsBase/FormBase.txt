@@ -16,6 +16,7 @@ linkLabelWord = Word Examples
 linkLabelOutlook = Outlook Examples
 linkLabelPowerPoint = PowerPoint Examples
 linkLabelAccess = Access Examples
+buttonRunTutorial = Click here to run Example
 [End]
 [1031]
 labelHeader2 = Der Tutorialcode ist im VS Solution Explorer verfügbar
@@ -35,4 +36,5 @@ linkLabelWord = Word Beispiele
 linkLabelOutlook = Outlook Beispiele
 linkLabelPowerPoint = PowerPoint Beispiele
 linkLabelAccess = Access Beispiele
+buttonRunTutorial = Beispielcode ausführen
 [End]

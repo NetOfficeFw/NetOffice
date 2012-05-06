@@ -32,6 +32,16 @@ namespace ExampleBase
 
         #region IHost Member
 
+        public DialogResult ShowQuestion(string message)
+        {
+            return MessageBox.Show(this, message, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(this, message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public void ShowFinishDialog(string message, string fullDocumentPath)
         {
             try

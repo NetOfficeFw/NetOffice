@@ -38,7 +38,7 @@ namespace TutorialsCS4
             application.Quit();
             application.Dispose();
 
-            MessageBox.Show("EntityIsAvailable Report", result, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _hostApplication.ShowMessage(result);
         }
 
         public void Connect(IHost hostApplication)

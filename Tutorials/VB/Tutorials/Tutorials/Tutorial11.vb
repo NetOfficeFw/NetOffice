@@ -7,7 +7,6 @@
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-
         Dim message As String = IIf(_hostApplication.LCID = 1033, "This tutorial doens't contain example code", "Dieses Tutorial enthält keinen Beispielcode")
         MessageBox.Show(message, "Tutorial11", MessageBoxButtons.OK, MessageBoxIcon.Information)
 

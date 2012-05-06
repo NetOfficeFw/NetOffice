@@ -14,6 +14,7 @@ Imports NetOffice.ExcelApi.Enums
 ' 
 '   ConsoleMode.None       = Console is deactivated (default)
 '   ConsoleMode.Console    = redirect all messages to System.Console
+'   ConsoleMode.Trace      = redirect all messages to System.Diagnostics.Trace
 '   ConsoleMode.MemoryList = keep all messages in memory. use DebugConsole.Messages and DebugConsole.ClearMessagesList() with these option
 '   ConsoleMode.LogFile    = writes all messages immediately to a file. you have to set DebugConsole.FileName before use
 
@@ -34,9 +35,6 @@ Public Class Example01
 
             ' activate the DebugConsole. the default value is: ConsoleMode.None
             DebugConsole.Mode = ConsoleMode.MemoryList
-
-            ' Initialize NetOffice
-            NetOffice.Factory.Initialize()
 
             ' create excel instance
             application = New NetOffice.ExcelApi.Application()

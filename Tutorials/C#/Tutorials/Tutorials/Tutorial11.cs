@@ -7,9 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
 
-using NetOffice;
-using Excel = NetOffice.ExcelApi;
-
 namespace TutorialsCS4
 {
     public partial class Tutorial11 : ITutorial

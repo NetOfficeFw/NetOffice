@@ -48,7 +48,7 @@ namespace OutlookExamplesCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create task item" : "Ein TaskItem erstellen"; }
+            get { return _hostApplication.LCID == 1033 ? "Send and Recieve" : "Senden und empfangen"; }
         }
 
         public void Connect(IHost hostApplication)

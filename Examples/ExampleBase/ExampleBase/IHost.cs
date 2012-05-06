@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ExampleBase
 {
@@ -24,6 +25,19 @@ namespace ExampleBase
         /// <param name="exception"></param>
         void ShowErrorDialog(string message, Exception exception);
 
+        /// <summary>
+        /// shows a message
+        /// </summary>
+        /// <param name="message"></param>
+        void ShowMessage(string message);
+
+        /// <summary>
+        /// shows a question
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        DialogResult ShowQuestion(string message);
+        
         /// <summary>
         /// Helper icon for some examples
         /// </summary>

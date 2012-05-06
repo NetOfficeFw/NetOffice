@@ -79,7 +79,7 @@ Public Class Tutorial02
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_CS", "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_CS")
+            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_VB")
         End Get
     End Property
 

@@ -69,7 +69,7 @@ Public Class Example01
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "create a document write text and save", "Dokument erstellen, Text schreiben und speichern")
+            Return IIf(_hostApplication.LCID = 1033, "Create a document write text and save", "Dokument erstellen, Text schreiben und speichern")
         End Get
     End Property
 

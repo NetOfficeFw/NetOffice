@@ -119,7 +119,7 @@ Public Class Example03
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "cusing templates", "Verwendung von Templates")
+            Return IIf(_hostApplication.LCID = 1033, "Using templates", "Verwendung von Templates")
         End Get
     End Property
 

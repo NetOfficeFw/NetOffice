@@ -38,7 +38,7 @@ Public Class Example04
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create task item", "Ein TaskItem erstellen")
+            Return IIf(_hostApplication.LCID = 1033, "Send and Recieve", "Senden und empfangen")
         End Get
     End Property
 

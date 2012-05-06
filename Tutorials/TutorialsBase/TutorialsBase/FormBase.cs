@@ -35,6 +35,23 @@ namespace TutorialsBase
 
         #region IHost Member
 
+        public DialogResult ShowQuestion(string message)
+        {
+            return MessageBox.Show(this, message, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        public void ShowMessage(string message)
+        {
+            try
+            {
+                MessageBox.Show(this, message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                FormError.Show(this, null, exception.Message, exception);
+            }
+        }
+
         public void ShowFinishDialog(string message)
         {
             try
@@ -286,8 +303,8 @@ namespace TutorialsBase
         {
             try
             {
-                buttonRunTutorial.Left = buttonRunTutorial.Parent.Width / 2 - buttonRunTutorial.Width / 2;
-                buttonRunTutorial.Top = buttonRunTutorial.Parent.Height / 2 - buttonRunTutorial.Height / 2;
+                buttonRunTutorial.Left = (buttonRunTutorial.Parent.Width) / 2 - (buttonRunTutorial.Width / 2);
+                buttonRunTutorial.Top = (buttonRunTutorial.Parent.Height) / 2 - (buttonRunTutorial.Height / 2);
             }
             catch (Exception exception)
             {
@@ -295,7 +312,11 @@ namespace TutorialsBase
             }
         }
 
-        #endregion       
-      
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormBase_Resize(this, new EventArgs());
+        }
+
+        #endregion  
     }
 }

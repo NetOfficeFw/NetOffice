@@ -24,7 +24,7 @@ Public Class Tutorial07
         application.Quit()
         application.Dispose()
 
-        MessageBox.Show("EntityIsAvailable Report", result, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        _hostApplication.ShowMessage(result)
 
     End Sub
 

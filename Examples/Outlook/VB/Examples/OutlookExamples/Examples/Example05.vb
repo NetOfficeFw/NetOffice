@@ -57,7 +57,7 @@ Public Class Example05
 
             If (TypeName(item) = "ContactItem") Then
                 index += 1
-                Dim contact As Outlook.ContactItem = contactFolder.Items(index)
+                Dim contact As Outlook.ContactItem = item
                 Dim listItem As ListViewItem = listViewContacts.Items.Add(index.ToString())
                 listItem.SubItems.Add(contact.CompanyAndFullName)
             End If
