@@ -541,7 +541,8 @@ namespace NetOffice
             if (null != param)
             {
                 COMObject comObject = param as COMObject;
-                if (null != comObject)
+               
+                if (!Object.ReferenceEquals(comObject, null)) 
                     param = comObject.UnderlyingObject;
                 else if (param.GetType().IsEnum)
                     param = Convert.ToInt32(param);

@@ -40,6 +40,7 @@ namespace NetOffice
         private static bool         _enableSafeMode;
         private static bool         _enableThreadSafe = true;
         private static CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
+        private static bool         _enableOperatorOverlads = true;
 
         #endregion
 
@@ -221,6 +222,23 @@ namespace NetOffice
                 _cacheOptions = value;
             }
         }
+
+        /// <summary>
+        /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static bool EnableOperatorOverlads
+        {
+            get
+            {
+                return _enableOperatorOverlads;
+            }
+            set
+            {
+                _enableOperatorOverlads = value;
+            }
+        }
+        
 
         #endregion
     }

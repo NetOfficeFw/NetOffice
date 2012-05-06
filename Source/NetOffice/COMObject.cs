@@ -15,6 +15,8 @@ namespace NetOffice
     {
         #region Fields
 
+        private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
+
         /// <summary>
         ///  returns parent proxy object
         /// </summary>
@@ -89,7 +91,7 @@ namespace NetOffice
                 AddChildObject(item);
 
             // remove old object from parent chain
-            if (null != replacedObject.ParentObject)
+            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
             {
                 COMObject parentObject = replacedObject.ParentObject;
                 parentObject.RemoveChildObject(replacedObject);
@@ -131,7 +133,7 @@ namespace NetOffice
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
-            if (null != parentObject)
+            if (!Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -153,7 +155,7 @@ namespace NetOffice
             _isEnumerator = isEnumerator;
             _instanceType = comProxy.GetType();
 
-            if (null != parentObject)
+            if (!Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -174,8 +176,8 @@ namespace NetOffice
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _instanceType = comProxyType;
-
-            if (null != parentObject)
+            
+            if(!Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -614,14 +616,14 @@ namespace NetOffice
 
         #endregion
 
-        #region object overrides
+        #region Object overrides
 
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public new int GetHashCode()
+        public override int GetHashCode()
         {
             return base.GetHashCode();
         }
@@ -631,7 +633,7 @@ namespace NetOffice
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public new string ToString()
+        public override string ToString()
         {
             return base.ToString();
         }
@@ -641,22 +643,60 @@ namespace NetOffice
         /// </summary>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public new bool Equals(Object obj)
+        public override bool Equals(Object obj)
         {
-            return base.Equals(obj);
+            if (obj is COMObject)
+                return Equals(obj as COMObject);
+            else
+                return base.Equals(obj);
         }
 
-        /*
-        /// Determines whether two Object instances are equal.
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
         /// </summary>
+        /// <param name="obj"></param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public new bool Equals(Object objA, Object objB)
+        public bool Equals(COMObject obj)
         {
-            return base.Equals(objA, objB);
-        }
-        */
+            if (Object.ReferenceEquals(obj, null))
+                return false;
+           
+            IntPtr outValueA = IntPtr.Zero;
+            IntPtr outValueB = IntPtr.Zero;
+            IntPtr ptrA = IntPtr.Zero;
+            IntPtr ptrB = IntPtr.Zero;
+            try
+            {
+                ptrA = Marshal.GetIUnknownForObject(this.UnderlyingObject);
+                int hResultA = Marshal.QueryInterface(ptrA, ref IID_IUnknown, out outValueA);
 
+                ptrB = Marshal.GetIUnknownForObject(obj.UnderlyingObject);
+                int hResultB = Marshal.QueryInterface(ptrB, ref IID_IUnknown, out outValueB);
+
+                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.WriteException(exception);
+                throw exception;
+            }
+            finally
+            {
+                if (IntPtr.Zero != ptrA)
+                    Marshal.Release(ptrA);
+
+                if (IntPtr.Zero != outValueA)
+                    Marshal.Release(outValueA);
+
+                if (IntPtr.Zero != ptrB)
+                    Marshal.Release(ptrB);
+
+                if (IntPtr.Zero != outValueB)
+                    Marshal.Release(outValueB);
+            }
+        }
+         
         /// <summary>
         /// Gets a Type object that represents the specified type.
         /// </summary>
@@ -665,6 +705,124 @@ namespace NetOffice
         public new Type GetType()
         {
             return base.GetType();
+        }
+
+        #endregion
+
+        #region Operator Overloads
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator ==(COMObject objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return objectA.Equals(objectB); 
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator ==(COMObject objectA, object objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return objectA.Equals(objectB as COMObject);
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator ==(object objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return (objectA as COMObject).Equals(objectB);
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator !=(COMObject objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return !objectA.Equals(objectB);
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator !=(COMObject objectA, object objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return !objectA.Equals(objectB as COMObject);
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are not equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator !=(object objectA, COMObject objectB)
+        {
+            if (!Settings.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return false;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return !(objectA as COMObject).Equals(objectB);
+            else
+                return true;
         }
 
         #endregion
