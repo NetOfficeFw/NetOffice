@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,10 +47,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NetOffice">
+    <Reference Include="NetOffice, Version=1.5.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>
-    <Reference Include="OfficeApi">
+    <Reference Include="OfficeApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -60,11 +64,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="VBIDEApi">
+    <Reference Include="VBIDEApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
     </Reference>
     <Reference Include="WordApi">
       <HintPath>..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>

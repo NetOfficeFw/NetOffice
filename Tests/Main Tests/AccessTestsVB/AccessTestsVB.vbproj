@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,27 +49,36 @@
   <ItemGroup>
     <Reference Include="AccessApi">
       <HintPath>..\..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ADODBApi">
       <HintPath>..\..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="DAOApi">
       <HintPath>..\..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
-    </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSComctlLibApi">
       <HintPath>..\..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSDATASRCApi">
       <HintPath>..\..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="OfficeApi">
+    <Reference Include="NetOffice, Version=1.5.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
     <Reference Include="OWC10Api">
       <HintPath>..\..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -78,9 +88,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="VBIDEApi">
-      <HintPath>..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />

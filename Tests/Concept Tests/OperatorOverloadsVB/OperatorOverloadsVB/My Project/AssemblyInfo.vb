@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("OperatorOverloadsVB")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("OperatorOverloadsVB")> 
-<Assembly: AssemblyCopyright("Copyright ©  2012")> 
+<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
+<Assembly: AssemblyProduct("NetOffice")> 
+<Assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

@@ -8,9 +8,6 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
 {
-
-    // 
-
     #region IDispatch
 
     [Guid("00020400-0000-0000-c000-000000000046"),

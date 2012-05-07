@@ -43,9 +43,9 @@ namespace NetOffice
         private static bool         _enableOperatorOverlads = true;
 
         #endregion
-
+         
         #region Properties
-
+         
         /// <summary>
         /// Used Thread Culture given in the Invoke Calls. en-US by default
         /// </summary>

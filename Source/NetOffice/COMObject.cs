@@ -318,7 +318,7 @@ namespace NetOffice
         {
             get
             {
-                return (null != (this as IEventBinding));
+                return (!Object.ReferenceEquals(this as IEventBinding, null));
             }
         }
 
@@ -331,7 +331,7 @@ namespace NetOffice
             get
             {
                 IEventBinding bindInfo = this as IEventBinding;
-                if (null != bindInfo)
+                if (!Object.ReferenceEquals(bindInfo, null))
                     return bindInfo.EventBridgeInitialized;
                 else
                     return false;
@@ -347,7 +347,7 @@ namespace NetOffice
             get
             {
                 IEventBinding bindInfo = this as IEventBinding;
-                if (null != bindInfo)
+                if (!Object.ReferenceEquals(bindInfo, null))
                     return bindInfo.HasEventRecipients();
                 else
                     return false;
@@ -488,9 +488,9 @@ namespace NetOffice
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void ReleaseCOMProxy()
-        {
+        {            
             // release himself from COM Runtime System
-            if (null != _underlyingObject)
+            if(!Object.ReferenceEquals(_underlyingObject, null))
             {
                 if (_isEnumerator)
                 {
@@ -544,20 +544,21 @@ namespace NetOffice
             IEventBinding eventBind = this as IEventBinding;
             if (disposeEventBinding)
             {
-                if (null != eventBind)
+                if (!Object.ReferenceEquals(eventBind, null))
                     eventBind.DisposeEventBridge();
             }
             else
             {
-                if ((null != eventBind) && (eventBind.EventBridgeInitialized))
+                if (!Object.ReferenceEquals(eventBind, null) && (eventBind.EventBridgeInitialized))
                     removeFromParent = false;
             }
 
             // child proxy dispose
             DisposeChildInstances(disposeEventBinding);
+            
 
             // remove himself from parent childlist
-            if ((null != _parentObject) && (true == removeFromParent))
+            if ((!Object.ReferenceEquals(_parentObject, null)) && (true == removeFromParent))
             {
                 _parentObject.RemoveChildObject(this);
                 _parentObject = null;
@@ -645,10 +646,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override bool Equals(Object obj)
         {
-            if (obj is COMObject)
-                return Equals(obj as COMObject);
-            else
-                return base.Equals(obj);
+            return base.Equals(obj);
         }
 
         /// <summary>
@@ -657,8 +655,11 @@ namespace NetOffice
         /// <param name="obj"></param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public bool Equals(COMObject obj)
+        public bool EqualsOnServer(COMObject obj)
         {
+            if (_isCurrentlyDisposing || _isDisposed)
+                return base.Equals(obj);
+
             if (Object.ReferenceEquals(obj, null))
                 return false;
            
@@ -725,7 +726,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.Equals(objectB); 
+                return objectA.EqualsOnServer(objectB); 
             else
                 return false;
         }
@@ -744,7 +745,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.Equals(objectB as COMObject);
+                return objectA.EqualsOnServer(objectB as COMObject);
             else
                 return false;
         }
@@ -763,7 +764,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return (objectA as COMObject).Equals(objectB);
+                return (objectA as COMObject).EqualsOnServer(objectB);
             else
                 return false;
         }
@@ -782,7 +783,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.Equals(objectB);
+                return !objectA.EqualsOnServer(objectB);
             else
                 return true;
         }
@@ -801,7 +802,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.Equals(objectB as COMObject);
+                return !objectA.EqualsOnServer(objectB as COMObject);
             else
                 return true;
         }
@@ -820,7 +821,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !(objectA as COMObject).Equals(objectB);
+                return !(objectA as COMObject).EqualsOnServer(objectB);
             else
                 return true;
         }

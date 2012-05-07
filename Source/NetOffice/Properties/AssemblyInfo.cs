@@ -10,6 +10,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © 2012 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.0.0")]
-[assembly: AssemblyFileVersion("1.5.0.0")]
+[assembly: AssemblyVersion("1.5.0.1")]
+[assembly: AssemblyFileVersion("1.5.0.1")]
 [assembly: ComVisibleAttribute(false)]
