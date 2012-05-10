@@ -57,6 +57,8 @@ namespace PowerPointTestsCSharp
                 PowerPoint.Presentation presentation = application.Presentations.Add(MsoTriState.msoTrue);
                 PowerPoint.Slide slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank);
 
+                System.Threading.Thread.Sleep(2000);
+
                 // close the document
                 presentation.Close();
 

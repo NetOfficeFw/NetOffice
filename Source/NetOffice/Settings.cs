@@ -35,6 +35,7 @@ namespace NetOffice
         private static IntPtr       _messageFilter;
         private static bool         _enableAutomaticQuit;
         private static bool         _enableAdHocLoading = true;
+        private static bool         _enableDeepLoading = true;
         private static bool         _enableDebugOutput = true;
         private static bool         _enableEventDebugOutput;
         private static bool         _enableSafeMode;
@@ -173,6 +174,22 @@ namespace NetOffice
             set
             {
                 _enableAdHocLoading = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or set the Initialize method perform a deep level analyzing(may cause security issues)
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static bool EnableDeepLoading
+        {
+            get
+            {
+                return _enableDeepLoading;
+            }
+            set
+            {
+                _enableDeepLoading = value;
             }
         }
 

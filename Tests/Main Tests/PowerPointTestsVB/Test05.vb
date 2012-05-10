@@ -41,6 +41,7 @@ Public Class Test05
         Dim startTime As DateTime = DateTime.Now
         Try
             application = New PowerPoint.Application()
+            application.Visible = MsoTriState.msoTrue
 
             ' PowerPoint 2000 doesnt support DisplayAlerts, we check at runtime its available and set
             If (application.EntityIsAvailable("DisplayAlerts")) Then
@@ -59,6 +60,8 @@ Public Class Test05
             ' add a new presentation with one new slide
             Dim presentation As PowerPoint.Presentation = application.Presentations.Add(MsoTriState.msoTrue)
             Dim slide As PowerPoint.Slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank)
+
+            System.Threading.Thread.Sleep(2000)
 
             ' close the document
             presentation.Close()
