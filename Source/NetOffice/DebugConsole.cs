@@ -75,6 +75,53 @@ namespace NetOffice
         /// write log message
         /// </summary>
         /// <param name="message"></param>
+        /// <param name="args"></param>
+        public static void WriteLine(string message, params object[] args)
+        {
+            string output = message;
+
+            int i = 0;
+            foreach (object item in args)
+            {
+                string replaceValue = "";
+                if (null != item)
+                    replaceValue = item.ToString();
+                output = output.Replace("{" + i.ToString() + "}", replaceValue);
+                i++;
+            }
+ 
+            if (ConsoleMode.Console == Mode || ConsoleMode.Trace == Mode)
+                output = "NetOffice: " + output;
+
+            if (AppendTimeInfoEnabled)
+                output = DateTime.Now.ToLongTimeString() + " - " + message;
+
+            switch (Mode)
+            {
+                case ConsoleMode.Console:
+                    Console.WriteLine(output);
+                    break;
+                case ConsoleMode.Trace:
+                    System.Diagnostics.Trace.WriteLine(output);
+                    break;
+                case ConsoleMode.LogFile:
+                    AppendToLogFile(output);
+                    break;
+                case ConsoleMode.MemoryList:
+                    _messageList.Add(output);
+                    break;
+                case ConsoleMode.None:
+                    // do nothing
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+            }
+        }
+
+        /// <summary>
+        /// write log message
+        /// </summary>
+        /// <param name="message"></param>
         public static void WriteLine(string message)
         {
             string output = message;

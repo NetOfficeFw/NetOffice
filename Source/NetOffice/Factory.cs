@@ -44,6 +44,7 @@ namespace NetOffice
         private static Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private static Assembly _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
         private static List<DependentAssembly> _dependentAssemblies = new List<DependentAssembly>();
+        private static string[] _knownNetOfficeKeyTokens;
 
         private static object _factoryListLock = new object();
         private static object _comObjectLock = new object();
@@ -200,12 +201,13 @@ namespace NetOffice
                 {
                     foreach (AssemblyName itemName in domainAssembly.GetReferencedAssemblies())
                     {
-                        Assembly itemAssembly = Assembly.Load(itemName);
-
-                        string assemblyName = itemName.Name;
-                        if (ContainsNetOfficeAttribute(itemAssembly))
+                        if (ContainsNetOfficePublicKeyToken(itemName))
                         {
+                            string assemblyName = itemName.Name;
+
                             DebugConsole.WriteLine(string.Format("Detect NetOffice assembly {0}.", assemblyName));
+                            
+                            Assembly itemAssembly = Assembly.Load(itemName);
 
                             string[] depends = AddAssembly(assemblyName, itemAssembly);
                             foreach (string depend in depends)
@@ -828,6 +830,51 @@ namespace NetOffice
             {
                 DebugConsole.WriteException(exception);
                 return false;
+            }
+        }
+
+        /// <summary>
+        /// returns info the assembly is a NetOffice Api Assembly
+        /// </summary>
+        /// <param name="itemName"></param>
+        /// <returns></returns>
+        private static bool ContainsNetOfficePublicKeyToken(AssemblyName itemName)
+        {
+            try
+            {
+                string targetKeyToken = itemName.FullName.Substring(itemName.FullName.LastIndexOf(" ") +1);
+                foreach (string item in KnownNetOfficeKeyTokens)
+                {
+                    if (item.EndsWith(targetKeyToken, StringComparison.InvariantCultureIgnoreCase))
+                        return true;
+                }
+                return false;
+            }
+            catch (System.IO.FileNotFoundException exception)
+            {
+                DebugConsole.WriteException(exception);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// contains a list of all known netoffice 
+        /// </summary>
+        private static string[] KnownNetOfficeKeyTokens
+        {
+            get 
+            {
+                if (null == _knownNetOfficeKeyTokens)
+                { 
+                    Type thisType =  typeof(Factory);
+                    System.IO.Stream ressourceStream = thisType.Assembly.GetManifestResourceStream(thisType.Namespace + ".KeyTokens.txt");
+                    System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
+                    string text = textStreamReader.ReadToEnd();
+                    ressourceStream.Close();
+                    textStreamReader.Close();
+                    _knownNetOfficeKeyTokens = text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                }
+                return _knownNetOfficeKeyTokens;
             }
         }
 
