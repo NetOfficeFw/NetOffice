@@ -31,6 +31,7 @@ namespace TutorialsCS4
             LoadTutorial(new Tutorial09());
             LoadTutorial(new Tutorial10());
             LoadTutorial(new Tutorial11());
+            LoadTutorial(new Tutorial12());
             NavigateToTutorial(0);
         }
     }

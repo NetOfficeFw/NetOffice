@@ -60,24 +60,20 @@ namespace NetOffice.OWC10Api
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public object get_ActiveObject()
-		{		
+		public object ActiveObject
+		{
+			get
+			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveObject", paramsArray);
 				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
-		}
-
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get/Set
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
-		public void set_ActiveObject(COMObject value)
-		{
+			}
+			set
+			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "ActiveObject", paramsArray);
+			}
 		}
 
 		#endregion

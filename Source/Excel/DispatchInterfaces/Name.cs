@@ -59,22 +59,19 @@ namespace NetOffice.ExcelApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public string get_Name()
-		{		
+		public string Name
+		{
+			get
+			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
 				return NetRuntimeSystem.Convert.ToString(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
-		/// Get/Set
-		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
-		public void set_Name(string value)
-		{
+			}
+			set
+			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "Name", paramsArray);
+			}
 		}
 
 		#endregion

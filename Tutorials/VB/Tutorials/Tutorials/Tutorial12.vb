@@ -1,8 +1,7 @@
-﻿Imports NetOffice
-Imports Excel = NetOffice.ExcelApi
-Imports Office = NetOffice.OfficeApi
+﻿Imports Excel = NetOffice.ExcelApi
+Imports NetOffice.ExcelApi.GlobalHelperModules.GlobalModule
 
-Public Class Tutorial05
+Public Class Tutorial12
     Implements ITutorial
 
     Dim _hostApplication As IHost
@@ -11,28 +10,17 @@ Public Class Tutorial05
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' start application
+        ' start excel and add a new workbook
         Dim application As New Excel.Application()
         application.Visible = False
         application.DisplayAlerts = False
+        application.Workbooks.Add()
 
-        For Each item As Office.COMAddIn In application.COMAddIns
-
-            ' the application property is an unkown COM object
-            ' we need a cast at runtime 
-            Dim hostApp As Excel.Application = item.Application
-
-            ' do some sample stuff
-            Dim hostAppName As String = hostApp.Name
-            Dim hostAppVisible As Boolean = hostApp.Visible
-
-            'another way to use is visual basic late binding 
-            hostAppName = item.Application.Name
-            hostAppVisible = item.Application.Visible
-
-        Next
-
-        ' quit and dispose excel
+        ' GlobalModule contains the well known globals and is located in NetOffice.ExcelApi.GlobalHelperModules
+        ' see the imports statement
+        ActiveCell.Value = "ActiveCellValue"
+          
+        ' close and dispose excel
         application.Quit()
         application.Dispose()
 
@@ -42,13 +30,13 @@ Public Class Tutorial05
 
     Public ReadOnly Property Caption As String Implements TutorialsBase.ITutorial.Caption
         Get
-            Return "Tutorial05"
+            Return "Tutorial12"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Understanding unkown Types", "Richtiges verwenden von unbekannten COM Objekten")
+            Return IIf(_hostApplication.LCID = 1033, "Globals in NetOffice", "Globals verwenden")
         End Get
     End Property
 
@@ -75,7 +63,7 @@ Public Class Tutorial05
 
     Public ReadOnly Property Uri As String Implements TutorialsBase.ITutorial.Uri
         Get
-            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial05_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial05_DE_VB")
+            Return IIf(_hostApplication.LCID = 1033, "http://netoffice.codeplex.com/wikipage?title=Tutorial12_EN_VB", "http://netoffice.codeplex.com/wikipage?title=Tutorial12_DE_VB")
         End Get
     End Property
 

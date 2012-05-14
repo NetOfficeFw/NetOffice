@@ -36,7 +36,7 @@ namespace NetOffice
         private static bool         _enableAutomaticQuit;
         private static bool         _enableAdHocLoading = true;
         private static bool         _enableDeepLoading = true;
-        private static bool         _enableDebugOutput = true;
+        private static bool         _enableDebugOutput = false;
         private static bool         _enableEventDebugOutput;
         private static bool         _enableSafeMode;
         private static bool         _enableThreadSafe = true;

@@ -59,22 +59,19 @@ namespace NetOffice.OWC10Api
 		/// Get/Set
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string get_Name()
-		{		
+		public string Name
+		{
+			get
+			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
 				return NetRuntimeSystem.Convert.ToString(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get/Set
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
-		public void set_Name(string value)
-		{
+			}
+			set
+			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "Name", paramsArray);
+			}
 		}
 
 		#endregion

@@ -7,36 +7,28 @@ using System.Text;
 using System.Windows.Forms;
 using TutorialsBase;
 
-using NetOffice;
 using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
+using NetOffice.ExcelApi.GlobalHelperModules;
 
 namespace TutorialsCS4
 {
-    public partial class Tutorial05 : ITutorial
-    { 
+    public partial class Tutorial12 : ITutorial
+    {
         IHost _hostApplication;
 
         #region ITutorial Member
 
         public void Run()
         {
-            // start application
+            // start excel and add a new workbook
             Excel.Application application = new Excel.Application();
             application.Visible = false;
             application.DisplayAlerts = false;
+            application.Workbooks.Add();
 
-            foreach (Office.COMAddIn item in application.COMAddIns)
-            {
-                // the application property is an unkown COM object
-                // we need a cast at runtime
-                Excel.Application hostApp = item.Application as Excel.Application;
-                
-                // do some sample stuff
-                string hostAppName = hostApp.Name;
-                bool hostAppVisible = hostApp.Visible;
-            }
- 
+            // GlobalModule contains the well known globals and is located in NetOffice.ExcelApi.GlobalHelperModules
+            GlobalModule.ActiveCell.Value = "ActiveCellValue";
+
             // quit and dispose excel
             application.Quit();
             application.Dispose();
@@ -61,18 +53,18 @@ namespace TutorialsCS4
 
         public string Uri
         {
-            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial05_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial05_DE_CS"; }
-
+            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial12_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial12_DE_CS"; }
         }
 
         public string Caption
         {
-            get { return "Tutorial05"; }
+            get { return "Tutorial12"; }
         }
+
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Understanding unkown Types" : "Richtiges verwenden von unbekannten COM Objekten"; }
+            get { return _hostApplication.LCID == 1033 ? "Globals in NetOffice" : "Globals verwenden"; }
         }
 
         public UserControl Panel
