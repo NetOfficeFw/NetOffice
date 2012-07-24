@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Tags 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Tags : Collection
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public string this[string name]
 		{
@@ -127,11 +127,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="value">string Value</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Add(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -139,10 +139,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Delete(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -150,12 +150,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="filePath">string FilePath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void AddBinary(string name, string filePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, filePath);
@@ -163,11 +163,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 BinaryValue(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -176,10 +176,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Name(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -188,10 +188,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Value(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

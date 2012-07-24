@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathEqArray 
-	/// SupportByVersion Word, 12,14
+	/// SupportByVersion Word, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathEqArray : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.OMathArgs E
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool MaxDist
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool ObjDist
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdOMathVertAlignType Align
 		{
 			get
@@ -199,10 +199,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdOMathSpacingRule RowSpacingRule
 		{
 			get
@@ -220,10 +220,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 RowSpacing
 		{
 			get

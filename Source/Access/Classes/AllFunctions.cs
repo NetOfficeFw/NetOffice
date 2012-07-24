@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass AllFunctions 
-	/// SupportByVersion Access, 10,11,12,14
+	/// SupportByVersion Access, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 10,11,12,14)]
+	[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AllFunctions : AllObjects
 	{

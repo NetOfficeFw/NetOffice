@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MetaProperty 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MetaProperty : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Value
 		{
 			get
@@ -102,10 +102,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Name
 		{
 			get
@@ -117,10 +117,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Id
 		{
 			get
@@ -132,10 +132,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsReadOnly
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsRequired
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoMetaPropertyType Type
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ValidationError
 		{
@@ -194,11 +194,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -215,9 +215,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Validate()
 		{
 			object[] paramsArray = null;

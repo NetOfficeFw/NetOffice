@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _SubReport 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SubReport : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Form Form
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Report Report
 		{
 			get
@@ -143,11 +143,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

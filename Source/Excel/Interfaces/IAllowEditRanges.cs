@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IAllowEditRanges 
-	/// SupportByVersion Excel, 10,11,12,14
+	/// SupportByVersion Excel, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAllowEditRanges : COMObject ,IEnumerable<NetOffice.ExcelApi.AllowEditRange>
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -89,11 +89,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.AllowEditRange this[object index]
 		{
@@ -111,12 +111,12 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
 		/// <param name="password">optional object Password</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, range, password);
@@ -126,12 +126,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, range);
@@ -145,9 +145,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.AllowEditRange> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 10,11,12,14
+		/// SupportByVersionAttribute Excel, 10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
        public IEnumerator<NetOffice.ExcelApi.AllowEditRange> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -160,9 +160,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 10,11,12,14
+		/// SupportByVersionAttribute Excel, 10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -9,9 +9,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IDiagram 
-	/// SupportByVersion Excel, 10,11,12,14
+	/// SupportByVersion Excel, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDiagram : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.DiagramNodes Nodes
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoDiagramType Type
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Reverse
 		{
 			get
@@ -196,10 +196,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
 		{
 			get
@@ -221,10 +221,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -233,9 +233,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 FitText()
 		{
 			object[] paramsArray = null;

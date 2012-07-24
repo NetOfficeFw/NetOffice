@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceMembers 
-	/// SupportByVersion Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceMembers : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.SharedWorkspaceMember>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.SharedWorkspaceMember this[Int32 index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -108,11 +108,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool ItemCountExceeded
 		{
 			get
@@ -144,13 +144,13 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="email">string Email</param>
 		/// <param name="domainName">string DomainName</param>
 		/// <param name="displayName">string DisplayName</param>
 		/// <param name="role">optional object Role</param>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName, object role)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName, role);
@@ -160,13 +160,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="email">string Email</param>
 		/// <param name="domainName">string DomainName</param>
 		/// <param name="displayName">string DisplayName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceMember Add(string email, string domainName, string displayName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(email, domainName, displayName);
@@ -180,9 +180,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.SharedWorkspaceMember> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14
+		/// SupportByVersionAttribute Office, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceMember> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -195,9 +195,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14
+		/// SupportByVersionAttribute Office, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface DataLabels 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DataLabels : COMObject ,IEnumerable<NetOffice.WordApi.DataLabel>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public string Name
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartBorder Border
 		{
@@ -124,10 +124,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.Interior Interior
 		{
@@ -141,10 +141,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartFillFormat Fill
 		{
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartFont Font
 		{
@@ -175,10 +175,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object HorizontalAlignment
 		{
 			get
@@ -203,10 +203,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Orientation
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool Shadow
 		{
 			get
@@ -251,10 +251,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object VerticalAlignment
 		{
 			get
@@ -279,10 +279,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 ReadingOrder
 		{
 			get
@@ -299,10 +299,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object AutoScaleFont
 		{
@@ -328,10 +328,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool AutoText
 		{
 			get
@@ -348,10 +348,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public string NumberFormat
 		{
 			get
@@ -368,10 +368,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool NumberFormatLinked
 		{
 			get
@@ -388,10 +388,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object NumberFormatLocal
 		{
 			get
@@ -416,10 +416,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowLegendKey
 		{
 			get
@@ -436,10 +436,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Type
 		{
@@ -465,10 +465,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Enums.XlDataLabelPosition Position
 		{
 			get
@@ -486,10 +486,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowSeriesName
 		{
 			get
@@ -506,10 +506,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowCategoryName
 		{
 			get
@@ -526,10 +526,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowValue
 		{
 			get
@@ -546,10 +546,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowPercentage
 		{
 			get
@@ -566,10 +566,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowBubbleSize
 		{
 			get
@@ -586,10 +586,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Separator
 		{
 			get
@@ -614,10 +614,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -629,10 +629,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
@@ -645,11 +645,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
 			get
@@ -662,10 +662,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -676,14 +676,34 @@ namespace NetOffice.WordApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Word", 15)]
+		public bool ShowRange
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ShowRange", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ShowRange", paramsArray);
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -700,9 +720,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -719,11 +739,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.DataLabel this[object index]
 		{
@@ -736,14 +756,25 @@ namespace NetOffice.WordApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="index">object Index</param>
+		[SupportByVersionAttribute("Word", 15)]
+		public void Propagate(object index)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(index);
+			Invoker.Method(this, "Propagate", paramsArray);
+		}
+
 		#endregion
 
        #region IEnumerable<NetOffice.WordApi.DataLabel> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
        public IEnumerator<NetOffice.WordApi.DataLabel> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -756,9 +787,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

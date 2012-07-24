@@ -50,7 +50,7 @@ Public Class Example07
             Dim fileExtension As String = GetDefaultExtension(excelApplication)
             Dim fileFormat As XlFileFormat = GetFileFormat(excelApplication)
             workbookFile = String.Format("{0}\Example07{1}", _hostApplication.RootDirectory, fileExtension)
-            workBook.SaveAs(workbookFile, fileFormat, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
+            workBook.SaveAs(workbookFile, fileFormat)
 
         Catch throwedException As System.Runtime.InteropServices.COMException
 

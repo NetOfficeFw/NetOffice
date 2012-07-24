@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Presentations 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Presentations : Collection
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Presentation this[object index]
 		{
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation Add(object withWindow)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Add(NetOffice.OfficeApi.Enums.MsoTriState withWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(withWindow);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -141,10 +141,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Presentation Add()
 		{
 			object[] paramsArray = null;
@@ -154,14 +154,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		/// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly, object untitled, object withWindow)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled, NetOffice.OfficeApi.Enums.MsoTriState withWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled, withWindow);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -170,11 +170,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Presentation Open(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -184,13 +184,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -199,14 +199,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly, object untitled)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -215,15 +215,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		/// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly, object untitled, object withWindow)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled, NetOffice.OfficeApi.Enums.MsoTriState withWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled, withWindow);
 			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
@@ -232,12 +232,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -247,14 +247,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly);
 			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
@@ -263,15 +263,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly, object untitled)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled);
 			object returnItem = Invoker.MethodReturn(this, "OpenOld", paramsArray);
@@ -280,10 +280,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void CheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -291,10 +291,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public bool CanCheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -303,15 +303,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		/// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
 		/// <param name="openAndRepair">optional NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled, object withWindow, object openAndRepair)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled, NetOffice.OfficeApi.Enums.MsoTriState withWindow, NetOffice.OfficeApi.Enums.MsoTriState openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled, withWindow, openAndRepair);
 			object returnItem = Invoker.MethodReturn(this, "Open2007", paramsArray);
@@ -320,11 +320,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Presentation Open2007(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -334,13 +334,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly);
 			object returnItem = Invoker.MethodReturn(this, "Open2007", paramsArray);
@@ -349,14 +349,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled);
 			object returnItem = Invoker.MethodReturn(this, "Open2007", paramsArray);
@@ -365,15 +365,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
 		/// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
 		/// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled, object withWindow)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public NetOffice.PowerPointApi.Presentation Open2007(string fileName, NetOffice.OfficeApi.Enums.MsoTriState readOnly, NetOffice.OfficeApi.Enums.MsoTriState untitled, NetOffice.OfficeApi.Enums.MsoTriState withWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readOnly, untitled, withWindow);
 			object returnItem = Invoker.MethodReturn(this, "Open2007", paramsArray);

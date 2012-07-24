@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ChartData 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartData : COMObject
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Workbook
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool IsLinked
 		{
 			get
@@ -110,9 +110,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -120,13 +120,23 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public void BreakLink()
 		{
 			object[] paramsArray = null;
 			Invoker.Method(this, "BreakLink", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		[SupportByVersionAttribute("Word", 15)]
+		public void ActivateChartDataWindow()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "ActivateChartDataWindow", paramsArray);
 		}
 
 		#endregion

@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface DiagramNode 
-	/// SupportByVersion PowerPoint, 10,11,12,14
+	/// SupportByVersion PowerPoint, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DiagramNode : COMObject
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public object Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNodeChildren Children
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Shape Shape
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNode Root
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Diagram Diagram
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
@@ -208,10 +208,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Shape TextShape
 		{
 			get
@@ -228,12 +228,12 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.DiagramNode AddNode(object pos, object nodeType)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -242,10 +242,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNode AddNode()
 		{
 			object[] paramsArray = null;
@@ -255,12 +255,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.DiagramNode AddNode(object pos)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -269,9 +269,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -279,11 +279,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void MoveNode(NetOffice.PowerPointApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
@@ -291,10 +291,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void ReplaceNode(NetOffice.PowerPointApi.DiagramNode targetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
@@ -302,23 +302,23 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="swapChildren">optional bool SwapChildren = true</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode, object swapChildren)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode, bool swapChildren)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, swapChildren);
 			Invoker.Method(this, "SwapNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
@@ -326,13 +326,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="copyChildren">bool CopyChildren</param>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode, object pos)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
@@ -341,12 +341,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="copyChildren">bool CopyChildren</param>
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode);
@@ -356,10 +356,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="receivingNode">NetOffice.PowerPointApi.DiagramNode ReceivingNode</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void TransferChildren(NetOffice.PowerPointApi.DiagramNode receivingNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(receivingNode);
@@ -367,9 +367,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNode NextNode()
 		{
 			object[] paramsArray = null;
@@ -379,9 +379,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DiagramNode PrevNode()
 		{
 			object[] paramsArray = null;

@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Rows 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Rows : Collection
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Row this[Int32 index]
 		{
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="beforeRow">optional Int32 BeforeRow = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
-		public NetOffice.PowerPointApi.Row Add(object beforeRow)
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Row Add(Int32 beforeRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeRow);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -141,10 +141,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Row Add()
 		{
 			object[] paramsArray = null;

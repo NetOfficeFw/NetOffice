@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SoundFormat 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SoundFormat : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpSoundFormatType Type
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string SourceFullName
 		{
 			get
@@ -109,9 +109,9 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Play()
 		{
 			object[] paramsArray = null;
@@ -119,10 +119,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Import(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -130,10 +130,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpSoundFormatType Export(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

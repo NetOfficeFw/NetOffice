@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface UndoRecord 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UndoRecord : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public bool IsRecordingCustomRecord
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public string CustomRecordName
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 CustomRecordLevel
 		{
 			get
@@ -171,21 +171,21 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
-		[SupportByVersionAttribute("Word", 14)]
-		public void StartCustomRecord(object name)
+		[SupportByVersionAttribute("Word", 14,15)]
+		public void StartCustomRecord(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "StartCustomRecord", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public void StartCustomRecord()
 		{
 			object[] paramsArray = null;
@@ -193,9 +193,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public void EndCustomRecord()
 		{
 			object[] paramsArray = null;

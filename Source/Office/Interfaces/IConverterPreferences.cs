@@ -9,9 +9,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterPreferences 
-	/// SupportByVersion Office, 14
+	/// SupportByVersion Office, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterPreferences : COMObject
 	{
@@ -77,10 +77,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -107,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pfLossySave">Int32 pfLossySave</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetLossySave(out Int32 pfLossySave)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

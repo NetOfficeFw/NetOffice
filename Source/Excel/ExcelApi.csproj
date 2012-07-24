@@ -11,7 +11,6 @@
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
     <AssemblyName>ExcelApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -297,6 +296,15 @@
     <Compile Include="Enums\XlFileValidationPivotMode.cs" />
     <Compile Include="Enums\XlPieSliceLocation.cs" />
     <Compile Include="Enums\XlPortugueseReform.cs" />
+    <Compile Include="Enums\XlQuickAnalysisMode.cs" />
+    <Compile Include="Enums\XlSlicerCacheType.cs" />
+    <Compile Include="Enums\XlCategoryLabelLevel.cs" />
+    <Compile Include="Enums\XlSeriesNameLevel.cs" />
+    <Compile Include="Enums\XlCalcMemNumberFormatType.cs" />
+    <Compile Include="Enums\XlTimelineLevel.cs" />
+    <Compile Include="Enums\XlFilterStatus.cs" />
+    <Compile Include="Enums\XlModelChangeSource.cs" />
+    <Compile Include="Enums\XlTimeMoving.cs" />
     <Compile Include="Interfaces\IFont.cs" />
     <Compile Include="Interfaces\IWindow.cs" />
     <Compile Include="Interfaces\IWindows.cs" />
@@ -604,6 +612,35 @@
     <Compile Include="Interfaces\ISlicerPivotTables.cs" />
     <Compile Include="Interfaces\IProtectedViewWindows.cs" />
     <Compile Include="Interfaces\IProtectedViewWindow.cs" />
+    <Compile Include="Interfaces\ITableObject.cs" />
+    <Compile Include="Interfaces\IPivotValueCell.cs" />
+    <Compile Include="Interfaces\IQuickAnalysis.cs" />
+    <Compile Include="Interfaces\IModelConnection.cs" />
+    <Compile Include="Interfaces\IWorksheetDataConnection.cs" />
+    <Compile Include="Interfaces\ITextConnection.cs" />
+    <Compile Include="Interfaces\IDataFeedConnection.cs" />
+    <Compile Include="Interfaces\IModelTableColumn.cs" />
+    <Compile Include="Interfaces\IModelTableColumns.cs" />
+    <Compile Include="Interfaces\IModelTable.cs" />
+    <Compile Include="Interfaces\IModelTables.cs" />
+    <Compile Include="Interfaces\IModelRelationship.cs" />
+    <Compile Include="Interfaces\IModelRelationships.cs" />
+    <Compile Include="Interfaces\IModel.cs" />
+    <Compile Include="Interfaces\IFullSeriesCollection.cs" />
+    <Compile Include="Interfaces\IChartCategory.cs" />
+    <Compile Include="Interfaces\ICategoryCollection.cs" />
+    <Compile Include="Interfaces\ITimelineState.cs" />
+    <Compile Include="Interfaces\ITimelineViewState.cs" />
+    <Compile Include="Interfaces\IModelTableNames.cs" />
+    <Compile Include="Interfaces\IModelTableNameChange.cs" />
+    <Compile Include="Interfaces\IModelTableNameChanges.cs" />
+    <Compile Include="Interfaces\IModelChanges.cs" />
+    <Compile Include="Interfaces\IModelColumnName.cs" />
+    <Compile Include="Interfaces\IModelColumnNames.cs" />
+    <Compile Include="Interfaces\IModelColumnChange.cs" />
+    <Compile Include="Interfaces\IModelColumnChanges.cs" />
+    <Compile Include="Interfaces\IModelMeasureName.cs" />
+    <Compile Include="Interfaces\IModelMeasureNames.cs" />
     <Compile Include="DispatchInterfaces\Adjustments.cs" />
     <Compile Include="DispatchInterfaces\CalloutFormat.cs" />
     <Compile Include="DispatchInterfaces\ColorFormat.cs" />
@@ -932,6 +969,35 @@
     <Compile Include="DispatchInterfaces\SlicerPivotTables.cs" />
     <Compile Include="DispatchInterfaces\ProtectedViewWindows.cs" />
     <Compile Include="DispatchInterfaces\ProtectedViewWindow.cs" />
+    <Compile Include="DispatchInterfaces\TableObject.cs" />
+    <Compile Include="DispatchInterfaces\PivotValueCell.cs" />
+    <Compile Include="DispatchInterfaces\QuickAnalysis.cs" />
+    <Compile Include="DispatchInterfaces\ModelConnection.cs" />
+    <Compile Include="DispatchInterfaces\WorksheetDataConnection.cs" />
+    <Compile Include="DispatchInterfaces\TextConnection.cs" />
+    <Compile Include="DispatchInterfaces\DataFeedConnection.cs" />
+    <Compile Include="DispatchInterfaces\ModelTableColumn.cs" />
+    <Compile Include="DispatchInterfaces\ModelTableColumns.cs" />
+    <Compile Include="DispatchInterfaces\ModelTable.cs" />
+    <Compile Include="DispatchInterfaces\ModelTables.cs" />
+    <Compile Include="DispatchInterfaces\ModelRelationship.cs" />
+    <Compile Include="DispatchInterfaces\ModelRelationships.cs" />
+    <Compile Include="DispatchInterfaces\Model.cs" />
+    <Compile Include="DispatchInterfaces\FullSeriesCollection.cs" />
+    <Compile Include="DispatchInterfaces\ChartCategory.cs" />
+    <Compile Include="DispatchInterfaces\CategoryCollection.cs" />
+    <Compile Include="DispatchInterfaces\TimelineState.cs" />
+    <Compile Include="DispatchInterfaces\TimelineViewState.cs" />
+    <Compile Include="DispatchInterfaces\ModelTableNames.cs" />
+    <Compile Include="DispatchInterfaces\ModelTableNameChange.cs" />
+    <Compile Include="DispatchInterfaces\ModelTableNameChanges.cs" />
+    <Compile Include="DispatchInterfaces\ModelChanges.cs" />
+    <Compile Include="DispatchInterfaces\ModelColumnName.cs" />
+    <Compile Include="DispatchInterfaces\ModelColumnNames.cs" />
+    <Compile Include="DispatchInterfaces\ModelColumnChange.cs" />
+    <Compile Include="DispatchInterfaces\ModelColumnChanges.cs" />
+    <Compile Include="DispatchInterfaces\ModelMeasureName.cs" />
+    <Compile Include="DispatchInterfaces\ModelMeasureNames.cs" />
     <Compile Include="Classes\QueryTable.cs" />
     <Compile Include="Classes\Application.cs" />
     <Compile Include="Classes\Chart.cs" />

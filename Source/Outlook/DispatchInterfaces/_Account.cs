@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _Account 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Account : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlAccountType AccountType
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string DisplayName
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string UserName
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string SmtpAddress
 		{
 			get
@@ -200,10 +200,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlAutoDiscoverConnectionMode AutoDiscoverConnectionMode
 		{
 			get
@@ -216,10 +216,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Recipient CurrentUser
 		{
 			get
@@ -232,10 +232,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string AutoDiscoverXml
 		{
 			get
@@ -247,10 +247,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Store DeliveryStore
 		{
 			get
@@ -263,10 +263,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlExchangeConnectionMode ExchangeConnectionMode
 		{
 			get
@@ -279,10 +279,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string ExchangeMailboxServerName
 		{
 			get
@@ -294,10 +294,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string ExchangeMailboxServerVersion
 		{
 			get
@@ -308,15 +308,32 @@ namespace NetOffice.OutlookApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Outlook 15
+		/// Get
+		/// Unknown COM Proxy
+		/// </summary>
+		[SupportByVersionAttribute("Outlook", 15)]
+		public object IOlkAccount
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "IOlkAccount", paramsArray);
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="iD">string ID</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.AddressEntry GetAddressEntryFromID(string iD)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iD);
@@ -326,10 +343,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="entryID">string EntryID</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Recipient GetRecipientFromID(string entryID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(entryID);

@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _IMsoOleAccDispObj 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _IMsoOleAccDispObj : IAccessible
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get

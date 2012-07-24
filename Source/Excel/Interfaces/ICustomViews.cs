@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ICustomViews 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ICustomViews : COMObject ,IEnumerable<NetOffice.ExcelApi.CustomView>
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -138,11 +138,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="viewName">object ViewName</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.CustomView this[object viewName]
 		{
@@ -160,12 +160,12 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		/// <param name="printSettings">optional object PrintSettings</param>
 		/// <param name="rowColSettings">optional object RowColSettings</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings, object rowColSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName, printSettings, rowColSettings);
@@ -175,11 +175,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.CustomView Add(string viewName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
@@ -189,12 +189,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		/// <param name="printSettings">optional object PrintSettings</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.CustomView Add(string viewName, object printSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(viewName, printSettings);
@@ -208,9 +208,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.CustomView> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
        public IEnumerator<NetOffice.ExcelApi.CustomView> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -223,9 +223,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

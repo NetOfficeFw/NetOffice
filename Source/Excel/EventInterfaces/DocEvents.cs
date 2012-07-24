@@ -10,65 +10,77 @@ namespace NetOffice.ExcelApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[ComImport, Guid("00024411-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DocEvents
 	{
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1543)]
 		void SelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1537)]
 		void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1534)]
 		void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(304)]
 		void Activate();
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1530)]
 		void Deactivate();
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(279)]
 		void Calculate();
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1545)]
 		void Change([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1470)]
 		void FollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2156)]
 		void PivotTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2886)]
 		void PivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange);
 
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2889)]
 		void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2892)]
 		void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2893)]
 		void PivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd);
 
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2894)]
 		void PivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object target);
+
+		[SupportByVersionAttribute("Excel", 15)]
+		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3070)]
+		void LensGalleryRenderComplete();
+
+		[SupportByVersionAttribute("Excel", 15)]
+		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3071)]
+		void TableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target);
+
+		[SupportByVersionAttribute("Excel", 15)]
+		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3072)]
+		void BeforeDelete();
 	}
 	
 	#endregion
@@ -332,6 +344,47 @@ namespace NetOffice.ExcelApi
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("PivotTableChangeSync", ref paramsArray);
+		}
+
+		public void LensGalleryRenderComplete()
+		{
+			Delegate[] recipients = _eventBinding.GetEventRecipients("LensGalleryRenderComplete");
+			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
+			{
+				Invoker.ReleaseParamsArray();
+				return;
+			}
+
+			object[] paramsArray = new object[0];
+			_eventBinding.RaiseCustomEvent("LensGalleryRenderComplete", ref paramsArray);
+		}
+
+		public void TableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target)
+		{
+			Delegate[] recipients = _eventBinding.GetEventRecipients("TableUpdate");
+			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
+			{
+				Invoker.ReleaseParamsArray(target);
+				return;
+			}
+
+			NetOffice.ExcelApi.TableObject newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
+			object[] paramsArray = new object[1];
+			paramsArray[0] = newTarget;
+			_eventBinding.RaiseCustomEvent("TableUpdate", ref paramsArray);
+		}
+
+		public void BeforeDelete()
+		{
+			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDelete");
+			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
+			{
+				Invoker.ReleaseParamsArray();
+				return;
+			}
+
+			object[] paramsArray = new object[0];
+			_eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
 		}
 
 		#endregion

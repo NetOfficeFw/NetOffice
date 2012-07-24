@@ -23,9 +23,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _SectionInReport 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _SectionInReport : _Section,IEventBinding
 	{
@@ -105,14 +105,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _SectionInReport_FormatEventHandler _FormatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _SectionInReport_FormatEventHandler FormatEvent
 		{
 			add
@@ -127,14 +127,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _SectionInReport_PrintEventHandler _PrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _SectionInReport_PrintEventHandler PrintEvent
 		{
 			add
@@ -149,14 +149,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _SectionInReport_RetreatEventHandler _RetreatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _SectionInReport_RetreatEventHandler RetreatEvent
 		{
 			add
@@ -171,14 +171,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_ClickEventHandler ClickEvent
 		{
 			add
@@ -193,14 +193,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -215,14 +215,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -237,14 +237,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -259,14 +259,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -281,14 +281,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _SectionInReport_PaintEventHandler _PaintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _SectionInReport_PaintEventHandler PaintEvent
 		{
 			add

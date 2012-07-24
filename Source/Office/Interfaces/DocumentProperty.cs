@@ -9,9 +9,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface DocumentProperty 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperty : COMObject
 	{
@@ -73,11 +73,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public string Name
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Value
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoDocProperties Type
 		{
 			get
@@ -159,10 +159,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public bool LinkToContent
 		{
 			get
@@ -179,10 +179,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public string LinkSource
 		{
 			get
@@ -199,11 +199,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Application
 		{
 			get
@@ -216,10 +216,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -235,9 +235,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;

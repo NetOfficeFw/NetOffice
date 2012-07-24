@@ -28,9 +28,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OlkTimeZoneControl 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkTimeZoneControl : _OlkTimeZoneControl,IEventBinding
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_ClickEventHandler ClickEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_DoubleClickEventHandler _DoubleClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_DoubleClickEventHandler DoubleClickEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_DropButtonClickEventHandler _DropButtonClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_DropButtonClickEventHandler DropButtonClickEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -395,14 +395,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkTimeZoneControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkTimeZoneControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add

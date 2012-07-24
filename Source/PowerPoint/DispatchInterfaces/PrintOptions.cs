@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface PrintOptions 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PrintOptions : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpPrintColorType PrintColorType
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Collate
 		{
 			get
@@ -132,10 +132,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FitToPage
 		{
 			get
@@ -153,10 +153,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FrameSlides
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 NumberOfCopies
 		{
 			get
@@ -194,10 +194,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType
 		{
 			get
@@ -215,11 +215,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -232,10 +232,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides
 		{
 			get
@@ -253,10 +253,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState PrintInBackground
 		{
 			get
@@ -274,10 +274,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType
 		{
 			get
@@ -295,10 +295,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.PrintRanges Ranges
 		{
 			get
@@ -311,10 +311,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState PrintFontsAsGraphics
 		{
 			get
@@ -332,10 +332,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string SlideShowName
 		{
 			get
@@ -352,10 +352,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string ActivePrinter
 		{
 			get
@@ -372,10 +372,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder
 		{
 			get
@@ -393,10 +393,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState PrintComments
 		{
 			get
@@ -414,10 +414,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 sectionIndex
 		{
 			get
@@ -434,10 +434,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HighQuality
 		{
 			get

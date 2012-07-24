@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Axes 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable<NetOffice.WordApi.Axis>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
 			get
@@ -143,14 +143,14 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="type">NetOffice.WordApi.Enums.XlAxisType Type</param>
 		/// <param name="axisGroup">optional NetOffice.WordApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.WordApi.Axis this[NetOffice.WordApi.Enums.XlAxisType type, object axisGroup]
+		public NetOffice.WordApi.Axis this[NetOffice.WordApi.Enums.XlAxisType type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup]
 		{
 			get
 			{
@@ -166,9 +166,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.Axis> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
        public IEnumerator<NetOffice.WordApi.Axis> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -181,9 +181,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

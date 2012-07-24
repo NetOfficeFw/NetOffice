@@ -19,9 +19,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass Page 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Page : _Page,IEventBinding
 	{
@@ -101,14 +101,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event Page_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event Page_ClickEventHandler ClickEvent
 		{
 			add
@@ -123,14 +123,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event Page_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event Page_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -145,14 +145,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event Page_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event Page_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -167,14 +167,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event Page_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event Page_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -189,14 +189,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event Page_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event Page_MouseUpEventHandler MouseUpEvent
 		{
 			add

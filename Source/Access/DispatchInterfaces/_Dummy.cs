@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Dummy 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Dummy : COMObject
 	{

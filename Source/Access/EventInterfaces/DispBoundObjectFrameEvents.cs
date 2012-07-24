@@ -10,67 +10,67 @@ namespace NetOffice.AccessApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14,15)]
 	[ComImport, Guid("2E70526C-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface DispBoundObjectFrameEvents
 	{
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
 		void Updated([In] [Out] ref object code);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2061)]
 		void BeforeUpdate([In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2062)]
 		void AfterUpdate();
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
 		void Enter();
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
 		void Exit([In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2073)]
 		void GotFocus();
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2074)]
 		void LostFocus();
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick([In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift);
 	}

@@ -16,9 +16,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass FormRegion 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class FormRegion : _FormRegion,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event FormRegion_ExpandedEventHandler _ExpandedEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event FormRegion_ExpandedEventHandler ExpandedEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event FormRegion_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event FormRegion_CloseEventHandler CloseEvent
 		{
 			add

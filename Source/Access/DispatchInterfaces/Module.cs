@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Module 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Module : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string Name
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="numLines">Int32 NumLines</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Lines(Int32 line, Int32 numLines)
 		{		
@@ -142,22 +142,22 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_Lines
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="numLines">Int32 NumLines</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string Lines(Int32 line, Int32 numLines)
 		{
 			return get_Lines(line, numLines);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 CountOfLines
 		{
 			get
@@ -169,12 +169,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{		
@@ -184,24 +184,24 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_ProcStartLine
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcStartLine(procName, procKind);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{		
@@ -211,24 +211,24 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_ProcCountLines
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcCountLines(procName, procKind);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{		
@@ -238,24 +238,24 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_ProcBodyLine
 		/// </summary>
 		/// <param name="procName">string ProcName</param>
 		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcBodyLine(procName, procKind);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="pprockind">NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind)
 		{		
@@ -268,22 +268,22 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_ProcOfLine
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="pprockind">NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind pprockind)
 		{
 			return get_ProcOfLine(line, out pprockind);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 CountOfDeclarationLines
 		{
 			get
@@ -295,10 +295,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Enums.AcModuleType Type
 		{
 			get
@@ -315,10 +315,10 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void InsertText(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -326,10 +326,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void AddFromString(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -337,10 +337,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void AddFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -348,11 +348,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void InsertLines(Int32 line, string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
@@ -360,11 +360,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="startLine">Int32 StartLine</param>
 		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DeleteLines(Int32 startLine, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
@@ -372,11 +372,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ReplaceLine(Int32 line, string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
@@ -384,11 +384,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="eventName">string EventName</param>
 		/// <param name="objectName">string ObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 CreateEventProc(string eventName, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventName, objectName);
@@ -397,7 +397,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -407,8 +407,8 @@ namespace NetOffice.AccessApi
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		/// <param name="patternSearch">optional bool PatternSearch = false</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -416,7 +416,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -424,7 +424,7 @@ namespace NetOffice.AccessApi
 		/// <param name="endLine">Int32 EndLine</param>
 		/// <param name="endColumn">Int32 EndColumn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn);
@@ -433,7 +433,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -442,8 +442,8 @@ namespace NetOffice.AccessApi
 		/// <param name="endColumn">Int32 EndColumn</param>
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -451,7 +451,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -461,8 +461,8 @@ namespace NetOffice.AccessApi
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -470,11 +470,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

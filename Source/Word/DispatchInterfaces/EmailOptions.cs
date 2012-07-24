@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface EmailOptions 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EmailOptions : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool UseThemeStyle
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string MarkCommentsWith
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool MarkComments
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.EmailSignature EmailSignature
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Style ComposeStyle
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Style ReplyStyle
 		{
 			get
@@ -230,10 +230,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string ThemeName
 		{
 			get
@@ -250,10 +250,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool Dummy1
 		{
@@ -266,10 +266,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool Dummy2
 		{
@@ -282,10 +282,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool NewColorOnReply
 		{
 			get
@@ -302,10 +302,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Style PlainTextStyle
 		{
 			get
@@ -318,10 +318,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool UseThemeStyleOnReply
 		{
 			get
@@ -338,10 +338,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyHeadings
 		{
 			get
@@ -358,10 +358,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyBorders
 		{
 			get
@@ -378,10 +378,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyBulletedLists
 		{
 			get
@@ -398,10 +398,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyNumberedLists
 		{
 			get
@@ -418,10 +418,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceQuotes
 		{
 			get
@@ -438,10 +438,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceSymbols
 		{
 			get
@@ -458,10 +458,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceOrdinals
 		{
 			get
@@ -478,10 +478,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceFractions
 		{
 			get
@@ -498,10 +498,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplacePlainTextEmphasis
 		{
 			get
@@ -518,10 +518,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeFormatListItemBeginning
 		{
 			get
@@ -538,10 +538,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeDefineStyles
 		{
 			get
@@ -558,10 +558,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceHyperlinks
 		{
 			get
@@ -578,10 +578,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyTables
 		{
 			get
@@ -598,10 +598,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyFirstIndents
 		{
 			get
@@ -618,10 +618,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyDates
 		{
 			get
@@ -638,10 +638,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeApplyClosings
 		{
 			get
@@ -658,10 +658,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeMatchParentheses
 		{
 			get
@@ -678,10 +678,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeReplaceFarEastDashes
 		{
 			get
@@ -698,10 +698,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeDeleteAutoSpaces
 		{
 			get
@@ -718,10 +718,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeInsertClosings
 		{
 			get
@@ -738,10 +738,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeAutoLetterWizard
 		{
 			get
@@ -758,10 +758,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool AutoFormatAsYouTypeInsertOvers
 		{
 			get
@@ -778,10 +778,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool RelyOnCSS
 		{
 			get
@@ -798,10 +798,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdEmailHTMLFidelity HTMLFidelity
 		{
 			get
@@ -819,10 +819,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool EmbedSmartTag
 		{
 			get
@@ -839,10 +839,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool TabIndentKey
 		{
 			get
@@ -863,10 +863,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Dummy3()
 		{
 			object[] paramsArray = null;

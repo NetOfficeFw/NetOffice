@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _NavigationGroup 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NavigationGroup : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlGroupType GroupType
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.NavigationFolders NavigationFolders
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string Name
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Position
 		{
 			get

@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface DialogSheets 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DialogSheets : COMObject ,IEnumerable<object>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.HPageBreaks HPageBreaks
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.VPageBreaks VPageBreaks
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Visible
 		{
 			get
@@ -199,12 +199,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public object this[object index]
 		{
@@ -222,12 +222,12 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
 		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.DialogSheet Add(object before, object after, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count);
@@ -237,10 +237,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.DialogSheet Add()
 		{
 			object[] paramsArray = null;
@@ -250,11 +250,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.DialogSheet Add(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -264,12 +264,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.DialogSheet Add(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -279,11 +279,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Copy(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -291,10 +291,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -302,11 +302,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Copy(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -314,9 +314,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -324,10 +324,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _Dummy7()
 		{
 			object[] paramsArray = null;
@@ -335,11 +335,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Move(object before, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
@@ -347,10 +347,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Move()
 		{
 			object[] paramsArray = null;
@@ -358,11 +358,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Move(object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(before);
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		/// <param name="collate">optional object Collate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -399,7 +399,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="collate">optional object Collate</param>
 		/// <param name="prToFileName">optional object PrToFileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
@@ -407,11 +407,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut()
 		{
 			object[] paramsArray = null;
@@ -419,12 +419,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
@@ -432,13 +432,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
@@ -446,14 +446,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		/// <param name="copies">optional object Copies</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
@@ -461,7 +461,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -469,7 +469,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="preview">optional object Preview</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to, object copies, object preview)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
@@ -477,7 +477,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -486,7 +486,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="activePrinter">optional object ActivePrinter</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -504,7 +504,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
@@ -512,10 +512,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="enableChanges">optional object EnableChanges</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintPreview(object enableChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(enableChanges);
@@ -523,10 +523,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintPreview()
 		{
 			object[] paramsArray = null;
@@ -534,10 +534,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
@@ -545,10 +545,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -566,7 +566,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		/// <param name="collate">optional object Collate</param>
 		/// <param name="prToFileName">optional object PrToFileName</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate, prToFileName);
@@ -574,10 +574,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -585,11 +585,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
@@ -597,12 +597,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
@@ -610,13 +610,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		/// <param name="copies">optional object Copies</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
@@ -624,14 +624,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		/// <param name="copies">optional object Copies</param>
 		/// <param name="preview">optional object Preview</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies, object preview)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
@@ -639,7 +639,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="preview">optional object Preview</param>
 		/// <param name="activePrinter">optional object ActivePrinter</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies, object preview, object activePrinter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
@@ -655,7 +655,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -664,7 +664,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="activePrinter">optional object ActivePrinter</param>
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
@@ -672,7 +672,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -682,7 +682,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		/// <param name="collate">optional object Collate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -690,7 +690,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -700,7 +700,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		/// <param name="collate">optional object Collate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile, collate);
@@ -708,11 +708,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut()
 		{
 			object[] paramsArray = null;
@@ -720,12 +720,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
@@ -733,13 +733,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
@@ -747,14 +747,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		/// <param name="copies">optional object Copies</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies);
@@ -762,7 +762,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -770,7 +770,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="preview">optional object Preview</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to, object copies, object preview)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview);
@@ -778,7 +778,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -787,7 +787,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="activePrinter">optional object ActivePrinter</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to, object copies, object preview, object activePrinter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter);
@@ -795,7 +795,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -805,11 +805,85 @@ namespace NetOffice.ExcelApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, copies, preview, activePrinter, printToFile);
 			Invoker.Method(this, "__PrintOut", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="before">optional object Before</param>
+		/// <param name="after">optional object After</param>
+		/// <param name="count">optional object Count</param>
+		/// <param name="newLayout">optional object NewLayout</param>
+		[SupportByVersionAttribute("Excel", 15)]
+		public object Add2(object before, object after, object count, object newLayout)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count, newLayout);
+			object returnItem = Invoker.MethodReturn(this, "Add2", paramsArray);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public object Add2()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add2", paramsArray);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="before">optional object Before</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public object Add2(object before)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before);
+			object returnItem = Invoker.MethodReturn(this, "Add2", paramsArray);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="before">optional object Before</param>
+		/// <param name="after">optional object After</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public object Add2(object before, object after)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
+			object returnItem = Invoker.MethodReturn(this, "Add2", paramsArray);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="before">optional object Before</param>
+		/// <param name="after">optional object After</param>
+		/// <param name="count">optional object Count</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public object Add2(object before, object after, object count)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(before, after, count);
+			object returnItem = Invoker.MethodReturn(this, "Add2", paramsArray);
+			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			return newObject;
 		}
 
 		#endregion
@@ -817,9 +891,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -832,9 +906,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

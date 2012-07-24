@@ -78,34 +78,12 @@ namespace NetOffice.OWC10Api
 			return get_Moniker(relativeTo);
 		}
 
-
-        /// <summary>
-        /// SupportByVersion OWC10 1
-        /// Get
-        /// </summary>
-        [SupportByVersionAttribute("OWC10", 1)]
-        public string get_Moniker()
-		{
-            object[] paramsArray = null;
-            object returnItem = Invoker.PropertyGet(this, "Moniker", paramsArray);
-            return NetRuntimeSystem.Convert.ToString(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
-		public string Moniker()
-		{
-            return get_Moniker();
-		}
-
 		#endregion
 
 		#region Methods
 
 		#endregion
+
 	}
 
 	///<summary>

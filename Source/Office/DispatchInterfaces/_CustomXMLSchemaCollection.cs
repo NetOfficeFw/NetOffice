@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CustomXMLSchemaCollection 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CustomXMLSchemaCollection : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CustomXMLSchema>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CustomXMLSchema this[object index]
 		{
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_NamespaceURI(Int32 index)
 		{		
@@ -139,11 +139,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_NamespaceURI
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string NamespaceURI(Int32 index)
 		{
 			return get_NamespaceURI(index);
@@ -154,14 +154,14 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
 		/// <param name="fileName">optional string FileName = </param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -170,10 +170,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLSchema Add()
 		{
 			object[] paramsArray = null;
@@ -183,12 +183,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -197,13 +197,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -212,14 +212,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
 		/// <param name="fileName">optional string FileName = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -228,10 +228,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="schemaCollection">NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void AddCollection(NetOffice.OfficeApi.CustomXMLSchemaCollection schemaCollection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(schemaCollection);
@@ -239,9 +239,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool Validate()
 		{
 			object[] paramsArray = null;
@@ -254,9 +254,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.CustomXMLSchema> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.CustomXMLSchema> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -269,9 +269,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Designs 
-	/// SupportByVersion PowerPoint, 10,11,12,14
+	/// SupportByVersion PowerPoint, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Designs : Collection
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Design this[object index]
 		{
@@ -128,12 +128,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="designName">string designName</param>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Design Add(string designName, object index)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Design Add(string designName, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(designName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -142,11 +142,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="designName">string designName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Design Add(string designName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(designName);
@@ -156,12 +156,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="templateName">string TemplateName</param>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Design Load(string templateName, object index)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Design Load(string templateName, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templateName, index);
 			object returnItem = Invoker.MethodReturn(this, "Load", paramsArray);
@@ -170,11 +170,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="templateName">string TemplateName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Design Load(string templateName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templateName);
@@ -184,12 +184,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pOriginal">NetOffice.PowerPointApi.Design pOriginal</param>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
-		public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal, object index)
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pOriginal, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
@@ -198,11 +198,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pOriginal">NetOffice.PowerPointApi.Design pOriginal</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pOriginal);

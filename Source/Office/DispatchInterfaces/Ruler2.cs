@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Ruler2 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Ruler2 : _IMsoDispObj
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.RulerLevels2 Levels
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TabStops2 TabStops
 		{
 			get

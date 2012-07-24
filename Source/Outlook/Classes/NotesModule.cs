@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass NotesModule 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NotesModule : _NotesModule
 	{

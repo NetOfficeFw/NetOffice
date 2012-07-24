@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface CustomerData 
-	/// SupportByVersion PowerPoint, 12,14
+	/// SupportByVersion PowerPoint, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14)]
+	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomerData : Collection
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="id">string Id</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CustomXMLPart this[string id]
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLPart Add()
 		{
 			object[] paramsArray = null;
@@ -140,10 +140,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="id">string Id</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Delete(string id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);

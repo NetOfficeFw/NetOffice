@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ChartBorder 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartBorder : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Color
 		{
 			get
@@ -102,10 +102,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object ColorIndex
 		{
 			get
@@ -130,10 +130,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object LineStyle
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Weight
 		{
 			get
@@ -186,11 +186,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
 			get
@@ -203,10 +203,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -218,11 +218,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
 			get

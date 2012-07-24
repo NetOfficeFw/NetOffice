@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IMsoInterior 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoInterior : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Color
 		{
 			get
@@ -102,10 +102,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object ColorIndex
 		{
 			get
@@ -130,10 +130,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object InvertIfNegative
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Pattern
 		{
 			get
@@ -186,10 +186,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object PatternColor
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object PatternColorIndex
 		{
 			get
@@ -242,11 +242,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public object Application
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -274,11 +274,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public object Parent
 		{
 			get

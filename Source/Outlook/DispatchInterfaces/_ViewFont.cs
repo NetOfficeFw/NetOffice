@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _ViewFont 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ViewFont : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Bold
 		{
 			get
@@ -159,10 +159,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Italic
 		{
 			get
@@ -179,10 +179,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string Name
 		{
 			get
@@ -199,10 +199,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Size
 		{
 			get
@@ -219,10 +219,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Strikethrough
 		{
 			get
@@ -239,10 +239,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Underline
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlColor Color
 		{
 			get
@@ -280,10 +280,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlCategoryColor ExtendedColor
 		{
 			get

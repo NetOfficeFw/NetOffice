@@ -55,12 +55,12 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -70,23 +70,23 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters(object start, object length)
 		{
 			return get_Characters(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -96,11 +96,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters(object start)
 		{
 			return get_Characters(start);
@@ -116,9 +116,9 @@ namespace NetOffice.PowerPointApi
 
 	///<summary>
 	/// DispatchInterface DataLabel 
-	/// SupportByVersion PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DataLabel : DataLabel_
 	{
@@ -180,11 +180,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
 			get
@@ -197,10 +197,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Name
 		{
 			get
@@ -212,10 +212,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartBorder Border
 		{
@@ -229,10 +229,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.Interior Interior
 		{
@@ -246,10 +246,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartFillFormat Fill
 		{
@@ -263,10 +263,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Caption
 		{
 			get
@@ -283,10 +283,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters
 		{
 			get
@@ -299,10 +299,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartFont Font
 		{
@@ -316,10 +316,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object HorizontalAlignment
 		{
 			get
@@ -344,10 +344,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Left
 		{
 			get
@@ -364,10 +364,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Orientation
 		{
 			get
@@ -392,10 +392,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Shadow
 		{
 			get
@@ -412,10 +412,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Text
 		{
 			get
@@ -432,10 +432,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Top
 		{
 			get
@@ -452,10 +452,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object VerticalAlignment
 		{
 			get
@@ -480,10 +480,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 ReadingOrder
 		{
 			get
@@ -500,10 +500,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object AutoScaleFont
 		{
@@ -529,10 +529,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool AutoText
 		{
 			get
@@ -549,10 +549,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string NumberFormat
 		{
 			get
@@ -569,10 +569,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool NumberFormatLinked
 		{
 			get
@@ -589,10 +589,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object NumberFormatLocal
 		{
 			get
@@ -617,10 +617,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowLegendKey
 		{
 			get
@@ -637,10 +637,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Type
 		{
@@ -666,10 +666,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlDataLabelPosition Position
 		{
 			get
@@ -687,10 +687,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowSeriesName
 		{
 			get
@@ -707,10 +707,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowCategoryName
 		{
 			get
@@ -727,10 +727,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowValue
 		{
 			get
@@ -747,10 +747,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowPercentage
 		{
 			get
@@ -767,10 +767,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ShowBubbleSize
 		{
 			get
@@ -787,10 +787,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Separator
 		{
 			get
@@ -815,10 +815,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
@@ -831,10 +831,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -846,10 +846,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -862,10 +862,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
-		/// Get
+		/// SupportByVersion PowerPoint 14, 15
+		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Height
 		{
 			get
@@ -874,13 +874,18 @@ namespace NetOffice.PowerPointApi
 				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
 				return NetRuntimeSystem.Convert.ToDouble(returnItem);
 			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Height", paramsArray);
+			}
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
-		/// Get
+		/// SupportByVersion PowerPoint 14, 15
+		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Width
 		{
 			get
@@ -889,13 +894,18 @@ namespace NetOffice.PowerPointApi
 				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
 				return NetRuntimeSystem.Convert.ToDouble(returnItem);
 			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Width", paramsArray);
+			}
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Formula
 		{
 			get
@@ -912,10 +922,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1
 		{
 			get
@@ -932,10 +942,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaLocal
 		{
 			get
@@ -952,10 +962,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1Local
 		{
 			get
@@ -971,14 +981,66 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Double _Height
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Height", paramsArray);
+				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Double _Width
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "_Width", paramsArray);
+				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public bool ShowRange
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ShowRange", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ShowRange", paramsArray);
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Select()
 		{
 			object[] paramsArray = null;
@@ -995,9 +1057,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Delete()
 		{
 			object[] paramsArray = null;

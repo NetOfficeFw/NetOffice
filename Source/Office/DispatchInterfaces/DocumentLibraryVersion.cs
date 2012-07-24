@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface DocumentLibraryVersion 
-	/// SupportByVersion Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentLibraryVersion : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Modified
 		{
 			get
@@ -97,10 +97,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Index
 		{
 			get
@@ -112,11 +112,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -129,10 +129,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string ModifiedBy
 		{
 			get
@@ -144,10 +144,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string Comments
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -173,9 +173,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Open()
 		{
 			object[] paramsArray = null;
@@ -185,9 +185,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Restore()
 		{
 			object[] paramsArray = null;

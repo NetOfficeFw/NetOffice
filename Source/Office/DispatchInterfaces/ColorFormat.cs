@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorFormat : _IMsoDispObj
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 RGB
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 SchemeColor
 		{
 			get
@@ -131,10 +131,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Single TintAndShade
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoThemeColorIndex ObjectThemeColor
 		{
 			get
@@ -188,10 +188,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Single Brightness
 		{
 			get

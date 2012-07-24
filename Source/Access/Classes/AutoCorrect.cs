@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass AutoCorrect 
-	/// SupportByVersion Access, 11,12,14
+	/// SupportByVersion Access, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 11,12,14)]
+	[SupportByVersionAttribute("Access", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AutoCorrect : _AutoCorrect
 	{

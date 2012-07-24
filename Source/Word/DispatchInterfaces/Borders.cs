@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Borders 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Borders : COMObject ,IEnumerable<NetOffice.WordApi.Border>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Enable
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DistanceFromTop
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Shadow
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdLineStyle InsideLineStyle
 		{
 			get
@@ -219,10 +219,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdLineStyle OutsideLineStyle
 		{
 			get
@@ -240,10 +240,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdLineWidth InsideLineWidth
 		{
 			get
@@ -261,10 +261,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdLineWidth OutsideLineWidth
 		{
 			get
@@ -282,10 +282,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdColorIndex InsideColorIndex
 		{
 			get
@@ -303,10 +303,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdColorIndex OutsideColorIndex
 		{
 			get
@@ -324,10 +324,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DistanceFromLeft
 		{
 			get
@@ -344,10 +344,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DistanceFromBottom
 		{
 			get
@@ -364,10 +364,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DistanceFromRight
 		{
 			get
@@ -384,10 +384,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool AlwaysInFront
 		{
 			get
@@ -404,10 +404,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool SurroundHeader
 		{
 			get
@@ -424,10 +424,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool SurroundFooter
 		{
 			get
@@ -444,10 +444,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool JoinBorders
 		{
 			get
@@ -464,10 +464,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool HasHorizontal
 		{
 			get
@@ -479,10 +479,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool HasVertical
 		{
 			get
@@ -494,10 +494,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdBorderDistanceFrom DistanceFrom
 		{
 			get
@@ -515,10 +515,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool EnableFirstPageInSection
 		{
 			get
@@ -535,10 +535,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool EnableOtherPagesInSection
 		{
 			get
@@ -555,10 +555,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdColor InsideColor
 		{
 			get
@@ -576,10 +576,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdColor OutsideColor
 		{
 			get
@@ -601,10 +601,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">NetOffice.WordApi.Enums.WdBorderType Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Border this[NetOffice.WordApi.Enums.WdBorderType index]
 		{
@@ -618,9 +618,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ApplyPageBordersToAllSections()
 		{
 			object[] paramsArray = null;
@@ -632,9 +632,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.Border> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
        public IEnumerator<NetOffice.WordApi.Border> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -647,9 +647,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

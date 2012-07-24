@@ -16,9 +16,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass References 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class References : _References,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event References_ItemAddedEventHandler _ItemAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event References_ItemAddedEventHandler ItemAddedEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event References_ItemRemovedEventHandler _ItemRemovedEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event References_ItemRemovedEventHandler ItemRemovedEvent
 		{
 			add

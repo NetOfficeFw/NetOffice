@@ -54,11 +54,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object get_PrintQuality(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -75,11 +75,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void set_PrintQuality(object index, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -87,11 +87,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Alias for get_PrintQuality
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object PrintQuality(object index)
 		{
 			return get_PrintQuality(index);
@@ -107,9 +107,9 @@ namespace NetOffice.ExcelApi
 
 	///<summary>
 	/// Interface IPageSetup 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IPageSetup : COMObject
 	{
@@ -171,10 +171,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -203,11 +203,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -220,10 +220,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool BlackAndWhite
 		{
 			get
@@ -240,10 +240,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double BottomMargin
 		{
 			get
@@ -260,10 +260,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string CenterFooter
 		{
 			get
@@ -280,10 +280,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string CenterHeader
 		{
 			get
@@ -300,10 +300,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool CenterHorizontally
 		{
 			get
@@ -320,10 +320,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool CenterVertically
 		{
 			get
@@ -340,10 +340,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlObjectSize ChartSize
 		{
 			get
@@ -361,10 +361,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool Draft
 		{
 			get
@@ -381,10 +381,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 FirstPageNumber
 		{
 			get
@@ -401,10 +401,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object FitToPagesTall
 		{
 			get
@@ -429,10 +429,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object FitToPagesWide
 		{
 			get
@@ -457,10 +457,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double FooterMargin
 		{
 			get
@@ -477,10 +477,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double HeaderMargin
 		{
 			get
@@ -497,10 +497,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string LeftFooter
 		{
 			get
@@ -517,10 +517,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string LeftHeader
 		{
 			get
@@ -537,10 +537,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double LeftMargin
 		{
 			get
@@ -557,10 +557,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlOrder Order
 		{
 			get
@@ -578,10 +578,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlPageOrientation Orientation
 		{
 			get
@@ -599,10 +599,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlPaperSize PaperSize
 		{
 			get
@@ -620,10 +620,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string PrintArea
 		{
 			get
@@ -640,10 +640,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool PrintGridlines
 		{
 			get
@@ -660,10 +660,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool PrintHeadings
 		{
 			get
@@ -680,10 +680,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool PrintNotes
 		{
 			get
@@ -700,10 +700,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object PrintQuality
 		{
 			get
@@ -728,10 +728,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string PrintTitleColumns
 		{
 			get
@@ -748,10 +748,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string PrintTitleRows
 		{
 			get
@@ -768,10 +768,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string RightFooter
 		{
 			get
@@ -788,10 +788,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string RightHeader
 		{
 			get
@@ -808,10 +808,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double RightMargin
 		{
 			get
@@ -828,10 +828,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double TopMargin
 		{
 			get
@@ -848,10 +848,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Zoom
 		{
 			get
@@ -876,10 +876,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlPrintLocation PrintComments
 		{
 			get
@@ -897,10 +897,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlPrintErrors PrintErrors
 		{
 			get
@@ -918,10 +918,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic CenterHeaderPicture
 		{
 			get
@@ -934,10 +934,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic CenterFooterPicture
 		{
 			get
@@ -950,10 +950,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic LeftHeaderPicture
 		{
 			get
@@ -966,10 +966,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic LeftFooterPicture
 		{
 			get
@@ -982,10 +982,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic RightHeaderPicture
 		{
 			get
@@ -998,10 +998,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14
+		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Graphic RightFooterPicture
 		{
 			get
@@ -1014,10 +1014,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool OddAndEvenPagesHeaderFooter
 		{
 			get
@@ -1034,10 +1034,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool DifferentFirstPageHeaderFooter
 		{
 			get
@@ -1054,10 +1054,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool ScaleWithDocHeaderFooter
 		{
 			get
@@ -1074,10 +1074,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool AlignMarginsHeaderFooter
 		{
 			get
@@ -1094,10 +1094,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Pages Pages
 		{
 			get
@@ -1110,10 +1110,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Page EvenPage
 		{
 			get
@@ -1126,10 +1126,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Page FirstPage
 		{
 			get

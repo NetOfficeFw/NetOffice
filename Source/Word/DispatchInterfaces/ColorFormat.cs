@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ColorFormat 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorFormat : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 RGB
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SchemeColor
 		{
@@ -163,10 +163,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoColorType Type
 		{
 			get
@@ -179,10 +179,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public string Name
 		{
 			get
@@ -199,10 +199,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single TintAndShade
 		{
 			get
@@ -219,10 +219,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState OverPrint
 		{
 			get
@@ -240,11 +240,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single get_Ink(Int32 index)
 		{		
@@ -254,11 +254,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void set_Ink(Int32 index, Single value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -266,21 +266,21 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Alias for get_Ink
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single Ink(Int32 index)
 		{
 			return get_Ink(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Cyan
 		{
 			get
@@ -297,10 +297,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Magenta
 		{
 			get
@@ -317,10 +317,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Yellow
 		{
 			get
@@ -337,10 +337,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Black
 		{
 			get
@@ -357,10 +357,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdThemeColorIndex ObjectThemeColor
 		{
 			get
@@ -378,10 +378,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Single Brightness
 		{
 			get
@@ -402,13 +402,13 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="cyan">Int32 Cyan</param>
 		/// <param name="magenta">Int32 Magenta</param>
 		/// <param name="yellow">Int32 Yellow</param>
 		/// <param name="black">Int32 Black</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void SetCMYK(Int32 cyan, Int32 magenta, Int32 yellow, Int32 black)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cyan, magenta, yellow, black);

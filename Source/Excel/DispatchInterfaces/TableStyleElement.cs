@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface TableStyleElement 
-	/// SupportByVersion Excel, 12,14
+	/// SupportByVersion Excel, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableStyleElement : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool HasFormat
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Interior Interior
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Borders Borders
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Font Font
 		{
 			get
@@ -186,10 +186,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 StripeSize
 		{
 			get
@@ -210,9 +210,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void Clear()
 		{
 			object[] paramsArray = null;

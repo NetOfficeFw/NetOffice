@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface TableStyle 
-	/// SupportByVersion PowerPoint, 12,14
+	/// SupportByVersion PowerPoint, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14)]
+	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableStyle : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string Name
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string Id
 		{
 			get

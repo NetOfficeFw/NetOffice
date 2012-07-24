@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IMsoDispCagNotifySink 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IMsoDispCagNotifySink : COMObject
 	{
@@ -78,11 +78,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pClipMoniker">object pClipMoniker</param>
 		/// <param name="pItemMoniker">object pItemMoniker</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void InsertClip(object pClipMoniker, object pItemMoniker)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pClipMoniker, pItemMoniker);
@@ -90,9 +90,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void WindowIsClosing()
 		{
 			object[] paramsArray = null;

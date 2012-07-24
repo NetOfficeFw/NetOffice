@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Window 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Window : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Pane ActivePane
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document Document
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Panes Panes
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Selection Selection
 		{
 			get
@@ -186,10 +186,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Left
 		{
 			get
@@ -206,10 +206,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Top
 		{
 			get
@@ -226,10 +226,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Width
 		{
 			get
@@ -246,10 +246,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Height
 		{
 			get
@@ -266,10 +266,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Split
 		{
 			get
@@ -286,10 +286,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 SplitVertical
 		{
 			get
@@ -306,10 +306,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Caption
 		{
 			get
@@ -326,10 +326,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdWindowState WindowState
 		{
 			get
@@ -347,10 +347,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayRulers
 		{
 			get
@@ -367,10 +367,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayVerticalRuler
 		{
 			get
@@ -387,10 +387,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.View View
 		{
 			get
@@ -403,10 +403,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdWindowType Type
 		{
 			get
@@ -419,10 +419,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Window Next
 		{
 			get
@@ -435,10 +435,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Window Previous
 		{
 			get
@@ -451,10 +451,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 WindowNumber
 		{
 			get
@@ -466,10 +466,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayVerticalScrollBar
 		{
 			get
@@ -486,10 +486,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayHorizontalScrollBar
 		{
 			get
@@ -506,10 +506,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single StyleAreaWidth
 		{
 			get
@@ -526,10 +526,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayScreenTips
 		{
 			get
@@ -546,10 +546,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 HorizontalPercentScrolled
 		{
 			get
@@ -566,10 +566,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 VerticalPercentScrolled
 		{
 			get
@@ -586,10 +586,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DocumentMap
 		{
 			get
@@ -606,10 +606,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Active
 		{
 			get
@@ -621,10 +621,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DocumentMapPercentWidth
 		{
 			get
@@ -641,10 +641,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Index
 		{
 			get
@@ -656,10 +656,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdIMEMode IMEMode
 		{
 			get
@@ -677,10 +677,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 UsableWidth
 		{
 			get
@@ -692,10 +692,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 UsableHeight
 		{
 			get
@@ -707,10 +707,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool EnvelopeVisible
 		{
 			get
@@ -727,10 +727,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayRightRuler
 		{
 			get
@@ -747,10 +747,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayLeftScrollBar
 		{
 			get
@@ -767,10 +767,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Visible
 		{
 			get
@@ -787,10 +787,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool Thumbnails
 		{
 			get
@@ -807,10 +807,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdShowSourceDocuments ShowSourceDocuments
 		{
 			get
@@ -827,14 +827,29 @@ namespace NetOffice.WordApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Word", 15)]
+		public Int32 Hwnd
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Hwnd", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -842,11 +857,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="routeDocument">optional object RouteDocument</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Close(object saveChanges, object routeDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, routeDocument);
@@ -854,10 +869,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -865,11 +880,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Close(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
@@ -877,13 +892,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		/// <param name="toLeft">optional object ToLeft</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -891,10 +906,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll()
 		{
 			object[] paramsArray = null;
@@ -902,11 +917,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
@@ -914,12 +929,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
@@ -927,13 +942,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
@@ -941,13 +956,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		/// <param name="toLeft">optional object ToLeft</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
@@ -955,10 +970,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll()
 		{
 			object[] paramsArray = null;
@@ -966,11 +981,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
@@ -978,12 +993,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
@@ -991,13 +1006,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
@@ -1005,9 +1020,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Window NewWindow()
 		{
 			object[] paramsArray = null;
@@ -1017,7 +1032,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1034,7 +1049,7 @@ namespace NetOffice.WordApi
 		/// <param name="activePrinterMacGX">optional object ActivePrinterMacGX</param>
 		/// <param name="manualDuplexPrint">optional object ManualDuplexPrint</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
@@ -1042,11 +1057,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld()
 		{
 			object[] paramsArray = null;
@@ -1054,12 +1069,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background);
@@ -1067,13 +1082,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
@@ -1081,14 +1096,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		/// <param name="range">optional object Range</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
@@ -1096,7 +1111,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1104,7 +1119,7 @@ namespace NetOffice.WordApi
 		/// <param name="outputFileName">optional object OutputFileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
@@ -1112,7 +1127,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1121,7 +1136,7 @@ namespace NetOffice.WordApi
 		/// <param name="from">optional object From</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
@@ -1129,7 +1144,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1139,7 +1154,7 @@ namespace NetOffice.WordApi
 		/// <param name="to">optional object To</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
@@ -1147,7 +1162,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1158,7 +1173,7 @@ namespace NetOffice.WordApi
 		/// <param name="item">optional object Item</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
@@ -1166,7 +1181,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1178,7 +1193,7 @@ namespace NetOffice.WordApi
 		/// <param name="copies">optional object Copies</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
@@ -1186,7 +1201,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1199,7 +1214,7 @@ namespace NetOffice.WordApi
 		/// <param name="pages">optional object Pages</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
@@ -1207,7 +1222,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1221,7 +1236,7 @@ namespace NetOffice.WordApi
 		/// <param name="pageType">optional object PageType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
@@ -1229,7 +1244,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1244,7 +1259,7 @@ namespace NetOffice.WordApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
@@ -1252,7 +1267,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1268,7 +1283,7 @@ namespace NetOffice.WordApi
 		/// <param name="collate">optional object Collate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
@@ -1276,7 +1291,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1293,7 +1308,7 @@ namespace NetOffice.WordApi
 		/// <param name="activePrinterMacGX">optional object ActivePrinterMacGX</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
@@ -1301,11 +1316,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
@@ -1313,10 +1328,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll()
 		{
 			object[] paramsArray = null;
@@ -1324,11 +1339,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
@@ -1336,9 +1351,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SetFocus()
 		{
 			object[] paramsArray = null;
@@ -1346,11 +1361,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object RangeFromPoint(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -1360,11 +1375,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="obj">object obj</param>
 		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ScrollIntoView(object obj, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj, start);
@@ -1372,11 +1387,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="obj">object obj</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ScrollIntoView(object obj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(obj);
@@ -1384,14 +1399,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="screenPixelsLeft">Int32 ScreenPixelsLeft</param>
 		/// <param name="screenPixelsTop">Int32 ScreenPixelsTop</param>
 		/// <param name="screenPixelsWidth">Int32 ScreenPixelsWidth</param>
 		/// <param name="screenPixelsHeight">Int32 ScreenPixelsHeight</param>
 		/// <param name="obj">object obj</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void GetPoint(out Int32 screenPixelsLeft, out Int32 screenPixelsTop, out Int32 screenPixelsWidth, out Int32 screenPixelsHeight, object obj)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
@@ -1408,7 +1423,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1428,7 +1443,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomRow">optional object PrintZoomRow</param>
 		/// <param name="printZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="printZoomPaperHeight">optional object PrintZoomPaperHeight</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
@@ -1436,10 +1451,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -1447,11 +1462,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background);
@@ -1459,12 +1474,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
@@ -1472,13 +1487,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		/// <param name="range">optional object Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
@@ -1486,14 +1501,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		/// <param name="range">optional object Range</param>
 		/// <param name="outputFileName">optional object OutputFileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
@@ -1501,7 +1516,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1509,7 +1524,7 @@ namespace NetOffice.WordApi
 		/// <param name="outputFileName">optional object OutputFileName</param>
 		/// <param name="from">optional object From</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
@@ -1517,7 +1532,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1526,7 +1541,7 @@ namespace NetOffice.WordApi
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
@@ -1534,7 +1549,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1544,7 +1559,7 @@ namespace NetOffice.WordApi
 		/// <param name="to">optional object To</param>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
@@ -1552,7 +1567,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1563,7 +1578,7 @@ namespace NetOffice.WordApi
 		/// <param name="item">optional object Item</param>
 		/// <param name="copies">optional object Copies</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
@@ -1571,7 +1586,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1583,7 +1598,7 @@ namespace NetOffice.WordApi
 		/// <param name="copies">optional object Copies</param>
 		/// <param name="pages">optional object Pages</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
@@ -1591,7 +1606,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1604,7 +1619,7 @@ namespace NetOffice.WordApi
 		/// <param name="pages">optional object Pages</param>
 		/// <param name="pageType">optional object PageType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
@@ -1612,7 +1627,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1626,7 +1641,7 @@ namespace NetOffice.WordApi
 		/// <param name="pageType">optional object PageType</param>
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
@@ -1634,7 +1649,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1649,7 +1664,7 @@ namespace NetOffice.WordApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		/// <param name="collate">optional object Collate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
@@ -1657,7 +1672,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1673,7 +1688,7 @@ namespace NetOffice.WordApi
 		/// <param name="collate">optional object Collate</param>
 		/// <param name="activePrinterMacGX">optional object ActivePrinterMacGX</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
@@ -1681,7 +1696,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1698,7 +1713,7 @@ namespace NetOffice.WordApi
 		/// <param name="activePrinterMacGX">optional object ActivePrinterMacGX</param>
 		/// <param name="manualDuplexPrint">optional object ManualDuplexPrint</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
@@ -1706,7 +1721,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1724,7 +1739,7 @@ namespace NetOffice.WordApi
 		/// <param name="manualDuplexPrint">optional object ManualDuplexPrint</param>
 		/// <param name="printZoomColumn">optional object PrintZoomColumn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn);
@@ -1732,7 +1747,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1751,7 +1766,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomColumn">optional object PrintZoomColumn</param>
 		/// <param name="printZoomRow">optional object PrintZoomRow</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow);
@@ -1759,7 +1774,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1779,7 +1794,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomRow">optional object PrintZoomRow</param>
 		/// <param name="printZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth);
@@ -1787,7 +1802,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1808,7 +1823,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		/// <param name="printZoomPaperHeight">optional object PrintZoomPaperHeight</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight);
@@ -1816,11 +1831,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -1828,12 +1843,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background);
@@ -1841,13 +1856,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append);
@@ -1855,14 +1870,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
 		/// <param name="range">optional object Range</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range);
@@ -1870,7 +1885,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1878,7 +1893,7 @@ namespace NetOffice.WordApi
 		/// <param name="outputFileName">optional object OutputFileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName);
@@ -1886,7 +1901,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1895,7 +1910,7 @@ namespace NetOffice.WordApi
 		/// <param name="from">optional object From</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from);
@@ -1903,7 +1918,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1913,7 +1928,7 @@ namespace NetOffice.WordApi
 		/// <param name="to">optional object To</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to);
@@ -1921,7 +1936,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1932,7 +1947,7 @@ namespace NetOffice.WordApi
 		/// <param name="item">optional object Item</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item);
@@ -1940,7 +1955,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1952,7 +1967,7 @@ namespace NetOffice.WordApi
 		/// <param name="copies">optional object Copies</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies);
@@ -1960,7 +1975,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1973,7 +1988,7 @@ namespace NetOffice.WordApi
 		/// <param name="pages">optional object Pages</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages);
@@ -1981,7 +1996,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -1995,7 +2010,7 @@ namespace NetOffice.WordApi
 		/// <param name="pageType">optional object PageType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType);
@@ -2003,7 +2018,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2018,7 +2033,7 @@ namespace NetOffice.WordApi
 		/// <param name="printToFile">optional object PrintToFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile);
@@ -2026,7 +2041,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2042,7 +2057,7 @@ namespace NetOffice.WordApi
 		/// <param name="collate">optional object Collate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate);
@@ -2050,7 +2065,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2067,7 +2082,7 @@ namespace NetOffice.WordApi
 		/// <param name="activePrinterMacGX">optional object ActivePrinterMacGX</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX);
@@ -2075,7 +2090,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2093,7 +2108,7 @@ namespace NetOffice.WordApi
 		/// <param name="manualDuplexPrint">optional object ManualDuplexPrint</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint);
@@ -2101,7 +2116,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2120,7 +2135,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomColumn">optional object PrintZoomColumn</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn);
@@ -2128,7 +2143,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2148,7 +2163,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomRow">optional object PrintZoomRow</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow);
@@ -2156,7 +2171,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2177,7 +2192,7 @@ namespace NetOffice.WordApi
 		/// <param name="printZoomPaperWidth">optional object PrintZoomPaperWidth</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth);
@@ -2185,9 +2200,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void ToggleShowAllReviewers()
 		{
 			object[] paramsArray = null;
@@ -2195,9 +2210,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void ToggleRibbon()
 		{
 			object[] paramsArray = null;

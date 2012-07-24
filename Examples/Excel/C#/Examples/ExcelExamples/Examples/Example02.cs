@@ -93,7 +93,7 @@ namespace ExcelExamplesCS4
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
             string workbookFile = string.Format("{0}\\Example02{1}", _hostApplication.RootDirectory, fileExtension);
-            workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive);
+            workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
             excelApplication.Quit();

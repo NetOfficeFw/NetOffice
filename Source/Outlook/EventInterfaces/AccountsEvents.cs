@@ -10,11 +10,11 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Outlook", 14)]
+	[SupportByVersionAttribute("Outlook", 14,15)]
 	[ComImport, Guid("00063105-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface AccountsEvents
 	{
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64620)]
 		void AutoDiscoverComplete([In, MarshalAs(UnmanagedType.IDispatch)] object account);
 	}

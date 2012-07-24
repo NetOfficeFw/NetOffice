@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface MediaFormat 
-	/// SupportByVersion PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MediaFormat : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single Volume
 		{
 			get
@@ -127,10 +127,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Muted
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Length
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 StartPoint
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 EndPoint
 		{
 			get
@@ -202,10 +202,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 FadeInDuration
 		{
 			get
@@ -222,10 +222,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 FadeOutDuration
 		{
 			get
@@ -242,10 +242,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.MediaBookmarks MediaBookmarks
 		{
 			get
@@ -258,10 +258,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.PpMediaTaskStatus ResamplingStatus
 		{
 			get
@@ -274,10 +274,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsLinked
 		{
 			get
@@ -289,10 +289,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsEmbedded
 		{
 			get
@@ -304,10 +304,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 AudioSamplingRate
 		{
 			get
@@ -319,10 +319,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 VideoFrameRate
 		{
 			get
@@ -334,10 +334,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 SampleHeight
 		{
 			get
@@ -349,10 +349,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 SampleWidth
 		{
 			get
@@ -364,10 +364,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string VideoCompressionType
 		{
 			get
@@ -379,10 +379,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string AudioCompressionType
 		{
 			get
@@ -398,10 +398,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="position">Int32 Position</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void SetDisplayPicture(Int32 position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
@@ -409,10 +409,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="filePath">string FilePath</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void SetDisplayPictureFromFile(string filePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filePath);
@@ -420,7 +420,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
@@ -428,18 +428,18 @@ namespace NetOffice.PowerPointApi
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
 		/// <param name="videoBitRate">optional Int32 VideoBitRate = 7000000</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate, object videoBitRate)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate, Int32 audioSamplingRate, Int32 videoBitRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate, audioSamplingRate, videoBitRate);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample()
 		{
 			object[] paramsArray = null;
@@ -447,61 +447,61 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim, object sampleHeight)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim, Int32 sampleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim, object sampleHeight, object sampleWidth)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
@@ -509,29 +509,29 @@ namespace NetOffice.PowerPointApi
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate, Int32 audioSamplingRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate, audioSamplingRate);
 			Invoker.Method(this, "Resample", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="profile">optional NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile = 2</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public void ResampleFromProfile(object profile)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public void ResampleFromProfile(NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(profile);
 			Invoker.Method(this, "ResampleFromProfile", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void ResampleFromProfile()
 		{
 			object[] paramsArray = null;

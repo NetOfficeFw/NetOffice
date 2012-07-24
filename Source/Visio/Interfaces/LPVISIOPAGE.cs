@@ -1140,7 +1140,7 @@ namespace NetOffice.VisioApi
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		/// <param name="data">optional object Data</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode, object data)
+		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, NetOffice.VisioApi.Enums.VisSelectMode iterationMode, object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode, data);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
@@ -1169,7 +1169,7 @@ namespace NetOffice.VisioApi
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode)
+		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, NetOffice.VisioApi.Enums.VisSelectMode iterationMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
@@ -1221,7 +1221,7 @@ namespace NetOffice.VisioApi
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		/// <param name="endAngle">optional Double EndAngle = 3.1415927410125732</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle, object endAngle)
+		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, Double startAngle, Double endAngle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle, endAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
@@ -1254,7 +1254,7 @@ namespace NetOffice.VisioApi
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle)
+		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, Double startAngle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
@@ -1301,7 +1301,7 @@ namespace NetOffice.VisioApi
 		/// <param name="shapeIDs">Int32[] ShapeIDs</param>
 		/// <param name="applyDataGraphicAfterLink">optional bool ApplyDataGraphicAfterLink = true</param>
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void LinkShapesToDataRows(Int32 dataRecordsetID, Int32[] dataRowIDs, Int32[] shapeIDs, object applyDataGraphicAfterLink)
+		public void LinkShapesToDataRows(Int32 dataRecordsetID, Int32[] dataRowIDs, Int32[] shapeIDs, bool applyDataGraphicAfterLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID, (object)dataRowIDs, (object)shapeIDs, applyDataGraphicAfterLink);
 			Invoker.Method(this, "LinkShapesToDataRows", paramsArray);

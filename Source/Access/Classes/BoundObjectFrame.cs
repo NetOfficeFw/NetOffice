@@ -29,9 +29,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass BoundObjectFrame 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class BoundObjectFrame : _BoundObjectFrame,IEventBinding
 	{
@@ -111,14 +111,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_UpdatedEventHandler _UpdatedEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_UpdatedEventHandler UpdatedEvent
 		{
 			add
@@ -133,14 +133,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -155,14 +155,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -177,14 +177,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_EnterEventHandler EnterEvent
 		{
 			add
@@ -199,14 +199,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_ExitEventHandler ExitEvent
 		{
 			add
@@ -221,14 +221,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -243,14 +243,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -265,14 +265,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_ClickEventHandler ClickEvent
 		{
 			add
@@ -287,14 +287,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -309,14 +309,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -331,14 +331,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -353,14 +353,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -375,14 +375,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -397,14 +397,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -419,14 +419,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event BoundObjectFrame_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event BoundObjectFrame_KeyUpEventHandler KeyUpEvent
 		{
 			add

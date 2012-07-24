@@ -9,9 +9,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverter 
-	/// SupportByVersion Office, 14
+	/// SupportByVersion Office, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverter : COMObject
 	{
@@ -77,12 +77,12 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pcuic);
@@ -106,14 +106,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false);
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
@@ -133,7 +133,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
@@ -145,14 +145,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		/// <param name="pbstrClass">string pbstrClass</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetFormat(string bstrPath, out string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true,false);
@@ -166,12 +166,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">string pbstrErrorMsg</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetErrorString(Int32 hrErr, out string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);

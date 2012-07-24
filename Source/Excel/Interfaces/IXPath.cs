@@ -9,9 +9,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IXPath 
-	/// SupportByVersion Excel, 11,12,14
+	/// SupportByVersion Excel, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14)]
+	[SupportByVersionAttribute("Excel", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXPath : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string _Default
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string Value
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.XmlMap Map
 		{
 			get
@@ -168,10 +168,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public bool Repeating
 		{
 			get
@@ -187,13 +187,13 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="selectionNamespace">optional object SelectionNamespace</param>
 		/// <param name="repeating">optional object Repeating</param>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace, repeating);
@@ -202,12 +202,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="xPath">string XPath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath);
@@ -216,13 +216,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="selectionNamespace">optional object SelectionNamespace</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace);
@@ -231,9 +231,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 Clear()
 		{
 			object[] paramsArray = null;

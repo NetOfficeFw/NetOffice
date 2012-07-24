@@ -11,9 +11,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _SmartTagActions 
-	/// SupportByVersion Access, 11,12,14
+	/// SupportByVersion Access, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 11,12,14)]
+	[SupportByVersionAttribute("Access", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SmartTagActions : COMObject ,IEnumerable<NetOffice.AccessApi._SmartTagAction>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,11 +123,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi._SmartTagAction this[object index]
 		{
@@ -145,11 +145,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -162,9 +162,9 @@ namespace NetOffice.AccessApi
        #region IEnumerable<NetOffice.AccessApi._SmartTagAction> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Access, 11,12,14
+		/// SupportByVersionAttribute Access, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
        public IEnumerator<NetOffice.AccessApi._SmartTagAction> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -177,9 +177,9 @@ namespace NetOffice.AccessApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Access, 11,12,14
+		/// SupportByVersionAttribute Access, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

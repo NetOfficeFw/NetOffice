@@ -129,10 +129,10 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
-		/// <param name="before">object Before</param>
+		/// <param name="before">optional object Before</param>
 		/// <param name="remove">optional bool Remove = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, object remove)
+		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, bool remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet, before, remove);
 			Invoker.Method(this, "InsertFieldSet", paramsArray);
@@ -142,7 +142,19 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
-		/// <param name="before">object Before</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet);
+			Invoker.Method(this, "InsertFieldSet", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
+		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before)

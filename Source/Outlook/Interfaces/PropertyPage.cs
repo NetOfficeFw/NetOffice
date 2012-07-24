@@ -9,9 +9,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// Interface PropertyPage 
-	/// SupportByVersion Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class PropertyPage : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool Dirty
 		{
 			get
@@ -92,11 +92,11 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="helpFile">string HelpFile</param>
 		/// <param name="helpContext">Int32 HelpContext</param>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 GetPageInfo(string helpFile, Int32 helpContext)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContext);
@@ -105,9 +105,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Apply()
 		{
 			object[] paramsArray = null;

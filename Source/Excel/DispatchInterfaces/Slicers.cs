@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Slicers 
-	/// SupportByVersion Excel, 14
+	/// SupportByVersion Excel, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Slicers : COMObject ,IEnumerable<NetOffice.ExcelApi.Slicer>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public object Parent
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -139,11 +139,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Slicer this[object index]
 		{
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="left">optional object Left</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption, top, left, width, height);
@@ -181,11 +181,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination);
@@ -195,12 +195,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level);
@@ -210,13 +210,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name);
@@ -226,14 +226,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="name">optional object Name</param>
 		/// <param name="caption">optional object Caption</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption);
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="caption">optional object Caption</param>
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption, top);
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="left">optional object Left</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption, top, left);
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="left">optional object Left</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slicerDestination, level, name, caption, top, left, width);
@@ -304,9 +304,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.Slicer> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 14
+		/// SupportByVersionAttribute Excel, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
        public IEnumerator<NetOffice.ExcelApi.Slicer> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -319,9 +319,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 14
+		/// SupportByVersionAttribute Excel, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

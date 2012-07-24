@@ -8,7 +8,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 	///<summary>
 	/// Module GlobalModule
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsModule)]
 	public static class GlobalModule
 	{
@@ -34,10 +34,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Application Application
 		{
 			get
@@ -50,10 +50,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 Creator
 		{
 			get
@@ -65,11 +65,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static object Parent
 		{
 			get
@@ -82,10 +82,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string Name
 		{
 			get
@@ -97,10 +97,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Documents Documents
 		{
 			get
@@ -113,10 +113,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Windows Windows
 		{
 			get
@@ -129,10 +129,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Document ActiveDocument
 		{
 			get
@@ -145,10 +145,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Window ActiveWindow
 		{
 			get
@@ -161,10 +161,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Selection Selection
 		{
 			get
@@ -177,11 +177,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static object WordBasic
 		{
 			get
@@ -194,10 +194,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool PrintPreview
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.RecentFiles RecentFiles
 		{
 			get
@@ -230,10 +230,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Template NormalTemplate
 		{
 			get
@@ -246,10 +246,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.System System
 		{
 			get
@@ -262,10 +262,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCorrect AutoCorrect
 		{
 			get
@@ -278,10 +278,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames FontNames
 		{
 			get
@@ -294,10 +294,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames LandscapeFontNames
 		{
 			get
@@ -310,10 +310,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames PortraitFontNames
 		{
 			get
@@ -326,10 +326,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Languages Languages
 		{
 			get
@@ -342,10 +342,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -358,10 +358,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FileConverters FileConverters
 		{
 			get
@@ -374,10 +374,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Dialogs Dialogs
 		{
 			get
@@ -390,10 +390,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.CaptionLabels CaptionLabels
 		{
 			get
@@ -406,10 +406,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCaptions AutoCaptions
 		{
 			get
@@ -422,10 +422,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AddIns AddIns
 		{
 			get
@@ -438,10 +438,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Tasks Tasks
 		{
 			get
@@ -454,11 +454,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static object MacroContainer
 		{
 			get
@@ -471,10 +471,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -487,12 +487,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="languageID">optional object LanguageID</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word, object languageID)
 		{		
@@ -503,23 +503,23 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="languageID">optional object LanguageID</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SynonymInfo SynonymInfo(string word, object languageID)
 		{
 			return get_SynonymInfo(word, languageID);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="word">string Word</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.SynonymInfo get_SynonymInfo(string word)
 		{		
@@ -530,21 +530,21 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SynonymInfo SynonymInfo(string word)
 		{
 			return get_SynonymInfo(word);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -557,10 +557,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.ListGalleries ListGalleries
 		{
 			get
@@ -573,10 +573,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string ActivePrinter
 		{
 			get
@@ -593,10 +593,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Templates Templates
 		{
 			get
@@ -609,11 +609,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static object CustomizationContext
 		{
 			get
@@ -631,10 +631,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeyBindings KeyBindings
 		{
 			get
@@ -647,13 +647,13 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
 		/// <param name="commandParameter">optional object CommandParameter</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{		
@@ -664,25 +664,25 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
 		/// <param name="commandParameter">optional object CommandParameter</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeysBoundTo KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command, object commandParameter)
 		{
 			return get_KeysBoundTo(keyCategory, command, commandParameter);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.KeysBoundTo get_KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command)
 		{		
@@ -693,24 +693,24 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeysBoundTo KeysBoundTo(NetOffice.WordApi.Enums.WdKeyCategory keyCategory, string command)
 		{
 			return get_KeysBoundTo(keyCategory, command);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode, object keyCode2)
 		{		
@@ -721,23 +721,23 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeyBinding FindKey(Int32 keyCode, object keyCode2)
 		{
 			return get_FindKey(keyCode, keyCode2);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.WordApi.KeyBinding get_FindKey(Int32 keyCode)
 		{		
@@ -748,21 +748,21 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeyBinding FindKey(Int32 keyCode)
 		{
 			return get_FindKey(keyCode);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Options Options
 		{
 			get
@@ -775,10 +775,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Dictionaries CustomDictionaries
 		{
 			get
@@ -791,10 +791,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string StatusBar
 		{
 			get
@@ -811,10 +811,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool ShowVisualBasicEditor
 		{
 			get
@@ -831,11 +831,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="_object">object Object</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static bool get_IsObjectValid(object _object)
 		{		
@@ -845,21 +845,21 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Alias for get_IsObjectValid
 		/// </summary>
 		/// <param name="_object">object Object</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool IsObjectValid(object _object)
 		{
 			return get_IsObjectValid(_object);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.HangulHanjaConversionDictionaries HangulHanjaDictionaries
 		{
 			get
@@ -872,10 +872,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
@@ -888,10 +888,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -904,10 +904,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCorrect AutoCorrectEmail
 		{
 			get
@@ -920,10 +920,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public static NetOffice.WordApi.ProtectedViewWindows ProtectedViewWindows
 		{
 			get
@@ -936,10 +936,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public static NetOffice.WordApi.ProtectedViewWindow ActiveProtectedViewWindow
 		{
 			get
@@ -952,10 +952,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public static bool IsSandboxed
 		{
 			get
@@ -971,10 +971,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="times">optional object Times</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool Repeat(object times)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(times);
@@ -983,10 +983,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool Repeat()
 		{
 			object[] paramsArray = null;
@@ -995,11 +995,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="command">string Command</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void DDEExecute(Int32 channel, string command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, command);
@@ -1007,11 +1007,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 DDEInitiate(string app, string topic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(app, topic);
@@ -1020,12 +1020,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
 		/// <param name="data">string Data</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void DDEPoke(Int32 channel, string item, string data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, item, data);
@@ -1033,11 +1033,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string DDERequest(Int32 channel, string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, item);
@@ -1046,10 +1046,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void DDETerminate(Int32 channel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel);
@@ -1057,9 +1057,9 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void DDETerminateAll()
 		{
 			object[] paramsArray = null;
@@ -1067,13 +1067,13 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		/// <param name="arg4">optional object Arg4</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -1082,11 +1082,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
@@ -1095,12 +1095,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -1109,13 +1109,13 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 BuildKeyCode(NetOffice.WordApi.Enums.WdKey arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -1124,11 +1124,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string KeyString(Int32 keyCode, object keyCode2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode, keyCode2);
@@ -1137,11 +1137,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string KeyString(Int32 keyCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyCode);
@@ -1150,7 +1150,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1165,7 +1165,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		/// <param name="customDictionary9">optional object CustomDictionary9</param>
 		/// <param name="customDictionary10">optional object CustomDictionary10</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
@@ -1174,11 +1174,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
@@ -1187,12 +1187,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary);
@@ -1201,13 +1201,13 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase);
@@ -1216,14 +1216,14 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
 		/// <param name="mainDictionary">optional object MainDictionary</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary);
@@ -1232,7 +1232,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1240,7 +1240,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="mainDictionary">optional object MainDictionary</param>
 		/// <param name="customDictionary2">optional object CustomDictionary2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2);
@@ -1249,7 +1249,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1258,7 +1258,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary2">optional object CustomDictionary2</param>
 		/// <param name="customDictionary3">optional object CustomDictionary3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3);
@@ -1267,7 +1267,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1277,7 +1277,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary3">optional object CustomDictionary3</param>
 		/// <param name="customDictionary4">optional object CustomDictionary4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4);
@@ -1286,7 +1286,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1297,7 +1297,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary4">optional object CustomDictionary4</param>
 		/// <param name="customDictionary5">optional object CustomDictionary5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
@@ -1306,7 +1306,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1318,7 +1318,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary5">optional object CustomDictionary5</param>
 		/// <param name="customDictionary6">optional object CustomDictionary6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
@@ -1327,7 +1327,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1340,7 +1340,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary6">optional object CustomDictionary6</param>
 		/// <param name="customDictionary7">optional object CustomDictionary7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
@@ -1349,7 +1349,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1363,7 +1363,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary7">optional object CustomDictionary7</param>
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
@@ -1372,7 +1372,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1387,7 +1387,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		/// <param name="customDictionary9">optional object CustomDictionary9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool CheckSpelling(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
@@ -1396,7 +1396,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1412,7 +1412,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		/// <param name="customDictionary9">optional object CustomDictionary9</param>
 		/// <param name="customDictionary10">optional object CustomDictionary10</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
@@ -1422,11 +1422,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word);
@@ -1436,12 +1436,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary);
@@ -1451,13 +1451,13 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase);
@@ -1467,14 +1467,14 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
 		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
 		/// <param name="mainDictionary">optional object MainDictionary</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary);
@@ -1484,7 +1484,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1492,7 +1492,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="mainDictionary">optional object MainDictionary</param>
 		/// <param name="suggestionMode">optional object SuggestionMode</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode);
@@ -1502,7 +1502,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1511,7 +1511,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="suggestionMode">optional object SuggestionMode</param>
 		/// <param name="customDictionary2">optional object CustomDictionary2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2);
@@ -1521,7 +1521,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1531,7 +1531,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary2">optional object CustomDictionary2</param>
 		/// <param name="customDictionary3">optional object CustomDictionary3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3);
@@ -1541,7 +1541,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1552,7 +1552,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary3">optional object CustomDictionary3</param>
 		/// <param name="customDictionary4">optional object CustomDictionary4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4);
@@ -1562,7 +1562,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1574,7 +1574,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary4">optional object CustomDictionary4</param>
 		/// <param name="customDictionary5">optional object CustomDictionary5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
@@ -1584,7 +1584,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1597,7 +1597,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary5">optional object CustomDictionary5</param>
 		/// <param name="customDictionary6">optional object CustomDictionary6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
@@ -1607,7 +1607,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1621,7 +1621,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary6">optional object CustomDictionary6</param>
 		/// <param name="customDictionary7">optional object CustomDictionary7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
@@ -1631,7 +1631,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1646,7 +1646,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary7">optional object CustomDictionary7</param>
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
@@ -1656,7 +1656,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1672,7 +1672,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <param name="customDictionary8">optional object CustomDictionary8</param>
 		/// <param name="customDictionary9">optional object CustomDictionary9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
@@ -1682,10 +1682,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="helpType">object HelpType</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void Help(object helpType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpType);
@@ -1693,9 +1693,9 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Window NewWindow()
 		{
 			object[] paramsArray = null;
@@ -1705,10 +1705,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string CleanString(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -1717,10 +1717,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void ChangeFileOpenDirectory(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -1728,10 +1728,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="inches">Single Inches</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single InchesToPoints(Single inches)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(inches);
@@ -1740,10 +1740,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="centimeters">Single Centimeters</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single CentimetersToPoints(Single centimeters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(centimeters);
@@ -1752,10 +1752,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="millimeters">Single Millimeters</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single MillimetersToPoints(Single millimeters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(millimeters);
@@ -1764,10 +1764,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="picas">Single Picas</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PicasToPoints(Single picas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(picas);
@@ -1776,10 +1776,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="lines">Single Lines</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single LinesToPoints(Single lines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lines);
@@ -1788,10 +1788,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToInches(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1800,10 +1800,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToCentimeters(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1812,10 +1812,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToMillimeters(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1824,10 +1824,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToPicas(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1836,10 +1836,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToLines(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1848,11 +1848,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		/// <param name="fVertical">optional object fVertical</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToPixels(Single points, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points, fVertical);
@@ -1861,11 +1861,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PointsToPixels(Single points)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(points);
@@ -1874,11 +1874,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		/// <param name="fVertical">optional object fVertical</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PixelsToPoints(Single pixels, object fVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels, fVertical);
@@ -1887,11 +1887,11 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Single PixelsToPoints(Single pixels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pixels);

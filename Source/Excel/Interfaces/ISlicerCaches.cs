@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface ISlicerCaches 
-	/// SupportByVersion Excel, 14
+	/// SupportByVersion Excel, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 14)]
+	[SupportByVersionAttribute("Excel", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class ISlicerCaches : COMObject ,IEnumerable<NetOffice.ExcelApi.SlicerCache>
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -138,11 +138,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.SlicerCache this[object index]
 		{
@@ -160,12 +160,12 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField, name);
@@ -175,16 +175,64 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="sourceField">object SourceField</param>
+		/// <param name="name">optional object Name</param>
+		/// <param name="slicerCacheType">optional object SlicerCacheType</param>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField, object name, object slicerCacheType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField, name, slicerCacheType);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.SlicerCache newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.SlicerCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCache;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.SlicerCache Add(object source, object sourceField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.SlicerCache newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.SlicerCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCache;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="sourceField">object SourceField</param>
+		/// <param name="name">optional object Name</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField, object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField, name);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
+			NetOffice.ExcelApi.SlicerCache newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.SlicerCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCache;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="sourceField">object SourceField</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.SlicerCache _Add(object source, object sourceField)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, sourceField);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
 			NetOffice.ExcelApi.SlicerCache newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.SlicerCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCache;
 			return newObject;
 		}
@@ -194,9 +242,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.SlicerCache> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 14
+		/// SupportByVersionAttribute Excel, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
        public IEnumerator<NetOffice.ExcelApi.SlicerCache> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -209,9 +257,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 14
+		/// SupportByVersionAttribute Excel, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14)]
+		[SupportByVersionAttribute("Excel", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -17,9 +17,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Folders 
-	/// SupportByVersion Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Folders : _Folders,IEventBinding
 	{
@@ -98,14 +98,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event Folders_FolderAddEventHandler _FolderAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event Folders_FolderAddEventHandler FolderAddEvent
 		{
 			add
@@ -120,14 +120,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event Folders_FolderChangeEventHandler _FolderChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event Folders_FolderChangeEventHandler FolderChangeEvent
 		{
 			add
@@ -142,14 +142,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event Folders_FolderRemoveEventHandler _FolderRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event Folders_FolderRemoveEventHandler FolderRemoveEvent
 		{
 			add

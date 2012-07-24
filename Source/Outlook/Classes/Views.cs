@@ -16,9 +16,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Views 
-	/// SupportByVersion Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Views : _Views,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event Views_ViewAddEventHandler _ViewAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event Views_ViewAddEventHandler ViewAddEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event Views_ViewRemoveEventHandler _ViewRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event Views_ViewRemoveEventHandler ViewRemoveEvent
 		{
 			add

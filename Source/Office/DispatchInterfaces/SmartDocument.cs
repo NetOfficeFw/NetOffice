@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SmartDocument 
-	/// SupportByVersion Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartDocument : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string SolutionID
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string SolutionURL
 		{
 			get
@@ -118,21 +118,21 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="considerAllSchemas">optional bool ConsiderAllSchemas = false</param>
-		[SupportByVersionAttribute("Office", 11,12,14)]
-		public void PickSolution(object considerAllSchemas)
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		public void PickSolution(bool considerAllSchemas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(considerAllSchemas);
 			Invoker.Method(this, "PickSolution", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void PickSolution()
 		{
 			object[] paramsArray = null;
@@ -140,9 +140,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void RefreshPane()
 		{
 			object[] paramsArray = null;

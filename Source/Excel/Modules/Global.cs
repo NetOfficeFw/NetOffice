@@ -8,7 +8,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 	///<summary>
 	/// Module GlobalModule
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsModule)]
 	public static class GlobalModule
 	{
@@ -34,10 +34,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -50,10 +50,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -66,10 +66,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Application Parent
 		{
 			get
@@ -82,10 +82,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range ActiveCell
 		{
 			get
@@ -98,10 +98,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Chart ActiveChart
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.DialogSheet ActiveDialog
 		{
@@ -131,10 +131,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.MenuBar ActiveMenuBar
 		{
@@ -148,10 +148,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static string ActivePrinter
 		{
 			get
@@ -168,11 +168,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object ActiveSheet
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Window ActiveWindow
 		{
 			get
@@ -201,10 +201,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Workbook ActiveWorkbook
 		{
 			get
@@ -217,10 +217,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.AddIns AddIns
 		{
@@ -234,10 +234,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -250,10 +250,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Cells
 		{
 			get
@@ -266,10 +266,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Sheets Charts
 		{
 			get
@@ -282,10 +282,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range Columns
 		{
@@ -299,10 +299,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -315,10 +315,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static Int32 DDEAppReturnCode
 		{
 			get
@@ -330,10 +330,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Sheets DialogSheets
 		{
@@ -347,10 +347,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.MenuBars MenuBars
 		{
@@ -364,10 +364,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Modules Modules
 		{
@@ -381,10 +381,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Names Names
 		{
 			get
@@ -397,12 +397,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="cell1">object Cell1</param>
 		/// <param name="cell2">optional object Cell2</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
 		{		
@@ -413,23 +413,23 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Alias for get_Range
 		/// </summary>
 		/// <param name="cell1">object Cell1</param>
 		/// <param name="cell2">optional object Cell2</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Range(object cell1, object cell2)
 		{
 			return get_Range(cell1, cell2);
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="cell1">object Cell1</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range get_Range(object cell1)
 		{		
@@ -440,21 +440,21 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Alias for get_Range
 		/// </summary>
 		/// <param name="cell1">object Cell1</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Range(object cell1)
 		{
 			return get_Range(cell1);
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Range Rows
 		{
@@ -468,11 +468,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Selection
 		{
 			get
@@ -485,10 +485,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Sheets Sheets
 		{
 			get
@@ -501,11 +501,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Menu get_ShortcutMenus(Int32 index)
 		{		
@@ -516,21 +516,21 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Alias for get_ShortcutMenus
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Menu ShortcutMenus(Int32 index)
 		{
 			return get_ShortcutMenus(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Workbook ThisWorkbook
 		{
 			get
@@ -543,10 +543,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.ExcelApi.Toolbars Toolbars
 		{
@@ -560,10 +560,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Windows Windows
 		{
 			get
@@ -576,10 +576,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Workbooks Workbooks
 		{
 			get
@@ -592,10 +592,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.WorksheetFunction WorksheetFunction
 		{
 			get
@@ -608,10 +608,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Sheets Worksheets
 		{
 			get
@@ -624,10 +624,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Sheets Excel4IntlMacroSheets
 		{
 			get
@@ -640,10 +640,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Sheets Excel4MacroSheets
 		{
 			get
@@ -660,9 +660,9 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void Calculate()
 		{
 			object[] paramsArray = null;
@@ -670,11 +670,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void DDEExecute(Int32 channel, string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, _string);
@@ -682,11 +682,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static Int32 DDEInitiate(string app, string topic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(app, topic);
@@ -695,12 +695,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">object Item</param>
 		/// <param name="data">object Data</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void DDEPoke(Int32 channel, object item, object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, item, data);
@@ -708,11 +708,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object DDERequest(Int32 channel, string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel, item);
@@ -729,10 +729,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void DDETerminate(Int32 channel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(channel);
@@ -740,10 +740,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">object Name</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Evaluate(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -760,11 +760,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Evaluate(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -781,10 +781,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object ExecuteExcel4Macro(string _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -801,7 +801,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -833,7 +833,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		/// <param name="arg30">optional object Arg30</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -843,12 +843,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -858,13 +858,13 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -874,14 +874,14 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		/// <param name="arg4">optional object Arg4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -891,7 +891,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -899,7 +899,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg4">optional object Arg4</param>
 		/// <param name="arg5">optional object Arg5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -909,7 +909,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -918,7 +918,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg5">optional object Arg5</param>
 		/// <param name="arg6">optional object Arg6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -928,7 +928,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -938,7 +938,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg6">optional object Arg6</param>
 		/// <param name="arg7">optional object Arg7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -948,7 +948,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -959,7 +959,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg7">optional object Arg7</param>
 		/// <param name="arg8">optional object Arg8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -969,7 +969,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -981,7 +981,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg8">optional object Arg8</param>
 		/// <param name="arg9">optional object Arg9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -991,7 +991,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1004,7 +1004,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg9">optional object Arg9</param>
 		/// <param name="arg10">optional object Arg10</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -1014,7 +1014,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1028,7 +1028,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg10">optional object Arg10</param>
 		/// <param name="arg11">optional object Arg11</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -1038,7 +1038,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1053,7 +1053,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg11">optional object Arg11</param>
 		/// <param name="arg12">optional object Arg12</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
@@ -1063,7 +1063,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1079,7 +1079,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg12">optional object Arg12</param>
 		/// <param name="arg13">optional object Arg13</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
@@ -1089,7 +1089,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1106,7 +1106,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg13">optional object Arg13</param>
 		/// <param name="arg14">optional object Arg14</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
@@ -1116,7 +1116,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1134,7 +1134,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg14">optional object Arg14</param>
 		/// <param name="arg15">optional object Arg15</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -1144,7 +1144,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1163,7 +1163,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg15">optional object Arg15</param>
 		/// <param name="arg16">optional object Arg16</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
@@ -1173,7 +1173,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1193,7 +1193,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg16">optional object Arg16</param>
 		/// <param name="arg17">optional object Arg17</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
@@ -1203,7 +1203,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1224,7 +1224,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg17">optional object Arg17</param>
 		/// <param name="arg18">optional object Arg18</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
@@ -1234,7 +1234,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1256,7 +1256,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg18">optional object Arg18</param>
 		/// <param name="arg19">optional object Arg19</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
@@ -1266,7 +1266,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1289,7 +1289,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg19">optional object Arg19</param>
 		/// <param name="arg20">optional object Arg20</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
@@ -1299,7 +1299,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1323,7 +1323,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg20">optional object Arg20</param>
 		/// <param name="arg21">optional object Arg21</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
@@ -1333,7 +1333,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1358,7 +1358,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg21">optional object Arg21</param>
 		/// <param name="arg22">optional object Arg22</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
@@ -1368,7 +1368,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1394,7 +1394,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg22">optional object Arg22</param>
 		/// <param name="arg23">optional object Arg23</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
@@ -1404,7 +1404,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1431,7 +1431,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg23">optional object Arg23</param>
 		/// <param name="arg24">optional object Arg24</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
@@ -1441,7 +1441,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1469,7 +1469,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg24">optional object Arg24</param>
 		/// <param name="arg25">optional object Arg25</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
@@ -1479,7 +1479,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1508,7 +1508,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg25">optional object Arg25</param>
 		/// <param name="arg26">optional object Arg26</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
@@ -1518,7 +1518,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1548,7 +1548,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg26">optional object Arg26</param>
 		/// <param name="arg27">optional object Arg27</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
@@ -1558,7 +1558,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1589,7 +1589,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg27">optional object Arg27</param>
 		/// <param name="arg28">optional object Arg28</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
@@ -1599,7 +1599,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1631,7 +1631,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -1641,7 +1641,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1674,7 +1674,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		/// <param name="arg30">optional object Arg30</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -1691,10 +1691,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run()
 		{
 			object[] paramsArray = null;
@@ -1711,11 +1711,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro);
@@ -1732,12 +1732,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1);
@@ -1754,13 +1754,13 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2);
@@ -1777,14 +1777,14 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3);
@@ -1801,7 +1801,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1809,7 +1809,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg3">optional object Arg3</param>
 		/// <param name="arg4">optional object Arg4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4);
@@ -1826,7 +1826,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1835,7 +1835,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg4">optional object Arg4</param>
 		/// <param name="arg5">optional object Arg5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5);
@@ -1852,7 +1852,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1862,7 +1862,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg5">optional object Arg5</param>
 		/// <param name="arg6">optional object Arg6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1879,7 +1879,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1890,7 +1890,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg6">optional object Arg6</param>
 		/// <param name="arg7">optional object Arg7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -1907,7 +1907,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1919,7 +1919,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg7">optional object Arg7</param>
 		/// <param name="arg8">optional object Arg8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -1936,7 +1936,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1949,7 +1949,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg8">optional object Arg8</param>
 		/// <param name="arg9">optional object Arg9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -1966,7 +1966,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1980,7 +1980,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg9">optional object Arg9</param>
 		/// <param name="arg10">optional object Arg10</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -1997,7 +1997,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2012,7 +2012,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg10">optional object Arg10</param>
 		/// <param name="arg11">optional object Arg11</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -2029,7 +2029,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2045,7 +2045,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg11">optional object Arg11</param>
 		/// <param name="arg12">optional object Arg12</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
@@ -2062,7 +2062,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2079,7 +2079,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg12">optional object Arg12</param>
 		/// <param name="arg13">optional object Arg13</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
@@ -2096,7 +2096,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2114,7 +2114,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg13">optional object Arg13</param>
 		/// <param name="arg14">optional object Arg14</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
@@ -2131,7 +2131,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2150,7 +2150,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg14">optional object Arg14</param>
 		/// <param name="arg15">optional object Arg15</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -2167,7 +2167,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2187,7 +2187,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg15">optional object Arg15</param>
 		/// <param name="arg16">optional object Arg16</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
@@ -2204,7 +2204,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2225,7 +2225,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg16">optional object Arg16</param>
 		/// <param name="arg17">optional object Arg17</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
@@ -2242,7 +2242,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2264,7 +2264,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg17">optional object Arg17</param>
 		/// <param name="arg18">optional object Arg18</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
@@ -2281,7 +2281,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2304,7 +2304,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg18">optional object Arg18</param>
 		/// <param name="arg19">optional object Arg19</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
@@ -2321,7 +2321,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2345,7 +2345,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg19">optional object Arg19</param>
 		/// <param name="arg20">optional object Arg20</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
@@ -2362,7 +2362,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2387,7 +2387,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg20">optional object Arg20</param>
 		/// <param name="arg21">optional object Arg21</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
@@ -2404,7 +2404,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2430,7 +2430,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg21">optional object Arg21</param>
 		/// <param name="arg22">optional object Arg22</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
@@ -2447,7 +2447,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2474,7 +2474,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg22">optional object Arg22</param>
 		/// <param name="arg23">optional object Arg23</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
@@ -2491,7 +2491,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2519,7 +2519,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg23">optional object Arg23</param>
 		/// <param name="arg24">optional object Arg24</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
@@ -2536,7 +2536,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2565,7 +2565,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg24">optional object Arg24</param>
 		/// <param name="arg25">optional object Arg25</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
@@ -2582,7 +2582,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2612,7 +2612,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg25">optional object Arg25</param>
 		/// <param name="arg26">optional object Arg26</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
@@ -2629,7 +2629,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2660,7 +2660,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg26">optional object Arg26</param>
 		/// <param name="arg27">optional object Arg27</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
@@ -2677,7 +2677,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2709,7 +2709,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg27">optional object Arg27</param>
 		/// <param name="arg28">optional object Arg28</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
@@ -2726,7 +2726,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2759,7 +2759,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -2776,7 +2776,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2810,7 +2810,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg29">optional object Arg29</param>
 		/// <param name="arg30">optional object Arg30</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2827,11 +2827,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2()
 		{
 			object[] paramsArray = null;
@@ -2848,12 +2848,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro);
@@ -2870,13 +2870,13 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1);
@@ -2893,14 +2893,14 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2);
@@ -2917,7 +2917,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2925,7 +2925,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg3">optional object Arg3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3);
@@ -2942,7 +2942,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2951,7 +2951,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg4">optional object Arg4</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4);
@@ -2968,7 +2968,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2978,7 +2978,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg5">optional object Arg5</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5);
@@ -2995,7 +2995,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3006,7 +3006,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg6">optional object Arg6</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -3023,7 +3023,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3035,7 +3035,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg7">optional object Arg7</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -3052,7 +3052,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3065,7 +3065,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg8">optional object Arg8</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -3082,7 +3082,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3096,7 +3096,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg9">optional object Arg9</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -3113,7 +3113,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3128,7 +3128,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg10">optional object Arg10</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -3145,7 +3145,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3161,7 +3161,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg11">optional object Arg11</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -3178,7 +3178,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3195,7 +3195,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg12">optional object Arg12</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
@@ -3212,7 +3212,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3230,7 +3230,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg13">optional object Arg13</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
@@ -3247,7 +3247,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3266,7 +3266,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg14">optional object Arg14</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
@@ -3283,7 +3283,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3303,7 +3303,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg15">optional object Arg15</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -3320,7 +3320,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3341,7 +3341,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg16">optional object Arg16</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
@@ -3358,7 +3358,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3380,7 +3380,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg17">optional object Arg17</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
@@ -3397,7 +3397,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3420,7 +3420,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg18">optional object Arg18</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
@@ -3437,7 +3437,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3461,7 +3461,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg19">optional object Arg19</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
@@ -3478,7 +3478,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3503,7 +3503,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg20">optional object Arg20</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
@@ -3520,7 +3520,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3546,7 +3546,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg21">optional object Arg21</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
@@ -3563,7 +3563,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3590,7 +3590,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg22">optional object Arg22</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
@@ -3607,7 +3607,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3635,7 +3635,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg23">optional object Arg23</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
@@ -3652,7 +3652,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3681,7 +3681,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg24">optional object Arg24</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
@@ -3698,7 +3698,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3728,7 +3728,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg25">optional object Arg25</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
@@ -3745,7 +3745,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3776,7 +3776,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg26">optional object Arg26</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
@@ -3793,7 +3793,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3825,7 +3825,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg27">optional object Arg27</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
@@ -3842,7 +3842,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3875,7 +3875,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
@@ -3892,7 +3892,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3926,7 +3926,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg29">optional object Arg29</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -3943,11 +3943,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="keys">object Keys</param>
 		/// <param name="wait">optional object Wait</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void SendKeys(object keys, object wait)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keys, wait);
@@ -3955,11 +3955,11 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="keys">object Keys</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void SendKeys(object keys)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keys);
@@ -3967,7 +3967,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -3999,7 +3999,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		/// <param name="arg30">optional object Arg30</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -4009,12 +4009,12 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
@@ -4024,13 +4024,13 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
@@ -4040,14 +4040,14 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		/// <param name="arg4">optional object Arg4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
@@ -4057,7 +4057,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4065,7 +4065,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg4">optional object Arg4</param>
 		/// <param name="arg5">optional object Arg5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
@@ -4075,7 +4075,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4084,7 +4084,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg5">optional object Arg5</param>
 		/// <param name="arg6">optional object Arg6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -4094,7 +4094,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4104,7 +4104,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg6">optional object Arg6</param>
 		/// <param name="arg7">optional object Arg7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -4114,7 +4114,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4125,7 +4125,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg7">optional object Arg7</param>
 		/// <param name="arg8">optional object Arg8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -4135,7 +4135,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4147,7 +4147,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg8">optional object Arg8</param>
 		/// <param name="arg9">optional object Arg9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -4157,7 +4157,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4170,7 +4170,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg9">optional object Arg9</param>
 		/// <param name="arg10">optional object Arg10</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -4180,7 +4180,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4194,7 +4194,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg10">optional object Arg10</param>
 		/// <param name="arg11">optional object Arg11</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -4204,7 +4204,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4219,7 +4219,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg11">optional object Arg11</param>
 		/// <param name="arg12">optional object Arg12</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
@@ -4229,7 +4229,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4245,7 +4245,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg12">optional object Arg12</param>
 		/// <param name="arg13">optional object Arg13</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
@@ -4255,7 +4255,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4272,7 +4272,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg13">optional object Arg13</param>
 		/// <param name="arg14">optional object Arg14</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
@@ -4282,7 +4282,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4300,7 +4300,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg14">optional object Arg14</param>
 		/// <param name="arg15">optional object Arg15</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -4310,7 +4310,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4329,7 +4329,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg15">optional object Arg15</param>
 		/// <param name="arg16">optional object Arg16</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
@@ -4339,7 +4339,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4359,7 +4359,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg16">optional object Arg16</param>
 		/// <param name="arg17">optional object Arg17</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
@@ -4369,7 +4369,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4390,7 +4390,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg17">optional object Arg17</param>
 		/// <param name="arg18">optional object Arg18</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
@@ -4400,7 +4400,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4422,7 +4422,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg18">optional object Arg18</param>
 		/// <param name="arg19">optional object Arg19</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
@@ -4432,7 +4432,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4455,7 +4455,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg19">optional object Arg19</param>
 		/// <param name="arg20">optional object Arg20</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
@@ -4465,7 +4465,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4489,7 +4489,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg20">optional object Arg20</param>
 		/// <param name="arg21">optional object Arg21</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
@@ -4499,7 +4499,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4524,7 +4524,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg21">optional object Arg21</param>
 		/// <param name="arg22">optional object Arg22</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
@@ -4534,7 +4534,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4560,7 +4560,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg22">optional object Arg22</param>
 		/// <param name="arg23">optional object Arg23</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
@@ -4570,7 +4570,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4597,7 +4597,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg23">optional object Arg23</param>
 		/// <param name="arg24">optional object Arg24</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
@@ -4607,7 +4607,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4635,7 +4635,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg24">optional object Arg24</param>
 		/// <param name="arg25">optional object Arg25</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
@@ -4645,7 +4645,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4674,7 +4674,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg25">optional object Arg25</param>
 		/// <param name="arg26">optional object Arg26</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
@@ -4684,7 +4684,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4714,7 +4714,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg26">optional object Arg26</param>
 		/// <param name="arg27">optional object Arg27</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
@@ -4724,7 +4724,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4755,7 +4755,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg27">optional object Arg27</param>
 		/// <param name="arg28">optional object Arg28</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
@@ -4765,7 +4765,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4797,7 +4797,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);

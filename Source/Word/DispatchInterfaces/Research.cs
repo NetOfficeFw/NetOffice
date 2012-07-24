@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Research 
-	/// SupportByVersion Word, 12,14
+	/// SupportByVersion Word, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public string FavoriteService
 		{
 			get
@@ -146,15 +146,15 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional string QueryString = </param>
 		/// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
-		[SupportByVersionAttribute("Word", 12,14)]
-		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection, bool launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -170,11 +170,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Query(string serviceID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);
@@ -191,13 +191,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional string QueryString = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
-		public object Query(string serviceID, object queryString)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public object Query(string serviceID, string queryString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -213,14 +213,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional string QueryString = </param>
 		/// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
-		public object Query(string serviceID, object queryString, object queryLanguage)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -236,15 +236,15 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional string QueryString = </param>
 		/// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
-		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -260,11 +260,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="languageFrom">NetOffice.WordApi.Enums.WdLanguageID LanguageFrom</param>
 		/// <param name="languageTo">NetOffice.WordApi.Enums.WdLanguageID LanguageTo</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object SetLanguagePair(NetOffice.WordApi.Enums.WdLanguageID languageFrom, NetOffice.WordApi.Enums.WdLanguageID languageTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(languageFrom, languageTo);
@@ -281,10 +281,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool IsResearchService(string serviceID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);

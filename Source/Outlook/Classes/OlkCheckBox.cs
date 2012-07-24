@@ -27,9 +27,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OlkCheckBox 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkCheckBox : _OlkCheckBox,IEventBinding
 	{
@@ -108,14 +108,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_ClickEventHandler ClickEvent
 		{
 			add
@@ -130,14 +130,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_DoubleClickEventHandler _DoubleClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_DoubleClickEventHandler DoubleClickEvent
 		{
 			add
@@ -152,14 +152,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -174,14 +174,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -196,14 +196,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -218,14 +218,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_EnterEventHandler EnterEvent
 		{
 			add
@@ -240,14 +240,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_ExitEventHandler ExitEvent
 		{
 			add
@@ -262,14 +262,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -284,14 +284,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -306,14 +306,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -328,14 +328,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -350,14 +350,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -372,14 +372,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event OlkCheckBox_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCheckBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add

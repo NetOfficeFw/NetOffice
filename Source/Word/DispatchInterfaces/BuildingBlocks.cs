@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface BuildingBlocks 
-	/// SupportByVersion Word, 12,14
+	/// SupportByVersion Word, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class BuildingBlocks : COMObject ,IEnumerable<NetOffice.WordApi.BuildingBlock>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.BuildingBlock this[object index]
 		{
@@ -159,14 +159,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="description">object Description</param>
+		/// <param name="description">optional object Description</param>
 		/// <param name="insertOptions">optional NetOffice.WordApi.Enums.WdDocPartInsertOptions InsertOptions = 0</param>
-		[SupportByVersionAttribute("Word", 12,14)]
-		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description, object insertOptions)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description, NetOffice.WordApi.Enums.WdDocPartInsertOptions insertOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, description, insertOptions);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -175,13 +175,28 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="description">object Description</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, range);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.BuildingBlock newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.BuildingBlock.LateBindingApiWrapperType) as NetOffice.WordApi.BuildingBlock;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 12, 14, 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="range">NetOffice.WordApi.Range Range</param>
+		/// <param name="description">optional object Description</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Range range, object description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, description);
@@ -194,10 +209,10 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.BuildingBlock> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 12,14
+		/// SupportByVersionAttribute Word, 12,14,15
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
         [CustomEnumerator]
        public IEnumerator<NetOffice.WordApi.BuildingBlock> GetEnumerator()  
        {
@@ -211,10 +226,10 @@ namespace NetOffice.WordApi
        #region IEnumerable Members
         
        /// <summary>
-		/// SupportByVersionAttribute Word, 12,14
+		/// SupportByVersionAttribute Word, 12,14,15
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
        {

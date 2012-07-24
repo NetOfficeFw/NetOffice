@@ -27,9 +27,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// CoClass Document 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Document : _Document,IEventBinding
 	{
@@ -109,14 +109,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Document_NewEventHandler _NewEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Document_NewEventHandler NewEvent
 		{
 			add
@@ -131,14 +131,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Document_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Document_OpenEventHandler OpenEvent
 		{
 			add
@@ -153,14 +153,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Document_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Document_CloseEventHandler CloseEvent
 		{
 			add
@@ -175,14 +175,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Document_SyncEventHandler _SyncEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Document_SyncEventHandler SyncEvent
 		{
 			add
@@ -197,14 +197,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Document_XMLAfterInsertEventHandler _XMLAfterInsertEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Document_XMLAfterInsertEventHandler XMLAfterInsertEvent
 		{
 			add
@@ -219,14 +219,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Document_XMLBeforeDeleteEventHandler _XMLBeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Document_XMLBeforeDeleteEventHandler XMLBeforeDeleteEvent
 		{
 			add
@@ -241,14 +241,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlAfterAddEventHandler _ContentControlAfterAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlAfterAddEventHandler ContentControlAfterAddEvent
 		{
 			add
@@ -263,14 +263,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlBeforeDeleteEventHandler _ContentControlBeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlBeforeDeleteEventHandler ContentControlBeforeDeleteEvent
 		{
 			add
@@ -285,14 +285,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlOnExitEventHandler _ContentControlOnExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlOnExitEventHandler ContentControlOnExitEvent
 		{
 			add
@@ -307,14 +307,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlOnEnterEventHandler _ContentControlOnEnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlOnEnterEventHandler ContentControlOnEnterEvent
 		{
 			add
@@ -329,14 +329,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlBeforeStoreUpdateEventHandler _ContentControlBeforeStoreUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlBeforeStoreUpdateEventHandler ContentControlBeforeStoreUpdateEvent
 		{
 			add
@@ -351,14 +351,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_ContentControlBeforeContentUpdateEventHandler _ContentControlBeforeContentUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_ContentControlBeforeContentUpdateEventHandler ContentControlBeforeContentUpdateEvent
 		{
 			add
@@ -373,14 +373,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Document_BuildingBlockInsertEventHandler _BuildingBlockInsertEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Document_BuildingBlockInsertEventHandler BuildingBlockInsertEvent
 		{
 			add

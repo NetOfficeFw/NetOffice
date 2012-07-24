@@ -26,9 +26,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass NavigationButton 
-	/// SupportByVersion Access, 14
+	/// SupportByVersion Access, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationButton : _NavigationButton,IEventBinding
 	{
@@ -107,14 +107,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_ClickEventHandler ClickEvent
 		{
 			add
@@ -129,14 +129,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_EnterEventHandler EnterEvent
 		{
 			add
@@ -151,14 +151,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_ExitEventHandler ExitEvent
 		{
 			add
@@ -173,14 +173,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -195,14 +195,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -217,14 +217,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -239,14 +239,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -261,14 +261,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -283,14 +283,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -305,14 +305,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -327,14 +327,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -349,14 +349,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationButton_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyUpEventHandler KeyUpEvent
 		{
 			add

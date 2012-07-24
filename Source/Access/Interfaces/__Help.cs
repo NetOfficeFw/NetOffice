@@ -9,9 +9,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// Interface __Help 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class __Help : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object FieldName
 		{
 			get
@@ -101,10 +101,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object DataType
 		{
 			get
@@ -129,10 +129,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Description
 		{
 			get
@@ -157,10 +157,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object FieldSize
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object NewValues
 		{
 			get
@@ -213,10 +213,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Required
 		{
 			get
@@ -241,10 +241,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowZeroLength
 		{
 			get
@@ -269,10 +269,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Indexed
 		{
 			get
@@ -297,10 +297,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object DisplayControl
 		{
 			get
@@ -325,10 +325,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object ReplicationConflictFunction
 		{
 			get
@@ -353,10 +353,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object ProjectName
 		{
 			get
@@ -381,10 +381,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object MDE
 		{
 			get
@@ -409,10 +409,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowBreakIntoCode
 		{
 			get
@@ -437,10 +437,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowBuiltInToolbars
 		{
 			get
@@ -465,10 +465,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowBypassKey
 		{
 			get
@@ -493,10 +493,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowFullMenus
 		{
 			get
@@ -521,10 +521,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowSpecialKeys
 		{
 			get
@@ -549,10 +549,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AllowToolbarChanges
 		{
 			get
@@ -577,10 +577,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object StartUpForm
 		{
 			get
@@ -605,10 +605,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object StartUpMenuBar
 		{
 			get
@@ -633,10 +633,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object StartUpShortcutMenuBar
 		{
 			get
@@ -661,10 +661,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object StartUpShowDBWindow
 		{
 			get
@@ -689,10 +689,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object StartUpShowStatusBar
 		{
 			get
@@ -717,10 +717,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AppIcon
 		{
 			get
@@ -745,10 +745,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object AppTitle
 		{
 			get
@@ -773,10 +773,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object ODBCConnectStr
 		{
 			get
@@ -801,10 +801,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object LogMessages
 		{
 			get

@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _WizHook 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _WizHook : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Key
 		{
@@ -95,10 +95,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi._VBProject DbcVbProject
 		{
@@ -112,11 +112,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool get_IsMatchToDbcConnectString(string bstrConnectionString)
 		{		
@@ -126,11 +126,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Alias for get_IsMatchToDbcConnectString
 		/// </summary>
 		/// <param name="bstrConnectionString">string bstrConnectionString</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool IsMatchToDbcConnectString(string bstrConnectionString)
 		{
 			return get_IsMatchToDbcConnectString(bstrConnectionString);
@@ -141,11 +141,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="actid">Int32 Actid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string NameFromActid(Int32 actid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(actid);
@@ -154,11 +154,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="actid">Int32 Actid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ArgsOfActid(Int32 actid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(actid);
@@ -167,7 +167,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="script">string Script</param>
 		/// <param name="label">string Label</param>
@@ -175,7 +175,7 @@ namespace NetOffice.AccessApi
 		/// <param name="extra">Int32 Extra</param>
 		/// <param name="version">Int32 Version</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 OpenScript(string script, string label, Int32 openMode, Int32 extra, Int32 version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(script, label, openMode, extra, version);
@@ -184,13 +184,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="hScr">Int32 HScr</param>
 		/// <param name="scriptColumn">Int32 ScriptColumn</param>
 		/// <param name="value">string Value</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool GetScriptString(Int32 hScr, Int32 scriptColumn, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hScr, scriptColumn, value);
@@ -199,13 +199,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="hScr">Int32 HScr</param>
 		/// <param name="scriptColumn">Int32 ScriptColumn</param>
 		/// <param name="value">string Value</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool SaveScriptString(Int32 hScr, Int32 scriptColumn, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hScr, scriptColumn, value);
@@ -214,11 +214,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool GlobalProcExists(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -227,12 +227,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="table">string Table</param>
 		/// <param name="columns">string Columns</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool TableFieldHasUniqueIndex(string table, string columns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(table, columns);
@@ -241,12 +241,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_string">string String</param>
 		/// <param name="flags">Int32 flags</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool BracketString(string _string, Int32 flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, flags);
@@ -255,13 +255,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="helpFile">string HelpFile</param>
 		/// <param name="wCmd">Int32 wCmd</param>
 		/// <param name="contextID">Int32 ContextID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool WizHelp(string helpFile, Int32 wCmd, Int32 contextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, wCmd, contextID);
@@ -270,12 +270,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="file">string File</param>
 		/// <param name="cancelled">bool Cancelled</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool OpenPictureFile(string file, bool cancelled)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file, cancelled);
@@ -284,12 +284,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_in">string In</param>
 		/// <param name="_out">string Out</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool EnglishPictToLocal(string _in, string _out)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_in, _out);
@@ -298,14 +298,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="_in">string In</param>
 		/// <param name="_out">string Out</param>
 		/// <param name="parseFlags">Int32 ParseFlags</param>
 		/// <param name="translateFlags">Int32 TranslateFlags</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool TranslateExpression(string _in, string _out, Int32 parseFlags, Int32 translateFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_in, _out, parseFlags, translateFlags);
@@ -314,11 +314,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="file">string File</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool FileExists(string file)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file);
@@ -327,12 +327,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="relativePath">string RelativePath</param>
 		/// <param name="fullPath">string FullPath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 FullPath(string relativePath, string fullPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(relativePath, fullPath);
@@ -341,7 +341,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="drive">string Drive</param>
@@ -349,7 +349,7 @@ namespace NetOffice.AccessApi
 		/// <param name="file">string File</param>
 		/// <param name="ext">string Ext</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SplitPath(string path, string drive, string dir, string file, string ext)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, drive, dir, file, ext);
@@ -357,7 +357,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fontName">string FontName</param>
 		/// <param name="size">Int32 Size</param>
@@ -370,7 +370,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dx">Int32 dx</param>
 		/// <param name="dy">Int32 dy</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool TwipsFromFont(string fontName, Int32 size, Int32 weight, bool italic, bool underline, Int32 cch, string caption, Int32 maxWidthCch, Int32 dx, Int32 dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, size, weight, italic, underline, cch, caption, maxWidthCch, dx, dy);
@@ -379,11 +379,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="recordSource">string RecordSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 ObjTypOfRecordSource(string recordSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource);
@@ -392,11 +392,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="identifier">string Identifier</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool IsValidIdent(string identifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(identifier);
@@ -405,11 +405,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="array">String[] Array</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SortStringArray(String[] array)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray((object)array);
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="database">NetOffice.DAOApi.Database Database</param>
@@ -425,7 +425,7 @@ namespace NetOffice.AccessApi
 		/// <param name="returnDebugInfo">bool ReturnDebugInfo</param>
 		/// <param name="results">string Results</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 AnalyzeTable(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string table, bool returnDebugInfo, string results)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, table, returnDebugInfo, results);
@@ -434,14 +434,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="workspace">NetOffice.DAOApi.Workspace Workspace</param>
 		/// <param name="database">NetOffice.DAOApi.Database Database</param>
 		/// <param name="query">string Query</param>
 		/// <param name="results">string Results</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 AnalyzeQuery(NetOffice.DAOApi.Workspace workspace, NetOffice.DAOApi.Database database, string query, string results)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(workspace, database, query, results);
@@ -450,7 +450,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="appName">string AppName</param>
@@ -464,7 +464,7 @@ namespace NetOffice.AccessApi
 		/// <param name="flags">Int32 flags</param>
 		/// <param name="fOpen">bool fOpen</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 GetFileName(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen);
@@ -473,7 +473,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dpName">string DpName</param>
 		/// <param name="ctlName">string CtlName</param>
@@ -486,7 +486,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dx">Int32 dx</param>
 		/// <param name="dy">Int32 dy</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CreateDataPageControl(string dpName, string ctlName, Int32 typ, string section, Int32 sectionType, string appletCode, Int32 x, Int32 y, Int32 dx, Int32 dy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dpName, ctlName, typ, section, sectionType, appletCode, x, y, dx, dy);
@@ -494,11 +494,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fStart">bool fStart</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void KnownWizLeaks(bool fStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fStart);
@@ -506,13 +506,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrDbName">string bstrDbName</param>
 		/// <param name="bstrConnect">string bstrConnect</param>
 		/// <param name="bstrPasswd">string bstrPasswd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool SetVbaPassword(string bstrDbName, string bstrConnect, string bstrPasswd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDbName, bstrConnect, bstrPasswd);
@@ -521,10 +521,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string LocalFont()
 		{
 			object[] paramsArray = null;
@@ -533,12 +533,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="objtyp">Int16 objtyp</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SaveObject(string bstrName, Int16 objtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, objtyp);
@@ -546,10 +546,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 CurrentLangID()
 		{
 			object[] paramsArray = null;
@@ -558,10 +558,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 KeyboardLangID()
 		{
 			object[] paramsArray = null;
@@ -570,10 +570,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string AccessUserDataDir()
 		{
 			object[] paramsArray = null;
@@ -582,10 +582,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OfficeAddInDir()
 		{
 			object[] paramsArray = null;
@@ -594,12 +594,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dpName">string DpName</param>
 		/// <param name="fileToInsert">string FileToInsert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string EmbedFileOnDataPage(string dpName, string fileToInsert)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dpName, fileToInsert);
@@ -608,12 +608,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fRptToFile">bool fRptToFile</param>
 		/// <param name="bstrFileOut">string bstrFileOut</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ReportLeaksToFile(bool fRptToFile, string bstrFileOut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fRptToFile, bstrFileOut);
@@ -621,11 +621,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void LoadImexSpecSolution(string bstrFilename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename);
@@ -633,11 +633,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetDpBlockKeyInput(bool fBlockKeys)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fBlockKeys);
@@ -645,13 +645,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="objType">NetOffice.AccessApi.Enums.AcObjectType ObjType</param>
 		/// <param name="attribs">Int32 Attribs</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool FirstDbcDataObject(string name, NetOffice.AccessApi.Enums.AcObjectType objType, Int32 attribs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, objType, attribs);
@@ -660,10 +660,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool CloseCurrentDatabase()
 		{
 			object[] paramsArray = null;
@@ -672,11 +672,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrWhich">string bstrWhich</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public string AccessWizFilePath(string bstrWhich)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrWhich);
@@ -685,10 +685,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public bool HideDates()
 		{
 			object[] paramsArray = null;
@@ -697,11 +697,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public string GetColumns(string bstrBase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBase);
@@ -710,12 +710,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrExt">string bstrExt</param>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public Int32 GetFileOdso(string bstrExt, string bstrFilename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrExt, bstrFilename);
@@ -724,11 +724,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrBase">string bstrBase</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public string GetInfoForColumns(string bstrBase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBase);
@@ -737,7 +737,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="hwndOwner">Int32 hwndOwner</param>
 		/// <param name="appName">string AppName</param>
@@ -752,7 +752,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fOpen">bool fOpen</param>
 		/// <param name="fFileSystem">object fFileSystem</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public Int32 GetFileName2(Int32 hwndOwner, string appName, string dlgTitle, string openTitle, string file, string initialDir, string filter, Int32 filterIndex, Int32 view, Int32 flags, bool fOpen, object fFileSystem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hwndOwner, appName, dlgTitle, openTitle, file, initialDir, filter, filterIndex, view, flags, fOpen, fFileSystem);
@@ -761,11 +761,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fBlockKeys">bool fBlockKeys</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public bool FGetMSDE(bool fBlockKeys)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fBlockKeys);
@@ -774,7 +774,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
@@ -782,7 +782,7 @@ namespace NetOffice.AccessApi
 		/// <param name="idHelpID">Int32 idHelpID</param>
 		/// <param name="bstrHelpFileName">string bstrHelpFileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public Int32 WizMsgBox(string bstrText, string bstrCaption, Int32 wStyle, Int32 idHelpID, string bstrHelpFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, wStyle, idHelpID, bstrHelpFileName);
@@ -791,12 +791,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pbstrUID">string pbstrUID</param>
 		/// <param name="pbstrPwd">string pbstrPwd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public bool AdpUIDPwd(string pbstrUID, string pbstrPwd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrUID, pbstrPwd);
@@ -805,12 +805,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
 		/// <param name="vValue">object vValue</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void SetWizGlob(Int32 lWhich, object vValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lWhich, vValue);
@@ -818,11 +818,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="lWhich">Int32 lWhich</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public object GetWizGlob(Int32 lWhich)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lWhich);
@@ -839,11 +839,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrADPName">string bstrADPName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void WizCopyCmdbars(string bstrADPName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrADPName);
@@ -851,11 +851,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public Int32 GetCurrentView(string bstrTableName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTableName);
@@ -864,11 +864,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14
+		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="wch">Int32 wch</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public bool FIsFEWch(Int32 wch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wch);
@@ -877,11 +877,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -890,10 +890,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public string GetAccWizRCPath()
 		{
 			object[] paramsArray = null;
@@ -902,12 +902,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14
+		/// SupportByVersion Access 11, 12, 14, 15
 		/// </summary>
 		/// <param name="objtyp">Int16 objtyp</param>
 		/// <param name="bstrObjName">string bstrObjName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14)]
+		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool FCreateNameMap(Int16 objtyp, string bstrObjName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objtyp, bstrObjName);
@@ -916,10 +916,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string GetAdeRegistryPath()
 		{
 			object[] paramsArray = null;
@@ -928,11 +928,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSpecXML">string bstrSpecXML</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void ExecuteTempImexSpec(string bstrSpecXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSpecXML);
@@ -940,10 +940,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public bool FCacheStatus()
 		{
 			object[] paramsArray = null;
@@ -952,11 +952,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="bstrStatus">string bstrStatus</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void CacheStatus(string bstrStatus)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrStatus);
@@ -964,11 +964,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSpecName">string bstrSpecName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetDefaultSpecName(string bstrSpecName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSpecName);
@@ -976,10 +976,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string GetImexTblName()
 		{
 			object[] paramsArray = null;
@@ -988,13 +988,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		/// <param name="bstrPropertyName">string bstrPropertyName</param>
 		/// <param name="fServer">bool fServer</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string GetLinkedListProperty(string bstrTableName, string bstrPropertyName, bool fServer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTableName, bstrPropertyName, fServer);
@@ -1003,14 +1003,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="pProperty">NetOffice.AccessApi._AccessProperty pProperty</param>
 		/// <param name="openMode">Int32 OpenMode</param>
 		/// <param name="extra">Int32 Extra</param>
 		/// <param name="version">Int32 Version</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int32 OpenEmScript(NetOffice.AccessApi._AccessProperty pProperty, Int32 openMode, Int32 extra, Int32 version)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pProperty, openMode, extra, version);
@@ -1019,10 +1019,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public string GetDisabledExtensions()
 		{
 			object[] paramsArray = null;
@@ -1031,13 +1031,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		/// <param name="fTablesAsClient">bool fTablesAsClient</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 GetObjPubOption(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp, bool fTablesAsClient)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp, fTablesAsClient);
@@ -1046,11 +1046,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public bool FIsPublishedXasTable(string bstrObjectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName);
@@ -1059,10 +1059,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public bool FIsXasDb()
 		{
 			object[] paramsArray = null;
@@ -1071,17 +1071,38 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="bstrObjectName">string bstrObjectName</param>
 		/// <param name="iobjtyp">NetOffice.AccessApi.Enums.AcObjectType iobjtyp</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public bool FIsValidXasObjectName(string bstrObjectName, NetOffice.AccessApi.Enums.AcObjectType iobjtyp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName, iobjtyp);
 			object returnItem = Invoker.MethodReturn(this, "FIsValidXasObjectName", paramsArray);
 			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion Access 15
+		/// </summary>
+		/// <param name="bstrObjectName">string bstrObjectName</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("Access", 15)]
+		public object LoadResourceLibrary(string bstrObjectName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrObjectName);
+			object returnItem = Invoker.MethodReturn(this, "LoadResourceLibrary", paramsArray);
+			if((null != returnItem) && (returnItem is MarshalByRefObject))
+			{
+				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				return newObject;
+			}
+			else
+			{
+				return  returnItem;
+			}
 		}
 
 		#endregion

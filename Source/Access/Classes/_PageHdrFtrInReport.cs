@@ -22,9 +22,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _PageHdrFtrInReport 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _PageHdrFtrInReport : _Section,IEventBinding
 	{
@@ -104,14 +104,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_FormatEventHandler _FormatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _PageHdrFtrInReport_FormatEventHandler FormatEvent
 		{
 			add
@@ -126,14 +126,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_PrintEventHandler _PrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _PageHdrFtrInReport_PrintEventHandler PrintEvent
 		{
 			add
@@ -148,14 +148,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_ClickEventHandler ClickEvent
 		{
 			add
@@ -170,14 +170,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _PageHdrFtrInReport_PaintEventHandler _PaintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _PageHdrFtrInReport_PaintEventHandler PaintEvent
 		{
 			add

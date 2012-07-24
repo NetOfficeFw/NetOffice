@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLMapping 
-	/// SupportByVersion Word, 12,14
+	/// SupportByVersion Word, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14)]
+	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLMapping : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool IsMapped
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLPart CustomXMLPart
 		{
 			get
@@ -153,10 +153,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLNode CustomXMLNode
 		{
 			get
@@ -169,10 +169,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public string XPath
 		{
 			get
@@ -184,10 +184,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public string PrefixMappings
 		{
 			get
@@ -203,13 +203,13 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="source">optional NetOffice.OfficeApi.CustomXMLPart Source = 0</param>
-		[SupportByVersionAttribute("Word", 12,14)]
-		public bool SetMapping(string xPath, object prefixMapping, object source)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public bool SetMapping(string xPath, string prefixMapping, NetOffice.OfficeApi.CustomXMLPart source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, source);
 			object returnItem = Invoker.MethodReturn(this, "SetMapping", paramsArray);
@@ -217,11 +217,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool SetMapping(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
@@ -230,13 +230,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
-		public bool SetMapping(string xPath, object prefixMapping)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public bool SetMapping(string xPath, string prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SetMapping", paramsArray);
@@ -244,9 +244,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -254,10 +254,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool SetMappingByNode(NetOffice.OfficeApi.CustomXMLNode node)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node);

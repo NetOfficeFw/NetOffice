@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface OfficeDataSourceObject 
-	/// SupportByVersion Office, 10,11,12,14
+	/// SupportByVersion Office, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OfficeDataSourceObject : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string ConnectString
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string Table
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string DataSource
 		{
 			get
@@ -134,11 +134,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Columns
 		{
 			get
@@ -151,10 +151,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 RowCount
 		{
 			get
@@ -166,11 +166,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Filters
 		{
 			get
@@ -187,12 +187,12 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
 		/// <param name="rowNbr">optional Int32 RowNbr = 1</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, Int32 rowNbr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(msoMoveRow, rowNbr);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
@@ -200,11 +200,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(msoMoveRow);
@@ -213,25 +213,25 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		/// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void Open(string bstrSrc, string bstrConnect, string bstrTable, Int32 fOpenExclusive, Int32 fNeverPrompt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open()
 		{
 			object[] paramsArray = null;
@@ -239,61 +239,61 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void Open(object bstrSrc)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void Open(string bstrSrc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void Open(object bstrSrc, object bstrConnect)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void Open(string bstrSrc, string bstrConnect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void Open(object bstrSrc, object bstrConnect, object bstrTable)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void Open(string bstrSrc, string bstrConnect, string bstrTable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void Open(string bstrSrc, string bstrConnect, string bstrTable, Int32 fOpenExclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
 			Invoker.Method(this, "Open", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
@@ -301,19 +301,19 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
 		/// <param name="sortAscending3">optional bool SortAscending3 = true</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2, string sortField3, bool sortAscending3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1);
@@ -321,49 +321,49 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void SetSortOrder(string sortField1, object sortAscending1)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void SetSortOrder(string sortField1, bool sortAscending1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
@@ -371,17 +371,17 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
-		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2, string sortField3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void ApplyFilter()
 		{
 			object[] paramsArray = null;

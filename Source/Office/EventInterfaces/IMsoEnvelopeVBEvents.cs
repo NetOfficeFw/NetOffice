@@ -10,15 +10,15 @@ namespace NetOffice.OfficeApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[ComImport, Guid("000672AD-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface IMsoEnvelopeVBEvents
 	{
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void EnvelopeShow();
 
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void EnvelopeHide();
 	}

@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _FormRegion 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _FormRegion : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool IsExpanded
 		{
 			get
@@ -154,11 +154,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Form
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string Detail
 		{
 			get
@@ -191,11 +191,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Item
 		{
 			get
@@ -208,10 +208,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Inspector Inspector
 		{
 			get
@@ -224,10 +224,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlFormRegionMode FormRegionMode
 		{
 			get
@@ -240,10 +240,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Language
 		{
 			get
@@ -255,10 +255,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string DisplayName
 		{
 			get
@@ -270,10 +270,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string InternalName
 		{
 			get
@@ -285,10 +285,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool SuppressControlReplacement
 		{
 			get
@@ -305,10 +305,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool EnableAutoLayout
 		{
 			get
@@ -325,10 +325,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public bool Visible
 		{
 			get
@@ -349,9 +349,9 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Reflow()
 		{
 			object[] paramsArray = null;
@@ -359,11 +359,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// </summary>
 		/// <param name="control">object Control</param>
 		/// <param name="propertyName">string PropertyName</param>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void SetControlItemProperty(object control, string propertyName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(control, propertyName);
@@ -371,9 +371,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Select()
 		{
 			object[] paramsArray = null;

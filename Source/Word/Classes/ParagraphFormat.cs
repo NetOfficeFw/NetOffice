@@ -14,9 +14,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// CoClass ParagraphFormat 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ParagraphFormat : _ParagraphFormat
 	{

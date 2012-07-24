@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspace 
-	/// SupportByVersion Office, 11,12,14
+	/// SupportByVersion Office, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14)]
+	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspace : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string Name
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceMembers Members
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFiles Files
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceLinks Links
 		{
 			get
@@ -174,11 +174,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string URL
 		{
 			get
@@ -206,10 +206,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool Connected
 		{
 			get
@@ -221,10 +221,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object LastRefreshed
 		{
 			get
@@ -244,10 +244,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string SourceURL
 		{
 			get
@@ -268,9 +268,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -278,11 +278,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="uRL">optional object URL</param>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew(object uRL, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL, name);
@@ -290,10 +290,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew()
 		{
 			object[] paramsArray = null;
@@ -301,11 +301,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="uRL">optional object URL</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew(object uRL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uRL);
@@ -313,9 +313,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -323,9 +323,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void RemoveDocument()
 		{
 			object[] paramsArray = null;
@@ -333,9 +333,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14
+		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14)]
+		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Disconnect()
 		{
 			object[] paramsArray = null;

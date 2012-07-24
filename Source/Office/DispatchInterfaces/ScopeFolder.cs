@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ScopeFolder 
-	/// SupportByVersion Office, 10,11,12,14
+	/// SupportByVersion Office, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ScopeFolder : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string Name
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string Path
 		{
 			get
@@ -104,10 +104,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.ScopeFolders ScopeFolders
 		{
 			get
@@ -124,9 +124,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14
+		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AddToSearchFolders()
 		{
 			object[] paramsArray = null;

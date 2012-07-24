@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface WorkbookConnection 
-	/// SupportByVersion Excel, 12,14
+	/// SupportByVersion Excel, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WorkbookConnection : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public string Name
 		{
 			get
@@ -143,10 +143,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public string Description
 		{
 			get
@@ -163,10 +163,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public string _Default
 		{
 			get
@@ -183,10 +183,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlConnectionType Type
 		{
 			get
@@ -199,10 +199,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.OLEDBConnection OLEDBConnection
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.ODBCConnection ODBCConnection
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Ranges Ranges
 		{
 			get
@@ -246,14 +246,129 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.ModelConnection ModelConnection
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ModelConnection", paramsArray);
+				NetOffice.ExcelApi.ModelConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelConnection;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorksheetDataConnection WorksheetDataConnection
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "WorksheetDataConnection", paramsArray);
+				NetOffice.ExcelApi.WorksheetDataConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorksheetDataConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorksheetDataConnection;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public bool RefreshWithRefreshAll
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "RefreshWithRefreshAll", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "RefreshWithRefreshAll", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.TextConnection TextConnection
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "TextConnection", paramsArray);
+				NetOffice.ExcelApi.TextConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TextConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.TextConnection;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.DataFeedConnection DataFeedConnection
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "DataFeedConnection", paramsArray);
+				NetOffice.ExcelApi.DataFeedConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.DataFeedConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.DataFeedConnection;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public bool InModel
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "InModel", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.ModelTables ModelTables
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ModelTables", paramsArray);
+				NetOffice.ExcelApi.ModelTables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelTables;
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -261,9 +376,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;

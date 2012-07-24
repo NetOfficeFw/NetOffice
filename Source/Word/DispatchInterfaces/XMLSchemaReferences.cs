@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XMLSchemaReferences 
-	/// SupportByVersion Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLSchemaReferences : COMObject ,IEnumerable<NetOffice.WordApi.XMLSchemaReference>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -121,11 +121,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool AutomaticValidation
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool AllowSaveAsXMLWithoutValidation
 		{
 			get
@@ -178,10 +178,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool HideValidationErrors
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool IgnoreMixedContent
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool ShowPlaceholderText
 		{
 			get
@@ -242,10 +242,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.XMLSchemaReference this[object index]
 		{
@@ -259,9 +259,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Validate()
 		{
 			object[] paramsArray = null;
@@ -269,14 +269,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		/// <param name="namespaceURI">object NamespaceURI</param>
-		/// <param name="alias">object Alias</param>
-		/// <param name="fileName">object FileName</param>
+		/// <param name="namespaceURI">optional object NamespaceURI</param>
+		/// <param name="alias">optional object Alias</param>
+		/// <param name="fileName">optional object FileName</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -285,13 +285,55 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		/// <param name="namespaceURI">object NamespaceURI</param>
-		/// <param name="alias">object Alias</param>
-		/// <param name="fileName">object FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLSchemaReference Add()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.XMLSchemaReference newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType) as NetOffice.WordApi.XMLSchemaReference;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 11, 12, 14, 15
+		/// </summary>
+		/// <param name="namespaceURI">optional object NamespaceURI</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.XMLSchemaReference newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType) as NetOffice.WordApi.XMLSchemaReference;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 11, 12, 14, 15
+		/// </summary>
+		/// <param name="namespaceURI">optional object NamespaceURI</param>
+		/// <param name="alias">optional object Alias</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.XMLSchemaReference newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType) as NetOffice.WordApi.XMLSchemaReference;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 11, 12, 14, 15
+		/// </summary>
+		/// <param name="namespaceURI">optional object NamespaceURI</param>
+		/// <param name="alias">optional object Alias</param>
+		/// <param name="fileName">optional object FileName</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName);
@@ -305,9 +347,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.XMLSchemaReference> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 11,12,14
+		/// SupportByVersionAttribute Word, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
        public IEnumerator<NetOffice.WordApi.XMLSchemaReference> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -320,9 +362,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 11,12,14
+		/// SupportByVersionAttribute Word, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

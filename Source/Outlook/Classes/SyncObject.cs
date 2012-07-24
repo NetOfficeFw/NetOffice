@@ -18,9 +18,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass SyncObject 
-	/// SupportByVersion Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SyncObject : _SyncObject,IEventBinding
 	{
@@ -99,14 +99,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event SyncObject_SyncStartEventHandler _SyncStartEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event SyncObject_SyncStartEventHandler SyncStartEvent
 		{
 			add
@@ -121,14 +121,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event SyncObject_ProgressEventHandler _ProgressEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event SyncObject_ProgressEventHandler ProgressEvent
 		{
 			add
@@ -143,14 +143,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event SyncObject_OnErrorEventHandler _OnErrorEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event SyncObject_OnErrorEventHandler OnErrorEvent
 		{
 			add
@@ -165,14 +165,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event SyncObject_SyncEndEventHandler _SyncEndEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event SyncObject_SyncEndEventHandler SyncEndEvent
 		{
 			add

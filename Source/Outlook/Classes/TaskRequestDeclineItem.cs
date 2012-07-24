@@ -33,15 +33,16 @@ namespace NetOffice.OutlookApi
 	public delegate void TaskRequestDeclineItem_BeforeAutoSaveEventHandler(ref bool Cancel);
 	public delegate void TaskRequestDeclineItem_BeforeReadEventHandler();
 	public delegate void TaskRequestDeclineItem_AfterWriteEventHandler();
+	public delegate void TaskRequestDeclineItem_ReadCompleteEventHandler(ref bool Cancel);
 	#pragma warning restore
 
 	#endregion
 
 	///<summary>
 	/// CoClass TaskRequestDeclineItem 
-	/// SupportByVersion Outlook, 9,10,11,12,14
+	/// SupportByVersion Outlook, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TaskRequestDeclineItem : _TaskRequestDeclineItem,IEventBinding
 	{
@@ -121,14 +122,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -143,14 +144,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -165,14 +166,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -187,14 +188,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -209,14 +210,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -231,14 +232,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -253,14 +254,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -275,14 +276,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -297,14 +298,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -319,14 +320,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_SendEventHandler SendEvent
 		{
 			add
@@ -341,14 +342,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -363,14 +364,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -385,14 +386,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -407,14 +408,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -429,14 +430,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14
+		/// SupportByVersion Outlook, 9,10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14
+		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -451,14 +452,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event TaskRequestDeclineItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -473,14 +474,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -495,14 +496,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -517,14 +518,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -539,14 +540,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -561,14 +562,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -583,14 +584,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -605,14 +606,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event TaskRequestDeclineItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -627,14 +628,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14
+		/// SupportByVersion Outlook, 14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 14)]
+		[SupportByVersion("Outlook", 14,15)]
 		public event TaskRequestDeclineItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -649,14 +650,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14
+		/// SupportByVersion Outlook, 14,15
 		/// </summary>
 		private event TaskRequestDeclineItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 14)]
+		[SupportByVersion("Outlook", 14,15)]
 		public event TaskRequestDeclineItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add
@@ -667,6 +668,28 @@ namespace NetOffice.OutlookApi
 			remove
 			{
 				_AfterWriteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook, 15
+		/// </summary>
+		private event TaskRequestDeclineItem_ReadCompleteEventHandler _ReadCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Outlook 15
+		/// </summary>
+		[SupportByVersion("Outlook", 15)]
+		public event TaskRequestDeclineItem_ReadCompleteEventHandler ReadCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ReadCompleteEvent += value;
+			}
+			remove
+			{
+				_ReadCompleteEvent -= value;
 			}
 		}
 

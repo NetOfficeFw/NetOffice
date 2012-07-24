@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _Conversation 
-	/// SupportByVersion Outlook, 14
+	/// SupportByVersion Outlook, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 14)]
+	[SupportByVersionAttribute("Outlook", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Conversation : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string ConversationID
 		{
 			get
@@ -158,9 +158,9 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Table GetTable()
 		{
 			object[] paramsArray = null;
@@ -170,10 +170,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.SimpleItems GetChildren(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -183,10 +183,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public object GetParent(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -196,9 +196,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.SimpleItems GetRootItems()
 		{
 			object[] paramsArray = null;
@@ -208,10 +208,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string GetAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
@@ -220,10 +220,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
@@ -233,10 +233,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.MAPIFolder GetAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
@@ -246,9 +246,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void MarkAsRead()
 		{
 			object[] paramsArray = null;
@@ -256,9 +256,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void MarkAsUnread()
 		{
 			object[] paramsArray = null;
@@ -266,11 +266,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="categories">string Categories</param>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void SetAlwaysAssignCategories(string categories, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(categories, store);
@@ -278,11 +278,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="alwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation AlwaysDelete</param>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void SetAlwaysDelete(NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alwaysDelete, store);
@@ -290,11 +290,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="moveToFolder">NetOffice.OutlookApi.MAPIFolder MoveToFolder</param>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void SetAlwaysMoveToFolder(NetOffice.OutlookApi.MAPIFolder moveToFolder, NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveToFolder, store);
@@ -302,10 +302,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void ClearAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
@@ -313,10 +313,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void StopAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);
@@ -324,10 +324,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14, 15
 		/// </summary>
 		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14)]
+		[SupportByVersionAttribute("Outlook", 14,15)]
 		public void StopAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(store);

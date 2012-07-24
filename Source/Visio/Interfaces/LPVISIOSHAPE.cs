@@ -59,7 +59,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fIncludeSubShapes">optional bool fIncludeSubShapes</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public Double get_AreaIU(object fIncludeSubShapes)
+		public Double get_AreaIU(bool fIncludeSubShapes)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fIncludeSubShapes);
 			object returnItem = Invoker.PropertyGet(this, "AreaIU", paramsArray);
@@ -72,7 +72,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fIncludeSubShapes">optional bool fIncludeSubShapes</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public Double AreaIU(object fIncludeSubShapes)
+		public Double AreaIU(bool fIncludeSubShapes)
 		{
 			return get_AreaIU(fIncludeSubShapes);
 		}
@@ -83,7 +83,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fIncludeSubShapes">optional bool fIncludeSubShapes</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public Double get_LengthIU(object fIncludeSubShapes)
+		public Double get_LengthIU(bool fIncludeSubShapes)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fIncludeSubShapes);
 			object returnItem = Invoker.PropertyGet(this, "LengthIU", paramsArray);
@@ -96,7 +96,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fIncludeSubShapes">optional bool fIncludeSubShapes</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public Double LengthIU(object fIncludeSubShapes)
+		public Double LengthIU(bool fIncludeSubShapes)
 		{
 			return get_LengthIU(fIncludeSubShapes);
 		}
@@ -2990,7 +2990,7 @@ namespace NetOffice.VisioApi
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		/// <param name="data">optional object Data</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode, object data)
+		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, NetOffice.VisioApi.Enums.VisSelectMode iterationMode, object data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode, data);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
@@ -3019,7 +3019,7 @@ namespace NetOffice.VisioApi
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode)
+		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, NetOffice.VisioApi.Enums.VisSelectMode iterationMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
@@ -3097,7 +3097,7 @@ namespace NetOffice.VisioApi
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		/// <param name="endAngle">optional Double EndAngle = 3.1415927410125732</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle, object endAngle)
+		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, Double startAngle, Double endAngle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle, endAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
@@ -3130,7 +3130,7 @@ namespace NetOffice.VisioApi
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle)
+		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, Double startAngle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
@@ -3145,7 +3145,7 @@ namespace NetOffice.VisioApi
 		/// <param name="rowID">Int32 RowID</param>
 		/// <param name="applyDataGraphicAfterLink">optional bool ApplyDataGraphicAfterLink = true</param>
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void LinkToData(Int32 dataRecordsetID, Int32 rowID, object applyDataGraphicAfterLink)
+		public void LinkToData(Int32 dataRecordsetID, Int32 rowID, bool applyDataGraphicAfterLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID, rowID, applyDataGraphicAfterLink);
 			Invoker.Method(this, "LinkToData", paramsArray);
@@ -3298,11 +3298,25 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisGluedShapesFlags Flags</param>
 		/// <param name="categoryFilter">string CategoryFilter</param>
-		/// <param name="pOtherConnectedShape">NetOffice.VisioApi.IVShape pOtherConnectedShape</param>
+		/// <param name="pOtherConnectedShape">optional NetOffice.VisioApi.IVShape pOtherConnectedShape</param>
 		[SupportByVersionAttribute("Visio", 14)]
 		public Int32[] GluedShapes(NetOffice.VisioApi.Enums.VisGluedShapesFlags flags, string categoryFilter, NetOffice.VisioApi.IVShape pOtherConnectedShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flags, categoryFilter, pOtherConnectedShape);
+			object returnItem = (object)Invoker.MethodReturn(this, "GluedShapes", paramsArray);
+			return (Int32[])returnItem;
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisGluedShapesFlags Flags</param>
+		/// <param name="categoryFilter">string CategoryFilter</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public Int32[] GluedShapes(NetOffice.VisioApi.Enums.VisGluedShapesFlags flags, string categoryFilter)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(flags, categoryFilter);
 			object returnItem = (object)Invoker.MethodReturn(this, "GluedShapes", paramsArray);
 			return (Int32[])returnItem;
 		}
@@ -3373,7 +3387,7 @@ namespace NetOffice.VisioApi
 		/// <param name="objectToDrop">object ObjectToDrop</param>
 		/// <param name="newShape">optional NetOffice.VisioApi.IVShape NewShape = 0</param>
 		[SupportByVersionAttribute("Visio", 14)]
-		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop, object newShape)
+		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop, NetOffice.VisioApi.IVShape newShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop, newShape);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);

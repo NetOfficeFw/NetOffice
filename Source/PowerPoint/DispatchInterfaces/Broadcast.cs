@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Broadcast 
-	/// SupportByVersion PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Broadcast : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string AttendeeUrl
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsBroadcasting
 		{
 			get
@@ -136,15 +136,76 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public NetOffice.OfficeApi.Enums.MsoBroadcastState State
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
+				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return (NetOffice.OfficeApi.Enums.MsoBroadcastState)intReturnItem;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public Int32 Capabilities
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Capabilities", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public string SessionID
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "SessionID", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public string PresenterServiceUrl
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "PresenterServiceUrl", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="serverUrl">string serverUrl</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Start(string serverUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverUrl);
@@ -152,13 +213,45 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void End()
 		{
 			object[] paramsArray = null;
 			Invoker.Method(this, "End", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public void Pause()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Pause", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public void Resume()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Resume", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// </summary>
+		/// <param name="notesUrl">string notesUrl</param>
+		/// <param name="notesWacUrl">string notesWacUrl</param>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public void AddMeetingNotes(string notesUrl, string notesWacUrl)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(notesUrl, notesWacUrl);
+			Invoker.Method(this, "AddMeetingNotes", paramsArray);
 		}
 
 		#endregion

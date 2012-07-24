@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Editor 
-	/// SupportByVersion Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Editor : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string ID
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string Name
 		{
 			get
@@ -104,10 +104,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
@@ -120,10 +120,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Range NextRange
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -167,11 +167,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -188,9 +188,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -198,9 +198,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void DeleteAll()
 		{
 			object[] paramsArray = null;
@@ -208,9 +208,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void SelectAll()
 		{
 			object[] paramsArray = null;

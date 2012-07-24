@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PropertyTests 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PropertyTests : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PropertyTest>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.PropertyTest this[Int32 index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -112,29 +112,56 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		/// <param name="value">object Value</param>
-		/// <param name="secondValue">object SecondValue</param>
+		/// <param name="value">optional object Value</param>
+		/// <param name="secondValue">optional object SecondValue</param>
 		/// <param name="connector">optional NetOffice.OfficeApi.Enums.MsoConnector Connector = 1</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, NetOffice.OfficeApi.Enums.MsoConnector connector)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue, connector);
 			Invoker.Method(this, "Add", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		/// <param name="value">object Value</param>
-		/// <param name="secondValue">object SecondValue</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, condition);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
+		/// <param name="value">optional object Value</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value);
+			Invoker.Method(this, "Add", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
+		/// <param name="value">optional object Value</param>
+		/// <param name="secondValue">optional object SecondValue</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue);
@@ -142,10 +169,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Remove(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -157,9 +184,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.PropertyTest> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.PropertyTest> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -172,9 +199,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

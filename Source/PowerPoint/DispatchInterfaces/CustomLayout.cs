@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface CustomLayout 
-	/// SupportByVersion PowerPoint, 12,14
+	/// SupportByVersion PowerPoint, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14)]
+	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomLayout : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Shapes Shapes
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.HeadersFooters HeadersFooters
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.ShapeRange Background
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string Name
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public Single Height
 		{
 			get
@@ -190,10 +190,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public Single Width
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Hyperlinks Hyperlinks
 		{
 			get
@@ -221,10 +221,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Design Design
 		{
 			get
@@ -237,10 +237,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.TimeLine TimeLine
 		{
 			get
@@ -253,10 +253,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.SlideShowTransition SlideShowTransition
 		{
 			get
@@ -269,10 +269,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string MatchingName
 		{
 			get
@@ -289,10 +289,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Preserved
 		{
 			get
@@ -310,10 +310,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public Int32 Index
 		{
 			get
@@ -325,10 +325,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayMasterShapes
 		{
 			get
@@ -346,10 +346,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FollowMasterBackground
 		{
 			get
@@ -367,10 +367,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.ThemeColorScheme ThemeColorScheme
 		{
 			get
@@ -383,10 +383,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.CustomerData CustomerData
 		{
 			get
@@ -398,14 +398,30 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion PowerPoint 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("PowerPoint", 15)]
+		public NetOffice.PowerPointApi.Guides Guides
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Guides", paramsArray);
+				NetOffice.PowerPointApi.Guides newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Guides.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Guides;
+				return newObject;
+			}
+		}
+
 		#endregion
 
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -413,9 +429,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -423,9 +439,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Cut()
 		{
 			object[] paramsArray = null;
@@ -433,9 +449,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -443,9 +459,9 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.CustomLayout Duplicate()
 		{
 			object[] paramsArray = null;
@@ -455,10 +471,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="toPos">Int32 toPos</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void MoveTo(Int32 toPos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(toPos);

@@ -11,7 +11,6 @@
     <RootNamespace>NetOffice.ADODBApi</RootNamespace>
     <AssemblyName>ADODBApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>ADODBApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -103,6 +102,9 @@
     <Compile Include="Interfaces\ADORecordsetConstruction.cs" />
     <Compile Include="Interfaces\ADORecordConstruction.cs" />
     <Compile Include="Interfaces\ADOStreamConstruction.cs" />
+    <Compile Include="Interfaces\ConnectionEventsVt_Deprecated.cs" />
+    <Compile Include="Interfaces\RecordsetEventsVt_Deprecated.cs" />
+    <Compile Include="Interfaces\ADORecordsetConstruction_Deprecated.cs" />
     <Compile Include="DispatchInterfaces\_Collection.cs" />
     <Compile Include="DispatchInterfaces\_DynaCollection.cs" />
     <Compile Include="DispatchInterfaces\_ADO.cs" />
@@ -129,6 +131,26 @@
     <Compile Include="DispatchInterfaces\_Record.cs" />
     <Compile Include="DispatchInterfaces\IRecFields.cs" />
     <Compile Include="DispatchInterfaces\_Stream.cs" />
+    <Compile Include="DispatchInterfaces\Command15_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Connection_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Connection15_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Recordset_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Recordset21_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Recordset20_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Recordset15_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Fields_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Fields20_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Fields15_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Field_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Field20_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Parameter_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Parameters_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Command_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\ConnectionEvents_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\RecordsetEvents_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Record_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\_Stream_Deprecated.cs" />
+    <Compile Include="DispatchInterfaces\Field15_Deprecated.cs" />
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\Command.cs" />
     <Compile Include="Classes\Recordset.cs" />

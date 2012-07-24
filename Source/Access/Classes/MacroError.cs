@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass MacroError 
-	/// SupportByVersion Access, 12,14
+	/// SupportByVersion Access, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MacroError : _MacroError
 	{

@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface Search 
-	/// SupportByVersion Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Search : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public string Filter
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public bool IsSynchronous
 		{
 			get
@@ -169,10 +169,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi._Results Results
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public bool SearchSubFolders
 		{
 			get
@@ -200,10 +200,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public string Tag
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public string Scope
 		{
 			get
@@ -234,9 +234,9 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public void Stop()
 		{
 			object[] paramsArray = null;
@@ -244,10 +244,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 11, 12, 14
+		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("Outlook", 11,12,14)]
+		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public NetOffice.OutlookApi.MAPIFolder Save(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -257,9 +257,9 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14
+		/// SupportByVersion Outlook 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14)]
+		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Table GetTable()
 		{
 			object[] paramsArray = null;

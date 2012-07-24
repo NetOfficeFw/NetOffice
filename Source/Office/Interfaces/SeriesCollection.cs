@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface SeriesCollection 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable<NetOffice.OfficeApi.IMsoSeries>
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public object Application
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -138,11 +138,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.IMsoSeries this[object index]
 		{
@@ -160,15 +160,15 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -177,11 +177,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.IMsoSeries Add(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -191,13 +191,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -206,14 +206,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -222,15 +222,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.IMsoSeries Add(object source, object rowcol, object seriesLabels, object categoryLabels)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.IMsoSeries Add(object source, NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -239,12 +239,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -261,11 +261,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -282,12 +282,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Extend(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -304,15 +304,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
 		/// <param name="newSeries">optional object NewSeries</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace, newSeries);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
@@ -328,10 +328,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Paste()
 		{
 			object[] paramsArray = null;
@@ -348,12 +348,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public object Paste(object rowcol)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
@@ -369,13 +369,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public object Paste(object rowcol, object seriesLabels)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
@@ -391,14 +391,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
@@ -414,15 +414,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.OfficeApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public object Paste(NetOffice.OfficeApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
@@ -438,9 +438,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.IMsoSeries NewSeries()
 		{
 			object[] paramsArray = null;
@@ -454,9 +454,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.IMsoSeries> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.IMsoSeries> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -469,9 +469,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

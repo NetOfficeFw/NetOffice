@@ -48,7 +48,7 @@ namespace PowerPointExamplesCS4
                 // save the document 
                 string fileExtension = GetDefaultExtension(powerApplication);
                 documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
-                presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
+                presentation.SaveAs(documentFile);
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {

@@ -33,7 +33,7 @@ namespace PowerPointExamplesCS4
             // save the document
             string fileExtension = GetDefaultExtension(powerApplication);
             string documentFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
-            presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
+            presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
             powerApplication.Quit();

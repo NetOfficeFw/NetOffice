@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IAssistance 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAssistance : COMObject
 	{
@@ -78,22 +78,22 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
 		/// <param name="scope">optional string Scope = </param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void ShowHelp(object helpId, object scope)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void ShowHelp(string helpId, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId, scope);
 			Invoker.Method(this, "ShowHelp", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp()
 		{
 			object[] paramsArray = null;
@@ -101,35 +101,35 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void ShowHelp(object helpId)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void ShowHelp(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);
 			Invoker.Method(this, "ShowHelp", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="query">string Query</param>
 		/// <param name="scope">optional string Scope = </param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void SearchHelp(string query, object scope)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void SearchHelp(string query, string scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, scope);
 			Invoker.Method(this, "SearchHelp", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="query">string Query</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SearchHelp(string query)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query);
@@ -137,10 +137,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SetDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);
@@ -148,10 +148,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ClearDefaultContext(string helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);

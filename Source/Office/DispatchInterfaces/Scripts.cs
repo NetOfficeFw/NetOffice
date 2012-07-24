@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Scripts 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Scripts : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.Script>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.Script this[object index]
 		{
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -136,8 +136,8 @@ namespace NetOffice.OfficeApi
 		/// <param name="id">optional string Id = </param>
 		/// <param name="extended">optional string Extended = </param>
 		/// <param name="scriptText">optional string ScriptText = </param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended, object scriptText)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended, string scriptText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id, extended, scriptText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -146,10 +146,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Script Add()
 		{
 			object[] paramsArray = null;
@@ -159,11 +159,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Script Add(object anchor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor);
@@ -173,13 +173,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.Script Add(object anchor, object location)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -188,14 +188,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
 		/// <param name="language">optional NetOffice.OfficeApi.Enums.MsoScriptLanguage Language = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -204,15 +204,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
 		/// <param name="language">optional NetOffice.OfficeApi.Enums.MsoScriptLanguage Language = 2</param>
 		/// <param name="id">optional string Id = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -229,8 +229,8 @@ namespace NetOffice.OfficeApi
 		/// <param name="id">optional string Id = </param>
 		/// <param name="extended">optional string Extended = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
-		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended)
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id, extended);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -239,9 +239,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -253,9 +253,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.Script> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.Script> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -268,9 +268,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

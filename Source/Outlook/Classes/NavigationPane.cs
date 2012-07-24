@@ -15,9 +15,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass NavigationPane 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationPane : _NavigationPane,IEventBinding
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14
+		/// SupportByVersion Outlook, 12,14,15
 		/// </summary>
 		private event NavigationPane_ModuleSwitchEventHandler _ModuleSwitchEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14
+		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14)]
+		[SupportByVersion("Outlook", 12,14,15)]
 		public event NavigationPane_ModuleSwitchEventHandler ModuleSwitchEvent
 		{
 			add

@@ -11,9 +11,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _LocalVars 
-	/// SupportByVersion Access, 14
+	/// SupportByVersion Access, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _LocalVars : COMObject ,IEnumerable<NetOffice.AccessApi.LocalVar>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -92,11 +92,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Parent
 		{
@@ -110,11 +110,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.LocalVar this[object index]
 		{
@@ -128,10 +128,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Count
 		{
@@ -148,12 +148,12 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="value">object Value</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public void Add(string name, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
@@ -161,11 +161,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -178,9 +178,9 @@ namespace NetOffice.AccessApi
        #region IEnumerable<NetOffice.AccessApi.LocalVar> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Access, 14
+		/// SupportByVersionAttribute Access, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
        public IEnumerator<NetOffice.AccessApi.LocalVar> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -193,9 +193,9 @@ namespace NetOffice.AccessApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Access, 14
+		/// SupportByVersionAttribute Access, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

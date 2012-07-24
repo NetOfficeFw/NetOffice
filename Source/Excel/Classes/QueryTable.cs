@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 
 	///<summary>
 	/// CoClass QueryTable 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryTable : _QueryTable,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event QueryTable_BeforeRefreshEventHandler _BeforeRefreshEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event QueryTable_AfterRefreshEventHandler _AfterRefreshEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event QueryTable_AfterRefreshEventHandler AfterRefreshEvent
 		{
 			add

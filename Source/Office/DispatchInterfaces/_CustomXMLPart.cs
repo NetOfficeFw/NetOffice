@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface _CustomXMLPart 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CustomXMLPart : _IMsoDispObj
 	{
@@ -74,11 +74,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLNode DocumentElement
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Id
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string NamespaceURI
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
 		{
 			get
@@ -158,10 +158,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string XML
 		{
 			get
@@ -189,10 +189,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLValidationErrors Errors
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool BuiltIn
 		{
 			get
@@ -224,7 +224,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -232,19 +232,19 @@ namespace NetOffice.OfficeApi
 		/// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		/// <param name="nodeValue">optional string NodeValue = </param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, NetOffice.OfficeApi.CustomXMLNode nextSibling, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name, namespaceURI, nextSibling, nodeType, nodeValue);
 			Invoker.Method(this, "AddNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent);
@@ -252,49 +252,49 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name);
 			Invoker.Method(this, "AddNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name, namespaceURI);
 			Invoker.Method(this, "AddNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, NetOffice.OfficeApi.CustomXMLNode nextSibling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name, namespaceURI, nextSibling);
 			Invoker.Method(this, "AddNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -302,17 +302,17 @@ namespace NetOffice.OfficeApi
 		/// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, string name, string namespaceURI, NetOffice.OfficeApi.CustomXMLNode nextSibling, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, name, namespaceURI, nextSibling, nodeType);
 			Invoker.Method(this, "AddNode", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -320,10 +320,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="filePath">string FilePath</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool Load(string filePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filePath);
@@ -332,10 +332,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="xML">string XML</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool LoadXML(string xML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML);
@@ -344,10 +344,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
@@ -357,10 +357,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);

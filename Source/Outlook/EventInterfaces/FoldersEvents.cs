@@ -10,19 +10,19 @@ namespace NetOffice.OutlookApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[ComImport, Guid("00063076-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface FoldersEvents
 	{
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void FolderRemove();
 	}

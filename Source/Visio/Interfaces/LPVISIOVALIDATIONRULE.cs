@@ -323,12 +323,39 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14
 		/// </summary>
-		/// <param name="targetPage">NetOffice.VisioApi.IVPage TargetPage</param>
-		/// <param name="targetShape">NetOffice.VisioApi.IVShape TargetShape</param>
+		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
+		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape TargetShape</param>
 		[SupportByVersionAttribute("Visio", 14)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage, NetOffice.VisioApi.IVShape targetShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, targetShape);
+			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
+			NetOffice.VisioApi.IVValidationIssue newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public NetOffice.VisioApi.IVValidationIssue AddIssue()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
+			NetOffice.VisioApi.IVValidationIssue newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);
 			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
 			NetOffice.VisioApi.IVValidationIssue newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
 			return newObject;

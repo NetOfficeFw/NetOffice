@@ -11,6 +11,7 @@ using NetOffice;
 	Outlook - Microsoft.Office.Interop.Outlook, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
 	Outlook - Microsoft Outlook 12.0 Object Library - 12
 	Outlook - Microsoft Outlook 14.0 Object Library - 14
+	Outlook - Microsoft Outlook 15.0 Object Library - 15
 
 */
 

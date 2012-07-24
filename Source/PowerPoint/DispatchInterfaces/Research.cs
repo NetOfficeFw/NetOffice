@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Research 
-	/// SupportByVersion PowerPoint, 12,14
+	/// SupportByVersion PowerPoint, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14)]
+	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -111,28 +111,53 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">object QueryString</param>
-		/// <param name="queryLanguage">object QueryLanguage</param>
+		/// <param name="queryString">optional object QueryString</param>
+		/// <param name="queryLanguage">optional object QueryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public void Query(string serviceID, object queryString, object queryLanguage, bool useSelection, bool launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			Invoker.Method(this, "Query", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">object QueryString</param>
-		/// <param name="queryLanguage">object QueryLanguage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public void Query(string serviceID)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);
+			Invoker.Method(this, "Query", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 12, 14, 15
+		/// </summary>
+		/// <param name="serviceID">string ServiceID</param>
+		/// <param name="queryString">optional object QueryString</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public void Query(string serviceID, object queryString)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString);
+			Invoker.Method(this, "Query", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion PowerPoint 12, 14, 15
+		/// </summary>
+		/// <param name="serviceID">string ServiceID</param>
+		/// <param name="queryString">optional object QueryString</param>
+		/// <param name="queryLanguage">optional object QueryLanguage</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID, object queryString, object queryLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage);
@@ -140,26 +165,26 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">object QueryString</param>
-		/// <param name="queryLanguage">object QueryLanguage</param>
+		/// <param name="queryString">optional object QueryString</param>
+		/// <param name="queryLanguage">optional object QueryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
-		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection)
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		public void Query(string serviceID, object queryString, object queryLanguage, bool useSelection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection);
 			Invoker.Method(this, "Query", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="language1">object Language1</param>
 		/// <param name="language2">object Language2</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void SetLanguagePair(object language1, object language2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(language1, language2);
@@ -167,10 +192,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14
+		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public bool IsResearchService(string serviceID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);

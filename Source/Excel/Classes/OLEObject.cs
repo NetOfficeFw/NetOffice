@@ -16,9 +16,9 @@ namespace NetOffice.ExcelApi
 
 	///<summary>
 	/// CoClass OLEObject 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEObject : _OLEObject,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event OLEObject_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event OLEObject_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event OLEObject_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event OLEObject_LostFocusEventHandler LostFocusEvent
 		{
 			add

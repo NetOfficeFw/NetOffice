@@ -9,9 +9,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterApplicationPreferences 
-	/// SupportByVersion Office, 14
+	/// SupportByVersion Office, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
 	{
@@ -77,10 +77,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="plcid">Int32 plcid</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetLcid(out Int32 plcid)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="phwnd">Int32 phwnd</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetHwnd(out Int32 phwnd)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -107,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetApplication(out string pbstrApplication)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -122,10 +122,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

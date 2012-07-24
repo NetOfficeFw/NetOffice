@@ -9,9 +9,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IXmlDataBinding 
-	/// SupportByVersion Excel, 11,12,14
+	/// SupportByVersion Excel, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14)]
+	[SupportByVersionAttribute("Excel", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IXmlDataBinding : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string _Default
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string SourceUrl
 		{
 			get
@@ -156,9 +156,9 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlXmlImportResult Refresh()
 		{
 			object[] paramsArray = null;
@@ -168,10 +168,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
 		/// <param name="url">string Url</param>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 LoadSettings(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
@@ -180,9 +180,9 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14
+		/// SupportByVersion Excel 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 ClearSettings()
 		{
 			object[] paramsArray = null;

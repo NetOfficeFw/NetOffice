@@ -219,10 +219,10 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="recordsAffected">object RecordsAffected</param>
-		/// <param name="parameters">object Parameters</param>
+		/// <param name="parameters">optional object Parameters</param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters, object options)
+		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters, Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -234,7 +234,21 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		/// <param name="recordsAffected">object RecordsAffected</param>
-		/// <param name="parameters">object Parameters</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
+			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
+			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1, 2.5
+		/// </summary>
+		/// <param name="recordsAffected">object RecordsAffected</param>
+		/// <param name="parameters">optional object Parameters</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters)
@@ -254,7 +268,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="size">optional Int32 Size = 0</param>
 		/// <param name="value">optional object Value</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size, object value)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
@@ -281,7 +295,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(object name)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
@@ -296,7 +310,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
@@ -312,7 +326,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
@@ -329,7 +343,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="size">optional Int32 Size = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size)
+		public NetOffice.ADODBApi._Parameter CreateParameter(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, NetOffice.ADODBApi.Enums.ParameterDirectionEnum direction, Int32 size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);

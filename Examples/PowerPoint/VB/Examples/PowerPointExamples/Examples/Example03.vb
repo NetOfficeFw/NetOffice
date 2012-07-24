@@ -43,7 +43,7 @@ Public Class Example03
             ' save the document 
             Dim fileExtension As String = GetDefaultExtension(powerApplication)
             documentFile = String.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension)
-            presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue)
+            presentation.SaveAs(documentFile)
 
         Catch throwedException As Exception
 

@@ -14,9 +14,9 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CustomXMLSchemaCollection 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLSchemaCollection : _CustomXMLSchemaCollection
 	{

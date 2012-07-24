@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface XSLTransforms 
-	/// SupportByVersion Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XSLTransforms : COMObject ,IEnumerable<NetOffice.WordApi.XSLTransform>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -121,11 +121,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.XSLTransform this[object index]
 		{
@@ -159,13 +159,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="location">string Location</param>
-		/// <param name="alias">object Alias</param>
+		/// <param name="alias">optional object Alias</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XSLTransform Add(string location, object alias, object installForAllUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XSLTransform Add(string location, object alias, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location, alias, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -174,12 +174,26 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="location">string Location</param>
-		/// <param name="alias">object Alias</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XSLTransform Add(string location)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(location);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.XSLTransform newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 11, 12, 14, 15
+		/// </summary>
+		/// <param name="location">string Location</param>
+		/// <param name="alias">optional object Alias</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XSLTransform Add(string location, object alias)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location, alias);
@@ -193,9 +207,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.XSLTransform> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 11,12,14
+		/// SupportByVersionAttribute Word, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
        public IEnumerator<NetOffice.WordApi.XSLTransform> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -208,9 +222,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 11,12,14
+		/// SupportByVersionAttribute Word, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -17,9 +17,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Results 
-	/// SupportByVersion Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Results : _Results,IEventBinding
 	{
@@ -98,14 +98,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event Results_ItemAddEventHandler _ItemAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event Results_ItemAddEventHandler ItemAddEvent
 		{
 			add
@@ -120,14 +120,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event Results_ItemChangeEventHandler _ItemChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event Results_ItemChangeEventHandler ItemChangeEvent
 		{
 			add
@@ -142,14 +142,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14
+		/// SupportByVersion Outlook, 10,11,12,14,15
 		/// </summary>
 		private event Results_ItemRemoveEventHandler _ItemRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14
+		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14)]
+		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event Results_ItemRemoveEventHandler ItemRemoveEvent
 		{
 			add

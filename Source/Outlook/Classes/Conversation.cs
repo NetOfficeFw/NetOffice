@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Conversation 
-	/// SupportByVersion Outlook, 14
+	/// SupportByVersion Outlook, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 14)]
+	[SupportByVersionAttribute("Outlook", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Conversation : _Conversation
 	{

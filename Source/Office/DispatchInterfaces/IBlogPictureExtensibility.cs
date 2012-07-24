@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface IBlogPictureExtensibility 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogPictureExtensibility : COMObject
 	{
@@ -78,11 +78,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="blogPictureProvider">string BlogPictureProvider</param>
 		/// <param name="friendlyName">string FriendlyName</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void BlogPictureProviderProperties(out string blogPictureProvider, out string friendlyName)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -95,13 +95,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="blogProvider">string BlogProvider</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
 		/// <param name="document">object Document</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(account, blogProvider, parentWindow, document);
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="account">string Account</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="image">object Image</param>
 		/// <param name="pictureURI">string PictureURI</param>
 		/// <param name="imageType">Int32 ImageType</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void PublishPicture(string account, Int32 parentWindow, object document, object image, out string pictureURI, Int32 imageType)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);

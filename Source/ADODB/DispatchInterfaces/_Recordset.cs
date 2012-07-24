@@ -725,7 +725,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Delete(object affectRecords)
+		public void Delete(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -749,7 +749,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="fields">optional object Fields</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public object GetRows(object rows, object start, object fields)
+		public object GetRows(Int32 rows, object start, object fields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, start, fields);
 			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
@@ -790,7 +790,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="rows">optional Int32 Rows = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public object GetRows(object rows)
+		public object GetRows(Int32 rows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows);
 			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
@@ -812,7 +812,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="start">optional object Start</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public object GetRows(object rows, object start)
+		public object GetRows(Int32 rows, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rows, start);
 			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
@@ -894,13 +894,13 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="activeConnection">object ActiveConnection</param>
+		/// <param name="source">optional object Source</param>
+		/// <param name="activeConnection">optional object ActiveConnection</param>
 		/// <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
 		/// <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object source, object activeConnection, object cursorType, object lockType, object options)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, cursorType, lockType, options);
 			Invoker.Method(this, "Open", paramsArray);
@@ -909,8 +909,31 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="activeConnection">object ActiveConnection</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		public void Open()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Open", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1, 2.5
+		/// </summary>
+		/// <param name="source">optional object Source</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		public void Open(object source)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source);
+			Invoker.Method(this, "Open", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.1, 2.5
+		/// </summary>
+		/// <param name="source">optional object Source</param>
+		/// <param name="activeConnection">optional object ActiveConnection</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Open(object source, object activeConnection)
@@ -922,12 +945,12 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="activeConnection">object ActiveConnection</param>
+		/// <param name="source">optional object Source</param>
+		/// <param name="activeConnection">optional object ActiveConnection</param>
 		/// <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object source, object activeConnection, object cursorType)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, cursorType);
 			Invoker.Method(this, "Open", paramsArray);
@@ -936,13 +959,13 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="activeConnection">object ActiveConnection</param>
+		/// <param name="source">optional object Source</param>
+		/// <param name="activeConnection">optional object ActiveConnection</param>
 		/// <param name="cursorType">optional NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType = -1</param>
 		/// <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object source, object activeConnection, object cursorType, object lockType)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, cursorType, lockType);
 			Invoker.Method(this, "Open", paramsArray);
@@ -953,7 +976,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Requery(object options)
+		public void Requery(Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "Requery", paramsArray);
@@ -976,7 +999,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void _xResync(object affectRecords)
+		public void _xResync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "_xResync", paramsArray);
@@ -1047,7 +1070,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void UpdateBatch(object affectRecords)
+		public void UpdateBatch(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "UpdateBatch", paramsArray);
@@ -1069,7 +1092,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void CancelBatch(object affectRecords)
+		public void CancelBatch(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "CancelBatch", paramsArray);
@@ -1132,7 +1155,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Find(string criteria, object skipRecords, object searchDirection, object start)
+		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords, searchDirection, start);
 			Invoker.Method(this, "Find", paramsArray);
@@ -1157,7 +1180,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="skipRecords">optional Int32 SkipRecords = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Find(string criteria, object skipRecords)
+		public void Find(string criteria, Int32 skipRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords);
 			Invoker.Method(this, "Find", paramsArray);
@@ -1171,7 +1194,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="searchDirection">optional NetOffice.ADODBApi.Enums.SearchDirectionEnum SearchDirection = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Find(string criteria, object skipRecords, object searchDirection)
+		public void Find(string criteria, Int32 skipRecords, NetOffice.ADODBApi.Enums.SearchDirectionEnum searchDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(criteria, skipRecords, searchDirection);
 			Invoker.Method(this, "Find", paramsArray);
@@ -1183,7 +1206,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="keyValues">object KeyValues</param>
 		/// <param name="seekOption">optional NetOffice.ADODBApi.Enums.SeekEnum SeekOption = 1</param>
 		[SupportByVersionAttribute("ADODB", 2.1)]
-		public void Seek(object keyValues, object seekOption)
+		public void Seek(object keyValues, NetOffice.ADODBApi.Enums.SeekEnum seekOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(keyValues, seekOption);
 			Invoker.Method(this, "Seek", paramsArray);
@@ -1214,11 +1237,11 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
+		/// <param name="fileName">optional string FileName</param>
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void _xSave(string fileName, object persistFormat)
+		public void _xSave(string fileName, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, persistFormat);
 			Invoker.Method(this, "_xSave", paramsArray);
@@ -1227,7 +1250,19 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void _xSave()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "_xSave", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.5
+		/// </summary>
+		/// <param name="fileName">optional string FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1242,11 +1277,11 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
-		/// <param name="columnDelimeter">string ColumnDelimeter</param>
-		/// <param name="rowDelimeter">string RowDelimeter</param>
-		/// <param name="nullExpr">string NullExpr</param>
+		/// <param name="columnDelimeter">optional string ColumnDelimeter</param>
+		/// <param name="rowDelimeter">optional string RowDelimeter</param>
+		/// <param name="nullExpr">optional string NullExpr</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string GetString(object stringFormat, object numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter, string nullExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter, rowDelimeter, nullExpr);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
@@ -1256,12 +1291,51 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
-		/// <param name="numRows">optional Int32 NumRows = -1</param>
-		/// <param name="columnDelimeter">string ColumnDelimeter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string GetString(object stringFormat, object numRows, string columnDelimeter)
+		public string GetString()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.5
+		/// </summary>
+		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat);
+			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.5
+		/// </summary>
+		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+		/// <param name="numRows">optional Int32 NumRows = -1</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows);
+			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.5
+		/// </summary>
+		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
+		/// <param name="numRows">optional Int32 NumRows = -1</param>
+		/// <param name="columnDelimeter">optional string ColumnDelimeter</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
@@ -1273,11 +1347,11 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
-		/// <param name="columnDelimeter">string ColumnDelimeter</param>
-		/// <param name="rowDelimeter">string RowDelimeter</param>
+		/// <param name="columnDelimeter">optional string ColumnDelimeter</param>
+		/// <param name="rowDelimeter">optional string RowDelimeter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string GetString(object stringFormat, object numRows, string columnDelimeter, string rowDelimeter)
+		public string GetString(NetOffice.ADODBApi.Enums.StringFormatEnum stringFormat, Int32 numRows, string columnDelimeter, string rowDelimeter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringFormat, numRows, columnDelimeter, rowDelimeter);
 			object returnItem = Invoker.MethodReturn(this, "GetString", paramsArray);
@@ -1303,7 +1377,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public NetOffice.ADODBApi._Recordset Clone(object lockType)
+		public NetOffice.ADODBApi._Recordset Clone(NetOffice.ADODBApi.Enums.LockTypeEnum lockType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lockType);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
@@ -1330,7 +1404,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Resync(object affectRecords, object resyncValues)
+		public void Resync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords, NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords, resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);
@@ -1353,7 +1427,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Resync(object affectRecords)
+		public void Resync(NetOffice.ADODBApi.Enums.AffectEnum affectRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(affectRecords);
 			Invoker.Method(this, "Resync", paramsArray);
@@ -1362,10 +1436,10 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		/// <param name="destination">object Destination</param>
+		/// <param name="destination">optional object Destination</param>
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Save(object destination, object persistFormat)
+		public void Save(object destination, NetOffice.ADODBApi.Enums.PersistFormatEnum persistFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, persistFormat);
 			Invoker.Method(this, "Save", paramsArray);
@@ -1374,7 +1448,18 @@ namespace NetOffice.ADODBApi
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>
-		/// <param name="destination">object Destination</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("ADODB", 2.5)]
+		public void Save()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Save", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion ADODB 2.5
+		/// </summary>
+		/// <param name="destination">optional object Destination</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Save(object destination)

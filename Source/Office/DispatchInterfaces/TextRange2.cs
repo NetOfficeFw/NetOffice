@@ -56,13 +56,13 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
@@ -71,24 +71,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Paragraphs
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Paragraphs(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Paragraphs(Int32 start, Int32 length)
 		{
 			return get_Paragraphs(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
@@ -97,24 +97,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Paragraphs
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Paragraphs(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Paragraphs(Int32 start)
 		{
 			return get_Paragraphs(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
@@ -123,24 +123,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Sentences
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Sentences(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Sentences(Int32 start, Int32 length)
 		{
 			return get_Sentences(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
@@ -149,24 +149,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Sentences
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Sentences(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Sentences(Int32 start)
 		{
 			return get_Sentences(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Words(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
@@ -175,24 +175,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Words
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Words(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Words(Int32 start, Int32 length)
 		{
 			return get_Words(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Words(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
@@ -201,24 +201,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Words
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Words(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Words(Int32 start)
 		{
 			return get_Words(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Characters(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
@@ -227,24 +227,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Characters(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Characters(Int32 start, Int32 length)
 		{
 			return get_Characters(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Characters(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
@@ -253,24 +253,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Characters(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Characters(Int32 start)
 		{
 			return get_Characters(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Lines(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
@@ -279,24 +279,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Lines
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Lines(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Lines(Int32 start, Int32 length)
 		{
 			return get_Lines(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Lines(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
@@ -305,24 +305,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Lines
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Lines(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Lines(Int32 start)
 		{
 			return get_Lines(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Runs(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Runs", paramsArray);
@@ -331,24 +331,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Runs
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Runs(object start, object length)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Runs(Int32 start, Int32 length)
 		{
 			return get_Runs(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 get_Runs(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Runs", paramsArray);
@@ -357,24 +357,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Alias for get_Runs
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Runs(object start)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Runs(Int32 start)
 		{
 			return get_Runs(start);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start, object length)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "MathZones", paramsArray);
@@ -383,24 +383,24 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Alias for get_MathZones
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.TextRange2 MathZones(object start, object length)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.TextRange2 MathZones(Int32 start, Int32 length)
 		{
 			return get_MathZones(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "MathZones", paramsArray);
@@ -409,12 +409,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Alias for get_MathZones
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.TextRange2 MathZones(object start)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.TextRange2 MathZones(Int32 start)
 		{
 			return get_MathZones(start);
 		}
@@ -429,9 +429,9 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// DispatchInterface TextRange2 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TextRange2 : TextRange2_ ,IEnumerable<NetOffice.OfficeApi.TextRange2>
 	{
@@ -493,10 +493,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Text
 		{
 			get
@@ -513,10 +513,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -528,11 +528,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -545,10 +545,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Paragraphs
 		{
 			get
@@ -561,10 +561,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Sentences
 		{
 			get
@@ -577,10 +577,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Words
 		{
 			get
@@ -593,10 +593,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Characters
 		{
 			get
@@ -609,10 +609,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Lines
 		{
 			get
@@ -625,10 +625,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Runs
 		{
 			get
@@ -641,10 +641,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.ParagraphFormat2 ParagraphFormat
 		{
 			get
@@ -657,10 +657,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Font2 Font
 		{
 			get
@@ -673,10 +673,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Length
 		{
 			get
@@ -688,10 +688,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Start
 		{
 			get
@@ -703,10 +703,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Single BoundLeft
 		{
 			get
@@ -718,10 +718,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Single BoundTop
 		{
 			get
@@ -733,10 +733,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Single BoundWidth
 		{
 			get
@@ -748,10 +748,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Single BoundHeight
 		{
 			get
@@ -763,10 +763,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
 			get
@@ -784,10 +784,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.TextRange2 MathZones
 		{
 			get
@@ -804,10 +804,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.TextRange2 this[object index]
 		{
@@ -821,9 +821,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 TrimText()
 		{
 			object[] paramsArray = null;
@@ -833,11 +833,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 InsertAfter(object newText)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 InsertAfter(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
@@ -846,10 +846,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 InsertAfter()
 		{
 			object[] paramsArray = null;
@@ -859,11 +859,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 InsertBefore(object newText)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 InsertBefore(string newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
@@ -872,10 +872,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 InsertBefore()
 		{
 			object[] paramsArray = null;
@@ -885,13 +885,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="fontName">string FontName</param>
 		/// <param name="charNumber">Int32 CharNumber</param>
 		/// <param name="unicode">optional NetOffice.OfficeApi.Enums.MsoTriState Unicode = 0</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, object unicode)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, NetOffice.OfficeApi.Enums.MsoTriState unicode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
 			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
@@ -900,12 +900,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="fontName">string FontName</param>
 		/// <param name="charNumber">Int32 CharNumber</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber);
@@ -915,9 +915,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Select()
 		{
 			object[] paramsArray = null;
@@ -925,9 +925,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Cut()
 		{
 			object[] paramsArray = null;
@@ -935,9 +935,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -945,9 +945,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -955,9 +955,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Paste()
 		{
 			object[] paramsArray = null;
@@ -967,10 +967,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="format">NetOffice.OfficeApi.Enums.MsoClipboardFormat Format</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 PasteSpecial(NetOffice.OfficeApi.Enums.MsoClipboardFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);
@@ -980,10 +980,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoTextChangeCase Type</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ChangeCase(NetOffice.OfficeApi.Enums.MsoTextChangeCase type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -991,9 +991,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void AddPeriods()
 		{
 			object[] paramsArray = null;
@@ -1001,9 +1001,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void RemovePeriods()
 		{
 			object[] paramsArray = null;
@@ -1011,14 +1011,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase, object wholeWords)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1027,11 +1027,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Find(string findWhat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat);
@@ -1041,13 +1041,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1056,14 +1056,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1072,15 +1072,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="replaceWhat">string ReplaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase, object wholeWords)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1089,12 +1089,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="replaceWhat">string ReplaceWhat</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat);
@@ -1104,14 +1104,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="replaceWhat">string ReplaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1120,15 +1120,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="findWhat">string FindWhat</param>
 		/// <param name="replaceWhat">string ReplaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1137,7 +1137,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="x1">Single X1</param>
 		/// <param name="y1">Single Y1</param>
@@ -1147,7 +1147,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="y3">Single Y3</param>
 		/// <param name="x4">Single x4</param>
 		/// <param name="y4">Single y4</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void RotatedBounds(out Single x1, out Single y1, out Single x2, out Single y2, out Single x3, out Single y3, out Single x4, out Single y4)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
@@ -1172,9 +1172,9 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void RtlRun()
 		{
 			object[] paramsArray = null;
@@ -1182,13 +1182,57 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void LtrRun()
 		{
 			object[] paramsArray = null;
 			Invoker.Method(this, "LtrRun", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 15
+		/// </summary>
+		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType ChartFieldType</param>
+		/// <param name="formula">optional string Formula = </param>
+		/// <param name="position">optional Int32 Position = -1</param>
+		[SupportByVersionAttribute("Office", 15)]
+		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, string formula, Int32 position)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(chartFieldType, formula, position);
+			object returnItem = Invoker.MethodReturn(this, "InsertChartField", paramsArray);
+			NetOffice.OfficeApi.TextRange2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.TextRange2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TextRange2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 15
+		/// </summary>
+		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType ChartFieldType</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Office", 15)]
+		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(chartFieldType);
+			object returnItem = Invoker.MethodReturn(this, "InsertChartField", paramsArray);
+			NetOffice.OfficeApi.TextRange2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.TextRange2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TextRange2;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 15
+		/// </summary>
+		/// <param name="chartFieldType">NetOffice.OfficeApi.Enums.MsoChartFieldType ChartFieldType</param>
+		/// <param name="formula">optional string Formula = </param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Office", 15)]
+		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, string formula)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(chartFieldType, formula);
+			object returnItem = Invoker.MethodReturn(this, "InsertChartField", paramsArray);
+			NetOffice.OfficeApi.TextRange2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.TextRange2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TextRange2;
+			return newObject;
 		}
 
 		#endregion
@@ -1196,9 +1240,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.TextRange2> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.TextRange2> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -1211,9 +1255,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

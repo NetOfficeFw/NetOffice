@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomXMLValidationErrors 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomXMLValidationErrors : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CustomXMLValidationError this[Int32 index]
 		{
@@ -129,26 +129,26 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
 		/// <param name="clearedOnUpdate">optional bool ClearedOnUpdate = true</param>
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText, bool clearedOnUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText, clearedOnUpdate);
 			Invoker.Method(this, "Add", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName);
@@ -156,14 +156,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14
+		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
+		[SupportByVersionAttribute("Office", 12,14,15)]
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText);
 			Invoker.Method(this, "Add", paramsArray);
@@ -174,9 +174,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
        public IEnumerator<NetOffice.OfficeApi.CustomXMLValidationError> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -189,9 +189,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 12,14
+		/// SupportByVersionAttribute Office, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

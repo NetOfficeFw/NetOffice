@@ -9,9 +9,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface IConverterUICallback 
-	/// SupportByVersion Office, 14
+	/// SupportByVersion Office, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterUICallback : COMObject
 	{
@@ -77,10 +77,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrReportProgress(UIntPtr uPercentComplete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uPercentComplete);
@@ -89,13 +89,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="uType">UIntPtr uType</param>
 		/// <param name="pidResult">Int32 pidResult</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -107,13 +107,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="pbstrInput">string pbstrInput</param>
 		/// <param name="fPassword">Int32 fPassword</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);

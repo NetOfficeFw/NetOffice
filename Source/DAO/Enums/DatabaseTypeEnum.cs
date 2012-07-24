@@ -70,6 +70,13 @@ namespace NetOffice.DAOApi.Enums
 		 /// </summary>
 		 /// <remarks>256</remarks>
 		 [SupportByVersionAttribute("DAO", 12)]
-		 dbVersion140 = 256
+		 dbVersion140 = 256,
+
+		 /// <summary>
+		 /// SupportByVersion DAO 12
+		 /// </summary>
+		 /// <remarks>512</remarks>
+		 [SupportByVersionAttribute("DAO", 12)]
+		 dbVersion150 = 512
 	}
 }

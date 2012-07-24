@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerDialog 
-	/// SupportByVersion Office, 14
+	/// SupportByVersion Office, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerDialog : _IMsoDispObj
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public string DataHandlerId
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public string Title
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerProperties Properties
 		{
 			get
@@ -134,9 +134,9 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults CreatePickerResults()
 		{
 			object[] paramsArray = null;
@@ -146,12 +146,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
 		/// <param name="existingResults">optional NetOffice.OfficeApi.PickerResults ExistingResults = 0</param>
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.PickerResults Show(bool isMultiSelect, NetOffice.OfficeApi.PickerResults existingResults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect, existingResults);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
@@ -160,10 +160,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Show()
 		{
 			object[] paramsArray = null;
@@ -173,12 +173,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14)]
-		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
+		[SupportByVersionAttribute("Office", 14,15)]
+		public NetOffice.OfficeApi.PickerResults Show(bool isMultiSelect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
@@ -187,11 +187,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14
+		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="tokenText">string TokenText</param>
 		/// <param name="duplicateDlgMode">Int32 duplicateDlgMode</param>
-		[SupportByVersionAttribute("Office", 14)]
+		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tokenText, duplicateDlgMode);

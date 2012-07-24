@@ -28,9 +28,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _OptionButtonInOption 
-	/// SupportByVersion Access, 9,10,11,12,14
+	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _OptionButtonInOption : _OptionButton,IEventBinding
 	{
@@ -110,14 +110,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -132,14 +132,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -154,14 +154,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -176,14 +176,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -198,14 +198,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -220,14 +220,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -242,14 +242,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -264,14 +264,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14
+		/// SupportByVersion Access, 9,10,11,12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14
+		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14)]
+		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event _OptionButtonInOption_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -286,14 +286,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_ClickEventHandler ClickEvent
 		{
 			add
@@ -308,14 +308,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -330,14 +330,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -352,14 +352,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_EnterEventHandler EnterEvent
 		{
 			add
@@ -374,14 +374,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_ExitEventHandler ExitEvent
 		{
 			add
@@ -396,14 +396,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14
+		/// SupportByVersion Access, 12,14,15
 		/// </summary>
 		private event _OptionButtonInOption_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14
+		/// SupportByVersion Access 12 14 15
 		/// </summary>
-		[SupportByVersion("Access", 12,14)]
+		[SupportByVersion("Access", 12,14,15)]
 		public event _OptionButtonInOption_DblClickEventHandler DblClickEvent
 		{
 			add

@@ -44,15 +44,19 @@ namespace NetOffice.ExcelApi
 	public delegate void Workbook_SheetPivotTableChangeSyncEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
 	public delegate void Workbook_AfterSaveEventHandler(bool Success);
 	public delegate void Workbook_NewChartEventHandler(NetOffice.ExcelApi.Chart Ch);
+	public delegate void Workbook_SheetLensGalleryRenderCompleteEventHandler(COMObject Sh);
+	public delegate void Workbook_SheetTableUpdateEventHandler(COMObject Sh, NetOffice.ExcelApi.TableObject Target);
+	public delegate void Workbook_ModelChangeEventHandler(NetOffice.ExcelApi.ModelChanges Changes);
+	public delegate void Workbook_SheetBeforeDeleteEventHandler(COMObject Sh);
 	#pragma warning restore
 
 	#endregion
 
 	///<summary>
 	/// CoClass Workbook 
-	/// SupportByVersion Excel, 9,10,11,12,14
+	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Workbook : _Workbook,IEventBinding
 	{
@@ -131,14 +135,14 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_OpenEventHandler OpenEvent
 		{
 			add
@@ -153,14 +157,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -175,14 +179,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -197,14 +201,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_BeforeCloseEventHandler _BeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_BeforeCloseEventHandler BeforeCloseEvent
 		{
 			add
@@ -219,14 +223,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_BeforeSaveEventHandler _BeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_BeforeSaveEventHandler BeforeSaveEvent
 		{
 			add
@@ -241,14 +245,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_BeforePrintEventHandler _BeforePrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_BeforePrintEventHandler BeforePrintEvent
 		{
 			add
@@ -263,14 +267,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_NewSheetEventHandler _NewSheetEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_NewSheetEventHandler NewSheetEvent
 		{
 			add
@@ -285,14 +289,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_AddinInstallEventHandler _AddinInstallEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_AddinInstallEventHandler AddinInstallEvent
 		{
 			add
@@ -307,14 +311,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_AddinUninstallEventHandler _AddinUninstallEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_AddinUninstallEventHandler AddinUninstallEvent
 		{
 			add
@@ -329,14 +333,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_WindowResizeEventHandler _WindowResizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_WindowResizeEventHandler WindowResizeEvent
 		{
 			add
@@ -351,14 +355,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -373,14 +377,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -395,14 +399,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetSelectionChangeEventHandler _SheetSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetSelectionChangeEventHandler SheetSelectionChangeEvent
 		{
 			add
@@ -417,14 +421,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetBeforeDoubleClickEventHandler _SheetBeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent
 		{
 			add
@@ -439,14 +443,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetBeforeRightClickEventHandler _SheetBeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent
 		{
 			add
@@ -461,14 +465,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetActivateEventHandler _SheetActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetActivateEventHandler SheetActivateEvent
 		{
 			add
@@ -483,14 +487,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetDeactivateEventHandler _SheetDeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetDeactivateEventHandler SheetDeactivateEvent
 		{
 			add
@@ -505,14 +509,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetCalculateEventHandler _SheetCalculateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetCalculateEventHandler SheetCalculateEvent
 		{
 			add
@@ -527,14 +531,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetChangeEventHandler _SheetChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetChangeEventHandler SheetChangeEvent
 		{
 			add
@@ -549,14 +553,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14
+		/// SupportByVersion Excel, 9,10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetFollowHyperlinkEventHandler _SheetFollowHyperlinkEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14
+		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 9,10,11,12,14)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Workbook_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
 		{
 			add
@@ -571,14 +575,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14
+		/// SupportByVersion Excel, 10,11,12,14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableUpdateEventHandler _SheetPivotTableUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 10 11 12 14
+		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14)]
+		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Workbook_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent
 		{
 			add
@@ -593,14 +597,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14
+		/// SupportByVersion Excel, 10,11,12,14,15
 		/// </summary>
 		private event Workbook_PivotTableCloseConnectionEventHandler _PivotTableCloseConnectionEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 10 11 12 14
+		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14)]
+		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Workbook_PivotTableCloseConnectionEventHandler PivotTableCloseConnectionEvent
 		{
 			add
@@ -615,14 +619,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14
+		/// SupportByVersion Excel, 10,11,12,14,15
 		/// </summary>
 		private event Workbook_PivotTableOpenConnectionEventHandler _PivotTableOpenConnectionEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 10 11 12 14
+		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 10,11,12,14)]
+		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Workbook_PivotTableOpenConnectionEventHandler PivotTableOpenConnectionEvent
 		{
 			add
@@ -637,14 +641,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 11,12,14
+		/// SupportByVersion Excel, 11,12,14,15
 		/// </summary>
 		private event Workbook_SyncEventHandler _SyncEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 11 12 14
+		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 11,12,14)]
+		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Workbook_SyncEventHandler SyncEvent
 		{
 			add
@@ -659,14 +663,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 11,12,14
+		/// SupportByVersion Excel, 11,12,14,15
 		/// </summary>
 		private event Workbook_BeforeXmlImportEventHandler _BeforeXmlImportEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 11 12 14
+		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 11,12,14)]
+		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Workbook_BeforeXmlImportEventHandler BeforeXmlImportEvent
 		{
 			add
@@ -681,14 +685,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 11,12,14
+		/// SupportByVersion Excel, 11,12,14,15
 		/// </summary>
 		private event Workbook_AfterXmlImportEventHandler _AfterXmlImportEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 11 12 14
+		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 11,12,14)]
+		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Workbook_AfterXmlImportEventHandler AfterXmlImportEvent
 		{
 			add
@@ -703,14 +707,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 11,12,14
+		/// SupportByVersion Excel, 11,12,14,15
 		/// </summary>
 		private event Workbook_BeforeXmlExportEventHandler _BeforeXmlExportEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 11 12 14
+		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 11,12,14)]
+		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Workbook_BeforeXmlExportEventHandler BeforeXmlExportEvent
 		{
 			add
@@ -725,14 +729,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 11,12,14
+		/// SupportByVersion Excel, 11,12,14,15
 		/// </summary>
 		private event Workbook_AfterXmlExportEventHandler _AfterXmlExportEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 11 12 14
+		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 11,12,14)]
+		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Workbook_AfterXmlExportEventHandler AfterXmlExportEvent
 		{
 			add
@@ -747,14 +751,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 12,14
+		/// SupportByVersion Excel, 12,14,15
 		/// </summary>
 		private event Workbook_RowsetCompleteEventHandler _RowsetCompleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 12 14
+		/// SupportByVersion Excel 12 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 12,14)]
+		[SupportByVersion("Excel", 12,14,15)]
 		public event Workbook_RowsetCompleteEventHandler RowsetCompleteEvent
 		{
 			add
@@ -769,14 +773,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableAfterValueChangeEventHandler _SheetPivotTableAfterValueChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent
 		{
 			add
@@ -791,14 +795,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeAllocateChangesEventHandler _SheetPivotTableBeforeAllocateChangesEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent
 		{
 			add
@@ -813,14 +817,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeCommitChangesEventHandler _SheetPivotTableBeforeCommitChangesEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent
 		{
 			add
@@ -835,14 +839,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableBeforeDiscardChangesEventHandler _SheetPivotTableBeforeDiscardChangesEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent
 		{
 			add
@@ -857,14 +861,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_SheetPivotTableChangeSyncEventHandler _SheetPivotTableChangeSyncEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_SheetPivotTableChangeSyncEventHandler SheetPivotTableChangeSyncEvent
 		{
 			add
@@ -879,14 +883,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_AfterSaveEventHandler _AfterSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_AfterSaveEventHandler AfterSaveEvent
 		{
 			add
@@ -901,14 +905,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 14
+		/// SupportByVersion Excel, 14,15
 		/// </summary>
 		private event Workbook_NewChartEventHandler _NewChartEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 14
+		/// SupportByVersion Excel 14 15
 		/// </summary>
-		[SupportByVersion("Excel", 14)]
+		[SupportByVersion("Excel", 14,15)]
 		public event Workbook_NewChartEventHandler NewChartEvent
 		{
 			add
@@ -919,6 +923,94 @@ namespace NetOffice.ExcelApi
 			remove
 			{
 				_NewChartEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 15
+		/// </summary>
+		private event Workbook_SheetLensGalleryRenderCompleteEventHandler _SheetLensGalleryRenderCompleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		[SupportByVersion("Excel", 15)]
+		public event Workbook_SheetLensGalleryRenderCompleteEventHandler SheetLensGalleryRenderCompleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetLensGalleryRenderCompleteEvent += value;
+			}
+			remove
+			{
+				_SheetLensGalleryRenderCompleteEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 15
+		/// </summary>
+		private event Workbook_SheetTableUpdateEventHandler _SheetTableUpdateEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		[SupportByVersion("Excel", 15)]
+		public event Workbook_SheetTableUpdateEventHandler SheetTableUpdateEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetTableUpdateEvent += value;
+			}
+			remove
+			{
+				_SheetTableUpdateEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 15
+		/// </summary>
+		private event Workbook_ModelChangeEventHandler _ModelChangeEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		[SupportByVersion("Excel", 15)]
+		public event Workbook_ModelChangeEventHandler ModelChangeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_ModelChangeEvent += value;
+			}
+			remove
+			{
+				_ModelChangeEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel, 15
+		/// </summary>
+		private event Workbook_SheetBeforeDeleteEventHandler _SheetBeforeDeleteEvent;
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		[SupportByVersion("Excel", 15)]
+		public event Workbook_SheetBeforeDeleteEventHandler SheetBeforeDeleteEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_SheetBeforeDeleteEvent += value;
+			}
+			remove
+			{
+				_SheetBeforeDeleteEvent -= value;
 			}
 		}
 

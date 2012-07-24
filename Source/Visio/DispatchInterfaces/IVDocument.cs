@@ -307,6 +307,43 @@ namespace NetOffice.VisioApi
 			return get_FooterMargin(unitsNameOrCode);
 		}
 
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14
+		/// Get/Set
+		/// </summary>
+		/// <param name="bstrExistingPassword">optional object bstrExistingPassword</param>
+		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public string get_Password(object bstrExistingPassword)
+		{		
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrExistingPassword);
+			object returnItem = Invoker.PropertyGet(this, "Password", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14
+		/// Get/Set
+		/// </summary>
+		/// <param name="bstrExistingPassword">optional object bstrExistingPassword</param>
+		[SupportByVersionAttribute("Visio", 11,12,14)]
+		public void set_Password(object bstrExistingPassword, string value)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(bstrExistingPassword);
+			Invoker.PropertySet(this, "Password", paramsArray, value);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14
+		/// Alias for get_Password
+		/// </summary>
+		/// <param name="bstrExistingPassword">optional object bstrExistingPassword</param>
+		[SupportByVersionAttribute("Visio", 11,12,14)]
+		public string Password(object bstrExistingPassword)
+		{
+			return get_Password(bstrExistingPassword);
+		}
+
 		#endregion
 
 		#region Methods
@@ -2151,37 +2188,21 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		/// <param name="bstrExistingPassword">object bstrExistingPassword</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Password(object bstrExistingPassword)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrExistingPassword);
-			object returnItem = Invoker.PropertyGet(this, "Password", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
-		/// Get/Set
-		/// </summary>
-		/// <param name="bstrExistingPassword">object bstrExistingPassword</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void set_Password(object bstrExistingPassword, string value)
+		public string Password
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrExistingPassword);
-			Invoker.PropertySet(this, "Password", paramsArray, value);
-		}
-
-		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
-		/// Alias for get_Password
-		/// </summary>
-		/// <param name="bstrExistingPassword">object bstrExistingPassword</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public string Password(object bstrExistingPassword)
-		{
-			return get_Password(bstrExistingPassword);
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Password", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Password", paramsArray);
+			}
 		}
 
 		/// <summary>
@@ -3267,12 +3288,23 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
-		/// <param name="comments">object Comments</param>
+		/// <param name="comments">optional object Comments</param>
 		/// <param name="makePublic">optional bool MakePublic = false</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void CheckIn(object saveChanges, object comments, object makePublic)
+		public void CheckIn(bool saveChanges, object comments, bool makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic);
+			Invoker.Method(this, "CheckIn", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 11,12,14)]
+		public void CheckIn()
+		{
+			object[] paramsArray = null;
 			Invoker.Method(this, "CheckIn", paramsArray);
 		}
 
@@ -3282,7 +3314,7 @@ namespace NetOffice.VisioApi
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void CheckIn(object saveChanges)
+		public void CheckIn(bool saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
 			Invoker.Method(this, "CheckIn", paramsArray);
@@ -3292,10 +3324,10 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
-		/// <param name="comments">object Comments</param>
+		/// <param name="comments">optional object Comments</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void CheckIn(object saveChanges, object comments)
+		public void CheckIn(bool saveChanges, object comments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments);
 			Invoker.Method(this, "CheckIn", paramsArray);
@@ -3315,7 +3347,7 @@ namespace NetOffice.VisioApi
 		/// <param name="collate">optional bool Collate = false</param>
 		/// <param name="colorAsBlack">optional bool ColorAsBlack = false</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName, object printToFile, object outputFileName, object copies, object collate, object colorAsBlack)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName, bool printToFile, string outputFileName, Int32 copies, bool collate, bool colorAsBlack)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName, printToFile, outputFileName, copies, collate, colorAsBlack);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3340,7 +3372,7 @@ namespace NetOffice.VisioApi
 		/// <param name="fromPage">optional Int32 FromPage = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3354,7 +3386,7 @@ namespace NetOffice.VisioApi
 		/// <param name="toPage">optional Int32 ToPage = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3369,7 +3401,7 @@ namespace NetOffice.VisioApi
 		/// <param name="scaleCurrentViewToPaper">optional bool ScaleCurrentViewToPaper = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3385,7 +3417,7 @@ namespace NetOffice.VisioApi
 		/// <param name="printerName">optional string PrinterName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3402,7 +3434,7 @@ namespace NetOffice.VisioApi
 		/// <param name="printToFile">optional bool PrintToFile = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName, object printToFile)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName, bool printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName, printToFile);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3420,7 +3452,7 @@ namespace NetOffice.VisioApi
 		/// <param name="outputFileName">optional string OutputFileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName, object printToFile, object outputFileName)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName, bool printToFile, string outputFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName, printToFile, outputFileName);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3439,7 +3471,7 @@ namespace NetOffice.VisioApi
 		/// <param name="copies">optional Int32 Copies = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName, object printToFile, object outputFileName, object copies)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName, bool printToFile, string outputFileName, Int32 copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName, printToFile, outputFileName, copies);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3459,7 +3491,7 @@ namespace NetOffice.VisioApi
 		/// <param name="collate">optional bool Collate = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object scaleCurrentViewToPaper, object printerName, object printToFile, object outputFileName, object copies, object collate)
+		public void PrintOut(NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool scaleCurrentViewToPaper, string printerName, bool printToFile, string outputFileName, Int32 copies, bool collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(printRange, fromPage, toPage, scaleCurrentViewToPaper, printerName, printToFile, outputFileName, copies, collate);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -3599,7 +3631,7 @@ namespace NetOffice.VisioApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="fixedFormatExtClass">optional object FixedFormatExtClass</param>
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack, object includeBackground, object includeDocumentProperties, object includeStructureTags, object useISO19005_1, object fixedFormatExtClass)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack, bool includeBackground, bool includeDocumentProperties, bool includeStructureTags, bool useISO19005_1, object fixedFormatExtClass)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack, includeBackground, includeDocumentProperties, includeStructureTags, useISO19005_1, fixedFormatExtClass);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3630,7 +3662,7 @@ namespace NetOffice.VisioApi
 		/// <param name="fromPage">optional Int32 FromPage = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3647,7 +3679,7 @@ namespace NetOffice.VisioApi
 		/// <param name="toPage">optional Int32 ToPage = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3665,7 +3697,7 @@ namespace NetOffice.VisioApi
 		/// <param name="colorAsBlack">optional bool ColorAsBlack = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3684,7 +3716,7 @@ namespace NetOffice.VisioApi
 		/// <param name="includeBackground">optional bool IncludeBackground = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack, object includeBackground)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack, bool includeBackground)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack, includeBackground);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3704,7 +3736,7 @@ namespace NetOffice.VisioApi
 		/// <param name="includeDocumentProperties">optional bool IncludeDocumentProperties = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack, object includeBackground, object includeDocumentProperties)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack, bool includeBackground, bool includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack, includeBackground, includeDocumentProperties);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3725,7 +3757,7 @@ namespace NetOffice.VisioApi
 		/// <param name="includeStructureTags">optional bool IncludeStructureTags = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack, object includeBackground, object includeDocumentProperties, object includeStructureTags)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack, bool includeBackground, bool includeDocumentProperties, bool includeStructureTags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack, includeBackground, includeDocumentProperties, includeStructureTags);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -3747,7 +3779,7 @@ namespace NetOffice.VisioApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, object fromPage, object toPage, object colorAsBlack, object includeBackground, object includeDocumentProperties, object includeStructureTags, object useISO19005_1)
+		public void ExportAsFixedFormat(NetOffice.VisioApi.Enums.VisFixedFormatTypes fixedFormat, string outputFileName, NetOffice.VisioApi.Enums.VisDocExIntent intent, NetOffice.VisioApi.Enums.VisPrintOutRange printRange, Int32 fromPage, Int32 toPage, bool colorAsBlack, bool includeBackground, bool includeDocumentProperties, bool includeStructureTags, bool useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fixedFormat, outputFileName, intent, printRange, fromPage, toPage, colorAsBlack, includeBackground, includeDocumentProperties, includeStructureTags, useISO19005_1);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);

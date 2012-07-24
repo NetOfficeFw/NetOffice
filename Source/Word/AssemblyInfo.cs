@@ -11,6 +11,7 @@ using NetOffice;
 	Word - Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c - 11
 	Word - Microsoft Word 12.0 Object Library - 12
 	Word - Microsoft Word 14.0 Object Library - 14
+	Word - Microsoft Word 15.0 Object Library - 15
 
 */
 

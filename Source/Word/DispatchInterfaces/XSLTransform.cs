@@ -55,12 +55,12 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_Alias(object allUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string get_Alias(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
@@ -68,35 +68,35 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void set_Alias(object allUsers, string value)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Alias", paramsArray, value);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Alias for get_Alias
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string Alias(object allUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string Alias(bool allUsers)
 		{
 			return get_Alias(allUsers);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_Location(object allUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string get_Location(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
@@ -104,24 +104,24 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void set_Location(object allUsers, string value)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Location", paramsArray, value);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Alias for get_Location
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string Location(object allUsers)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string Location(bool allUsers)
 		{
 			return get_Location(allUsers);
 		}
@@ -136,9 +136,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// DispatchInterface XSLTransform 
-	/// SupportByVersion Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XSLTransform : XSLTransform_
 	{
@@ -200,10 +200,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -216,10 +216,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -231,11 +231,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -248,10 +248,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string Alias
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string Location
 		{
 			get
@@ -288,10 +288,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public string ID
 		{
 			get
@@ -307,9 +307,9 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

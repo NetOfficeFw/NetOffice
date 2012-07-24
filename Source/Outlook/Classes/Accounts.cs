@@ -15,9 +15,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Accounts 
-	/// SupportByVersion Outlook, 12,14
+	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14)]
+	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Accounts : _Accounts,IEventBinding
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14
+		/// SupportByVersion Outlook, 14,15
 		/// </summary>
 		private event Accounts_AutoDiscoverCompleteEventHandler _AutoDiscoverCompleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14
+		/// SupportByVersion Outlook 14 15
 		/// </summary>
-		[SupportByVersion("Outlook", 14)]
+		[SupportByVersion("Outlook", 14,15)]
 		public event Accounts_AutoDiscoverCompleteEventHandler AutoDiscoverCompleteEvent
 		{
 			add

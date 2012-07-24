@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface CoAuthLocks 
-	/// SupportByVersion Word, 14
+	/// SupportByVersion Word, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 14)]
+	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CoAuthLocks : COMObject ,IEnumerable<NetOffice.WordApi.CoAuthLock>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.CoAuthLock this[Int32 index]
 		{
@@ -159,12 +159,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		/// <param name="range">object Range</param>
+		/// <param name="range">optional object Range</param>
 		/// <param name="type">optional NetOffice.WordApi.Enums.WdLockType Type = 1</param>
-		[SupportByVersionAttribute("Word", 14)]
-		public NetOffice.WordApi.CoAuthLock Add(object range, object type)
+		[SupportByVersionAttribute("Word", 14,15)]
+		public NetOffice.WordApi.CoAuthLock Add(object range, NetOffice.WordApi.Enums.WdLockType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -173,11 +173,24 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		/// <param name="range">object Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
+		public NetOffice.WordApi.CoAuthLock Add()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.WordApi.CoAuthLock newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.CoAuthLock.LateBindingApiWrapperType) as NetOffice.WordApi.CoAuthLock;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 14, 15
+		/// </summary>
+		/// <param name="range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.CoAuthLock Add(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -187,9 +200,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public void RemoveEphemeralLocks()
 		{
 			object[] paramsArray = null;
@@ -201,9 +214,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.CoAuthLock> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
        public IEnumerator<NetOffice.WordApi.CoAuthLock> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -216,9 +229,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 14
+		/// SupportByVersionAttribute Word, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -31,9 +31,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass NavigationControl 
-	/// SupportByVersion Access, 14
+	/// SupportByVersion Access, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl,IEventBinding
 	{
@@ -112,14 +112,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -134,14 +134,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -156,14 +156,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -178,14 +178,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -200,14 +200,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -222,14 +222,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -244,14 +244,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -266,14 +266,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ClickEventHandler ClickEvent
 		{
 			add
@@ -288,14 +288,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -310,14 +310,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -332,14 +332,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -354,14 +354,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -376,14 +376,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -398,14 +398,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -420,14 +420,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -442,14 +442,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_DirtyEventHandler _DirtyEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_DirtyEventHandler DirtyEvent
 		{
 			add
@@ -464,14 +464,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 14
+		/// SupportByVersion Access, 14,15
 		/// </summary>
 		private event NavigationControl_UndoEventHandler _UndoEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14 15
 		/// </summary>
-		[SupportByVersion("Access", 14)]
+		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_UndoEventHandler UndoEvent
 		{
 			add

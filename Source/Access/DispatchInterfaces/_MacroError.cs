@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _MacroError 
-	/// SupportByVersion Access, 12,14
+	/// SupportByVersion Access, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 12,14)]
+	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _MacroError : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Condition
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string ActionName
 		{
 			get
@@ -104,10 +104,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Arguments
 		{
 			get
@@ -119,10 +119,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Description
 		{
 			get
@@ -134,10 +134,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int32 Number
 		{
 			get
@@ -149,10 +149,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string MacroName
 		{
 			get
@@ -168,11 +168,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14
+		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14)]
+		[SupportByVersionAttribute("Access", 12,14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

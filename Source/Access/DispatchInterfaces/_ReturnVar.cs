@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _ReturnVar 
-	/// SupportByVersion Access, 14
+	/// SupportByVersion Access, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _ReturnVar : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object _Value
 		{
@@ -98,10 +98,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public string Name
 		{
 			get
@@ -113,10 +113,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public object Value
 		{
 			get
@@ -140,11 +140,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 14
+		/// SupportByVersion Access 14, 15
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14)]
+		[SupportByVersionAttribute("Access", 14,15)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Connections 
-	/// SupportByVersion Excel, 12,14
+	/// SupportByVersion Excel, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14)]
+	[SupportByVersionAttribute("Excel", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Connections : COMObject ,IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object Parent
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -139,11 +139,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.WorkbookConnection this[object index]
 		{
@@ -161,10 +161,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -174,14 +174,44 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="filename">string Filename</param>
+		/// <param name="createModelConnection">optional object CreateModelConnection</param>
+		/// <param name="importRelationships">optional object ImportRelationships</param>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection, object importRelationships)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, createModelConnection, importRelationships);
+			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="filename">string Filename</param>
+		/// <param name="createModelConnection">optional object CreateModelConnection</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename, createModelConnection);
+			object returnItem = Invoker.MethodReturn(this, "AddFromFile", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
 		/// <param name="connectionString">object ConnectionString</param>
 		/// <param name="commandText">object CommandText</param>
 		/// <param name="lCmdtype">optional object lCmdtype</param>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype);
@@ -191,18 +221,106 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="description">string Description</param>
+		/// <param name="connectionString">object ConnectionString</param>
+		/// <param name="commandText">object CommandText</param>
+		/// <param name="lCmdtype">optional object lCmdtype</param>
+		/// <param name="createModelConnection">optional object CreateModelConnection</param>
+		/// <param name="importRelationships">optional object ImportRelationships</param>
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection, object importRelationships)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype, createModelConnection, importRelationships);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
 		/// <param name="connectionString">object ConnectionString</param>
 		/// <param name="commandText">object CommandText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="description">string Description</param>
+		/// <param name="connectionString">object ConnectionString</param>
+		/// <param name="commandText">object CommandText</param>
+		/// <param name="lCmdtype">optional object lCmdtype</param>
+		/// <param name="createModelConnection">optional object CreateModelConnection</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype, createModelConnection);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="filename">string Filename</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection _AddFromFile(string filename)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(filename);
+			object returnItem = Invoker.MethodReturn(this, "_AddFromFile", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="description">string Description</param>
+		/// <param name="connectionString">object ConnectionString</param>
+		/// <param name="commandText">object CommandText</param>
+		/// <param name="lCmdtype">optional object lCmdtype</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText, object lCmdtype)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText, lCmdtype);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
+			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Excel 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="description">string Description</param>
+		/// <param name="connectionString">object ConnectionString</param>
+		/// <param name="commandText">object CommandText</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Excel", 15)]
+		public NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, description, connectionString, commandText);
+			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
 			NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
 			return newObject;
 		}
@@ -212,9 +330,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.WorkbookConnection> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 12,14
+		/// SupportByVersionAttribute Excel, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
        public IEnumerator<NetOffice.ExcelApi.WorkbookConnection> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -227,9 +345,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 12,14
+		/// SupportByVersionAttribute Excel, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14)]
+		[SupportByVersionAttribute("Excel", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

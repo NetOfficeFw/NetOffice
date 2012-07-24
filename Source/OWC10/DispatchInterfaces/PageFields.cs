@@ -126,12 +126,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, object totalType, object index)
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -143,8 +143,37 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public NetOffice.OWC10Api.PageField Add(object source)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name)
@@ -159,12 +188,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, object totalType)
+		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -176,13 +205,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, object totalType, object index)
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
@@ -194,8 +223,39 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public NetOffice.OWC10Api.PageField AddBroken(object source)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source);
+			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
+			NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType);
+			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
+			NetOffice.OWC10Api.PageField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="source">object Source</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -211,13 +271,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		/// <param name="source">object Source</param>
-		/// <param name="fieldType">object FieldType</param>
-		/// <param name="name">object Name</param>
+		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="name">optional object Name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, object totalType)
+		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, NetOffice.OWC10Api.Enums.DscTotalTypeEnum totalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
 			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);

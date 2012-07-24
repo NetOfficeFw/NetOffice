@@ -14,9 +14,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass ReturnVars 
-	/// SupportByVersion Access, 14
+	/// SupportByVersion Access, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Access", 14)]
+	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReturnVars : _ReturnVars
 	{

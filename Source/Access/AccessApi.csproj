@@ -11,7 +11,6 @@
     <RootNamespace>NetOffice.AccessApi</RootNamespace>
     <AssemblyName>AccessApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>AccessApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -221,6 +220,9 @@
     <Compile Include="DispatchInterfaces\SharedResource.cs" />
     <Compile Include="DispatchInterfaces\_ReturnVar.cs" />
     <Compile Include="DispatchInterfaces\_ReturnVars.cs" />
+    <Compile Include="DispatchInterfaces\_DesignerReceiver.cs" />
+    <Compile Include="DispatchInterfaces\_AddTileUIReceiver.cs" />
+    <Compile Include="DispatchInterfaces\_SqmProxyReceiver.cs" />
     <Compile Include="Classes\FormatCondition.cs" />
     <Compile Include="Classes\AccessField.cs" />
     <Compile Include="Classes\Hyperlink.cs" />

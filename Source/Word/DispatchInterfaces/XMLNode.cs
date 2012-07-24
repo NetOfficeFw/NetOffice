@@ -55,12 +55,12 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="dataOnly">optional bool DataOnly</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_XML(object dataOnly)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string get_XML(bool dataOnly)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);
 			object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
@@ -68,23 +68,23 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Alias for get_XML
 		/// </summary>
 		/// <param name="dataOnly">optional bool DataOnly</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string XML(object dataOnly)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string XML(bool dataOnly)
 		{
 			return get_XML(dataOnly);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="advanced">optional bool Advanced</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string get_ValidationErrorText(object advanced)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string get_ValidationErrorText(bool advanced)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(advanced);
 			object returnItem = Invoker.PropertyGet(this, "ValidationErrorText", paramsArray);
@@ -92,12 +92,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Alias for get_ValidationErrorText
 		/// </summary>
 		/// <param name="advanced">optional bool Advanced</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public string ValidationErrorText(object advanced)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public string ValidationErrorText(bool advanced)
 		{
 			return get_ValidationErrorText(advanced);
 		}
@@ -112,9 +112,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// DispatchInterface XMLNode 
-	/// SupportByVersion Word, 11,12,14
+	/// SupportByVersion Word, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14)]
+	[SupportByVersionAttribute("Word", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLNode : XMLNode_
 	{
@@ -176,10 +176,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string BaseName
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -207,10 +207,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -222,11 +222,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -239,10 +239,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
@@ -255,10 +255,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string Text
 		{
 			get
@@ -275,10 +275,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string NamespaceURI
 		{
 			get
@@ -290,10 +290,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string XML
 		{
 			get
@@ -305,10 +305,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode NextSibling
 		{
 			get
@@ -321,10 +321,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode PreviousSibling
 		{
 			get
@@ -337,10 +337,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode ParentNode
 		{
 			get
@@ -353,10 +353,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode FirstChild
 		{
 			get
@@ -369,10 +369,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode LastChild
 		{
 			get
@@ -385,10 +385,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Document OwnerDocument
 		{
 			get
@@ -401,10 +401,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdXMLNodeType NodeType
 		{
 			get
@@ -417,10 +417,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNodes ChildNodes
 		{
 			get
@@ -433,10 +433,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNodes Attributes
 		{
 			get
@@ -449,10 +449,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string NodeValue
 		{
 			get
@@ -469,10 +469,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool HasChildNodes
 		{
 			get
@@ -484,10 +484,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLChildNodeSuggestions ChildNodeSuggestions
 		{
 			get
@@ -500,10 +500,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdXMLNodeLevel Level
 		{
 			get
@@ -516,10 +516,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdXMLValidationStatus ValidationStatus
 		{
 			get
@@ -532,10 +532,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.SmartTag SmartTag
 		{
 			get
@@ -548,10 +548,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string ValidationErrorText
 		{
 			get
@@ -563,10 +563,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public string PlaceholderText
 		{
 			get
@@ -583,10 +583,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public string WordOpenXML
 		{
 			get
@@ -602,13 +602,13 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="fastSearchSkippingTextNodes">optional bool FastSearchSkippingTextNodes = true</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, object prefixMapping, object fastSearchSkippingTextNodes)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, string prefixMapping, bool fastSearchSkippingTextNodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
@@ -617,11 +617,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
@@ -631,13 +631,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, object prefixMapping)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, string prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
@@ -646,13 +646,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="fastSearchSkippingTextNodes">optional bool FastSearchSkippingTextNodes = true</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, object prefixMapping, object fastSearchSkippingTextNodes)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, string prefixMapping, bool fastSearchSkippingTextNodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
@@ -661,11 +661,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath);
@@ -675,13 +675,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, object prefixMapping)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, string prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
@@ -690,9 +690,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -700,9 +700,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Copy()
 		{
 			object[] paramsArray = null;
@@ -710,10 +710,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="childElement">NetOffice.WordApi.XMLNode ChildElement</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void RemoveChild(NetOffice.WordApi.XMLNode childElement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(childElement);
@@ -721,9 +721,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Cut()
 		{
 			object[] paramsArray = null;
@@ -731,9 +731,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Validate()
 		{
 			object[] paramsArray = null;
@@ -741,25 +741,37 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="status">NetOffice.WordApi.Enums.WdXMLValidationStatus Status</param>
-		/// <param name="errorText">object ErrorText</param>
+		/// <param name="errorText">optional object ErrorText</param>
 		/// <param name="clearedAutomatically">optional bool ClearedAutomatically = true</param>
-		[SupportByVersionAttribute("Word", 11,12,14)]
-		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText, object clearedAutomatically)
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText, bool clearedAutomatically)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(status, errorText, clearedAutomatically);
 			Invoker.Method(this, "SetValidationError", paramsArray);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14
+		/// SupportByVersion Word 11, 12, 14, 15
 		/// </summary>
 		/// <param name="status">NetOffice.WordApi.Enums.WdXMLValidationStatus Status</param>
-		/// <param name="errorText">object ErrorText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14)]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(status);
+			Invoker.Method(this, "SetValidationError", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 11, 12, 14, 15
+		/// </summary>
+		/// <param name="status">NetOffice.WordApi.Enums.WdXMLValidationStatus Status</param>
+		/// <param name="errorText">optional object ErrorText</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(status, errorText);

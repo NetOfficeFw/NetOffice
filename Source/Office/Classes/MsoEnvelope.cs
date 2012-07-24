@@ -16,9 +16,9 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass MsoEnvelope 
-	/// SupportByVersion Office, 10,11,12,14
+	/// SupportByVersion Office, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MsoEnvelope : IMsoEnvelopeVB,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Office, 10,11,12,14
+		/// SupportByVersion Office, 10,11,12,14,15
 		/// </summary>
 		private event MsoEnvelope_EnvelopeShowEventHandler _EnvelopeShowEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 10 11 12 14
+		/// SupportByVersion Office 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Office", 10,11,12,14)]
+		[SupportByVersion("Office", 10,11,12,14,15)]
 		public event MsoEnvelope_EnvelopeShowEventHandler EnvelopeShowEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office, 10,11,12,14
+		/// SupportByVersion Office, 10,11,12,14,15
 		/// </summary>
 		private event MsoEnvelope_EnvelopeHideEventHandler _EnvelopeHideEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 10 11 12 14
+		/// SupportByVersion Office 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Office", 10,11,12,14)]
+		[SupportByVersion("Office", 10,11,12,14,15)]
 		public event MsoEnvelope_EnvelopeHideEventHandler EnvelopeHideEvent
 		{
 			add

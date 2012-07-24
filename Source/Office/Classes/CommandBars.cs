@@ -15,9 +15,9 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CommandBars 
-	/// SupportByVersion Office, 9,10,11,12,14
+	/// SupportByVersion Office, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBars : _CommandBars,IEventBinding
 	{
@@ -96,14 +96,14 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Office, 9,10,11,12,14
+		/// SupportByVersion Office, 9,10,11,12,14,15
 		/// </summary>
 		private event CommandBars_OnUpdateEventHandler _OnUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 9 10 11 12 14
+		/// SupportByVersion Office 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Office", 9,10,11,12,14)]
+		[SupportByVersion("Office", 9,10,11,12,14,15)]
 		public event CommandBars_OnUpdateEventHandler OnUpdateEvent
 		{
 			add

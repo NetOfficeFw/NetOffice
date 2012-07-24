@@ -14,9 +14,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Reminder 
-	/// SupportByVersion Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Reminder : _Reminder
 	{

@@ -11,9 +11,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _Views 
-	/// SupportByVersion Outlook, 10,11,12,14
+	/// SupportByVersion Outlook, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Views : COMObject ,IEnumerable<NetOffice.OutlookApi.View>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -123,11 +123,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -159,10 +159,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OutlookApi.View this[object index]
 		{
@@ -176,12 +176,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="viewType">NetOffice.OutlookApi.Enums.OlViewType ViewType</param>
-		/// <param name="saveOption">NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption</param>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		/// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption</param>
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.View Add(string name, NetOffice.OutlookApi.Enums.OlViewType viewType, NetOffice.OutlookApi.Enums.OlViewSaveOption saveOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, viewType, saveOption);
@@ -191,10 +191,25 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// </summary>
+		/// <param name="name">string Name</param>
+		/// <param name="viewType">NetOffice.OutlookApi.Enums.OlViewType ViewType</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
+		public NetOffice.OutlookApi.View Add(string name, NetOffice.OutlookApi.Enums.OlViewType viewType)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, viewType);
+			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
+			NetOffice.OutlookApi.View newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.View.LateBindingApiWrapperType) as NetOffice.OutlookApi.View;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -206,9 +221,9 @@ namespace NetOffice.OutlookApi
        #region IEnumerable<NetOffice.OutlookApi.View> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Outlook, 10,11,12,14
+		/// SupportByVersionAttribute Outlook, 10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
        public IEnumerator<NetOffice.OutlookApi.View> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -221,9 +236,9 @@ namespace NetOffice.OutlookApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Outlook, 10,11,12,14
+		/// SupportByVersionAttribute Outlook, 10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

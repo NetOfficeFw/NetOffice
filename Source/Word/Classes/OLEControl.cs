@@ -16,9 +16,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// CoClass OLEControl 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : _OLEControl,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event OLEControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event OLEControl_LostFocusEventHandler LostFocusEvent
 		{
 			add

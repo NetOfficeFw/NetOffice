@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface MailingLabel 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MailingLabel : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DefaultPrintBarCode
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
 			get
@@ -163,10 +163,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
 			get
@@ -179,10 +179,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string DefaultLabelName
 		{
 			get
@@ -199,10 +199,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool Vertical
 		{
 			get
@@ -223,14 +223,14 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
@@ -240,7 +240,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
@@ -259,10 +259,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument()
 		{
 			object[] paramsArray = null;
@@ -272,11 +272,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -286,12 +286,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
@@ -301,13 +301,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
@@ -317,14 +317,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
@@ -334,7 +334,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -343,7 +343,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel);
@@ -353,7 +353,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -362,7 +362,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -381,7 +381,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
@@ -389,10 +389,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -400,11 +400,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -412,12 +412,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
@@ -425,13 +425,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
@@ -439,14 +439,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
@@ -454,7 +454,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -462,7 +462,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
@@ -470,7 +470,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -479,7 +479,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
@@ -487,7 +487,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -498,7 +498,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);
@@ -506,7 +506,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -514,7 +514,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
@@ -524,11 +524,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000()
 		{
 			object[] paramsArray = null;
@@ -538,12 +538,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -553,13 +553,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
@@ -569,14 +569,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
@@ -586,7 +586,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -594,7 +594,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
@@ -604,7 +604,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -614,7 +614,7 @@ namespace NetOffice.WordApi
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
@@ -622,11 +622,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000()
 		{
 			object[] paramsArray = null;
@@ -634,12 +634,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -647,13 +647,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
@@ -661,14 +661,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
@@ -676,7 +676,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -684,7 +684,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
@@ -692,7 +692,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -701,7 +701,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
@@ -709,7 +709,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -719,7 +719,7 @@ namespace NetOffice.WordApi
 		/// <param name="row">optional object Row</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
@@ -727,9 +727,9 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14
+		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void LabelOptions()
 		{
 			object[] paramsArray = null;
@@ -737,7 +737,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -746,7 +746,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
@@ -756,10 +756,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
 		{
 			object[] paramsArray = null;
@@ -769,11 +769,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
@@ -783,12 +783,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
@@ -798,13 +798,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText);
@@ -814,14 +814,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress);
@@ -831,7 +831,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -839,7 +839,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray);
@@ -849,7 +849,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -858,7 +858,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel);
@@ -868,7 +868,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -879,7 +879,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
@@ -887,10 +887,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID()
 		{
 			object[] paramsArray = null;
@@ -898,11 +898,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
@@ -910,12 +910,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
@@ -923,13 +923,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress);
@@ -937,14 +937,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray);
@@ -952,7 +952,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -960,7 +960,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel);
@@ -968,7 +968,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -977,7 +977,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row);
@@ -985,7 +985,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -995,7 +995,7 @@ namespace NetOffice.WordApi
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column);
@@ -1003,7 +1003,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
@@ -1014,7 +1014,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);

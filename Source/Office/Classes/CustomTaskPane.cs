@@ -16,9 +16,9 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CustomTaskPane 
-	/// SupportByVersion Office, 12,14
+	/// SupportByVersion Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomTaskPane : _CustomTaskPane,IEventBinding
 	{
@@ -97,14 +97,14 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Office, 12,14
+		/// SupportByVersion Office, 12,14,15
 		/// </summary>
 		private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 12 14
+		/// SupportByVersion Office 12 14 15
 		/// </summary>
-		[SupportByVersion("Office", 12,14)]
+		[SupportByVersion("Office", 12,14,15)]
 		public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
 		{
 			add
@@ -119,14 +119,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office, 12,14
+		/// SupportByVersion Office, 12,14,15
 		/// </summary>
 		private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 12 14
+		/// SupportByVersion Office 12 14 15
 		/// </summary>
-		[SupportByVersion("Office", 12,14)]
+		[SupportByVersion("Office", 12,14,15)]
 		public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
 		{
 			add

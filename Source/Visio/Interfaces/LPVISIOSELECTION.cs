@@ -1103,14 +1103,14 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
 		/// <param name="pinUnitsNameOrCode">optional object PinUnitsNameOrCode</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX, object pinY, object pinUnitsNameOrCode)
+		public void Rotate(Double angle, object angleUnitsNameOrCode, bool blastGuards, NetOffice.VisioApi.Enums.VisRotationTypes rotationType, Double pinX, Double pinY, object pinUnitsNameOrCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY, pinUnitsNameOrCode);
 			Invoker.Method(this, "Rotate", paramsArray);
@@ -1120,7 +1120,19 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 11,12,14)]
+		public void Rotate(Double angle)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(angle);
+			Invoker.Method(this, "Rotate", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14
+		/// </summary>
+		/// <param name="angle">Double Angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode)
@@ -1133,11 +1145,11 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards)
+		public void Rotate(Double angle, object angleUnitsNameOrCode, bool blastGuards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards);
 			Invoker.Method(this, "Rotate", paramsArray);
@@ -1147,12 +1159,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType)
+		public void Rotate(Double angle, object angleUnitsNameOrCode, bool blastGuards, NetOffice.VisioApi.Enums.VisRotationTypes rotationType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType);
 			Invoker.Method(this, "Rotate", paramsArray);
@@ -1162,13 +1174,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX)
+		public void Rotate(Double angle, object angleUnitsNameOrCode, bool blastGuards, NetOffice.VisioApi.Enums.VisRotationTypes rotationType, Double pinX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX);
 			Invoker.Method(this, "Rotate", paramsArray);
@@ -1178,14 +1190,14 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14
 		/// </summary>
 		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">object AngleUnitsNameOrCode</param>
+		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX, object pinY)
+		public void Rotate(Double angle, object angleUnitsNameOrCode, bool blastGuards, NetOffice.VisioApi.Enums.VisRotationTypes rotationType, Double pinX, Double pinY)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY);
 			Invoker.Method(this, "Rotate", paramsArray);
@@ -1198,7 +1210,7 @@ namespace NetOffice.VisioApi
 		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisVerticalAlignTypes AlignVertical</param>
 		/// <param name="glueToGuide">optional bool GlueToGuide = false</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Align(NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal, NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical, object glueToGuide)
+		public void Align(NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal, NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical, bool glueToGuide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alignHorizontal, alignVertical, glueToGuide);
 			Invoker.Method(this, "Align", paramsArray);
@@ -1223,7 +1235,7 @@ namespace NetOffice.VisioApi
 		/// <param name="distribute">NetOffice.VisioApi.Enums.VisDistributeTypes Distribute</param>
 		/// <param name="glueToGuide">optional bool GlueToGuide = false</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Distribute(NetOffice.VisioApi.Enums.VisDistributeTypes distribute, object glueToGuide)
+		public void Distribute(NetOffice.VisioApi.Enums.VisDistributeTypes distribute, bool glueToGuide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(distribute, glueToGuide);
 			Invoker.Method(this, "Distribute", paramsArray);
@@ -1282,7 +1294,7 @@ namespace NetOffice.VisioApi
 		/// <param name="pinY">optional Double PinY = 0</param>
 		/// <param name="pinUnitsNameOrCode">optional object PinUnitsNameOrCode</param>
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX, object pinY, object pinUnitsNameOrCode)
+		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, NetOffice.VisioApi.Enums.VisFlipTypes flipType, bool blastGuards, Double pinX, Double pinY, object pinUnitsNameOrCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX, pinY, pinUnitsNameOrCode);
 			Invoker.Method(this, "Flip", paramsArray);
@@ -1307,7 +1319,7 @@ namespace NetOffice.VisioApi
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType)
+		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, NetOffice.VisioApi.Enums.VisFlipTypes flipType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType);
 			Invoker.Method(this, "Flip", paramsArray);
@@ -1321,7 +1333,7 @@ namespace NetOffice.VisioApi
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards)
+		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, NetOffice.VisioApi.Enums.VisFlipTypes flipType, bool blastGuards)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards);
 			Invoker.Method(this, "Flip", paramsArray);
@@ -1336,7 +1348,7 @@ namespace NetOffice.VisioApi
 		/// <param name="pinX">optional Double PinX = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX)
+		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, NetOffice.VisioApi.Enums.VisFlipTypes flipType, bool blastGuards, Double pinX)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX);
 			Invoker.Method(this, "Flip", paramsArray);
@@ -1352,7 +1364,7 @@ namespace NetOffice.VisioApi
 		/// <param name="pinY">optional Double PinY = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14)]
-		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX, object pinY)
+		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, NetOffice.VisioApi.Enums.VisFlipTypes flipType, bool blastGuards, Double pinX, Double pinY)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX, pinY);
 			Invoker.Method(this, "Flip", paramsArray);
@@ -1365,7 +1377,7 @@ namespace NetOffice.VisioApi
 		/// <param name="dataRowID">Int32 DataRowID</param>
 		/// <param name="applyDataGraphicAfterLink">optional bool ApplyDataGraphicAfterLink = true</param>
 		[SupportByVersionAttribute("Visio", 12,14)]
-		public void LinkToData(Int32 dataRecordsetID, Int32 dataRowID, object applyDataGraphicAfterLink)
+		public void LinkToData(Int32 dataRecordsetID, Int32 dataRowID, bool applyDataGraphicAfterLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID, dataRowID, applyDataGraphicAfterLink);
 			Invoker.Method(this, "LinkToData", paramsArray);
@@ -1506,7 +1518,7 @@ namespace NetOffice.VisioApi
 		/// <param name="objectToDrop">object ObjectToDrop</param>
 		/// <param name="newShape">optional NetOffice.VisioApi.IVShape NewShape = 0</param>
 		[SupportByVersionAttribute("Visio", 14)]
-		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop, object newShape)
+		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop, NetOffice.VisioApi.IVShape newShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop, newShape);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);

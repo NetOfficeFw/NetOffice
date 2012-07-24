@@ -1180,7 +1180,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = </param>
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.PivotExportActionEnum Action = 1</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Export(object filename, object action)
+		public void Export(string filename, NetOffice.OWC10Api.Enums.PivotExportActionEnum action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, action);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1203,7 +1203,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Export(object filename)
+		public void Export(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1227,7 +1227,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = 1024</param>
 		/// <param name="height">optional Int32 Height = 1024</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName, object width, object height)
+		public void ExportPicture(string filename, string filterName, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName, width, height);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1250,7 +1250,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = pivot.gif</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename)
+		public void ExportPicture(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1263,7 +1263,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filterName">optional string FilterName = gif</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName)
+		public void ExportPicture(string filename, string filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1277,7 +1277,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = 1024</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName, object width)
+		public void ExportPicture(string filename, string filterName, Int32 width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName, width);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1340,7 +1340,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="update">optional bool Update = true</param>
 		/// <param name="notify">optional bool Notify = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Select(object selection, object activeObject, object scrollType, object update, object notify)
+		public void Select(object selection, object activeObject, NetOffice.OWC10Api.Enums.PivotScrollTypeEnum scrollType, bool update, bool notify)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selection, activeObject, scrollType, update, notify);
 			Invoker.Method(this, "Select", paramsArray);
@@ -1367,7 +1367,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="scrollType">optional NetOffice.OWC10Api.Enums.PivotScrollTypeEnum ScrollType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Select(object selection, object activeObject, object scrollType)
+		public void Select(object selection, object activeObject, NetOffice.OWC10Api.Enums.PivotScrollTypeEnum scrollType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selection, activeObject, scrollType);
 			Invoker.Method(this, "Select", paramsArray);
@@ -1382,7 +1382,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="update">optional bool Update = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Select(object selection, object activeObject, object scrollType, object update)
+		public void Select(object selection, object activeObject, NetOffice.OWC10Api.Enums.PivotScrollTypeEnum scrollType, bool update)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selection, activeObject, scrollType, update);
 			Invoker.Method(this, "Select", paramsArray);
@@ -1425,11 +1425,11 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
-		/// <param name="initialValue">object InitialValue</param>
+		/// <param name="initialValue">optional object InitialValue</param>
 		/// <param name="arrowMode">optional NetOffice.OWC10Api.Enums.PivotArrowModeEnum ArrowMode = 0</param>
 		/// <param name="caretPosition">optional NetOffice.OWC10Api.Enums.PivotCaretPositionEnum CaretPosition = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void StartEdit(object initialValue, object arrowMode, object caretPosition)
+		public void StartEdit(object initialValue, NetOffice.OWC10Api.Enums.PivotArrowModeEnum arrowMode, NetOffice.OWC10Api.Enums.PivotCaretPositionEnum caretPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialValue, arrowMode, caretPosition);
 			Invoker.Method(this, "StartEdit", paramsArray);
@@ -1438,7 +1438,18 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
-		/// <param name="initialValue">object InitialValue</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("OWC10", 1)]
+		public void StartEdit()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "StartEdit", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion OWC10 1
+		/// </summary>
+		/// <param name="initialValue">optional object InitialValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void StartEdit(object initialValue)
@@ -1450,11 +1461,11 @@ namespace NetOffice.OWC10Api
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
-		/// <param name="initialValue">object InitialValue</param>
+		/// <param name="initialValue">optional object InitialValue</param>
 		/// <param name="arrowMode">optional NetOffice.OWC10Api.Enums.PivotArrowModeEnum ArrowMode = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void StartEdit(object initialValue, object arrowMode)
+		public void StartEdit(object initialValue, NetOffice.OWC10Api.Enums.PivotArrowModeEnum arrowMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(initialValue, arrowMode);
 			Invoker.Method(this, "StartEdit", paramsArray);
@@ -1465,7 +1476,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="accept">optional bool Accept = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void EndEdit(object accept)
+		public void EndEdit(bool accept)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(accept);
 			Invoker.Method(this, "EndEdit", paramsArray);

@@ -49,9 +49,9 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// CoClass Application 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application,IEventBinding
 	{
@@ -156,14 +156,14 @@ namespace NetOffice.WordApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_StartupEventHandler _StartupEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_StartupEventHandler StartupEvent
 		{
 			add
@@ -178,14 +178,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_QuitEventHandler _QuitEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_QuitEventHandler QuitEvent
 		{
 			add
@@ -200,14 +200,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_DocumentChangeEventHandler _DocumentChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentChangeEventHandler DocumentChangeEvent
 		{
 			add
@@ -222,14 +222,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_DocumentOpenEventHandler _DocumentOpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentOpenEventHandler DocumentOpenEvent
 		{
 			add
@@ -244,14 +244,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_DocumentBeforeCloseEventHandler _DocumentBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforeCloseEventHandler DocumentBeforeCloseEvent
 		{
 			add
@@ -266,14 +266,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_DocumentBeforePrintEventHandler _DocumentBeforePrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforePrintEventHandler DocumentBeforePrintEvent
 		{
 			add
@@ -288,14 +288,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_DocumentBeforeSaveEventHandler _DocumentBeforeSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforeSaveEventHandler DocumentBeforeSaveEvent
 		{
 			add
@@ -310,14 +310,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_NewDocumentEventHandler _NewDocumentEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_NewDocumentEventHandler NewDocumentEvent
 		{
 			add
@@ -332,14 +332,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_WindowActivateEventHandler _WindowActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
 			add
@@ -354,14 +354,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_WindowDeactivateEventHandler _WindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
 			add
@@ -376,14 +376,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_WindowSelectionChangeEventHandler _WindowSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
 			add
@@ -398,14 +398,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_WindowBeforeRightClickEventHandler _WindowBeforeRightClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
 		{
 			add
@@ -420,14 +420,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14
+		/// SupportByVersion Word, 9,10,11,12,14,15
 		/// </summary>
 		private event Application_WindowBeforeDoubleClickEventHandler _WindowBeforeDoubleClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 9 10 11 12 14
+		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14)]
+		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
 		{
 			add
@@ -442,14 +442,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_EPostagePropertyDialogEventHandler _EPostagePropertyDialogEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_EPostagePropertyDialogEventHandler EPostagePropertyDialogEvent
 		{
 			add
@@ -464,14 +464,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_EPostageInsertEventHandler _EPostageInsertEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_EPostageInsertEventHandler EPostageInsertEvent
 		{
 			add
@@ -486,14 +486,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeAfterMergeEventHandler _MailMergeAfterMergeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeAfterMergeEventHandler MailMergeAfterMergeEvent
 		{
 			add
@@ -508,14 +508,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeAfterRecordMergeEventHandler _MailMergeAfterRecordMergeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeAfterRecordMergeEventHandler MailMergeAfterRecordMergeEvent
 		{
 			add
@@ -530,14 +530,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeBeforeMergeEventHandler _MailMergeBeforeMergeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeBeforeMergeEventHandler MailMergeBeforeMergeEvent
 		{
 			add
@@ -552,14 +552,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeBeforeRecordMergeEventHandler _MailMergeBeforeRecordMergeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeBeforeRecordMergeEventHandler MailMergeBeforeRecordMergeEvent
 		{
 			add
@@ -574,14 +574,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeDataSourceLoadEventHandler _MailMergeDataSourceLoadEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeDataSourceLoadEventHandler MailMergeDataSourceLoadEvent
 		{
 			add
@@ -596,14 +596,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeDataSourceValidateEventHandler _MailMergeDataSourceValidateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeDataSourceValidateEventHandler MailMergeDataSourceValidateEvent
 		{
 			add
@@ -618,14 +618,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeWizardSendToCustomEventHandler _MailMergeWizardSendToCustomEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeWizardSendToCustomEventHandler MailMergeWizardSendToCustomEvent
 		{
 			add
@@ -640,14 +640,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_MailMergeWizardStateChangeEventHandler _MailMergeWizardStateChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeWizardStateChangeEventHandler MailMergeWizardStateChangeEvent
 		{
 			add
@@ -662,14 +662,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 10,11,12,14
+		/// SupportByVersion Word, 10,11,12,14,15
 		/// </summary>
 		private event Application_WindowSizeEventHandler _WindowSizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 10 11 12 14
+		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 10,11,12,14)]
+		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_WindowSizeEventHandler WindowSizeEvent
 		{
 			add
@@ -684,14 +684,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Application_XMLSelectionChangeEventHandler _XMLSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_XMLSelectionChangeEventHandler XMLSelectionChangeEvent
 		{
 			add
@@ -706,14 +706,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Application_XMLValidationErrorEventHandler _XMLValidationErrorEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_XMLValidationErrorEventHandler XMLValidationErrorEvent
 		{
 			add
@@ -728,14 +728,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Application_DocumentSyncEventHandler _DocumentSyncEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_DocumentSyncEventHandler DocumentSyncEvent
 		{
 			add
@@ -750,14 +750,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 11,12,14
+		/// SupportByVersion Word, 11,12,14,15
 		/// </summary>
 		private event Application_EPostageInsertExEventHandler _EPostageInsertExEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 11 12 14
+		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 11,12,14)]
+		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_EPostageInsertExEventHandler EPostageInsertExEvent
 		{
 			add
@@ -772,14 +772,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 12,14
+		/// SupportByVersion Word, 12,14,15
 		/// </summary>
 		private event Application_MailMergeDataSourceValidate2EventHandler _MailMergeDataSourceValidate2Event;
 
 		/// <summary>
-		/// SupportByVersion Word 12 14
+		/// SupportByVersion Word 12 14 15
 		/// </summary>
-		[SupportByVersion("Word", 12,14)]
+		[SupportByVersion("Word", 12,14,15)]
 		public event Application_MailMergeDataSourceValidate2EventHandler MailMergeDataSourceValidate2Event
 		{
 			add
@@ -794,14 +794,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowOpenEventHandler _ProtectedViewWindowOpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
 			add
@@ -816,14 +816,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeEditEventHandler _ProtectedViewWindowBeforeEditEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
 			add
@@ -838,14 +838,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowBeforeCloseEventHandler _ProtectedViewWindowBeforeCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
 			add
@@ -860,14 +860,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowSizeEventHandler _ProtectedViewWindowSizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowSizeEventHandler ProtectedViewWindowSizeEvent
 		{
 			add
@@ -882,14 +882,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowActivateEventHandler _ProtectedViewWindowActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
 			add
@@ -904,14 +904,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word, 14
+		/// SupportByVersion Word, 14,15
 		/// </summary>
 		private event Application_ProtectedViewWindowDeactivateEventHandler _ProtectedViewWindowDeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14 15
 		/// </summary>
-		[SupportByVersion("Word", 14)]
+		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
 			add

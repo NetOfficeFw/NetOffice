@@ -35,7 +35,7 @@ Public Class Example04
         ' save the document 
         Dim fileExtension As String = GetDefaultExtension(powerApplication)
         Dim documentFile As String = String.Format("{0}\\Example04{1}", _hostApplication.RootDirectory, fileExtension)
-        presentation.SaveAs(documentFile, PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue)
+        presentation.SaveAs(documentFile)
 
         ' close power point and dispose reference
         powerApplication.Quit()

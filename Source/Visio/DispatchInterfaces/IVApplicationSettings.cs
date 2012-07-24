@@ -1490,11 +1490,23 @@ namespace NetOffice.VisioApi
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
-		/// <param name="resolutionUnits">NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits resolutionUnits</param>
+		/// <param name="resolutionUnits">optional NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits resolutionUnits</param>
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width, object height, NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits resolutionUnits)
+		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, Double width, Double height, NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits resolutionUnits)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width, height, resolutionUnits);
+			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(resolution);
 			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
 		}
 
@@ -1505,7 +1517,7 @@ namespace NetOffice.VisioApi
 		/// <param name="width">optional Double Width = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width)
+		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, Double width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width);
 			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
@@ -1519,7 +1531,7 @@ namespace NetOffice.VisioApi
 		/// <param name="height">optional Double Height = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width, object height)
+		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, Double width, Double height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width, height);
 			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
@@ -1554,11 +1566,23 @@ namespace NetOffice.VisioApi
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
-		/// <param name="sizeUnits">NetOffice.VisioApi.Enums.VisRasterExportSizeUnits sizeUnits</param>
+		/// <param name="sizeUnits">optional NetOffice.VisioApi.Enums.VisRasterExportSizeUnits sizeUnits</param>
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width, object height, NetOffice.VisioApi.Enums.VisRasterExportSizeUnits sizeUnits)
+		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, Double width, Double height, NetOffice.VisioApi.Enums.VisRasterExportSizeUnits sizeUnits)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size, width, height, sizeUnits);
+			Invoker.Method(this, "SetRasterExportSize", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(size);
 			Invoker.Method(this, "SetRasterExportSize", paramsArray);
 		}
 
@@ -1569,7 +1593,7 @@ namespace NetOffice.VisioApi
 		/// <param name="width">optional Double Width = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width)
+		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, Double width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size, width);
 			Invoker.Method(this, "SetRasterExportSize", paramsArray);
@@ -1583,7 +1607,7 @@ namespace NetOffice.VisioApi
 		/// <param name="height">optional Double Height = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14)]
-		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width, object height)
+		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, Double width, Double height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(size, width, height);
 			Invoker.Method(this, "SetRasterExportSize", paramsArray);

@@ -10,16 +10,16 @@ namespace NetOffice.OfficeApi
 {
 	#pragma warning disable
 	///<summary>
-	/// DispatchInterface IRibbonExtensibility SupportByVersionAttribute Office, 12,14
+	/// DispatchInterface IRibbonExtensibility SupportByVersionAttribute Office, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14)]
+	[SupportByVersionAttribute("Office", 12,14,15)]
 	[ComImport, ComVisible(true), Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public interface IRibbonExtensibility
 	{
 		#region Methods
 
-		[SupportByVersionAttribute("Office", 12,14)]
+		[SupportByVersionAttribute("Office", 12,14,15)]
 		[return: MarshalAs(UnmanagedType.BStr)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
 		string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)]string RibbonID);

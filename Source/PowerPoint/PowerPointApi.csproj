@@ -11,7 +11,6 @@
     <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
     <AssemblyName>PowerPointApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
@@ -179,6 +178,9 @@
     <Compile Include="Enums\XlPieSliceLocation.cs" />
     <Compile Include="Enums\XlPieSliceIndex.cs" />
     <Compile Include="Enums\PpProtectedViewCloseReason.cs" />
+    <Compile Include="Enums\XlCategoryLabelLevel.cs" />
+    <Compile Include="Enums\XlSeriesNameLevel.cs" />
+    <Compile Include="Enums\PpGuideOrientation.cs" />
     <Compile Include="Interfaces\MouseTracker.cs" />
     <Compile Include="Interfaces\MouseDownHandler.cs" />
     <Compile Include="DispatchInterfaces\Collection.cs" />
@@ -399,6 +401,15 @@
     <Compile Include="DispatchInterfaces\Broadcast.cs" />
     <Compile Include="DispatchInterfaces\ProtectedViewWindows.cs" />
     <Compile Include="DispatchInterfaces\ProtectedViewWindow.cs" />
+    <Compile Include="DispatchInterfaces\FullSeriesCollection.cs" />
+    <Compile Include="DispatchInterfaces\ChartCategory.cs" />
+    <Compile Include="DispatchInterfaces\CategoryCollection.cs" />
+    <Compile Include="DispatchInterfaces\ThemeVariant.cs" />
+    <Compile Include="DispatchInterfaces\ThemeVariants.cs" />
+    <Compile Include="DispatchInterfaces\Theme.cs" />
+    <Compile Include="DispatchInterfaces\SlideNavigation.cs" />
+    <Compile Include="DispatchInterfaces\Guides.cs" />
+    <Compile Include="DispatchInterfaces\Guide.cs" />
     <Compile Include="Classes\Application.cs" />
     <Compile Include="Classes\Presentation.cs" />
     <Compile Include="Classes\Slide.cs" />

@@ -208,12 +208,35 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14
 		/// </summary>
-		/// <param name="ruleSet">NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisValidationFlags Flags</param>
+		/// <param name="ruleSet">optional NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
+		/// <param name="flags">optional NetOffice.VisioApi.Enums.VisValidationFlags Flags</param>
 		[SupportByVersionAttribute("Visio", 14)]
 		public void Validate(NetOffice.VisioApi.IVValidationRuleSet ruleSet, NetOffice.VisioApi.Enums.VisValidationFlags flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ruleSet, flags);
+			Invoker.Method(this, "Validate", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public void Validate()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Validate", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 14
+		/// </summary>
+		/// <param name="ruleSet">optional NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 14)]
+		public void Validate(NetOffice.VisioApi.IVValidationRuleSet ruleSet)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(ruleSet);
 			Invoker.Method(this, "Validate", paramsArray);
 		}
 

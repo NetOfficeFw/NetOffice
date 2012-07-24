@@ -35,7 +35,7 @@ Public Class Example01
         ' save the book
         Dim fileExtension As String = GetDefaultExtension(excelApplication)
         Dim workbookFile As String = String.Format("{0}\Example01{1}", _hostApplication.RootDirectory, fileExtension)
-        workBook.SaveAs(workbookFile, Missing.Value, Missing.Value, Missing.Value, Missing.Value, Missing.Value, XlSaveAsAccessMode.xlExclusive)
+        workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
         excelApplication.Quit()

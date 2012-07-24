@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface InlineShapes 
-	/// SupportByVersion Word, 9,10,11,12,14
+	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class InlineShapes : COMObject ,IEnumerable<NetOffice.WordApi.InlineShape>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.InlineShape this[Int32 index]
 		{
@@ -159,13 +159,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="linkToFile">optional object LinkToFile</param>
 		/// <param name="saveWithDocument">optional object SaveWithDocument</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile, object saveWithDocument, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, range);
@@ -175,11 +175,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPicture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -189,12 +189,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="linkToFile">optional object LinkToFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile);
@@ -204,13 +204,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="linkToFile">optional object LinkToFile</param>
 		/// <param name="saveWithDocument">optional object SaveWithDocument</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile, object saveWithDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument);
@@ -220,7 +220,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -230,7 +230,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconIndex">optional object IconIndex</param>
 		/// <param name="iconLabel">optional object IconLabel</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range);
@@ -240,10 +240,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject()
 		{
 			object[] paramsArray = null;
@@ -253,11 +253,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType);
@@ -267,12 +267,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName);
@@ -282,13 +282,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="linkToFile">optional object LinkToFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile);
@@ -298,14 +298,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="linkToFile">optional object LinkToFile</param>
 		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon);
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -323,7 +323,7 @@ namespace NetOffice.WordApi
 		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
 		/// <param name="iconFileName">optional object IconFileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName);
@@ -333,7 +333,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconFileName">optional object IconFileName</param>
 		/// <param name="iconIndex">optional object IconIndex</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex);
@@ -352,7 +352,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -362,7 +362,7 @@ namespace NetOffice.WordApi
 		/// <param name="iconIndex">optional object IconIndex</param>
 		/// <param name="iconLabel">optional object IconLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel);
@@ -372,11 +372,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEControl(object classType, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType, range);
@@ -386,10 +386,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEControl()
 		{
 			object[] paramsArray = null;
@@ -399,11 +399,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddOLEControl(object classType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classType);
@@ -413,10 +413,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape New(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -426,11 +426,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
@@ -440,11 +440,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -454,10 +454,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard(object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -467,10 +467,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddHorizontalLineStandard()
 		{
 			object[] paramsArray = null;
@@ -480,11 +480,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
@@ -494,11 +494,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -508,12 +508,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 12,14)]
-		public NetOffice.WordApi.InlineShape AddChart(object type, object range)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -522,10 +522,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
+		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.InlineShape AddChart()
 		{
 			object[] paramsArray = null;
@@ -535,12 +535,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14
+		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14)]
-		public NetOffice.WordApi.InlineShape AddChart(object type)
+		[SupportByVersionAttribute("Word", 12,14,15)]
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -549,11 +549,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="range">optional object Range</param>
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, range);
@@ -563,15 +563,158 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14
+		/// SupportByVersion Word 14, 15
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14)]
+		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="embedCode">string EmbedCode</param>
+		/// <param name="videoWidth">object VideoWidth</param>
+		/// <param name="videoHeight">object VideoHeight</param>
+		/// <param name="posterFrameImage">optional object PosterFrameImage</param>
+		/// <param name="url">optional object Url</param>
+		/// <param name="range">optional object Range</param>
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(embedCode, videoWidth, videoHeight, posterFrameImage, url, range);
+			object returnItem = Invoker.MethodReturn(this, "AddWebVideo", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="embedCode">string EmbedCode</param>
+		/// <param name="videoWidth">object VideoWidth</param>
+		/// <param name="videoHeight">object VideoHeight</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(embedCode, videoWidth, videoHeight);
+			object returnItem = Invoker.MethodReturn(this, "AddWebVideo", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="embedCode">string EmbedCode</param>
+		/// <param name="videoWidth">object VideoWidth</param>
+		/// <param name="videoHeight">object VideoHeight</param>
+		/// <param name="posterFrameImage">optional object PosterFrameImage</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(embedCode, videoWidth, videoHeight, posterFrameImage);
+			object returnItem = Invoker.MethodReturn(this, "AddWebVideo", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="embedCode">string EmbedCode</param>
+		/// <param name="videoWidth">object VideoWidth</param>
+		/// <param name="videoHeight">object VideoHeight</param>
+		/// <param name="posterFrameImage">optional object PosterFrameImage</param>
+		/// <param name="url">optional object Url</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(embedCode, videoWidth, videoHeight, posterFrameImage, url);
+			object returnItem = Invoker.MethodReturn(this, "AddWebVideo", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="style">optional Int32 Style = -1</param>
+		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
+		/// <param name="range">optional object Range</param>
+		/// <param name="newLayout">optional object NewLayout</param>
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, object range, object newLayout)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(style, type, range, newLayout);
+			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddChart2()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="style">optional Int32 Style = -1</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(style);
+			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="style">optional Int32 Style = -1</param>
+		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
+			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
+			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+			return newObject;
+		}
+
+		/// <summary>
+		/// SupportByVersion Word 15
+		/// </summary>
+		/// <param name="style">optional Int32 Style = -1</param>
+		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
+		/// <param name="range">optional object Range</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Word", 15)]
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, object range)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(style, type, range);
+			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
 			NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
 			return newObject;
 		}
@@ -581,9 +724,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.InlineShape> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
        public IEnumerator<NetOffice.WordApi.InlineShape> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -596,9 +739,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

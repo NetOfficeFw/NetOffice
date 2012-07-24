@@ -11,9 +11,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Trendlines 
-	/// SupportByVersion PowerPoint, 14
+	/// SupportByVersion PowerPoint, 14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14)]
+	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Trendlines : COMObject ,IEnumerable<NetOffice.PowerPointApi.Trendline>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
 			get
@@ -92,10 +92,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Count
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Creator
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
@@ -153,8 +153,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayEquation">optional object DisplayEquation</param>
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -163,10 +163,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Trendline Add()
 		{
 			object[] paramsArray = null;
@@ -176,12 +176,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -190,13 +190,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -205,14 +205,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
 		/// <param name="period">optional object Period</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -221,15 +221,15 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
 		/// <param name="period">optional object Period</param>
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -238,7 +238,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
@@ -246,8 +246,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="forward">optional object Forward</param>
 		/// <param name="backward">optional object Backward</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -256,7 +256,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
@@ -265,8 +265,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="backward">optional object Backward</param>
 		/// <param name="intercept">optional object Intercept</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -275,7 +275,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
@@ -285,8 +285,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="intercept">optional object Intercept</param>
 		/// <param name="displayEquation">optional object DisplayEquation</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -295,7 +295,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlTrendlineType Type = -4132</param>
 		/// <param name="order">optional object Order</param>
@@ -306,8 +306,8 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayEquation">optional object DisplayEquation</param>
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14)]
-		public NetOffice.PowerPointApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		public NetOffice.PowerPointApi.Trendline Add(NetOffice.PowerPointApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -316,10 +316,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14
+		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Trendline this[object index]
 		{
@@ -337,9 +337,9 @@ namespace NetOffice.PowerPointApi
        #region IEnumerable<NetOffice.PowerPointApi.Trendline> Member
         
         /// <summary>
-		/// SupportByVersionAttribute PowerPoint, 14
+		/// SupportByVersionAttribute PowerPoint, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
        public IEnumerator<NetOffice.PowerPointApi.Trendline> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -352,9 +352,9 @@ namespace NetOffice.PowerPointApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute PowerPoint, 14
+		/// SupportByVersionAttribute PowerPoint, 14,15
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14)]
+		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

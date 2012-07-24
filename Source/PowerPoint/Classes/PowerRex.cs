@@ -14,9 +14,9 @@ namespace NetOffice.PowerPointApi
 
 	///<summary>
 	/// CoClass PowerRex 
-	/// SupportByVersion PowerPoint, 10,11,12,14
+	/// SupportByVersion PowerPoint, 10,11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PowerRex : _PowerRex
 	{

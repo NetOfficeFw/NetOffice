@@ -3,24 +3,24 @@ using NetOffice;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
-	 /// SupportByVersion Office 14
+	 /// SupportByVersion Office 14, 15
 	 /// </summary>
-	[SupportByVersionAttribute("Office", 14)]
+	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoFileValidationMode
 	{
 		 /// <summary>
-		 /// SupportByVersion Office 14
+		 /// SupportByVersion Office 14, 15
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByVersionAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14,15)]
 		 msoFileValidationDefault = 0,
 
 		 /// <summary>
-		 /// SupportByVersion Office 14
+		 /// SupportByVersion Office 14, 15
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByVersionAttribute("Office", 14)]
+		 [SupportByVersionAttribute("Office", 14,15)]
 		 msoFileValidationSkip = 1
 	}
 }
