@@ -41,25 +41,21 @@
     <ApplicationIcon>NetOffice.Icon.32x32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=3bfc48da42c3238a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AccessApi">
+      <HintPath>..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\AccessApi.dll</HintPath>
     </Reference>
-    <Reference Include="ADODBApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a426381b6dbd993f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ADODBApi">
+      <HintPath>..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\ADODBApi.dll</HintPath>
     </Reference>
-    <Reference Include="DAOApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DAOApi">
+      <HintPath>..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\DAOApi.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ExcelApi">
+      <HintPath>..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\ExcelApi.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -68,47 +64,36 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="MSComctlLibApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MSComctlLibApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\MSComctlLibApi.dll</HintPath>
     </Reference>
-    <Reference Include="MSDATASRCApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=afe692b65e0db609, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MSDATASRCApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\MSDATASRCApi.dll</HintPath>
     </Reference>
     <Reference Include="MSHTMLApi">
-      <HintPath>..\..\Current Binaries\MSHTMLApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="MSProjectApi">
-      <HintPath>..\..\Current Binaries\MSProjectApi.dll</HintPath>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeApi">
+      <HintPath>..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="NetOffice, Version=1.5.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Current Binaries\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="OutlookApi">
+      <HintPath>..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\OfficeApi.dll</HintPath>
     </Reference>
-    <Reference Include="OutlookApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="OWC10Api">
+      <HintPath>..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\OutlookApi.dll</HintPath>
     </Reference>
-    <Reference Include="OWC10Api, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="PowerPointApi">
+      <HintPath>..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\OWC10Api.dll</HintPath>
-    </Reference>
-    <Reference Include="PowerPointApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\PowerPointApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -121,15 +106,13 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="VBIDEApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="VBIDEApi">
+      <HintPath>..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\VBIDEApi.dll</HintPath>
     </Reference>
-    <Reference Include="WordApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="WordApi">
+      <HintPath>..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Current Binaries\WordApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -228,12 +228,14 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             PictureBox box11 = tableLayoutResult.Controls["pictureBox" + name + "11"] as PictureBox;
             PictureBox box12 = tableLayoutResult.Controls["pictureBox" + name + "12"] as PictureBox;
             PictureBox box14 = tableLayoutResult.Controls["pictureBox" + name + "14"] as PictureBox;
+            PictureBox box15 = tableLayoutResult.Controls["pictureBox" + name + "15"] as PictureBox;
 
             SetImage(box09, info[0].Support);
             SetImage(box10, info[1].Support);
             SetImage(box11, info[2].Support);
             SetImage(box12, info[3].Support);
             SetImage(box14, info[4].Support);
+            SetImage(box15, info[5].Support);
         }
 
         #endregion

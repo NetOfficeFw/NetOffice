@@ -54,16 +54,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelVersionTable = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.labelNetOfficeVersion = new System.Windows.Forms.Label();
             this.labelDebugHint = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutResult = new NetOffice.DeveloperToolbox.OfficeCompatibility.CustomTableLayoutControl();
+            this.pictureBoxAccess15 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPowerPoint15 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOutlook15 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWord15 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAccess14 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAccess12 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAccess11 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAccess10 = new System.Windows.Forms.PictureBox();
-            this.labelAccess = new System.Windows.Forms.Label();
+            this.pictureBoxExcel15 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOutlook11 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWord11 = new System.Windows.Forms.PictureBox();
             this.pictureBoxExcel11 = new System.Windows.Forms.PictureBox();
@@ -72,6 +74,7 @@
             this.labelPowerPoint = new System.Windows.Forms.Label();
             this.pictureBoxOffice12 = new System.Windows.Forms.PictureBox();
             this.pictureBoxExcel12 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOffice15 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWord12 = new System.Windows.Forms.PictureBox();
             this.labelOutlook = new System.Windows.Forms.Label();
             this.labelWord = new System.Windows.Forms.Label();
@@ -100,7 +103,12 @@
             this.pictureBoxOutlook14 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPowerPoint14 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPowerPoint11 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAccess12 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBoxAccess11 = new System.Windows.Forms.PictureBox();
             this.pictureBoxAccess09 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAccess10 = new System.Windows.Forms.PictureBox();
+            this.labelAccess = new System.Windows.Forms.Label();
             this.panelNoNetOfficeReferences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelResultTable.SuspendLayout();
@@ -112,16 +120,19 @@
             this.panelVersionTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint12)).BeginInit();
@@ -141,7 +152,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess10)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -430,6 +444,7 @@
             // panelVersionTable
             // 
             this.panelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelVersionTable.Controls.Add(this.label8);
             this.panelVersionTable.Controls.Add(this.pictureBox1);
             this.panelVersionTable.Controls.Add(this.label7);
             this.panelVersionTable.Controls.Add(this.label6);
@@ -439,8 +454,20 @@
             this.panelVersionTable.Controls.Add(this.labelVersionTable);
             this.panelVersionTable.Location = new System.Drawing.Point(657, 101);
             this.panelVersionTable.Name = "panelVersionTable";
-            this.panelVersionTable.Size = new System.Drawing.Size(132, 174);
+            this.panelVersionTable.Size = new System.Drawing.Size(132, 213);
             this.panelVersionTable.TabIndex = 91;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label8.Location = new System.Drawing.Point(24, 177);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "15 = Office 2013";
             // 
             // labelNetOfficeVersion
             // 
@@ -498,18 +525,20 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutResult.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.tableLayoutResult.ColumnCount = 6;
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97672F));
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.404656F));
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.404656F));
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.404656F));
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.404656F));
-            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.404656F));
-            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess14, 5, 7);
-            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess12, 4, 7);
-            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess11, 3, 7);
-            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess10, 2, 7);
-            this.tableLayoutResult.Controls.Add(this.labelAccess, 0, 7);
+            this.tableLayoutResult.ColumnCount = 7;
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.22873F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.77505F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.867172F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.67742F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.07605F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.885932F));
+            this.tableLayoutResult.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess15, 6, 7);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxPowerPoint15, 6, 6);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxOutlook15, 6, 5);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxWord15, 6, 4);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess14, 3, 7);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxExcel15, 6, 3);
             this.tableLayoutResult.Controls.Add(this.pictureBoxOutlook11, 3, 5);
             this.tableLayoutResult.Controls.Add(this.pictureBoxWord11, 3, 4);
             this.tableLayoutResult.Controls.Add(this.pictureBoxExcel11, 3, 3);
@@ -518,6 +547,7 @@
             this.tableLayoutResult.Controls.Add(this.labelPowerPoint, 0, 6);
             this.tableLayoutResult.Controls.Add(this.pictureBoxOffice12, 4, 2);
             this.tableLayoutResult.Controls.Add(this.pictureBoxExcel12, 4, 3);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxOffice15, 6, 2);
             this.tableLayoutResult.Controls.Add(this.pictureBoxWord12, 4, 4);
             this.tableLayoutResult.Controls.Add(this.labelOutlook, 0, 5);
             this.tableLayoutResult.Controls.Add(this.labelWord, 0, 4);
@@ -546,7 +576,12 @@
             this.tableLayoutResult.Controls.Add(this.pictureBoxOutlook14, 5, 5);
             this.tableLayoutResult.Controls.Add(this.pictureBoxPowerPoint14, 5, 6);
             this.tableLayoutResult.Controls.Add(this.pictureBoxPowerPoint11, 3, 6);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess12, 1, 7);
+            this.tableLayoutResult.Controls.Add(this.label9, 6, 0);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess11, 1, 7);
             this.tableLayoutResult.Controls.Add(this.pictureBoxAccess09, 1, 7);
+            this.tableLayoutResult.Controls.Add(this.pictureBoxAccess10, 1, 7);
+            this.tableLayoutResult.Controls.Add(this.labelAccess, 0, 7);
             this.tableLayoutResult.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutResult.Name = "tableLayoutResult";
             this.tableLayoutResult.RowCount = 8;
@@ -558,90 +593,97 @@
             this.tableLayoutResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.0542F));
             this.tableLayoutResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.05419F));
             this.tableLayoutResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.05289F));
+            this.tableLayoutResult.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutResult.Size = new System.Drawing.Size(578, 215);
             this.tableLayoutResult.TabIndex = 73;
+            // 
+            // pictureBoxAccess15
+            // 
+            this.pictureBoxAccess15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAccess15.Location = new System.Drawing.Point(521, 187);
+            this.pictureBoxAccess15.Name = "pictureBoxAccess15";
+            this.pictureBoxAccess15.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxAccess15.TabIndex = 98;
+            this.pictureBoxAccess15.TabStop = false;
+            // 
+            // pictureBoxPowerPoint15
+            // 
+            this.pictureBoxPowerPoint15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPowerPoint15.Location = new System.Drawing.Point(521, 160);
+            this.pictureBoxPowerPoint15.Name = "pictureBoxPowerPoint15";
+            this.pictureBoxPowerPoint15.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint15.TabIndex = 98;
+            this.pictureBoxPowerPoint15.TabStop = false;
+            // 
+            // pictureBoxOutlook15
+            // 
+            this.pictureBoxOutlook15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxOutlook15.Location = new System.Drawing.Point(521, 133);
+            this.pictureBoxOutlook15.Name = "pictureBoxOutlook15";
+            this.pictureBoxOutlook15.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook15.TabIndex = 98;
+            this.pictureBoxOutlook15.TabStop = false;
+            // 
+            // pictureBoxWord15
+            // 
+            this.pictureBoxWord15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWord15.Location = new System.Drawing.Point(521, 106);
+            this.pictureBoxWord15.Name = "pictureBoxWord15";
+            this.pictureBoxWord15.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord15.TabIndex = 98;
+            this.pictureBoxWord15.TabStop = false;
             // 
             // pictureBoxAccess14
             // 
             this.pictureBoxAccess14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAccess14.Location = new System.Drawing.Point(527, 187);
+            this.pictureBoxAccess14.Location = new System.Drawing.Point(470, 187);
             this.pictureBoxAccess14.Name = "pictureBoxAccess14";
-            this.pictureBoxAccess14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxAccess14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxAccess14.TabIndex = 78;
             this.pictureBoxAccess14.TabStop = false;
             // 
-            // pictureBoxAccess12
+            // pictureBoxExcel15
             // 
-            this.pictureBoxAccess12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAccess12.Location = new System.Drawing.Point(478, 187);
-            this.pictureBoxAccess12.Name = "pictureBoxAccess12";
-            this.pictureBoxAccess12.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxAccess12.TabIndex = 78;
-            this.pictureBoxAccess12.TabStop = false;
-            // 
-            // pictureBoxAccess11
-            // 
-            this.pictureBoxAccess11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAccess11.Location = new System.Drawing.Point(429, 187);
-            this.pictureBoxAccess11.Name = "pictureBoxAccess11";
-            this.pictureBoxAccess11.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxAccess11.TabIndex = 78;
-            this.pictureBoxAccess11.TabStop = false;
-            // 
-            // pictureBoxAccess10
-            // 
-            this.pictureBoxAccess10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAccess10.Location = new System.Drawing.Point(380, 187);
-            this.pictureBoxAccess10.Name = "pictureBoxAccess10";
-            this.pictureBoxAccess10.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxAccess10.TabIndex = 78;
-            this.pictureBoxAccess10.TabStop = false;
-            // 
-            // labelAccess
-            // 
-            this.labelAccess.AutoSize = true;
-            this.labelAccess.BackColor = System.Drawing.SystemColors.Control;
-            this.labelAccess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccess.Location = new System.Drawing.Point(6, 184);
-            this.labelAccess.Name = "labelAccess";
-            this.labelAccess.Size = new System.Drawing.Size(48, 13);
-            this.labelAccess.TabIndex = 103;
-            this.labelAccess.Text = "Access";
+            this.pictureBoxExcel15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxExcel15.Location = new System.Drawing.Point(521, 79);
+            this.pictureBoxExcel15.Name = "pictureBoxExcel15";
+            this.pictureBoxExcel15.Size = new System.Drawing.Size(16, 15);
+            this.pictureBoxExcel15.TabIndex = 78;
+            this.pictureBoxExcel15.TabStop = false;
             // 
             // pictureBoxOutlook11
             // 
             this.pictureBoxOutlook11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOutlook11.Location = new System.Drawing.Point(429, 133);
+            this.pictureBoxOutlook11.Location = new System.Drawing.Point(368, 133);
             this.pictureBoxOutlook11.Name = "pictureBoxOutlook11";
-            this.pictureBoxOutlook11.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook11.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOutlook11.TabIndex = 93;
             this.pictureBoxOutlook11.TabStop = false;
             // 
             // pictureBoxWord11
             // 
             this.pictureBoxWord11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWord11.Location = new System.Drawing.Point(429, 106);
+            this.pictureBoxWord11.Location = new System.Drawing.Point(368, 106);
             this.pictureBoxWord11.Name = "pictureBoxWord11";
-            this.pictureBoxWord11.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord11.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxWord11.TabIndex = 93;
             this.pictureBoxWord11.TabStop = false;
             // 
             // pictureBoxExcel11
             // 
             this.pictureBoxExcel11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExcel11.Location = new System.Drawing.Point(429, 79);
+            this.pictureBoxExcel11.Location = new System.Drawing.Point(368, 79);
             this.pictureBoxExcel11.Name = "pictureBoxExcel11";
-            this.pictureBoxExcel11.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxExcel11.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxExcel11.TabIndex = 94;
             this.pictureBoxExcel11.TabStop = false;
             // 
             // pictureBoxOffice11
             // 
             this.pictureBoxOffice11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOffice11.Location = new System.Drawing.Point(429, 52);
+            this.pictureBoxOffice11.Location = new System.Drawing.Point(368, 52);
             this.pictureBoxOffice11.Name = "pictureBoxOffice11";
-            this.pictureBoxOffice11.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice11.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOffice11.TabIndex = 95;
             this.pictureBoxOffice11.TabStop = false;
             // 
@@ -651,7 +693,7 @@
             this.labelVersion09.BackColor = System.Drawing.SystemColors.Control;
             this.labelVersion09.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersion09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion09.Location = new System.Drawing.Point(331, 3);
+            this.labelVersion09.Location = new System.Drawing.Point(261, 3);
             this.labelVersion09.Name = "labelVersion09";
             this.labelVersion09.Size = new System.Drawing.Size(21, 13);
             this.labelVersion09.TabIndex = 77;
@@ -672,27 +714,36 @@
             // pictureBoxOffice12
             // 
             this.pictureBoxOffice12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOffice12.Location = new System.Drawing.Point(478, 52);
+            this.pictureBoxOffice12.Location = new System.Drawing.Point(418, 52);
             this.pictureBoxOffice12.Name = "pictureBoxOffice12";
-            this.pictureBoxOffice12.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice12.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOffice12.TabIndex = 84;
             this.pictureBoxOffice12.TabStop = false;
             // 
             // pictureBoxExcel12
             // 
             this.pictureBoxExcel12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExcel12.Location = new System.Drawing.Point(478, 79);
+            this.pictureBoxExcel12.Location = new System.Drawing.Point(418, 79);
             this.pictureBoxExcel12.Name = "pictureBoxExcel12";
-            this.pictureBoxExcel12.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxExcel12.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxExcel12.TabIndex = 85;
             this.pictureBoxExcel12.TabStop = false;
+            // 
+            // pictureBoxOffice15
+            // 
+            this.pictureBoxOffice15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxOffice15.Location = new System.Drawing.Point(521, 52);
+            this.pictureBoxOffice15.Name = "pictureBoxOffice15";
+            this.pictureBoxOffice15.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice15.TabIndex = 78;
+            this.pictureBoxOffice15.TabStop = false;
             // 
             // pictureBoxWord12
             // 
             this.pictureBoxWord12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWord12.Location = new System.Drawing.Point(478, 106);
+            this.pictureBoxWord12.Location = new System.Drawing.Point(418, 106);
             this.pictureBoxWord12.Name = "pictureBoxWord12";
-            this.pictureBoxWord12.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord12.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxWord12.TabIndex = 82;
             this.pictureBoxWord12.TabStop = false;
             // 
@@ -747,9 +798,9 @@
             // pictureBoxOutlook12
             // 
             this.pictureBoxOutlook12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOutlook12.Location = new System.Drawing.Point(478, 133);
+            this.pictureBoxOutlook12.Location = new System.Drawing.Point(418, 133);
             this.pictureBoxOutlook12.Name = "pictureBoxOutlook12";
-            this.pictureBoxOutlook12.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook12.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOutlook12.TabIndex = 83;
             this.pictureBoxOutlook12.TabStop = false;
             // 
@@ -771,7 +822,7 @@
             this.labelVersion10.BackColor = System.Drawing.SystemColors.Control;
             this.labelVersion10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersion10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion10.Location = new System.Drawing.Point(380, 3);
+            this.labelVersion10.Location = new System.Drawing.Point(317, 3);
             this.labelVersion10.Name = "labelVersion10";
             this.labelVersion10.Size = new System.Drawing.Size(21, 13);
             this.labelVersion10.TabIndex = 87;
@@ -783,7 +834,7 @@
             this.labelVersion11.BackColor = System.Drawing.SystemColors.Control;
             this.labelVersion11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersion11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion11.Location = new System.Drawing.Point(429, 3);
+            this.labelVersion11.Location = new System.Drawing.Point(368, 3);
             this.labelVersion11.Name = "labelVersion11";
             this.labelVersion11.Size = new System.Drawing.Size(21, 13);
             this.labelVersion11.TabIndex = 88;
@@ -795,7 +846,7 @@
             this.labelVersion12.BackColor = System.Drawing.SystemColors.Control;
             this.labelVersion12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersion12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion12.Location = new System.Drawing.Point(478, 3);
+            this.labelVersion12.Location = new System.Drawing.Point(418, 3);
             this.labelVersion12.Name = "labelVersion12";
             this.labelVersion12.Size = new System.Drawing.Size(21, 13);
             this.labelVersion12.TabIndex = 89;
@@ -807,7 +858,7 @@
             this.labelVersion14.BackColor = System.Drawing.SystemColors.Control;
             this.labelVersion14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersion14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion14.Location = new System.Drawing.Point(527, 3);
+            this.labelVersion14.Location = new System.Drawing.Point(470, 3);
             this.labelVersion14.Name = "labelVersion14";
             this.labelVersion14.Size = new System.Drawing.Size(21, 13);
             this.labelVersion14.TabIndex = 90;
@@ -816,164 +867,215 @@
             // pictureBoxPowerPoint12
             // 
             this.pictureBoxPowerPoint12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerPoint12.Location = new System.Drawing.Point(478, 160);
+            this.pictureBoxPowerPoint12.Location = new System.Drawing.Point(418, 160);
             this.pictureBoxPowerPoint12.Name = "pictureBoxPowerPoint12";
-            this.pictureBoxPowerPoint12.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint12.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxPowerPoint12.TabIndex = 91;
             this.pictureBoxPowerPoint12.TabStop = false;
             // 
             // pictureBoxOffice09
             // 
             this.pictureBoxOffice09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOffice09.Location = new System.Drawing.Point(331, 52);
+            this.pictureBoxOffice09.Location = new System.Drawing.Point(261, 52);
             this.pictureBoxOffice09.Name = "pictureBoxOffice09";
-            this.pictureBoxOffice09.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice09.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOffice09.TabIndex = 78;
             this.pictureBoxOffice09.TabStop = false;
             // 
             // pictureBoxExcel09
             // 
             this.pictureBoxExcel09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExcel09.Location = new System.Drawing.Point(331, 79);
+            this.pictureBoxExcel09.Location = new System.Drawing.Point(261, 79);
             this.pictureBoxExcel09.Name = "pictureBoxExcel09";
-            this.pictureBoxExcel09.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxExcel09.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxExcel09.TabIndex = 79;
             this.pictureBoxExcel09.TabStop = false;
             // 
             // pictureBoxWord09
             // 
             this.pictureBoxWord09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWord09.Location = new System.Drawing.Point(331, 106);
+            this.pictureBoxWord09.Location = new System.Drawing.Point(261, 106);
             this.pictureBoxWord09.Name = "pictureBoxWord09";
-            this.pictureBoxWord09.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord09.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxWord09.TabIndex = 72;
             this.pictureBoxWord09.TabStop = false;
             // 
             // pictureBoxOutlook09
             // 
             this.pictureBoxOutlook09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOutlook09.Location = new System.Drawing.Point(331, 133);
+            this.pictureBoxOutlook09.Location = new System.Drawing.Point(261, 133);
             this.pictureBoxOutlook09.Name = "pictureBoxOutlook09";
-            this.pictureBoxOutlook09.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook09.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOutlook09.TabIndex = 80;
             this.pictureBoxOutlook09.TabStop = false;
             // 
             // pictureBoxPowerPoint09
             // 
             this.pictureBoxPowerPoint09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerPoint09.Location = new System.Drawing.Point(331, 160);
+            this.pictureBoxPowerPoint09.Location = new System.Drawing.Point(261, 160);
             this.pictureBoxPowerPoint09.Name = "pictureBoxPowerPoint09";
-            this.pictureBoxPowerPoint09.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint09.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxPowerPoint09.TabIndex = 77;
             this.pictureBoxPowerPoint09.TabStop = false;
             // 
             // pictureBoxOffice10
             // 
             this.pictureBoxOffice10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOffice10.Location = new System.Drawing.Point(380, 52);
+            this.pictureBoxOffice10.Location = new System.Drawing.Point(317, 52);
             this.pictureBoxOffice10.Name = "pictureBoxOffice10";
-            this.pictureBoxOffice10.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice10.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOffice10.TabIndex = 92;
             this.pictureBoxOffice10.TabStop = false;
             // 
             // pictureBoxExcel10
             // 
             this.pictureBoxExcel10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExcel10.Location = new System.Drawing.Point(380, 79);
+            this.pictureBoxExcel10.Location = new System.Drawing.Point(317, 79);
             this.pictureBoxExcel10.Name = "pictureBoxExcel10";
-            this.pictureBoxExcel10.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxExcel10.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxExcel10.TabIndex = 93;
             this.pictureBoxExcel10.TabStop = false;
             // 
             // pictureBoxWord10
             // 
             this.pictureBoxWord10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWord10.Location = new System.Drawing.Point(380, 106);
+            this.pictureBoxWord10.Location = new System.Drawing.Point(317, 106);
             this.pictureBoxWord10.Name = "pictureBoxWord10";
-            this.pictureBoxWord10.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord10.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxWord10.TabIndex = 94;
             this.pictureBoxWord10.TabStop = false;
             // 
             // pictureBoxOutlook10
             // 
             this.pictureBoxOutlook10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOutlook10.Location = new System.Drawing.Point(380, 133);
+            this.pictureBoxOutlook10.Location = new System.Drawing.Point(317, 133);
             this.pictureBoxOutlook10.Name = "pictureBoxOutlook10";
-            this.pictureBoxOutlook10.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook10.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOutlook10.TabIndex = 95;
             this.pictureBoxOutlook10.TabStop = false;
             // 
             // pictureBoxPowerPoint10
             // 
             this.pictureBoxPowerPoint10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerPoint10.Location = new System.Drawing.Point(380, 160);
+            this.pictureBoxPowerPoint10.Location = new System.Drawing.Point(317, 160);
             this.pictureBoxPowerPoint10.Name = "pictureBoxPowerPoint10";
-            this.pictureBoxPowerPoint10.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint10.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxPowerPoint10.TabIndex = 96;
             this.pictureBoxPowerPoint10.TabStop = false;
             // 
             // pictureBoxOffice14
             // 
             this.pictureBoxOffice14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOffice14.Location = new System.Drawing.Point(527, 52);
+            this.pictureBoxOffice14.Location = new System.Drawing.Point(470, 52);
             this.pictureBoxOffice14.Name = "pictureBoxOffice14";
-            this.pictureBoxOffice14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOffice14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOffice14.TabIndex = 97;
             this.pictureBoxOffice14.TabStop = false;
             // 
             // pictureBoxExcel14
             // 
             this.pictureBoxExcel14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExcel14.Location = new System.Drawing.Point(527, 79);
+            this.pictureBoxExcel14.Location = new System.Drawing.Point(470, 79);
             this.pictureBoxExcel14.Name = "pictureBoxExcel14";
-            this.pictureBoxExcel14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxExcel14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxExcel14.TabIndex = 98;
             this.pictureBoxExcel14.TabStop = false;
             // 
             // pictureBoxWord14
             // 
             this.pictureBoxWord14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWord14.Location = new System.Drawing.Point(527, 106);
+            this.pictureBoxWord14.Location = new System.Drawing.Point(470, 106);
             this.pictureBoxWord14.Name = "pictureBoxWord14";
-            this.pictureBoxWord14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxWord14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxWord14.TabIndex = 99;
             this.pictureBoxWord14.TabStop = false;
             // 
             // pictureBoxOutlook14
             // 
             this.pictureBoxOutlook14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOutlook14.Location = new System.Drawing.Point(527, 133);
+            this.pictureBoxOutlook14.Location = new System.Drawing.Point(470, 133);
             this.pictureBoxOutlook14.Name = "pictureBoxOutlook14";
-            this.pictureBoxOutlook14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOutlook14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxOutlook14.TabIndex = 100;
             this.pictureBoxOutlook14.TabStop = false;
             // 
             // pictureBoxPowerPoint14
             // 
             this.pictureBoxPowerPoint14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerPoint14.Location = new System.Drawing.Point(527, 160);
+            this.pictureBoxPowerPoint14.Location = new System.Drawing.Point(470, 160);
             this.pictureBoxPowerPoint14.Name = "pictureBoxPowerPoint14";
-            this.pictureBoxPowerPoint14.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint14.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxPowerPoint14.TabIndex = 101;
             this.pictureBoxPowerPoint14.TabStop = false;
             // 
             // pictureBoxPowerPoint11
             // 
             this.pictureBoxPowerPoint11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerPoint11.Location = new System.Drawing.Point(429, 160);
+            this.pictureBoxPowerPoint11.Location = new System.Drawing.Point(368, 160);
             this.pictureBoxPowerPoint11.Name = "pictureBoxPowerPoint11";
-            this.pictureBoxPowerPoint11.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxPowerPoint11.Size = new System.Drawing.Size(16, 15);
             this.pictureBoxPowerPoint11.TabIndex = 102;
             this.pictureBoxPowerPoint11.TabStop = false;
+            // 
+            // pictureBoxAccess12
+            // 
+            this.pictureBoxAccess12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAccess12.Location = new System.Drawing.Point(418, 187);
+            this.pictureBoxAccess12.Name = "pictureBoxAccess12";
+            this.pictureBoxAccess12.Size = new System.Drawing.Size(16, 15);
+            this.pictureBoxAccess12.TabIndex = 104;
+            this.pictureBoxAccess12.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(521, 3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 13);
+            this.label9.TabIndex = 105;
+            this.label9.Text = "15";
+            // 
+            // pictureBoxAccess11
+            // 
+            this.pictureBoxAccess11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAccess11.Location = new System.Drawing.Point(368, 187);
+            this.pictureBoxAccess11.Name = "pictureBoxAccess11";
+            this.pictureBoxAccess11.Size = new System.Drawing.Size(16, 15);
+            this.pictureBoxAccess11.TabIndex = 78;
+            this.pictureBoxAccess11.TabStop = false;
             // 
             // pictureBoxAccess09
             // 
             this.pictureBoxAccess09.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAccess09.Location = new System.Drawing.Point(331, 187);
+            this.pictureBoxAccess09.Location = new System.Drawing.Point(261, 187);
             this.pictureBoxAccess09.Name = "pictureBoxAccess09";
-            this.pictureBoxAccess09.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxAccess09.TabIndex = 104;
+            this.pictureBoxAccess09.Size = new System.Drawing.Size(16, 15);
+            this.pictureBoxAccess09.TabIndex = 109;
             this.pictureBoxAccess09.TabStop = false;
+            // 
+            // pictureBoxAccess10
+            // 
+            this.pictureBoxAccess10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAccess10.Location = new System.Drawing.Point(317, 187);
+            this.pictureBoxAccess10.Name = "pictureBoxAccess10";
+            this.pictureBoxAccess10.Size = new System.Drawing.Size(16, 15);
+            this.pictureBoxAccess10.TabIndex = 108;
+            this.pictureBoxAccess10.TabStop = false;
+            // 
+            // labelAccess
+            // 
+            this.labelAccess.AutoSize = true;
+            this.labelAccess.BackColor = System.Drawing.SystemColors.Control;
+            this.labelAccess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccess.Location = new System.Drawing.Point(6, 184);
+            this.labelAccess.Name = "labelAccess";
+            this.labelAccess.Size = new System.Drawing.Size(48, 13);
+            this.labelAccess.TabIndex = 103;
+            this.labelAccess.Text = "Access";
             // 
             // OfficeCompatibilityControl
             // 
@@ -1009,16 +1111,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutResult.ResumeLayout(false);
             this.tableLayoutResult.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExcel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOffice15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWord12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint12)).EndInit();
@@ -1038,7 +1143,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOutlook14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerPoint11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1097,11 +1205,11 @@
         private System.Windows.Forms.Panel panelInvalidAssembly;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.Label labelInvalidAssembly;
-        private System.Windows.Forms.PictureBox pictureBoxAccess14;
-        private System.Windows.Forms.PictureBox pictureBoxAccess12;
+        private System.Windows.Forms.PictureBox pictureBoxOffice15;
         private System.Windows.Forms.PictureBox pictureBoxAccess11;
-        private System.Windows.Forms.PictureBox pictureBoxAccess10;
-        private System.Windows.Forms.PictureBox pictureBoxAccess09;
+        private System.Windows.Forms.PictureBox pictureBoxAccess14;
+        private System.Windows.Forms.PictureBox pictureBoxExcel15;
+        private System.Windows.Forms.PictureBox pictureBoxAccess12;
         private System.Windows.Forms.PictureBox pictureBoxProblem;
         private System.Windows.Forms.PictureBox pictureBoxOk;
         private System.Windows.Forms.Label labelVersionNotOk;
@@ -1118,5 +1226,13 @@
         private System.Windows.Forms.Label labelDebugHint;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBoxAccess09;
+        private System.Windows.Forms.PictureBox pictureBoxAccess10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBoxAccess15;
+        private System.Windows.Forms.PictureBox pictureBoxPowerPoint15;
+        private System.Windows.Forms.PictureBox pictureBoxOutlook15;
+        private System.Windows.Forms.PictureBox pictureBoxWord15;
     }
 }
